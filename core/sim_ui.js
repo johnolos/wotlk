@@ -3,7 +3,7 @@ import { NumberPicker } from '/wotlk/core/components/number_picker.js';
 import { ResultsViewer } from '/wotlk/core/components/results_viewer.js';
 import { Title } from '/wotlk/core/components/title.js';
 import { TypedEvent } from './typed_event.js';
-const noticeText = 'We are looking for help migrating our sims to Wrath of the Lich King. If you\'d like to participate in a fun side project working with an open-source community please <a href="https://discord.gg/jJMPr9JWwx" target="_blank">join our discord!</a>';
+const noticeText = '';
 // Shared UI for all individual sims and the raid sim.
 export class SimUI extends Component {
     constructor(parentElem, sim, config) {

@@ -86,7 +86,7 @@ export class IndividualSimUI extends SimUI {
             this.addWarning({
                 updateOn: new TypedEvent(),
                 shouldDisplay: () => true,
-                getContent: () => 'This sim is still under development.',
+                getContent: () => 'This sim has not yet been updated from its TBC state.',
             });
         }
         this.addWarning({

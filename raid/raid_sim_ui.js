@@ -350,7 +350,7 @@ export class RaidSimUI extends SimUI {
     }
     // Returns the actual key to use for local storage, based on the given key part and the site context.
     getStorageKey(keyPart) {
-        return '__raid__' + keyPart;
+        return '__wotlk_raid__' + keyPart;
     }
     getSavedRaidStorageKey() {
         return this.getStorageKey('__savedRaid__');
