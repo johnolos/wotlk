@@ -6,7 +6,7 @@ import { mageTalentsConfig, MageTalentsPicker } from './mage.js';
 import { paladinTalentsConfig, PaladinTalentsPicker } from './paladin.js';
 import { priestTalentsConfig, PriestTalentsPicker } from './priest.js';
 import { rogueTalentsConfig, RogueTalentsPicker } from './rogue.js';
-import { shamanTalentsConfig, ShamanTalentsPicker } from './shaman.js';
+import { shamanTalentsConfig, ShamanTalentsPicker, ShamanGlyphsPicker } from './shaman.js';
 import { warlockTalentsConfig, WarlockTalentsPicker } from './warlock.js';
 import { warriorTalentsConfig, WarriorTalentsPicker } from './warrior.js';
 export function newTalentsPicker(parent, player) {
@@ -41,6 +41,31 @@ export function newTalentsPicker(parent, player) {
         default:
             throw new Error('Unimplemented class talents: ' + player.getClass());
     }
+}
+export function newGlyphsPicker(parent, player) {
+    switch (player.getClass()) {
+        case Class.ClassDruid:
+            break;
+        case Class.ClassShaman:
+            return new ShamanGlyphsPicker(parent, player);
+            break;
+        case Class.ClassHunter:
+            break;
+        case Class.ClassMage:
+            break;
+        case Class.ClassPaladin:
+            break;
+        case Class.ClassRogue:
+            break;
+        case Class.ClassPriest:
+            break;
+        case Class.ClassWarlock:
+            break;
+        case Class.ClassWarrior:
+            break;
+    }
+    return null;
+    //throw new Error('Unimplemented class glyphs: ' + player.getClass());
 }
 const classTalentsConfig = {
     [Class.ClassUnknown]: [],

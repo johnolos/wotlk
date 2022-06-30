@@ -16,6 +16,7 @@ import { RaidBuffs } from './common.js';
 import { PartyBuffs } from './common.js';
 import { HealingModel } from './common.js';
 import { Cooldowns } from './common.js';
+import { Glyphs } from './common.js';
 import { ProtectionWarrior } from './warrior.js';
 import { Warrior } from './warrior.js';
 import { Warlock } from './warlock.js';
@@ -99,6 +100,7 @@ class Player$Type extends MessageType {
             { no: 14, name: "warrior", kind: "message", oneof: "spec", T: () => Warrior },
             { no: 21, name: "protection_warrior", kind: "message", oneof: "spec", T: () => ProtectionWarrior },
             { no: 17, name: "talentsString", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+            { no: 28, name: "glyphs", kind: "message", T: () => Glyphs },
             { no: 19, name: "cooldowns", kind: "message", T: () => Cooldowns },
             { no: 23, name: "in_front_of_target", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 27, name: "healing_model", kind: "message", T: () => HealingModel }
@@ -237,6 +239,9 @@ class Player$Type extends MessageType {
                 case /* string talentsString */ 17:
                     message.talentsString = reader.string();
                     break;
+                case /* proto.Glyphs glyphs */ 28:
+                    message.glyphs = Glyphs.internalBinaryRead(reader, reader.uint32(), options, message.glyphs);
+                    break;
                 case /* proto.Cooldowns cooldowns */ 19:
                     message.cooldowns = Cooldowns.internalBinaryRead(reader, reader.uint32(), options, message.cooldowns);
                     break;
@@ -334,6 +339,9 @@ class Player$Type extends MessageType {
         /* string talentsString = 17; */
         if (message.talentsString !== "")
             writer.tag(17, WireType.LengthDelimited).string(message.talentsString);
+        /* proto.Glyphs glyphs = 28; */
+        if (message.glyphs)
+            Glyphs.internalBinaryWrite(message.glyphs, writer.tag(28, WireType.LengthDelimited).fork(), options).join();
         /* proto.Cooldowns cooldowns = 19; */
         if (message.cooldowns)
             Cooldowns.internalBinaryWrite(message.cooldowns, writer.tag(19, WireType.LengthDelimited).fork(), options).join();

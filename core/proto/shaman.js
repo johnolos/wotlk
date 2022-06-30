@@ -52,6 +52,58 @@ export var EnhancementShaman_Rotation_PrimaryShock;
     EnhancementShaman_Rotation_PrimaryShock[EnhancementShaman_Rotation_PrimaryShock["Frost"] = 2] = "Frost";
 })(EnhancementShaman_Rotation_PrimaryShock || (EnhancementShaman_Rotation_PrimaryShock = {}));
 /**
+ * @generated from protobuf enum proto.ShamanMajorGlyph
+ */
+export var ShamanMajorGlyph;
+(function (ShamanMajorGlyph) {
+    /**
+     * @generated from protobuf enum value: ShamanMajorGlyphNone = 0;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["ShamanMajorGlyphNone"] = 0] = "ShamanMajorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfChainHeal = 41517;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfChainHeal"] = 41517] = "GlyphOfChainHeal";
+    /**
+     * @generated from protobuf enum value: GlyphOfChainLightning = 41518;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfChainLightning"] = 41518] = "GlyphOfChainLightning";
+    /**
+     * @generated from protobuf enum value: GlyphOfEarthShield = 45775;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfEarthShield"] = 45775] = "GlyphOfEarthShield";
+    /**
+     * @generated from protobuf enum value: GlyphOfEarthlivingWeapon = 41527;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfEarthlivingWeapon"] = 41527] = "GlyphOfEarthlivingWeapon";
+})(ShamanMajorGlyph || (ShamanMajorGlyph = {}));
+/**
+ * @generated from protobuf enum proto.ShamanMinorGlyph
+ */
+export var ShamanMinorGlyph;
+(function (ShamanMinorGlyph) {
+    /**
+     * @generated from protobuf enum value: ShamanMinorGlyphNone = 0;
+     */
+    ShamanMinorGlyph[ShamanMinorGlyph["ShamanMinorGlyphNone"] = 0] = "ShamanMinorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfAstralRecall = 43381;
+     */
+    ShamanMinorGlyph[ShamanMinorGlyph["GlyphOfAstralRecall"] = 43381] = "GlyphOfAstralRecall";
+    /**
+     * @generated from protobuf enum value: GlyphOfGhostWolf = 43725;
+     */
+    ShamanMinorGlyph[ShamanMinorGlyph["GlyphOfGhostWolf"] = 43725] = "GlyphOfGhostWolf";
+    /**
+     * @generated from protobuf enum value: GlyphOfRenewedLife = 43385;
+     */
+    ShamanMinorGlyph[ShamanMinorGlyph["GlyphOfRenewedLife"] = 43385] = "GlyphOfRenewedLife";
+    /**
+     * @generated from protobuf enum value: GlyphOfThunderstorm = 44923;
+     */
+    ShamanMinorGlyph[ShamanMinorGlyph["GlyphOfThunderstorm"] = 44923] = "GlyphOfThunderstorm";
+})(ShamanMinorGlyph || (ShamanMinorGlyph = {}));
+/**
  * @generated from protobuf enum proto.EarthTotem
  */
 export var EarthTotem;

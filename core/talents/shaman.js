@@ -1,8 +1,15 @@
+import { ShamanMajorGlyph, ShamanMinorGlyph } from '/wotlk/core/proto/shaman.js';
+import { GlyphsPicker } from './glyphs_picker.js';
 import { TalentsPicker, newTalentsConfig } from './talents_picker.js';
 // Talents are the same for all Shaman specs, so its ok to just use ElementalShaman here
 export class ShamanTalentsPicker extends TalentsPicker {
     constructor(parent, player) {
         super(parent, player, shamanTalentsConfig);
+    }
+}
+export class ShamanGlyphsPicker extends GlyphsPicker {
+    constructor(parent, player) {
+        super(parent, player, shamanGlyphsConfig);
     }
 }
 export const shamanTalentsConfig = newTalentsConfig([
@@ -610,3 +617,17 @@ export const shamanTalentsConfig = newTalentsConfig([
         ],
     },
 ]);
+export const shamanGlyphsConfig = {
+    majorGlyphs: {
+        [ShamanMajorGlyph.GlyphOfChainHeal]: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_healingwavegreater.jpg',
+        [ShamanMajorGlyph.GlyphOfChainLightning]: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_chainlightning.jpg',
+        [ShamanMajorGlyph.GlyphOfEarthShield]: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_skinofearth.jpg',
+        [ShamanMajorGlyph.GlyphOfEarthlivingWeapon]: 'https://wow.zamimg.com/images/wow/icons/large/spell_shaman_earthlivingweapon.jpg',
+    },
+    minorGlyphs: {
+        [ShamanMinorGlyph.GlyphOfAstralRecall]: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_astralrecal.jpg',
+        [ShamanMinorGlyph.GlyphOfGhostWolf]: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_spiritwolf.jpg',
+        [ShamanMinorGlyph.GlyphOfRenewedLife]: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_reincarnation.jpg',
+        [ShamanMinorGlyph.GlyphOfThunderstorm]: 'https://wow.zamimg.com/images/wow/icons/large/spell_shaman_thunderstorm.jpg',
+    },
+};

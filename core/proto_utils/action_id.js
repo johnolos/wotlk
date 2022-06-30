@@ -334,17 +334,33 @@ export class ActionId {
     }
     static async getTooltipDataHelper(id, tooltipPostfix, cache) {
         if (!cache.has(id)) {
-            cache.set(id, fetch(`https://wowhead.com/wotlk/tooltip/${tooltipPostfix}/${id}`)
-                .then(response => response.json()));
+            const url = `https://wowhead.com/wotlk/tooltip/${tooltipPostfix}/${id}`;
+            try {
+                const response = await fetch(url);
+                cache.set(id, response.json());
+            }
+            catch (e) {
+                console.error('Error while fetching url: ' + url + '\n\n' + e);
+                cache.set(id, Promise.resolve({
+                    name: '',
+                    tooltip: '',
+                }));
+            }
         }
         return cache.get(id);
     }
+    static async getItemTooltipData(id) {
+        return await ActionId.getTooltipDataHelper(id, 'item', itemToTooltipDataCache);
+    }
+    static async getSpellTooltipData(id) {
+        return await ActionId.getTooltipDataHelper(id, 'spell', spellToTooltipDataCache);
+    }
     static async getTooltipData(actionId) {
         if (actionId.itemId) {
-            return await ActionId.getTooltipDataHelper(actionId.itemId, 'item', itemToTooltipDataCache);
+            return await ActionId.getItemTooltipData(actionId.itemId);
         }
         else {
-            return await ActionId.getTooltipDataHelper(actionId.spellId, 'spell', spellToTooltipDataCache);
+            return await ActionId.getSpellTooltipData(actionId.spellId);
         }
     }
 }

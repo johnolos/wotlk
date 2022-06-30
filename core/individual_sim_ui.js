@@ -38,6 +38,7 @@ import { isDualWieldSpec } from '/wotlk/core/proto_utils/utils.js';
 import { launchedSpecs } from '/wotlk/core/launched_sims.js';
 import { newIndividualExporters } from '/wotlk/core/components/exporters.js';
 import { newIndividualImporters } from '/wotlk/core/components/importers.js';
+import { newGlyphsPicker } from '/wotlk/core/talents/factory.js';
 import { newTalentsPicker } from '/wotlk/core/talents/factory.js';
 import { raceNames } from '/wotlk/core/proto_utils/names.js';
 import { isTankSpec } from '/wotlk/core/proto_utils/utils.js';
@@ -590,12 +591,17 @@ export class IndividualSimUI extends SimUI {
     }
     addTalentsTab() {
         this.addTab('TALENTS', 'talents-tab', `
-			<div class="talents-picker">
+			<div class="talents-tab-content">
+				<div class="talents-picker">
+				</div>
+				<div class="glyphs-picker">
+				</div>
 			</div>
 			<div class="saved-talents-manager">
 			</div>
 		`);
         const talentsPicker = newTalentsPicker(this.rootElem.getElementsByClassName('talents-picker')[0], this.player);
+        const glyphsPicker = newGlyphsPicker(this.rootElem.getElementsByClassName('glyphs-picker')[0], this.player);
         const savedTalentsManager = new SavedDataManager(this.rootElem.getElementsByClassName('saved-talents-manager')[0], this.player, {
             label: 'Talents',
             storageKey: this.getSavedTalentsStorageKey(),

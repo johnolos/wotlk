@@ -3115,6 +3115,88 @@ class ActionID$Type extends MessageType {
  */
 export const ActionID = new ActionID$Type();
 // @generated message type with reflection information, may provide speed optimized methods
+class Glyphs$Type extends MessageType {
+    constructor() {
+        super("proto.Glyphs", [
+            { no: 1, name: "major1", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 2, name: "major2", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 3, name: "major3", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 4, name: "minor1", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 5, name: "minor2", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 6, name: "minor3", kind: "scalar", T: 5 /*ScalarType.INT32*/ }
+        ]);
+    }
+    create(value) {
+        const message = { major1: 0, major2: 0, major3: 0, minor1: 0, minor2: 0, minor3: 0 };
+        Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
+        if (value !== undefined)
+            reflectionMergePartial(this, message, value);
+        return message;
+    }
+    internalBinaryRead(reader, length, options, target) {
+        let message = target ?? this.create(), end = reader.pos + length;
+        while (reader.pos < end) {
+            let [fieldNo, wireType] = reader.tag();
+            switch (fieldNo) {
+                case /* int32 major1 */ 1:
+                    message.major1 = reader.int32();
+                    break;
+                case /* int32 major2 */ 2:
+                    message.major2 = reader.int32();
+                    break;
+                case /* int32 major3 */ 3:
+                    message.major3 = reader.int32();
+                    break;
+                case /* int32 minor1 */ 4:
+                    message.minor1 = reader.int32();
+                    break;
+                case /* int32 minor2 */ 5:
+                    message.minor2 = reader.int32();
+                    break;
+                case /* int32 minor3 */ 6:
+                    message.minor3 = reader.int32();
+                    break;
+                default:
+                    let u = options.readUnknownField;
+                    if (u === "throw")
+                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
+                    let d = reader.skip(wireType);
+                    if (u !== false)
+                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
+            }
+        }
+        return message;
+    }
+    internalBinaryWrite(message, writer, options) {
+        /* int32 major1 = 1; */
+        if (message.major1 !== 0)
+            writer.tag(1, WireType.Varint).int32(message.major1);
+        /* int32 major2 = 2; */
+        if (message.major2 !== 0)
+            writer.tag(2, WireType.Varint).int32(message.major2);
+        /* int32 major3 = 3; */
+        if (message.major3 !== 0)
+            writer.tag(3, WireType.Varint).int32(message.major3);
+        /* int32 minor1 = 4; */
+        if (message.minor1 !== 0)
+            writer.tag(4, WireType.Varint).int32(message.minor1);
+        /* int32 minor2 = 5; */
+        if (message.minor2 !== 0)
+            writer.tag(5, WireType.Varint).int32(message.minor2);
+        /* int32 minor3 = 6; */
+        if (message.minor3 !== 0)
+            writer.tag(6, WireType.Varint).int32(message.minor3);
+        let u = options.writeUnknownFields;
+        if (u !== false)
+            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+        return writer;
+    }
+}
+/**
+ * @generated MessageType for protobuf message proto.Glyphs
+ */
+export const Glyphs = new Glyphs$Type();
+// @generated message type with reflection information, may provide speed optimized methods
 class Cooldown$Type extends MessageType {
     constructor() {
         super("proto.Cooldown", [

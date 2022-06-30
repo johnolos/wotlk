@@ -33,7 +33,9 @@ export declare class ActionId {
     static fromProto(protoId: ActionIdProto): ActionId;
     static fromLogString(str: string): ActionId;
     private static getTooltipDataHelper;
-    private static getTooltipData;
+    static getItemTooltipData(id: number): Promise<any>;
+    static getSpellTooltipData(id: number): Promise<any>;
+    static getTooltipData(actionId: ActionId): Promise<any>;
 }
 export declare const defaultTargetIcon = "https://wow.zamimg.com/images/wow/icons/large/spell_shadow_metamorphosis.jpg";
 export declare const resourceTypeToIcon: Record<ResourceType, string>;

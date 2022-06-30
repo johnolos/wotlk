@@ -406,6 +406,56 @@ export interface EnhancementShaman_Options {
     snapshotT42Pc: boolean;
 }
 /**
+ * @generated from protobuf enum proto.ShamanMajorGlyph
+ */
+export declare enum ShamanMajorGlyph {
+    /**
+     * @generated from protobuf enum value: ShamanMajorGlyphNone = 0;
+     */
+    ShamanMajorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfChainHeal = 41517;
+     */
+    GlyphOfChainHeal = 41517,
+    /**
+     * @generated from protobuf enum value: GlyphOfChainLightning = 41518;
+     */
+    GlyphOfChainLightning = 41518,
+    /**
+     * @generated from protobuf enum value: GlyphOfEarthShield = 45775;
+     */
+    GlyphOfEarthShield = 45775,
+    /**
+     * @generated from protobuf enum value: GlyphOfEarthlivingWeapon = 41527;
+     */
+    GlyphOfEarthlivingWeapon = 41527
+}
+/**
+ * @generated from protobuf enum proto.ShamanMinorGlyph
+ */
+export declare enum ShamanMinorGlyph {
+    /**
+     * @generated from protobuf enum value: ShamanMinorGlyphNone = 0;
+     */
+    ShamanMinorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfAstralRecall = 43381;
+     */
+    GlyphOfAstralRecall = 43381,
+    /**
+     * @generated from protobuf enum value: GlyphOfGhostWolf = 43725;
+     */
+    GlyphOfGhostWolf = 43725,
+    /**
+     * @generated from protobuf enum value: GlyphOfRenewedLife = 43385;
+     */
+    GlyphOfRenewedLife = 43385,
+    /**
+     * @generated from protobuf enum value: GlyphOfThunderstorm = 44923;
+     */
+    GlyphOfThunderstorm = 44923
+}
+/**
  * @generated from protobuf enum proto.EarthTotem
  */
 export declare enum EarthTotem {

@@ -1,18 +1,4 @@
-import { Class } from '/wotlk/core/proto/common.js';
-import { Cooldowns } from '/wotlk/core/proto/common.js';
-import { Consumes } from '/wotlk/core/proto/common.js';
-import { Enchant } from '/wotlk/core/proto/common.js';
-import { Gem } from '/wotlk/core/proto/common.js';
-import { GemColor } from '/wotlk/core/proto/common.js';
-import { HealingModel } from '/wotlk/core/proto/common.js';
-import { IndividualBuffs } from '/wotlk/core/proto/common.js';
-import { ItemSlot } from '/wotlk/core/proto/common.js';
-import { Item } from '/wotlk/core/proto/common.js';
-import { Race, ShattrathFaction } from '/wotlk/core/proto/common.js';
-import { RaidTarget } from '/wotlk/core/proto/common.js';
-import { Spec } from '/wotlk/core/proto/common.js';
-import { Faction } from '/wotlk/core/proto/common.js';
-import { Stat } from '/wotlk/core/proto/common.js';
+import { Class, Cooldowns, Consumes, Enchant, Gem, GemColor, Glyphs, HealingModel, IndividualBuffs, ItemSlot, Item, Race, ShattrathFaction, RaidTarget, Spec, Faction, Stat } from '/wotlk/core/proto/common.js';
 import { PlayerStats } from '/wotlk/core/proto/api.js';
 import { Player as PlayerProto } from '/wotlk/core/proto/api.js';
 import { StatWeightsResult } from '/wotlk/core/proto/api.js';
@@ -38,6 +24,7 @@ export declare class Player<SpecType extends Spec> {
     private shattFaction;
     private rotation;
     private talentsString;
+    private glyphs;
     private specOptions;
     private cooldowns;
     private inFrontOfTarget;
@@ -57,6 +44,7 @@ export declare class Player<SpecType extends Spec> {
     readonly raceChangeEmitter: TypedEvent<void>;
     readonly rotationChangeEmitter: TypedEvent<void>;
     readonly talentsChangeEmitter: TypedEvent<void>;
+    readonly glyphsChangeEmitter: TypedEvent<void>;
     readonly specOptionsChangeEmitter: TypedEvent<void>;
     readonly cooldownsChangeEmitter: TypedEvent<void>;
     readonly inFrontOfTargetChangeEmitter: TypedEvent<void>;
@@ -109,6 +97,11 @@ export declare class Player<SpecType extends Spec> {
     setTalentsString(eventID: EventID, newTalentsString: string): void;
     getTalentTree(): number;
     getTalentTreeIcon(): string;
+    getGlyphs(): Glyphs;
+    setGlyphs(eventID: EventID, newGlyphs: Glyphs): void;
+    getMajorGlyphs(): Array<number>;
+    getMinorGlyphs(): Array<number>;
+    getAllGlyphs(): Array<number>;
     getSpecOptions(): SpecOptions<SpecType>;
     setSpecOptions(eventID: EventID, newSpecOptions: SpecOptions<SpecType>): void;
     getInFrontOfTarget(): boolean;

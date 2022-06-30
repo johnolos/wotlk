@@ -1,13 +1,4 @@
-import { Cooldowns } from '/wotlk/core/proto/common.js';
-import { Consumes } from '/wotlk/core/proto/common.js';
-import { HealingModel } from '/wotlk/core/proto/common.js';
-import { IndividualBuffs } from '/wotlk/core/proto/common.js';
-import { ShattrathFaction } from '/wotlk/core/proto/common.js';
-import { RangedWeaponType } from '/wotlk/core/proto/common.js';
-import { Spec } from '/wotlk/core/proto/common.js';
-import { Stat } from '/wotlk/core/proto/common.js';
-import { WeaponImbue } from '/wotlk/core/proto/common.js';
-import { WeaponType } from '/wotlk/core/proto/common.js';
+import { Cooldowns, Consumes, Glyphs, HealingModel, IndividualBuffs, ShattrathFaction, RangedWeaponType, Spec, Stat, WeaponImbue, WeaponType, } from '/wotlk/core/proto/common.js';
 import { PlayerStats } from '/wotlk/core/proto/api.js';
 import { Player as PlayerProto } from '/wotlk/core/proto/api.js';
 import { getWeaponDPS } from '/wotlk/core/proto_utils/equipped_item.js';
@@ -28,6 +19,7 @@ export class Player {
         this.bonusStats = new Stats();
         this.gear = new Gear({});
         this.talentsString = '';
+        this.glyphs = Glyphs.create();
         this.cooldowns = Cooldowns.create();
         this.inFrontOfTarget = false;
         this.healingModel = HealingModel.create();
@@ -45,6 +37,7 @@ export class Player {
         this.raceChangeEmitter = new TypedEvent('PlayerRace');
         this.rotationChangeEmitter = new TypedEvent('PlayerRotation');
         this.talentsChangeEmitter = new TypedEvent('PlayerTalents');
+        this.glyphsChangeEmitter = new TypedEvent('PlayerGlyphs');
         this.specOptionsChangeEmitter = new TypedEvent('PlayerSpecOptions');
         this.cooldownsChangeEmitter = new TypedEvent('PlayerCooldowns');
         this.inFrontOfTargetChangeEmitter = new TypedEvent('PlayerInFrontOfTarget');
@@ -69,6 +62,7 @@ export class Player {
             this.raceChangeEmitter,
             this.rotationChangeEmitter,
             this.talentsChangeEmitter,
+            this.glyphsChangeEmitter,
             this.specOptionsChangeEmitter,
             this.cooldownsChangeEmitter,
             this.inFrontOfTargetChangeEmitter,
@@ -343,6 +337,34 @@ export class Player {
     getTalentTreeIcon() {
         return getTalentTreeIcon(this.spec, this.getTalentsString());
     }
+    getGlyphs() {
+        // Make a defensive copy
+        return Glyphs.clone(this.glyphs);
+    }
+    setGlyphs(eventID, newGlyphs) {
+        if (Glyphs.equals(this.glyphs, newGlyphs))
+            return;
+        // Make a defensive copy
+        this.glyphs = Glyphs.clone(newGlyphs);
+        this.glyphsChangeEmitter.emit(eventID);
+    }
+    getMajorGlyphs() {
+        return [
+            this.glyphs.major1,
+            this.glyphs.major2,
+            this.glyphs.major3,
+        ].filter(glyph => glyph != 0);
+    }
+    getMinorGlyphs() {
+        return [
+            this.glyphs.minor1,
+            this.glyphs.minor2,
+            this.glyphs.minor3,
+        ].filter(glyph => glyph != 0);
+    }
+    getAllGlyphs() {
+        return this.getMajorGlyphs().concat(this.getMinorGlyphs());
+    }
     getSpecOptions() {
         return this.specTypeFunctions.optionsCopy(this.specOptions);
     }
@@ -492,6 +514,7 @@ export class Player {
             buffs: this.getBuffs(),
             cooldowns: this.getCooldowns(),
             talentsString: this.getTalentsString(),
+            glyphs: this.getGlyphs(),
             inFrontOfTarget: this.getInFrontOfTarget(),
             healingModel: this.getHealingModel(),
         }), this.getRotation(), forExport ? this.specTypeFunctions.talentsCreate() : this.getTalents(), this.getSpecOptions());
@@ -507,6 +530,7 @@ export class Player {
             this.setBuffs(eventID, proto.buffs || IndividualBuffs.create());
             this.setCooldowns(eventID, proto.cooldowns || Cooldowns.create());
             this.setTalentsString(eventID, proto.talentsString);
+            this.setGlyphs(eventID, proto.glyphs || Glyphs.create());
             this.setInFrontOfTarget(eventID, proto.inFrontOfTarget);
             this.setHealingModel(eventID, proto.healingModel || HealingModel.create());
             this.setRotation(eventID, this.specTypeFunctions.rotationFromPlayer(proto));

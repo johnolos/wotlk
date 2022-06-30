@@ -802,6 +802,35 @@ export interface ActionID {
     tag: number;
 }
 /**
+ * @generated from protobuf message proto.Glyphs
+ */
+export interface Glyphs {
+    /**
+     * @generated from protobuf field: int32 major1 = 1;
+     */
+    major1: number;
+    /**
+     * @generated from protobuf field: int32 major2 = 2;
+     */
+    major2: number;
+    /**
+     * @generated from protobuf field: int32 major3 = 3;
+     */
+    major3: number;
+    /**
+     * @generated from protobuf field: int32 minor1 = 4;
+     */
+    minor1: number;
+    /**
+     * @generated from protobuf field: int32 minor2 = 5;
+     */
+    minor2: number;
+    /**
+     * @generated from protobuf field: int32 minor3 = 6;
+     */
+    minor3: number;
+}
+/**
  * Custom options for a particular cooldown.
  *
  * @generated from protobuf message proto.Cooldown
@@ -2279,6 +2308,16 @@ declare class ActionID$Type extends MessageType<ActionID> {
  * @generated MessageType for protobuf message proto.ActionID
  */
 export declare const ActionID: ActionID$Type;
+declare class Glyphs$Type extends MessageType<Glyphs> {
+    constructor();
+    create(value?: PartialMessage<Glyphs>): Glyphs;
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: Glyphs): Glyphs;
+    internalBinaryWrite(message: Glyphs, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter;
+}
+/**
+ * @generated MessageType for protobuf message proto.Glyphs
+ */
+export declare const Glyphs: Glyphs$Type;
 declare class Cooldown$Type extends MessageType<Cooldown> {
     constructor();
     create(value?: PartialMessage<Cooldown>): Cooldown;

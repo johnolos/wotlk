@@ -17,6 +17,7 @@ import { RaidBuffs } from "./common";
 import { PartyBuffs } from "./common";
 import { HealingModel } from "./common";
 import { Cooldowns } from "./common";
+import { Glyphs } from "./common";
 import { ProtectionWarrior } from "./warrior";
 import { Warrior } from "./warrior";
 import { Warlock } from "./warlock";
@@ -178,6 +179,10 @@ export interface Player {
      * @generated from protobuf field: string talentsString = 17;
      */
     talentsString: string;
+    /**
+     * @generated from protobuf field: proto.Glyphs glyphs = 28;
+     */
+    glyphs?: Glyphs;
     /**
      * @generated from protobuf field: proto.Cooldowns cooldowns = 19;
      */
