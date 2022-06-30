@@ -11,7 +11,7 @@ import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // Eventually we will import these values for the raid sim too, so its good to
 // keep them in a separate file.
 // Default talents. Uses the wowhead calculator format, make the talents on
-// https://wotlk.wowhead.com/talent-calc and copy the numbers in the url.
+// https://wowhead.com/wotlk/talent-calc and copy the numbers in the url.
 export const CombatTalents = {
     name: 'Combat',
     data: '0053201252-023305102005015002321051',

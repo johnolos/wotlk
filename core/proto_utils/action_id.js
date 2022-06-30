@@ -94,10 +94,10 @@ export class ActionId {
     }
     setWowheadHref(elem) {
         if (this.itemId) {
-            elem.href = 'https://wotlk.wowhead.com/item=' + this.itemId;
+            elem.href = 'https://wowhead.com/wotlk/item=' + this.itemId;
         }
         else if (this.spellId) {
-            elem.href = 'https://wotlk.wowhead.com/spell=' + this.spellId;
+            elem.href = 'https://wowhead.com/wotlk/spell=' + this.spellId;
         }
     }
     setBackgroundAndHref(elem) {
@@ -334,7 +334,7 @@ export class ActionId {
     }
     static async getTooltipDataHelper(id, tooltipPostfix, cache) {
         if (!cache.has(id)) {
-            cache.set(id, fetch(`https://wotlk.wowhead.com/tooltip/${tooltipPostfix}/${id}`)
+            cache.set(id, fetch(`https://wowhead.com/wotlk/tooltip/${tooltipPostfix}/${id}`)
                 .then(response => response.json()));
         }
         return cache.get(id);
@@ -361,7 +361,7 @@ const petNameToActionId = {
     'Gnomish Flame Turret': ActionId.fromItemId(23841),
     'Water Elemental': ActionId.fromSpellId(31687),
 };
-// https://wotlk.wowhead.com/hunter-pets
+// https://wowhead.com/wotlk/hunter-pets
 const petNameToIcon = {
     'Bat': 'https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_bat.jpg',
     'Bear': 'https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_bear.jpg',
