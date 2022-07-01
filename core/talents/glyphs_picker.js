@@ -19,26 +19,24 @@ export class GlyphsPicker extends Component {
         this.glyphsConfig = glyphsConfig;
         const majorGlyphs = Object.keys(glyphsConfig.majorGlyphs).map(idStr => Number(idStr));
         const minorGlyphs = Object.keys(glyphsConfig.minorGlyphs).map(idStr => Number(idStr));
-        Promise.all(majorGlyphs.map(glyph => this.getGlyphData(glyph))).then(majorGlyphsData => {
-            this.majorGlyphPickers = ['major1', 'major2', 'major3'].map(glyphField => new GlyphPicker(this.rootElem, player, majorGlyphsData, glyphField, true));
-        });
-        Promise.all(minorGlyphs.map(glyph => this.getGlyphData(glyph))).then(minorGlyphsData => {
-            this.minorGlyphPickers = ['minor1', 'minor2', 'minor3'].map(glyphField => new GlyphPicker(this.rootElem, player, minorGlyphsData, glyphField, false));
-        });
+        const majorGlyphsData = majorGlyphs.map(glyph => this.getGlyphData(glyph));
+        const minorGlyphsData = minorGlyphs.map(glyph => this.getGlyphData(glyph));
+        this.majorGlyphPickers = ['major1', 'major2', 'major3'].map(glyphField => new GlyphPicker(this.rootElem, player, majorGlyphsData, glyphField, true));
+        this.minorGlyphPickers = ['minor1', 'minor2', 'minor3'].map(glyphField => new GlyphPicker(this.rootElem, player, minorGlyphsData, glyphField, false));
     }
-    async getGlyphData(glyph) {
-        //const tooltipData = await ActionId.getItemTooltipData(glyph);
-        //const match = tooltipData['tooltip'].match(GlyphsPicker.descriptionRegex);
+    // In case we ever want to parse description from tooltip HTML.
+    //static descriptionRegex = /<a href=\\"\/wotlk.*>(.*)<\/a>/g;
+    getGlyphData(glyph) {
+        const glyphConfig = this.glyphsConfig.majorGlyphs[glyph] || this.glyphsConfig.minorGlyphs[glyph];
         return {
             id: glyph,
-            name: 'name',
-            description: 'description',
-            iconUrl: this.glyphsConfig.majorGlyphs[glyph] || this.glyphsConfig.minorGlyphs[glyph],
+            name: glyphConfig.name,
+            description: glyphConfig.description,
+            iconUrl: glyphConfig.iconUrl,
             quality: ItemQuality.ItemQualityCommon,
         };
     }
 }
-GlyphsPicker.descriptionRegex = /<a href=\\"\/wotlk.*>(.*)<\/a>/g;
 class GlyphPicker extends Input {
     constructor(parent, player, glyphOptions, glyphField, isMajor) {
         super(parent, 'glyph-picker-root', player, {

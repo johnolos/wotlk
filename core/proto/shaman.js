@@ -76,6 +76,102 @@ export var ShamanMajorGlyph;
      * @generated from protobuf enum value: GlyphOfEarthlivingWeapon = 41527;
      */
     ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfEarthlivingWeapon"] = 41527] = "GlyphOfEarthlivingWeapon";
+    /**
+     * @generated from protobuf enum value: GlyphOfElementalMastery = 41552;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfElementalMastery"] = 41552] = "GlyphOfElementalMastery";
+    /**
+     * @generated from protobuf enum value: GlyphOfFeralSpirit = 45771;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfFeralSpirit"] = 45771] = "GlyphOfFeralSpirit";
+    /**
+     * @generated from protobuf enum value: GlyphOfFireElementalTotem = 41529;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfFireElementalTotem"] = 41529] = "GlyphOfFireElementalTotem";
+    /**
+     * @generated from protobuf enum value: GlyphOfFireNova = 41530;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfFireNova"] = 41530] = "GlyphOfFireNova";
+    /**
+     * @generated from protobuf enum value: GlyphOfFlameShock = 41531;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfFlameShock"] = 41531] = "GlyphOfFlameShock";
+    /**
+     * @generated from protobuf enum value: GlyphOfFlametongueWeapon = 41532;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfFlametongueWeapon"] = 41532] = "GlyphOfFlametongueWeapon";
+    /**
+     * @generated from protobuf enum value: GlyphOfFrostShock = 41547;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfFrostShock"] = 41547] = "GlyphOfFrostShock";
+    /**
+     * @generated from protobuf enum value: GlyphOfHealingStreamTotem = 41533;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfHealingStreamTotem"] = 41533] = "GlyphOfHealingStreamTotem";
+    /**
+     * @generated from protobuf enum value: GlyphOfHealingWave = 41534;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfHealingWave"] = 41534] = "GlyphOfHealingWave";
+    /**
+     * @generated from protobuf enum value: GlyphOfHex = 45777;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfHex"] = 45777] = "GlyphOfHex";
+    /**
+     * @generated from protobuf enum value: GlyphOfLava = 41524;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfLava"] = 41524] = "GlyphOfLava";
+    /**
+     * @generated from protobuf enum value: GlyphOfLavaLash = 41540;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfLavaLash"] = 41540] = "GlyphOfLavaLash";
+    /**
+     * @generated from protobuf enum value: GlyphOfLesserHealingWave = 41535;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfLesserHealingWave"] = 41535] = "GlyphOfLesserHealingWave";
+    /**
+     * @generated from protobuf enum value: GlyphOfLightningBolt = 41536;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfLightningBolt"] = 41536] = "GlyphOfLightningBolt";
+    /**
+     * @generated from protobuf enum value: GlyphOfLightningShield = 41537;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfLightningShield"] = 41537] = "GlyphOfLightningShield";
+    /**
+     * @generated from protobuf enum value: GlyphOfManaTide = 41538;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfManaTide"] = 41538] = "GlyphOfManaTide";
+    /**
+     * @generated from protobuf enum value: GlyphOfRiptide = 45772;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfRiptide"] = 45772] = "GlyphOfRiptide";
+    /**
+     * @generated from protobuf enum value: GlyphOfShocking = 41526;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfShocking"] = 41526] = "GlyphOfShocking";
+    /**
+     * @generated from protobuf enum value: GlyphOfStoneclawTotem = 45778;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfStoneclawTotem"] = 45778] = "GlyphOfStoneclawTotem";
+    /**
+     * @generated from protobuf enum value: GlyphOfStormstrike = 41539;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfStormstrike"] = 41539] = "GlyphOfStormstrike";
+    /**
+     * @generated from protobuf enum value: GlyphOfThunder = 45770;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfThunder"] = 45770] = "GlyphOfThunder";
+    /**
+     * @generated from protobuf enum value: GlyphOfTotemOfWrath = 45776;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfTotemOfWrath"] = 45776] = "GlyphOfTotemOfWrath";
+    /**
+     * @generated from protobuf enum value: GlyphOfWaterMastery = 41541;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfWaterMastery"] = 41541] = "GlyphOfWaterMastery";
+    /**
+     * @generated from protobuf enum value: GlyphOfWindfuryWeapon = 41542;
+     */
+    ShamanMajorGlyph[ShamanMajorGlyph["GlyphOfWindfuryWeapon"] = 41542] = "GlyphOfWindfuryWeapon";
 })(ShamanMajorGlyph || (ShamanMajorGlyph = {}));
 /**
  * @generated from protobuf enum proto.ShamanMinorGlyph
@@ -102,6 +198,18 @@ export var ShamanMinorGlyph;
      * @generated from protobuf enum value: GlyphOfThunderstorm = 44923;
      */
     ShamanMinorGlyph[ShamanMinorGlyph["GlyphOfThunderstorm"] = 44923] = "GlyphOfThunderstorm";
+    /**
+     * @generated from protobuf enum value: GlyphOfWaterBreathing = 43344;
+     */
+    ShamanMinorGlyph[ShamanMinorGlyph["GlyphOfWaterBreathing"] = 43344] = "GlyphOfWaterBreathing";
+    /**
+     * @generated from protobuf enum value: GlyphOfWaterShield = 43386;
+     */
+    ShamanMinorGlyph[ShamanMinorGlyph["GlyphOfWaterShield"] = 43386] = "GlyphOfWaterShield";
+    /**
+     * @generated from protobuf enum value: GlyphOfWaterWalking = 43388;
+     */
+    ShamanMinorGlyph[ShamanMinorGlyph["GlyphOfWaterWalking"] = 43388] = "GlyphOfWaterWalking";
 })(ShamanMinorGlyph || (ShamanMinorGlyph = {}));
 /**
  * @generated from protobuf enum proto.EarthTotem

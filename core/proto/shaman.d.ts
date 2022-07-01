@@ -428,7 +428,103 @@ export declare enum ShamanMajorGlyph {
     /**
      * @generated from protobuf enum value: GlyphOfEarthlivingWeapon = 41527;
      */
-    GlyphOfEarthlivingWeapon = 41527
+    GlyphOfEarthlivingWeapon = 41527,
+    /**
+     * @generated from protobuf enum value: GlyphOfElementalMastery = 41552;
+     */
+    GlyphOfElementalMastery = 41552,
+    /**
+     * @generated from protobuf enum value: GlyphOfFeralSpirit = 45771;
+     */
+    GlyphOfFeralSpirit = 45771,
+    /**
+     * @generated from protobuf enum value: GlyphOfFireElementalTotem = 41529;
+     */
+    GlyphOfFireElementalTotem = 41529,
+    /**
+     * @generated from protobuf enum value: GlyphOfFireNova = 41530;
+     */
+    GlyphOfFireNova = 41530,
+    /**
+     * @generated from protobuf enum value: GlyphOfFlameShock = 41531;
+     */
+    GlyphOfFlameShock = 41531,
+    /**
+     * @generated from protobuf enum value: GlyphOfFlametongueWeapon = 41532;
+     */
+    GlyphOfFlametongueWeapon = 41532,
+    /**
+     * @generated from protobuf enum value: GlyphOfFrostShock = 41547;
+     */
+    GlyphOfFrostShock = 41547,
+    /**
+     * @generated from protobuf enum value: GlyphOfHealingStreamTotem = 41533;
+     */
+    GlyphOfHealingStreamTotem = 41533,
+    /**
+     * @generated from protobuf enum value: GlyphOfHealingWave = 41534;
+     */
+    GlyphOfHealingWave = 41534,
+    /**
+     * @generated from protobuf enum value: GlyphOfHex = 45777;
+     */
+    GlyphOfHex = 45777,
+    /**
+     * @generated from protobuf enum value: GlyphOfLava = 41524;
+     */
+    GlyphOfLava = 41524,
+    /**
+     * @generated from protobuf enum value: GlyphOfLavaLash = 41540;
+     */
+    GlyphOfLavaLash = 41540,
+    /**
+     * @generated from protobuf enum value: GlyphOfLesserHealingWave = 41535;
+     */
+    GlyphOfLesserHealingWave = 41535,
+    /**
+     * @generated from protobuf enum value: GlyphOfLightningBolt = 41536;
+     */
+    GlyphOfLightningBolt = 41536,
+    /**
+     * @generated from protobuf enum value: GlyphOfLightningShield = 41537;
+     */
+    GlyphOfLightningShield = 41537,
+    /**
+     * @generated from protobuf enum value: GlyphOfManaTide = 41538;
+     */
+    GlyphOfManaTide = 41538,
+    /**
+     * @generated from protobuf enum value: GlyphOfRiptide = 45772;
+     */
+    GlyphOfRiptide = 45772,
+    /**
+     * @generated from protobuf enum value: GlyphOfShocking = 41526;
+     */
+    GlyphOfShocking = 41526,
+    /**
+     * @generated from protobuf enum value: GlyphOfStoneclawTotem = 45778;
+     */
+    GlyphOfStoneclawTotem = 45778,
+    /**
+     * @generated from protobuf enum value: GlyphOfStormstrike = 41539;
+     */
+    GlyphOfStormstrike = 41539,
+    /**
+     * @generated from protobuf enum value: GlyphOfThunder = 45770;
+     */
+    GlyphOfThunder = 45770,
+    /**
+     * @generated from protobuf enum value: GlyphOfTotemOfWrath = 45776;
+     */
+    GlyphOfTotemOfWrath = 45776,
+    /**
+     * @generated from protobuf enum value: GlyphOfWaterMastery = 41541;
+     */
+    GlyphOfWaterMastery = 41541,
+    /**
+     * @generated from protobuf enum value: GlyphOfWindfuryWeapon = 41542;
+     */
+    GlyphOfWindfuryWeapon = 41542
 }
 /**
  * @generated from protobuf enum proto.ShamanMinorGlyph
@@ -453,7 +549,19 @@ export declare enum ShamanMinorGlyph {
     /**
      * @generated from protobuf enum value: GlyphOfThunderstorm = 44923;
      */
-    GlyphOfThunderstorm = 44923
+    GlyphOfThunderstorm = 44923,
+    /**
+     * @generated from protobuf enum value: GlyphOfWaterBreathing = 43344;
+     */
+    GlyphOfWaterBreathing = 43344,
+    /**
+     * @generated from protobuf enum value: GlyphOfWaterShield = 43386;
+     */
+    GlyphOfWaterShield = 43386,
+    /**
+     * @generated from protobuf enum value: GlyphOfWaterWalking = 43388;
+     */
+    GlyphOfWaterWalking = 43388
 }
 /**
  * @generated from protobuf enum proto.EarthTotem
