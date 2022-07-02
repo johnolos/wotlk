@@ -1,4 +1,4 @@
-import { Class, Cooldowns, Consumes, Enchant, Gem, GemColor, Glyphs, HealingModel, IndividualBuffs, ItemSlot, Item, Race, ShattrathFaction, RaidTarget, Spec, Faction, Stat } from '/wotlk/core/proto/common.js';
+import { Class, Cooldowns, Consumes, Enchant, Gem, GemColor, Glyphs, HealingModel, IndividualBuffs, ItemSlot, Item, Profession, Race, ShattrathFaction, RaidTarget, Spec, Faction, Stat } from '/wotlk/core/proto/common.js';
 import { PlayerStats } from '/wotlk/core/proto/api.js';
 import { Player as PlayerProto } from '/wotlk/core/proto/api.js';
 import { StatWeightsResult } from '/wotlk/core/proto/api.js';
@@ -21,6 +21,8 @@ export declare class Player<SpecType extends Spec> {
     private bonusStats;
     private gear;
     private race;
+    private profession1;
+    private profession2;
     private shattFaction;
     private rotation;
     private talentsString;
@@ -41,6 +43,7 @@ export declare class Player<SpecType extends Spec> {
     readonly consumesChangeEmitter: TypedEvent<void>;
     readonly bonusStatsChangeEmitter: TypedEvent<void>;
     readonly gearChangeEmitter: TypedEvent<void>;
+    readonly professionChangeEmitter: TypedEvent<void>;
     readonly raceChangeEmitter: TypedEvent<void>;
     readonly rotationChangeEmitter: TypedEvent<void>;
     readonly talentsChangeEmitter: TypedEvent<void>;
@@ -75,6 +78,10 @@ export declare class Player<SpecType extends Spec> {
     getLabel(): string;
     getRace(): Race;
     setRace(eventID: EventID, newRace: Race): void;
+    getProfession1(): Profession;
+    setProfession1(eventID: EventID, newProfession: Profession): void;
+    getProfession2(): Profession;
+    setProfession2(eventID: EventID, newProfession: Profession): void;
     getShattFaction(): ShattrathFaction;
     setShattFaction(eventID: EventID, newFaction: ShattrathFaction): void;
     getFaction(): Faction;

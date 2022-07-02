@@ -20,6 +20,7 @@ import { IndividualSimSettings } from '/wotlk/core/proto/ui.js';
 import { LogRunner } from '/wotlk/core/components/log_runner.js';
 import { NumberPicker } from '/wotlk/core/components/number_picker.js';
 import { PartyBuffs } from '/wotlk/core/proto/common.js';
+import { Profession } from '/wotlk/core/proto/common.js';
 import { RaidBuffs } from '/wotlk/core/proto/common.js';
 import { SavedDataManager } from '/wotlk/core/components/saved_data_manager.js';
 import { SavedEncounter } from '/wotlk/core/proto/ui.js';
@@ -33,6 +34,7 @@ import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { shattFactionNames } from '/wotlk/core/proto_utils/names.js';
 import { addRaidSimAction } from '/wotlk/core/components/raid_sim_action.js';
 import { addStatWeightsAction } from '/wotlk/core/components/stat_weights_action.js';
+import { getEnumValues } from '/wotlk/core/utils.js';
 import { getMetaGemConditionDescription } from '/wotlk/core/proto_utils/gems.js';
 import { isDualWieldSpec } from '/wotlk/core/proto_utils/utils.js';
 import { launchedSpecs } from '/wotlk/core/launched_sims.js';
@@ -40,7 +42,7 @@ import { newIndividualExporters } from '/wotlk/core/components/exporters.js';
 import { newIndividualImporters } from '/wotlk/core/components/importers.js';
 import { newGlyphsPicker } from '/wotlk/core/talents/factory.js';
 import { newTalentsPicker } from '/wotlk/core/talents/factory.js';
-import { raceNames } from '/wotlk/core/proto_utils/names.js';
+import { professionNames, raceNames } from '/wotlk/core/proto_utils/names.js';
 import { isTankSpec } from '/wotlk/core/proto_utils/utils.js';
 import { specToEligibleRaces } from '/wotlk/core/proto_utils/utils.js';
 import { specToLocalStorageKey } from '/wotlk/core/proto_utils/utils.js';
@@ -450,6 +452,7 @@ export class IndividualSimUI extends SimUI {
         }
         const races = specToEligibleRaces[this.player.spec];
         const racePicker = new EnumPicker(this.rootElem.getElementsByClassName('race-section')[0], this.player, {
+            label: 'Race',
             values: races.map(race => {
                 return {
                     name: raceNames[race],
@@ -460,7 +463,33 @@ export class IndividualSimUI extends SimUI {
             getValue: sim => sim.getRace(),
             setValue: (eventID, sim, newValue) => sim.setRace(eventID, newValue),
         });
+        const professions = getEnumValues(Profession);
+        const profession1Picker = new EnumPicker(this.rootElem.getElementsByClassName('race-section')[0], this.player, {
+            label: 'Profession 1',
+            values: professions.map(p => {
+                return {
+                    name: professionNames[p],
+                    value: p,
+                };
+            }),
+            changedEvent: sim => sim.professionChangeEmitter,
+            getValue: sim => sim.getProfession1(),
+            setValue: (eventID, sim, newValue) => sim.setProfession1(eventID, newValue),
+        });
+        const profession2Picker = new EnumPicker(this.rootElem.getElementsByClassName('race-section')[0], this.player, {
+            label: 'Profession 2',
+            values: professions.map(p => {
+                return {
+                    name: professionNames[p],
+                    value: p,
+                };
+            }),
+            changedEvent: sim => sim.professionChangeEmitter,
+            getValue: sim => sim.getProfession2(),
+            setValue: (eventID, sim, newValue) => sim.setProfession2(eventID, newValue),
+        });
         const shattFactionPicker = new EnumPicker(this.rootElem.getElementsByClassName('race-section')[0], this.player, {
+            label: 'Shatt Faction',
             values: [ShattrathFaction.ShattrathFactionAldor, ShattrathFaction.ShattrathFactionScryer].map(faction => {
                 return {
                     name: shattFactionNames[faction],

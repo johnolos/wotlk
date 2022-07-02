@@ -17,6 +17,7 @@ import { RaidBuffs } from "./common";
 import { PartyBuffs } from "./common";
 import { HealingModel } from "./common";
 import { Cooldowns } from "./common";
+import { Profession } from "./common";
 import { Glyphs } from "./common";
 import { ProtectionWarrior } from "./warrior";
 import { Warrior } from "./warrior";
@@ -183,6 +184,14 @@ export interface Player {
      * @generated from protobuf field: proto.Glyphs glyphs = 28;
      */
     glyphs?: Glyphs;
+    /**
+     * @generated from protobuf field: proto.Profession profession1 = 29;
+     */
+    profession1: Profession;
+    /**
+     * @generated from protobuf field: proto.Profession profession2 = 30;
+     */
+    profession2: Profession;
     /**
      * @generated from protobuf field: proto.Cooldowns cooldowns = 19;
      */

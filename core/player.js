@@ -1,4 +1,4 @@
-import { Cooldowns, Consumes, Glyphs, HealingModel, IndividualBuffs, ShattrathFaction, RangedWeaponType, Spec, Stat, WeaponImbue, WeaponType, } from '/wotlk/core/proto/common.js';
+import { Cooldowns, Consumes, Glyphs, HealingModel, IndividualBuffs, Profession, ShattrathFaction, RangedWeaponType, Spec, Stat, WeaponImbue, WeaponType, } from '/wotlk/core/proto/common.js';
 import { PlayerStats } from '/wotlk/core/proto/api.js';
 import { Player as PlayerProto } from '/wotlk/core/proto/api.js';
 import { getWeaponDPS } from '/wotlk/core/proto_utils/equipped_item.js';
@@ -18,6 +18,9 @@ export class Player {
         this.consumes = Consumes.create();
         this.bonusStats = new Stats();
         this.gear = new Gear({});
+        this.profession1 = 0;
+        this.profession2 = 0;
+        this.shattFaction = 0;
         this.talentsString = '';
         this.glyphs = Glyphs.create();
         this.cooldowns = Cooldowns.create();
@@ -34,6 +37,7 @@ export class Player {
         this.consumesChangeEmitter = new TypedEvent('PlayerConsumes');
         this.bonusStatsChangeEmitter = new TypedEvent('PlayerBonusStats');
         this.gearChangeEmitter = new TypedEvent('PlayerGear');
+        this.professionChangeEmitter = new TypedEvent('PlayerProfession');
         this.raceChangeEmitter = new TypedEvent('PlayerRace');
         this.rotationChangeEmitter = new TypedEvent('PlayerRotation');
         this.talentsChangeEmitter = new TypedEvent('PlayerTalents');
@@ -49,7 +53,6 @@ export class Player {
         this.raid = null;
         this.spec = spec;
         this.race = specToEligibleRaces[this.spec][0];
-        this.shattFaction = 0;
         this.specTypeFunctions = specTypeFunctions[this.spec];
         this.rotation = this.specTypeFunctions.rotationCreate();
         this.specOptions = this.specTypeFunctions.optionsCreate();
@@ -59,6 +62,7 @@ export class Player {
             this.consumesChangeEmitter,
             this.bonusStatsChangeEmitter,
             this.gearChangeEmitter,
+            this.professionChangeEmitter,
             this.raceChangeEmitter,
             this.rotationChangeEmitter,
             this.talentsChangeEmitter,
@@ -185,6 +189,24 @@ export class Player {
         if (newRace != this.race) {
             this.race = newRace;
             this.raceChangeEmitter.emit(eventID);
+        }
+    }
+    getProfession1() {
+        return this.profession1;
+    }
+    setProfession1(eventID, newProfession) {
+        if (newProfession != this.profession1) {
+            this.profession1 = newProfession;
+            this.professionChangeEmitter.emit(eventID);
+        }
+    }
+    getProfession2() {
+        return this.profession2;
+    }
+    setProfession2(eventID, newProfession) {
+        if (newProfession != this.profession2) {
+            this.profession2 = newProfession;
+            this.professionChangeEmitter.emit(eventID);
         }
     }
     getShattFaction() {
@@ -544,6 +566,8 @@ export class Player {
     }
     applySharedDefaults(eventID) {
         TypedEvent.freezeAllAndDo(() => {
+            this.setProfession1(eventID, Profession.Engineering);
+            this.setProfession2(eventID, Profession.Jewelcrafting);
             this.setShattFaction(eventID, ShattrathFaction.ShattrathFactionAldor);
             this.setInFrontOfTarget(eventID, isTankSpec(this.spec));
             this.setHealingModel(eventID, HealingModel.create());
@@ -555,6 +579,8 @@ export class Player {
     }
     static applySharedDefaultsToProto(proto) {
         const spec = playerToSpec(proto);
+        proto.profession1 = Profession.Engineering;
+        proto.profession2 = Profession.Jewelcrafting;
         proto.shattFaction = ShattrathFaction.ShattrathFactionAldor;
         proto.inFrontOfTarget = isTankSpec(spec);
         proto.healingModel = HealingModel.create();

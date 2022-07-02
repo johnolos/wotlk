@@ -202,6 +202,60 @@ export var Class;
     Class[Class["ClassWarrior"] = 9] = "ClassWarrior";
 })(Class || (Class = {}));
 /**
+ * @generated from protobuf enum proto.Profession
+ */
+export var Profession;
+(function (Profession) {
+    /**
+     * @generated from protobuf enum value: ProfessionUnknown = 0;
+     */
+    Profession[Profession["ProfessionUnknown"] = 0] = "ProfessionUnknown";
+    /**
+     * @generated from protobuf enum value: Alchemy = 1;
+     */
+    Profession[Profession["Alchemy"] = 1] = "Alchemy";
+    /**
+     * @generated from protobuf enum value: Blacksmithing = 2;
+     */
+    Profession[Profession["Blacksmithing"] = 2] = "Blacksmithing";
+    /**
+     * @generated from protobuf enum value: Enchanting = 3;
+     */
+    Profession[Profession["Enchanting"] = 3] = "Enchanting";
+    /**
+     * @generated from protobuf enum value: Engineering = 4;
+     */
+    Profession[Profession["Engineering"] = 4] = "Engineering";
+    /**
+     * @generated from protobuf enum value: Herbalism = 5;
+     */
+    Profession[Profession["Herbalism"] = 5] = "Herbalism";
+    /**
+     * @generated from protobuf enum value: Inscription = 6;
+     */
+    Profession[Profession["Inscription"] = 6] = "Inscription";
+    /**
+     * @generated from protobuf enum value: Jewelcrafting = 7;
+     */
+    Profession[Profession["Jewelcrafting"] = 7] = "Jewelcrafting";
+    /**
+     * @generated from protobuf enum value: Leatherworking = 8;
+     */
+    Profession[Profession["Leatherworking"] = 8] = "Leatherworking";
+    /**
+     * @generated from protobuf enum value: Mining = 9;
+     */
+    Profession[Profession["Mining"] = 9] = "Mining";
+    /**
+     * @generated from protobuf enum value: Skinning = 10;
+     */
+    Profession[Profession["Skinning"] = 10] = "Skinning";
+    /**
+     * @generated from protobuf enum value: Tailoring = 11;
+     */
+    Profession[Profession["Tailoring"] = 11] = "Tailoring";
+})(Profession || (Profession = {}));
+/**
  * @generated from protobuf enum proto.Stat
  */
 export var Stat;

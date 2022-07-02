@@ -1078,6 +1078,59 @@ export declare enum Class {
     ClassWarrior = 9
 }
 /**
+ * @generated from protobuf enum proto.Profession
+ */
+export declare enum Profession {
+    /**
+     * @generated from protobuf enum value: ProfessionUnknown = 0;
+     */
+    ProfessionUnknown = 0,
+    /**
+     * @generated from protobuf enum value: Alchemy = 1;
+     */
+    Alchemy = 1,
+    /**
+     * @generated from protobuf enum value: Blacksmithing = 2;
+     */
+    Blacksmithing = 2,
+    /**
+     * @generated from protobuf enum value: Enchanting = 3;
+     */
+    Enchanting = 3,
+    /**
+     * @generated from protobuf enum value: Engineering = 4;
+     */
+    Engineering = 4,
+    /**
+     * @generated from protobuf enum value: Herbalism = 5;
+     */
+    Herbalism = 5,
+    /**
+     * @generated from protobuf enum value: Inscription = 6;
+     */
+    Inscription = 6,
+    /**
+     * @generated from protobuf enum value: Jewelcrafting = 7;
+     */
+    Jewelcrafting = 7,
+    /**
+     * @generated from protobuf enum value: Leatherworking = 8;
+     */
+    Leatherworking = 8,
+    /**
+     * @generated from protobuf enum value: Mining = 9;
+     */
+    Mining = 9,
+    /**
+     * @generated from protobuf enum value: Skinning = 10;
+     */
+    Skinning = 10,
+    /**
+     * @generated from protobuf enum value: Tailoring = 11;
+     */
+    Tailoring = 11
+}
+/**
  * @generated from protobuf enum proto.Stat
  */
 export declare enum Stat {

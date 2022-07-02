@@ -16,6 +16,7 @@ import { RaidBuffs } from './common.js';
 import { PartyBuffs } from './common.js';
 import { HealingModel } from './common.js';
 import { Cooldowns } from './common.js';
+import { Profession } from './common.js';
 import { Glyphs } from './common.js';
 import { ProtectionWarrior } from './warrior.js';
 import { Warrior } from './warrior.js';
@@ -101,13 +102,15 @@ class Player$Type extends MessageType {
             { no: 21, name: "protection_warrior", kind: "message", oneof: "spec", T: () => ProtectionWarrior },
             { no: 17, name: "talentsString", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
             { no: 28, name: "glyphs", kind: "message", T: () => Glyphs },
+            { no: 29, name: "profession1", kind: "enum", T: () => ["proto.Profession", Profession] },
+            { no: 30, name: "profession2", kind: "enum", T: () => ["proto.Profession", Profession] },
             { no: 19, name: "cooldowns", kind: "message", T: () => Cooldowns },
             { no: 23, name: "in_front_of_target", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 27, name: "healing_model", kind: "message", T: () => HealingModel }
         ]);
     }
     create(value) {
-        const message = { name: "", race: 0, shattFaction: 0, class: 0, bonusStats: [], spec: { oneofKind: undefined }, talentsString: "", inFrontOfTarget: false };
+        const message = { name: "", race: 0, shattFaction: 0, class: 0, bonusStats: [], spec: { oneofKind: undefined }, talentsString: "", profession1: 0, profession2: 0, inFrontOfTarget: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -242,6 +245,12 @@ class Player$Type extends MessageType {
                 case /* proto.Glyphs glyphs */ 28:
                     message.glyphs = Glyphs.internalBinaryRead(reader, reader.uint32(), options, message.glyphs);
                     break;
+                case /* proto.Profession profession1 */ 29:
+                    message.profession1 = reader.int32();
+                    break;
+                case /* proto.Profession profession2 */ 30:
+                    message.profession2 = reader.int32();
+                    break;
                 case /* proto.Cooldowns cooldowns */ 19:
                     message.cooldowns = Cooldowns.internalBinaryRead(reader, reader.uint32(), options, message.cooldowns);
                     break;
@@ -342,6 +351,12 @@ class Player$Type extends MessageType {
         /* proto.Glyphs glyphs = 28; */
         if (message.glyphs)
             Glyphs.internalBinaryWrite(message.glyphs, writer.tag(28, WireType.LengthDelimited).fork(), options).join();
+        /* proto.Profession profession1 = 29; */
+        if (message.profession1 !== 0)
+            writer.tag(29, WireType.Varint).int32(message.profession1);
+        /* proto.Profession profession2 = 30; */
+        if (message.profession2 !== 0)
+            writer.tag(30, WireType.Varint).int32(message.profession2);
         /* proto.Cooldowns cooldowns = 19; */
         if (message.cooldowns)
             Cooldowns.internalBinaryWrite(message.cooldowns, writer.tag(19, WireType.LengthDelimited).fork(), options).join();
