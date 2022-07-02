@@ -44,6 +44,162 @@ export var RetributionPaladin_Options_Judgement;
     RetributionPaladin_Options_Judgement[RetributionPaladin_Options_Judgement["Crusader"] = 2] = "Crusader";
 })(RetributionPaladin_Options_Judgement || (RetributionPaladin_Options_Judgement = {}));
 /**
+ * @generated from protobuf enum proto.PaladinMajorGlyph
+ */
+export var PaladinMajorGlyph;
+(function (PaladinMajorGlyph) {
+    /**
+     * @generated from protobuf enum value: PaladinMajorGlyphNone = 0;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["PaladinMajorGlyphNone"] = 0] = "PaladinMajorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfAvengerSShield = 41101;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfAvengerSShield"] = 41101] = "GlyphOfAvengerSShield";
+    /**
+     * @generated from protobuf enum value: GlyphOfAvengingWrath = 41107;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfAvengingWrath"] = 41107] = "GlyphOfAvengingWrath";
+    /**
+     * @generated from protobuf enum value: GlyphOfBeaconOfLight = 45741;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfBeaconOfLight"] = 45741] = "GlyphOfBeaconOfLight";
+    /**
+     * @generated from protobuf enum value: GlyphOfCleansing = 41104;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfCleansing"] = 41104] = "GlyphOfCleansing";
+    /**
+     * @generated from protobuf enum value: GlyphOfConsecration = 41099;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfConsecration"] = 41099] = "GlyphOfConsecration";
+    /**
+     * @generated from protobuf enum value: GlyphOfCrusaderStrike = 41098;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfCrusaderStrike"] = 41098] = "GlyphOfCrusaderStrike";
+    /**
+     * @generated from protobuf enum value: GlyphOfDivinePlea = 45745;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfDivinePlea"] = 45745] = "GlyphOfDivinePlea";
+    /**
+     * @generated from protobuf enum value: GlyphOfDivineStorm = 45743;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfDivineStorm"] = 45743] = "GlyphOfDivineStorm";
+    /**
+     * @generated from protobuf enum value: GlyphOfDivinity = 41108;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfDivinity"] = 41108] = "GlyphOfDivinity";
+    /**
+     * @generated from protobuf enum value: GlyphOfExorcism = 41103;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfExorcism"] = 41103] = "GlyphOfExorcism";
+    /**
+     * @generated from protobuf enum value: GlyphOfFlashOfLight = 41105;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfFlashOfLight"] = 41105] = "GlyphOfFlashOfLight";
+    /**
+     * @generated from protobuf enum value: GlyphOfHammerOfJustice = 41095;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfHammerOfJustice"] = 41095] = "GlyphOfHammerOfJustice";
+    /**
+     * @generated from protobuf enum value: GlyphOfHammerOfTheRighteous = 45742;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfHammerOfTheRighteous"] = 45742] = "GlyphOfHammerOfTheRighteous";
+    /**
+     * @generated from protobuf enum value: GlyphOfHammerOfWrath = 41097;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfHammerOfWrath"] = 41097] = "GlyphOfHammerOfWrath";
+    /**
+     * @generated from protobuf enum value: GlyphOfHolyLight = 41106;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfHolyLight"] = 41106] = "GlyphOfHolyLight";
+    /**
+     * @generated from protobuf enum value: GlyphOfHolyShock = 45746;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfHolyShock"] = 45746] = "GlyphOfHolyShock";
+    /**
+     * @generated from protobuf enum value: GlyphOfHolyWrath = 43867;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfHolyWrath"] = 43867] = "GlyphOfHolyWrath";
+    /**
+     * @generated from protobuf enum value: GlyphOfJudgement = 41092;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfJudgement"] = 41092] = "GlyphOfJudgement";
+    /**
+     * @generated from protobuf enum value: GlyphOfRighteousDefense = 41100;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfRighteousDefense"] = 41100] = "GlyphOfRighteousDefense";
+    /**
+     * @generated from protobuf enum value: GlyphOfSalvation = 45747;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfSalvation"] = 45747] = "GlyphOfSalvation";
+    /**
+     * @generated from protobuf enum value: GlyphOfSealOfCommand = 41094;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfSealOfCommand"] = 41094] = "GlyphOfSealOfCommand";
+    /**
+     * @generated from protobuf enum value: GlyphOfSealOfLight = 41110;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfSealOfLight"] = 41110] = "GlyphOfSealOfLight";
+    /**
+     * @generated from protobuf enum value: GlyphOfSealOfRighteousness = 43868;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfSealOfRighteousness"] = 43868] = "GlyphOfSealOfRighteousness";
+    /**
+     * @generated from protobuf enum value: GlyphOfSealOfVengeance = 43869;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfSealOfVengeance"] = 43869] = "GlyphOfSealOfVengeance";
+    /**
+     * @generated from protobuf enum value: GlyphOfSealOfWisdom = 41109;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfSealOfWisdom"] = 41109] = "GlyphOfSealOfWisdom";
+    /**
+     * @generated from protobuf enum value: GlyphOfShieldOfRighteousness = 45744;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfShieldOfRighteousness"] = 45744] = "GlyphOfShieldOfRighteousness";
+    /**
+     * @generated from protobuf enum value: GlyphOfSpiritualAttunement = 41096;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfSpiritualAttunement"] = 41096] = "GlyphOfSpiritualAttunement";
+    /**
+     * @generated from protobuf enum value: GlyphOfTurnEvil = 41102;
+     */
+    PaladinMajorGlyph[PaladinMajorGlyph["GlyphOfTurnEvil"] = 41102] = "GlyphOfTurnEvil";
+})(PaladinMajorGlyph || (PaladinMajorGlyph = {}));
+/**
+ * @generated from protobuf enum proto.PaladinMinorGlyph
+ */
+export var PaladinMinorGlyph;
+(function (PaladinMinorGlyph) {
+    /**
+     * @generated from protobuf enum value: PaladinMinorGlyphNone = 0;
+     */
+    PaladinMinorGlyph[PaladinMinorGlyph["PaladinMinorGlyphNone"] = 0] = "PaladinMinorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfBlessingOfKings = 43365;
+     */
+    PaladinMinorGlyph[PaladinMinorGlyph["GlyphOfBlessingOfKings"] = 43365] = "GlyphOfBlessingOfKings";
+    /**
+     * @generated from protobuf enum value: GlyphOfBlessingOfMight = 43340;
+     */
+    PaladinMinorGlyph[PaladinMinorGlyph["GlyphOfBlessingOfMight"] = 43340] = "GlyphOfBlessingOfMight";
+    /**
+     * @generated from protobuf enum value: GlyphOfBlessingOfWisdom = 43366;
+     */
+    PaladinMinorGlyph[PaladinMinorGlyph["GlyphOfBlessingOfWisdom"] = 43366] = "GlyphOfBlessingOfWisdom";
+    /**
+     * @generated from protobuf enum value: GlyphOfLayOnHands = 43367;
+     */
+    PaladinMinorGlyph[PaladinMinorGlyph["GlyphOfLayOnHands"] = 43367] = "GlyphOfLayOnHands";
+    /**
+     * @generated from protobuf enum value: GlyphOfSenseUndead = 43368;
+     */
+    PaladinMinorGlyph[PaladinMinorGlyph["GlyphOfSenseUndead"] = 43368] = "GlyphOfSenseUndead";
+    /**
+     * @generated from protobuf enum value: GlyphOfTheWise = 43369;
+     */
+    PaladinMinorGlyph[PaladinMinorGlyph["GlyphOfTheWise"] = 43369] = "GlyphOfTheWise";
+})(PaladinMinorGlyph || (PaladinMinorGlyph = {}));
+/**
  * @generated from protobuf enum proto.Blessings
  */
 export var Blessings;

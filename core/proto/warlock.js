@@ -103,6 +103,166 @@ export var Warlock_Options_Armor;
      */
     Warlock_Options_Armor[Warlock_Options_Armor["DemonArmor"] = 2] = "DemonArmor";
 })(Warlock_Options_Armor || (Warlock_Options_Armor = {}));
+/**
+ * @generated from protobuf enum proto.WarlockMajorGlyph
+ */
+export var WarlockMajorGlyph;
+(function (WarlockMajorGlyph) {
+    /**
+     * @generated from protobuf enum value: WarlockMajorGlyphNone = 0;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["WarlockMajorGlyphNone"] = 0] = "WarlockMajorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfChaosBolt = 45781;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfChaosBolt"] = 45781] = "GlyphOfChaosBolt";
+    /**
+     * @generated from protobuf enum value: GlyphOfConflagrate = 42454;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfConflagrate"] = 42454] = "GlyphOfConflagrate";
+    /**
+     * @generated from protobuf enum value: GlyphOfCorruption = 42455;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfCorruption"] = 42455] = "GlyphOfCorruption";
+    /**
+     * @generated from protobuf enum value: GlyphOfCurseOfAgony = 42456;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfCurseOfAgony"] = 42456] = "GlyphOfCurseOfAgony";
+    /**
+     * @generated from protobuf enum value: GlyphOfDeathCoil = 42457;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfDeathCoil"] = 42457] = "GlyphOfDeathCoil";
+    /**
+     * @generated from protobuf enum value: GlyphOfDemonicCircle = 45782;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfDemonicCircle"] = 45782] = "GlyphOfDemonicCircle";
+    /**
+     * @generated from protobuf enum value: GlyphOfFear = 42458;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfFear"] = 42458] = "GlyphOfFear";
+    /**
+     * @generated from protobuf enum value: GlyphOfFelguard = 42459;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfFelguard"] = 42459] = "GlyphOfFelguard";
+    /**
+     * @generated from protobuf enum value: GlyphOfFelhunter = 42460;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfFelhunter"] = 42460] = "GlyphOfFelhunter";
+    /**
+     * @generated from protobuf enum value: GlyphOfHaunt = 45779;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfHaunt"] = 45779] = "GlyphOfHaunt";
+    /**
+     * @generated from protobuf enum value: GlyphOfHealthFunnel = 42461;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfHealthFunnel"] = 42461] = "GlyphOfHealthFunnel";
+    /**
+     * @generated from protobuf enum value: GlyphOfHealthstone = 42462;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfHealthstone"] = 42462] = "GlyphOfHealthstone";
+    /**
+     * @generated from protobuf enum value: GlyphOfHowlOfTerror = 42463;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfHowlOfTerror"] = 42463] = "GlyphOfHowlOfTerror";
+    /**
+     * @generated from protobuf enum value: GlyphOfImmolate = 42464;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfImmolate"] = 42464] = "GlyphOfImmolate";
+    /**
+     * @generated from protobuf enum value: GlyphOfImp = 42465;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfImp"] = 42465] = "GlyphOfImp";
+    /**
+     * @generated from protobuf enum value: GlyphOfIncinerate = 42453;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfIncinerate"] = 42453] = "GlyphOfIncinerate";
+    /**
+     * @generated from protobuf enum value: GlyphOfLifeTap = 45785;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfLifeTap"] = 45785] = "GlyphOfLifeTap";
+    /**
+     * @generated from protobuf enum value: GlyphOfMetamorphosis = 45780;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfMetamorphosis"] = 45780] = "GlyphOfMetamorphosis";
+    /**
+     * @generated from protobuf enum value: GlyphOfQuickDecay = 50077;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfQuickDecay"] = 50077] = "GlyphOfQuickDecay";
+    /**
+     * @generated from protobuf enum value: GlyphOfSearingPain = 42466;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfSearingPain"] = 42466] = "GlyphOfSearingPain";
+    /**
+     * @generated from protobuf enum value: GlyphOfShadowBolt = 42467;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfShadowBolt"] = 42467] = "GlyphOfShadowBolt";
+    /**
+     * @generated from protobuf enum value: GlyphOfShadowburn = 42468;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfShadowburn"] = 42468] = "GlyphOfShadowburn";
+    /**
+     * @generated from protobuf enum value: GlyphOfShadowflame = 45783;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfShadowflame"] = 45783] = "GlyphOfShadowflame";
+    /**
+     * @generated from protobuf enum value: GlyphOfSiphonLife = 42469;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfSiphonLife"] = 42469] = "GlyphOfSiphonLife";
+    /**
+     * @generated from protobuf enum value: GlyphOfSoulLink = 45789;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfSoulLink"] = 45789] = "GlyphOfSoulLink";
+    /**
+     * @generated from protobuf enum value: GlyphOfSoulstone = 42470;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfSoulstone"] = 42470] = "GlyphOfSoulstone";
+    /**
+     * @generated from protobuf enum value: GlyphOfSuccubus = 42471;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfSuccubus"] = 42471] = "GlyphOfSuccubus";
+    /**
+     * @generated from protobuf enum value: GlyphOfUnstableAffliction = 42472;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfUnstableAffliction"] = 42472] = "GlyphOfUnstableAffliction";
+    /**
+     * @generated from protobuf enum value: GlyphOfVoidwalker = 42473;
+     */
+    WarlockMajorGlyph[WarlockMajorGlyph["GlyphOfVoidwalker"] = 42473] = "GlyphOfVoidwalker";
+})(WarlockMajorGlyph || (WarlockMajorGlyph = {}));
+/**
+ * @generated from protobuf enum proto.WarlockMinorGlyph
+ */
+export var WarlockMinorGlyph;
+(function (WarlockMinorGlyph) {
+    /**
+     * @generated from protobuf enum value: WarlockMinorGlyphNone = 0;
+     */
+    WarlockMinorGlyph[WarlockMinorGlyph["WarlockMinorGlyphNone"] = 0] = "WarlockMinorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfCurseOfExhausion = 43392;
+     */
+    WarlockMinorGlyph[WarlockMinorGlyph["GlyphOfCurseOfExhausion"] = 43392] = "GlyphOfCurseOfExhausion";
+    /**
+     * @generated from protobuf enum value: GlyphOfDrainSoul = 43390;
+     */
+    WarlockMinorGlyph[WarlockMinorGlyph["GlyphOfDrainSoul"] = 43390] = "GlyphOfDrainSoul";
+    /**
+     * @generated from protobuf enum value: GlyphOfEnslaveDemon = 43393;
+     */
+    WarlockMinorGlyph[WarlockMinorGlyph["GlyphOfEnslaveDemon"] = 43393] = "GlyphOfEnslaveDemon";
+    /**
+     * @generated from protobuf enum value: GlyphOfKilrogg = 43391;
+     */
+    WarlockMinorGlyph[WarlockMinorGlyph["GlyphOfKilrogg"] = 43391] = "GlyphOfKilrogg";
+    /**
+     * @generated from protobuf enum value: GlyphOfSouls = 43394;
+     */
+    WarlockMinorGlyph[WarlockMinorGlyph["GlyphOfSouls"] = 43394] = "GlyphOfSouls";
+    /**
+     * @generated from protobuf enum value: GlyphOfUnendingBreath = 43389;
+     */
+    WarlockMinorGlyph[WarlockMinorGlyph["GlyphOfUnendingBreath"] = 43389] = "GlyphOfUnendingBreath";
+})(WarlockMinorGlyph || (WarlockMinorGlyph = {}));
 // @generated message type with reflection information, may provide speed optimized methods
 class WarlockTalents$Type extends MessageType {
     constructor() {

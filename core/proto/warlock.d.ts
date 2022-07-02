@@ -370,6 +370,164 @@ export declare enum Warlock_Options_Armor {
      */
     DemonArmor = 2
 }
+/**
+ * @generated from protobuf enum proto.WarlockMajorGlyph
+ */
+export declare enum WarlockMajorGlyph {
+    /**
+     * @generated from protobuf enum value: WarlockMajorGlyphNone = 0;
+     */
+    WarlockMajorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfChaosBolt = 45781;
+     */
+    GlyphOfChaosBolt = 45781,
+    /**
+     * @generated from protobuf enum value: GlyphOfConflagrate = 42454;
+     */
+    GlyphOfConflagrate = 42454,
+    /**
+     * @generated from protobuf enum value: GlyphOfCorruption = 42455;
+     */
+    GlyphOfCorruption = 42455,
+    /**
+     * @generated from protobuf enum value: GlyphOfCurseOfAgony = 42456;
+     */
+    GlyphOfCurseOfAgony = 42456,
+    /**
+     * @generated from protobuf enum value: GlyphOfDeathCoil = 42457;
+     */
+    GlyphOfDeathCoil = 42457,
+    /**
+     * @generated from protobuf enum value: GlyphOfDemonicCircle = 45782;
+     */
+    GlyphOfDemonicCircle = 45782,
+    /**
+     * @generated from protobuf enum value: GlyphOfFear = 42458;
+     */
+    GlyphOfFear = 42458,
+    /**
+     * @generated from protobuf enum value: GlyphOfFelguard = 42459;
+     */
+    GlyphOfFelguard = 42459,
+    /**
+     * @generated from protobuf enum value: GlyphOfFelhunter = 42460;
+     */
+    GlyphOfFelhunter = 42460,
+    /**
+     * @generated from protobuf enum value: GlyphOfHaunt = 45779;
+     */
+    GlyphOfHaunt = 45779,
+    /**
+     * @generated from protobuf enum value: GlyphOfHealthFunnel = 42461;
+     */
+    GlyphOfHealthFunnel = 42461,
+    /**
+     * @generated from protobuf enum value: GlyphOfHealthstone = 42462;
+     */
+    GlyphOfHealthstone = 42462,
+    /**
+     * @generated from protobuf enum value: GlyphOfHowlOfTerror = 42463;
+     */
+    GlyphOfHowlOfTerror = 42463,
+    /**
+     * @generated from protobuf enum value: GlyphOfImmolate = 42464;
+     */
+    GlyphOfImmolate = 42464,
+    /**
+     * @generated from protobuf enum value: GlyphOfImp = 42465;
+     */
+    GlyphOfImp = 42465,
+    /**
+     * @generated from protobuf enum value: GlyphOfIncinerate = 42453;
+     */
+    GlyphOfIncinerate = 42453,
+    /**
+     * @generated from protobuf enum value: GlyphOfLifeTap = 45785;
+     */
+    GlyphOfLifeTap = 45785,
+    /**
+     * @generated from protobuf enum value: GlyphOfMetamorphosis = 45780;
+     */
+    GlyphOfMetamorphosis = 45780,
+    /**
+     * @generated from protobuf enum value: GlyphOfQuickDecay = 50077;
+     */
+    GlyphOfQuickDecay = 50077,
+    /**
+     * @generated from protobuf enum value: GlyphOfSearingPain = 42466;
+     */
+    GlyphOfSearingPain = 42466,
+    /**
+     * @generated from protobuf enum value: GlyphOfShadowBolt = 42467;
+     */
+    GlyphOfShadowBolt = 42467,
+    /**
+     * @generated from protobuf enum value: GlyphOfShadowburn = 42468;
+     */
+    GlyphOfShadowburn = 42468,
+    /**
+     * @generated from protobuf enum value: GlyphOfShadowflame = 45783;
+     */
+    GlyphOfShadowflame = 45783,
+    /**
+     * @generated from protobuf enum value: GlyphOfSiphonLife = 42469;
+     */
+    GlyphOfSiphonLife = 42469,
+    /**
+     * @generated from protobuf enum value: GlyphOfSoulLink = 45789;
+     */
+    GlyphOfSoulLink = 45789,
+    /**
+     * @generated from protobuf enum value: GlyphOfSoulstone = 42470;
+     */
+    GlyphOfSoulstone = 42470,
+    /**
+     * @generated from protobuf enum value: GlyphOfSuccubus = 42471;
+     */
+    GlyphOfSuccubus = 42471,
+    /**
+     * @generated from protobuf enum value: GlyphOfUnstableAffliction = 42472;
+     */
+    GlyphOfUnstableAffliction = 42472,
+    /**
+     * @generated from protobuf enum value: GlyphOfVoidwalker = 42473;
+     */
+    GlyphOfVoidwalker = 42473
+}
+/**
+ * @generated from protobuf enum proto.WarlockMinorGlyph
+ */
+export declare enum WarlockMinorGlyph {
+    /**
+     * @generated from protobuf enum value: WarlockMinorGlyphNone = 0;
+     */
+    WarlockMinorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfCurseOfExhausion = 43392;
+     */
+    GlyphOfCurseOfExhausion = 43392,
+    /**
+     * @generated from protobuf enum value: GlyphOfDrainSoul = 43390;
+     */
+    GlyphOfDrainSoul = 43390,
+    /**
+     * @generated from protobuf enum value: GlyphOfEnslaveDemon = 43393;
+     */
+    GlyphOfEnslaveDemon = 43393,
+    /**
+     * @generated from protobuf enum value: GlyphOfKilrogg = 43391;
+     */
+    GlyphOfKilrogg = 43391,
+    /**
+     * @generated from protobuf enum value: GlyphOfSouls = 43394;
+     */
+    GlyphOfSouls = 43394,
+    /**
+     * @generated from protobuf enum value: GlyphOfUnendingBreath = 43389;
+     */
+    GlyphOfUnendingBreath = 43389
+}
 declare class WarlockTalents$Type extends MessageType<WarlockTalents> {
     constructor();
     create(value?: PartialMessage<WarlockTalents>): WarlockTalents;

@@ -364,6 +364,160 @@ export interface ProtectionPaladin_Options {
     useAvengingWrath: boolean;
 }
 /**
+ * @generated from protobuf enum proto.PaladinMajorGlyph
+ */
+export declare enum PaladinMajorGlyph {
+    /**
+     * @generated from protobuf enum value: PaladinMajorGlyphNone = 0;
+     */
+    PaladinMajorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfAvengerSShield = 41101;
+     */
+    GlyphOfAvengerSShield = 41101,
+    /**
+     * @generated from protobuf enum value: GlyphOfAvengingWrath = 41107;
+     */
+    GlyphOfAvengingWrath = 41107,
+    /**
+     * @generated from protobuf enum value: GlyphOfBeaconOfLight = 45741;
+     */
+    GlyphOfBeaconOfLight = 45741,
+    /**
+     * @generated from protobuf enum value: GlyphOfCleansing = 41104;
+     */
+    GlyphOfCleansing = 41104,
+    /**
+     * @generated from protobuf enum value: GlyphOfConsecration = 41099;
+     */
+    GlyphOfConsecration = 41099,
+    /**
+     * @generated from protobuf enum value: GlyphOfCrusaderStrike = 41098;
+     */
+    GlyphOfCrusaderStrike = 41098,
+    /**
+     * @generated from protobuf enum value: GlyphOfDivinePlea = 45745;
+     */
+    GlyphOfDivinePlea = 45745,
+    /**
+     * @generated from protobuf enum value: GlyphOfDivineStorm = 45743;
+     */
+    GlyphOfDivineStorm = 45743,
+    /**
+     * @generated from protobuf enum value: GlyphOfDivinity = 41108;
+     */
+    GlyphOfDivinity = 41108,
+    /**
+     * @generated from protobuf enum value: GlyphOfExorcism = 41103;
+     */
+    GlyphOfExorcism = 41103,
+    /**
+     * @generated from protobuf enum value: GlyphOfFlashOfLight = 41105;
+     */
+    GlyphOfFlashOfLight = 41105,
+    /**
+     * @generated from protobuf enum value: GlyphOfHammerOfJustice = 41095;
+     */
+    GlyphOfHammerOfJustice = 41095,
+    /**
+     * @generated from protobuf enum value: GlyphOfHammerOfTheRighteous = 45742;
+     */
+    GlyphOfHammerOfTheRighteous = 45742,
+    /**
+     * @generated from protobuf enum value: GlyphOfHammerOfWrath = 41097;
+     */
+    GlyphOfHammerOfWrath = 41097,
+    /**
+     * @generated from protobuf enum value: GlyphOfHolyLight = 41106;
+     */
+    GlyphOfHolyLight = 41106,
+    /**
+     * @generated from protobuf enum value: GlyphOfHolyShock = 45746;
+     */
+    GlyphOfHolyShock = 45746,
+    /**
+     * @generated from protobuf enum value: GlyphOfHolyWrath = 43867;
+     */
+    GlyphOfHolyWrath = 43867,
+    /**
+     * @generated from protobuf enum value: GlyphOfJudgement = 41092;
+     */
+    GlyphOfJudgement = 41092,
+    /**
+     * @generated from protobuf enum value: GlyphOfRighteousDefense = 41100;
+     */
+    GlyphOfRighteousDefense = 41100,
+    /**
+     * @generated from protobuf enum value: GlyphOfSalvation = 45747;
+     */
+    GlyphOfSalvation = 45747,
+    /**
+     * @generated from protobuf enum value: GlyphOfSealOfCommand = 41094;
+     */
+    GlyphOfSealOfCommand = 41094,
+    /**
+     * @generated from protobuf enum value: GlyphOfSealOfLight = 41110;
+     */
+    GlyphOfSealOfLight = 41110,
+    /**
+     * @generated from protobuf enum value: GlyphOfSealOfRighteousness = 43868;
+     */
+    GlyphOfSealOfRighteousness = 43868,
+    /**
+     * @generated from protobuf enum value: GlyphOfSealOfVengeance = 43869;
+     */
+    GlyphOfSealOfVengeance = 43869,
+    /**
+     * @generated from protobuf enum value: GlyphOfSealOfWisdom = 41109;
+     */
+    GlyphOfSealOfWisdom = 41109,
+    /**
+     * @generated from protobuf enum value: GlyphOfShieldOfRighteousness = 45744;
+     */
+    GlyphOfShieldOfRighteousness = 45744,
+    /**
+     * @generated from protobuf enum value: GlyphOfSpiritualAttunement = 41096;
+     */
+    GlyphOfSpiritualAttunement = 41096,
+    /**
+     * @generated from protobuf enum value: GlyphOfTurnEvil = 41102;
+     */
+    GlyphOfTurnEvil = 41102
+}
+/**
+ * @generated from protobuf enum proto.PaladinMinorGlyph
+ */
+export declare enum PaladinMinorGlyph {
+    /**
+     * @generated from protobuf enum value: PaladinMinorGlyphNone = 0;
+     */
+    PaladinMinorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfBlessingOfKings = 43365;
+     */
+    GlyphOfBlessingOfKings = 43365,
+    /**
+     * @generated from protobuf enum value: GlyphOfBlessingOfMight = 43340;
+     */
+    GlyphOfBlessingOfMight = 43340,
+    /**
+     * @generated from protobuf enum value: GlyphOfBlessingOfWisdom = 43366;
+     */
+    GlyphOfBlessingOfWisdom = 43366,
+    /**
+     * @generated from protobuf enum value: GlyphOfLayOnHands = 43367;
+     */
+    GlyphOfLayOnHands = 43367,
+    /**
+     * @generated from protobuf enum value: GlyphOfSenseUndead = 43368;
+     */
+    GlyphOfSenseUndead = 43368,
+    /**
+     * @generated from protobuf enum value: GlyphOfTheWise = 43369;
+     */
+    GlyphOfTheWise = 43369
+}
+/**
  * @generated from protobuf enum proto.Blessings
  */
 export declare enum Blessings {

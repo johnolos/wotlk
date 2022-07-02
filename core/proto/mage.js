@@ -108,6 +108,170 @@ export var Mage_Options_ArmorType;
      */
     Mage_Options_ArmorType[Mage_Options_ArmorType["MoltenArmor"] = 2] = "MoltenArmor";
 })(Mage_Options_ArmorType || (Mage_Options_ArmorType = {}));
+/**
+ * @generated from protobuf enum proto.MageMajorGlyph
+ */
+export var MageMajorGlyph;
+(function (MageMajorGlyph) {
+    /**
+     * @generated from protobuf enum value: MageMajorGlyphNone = 0;
+     */
+    MageMajorGlyph[MageMajorGlyph["MageMajorGlyphNone"] = 0] = "MageMajorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfArcaneBarrage = 45738;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfArcaneBarrage"] = 45738] = "GlyphOfArcaneBarrage";
+    /**
+     * @generated from protobuf enum value: GlyphOfArcaneBlast = 44955;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfArcaneBlast"] = 44955] = "GlyphOfArcaneBlast";
+    /**
+     * @generated from protobuf enum value: GlyphOfArcaneExplosion = 42734;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfArcaneExplosion"] = 42734] = "GlyphOfArcaneExplosion";
+    /**
+     * @generated from protobuf enum value: GlyphOfArcaneMissiles = 42735;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfArcaneMissiles"] = 42735] = "GlyphOfArcaneMissiles";
+    /**
+     * @generated from protobuf enum value: GlyphOfArcanePower = 42736;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfArcanePower"] = 42736] = "GlyphOfArcanePower";
+    /**
+     * @generated from protobuf enum value: GlyphOfBlink = 42737;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfBlink"] = 42737] = "GlyphOfBlink";
+    /**
+     * @generated from protobuf enum value: GlyphOfDeepFreeze = 45736;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfDeepFreeze"] = 45736] = "GlyphOfDeepFreeze";
+    /**
+     * @generated from protobuf enum value: GlyphOfEternalWater = 50045;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfEternalWater"] = 50045] = "GlyphOfEternalWater";
+    /**
+     * @generated from protobuf enum value: GlyphOfEvocation = 42738;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfEvocation"] = 42738] = "GlyphOfEvocation";
+    /**
+     * @generated from protobuf enum value: GlyphOfFireBlast = 42740;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfFireBlast"] = 42740] = "GlyphOfFireBlast";
+    /**
+     * @generated from protobuf enum value: GlyphOfFireball = 42739;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfFireball"] = 42739] = "GlyphOfFireball";
+    /**
+     * @generated from protobuf enum value: GlyphOfFrostNova = 42741;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfFrostNova"] = 42741] = "GlyphOfFrostNova";
+    /**
+     * @generated from protobuf enum value: GlyphOfFrostbolt = 42742;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfFrostbolt"] = 42742] = "GlyphOfFrostbolt";
+    /**
+     * @generated from protobuf enum value: GlyphOfFrostfire = 44684;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfFrostfire"] = 44684] = "GlyphOfFrostfire";
+    /**
+     * @generated from protobuf enum value: GlyphOfIceArmor = 42743;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfIceArmor"] = 42743] = "GlyphOfIceArmor";
+    /**
+     * @generated from protobuf enum value: GlyphOfIceBarrier = 45740;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfIceBarrier"] = 45740] = "GlyphOfIceBarrier";
+    /**
+     * @generated from protobuf enum value: GlyphOfIceBlock = 42744;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfIceBlock"] = 42744] = "GlyphOfIceBlock";
+    /**
+     * @generated from protobuf enum value: GlyphOfIceLance = 42745;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfIceLance"] = 42745] = "GlyphOfIceLance";
+    /**
+     * @generated from protobuf enum value: GlyphOfIcyVeins = 42746;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfIcyVeins"] = 42746] = "GlyphOfIcyVeins";
+    /**
+     * @generated from protobuf enum value: GlyphOfInvisibility = 42748;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfInvisibility"] = 42748] = "GlyphOfInvisibility";
+    /**
+     * @generated from protobuf enum value: GlyphOfLivingBomb = 45737;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfLivingBomb"] = 45737] = "GlyphOfLivingBomb";
+    /**
+     * @generated from protobuf enum value: GlyphOfMageArmor = 42749;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfMageArmor"] = 42749] = "GlyphOfMageArmor";
+    /**
+     * @generated from protobuf enum value: GlyphOfManaGem = 42750;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfManaGem"] = 42750] = "GlyphOfManaGem";
+    /**
+     * @generated from protobuf enum value: GlyphOfMirrorImage = 45739;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfMirrorImage"] = 45739] = "GlyphOfMirrorImage";
+    /**
+     * @generated from protobuf enum value: GlyphOfMoltenArmor = 42751;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfMoltenArmor"] = 42751] = "GlyphOfMoltenArmor";
+    /**
+     * @generated from protobuf enum value: GlyphOfPolymorph = 42752;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfPolymorph"] = 42752] = "GlyphOfPolymorph";
+    /**
+     * @generated from protobuf enum value: GlyphOfRemoveCurse = 42753;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfRemoveCurse"] = 42753] = "GlyphOfRemoveCurse";
+    /**
+     * @generated from protobuf enum value: GlyphOfScorch = 42747;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfScorch"] = 42747] = "GlyphOfScorch";
+    /**
+     * @generated from protobuf enum value: GlyphOfWaterElemental = 42754;
+     */
+    MageMajorGlyph[MageMajorGlyph["GlyphOfWaterElemental"] = 42754] = "GlyphOfWaterElemental";
+})(MageMajorGlyph || (MageMajorGlyph = {}));
+/**
+ * @generated from protobuf enum proto.MageMinorGlyph
+ */
+export var MageMinorGlyph;
+(function (MageMinorGlyph) {
+    /**
+     * @generated from protobuf enum value: MageMinorGlyphNone = 0;
+     */
+    MageMinorGlyph[MageMinorGlyph["MageMinorGlyphNone"] = 0] = "MageMinorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfArcaneIntellect = 43339;
+     */
+    MageMinorGlyph[MageMinorGlyph["GlyphOfArcaneIntellect"] = 43339] = "GlyphOfArcaneIntellect";
+    /**
+     * @generated from protobuf enum value: GlyphOfBlastWave = 44920;
+     */
+    MageMinorGlyph[MageMinorGlyph["GlyphOfBlastWave"] = 44920] = "GlyphOfBlastWave";
+    /**
+     * @generated from protobuf enum value: GlyphOfFireWard = 43357;
+     */
+    MageMinorGlyph[MageMinorGlyph["GlyphOfFireWard"] = 43357] = "GlyphOfFireWard";
+    /**
+     * @generated from protobuf enum value: GlyphOfFrostArmor = 43359;
+     */
+    MageMinorGlyph[MageMinorGlyph["GlyphOfFrostArmor"] = 43359] = "GlyphOfFrostArmor";
+    /**
+     * @generated from protobuf enum value: GlyphOfFrostWard = 43360;
+     */
+    MageMinorGlyph[MageMinorGlyph["GlyphOfFrostWard"] = 43360] = "GlyphOfFrostWard";
+    /**
+     * @generated from protobuf enum value: GlyphOfSlowFall = 43364;
+     */
+    MageMinorGlyph[MageMinorGlyph["GlyphOfSlowFall"] = 43364] = "GlyphOfSlowFall";
+    /**
+     * @generated from protobuf enum value: GlyphOfThePenguin = 43361;
+     */
+    MageMinorGlyph[MageMinorGlyph["GlyphOfThePenguin"] = 43361] = "GlyphOfThePenguin";
+})(MageMinorGlyph || (MageMinorGlyph = {}));
 // @generated message type with reflection information, may provide speed optimized methods
 class MageTalents$Type extends MessageType {
     constructor() {

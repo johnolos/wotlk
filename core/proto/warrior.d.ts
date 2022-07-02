@@ -516,6 +516,160 @@ export interface ProtectionWarrior_Options {
     precastShoutSapphire: boolean;
 }
 /**
+ * @generated from protobuf enum proto.WarriorMajorGlyph
+ */
+export declare enum WarriorMajorGlyph {
+    /**
+     * @generated from protobuf enum value: WarriorMajorGlyphNone = 0;
+     */
+    WarriorMajorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfBarbaricInsults = 43420;
+     */
+    GlyphOfBarbaricInsults = 43420,
+    /**
+     * @generated from protobuf enum value: GlyphOfBladestorm = 45790;
+     */
+    GlyphOfBladestorm = 45790,
+    /**
+     * @generated from protobuf enum value: GlyphOfBlocking = 43425;
+     */
+    GlyphOfBlocking = 43425,
+    /**
+     * @generated from protobuf enum value: GlyphOfBloodthirst = 43412;
+     */
+    GlyphOfBloodthirst = 43412,
+    /**
+     * @generated from protobuf enum value: GlyphOfCleaving = 43414;
+     */
+    GlyphOfCleaving = 43414,
+    /**
+     * @generated from protobuf enum value: GlyphOfDevastate = 43415;
+     */
+    GlyphOfDevastate = 43415,
+    /**
+     * @generated from protobuf enum value: GlyphOfEnragedRegeneration = 45794;
+     */
+    GlyphOfEnragedRegeneration = 45794,
+    /**
+     * @generated from protobuf enum value: GlyphOfExecution = 43416;
+     */
+    GlyphOfExecution = 43416,
+    /**
+     * @generated from protobuf enum value: GlyphOfHamstring = 43417;
+     */
+    GlyphOfHamstring = 43417,
+    /**
+     * @generated from protobuf enum value: GlyphOfHeroicStrike = 43418;
+     */
+    GlyphOfHeroicStrike = 43418,
+    /**
+     * @generated from protobuf enum value: GlyphOfIntervene = 43419;
+     */
+    GlyphOfIntervene = 43419,
+    /**
+     * @generated from protobuf enum value: GlyphOfLastStand = 43426;
+     */
+    GlyphOfLastStand = 43426,
+    /**
+     * @generated from protobuf enum value: GlyphOfMortalStrike = 43421;
+     */
+    GlyphOfMortalStrike = 43421,
+    /**
+     * @generated from protobuf enum value: GlyphOfOverpower = 43422;
+     */
+    GlyphOfOverpower = 43422,
+    /**
+     * @generated from protobuf enum value: GlyphOfRapidCharge = 43413;
+     */
+    GlyphOfRapidCharge = 43413,
+    /**
+     * @generated from protobuf enum value: GlyphOfRending = 43423;
+     */
+    GlyphOfRending = 43423,
+    /**
+     * @generated from protobuf enum value: GlyphOfResonatingPower = 43430;
+     */
+    GlyphOfResonatingPower = 43430,
+    /**
+     * @generated from protobuf enum value: GlyphOfRevenge = 43424;
+     */
+    GlyphOfRevenge = 43424,
+    /**
+     * @generated from protobuf enum value: GlyphOfShieldWall = 45797;
+     */
+    GlyphOfShieldWall = 45797,
+    /**
+     * @generated from protobuf enum value: GlyphOfShockwave = 45792;
+     */
+    GlyphOfShockwave = 45792,
+    /**
+     * @generated from protobuf enum value: GlyphOfSpellReflection = 45795;
+     */
+    GlyphOfSpellReflection = 45795,
+    /**
+     * @generated from protobuf enum value: GlyphOfSunderArmor = 43427;
+     */
+    GlyphOfSunderArmor = 43427,
+    /**
+     * @generated from protobuf enum value: GlyphOfSweepingStrikes = 43428;
+     */
+    GlyphOfSweepingStrikes = 43428,
+    /**
+     * @generated from protobuf enum value: GlyphOfTaunt = 43429;
+     */
+    GlyphOfTaunt = 43429,
+    /**
+     * @generated from protobuf enum value: GlyphOfVictoryRush = 43431;
+     */
+    GlyphOfVictoryRush = 43431,
+    /**
+     * @generated from protobuf enum value: GlyphOfVigilance = 45793;
+     */
+    GlyphOfVigilance = 45793,
+    /**
+     * @generated from protobuf enum value: GlyphOfWhirlwind = 43432;
+     */
+    GlyphOfWhirlwind = 43432
+}
+/**
+ * @generated from protobuf enum proto.WarriorMinorGlyph
+ */
+export declare enum WarriorMinorGlyph {
+    /**
+     * @generated from protobuf enum value: WarriorMinorGlyphNone = 0;
+     */
+    WarriorMinorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfBattle = 43395;
+     */
+    GlyphOfBattle = 43395,
+    /**
+     * @generated from protobuf enum value: GlyphOfBloodrage = 43396;
+     */
+    GlyphOfBloodrage = 43396,
+    /**
+     * @generated from protobuf enum value: GlyphOfCharge = 43397;
+     */
+    GlyphOfCharge = 43397,
+    /**
+     * @generated from protobuf enum value: GlyphOfCommand = 49084;
+     */
+    GlyphOfCommand = 49084,
+    /**
+     * @generated from protobuf enum value: GlyphOfEnduringVictory = 43400;
+     */
+    GlyphOfEnduringVictory = 43400,
+    /**
+     * @generated from protobuf enum value: GlyphOfMockingBlow = 43398;
+     */
+    GlyphOfMockingBlow = 43398,
+    /**
+     * @generated from protobuf enum value: GlyphOfThunderClap = 43399;
+     */
+    GlyphOfThunderClap = 43399
+}
+/**
  * @generated from protobuf enum proto.WarriorShout
  */
 export declare enum WarriorShout {

@@ -33,6 +33,162 @@ export var Rogue_Rotation_Builder;
      */
     Rogue_Rotation_Builder[Rogue_Rotation_Builder["Mutilate"] = 5] = "Mutilate";
 })(Rogue_Rotation_Builder || (Rogue_Rotation_Builder = {}));
+/**
+ * @generated from protobuf enum proto.RogueMajorGlyph
+ */
+export var RogueMajorGlyph;
+(function (RogueMajorGlyph) {
+    /**
+     * @generated from protobuf enum value: RogueMajorGlyphNone = 0;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["RogueMajorGlyphNone"] = 0] = "RogueMajorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfAdrenalineRush = 42954;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfAdrenalineRush"] = 42954] = "GlyphOfAdrenalineRush";
+    /**
+     * @generated from protobuf enum value: GlyphOfAmbush = 42955;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfAmbush"] = 42955] = "GlyphOfAmbush";
+    /**
+     * @generated from protobuf enum value: GlyphOfBackstab = 42956;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfBackstab"] = 42956] = "GlyphOfBackstab";
+    /**
+     * @generated from protobuf enum value: GlyphOfBladeFlurry = 42957;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfBladeFlurry"] = 42957] = "GlyphOfBladeFlurry";
+    /**
+     * @generated from protobuf enum value: GlyphOfCloakOfShadows = 45769;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfCloakOfShadows"] = 45769] = "GlyphOfCloakOfShadows";
+    /**
+     * @generated from protobuf enum value: GlyphOfCripplingPoison = 42958;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfCripplingPoison"] = 42958] = "GlyphOfCripplingPoison";
+    /**
+     * @generated from protobuf enum value: GlyphOfDeadlyThrow = 42959;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfDeadlyThrow"] = 42959] = "GlyphOfDeadlyThrow";
+    /**
+     * @generated from protobuf enum value: GlyphOfEvasion = 42960;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfEvasion"] = 42960] = "GlyphOfEvasion";
+    /**
+     * @generated from protobuf enum value: GlyphOfEviscerate = 42961;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfEviscerate"] = 42961] = "GlyphOfEviscerate";
+    /**
+     * @generated from protobuf enum value: GlyphOfExposeArmor = 42962;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfExposeArmor"] = 42962] = "GlyphOfExposeArmor";
+    /**
+     * @generated from protobuf enum value: GlyphOfFanOfKnives = 45766;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfFanOfKnives"] = 45766] = "GlyphOfFanOfKnives";
+    /**
+     * @generated from protobuf enum value: GlyphOfFeint = 42963;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfFeint"] = 42963] = "GlyphOfFeint";
+    /**
+     * @generated from protobuf enum value: GlyphOfGarrote = 42964;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfGarrote"] = 42964] = "GlyphOfGarrote";
+    /**
+     * @generated from protobuf enum value: GlyphOfGhostlyStrike = 42965;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfGhostlyStrike"] = 42965] = "GlyphOfGhostlyStrike";
+    /**
+     * @generated from protobuf enum value: GlyphOfGouge = 42966;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfGouge"] = 42966] = "GlyphOfGouge";
+    /**
+     * @generated from protobuf enum value: GlyphOfHemorrhage = 42967;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfHemorrhage"] = 42967] = "GlyphOfHemorrhage";
+    /**
+     * @generated from protobuf enum value: GlyphOfHungerForBlood = 45761;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfHungerForBlood"] = 45761] = "GlyphOfHungerForBlood";
+    /**
+     * @generated from protobuf enum value: GlyphOfKillingSpree = 45762;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfKillingSpree"] = 45762] = "GlyphOfKillingSpree";
+    /**
+     * @generated from protobuf enum value: GlyphOfMutilate = 45768;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfMutilate"] = 45768] = "GlyphOfMutilate";
+    /**
+     * @generated from protobuf enum value: GlyphOfPreparation = 42968;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfPreparation"] = 42968] = "GlyphOfPreparation";
+    /**
+     * @generated from protobuf enum value: GlyphOfRupture = 42969;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfRupture"] = 42969] = "GlyphOfRupture";
+    /**
+     * @generated from protobuf enum value: GlyphOfSap = 42970;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfSap"] = 42970] = "GlyphOfSap";
+    /**
+     * @generated from protobuf enum value: GlyphOfShadowDance = 45764;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfShadowDance"] = 45764] = "GlyphOfShadowDance";
+    /**
+     * @generated from protobuf enum value: GlyphOfSinisterStrike = 42972;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfSinisterStrike"] = 42972] = "GlyphOfSinisterStrike";
+    /**
+     * @generated from protobuf enum value: GlyphOfSliceAndDice = 42973;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfSliceAndDice"] = 42973] = "GlyphOfSliceAndDice";
+    /**
+     * @generated from protobuf enum value: GlyphOfSprint = 42974;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfSprint"] = 42974] = "GlyphOfSprint";
+    /**
+     * @generated from protobuf enum value: GlyphOfTricksOfTheTrade = 45767;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfTricksOfTheTrade"] = 45767] = "GlyphOfTricksOfTheTrade";
+    /**
+     * @generated from protobuf enum value: GlyphOfVigor = 42971;
+     */
+    RogueMajorGlyph[RogueMajorGlyph["GlyphOfVigor"] = 42971] = "GlyphOfVigor";
+})(RogueMajorGlyph || (RogueMajorGlyph = {}));
+/**
+ * @generated from protobuf enum proto.RogueMinorGlyph
+ */
+export var RogueMinorGlyph;
+(function (RogueMinorGlyph) {
+    /**
+     * @generated from protobuf enum value: RogueMinorGlyphNone = 0;
+     */
+    RogueMinorGlyph[RogueMinorGlyph["RogueMinorGlyphNone"] = 0] = "RogueMinorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfBlurredSpeed = 43379;
+     */
+    RogueMinorGlyph[RogueMinorGlyph["GlyphOfBlurredSpeed"] = 43379] = "GlyphOfBlurredSpeed";
+    /**
+     * @generated from protobuf enum value: GlyphOfDistract = 43376;
+     */
+    RogueMinorGlyph[RogueMinorGlyph["GlyphOfDistract"] = 43376] = "GlyphOfDistract";
+    /**
+     * @generated from protobuf enum value: GlyphOfPickLock = 43377;
+     */
+    RogueMinorGlyph[RogueMinorGlyph["GlyphOfPickLock"] = 43377] = "GlyphOfPickLock";
+    /**
+     * @generated from protobuf enum value: GlyphOfPickPocket = 43343;
+     */
+    RogueMinorGlyph[RogueMinorGlyph["GlyphOfPickPocket"] = 43343] = "GlyphOfPickPocket";
+    /**
+     * @generated from protobuf enum value: GlyphOfSafeFall = 43378;
+     */
+    RogueMinorGlyph[RogueMinorGlyph["GlyphOfSafeFall"] = 43378] = "GlyphOfSafeFall";
+    /**
+     * @generated from protobuf enum value: GlyphOfVanish = 43380;
+     */
+    RogueMinorGlyph[RogueMinorGlyph["GlyphOfVanish"] = 43380] = "GlyphOfVanish";
+})(RogueMinorGlyph || (RogueMinorGlyph = {}));
 // @generated message type with reflection information, may provide speed optimized methods
 class RogueTalents$Type extends MessageType {
     constructor() {

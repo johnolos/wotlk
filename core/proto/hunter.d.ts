@@ -451,6 +451,156 @@ export declare enum Hunter_Options_PetType {
      */
     WindSerpent = 6
 }
+/**
+ * @generated from protobuf enum proto.HunterMajorGlyph
+ */
+export declare enum HunterMajorGlyph {
+    /**
+     * @generated from protobuf enum value: HunterMajorGlyphNone = 0;
+     */
+    HunterMajorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfAimedShot = 42897;
+     */
+    GlyphOfAimedShot = 42897,
+    /**
+     * @generated from protobuf enum value: GlyphOfArcaneShot = 42898;
+     */
+    GlyphOfArcaneShot = 42898,
+    /**
+     * @generated from protobuf enum value: GlyphOfAspectOfTheViper = 42901;
+     */
+    GlyphOfAspectOfTheViper = 42901,
+    /**
+     * @generated from protobuf enum value: GlyphOfBestialWrath = 42902;
+     */
+    GlyphOfBestialWrath = 42902,
+    /**
+     * @generated from protobuf enum value: GlyphOfChimeraShot = 45625;
+     */
+    GlyphOfChimeraShot = 45625,
+    /**
+     * @generated from protobuf enum value: GlyphOfDeterrence = 42903;
+     */
+    GlyphOfDeterrence = 42903,
+    /**
+     * @generated from protobuf enum value: GlyphOfDisengage = 42904;
+     */
+    GlyphOfDisengage = 42904,
+    /**
+     * @generated from protobuf enum value: GlyphOfExplosiveShot = 45731;
+     */
+    GlyphOfExplosiveShot = 45731,
+    /**
+     * @generated from protobuf enum value: GlyphOfExplosiveTrap = 45733;
+     */
+    GlyphOfExplosiveTrap = 45733,
+    /**
+     * @generated from protobuf enum value: GlyphOfFreezingTrap = 42905;
+     */
+    GlyphOfFreezingTrap = 42905,
+    /**
+     * @generated from protobuf enum value: GlyphOfFrostTrap = 42906;
+     */
+    GlyphOfFrostTrap = 42906,
+    /**
+     * @generated from protobuf enum value: GlyphOfHunterSMark = 42907;
+     */
+    GlyphOfHunterSMark = 42907,
+    /**
+     * @generated from protobuf enum value: GlyphOfImmolationTrap = 42908;
+     */
+    GlyphOfImmolationTrap = 42908,
+    /**
+     * @generated from protobuf enum value: GlyphOfKillShot = 45732;
+     */
+    GlyphOfKillShot = 45732,
+    /**
+     * @generated from protobuf enum value: GlyphOfMending = 42900;
+     */
+    GlyphOfMending = 42900,
+    /**
+     * @generated from protobuf enum value: GlyphOfMultiShot = 42910;
+     */
+    GlyphOfMultiShot = 42910,
+    /**
+     * @generated from protobuf enum value: GlyphOfRapidFire = 42911;
+     */
+    GlyphOfRapidFire = 42911,
+    /**
+     * @generated from protobuf enum value: GlyphOfRaptorStrike = 45735;
+     */
+    GlyphOfRaptorStrike = 45735,
+    /**
+     * @generated from protobuf enum value: GlyphOfScatterShot = 45734;
+     */
+    GlyphOfScatterShot = 45734,
+    /**
+     * @generated from protobuf enum value: GlyphOfSerpentSting = 42912;
+     */
+    GlyphOfSerpentSting = 42912,
+    /**
+     * @generated from protobuf enum value: GlyphOfSnakeTrap = 42913;
+     */
+    GlyphOfSnakeTrap = 42913,
+    /**
+     * @generated from protobuf enum value: GlyphOfSteadyShot = 42914;
+     */
+    GlyphOfSteadyShot = 42914,
+    /**
+     * @generated from protobuf enum value: GlyphOfTheBeast = 42899;
+     */
+    GlyphOfTheBeast = 42899,
+    /**
+     * @generated from protobuf enum value: GlyphOfTheHawk = 42909;
+     */
+    GlyphOfTheHawk = 42909,
+    /**
+     * @generated from protobuf enum value: GlyphOfTrueshotAura = 42915;
+     */
+    GlyphOfTrueshotAura = 42915,
+    /**
+     * @generated from protobuf enum value: GlyphOfVolley = 42916;
+     */
+    GlyphOfVolley = 42916,
+    /**
+     * @generated from protobuf enum value: GlyphOfWyvernSting = 42917;
+     */
+    GlyphOfWyvernSting = 42917
+}
+/**
+ * @generated from protobuf enum proto.HunterMinorGlyph
+ */
+export declare enum HunterMinorGlyph {
+    /**
+     * @generated from protobuf enum value: HunterMinorGlyphNone = 0;
+     */
+    HunterMinorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfFeignDeath = 43351;
+     */
+    GlyphOfFeignDeath = 43351,
+    /**
+     * @generated from protobuf enum value: GlyphOfMendPet = 43350;
+     */
+    GlyphOfMendPet = 43350,
+    /**
+     * @generated from protobuf enum value: GlyphOfPossessedStrength = 43354;
+     */
+    GlyphOfPossessedStrength = 43354,
+    /**
+     * @generated from protobuf enum value: GlyphOfRevivePet = 43338;
+     */
+    GlyphOfRevivePet = 43338,
+    /**
+     * @generated from protobuf enum value: GlyphOfScareBeast = 43356;
+     */
+    GlyphOfScareBeast = 43356,
+    /**
+     * @generated from protobuf enum value: GlyphOfThePack = 43355;
+     */
+    GlyphOfThePack = 43355
+}
 declare class HunterTalents$Type extends MessageType<HunterTalents> {
     constructor();
     create(value?: PartialMessage<HunterTalents>): HunterTalents;

@@ -153,6 +153,158 @@ export var Hunter_Options_PetType;
      */
     Hunter_Options_PetType[Hunter_Options_PetType["WindSerpent"] = 6] = "WindSerpent";
 })(Hunter_Options_PetType || (Hunter_Options_PetType = {}));
+/**
+ * @generated from protobuf enum proto.HunterMajorGlyph
+ */
+export var HunterMajorGlyph;
+(function (HunterMajorGlyph) {
+    /**
+     * @generated from protobuf enum value: HunterMajorGlyphNone = 0;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["HunterMajorGlyphNone"] = 0] = "HunterMajorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfAimedShot = 42897;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfAimedShot"] = 42897] = "GlyphOfAimedShot";
+    /**
+     * @generated from protobuf enum value: GlyphOfArcaneShot = 42898;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfArcaneShot"] = 42898] = "GlyphOfArcaneShot";
+    /**
+     * @generated from protobuf enum value: GlyphOfAspectOfTheViper = 42901;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfAspectOfTheViper"] = 42901] = "GlyphOfAspectOfTheViper";
+    /**
+     * @generated from protobuf enum value: GlyphOfBestialWrath = 42902;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfBestialWrath"] = 42902] = "GlyphOfBestialWrath";
+    /**
+     * @generated from protobuf enum value: GlyphOfChimeraShot = 45625;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfChimeraShot"] = 45625] = "GlyphOfChimeraShot";
+    /**
+     * @generated from protobuf enum value: GlyphOfDeterrence = 42903;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfDeterrence"] = 42903] = "GlyphOfDeterrence";
+    /**
+     * @generated from protobuf enum value: GlyphOfDisengage = 42904;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfDisengage"] = 42904] = "GlyphOfDisengage";
+    /**
+     * @generated from protobuf enum value: GlyphOfExplosiveShot = 45731;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfExplosiveShot"] = 45731] = "GlyphOfExplosiveShot";
+    /**
+     * @generated from protobuf enum value: GlyphOfExplosiveTrap = 45733;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfExplosiveTrap"] = 45733] = "GlyphOfExplosiveTrap";
+    /**
+     * @generated from protobuf enum value: GlyphOfFreezingTrap = 42905;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfFreezingTrap"] = 42905] = "GlyphOfFreezingTrap";
+    /**
+     * @generated from protobuf enum value: GlyphOfFrostTrap = 42906;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfFrostTrap"] = 42906] = "GlyphOfFrostTrap";
+    /**
+     * @generated from protobuf enum value: GlyphOfHunterSMark = 42907;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfHunterSMark"] = 42907] = "GlyphOfHunterSMark";
+    /**
+     * @generated from protobuf enum value: GlyphOfImmolationTrap = 42908;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfImmolationTrap"] = 42908] = "GlyphOfImmolationTrap";
+    /**
+     * @generated from protobuf enum value: GlyphOfKillShot = 45732;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfKillShot"] = 45732] = "GlyphOfKillShot";
+    /**
+     * @generated from protobuf enum value: GlyphOfMending = 42900;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfMending"] = 42900] = "GlyphOfMending";
+    /**
+     * @generated from protobuf enum value: GlyphOfMultiShot = 42910;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfMultiShot"] = 42910] = "GlyphOfMultiShot";
+    /**
+     * @generated from protobuf enum value: GlyphOfRapidFire = 42911;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfRapidFire"] = 42911] = "GlyphOfRapidFire";
+    /**
+     * @generated from protobuf enum value: GlyphOfRaptorStrike = 45735;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfRaptorStrike"] = 45735] = "GlyphOfRaptorStrike";
+    /**
+     * @generated from protobuf enum value: GlyphOfScatterShot = 45734;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfScatterShot"] = 45734] = "GlyphOfScatterShot";
+    /**
+     * @generated from protobuf enum value: GlyphOfSerpentSting = 42912;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfSerpentSting"] = 42912] = "GlyphOfSerpentSting";
+    /**
+     * @generated from protobuf enum value: GlyphOfSnakeTrap = 42913;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfSnakeTrap"] = 42913] = "GlyphOfSnakeTrap";
+    /**
+     * @generated from protobuf enum value: GlyphOfSteadyShot = 42914;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfSteadyShot"] = 42914] = "GlyphOfSteadyShot";
+    /**
+     * @generated from protobuf enum value: GlyphOfTheBeast = 42899;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfTheBeast"] = 42899] = "GlyphOfTheBeast";
+    /**
+     * @generated from protobuf enum value: GlyphOfTheHawk = 42909;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfTheHawk"] = 42909] = "GlyphOfTheHawk";
+    /**
+     * @generated from protobuf enum value: GlyphOfTrueshotAura = 42915;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfTrueshotAura"] = 42915] = "GlyphOfTrueshotAura";
+    /**
+     * @generated from protobuf enum value: GlyphOfVolley = 42916;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfVolley"] = 42916] = "GlyphOfVolley";
+    /**
+     * @generated from protobuf enum value: GlyphOfWyvernSting = 42917;
+     */
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfWyvernSting"] = 42917] = "GlyphOfWyvernSting";
+})(HunterMajorGlyph || (HunterMajorGlyph = {}));
+/**
+ * @generated from protobuf enum proto.HunterMinorGlyph
+ */
+export var HunterMinorGlyph;
+(function (HunterMinorGlyph) {
+    /**
+     * @generated from protobuf enum value: HunterMinorGlyphNone = 0;
+     */
+    HunterMinorGlyph[HunterMinorGlyph["HunterMinorGlyphNone"] = 0] = "HunterMinorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfFeignDeath = 43351;
+     */
+    HunterMinorGlyph[HunterMinorGlyph["GlyphOfFeignDeath"] = 43351] = "GlyphOfFeignDeath";
+    /**
+     * @generated from protobuf enum value: GlyphOfMendPet = 43350;
+     */
+    HunterMinorGlyph[HunterMinorGlyph["GlyphOfMendPet"] = 43350] = "GlyphOfMendPet";
+    /**
+     * @generated from protobuf enum value: GlyphOfPossessedStrength = 43354;
+     */
+    HunterMinorGlyph[HunterMinorGlyph["GlyphOfPossessedStrength"] = 43354] = "GlyphOfPossessedStrength";
+    /**
+     * @generated from protobuf enum value: GlyphOfRevivePet = 43338;
+     */
+    HunterMinorGlyph[HunterMinorGlyph["GlyphOfRevivePet"] = 43338] = "GlyphOfRevivePet";
+    /**
+     * @generated from protobuf enum value: GlyphOfScareBeast = 43356;
+     */
+    HunterMinorGlyph[HunterMinorGlyph["GlyphOfScareBeast"] = 43356] = "GlyphOfScareBeast";
+    /**
+     * @generated from protobuf enum value: GlyphOfThePack = 43355;
+     */
+    HunterMinorGlyph[HunterMinorGlyph["GlyphOfThePack"] = 43355] = "GlyphOfThePack";
+})(HunterMinorGlyph || (HunterMinorGlyph = {}));
 // @generated message type with reflection information, may provide speed optimized methods
 class HunterTalents$Type extends MessageType {
     constructor() {

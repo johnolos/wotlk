@@ -76,6 +76,162 @@ export var ProtectionWarrior_Rotation_ShieldBlock;
     ProtectionWarrior_Rotation_ShieldBlock[ProtectionWarrior_Rotation_ShieldBlock["ShieldBlockOnCD"] = 2] = "ShieldBlockOnCD";
 })(ProtectionWarrior_Rotation_ShieldBlock || (ProtectionWarrior_Rotation_ShieldBlock = {}));
 /**
+ * @generated from protobuf enum proto.WarriorMajorGlyph
+ */
+export var WarriorMajorGlyph;
+(function (WarriorMajorGlyph) {
+    /**
+     * @generated from protobuf enum value: WarriorMajorGlyphNone = 0;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["WarriorMajorGlyphNone"] = 0] = "WarriorMajorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfBarbaricInsults = 43420;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfBarbaricInsults"] = 43420] = "GlyphOfBarbaricInsults";
+    /**
+     * @generated from protobuf enum value: GlyphOfBladestorm = 45790;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfBladestorm"] = 45790] = "GlyphOfBladestorm";
+    /**
+     * @generated from protobuf enum value: GlyphOfBlocking = 43425;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfBlocking"] = 43425] = "GlyphOfBlocking";
+    /**
+     * @generated from protobuf enum value: GlyphOfBloodthirst = 43412;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfBloodthirst"] = 43412] = "GlyphOfBloodthirst";
+    /**
+     * @generated from protobuf enum value: GlyphOfCleaving = 43414;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfCleaving"] = 43414] = "GlyphOfCleaving";
+    /**
+     * @generated from protobuf enum value: GlyphOfDevastate = 43415;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfDevastate"] = 43415] = "GlyphOfDevastate";
+    /**
+     * @generated from protobuf enum value: GlyphOfEnragedRegeneration = 45794;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfEnragedRegeneration"] = 45794] = "GlyphOfEnragedRegeneration";
+    /**
+     * @generated from protobuf enum value: GlyphOfExecution = 43416;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfExecution"] = 43416] = "GlyphOfExecution";
+    /**
+     * @generated from protobuf enum value: GlyphOfHamstring = 43417;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfHamstring"] = 43417] = "GlyphOfHamstring";
+    /**
+     * @generated from protobuf enum value: GlyphOfHeroicStrike = 43418;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfHeroicStrike"] = 43418] = "GlyphOfHeroicStrike";
+    /**
+     * @generated from protobuf enum value: GlyphOfIntervene = 43419;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfIntervene"] = 43419] = "GlyphOfIntervene";
+    /**
+     * @generated from protobuf enum value: GlyphOfLastStand = 43426;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfLastStand"] = 43426] = "GlyphOfLastStand";
+    /**
+     * @generated from protobuf enum value: GlyphOfMortalStrike = 43421;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfMortalStrike"] = 43421] = "GlyphOfMortalStrike";
+    /**
+     * @generated from protobuf enum value: GlyphOfOverpower = 43422;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfOverpower"] = 43422] = "GlyphOfOverpower";
+    /**
+     * @generated from protobuf enum value: GlyphOfRapidCharge = 43413;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfRapidCharge"] = 43413] = "GlyphOfRapidCharge";
+    /**
+     * @generated from protobuf enum value: GlyphOfRending = 43423;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfRending"] = 43423] = "GlyphOfRending";
+    /**
+     * @generated from protobuf enum value: GlyphOfResonatingPower = 43430;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfResonatingPower"] = 43430] = "GlyphOfResonatingPower";
+    /**
+     * @generated from protobuf enum value: GlyphOfRevenge = 43424;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfRevenge"] = 43424] = "GlyphOfRevenge";
+    /**
+     * @generated from protobuf enum value: GlyphOfShieldWall = 45797;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfShieldWall"] = 45797] = "GlyphOfShieldWall";
+    /**
+     * @generated from protobuf enum value: GlyphOfShockwave = 45792;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfShockwave"] = 45792] = "GlyphOfShockwave";
+    /**
+     * @generated from protobuf enum value: GlyphOfSpellReflection = 45795;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfSpellReflection"] = 45795] = "GlyphOfSpellReflection";
+    /**
+     * @generated from protobuf enum value: GlyphOfSunderArmor = 43427;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfSunderArmor"] = 43427] = "GlyphOfSunderArmor";
+    /**
+     * @generated from protobuf enum value: GlyphOfSweepingStrikes = 43428;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfSweepingStrikes"] = 43428] = "GlyphOfSweepingStrikes";
+    /**
+     * @generated from protobuf enum value: GlyphOfTaunt = 43429;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfTaunt"] = 43429] = "GlyphOfTaunt";
+    /**
+     * @generated from protobuf enum value: GlyphOfVictoryRush = 43431;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfVictoryRush"] = 43431] = "GlyphOfVictoryRush";
+    /**
+     * @generated from protobuf enum value: GlyphOfVigilance = 45793;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfVigilance"] = 45793] = "GlyphOfVigilance";
+    /**
+     * @generated from protobuf enum value: GlyphOfWhirlwind = 43432;
+     */
+    WarriorMajorGlyph[WarriorMajorGlyph["GlyphOfWhirlwind"] = 43432] = "GlyphOfWhirlwind";
+})(WarriorMajorGlyph || (WarriorMajorGlyph = {}));
+/**
+ * @generated from protobuf enum proto.WarriorMinorGlyph
+ */
+export var WarriorMinorGlyph;
+(function (WarriorMinorGlyph) {
+    /**
+     * @generated from protobuf enum value: WarriorMinorGlyphNone = 0;
+     */
+    WarriorMinorGlyph[WarriorMinorGlyph["WarriorMinorGlyphNone"] = 0] = "WarriorMinorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfBattle = 43395;
+     */
+    WarriorMinorGlyph[WarriorMinorGlyph["GlyphOfBattle"] = 43395] = "GlyphOfBattle";
+    /**
+     * @generated from protobuf enum value: GlyphOfBloodrage = 43396;
+     */
+    WarriorMinorGlyph[WarriorMinorGlyph["GlyphOfBloodrage"] = 43396] = "GlyphOfBloodrage";
+    /**
+     * @generated from protobuf enum value: GlyphOfCharge = 43397;
+     */
+    WarriorMinorGlyph[WarriorMinorGlyph["GlyphOfCharge"] = 43397] = "GlyphOfCharge";
+    /**
+     * @generated from protobuf enum value: GlyphOfCommand = 49084;
+     */
+    WarriorMinorGlyph[WarriorMinorGlyph["GlyphOfCommand"] = 49084] = "GlyphOfCommand";
+    /**
+     * @generated from protobuf enum value: GlyphOfEnduringVictory = 43400;
+     */
+    WarriorMinorGlyph[WarriorMinorGlyph["GlyphOfEnduringVictory"] = 43400] = "GlyphOfEnduringVictory";
+    /**
+     * @generated from protobuf enum value: GlyphOfMockingBlow = 43398;
+     */
+    WarriorMinorGlyph[WarriorMinorGlyph["GlyphOfMockingBlow"] = 43398] = "GlyphOfMockingBlow";
+    /**
+     * @generated from protobuf enum value: GlyphOfThunderClap = 43399;
+     */
+    WarriorMinorGlyph[WarriorMinorGlyph["GlyphOfThunderClap"] = 43399] = "GlyphOfThunderClap";
+})(WarriorMinorGlyph || (WarriorMinorGlyph = {}));
+/**
  * @generated from protobuf enum proto.WarriorShout
  */
 export var WarriorShout;

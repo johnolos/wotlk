@@ -66,6 +66,178 @@ export var FeralTankDruid_Rotation_Swipe;
      */
     FeralTankDruid_Rotation_Swipe[FeralTankDruid_Rotation_Swipe["SwipeSpam"] = 2] = "SwipeSpam";
 })(FeralTankDruid_Rotation_Swipe || (FeralTankDruid_Rotation_Swipe = {}));
+/**
+ * @generated from protobuf enum proto.DruidMajorGlyph
+ */
+export var DruidMajorGlyph;
+(function (DruidMajorGlyph) {
+    /**
+     * @generated from protobuf enum value: DruidMajorGlyphNone = 0;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["DruidMajorGlyphNone"] = 0] = "DruidMajorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfBarkskin = 45623;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfBarkskin"] = 45623] = "GlyphOfBarkskin";
+    /**
+     * @generated from protobuf enum value: GlyphOfBerserk = 45601;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfBerserk"] = 45601] = "GlyphOfBerserk";
+    /**
+     * @generated from protobuf enum value: GlyphOfClaw = 48720;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfClaw"] = 48720] = "GlyphOfClaw";
+    /**
+     * @generated from protobuf enum value: GlyphOfEntanglingRoots = 40924;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfEntanglingRoots"] = 40924] = "GlyphOfEntanglingRoots";
+    /**
+     * @generated from protobuf enum value: GlyphOfFocus = 44928;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfFocus"] = 44928] = "GlyphOfFocus";
+    /**
+     * @generated from protobuf enum value: GlyphOfFrenziedRegeneration = 40896;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfFrenziedRegeneration"] = 40896] = "GlyphOfFrenziedRegeneration";
+    /**
+     * @generated from protobuf enum value: GlyphOfGrowling = 40899;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfGrowling"] = 40899] = "GlyphOfGrowling";
+    /**
+     * @generated from protobuf enum value: GlyphOfHealingTouch = 40914;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfHealingTouch"] = 40914] = "GlyphOfHealingTouch";
+    /**
+     * @generated from protobuf enum value: GlyphOfHurricane = 40920;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfHurricane"] = 40920] = "GlyphOfHurricane";
+    /**
+     * @generated from protobuf enum value: GlyphOfInnervate = 40908;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfInnervate"] = 40908] = "GlyphOfInnervate";
+    /**
+     * @generated from protobuf enum value: GlyphOfInsectSwarm = 40919;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfInsectSwarm"] = 40919] = "GlyphOfInsectSwarm";
+    /**
+     * @generated from protobuf enum value: GlyphOfLifebloom = 40915;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfLifebloom"] = 40915] = "GlyphOfLifebloom";
+    /**
+     * @generated from protobuf enum value: GlyphOfMangle = 40900;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfMangle"] = 40900] = "GlyphOfMangle";
+    /**
+     * @generated from protobuf enum value: GlyphOfMaul = 40897;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfMaul"] = 40897] = "GlyphOfMaul";
+    /**
+     * @generated from protobuf enum value: GlyphOfMonsoon = 45622;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfMonsoon"] = 45622] = "GlyphOfMonsoon";
+    /**
+     * @generated from protobuf enum value: GlyphOfMoonfire = 40923;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfMoonfire"] = 40923] = "GlyphOfMoonfire";
+    /**
+     * @generated from protobuf enum value: GlyphOfNourish = 45603;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfNourish"] = 45603] = "GlyphOfNourish";
+    /**
+     * @generated from protobuf enum value: GlyphOfRake = 40903;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfRake"] = 40903] = "GlyphOfRake";
+    /**
+     * @generated from protobuf enum value: GlyphOfRapidRejuvenation = 50125;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfRapidRejuvenation"] = 50125] = "GlyphOfRapidRejuvenation";
+    /**
+     * @generated from protobuf enum value: GlyphOfRebirth = 40909;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfRebirth"] = 40909] = "GlyphOfRebirth";
+    /**
+     * @generated from protobuf enum value: GlyphOfRegrowth = 40912;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfRegrowth"] = 40912] = "GlyphOfRegrowth";
+    /**
+     * @generated from protobuf enum value: GlyphOfRejuvenation = 40913;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfRejuvenation"] = 40913] = "GlyphOfRejuvenation";
+    /**
+     * @generated from protobuf enum value: GlyphOfRip = 40902;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfRip"] = 40902] = "GlyphOfRip";
+    /**
+     * @generated from protobuf enum value: GlyphOfSavageRoar = 45604;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfSavageRoar"] = 45604] = "GlyphOfSavageRoar";
+    /**
+     * @generated from protobuf enum value: GlyphOfShred = 40901;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfShred"] = 40901] = "GlyphOfShred";
+    /**
+     * @generated from protobuf enum value: GlyphOfStarfall = 40921;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfStarfall"] = 40921] = "GlyphOfStarfall";
+    /**
+     * @generated from protobuf enum value: GlyphOfStarfire = 40916;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfStarfire"] = 40916] = "GlyphOfStarfire";
+    /**
+     * @generated from protobuf enum value: GlyphOfSurvivalInstincts = 46372;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfSurvivalInstincts"] = 46372] = "GlyphOfSurvivalInstincts";
+    /**
+     * @generated from protobuf enum value: GlyphOfSwiftmend = 40906;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfSwiftmend"] = 40906] = "GlyphOfSwiftmend";
+    /**
+     * @generated from protobuf enum value: GlyphOfWildGrowth = 45602;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfWildGrowth"] = 45602] = "GlyphOfWildGrowth";
+    /**
+     * @generated from protobuf enum value: GlyphOfWrath = 40922;
+     */
+    DruidMajorGlyph[DruidMajorGlyph["GlyphOfWrath"] = 40922] = "GlyphOfWrath";
+})(DruidMajorGlyph || (DruidMajorGlyph = {}));
+/**
+ * @generated from protobuf enum proto.DruidMinorGlyph
+ */
+export var DruidMinorGlyph;
+(function (DruidMinorGlyph) {
+    /**
+     * @generated from protobuf enum value: DruidMinorGlyphNone = 0;
+     */
+    DruidMinorGlyph[DruidMinorGlyph["DruidMinorGlyphNone"] = 0] = "DruidMinorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfAquaticForm = 43316;
+     */
+    DruidMinorGlyph[DruidMinorGlyph["GlyphOfAquaticForm"] = 43316] = "GlyphOfAquaticForm";
+    /**
+     * @generated from protobuf enum value: GlyphOfChallengingRoar = 43334;
+     */
+    DruidMinorGlyph[DruidMinorGlyph["GlyphOfChallengingRoar"] = 43334] = "GlyphOfChallengingRoar";
+    /**
+     * @generated from protobuf enum value: GlyphOfDash = 43674;
+     */
+    DruidMinorGlyph[DruidMinorGlyph["GlyphOfDash"] = 43674] = "GlyphOfDash";
+    /**
+     * @generated from protobuf enum value: GlyphOfTheWild = 43335;
+     */
+    DruidMinorGlyph[DruidMinorGlyph["GlyphOfTheWild"] = 43335] = "GlyphOfTheWild";
+    /**
+     * @generated from protobuf enum value: GlyphOfThorns = 43332;
+     */
+    DruidMinorGlyph[DruidMinorGlyph["GlyphOfThorns"] = 43332] = "GlyphOfThorns";
+    /**
+     * @generated from protobuf enum value: GlyphOfTyphoon = 44922;
+     */
+    DruidMinorGlyph[DruidMinorGlyph["GlyphOfTyphoon"] = 44922] = "GlyphOfTyphoon";
+    /**
+     * @generated from protobuf enum value: GlyphOfUnburdenedRebirth = 43331;
+     */
+    DruidMinorGlyph[DruidMinorGlyph["GlyphOfUnburdenedRebirth"] = 43331] = "GlyphOfUnburdenedRebirth";
+})(DruidMinorGlyph || (DruidMinorGlyph = {}));
 // @generated message type with reflection information, may provide speed optimized methods
 class DruidTalents$Type extends MessageType {
     constructor() {

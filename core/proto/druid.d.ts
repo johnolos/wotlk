@@ -426,6 +426,176 @@ export interface FeralTankDruid_Options {
      */
     startingRage: number;
 }
+/**
+ * @generated from protobuf enum proto.DruidMajorGlyph
+ */
+export declare enum DruidMajorGlyph {
+    /**
+     * @generated from protobuf enum value: DruidMajorGlyphNone = 0;
+     */
+    DruidMajorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfBarkskin = 45623;
+     */
+    GlyphOfBarkskin = 45623,
+    /**
+     * @generated from protobuf enum value: GlyphOfBerserk = 45601;
+     */
+    GlyphOfBerserk = 45601,
+    /**
+     * @generated from protobuf enum value: GlyphOfClaw = 48720;
+     */
+    GlyphOfClaw = 48720,
+    /**
+     * @generated from protobuf enum value: GlyphOfEntanglingRoots = 40924;
+     */
+    GlyphOfEntanglingRoots = 40924,
+    /**
+     * @generated from protobuf enum value: GlyphOfFocus = 44928;
+     */
+    GlyphOfFocus = 44928,
+    /**
+     * @generated from protobuf enum value: GlyphOfFrenziedRegeneration = 40896;
+     */
+    GlyphOfFrenziedRegeneration = 40896,
+    /**
+     * @generated from protobuf enum value: GlyphOfGrowling = 40899;
+     */
+    GlyphOfGrowling = 40899,
+    /**
+     * @generated from protobuf enum value: GlyphOfHealingTouch = 40914;
+     */
+    GlyphOfHealingTouch = 40914,
+    /**
+     * @generated from protobuf enum value: GlyphOfHurricane = 40920;
+     */
+    GlyphOfHurricane = 40920,
+    /**
+     * @generated from protobuf enum value: GlyphOfInnervate = 40908;
+     */
+    GlyphOfInnervate = 40908,
+    /**
+     * @generated from protobuf enum value: GlyphOfInsectSwarm = 40919;
+     */
+    GlyphOfInsectSwarm = 40919,
+    /**
+     * @generated from protobuf enum value: GlyphOfLifebloom = 40915;
+     */
+    GlyphOfLifebloom = 40915,
+    /**
+     * @generated from protobuf enum value: GlyphOfMangle = 40900;
+     */
+    GlyphOfMangle = 40900,
+    /**
+     * @generated from protobuf enum value: GlyphOfMaul = 40897;
+     */
+    GlyphOfMaul = 40897,
+    /**
+     * @generated from protobuf enum value: GlyphOfMonsoon = 45622;
+     */
+    GlyphOfMonsoon = 45622,
+    /**
+     * @generated from protobuf enum value: GlyphOfMoonfire = 40923;
+     */
+    GlyphOfMoonfire = 40923,
+    /**
+     * @generated from protobuf enum value: GlyphOfNourish = 45603;
+     */
+    GlyphOfNourish = 45603,
+    /**
+     * @generated from protobuf enum value: GlyphOfRake = 40903;
+     */
+    GlyphOfRake = 40903,
+    /**
+     * @generated from protobuf enum value: GlyphOfRapidRejuvenation = 50125;
+     */
+    GlyphOfRapidRejuvenation = 50125,
+    /**
+     * @generated from protobuf enum value: GlyphOfRebirth = 40909;
+     */
+    GlyphOfRebirth = 40909,
+    /**
+     * @generated from protobuf enum value: GlyphOfRegrowth = 40912;
+     */
+    GlyphOfRegrowth = 40912,
+    /**
+     * @generated from protobuf enum value: GlyphOfRejuvenation = 40913;
+     */
+    GlyphOfRejuvenation = 40913,
+    /**
+     * @generated from protobuf enum value: GlyphOfRip = 40902;
+     */
+    GlyphOfRip = 40902,
+    /**
+     * @generated from protobuf enum value: GlyphOfSavageRoar = 45604;
+     */
+    GlyphOfSavageRoar = 45604,
+    /**
+     * @generated from protobuf enum value: GlyphOfShred = 40901;
+     */
+    GlyphOfShred = 40901,
+    /**
+     * @generated from protobuf enum value: GlyphOfStarfall = 40921;
+     */
+    GlyphOfStarfall = 40921,
+    /**
+     * @generated from protobuf enum value: GlyphOfStarfire = 40916;
+     */
+    GlyphOfStarfire = 40916,
+    /**
+     * @generated from protobuf enum value: GlyphOfSurvivalInstincts = 46372;
+     */
+    GlyphOfSurvivalInstincts = 46372,
+    /**
+     * @generated from protobuf enum value: GlyphOfSwiftmend = 40906;
+     */
+    GlyphOfSwiftmend = 40906,
+    /**
+     * @generated from protobuf enum value: GlyphOfWildGrowth = 45602;
+     */
+    GlyphOfWildGrowth = 45602,
+    /**
+     * @generated from protobuf enum value: GlyphOfWrath = 40922;
+     */
+    GlyphOfWrath = 40922
+}
+/**
+ * @generated from protobuf enum proto.DruidMinorGlyph
+ */
+export declare enum DruidMinorGlyph {
+    /**
+     * @generated from protobuf enum value: DruidMinorGlyphNone = 0;
+     */
+    DruidMinorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfAquaticForm = 43316;
+     */
+    GlyphOfAquaticForm = 43316,
+    /**
+     * @generated from protobuf enum value: GlyphOfChallengingRoar = 43334;
+     */
+    GlyphOfChallengingRoar = 43334,
+    /**
+     * @generated from protobuf enum value: GlyphOfDash = 43674;
+     */
+    GlyphOfDash = 43674,
+    /**
+     * @generated from protobuf enum value: GlyphOfTheWild = 43335;
+     */
+    GlyphOfTheWild = 43335,
+    /**
+     * @generated from protobuf enum value: GlyphOfThorns = 43332;
+     */
+    GlyphOfThorns = 43332,
+    /**
+     * @generated from protobuf enum value: GlyphOfTyphoon = 44922;
+     */
+    GlyphOfTyphoon = 44922,
+    /**
+     * @generated from protobuf enum value: GlyphOfUnburdenedRebirth = 43331;
+     */
+    GlyphOfUnburdenedRebirth = 43331
+}
 declare class DruidTalents$Type extends MessageType<DruidTalents> {
     constructor();
     create(value?: PartialMessage<DruidTalents>): DruidTalents;

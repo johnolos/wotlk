@@ -44,6 +44,158 @@ export var SmitePriest_Rotation_RotationType;
      */
     SmitePriest_Rotation_RotationType[SmitePriest_Rotation_RotationType["HolyFireWeave"] = 2] = "HolyFireWeave";
 })(SmitePriest_Rotation_RotationType || (SmitePriest_Rotation_RotationType = {}));
+/**
+ * @generated from protobuf enum proto.PriestMajorGlyph
+ */
+export var PriestMajorGlyph;
+(function (PriestMajorGlyph) {
+    /**
+     * @generated from protobuf enum value: PriestMajorGlyphNone = 0;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["PriestMajorGlyphNone"] = 0] = "PriestMajorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfCircleOfHealing = 42396;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfCircleOfHealing"] = 42396] = "GlyphOfCircleOfHealing";
+    /**
+     * @generated from protobuf enum value: GlyphOfDispelMagic = 42397;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfDispelMagic"] = 42397] = "GlyphOfDispelMagic";
+    /**
+     * @generated from protobuf enum value: GlyphOfDispersion = 45753;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfDispersion"] = 45753] = "GlyphOfDispersion";
+    /**
+     * @generated from protobuf enum value: GlyphOfFade = 42398;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfFade"] = 42398] = "GlyphOfFade";
+    /**
+     * @generated from protobuf enum value: GlyphOfFearWard = 42399;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfFearWard"] = 42399] = "GlyphOfFearWard";
+    /**
+     * @generated from protobuf enum value: GlyphOfFlashHeal = 42400;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfFlashHeal"] = 42400] = "GlyphOfFlashHeal";
+    /**
+     * @generated from protobuf enum value: GlyphOfGuardianSpirit = 45755;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfGuardianSpirit"] = 45755] = "GlyphOfGuardianSpirit";
+    /**
+     * @generated from protobuf enum value: GlyphOfHolyNova = 42401;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfHolyNova"] = 42401] = "GlyphOfHolyNova";
+    /**
+     * @generated from protobuf enum value: GlyphOfHymnOfHope = 45758;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfHymnOfHope"] = 45758] = "GlyphOfHymnOfHope";
+    /**
+     * @generated from protobuf enum value: GlyphOfInnerFire = 42402;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfInnerFire"] = 42402] = "GlyphOfInnerFire";
+    /**
+     * @generated from protobuf enum value: GlyphOfLightwell = 42403;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfLightwell"] = 42403] = "GlyphOfLightwell";
+    /**
+     * @generated from protobuf enum value: GlyphOfMassDispel = 42404;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfMassDispel"] = 42404] = "GlyphOfMassDispel";
+    /**
+     * @generated from protobuf enum value: GlyphOfMindControl = 42405;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfMindControl"] = 42405] = "GlyphOfMindControl";
+    /**
+     * @generated from protobuf enum value: GlyphOfMindFlay = 42415;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfMindFlay"] = 42415] = "GlyphOfMindFlay";
+    /**
+     * @generated from protobuf enum value: GlyphOfMindSear = 45757;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfMindSear"] = 45757] = "GlyphOfMindSear";
+    /**
+     * @generated from protobuf enum value: GlyphOfPainSuppression = 45760;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfPainSuppression"] = 45760] = "GlyphOfPainSuppression";
+    /**
+     * @generated from protobuf enum value: GlyphOfPenance = 45756;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfPenance"] = 45756] = "GlyphOfPenance";
+    /**
+     * @generated from protobuf enum value: GlyphOfPowerWordShield = 42408;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfPowerWordShield"] = 42408] = "GlyphOfPowerWordShield";
+    /**
+     * @generated from protobuf enum value: GlyphOfPrayerOfHealing = 42409;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfPrayerOfHealing"] = 42409] = "GlyphOfPrayerOfHealing";
+    /**
+     * @generated from protobuf enum value: GlyphOfPsychicScream = 42410;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfPsychicScream"] = 42410] = "GlyphOfPsychicScream";
+    /**
+     * @generated from protobuf enum value: GlyphOfRenew = 42411;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfRenew"] = 42411] = "GlyphOfRenew";
+    /**
+     * @generated from protobuf enum value: GlyphOfScourgeImprisonment = 42412;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfScourgeImprisonment"] = 42412] = "GlyphOfScourgeImprisonment";
+    /**
+     * @generated from protobuf enum value: GlyphOfShadow = 42407;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfShadow"] = 42407] = "GlyphOfShadow";
+    /**
+     * @generated from protobuf enum value: GlyphOfShadowWordDeath = 42414;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfShadowWordDeath"] = 42414] = "GlyphOfShadowWordDeath";
+    /**
+     * @generated from protobuf enum value: GlyphOfShadowWordPain = 42406;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfShadowWordPain"] = 42406] = "GlyphOfShadowWordPain";
+    /**
+     * @generated from protobuf enum value: GlyphOfSmite = 42416;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfSmite"] = 42416] = "GlyphOfSmite";
+    /**
+     * @generated from protobuf enum value: GlyphOfSpiritOfRedemption = 42417;
+     */
+    PriestMajorGlyph[PriestMajorGlyph["GlyphOfSpiritOfRedemption"] = 42417] = "GlyphOfSpiritOfRedemption";
+})(PriestMajorGlyph || (PriestMajorGlyph = {}));
+/**
+ * @generated from protobuf enum proto.PriestMinorGlyph
+ */
+export var PriestMinorGlyph;
+(function (PriestMinorGlyph) {
+    /**
+     * @generated from protobuf enum value: PriestMinorGlyphNone = 0;
+     */
+    PriestMinorGlyph[PriestMinorGlyph["PriestMinorGlyphNone"] = 0] = "PriestMinorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfFading = 43342;
+     */
+    PriestMinorGlyph[PriestMinorGlyph["GlyphOfFading"] = 43342] = "GlyphOfFading";
+    /**
+     * @generated from protobuf enum value: GlyphOfFortitude = 43371;
+     */
+    PriestMinorGlyph[PriestMinorGlyph["GlyphOfFortitude"] = 43371] = "GlyphOfFortitude";
+    /**
+     * @generated from protobuf enum value: GlyphOfLevitate = 43370;
+     */
+    PriestMinorGlyph[PriestMinorGlyph["GlyphOfLevitate"] = 43370] = "GlyphOfLevitate";
+    /**
+     * @generated from protobuf enum value: GlyphOfShackleUndead = 43373;
+     */
+    PriestMinorGlyph[PriestMinorGlyph["GlyphOfShackleUndead"] = 43373] = "GlyphOfShackleUndead";
+    /**
+     * @generated from protobuf enum value: GlyphOfShadowProtection = 43372;
+     */
+    PriestMinorGlyph[PriestMinorGlyph["GlyphOfShadowProtection"] = 43372] = "GlyphOfShadowProtection";
+    /**
+     * @generated from protobuf enum value: GlyphOfShadowfiend = 43374;
+     */
+    PriestMinorGlyph[PriestMinorGlyph["GlyphOfShadowfiend"] = 43374] = "GlyphOfShadowfiend";
+})(PriestMinorGlyph || (PriestMinorGlyph = {}));
 // @generated message type with reflection information, may provide speed optimized methods
 class PriestTalents$Type extends MessageType {
     constructor() {

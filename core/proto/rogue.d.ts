@@ -293,6 +293,160 @@ export declare enum Rogue_Rotation_Builder {
  */
 export interface Rogue_Options {
 }
+/**
+ * @generated from protobuf enum proto.RogueMajorGlyph
+ */
+export declare enum RogueMajorGlyph {
+    /**
+     * @generated from protobuf enum value: RogueMajorGlyphNone = 0;
+     */
+    RogueMajorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfAdrenalineRush = 42954;
+     */
+    GlyphOfAdrenalineRush = 42954,
+    /**
+     * @generated from protobuf enum value: GlyphOfAmbush = 42955;
+     */
+    GlyphOfAmbush = 42955,
+    /**
+     * @generated from protobuf enum value: GlyphOfBackstab = 42956;
+     */
+    GlyphOfBackstab = 42956,
+    /**
+     * @generated from protobuf enum value: GlyphOfBladeFlurry = 42957;
+     */
+    GlyphOfBladeFlurry = 42957,
+    /**
+     * @generated from protobuf enum value: GlyphOfCloakOfShadows = 45769;
+     */
+    GlyphOfCloakOfShadows = 45769,
+    /**
+     * @generated from protobuf enum value: GlyphOfCripplingPoison = 42958;
+     */
+    GlyphOfCripplingPoison = 42958,
+    /**
+     * @generated from protobuf enum value: GlyphOfDeadlyThrow = 42959;
+     */
+    GlyphOfDeadlyThrow = 42959,
+    /**
+     * @generated from protobuf enum value: GlyphOfEvasion = 42960;
+     */
+    GlyphOfEvasion = 42960,
+    /**
+     * @generated from protobuf enum value: GlyphOfEviscerate = 42961;
+     */
+    GlyphOfEviscerate = 42961,
+    /**
+     * @generated from protobuf enum value: GlyphOfExposeArmor = 42962;
+     */
+    GlyphOfExposeArmor = 42962,
+    /**
+     * @generated from protobuf enum value: GlyphOfFanOfKnives = 45766;
+     */
+    GlyphOfFanOfKnives = 45766,
+    /**
+     * @generated from protobuf enum value: GlyphOfFeint = 42963;
+     */
+    GlyphOfFeint = 42963,
+    /**
+     * @generated from protobuf enum value: GlyphOfGarrote = 42964;
+     */
+    GlyphOfGarrote = 42964,
+    /**
+     * @generated from protobuf enum value: GlyphOfGhostlyStrike = 42965;
+     */
+    GlyphOfGhostlyStrike = 42965,
+    /**
+     * @generated from protobuf enum value: GlyphOfGouge = 42966;
+     */
+    GlyphOfGouge = 42966,
+    /**
+     * @generated from protobuf enum value: GlyphOfHemorrhage = 42967;
+     */
+    GlyphOfHemorrhage = 42967,
+    /**
+     * @generated from protobuf enum value: GlyphOfHungerForBlood = 45761;
+     */
+    GlyphOfHungerForBlood = 45761,
+    /**
+     * @generated from protobuf enum value: GlyphOfKillingSpree = 45762;
+     */
+    GlyphOfKillingSpree = 45762,
+    /**
+     * @generated from protobuf enum value: GlyphOfMutilate = 45768;
+     */
+    GlyphOfMutilate = 45768,
+    /**
+     * @generated from protobuf enum value: GlyphOfPreparation = 42968;
+     */
+    GlyphOfPreparation = 42968,
+    /**
+     * @generated from protobuf enum value: GlyphOfRupture = 42969;
+     */
+    GlyphOfRupture = 42969,
+    /**
+     * @generated from protobuf enum value: GlyphOfSap = 42970;
+     */
+    GlyphOfSap = 42970,
+    /**
+     * @generated from protobuf enum value: GlyphOfShadowDance = 45764;
+     */
+    GlyphOfShadowDance = 45764,
+    /**
+     * @generated from protobuf enum value: GlyphOfSinisterStrike = 42972;
+     */
+    GlyphOfSinisterStrike = 42972,
+    /**
+     * @generated from protobuf enum value: GlyphOfSliceAndDice = 42973;
+     */
+    GlyphOfSliceAndDice = 42973,
+    /**
+     * @generated from protobuf enum value: GlyphOfSprint = 42974;
+     */
+    GlyphOfSprint = 42974,
+    /**
+     * @generated from protobuf enum value: GlyphOfTricksOfTheTrade = 45767;
+     */
+    GlyphOfTricksOfTheTrade = 45767,
+    /**
+     * @generated from protobuf enum value: GlyphOfVigor = 42971;
+     */
+    GlyphOfVigor = 42971
+}
+/**
+ * @generated from protobuf enum proto.RogueMinorGlyph
+ */
+export declare enum RogueMinorGlyph {
+    /**
+     * @generated from protobuf enum value: RogueMinorGlyphNone = 0;
+     */
+    RogueMinorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfBlurredSpeed = 43379;
+     */
+    GlyphOfBlurredSpeed = 43379,
+    /**
+     * @generated from protobuf enum value: GlyphOfDistract = 43376;
+     */
+    GlyphOfDistract = 43376,
+    /**
+     * @generated from protobuf enum value: GlyphOfPickLock = 43377;
+     */
+    GlyphOfPickLock = 43377,
+    /**
+     * @generated from protobuf enum value: GlyphOfPickPocket = 43343;
+     */
+    GlyphOfPickPocket = 43343,
+    /**
+     * @generated from protobuf enum value: GlyphOfSafeFall = 43378;
+     */
+    GlyphOfSafeFall = 43378,
+    /**
+     * @generated from protobuf enum value: GlyphOfVanish = 43380;
+     */
+    GlyphOfVanish = 43380
+}
 declare class RogueTalents$Type extends MessageType<RogueTalents> {
     constructor();
     create(value?: PartialMessage<RogueTalents>): RogueTalents;

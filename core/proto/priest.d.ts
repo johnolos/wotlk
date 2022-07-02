@@ -296,6 +296,156 @@ export interface SmitePriest_Options {
      */
     powerInfusionTarget?: RaidTarget;
 }
+/**
+ * @generated from protobuf enum proto.PriestMajorGlyph
+ */
+export declare enum PriestMajorGlyph {
+    /**
+     * @generated from protobuf enum value: PriestMajorGlyphNone = 0;
+     */
+    PriestMajorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfCircleOfHealing = 42396;
+     */
+    GlyphOfCircleOfHealing = 42396,
+    /**
+     * @generated from protobuf enum value: GlyphOfDispelMagic = 42397;
+     */
+    GlyphOfDispelMagic = 42397,
+    /**
+     * @generated from protobuf enum value: GlyphOfDispersion = 45753;
+     */
+    GlyphOfDispersion = 45753,
+    /**
+     * @generated from protobuf enum value: GlyphOfFade = 42398;
+     */
+    GlyphOfFade = 42398,
+    /**
+     * @generated from protobuf enum value: GlyphOfFearWard = 42399;
+     */
+    GlyphOfFearWard = 42399,
+    /**
+     * @generated from protobuf enum value: GlyphOfFlashHeal = 42400;
+     */
+    GlyphOfFlashHeal = 42400,
+    /**
+     * @generated from protobuf enum value: GlyphOfGuardianSpirit = 45755;
+     */
+    GlyphOfGuardianSpirit = 45755,
+    /**
+     * @generated from protobuf enum value: GlyphOfHolyNova = 42401;
+     */
+    GlyphOfHolyNova = 42401,
+    /**
+     * @generated from protobuf enum value: GlyphOfHymnOfHope = 45758;
+     */
+    GlyphOfHymnOfHope = 45758,
+    /**
+     * @generated from protobuf enum value: GlyphOfInnerFire = 42402;
+     */
+    GlyphOfInnerFire = 42402,
+    /**
+     * @generated from protobuf enum value: GlyphOfLightwell = 42403;
+     */
+    GlyphOfLightwell = 42403,
+    /**
+     * @generated from protobuf enum value: GlyphOfMassDispel = 42404;
+     */
+    GlyphOfMassDispel = 42404,
+    /**
+     * @generated from protobuf enum value: GlyphOfMindControl = 42405;
+     */
+    GlyphOfMindControl = 42405,
+    /**
+     * @generated from protobuf enum value: GlyphOfMindFlay = 42415;
+     */
+    GlyphOfMindFlay = 42415,
+    /**
+     * @generated from protobuf enum value: GlyphOfMindSear = 45757;
+     */
+    GlyphOfMindSear = 45757,
+    /**
+     * @generated from protobuf enum value: GlyphOfPainSuppression = 45760;
+     */
+    GlyphOfPainSuppression = 45760,
+    /**
+     * @generated from protobuf enum value: GlyphOfPenance = 45756;
+     */
+    GlyphOfPenance = 45756,
+    /**
+     * @generated from protobuf enum value: GlyphOfPowerWordShield = 42408;
+     */
+    GlyphOfPowerWordShield = 42408,
+    /**
+     * @generated from protobuf enum value: GlyphOfPrayerOfHealing = 42409;
+     */
+    GlyphOfPrayerOfHealing = 42409,
+    /**
+     * @generated from protobuf enum value: GlyphOfPsychicScream = 42410;
+     */
+    GlyphOfPsychicScream = 42410,
+    /**
+     * @generated from protobuf enum value: GlyphOfRenew = 42411;
+     */
+    GlyphOfRenew = 42411,
+    /**
+     * @generated from protobuf enum value: GlyphOfScourgeImprisonment = 42412;
+     */
+    GlyphOfScourgeImprisonment = 42412,
+    /**
+     * @generated from protobuf enum value: GlyphOfShadow = 42407;
+     */
+    GlyphOfShadow = 42407,
+    /**
+     * @generated from protobuf enum value: GlyphOfShadowWordDeath = 42414;
+     */
+    GlyphOfShadowWordDeath = 42414,
+    /**
+     * @generated from protobuf enum value: GlyphOfShadowWordPain = 42406;
+     */
+    GlyphOfShadowWordPain = 42406,
+    /**
+     * @generated from protobuf enum value: GlyphOfSmite = 42416;
+     */
+    GlyphOfSmite = 42416,
+    /**
+     * @generated from protobuf enum value: GlyphOfSpiritOfRedemption = 42417;
+     */
+    GlyphOfSpiritOfRedemption = 42417
+}
+/**
+ * @generated from protobuf enum proto.PriestMinorGlyph
+ */
+export declare enum PriestMinorGlyph {
+    /**
+     * @generated from protobuf enum value: PriestMinorGlyphNone = 0;
+     */
+    PriestMinorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfFading = 43342;
+     */
+    GlyphOfFading = 43342,
+    /**
+     * @generated from protobuf enum value: GlyphOfFortitude = 43371;
+     */
+    GlyphOfFortitude = 43371,
+    /**
+     * @generated from protobuf enum value: GlyphOfLevitate = 43370;
+     */
+    GlyphOfLevitate = 43370,
+    /**
+     * @generated from protobuf enum value: GlyphOfShackleUndead = 43373;
+     */
+    GlyphOfShackleUndead = 43373,
+    /**
+     * @generated from protobuf enum value: GlyphOfShadowProtection = 43372;
+     */
+    GlyphOfShadowProtection = 43372,
+    /**
+     * @generated from protobuf enum value: GlyphOfShadowfiend = 43374;
+     */
+    GlyphOfShadowfiend = 43374
+}
 declare class PriestTalents$Type extends MessageType<PriestTalents> {
     constructor();
     create(value?: PartialMessage<PriestTalents>): PriestTalents;

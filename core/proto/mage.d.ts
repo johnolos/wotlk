@@ -440,6 +440,168 @@ export declare enum Mage_Options_ArmorType {
      */
     MoltenArmor = 2
 }
+/**
+ * @generated from protobuf enum proto.MageMajorGlyph
+ */
+export declare enum MageMajorGlyph {
+    /**
+     * @generated from protobuf enum value: MageMajorGlyphNone = 0;
+     */
+    MageMajorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfArcaneBarrage = 45738;
+     */
+    GlyphOfArcaneBarrage = 45738,
+    /**
+     * @generated from protobuf enum value: GlyphOfArcaneBlast = 44955;
+     */
+    GlyphOfArcaneBlast = 44955,
+    /**
+     * @generated from protobuf enum value: GlyphOfArcaneExplosion = 42734;
+     */
+    GlyphOfArcaneExplosion = 42734,
+    /**
+     * @generated from protobuf enum value: GlyphOfArcaneMissiles = 42735;
+     */
+    GlyphOfArcaneMissiles = 42735,
+    /**
+     * @generated from protobuf enum value: GlyphOfArcanePower = 42736;
+     */
+    GlyphOfArcanePower = 42736,
+    /**
+     * @generated from protobuf enum value: GlyphOfBlink = 42737;
+     */
+    GlyphOfBlink = 42737,
+    /**
+     * @generated from protobuf enum value: GlyphOfDeepFreeze = 45736;
+     */
+    GlyphOfDeepFreeze = 45736,
+    /**
+     * @generated from protobuf enum value: GlyphOfEternalWater = 50045;
+     */
+    GlyphOfEternalWater = 50045,
+    /**
+     * @generated from protobuf enum value: GlyphOfEvocation = 42738;
+     */
+    GlyphOfEvocation = 42738,
+    /**
+     * @generated from protobuf enum value: GlyphOfFireBlast = 42740;
+     */
+    GlyphOfFireBlast = 42740,
+    /**
+     * @generated from protobuf enum value: GlyphOfFireball = 42739;
+     */
+    GlyphOfFireball = 42739,
+    /**
+     * @generated from protobuf enum value: GlyphOfFrostNova = 42741;
+     */
+    GlyphOfFrostNova = 42741,
+    /**
+     * @generated from protobuf enum value: GlyphOfFrostbolt = 42742;
+     */
+    GlyphOfFrostbolt = 42742,
+    /**
+     * @generated from protobuf enum value: GlyphOfFrostfire = 44684;
+     */
+    GlyphOfFrostfire = 44684,
+    /**
+     * @generated from protobuf enum value: GlyphOfIceArmor = 42743;
+     */
+    GlyphOfIceArmor = 42743,
+    /**
+     * @generated from protobuf enum value: GlyphOfIceBarrier = 45740;
+     */
+    GlyphOfIceBarrier = 45740,
+    /**
+     * @generated from protobuf enum value: GlyphOfIceBlock = 42744;
+     */
+    GlyphOfIceBlock = 42744,
+    /**
+     * @generated from protobuf enum value: GlyphOfIceLance = 42745;
+     */
+    GlyphOfIceLance = 42745,
+    /**
+     * @generated from protobuf enum value: GlyphOfIcyVeins = 42746;
+     */
+    GlyphOfIcyVeins = 42746,
+    /**
+     * @generated from protobuf enum value: GlyphOfInvisibility = 42748;
+     */
+    GlyphOfInvisibility = 42748,
+    /**
+     * @generated from protobuf enum value: GlyphOfLivingBomb = 45737;
+     */
+    GlyphOfLivingBomb = 45737,
+    /**
+     * @generated from protobuf enum value: GlyphOfMageArmor = 42749;
+     */
+    GlyphOfMageArmor = 42749,
+    /**
+     * @generated from protobuf enum value: GlyphOfManaGem = 42750;
+     */
+    GlyphOfManaGem = 42750,
+    /**
+     * @generated from protobuf enum value: GlyphOfMirrorImage = 45739;
+     */
+    GlyphOfMirrorImage = 45739,
+    /**
+     * @generated from protobuf enum value: GlyphOfMoltenArmor = 42751;
+     */
+    GlyphOfMoltenArmor = 42751,
+    /**
+     * @generated from protobuf enum value: GlyphOfPolymorph = 42752;
+     */
+    GlyphOfPolymorph = 42752,
+    /**
+     * @generated from protobuf enum value: GlyphOfRemoveCurse = 42753;
+     */
+    GlyphOfRemoveCurse = 42753,
+    /**
+     * @generated from protobuf enum value: GlyphOfScorch = 42747;
+     */
+    GlyphOfScorch = 42747,
+    /**
+     * @generated from protobuf enum value: GlyphOfWaterElemental = 42754;
+     */
+    GlyphOfWaterElemental = 42754
+}
+/**
+ * @generated from protobuf enum proto.MageMinorGlyph
+ */
+export declare enum MageMinorGlyph {
+    /**
+     * @generated from protobuf enum value: MageMinorGlyphNone = 0;
+     */
+    MageMinorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfArcaneIntellect = 43339;
+     */
+    GlyphOfArcaneIntellect = 43339,
+    /**
+     * @generated from protobuf enum value: GlyphOfBlastWave = 44920;
+     */
+    GlyphOfBlastWave = 44920,
+    /**
+     * @generated from protobuf enum value: GlyphOfFireWard = 43357;
+     */
+    GlyphOfFireWard = 43357,
+    /**
+     * @generated from protobuf enum value: GlyphOfFrostArmor = 43359;
+     */
+    GlyphOfFrostArmor = 43359,
+    /**
+     * @generated from protobuf enum value: GlyphOfFrostWard = 43360;
+     */
+    GlyphOfFrostWard = 43360,
+    /**
+     * @generated from protobuf enum value: GlyphOfSlowFall = 43364;
+     */
+    GlyphOfSlowFall = 43364,
+    /**
+     * @generated from protobuf enum value: GlyphOfThePenguin = 43361;
+     */
+    GlyphOfThePenguin = 43361
+}
 declare class MageTalents$Type extends MessageType<MageTalents> {
     constructor();
     create(value?: PartialMessage<MageTalents>): MageTalents;
