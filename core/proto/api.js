@@ -18,6 +18,7 @@ import { HealingModel } from './common.js';
 import { Cooldowns } from './common.js';
 import { Profession } from './common.js';
 import { Glyphs } from './common.js';
+import { DeathKnight } from './deathknight.js';
 import { ProtectionWarrior } from './warrior.js';
 import { Warrior } from './warrior.js';
 import { Warlock } from './warlock.js';
@@ -100,6 +101,7 @@ class Player$Type extends MessageType {
             { no: 13, name: "warlock", kind: "message", oneof: "spec", T: () => Warlock },
             { no: 14, name: "warrior", kind: "message", oneof: "spec", T: () => Warrior },
             { no: 21, name: "protection_warrior", kind: "message", oneof: "spec", T: () => ProtectionWarrior },
+            { no: 31, name: "death_knight", kind: "message", oneof: "spec", T: () => DeathKnight },
             { no: 17, name: "talentsString", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
             { no: 28, name: "glyphs", kind: "message", T: () => Glyphs },
             { no: 29, name: "profession1", kind: "enum", T: () => ["proto.Profession", Profession] },
@@ -239,6 +241,12 @@ class Player$Type extends MessageType {
                         protectionWarrior: ProtectionWarrior.internalBinaryRead(reader, reader.uint32(), options, message.spec.protectionWarrior)
                     };
                     break;
+                case /* proto.DeathKnight death_knight */ 31:
+                    message.spec = {
+                        oneofKind: "deathKnight",
+                        deathKnight: DeathKnight.internalBinaryRead(reader, reader.uint32(), options, message.spec.deathKnight)
+                    };
+                    break;
                 case /* string talentsString */ 17:
                     message.talentsString = reader.string();
                     break;
@@ -345,6 +353,9 @@ class Player$Type extends MessageType {
         /* proto.ProtectionWarrior protection_warrior = 21; */
         if (message.spec.oneofKind === "protectionWarrior")
             ProtectionWarrior.internalBinaryWrite(message.spec.protectionWarrior, writer.tag(21, WireType.LengthDelimited).fork(), options).join();
+        /* proto.DeathKnight death_knight = 31; */
+        if (message.spec.oneofKind === "deathKnight")
+            DeathKnight.internalBinaryWrite(message.spec.deathKnight, writer.tag(31, WireType.LengthDelimited).fork(), options).join();
         /* string talentsString = 17; */
         if (message.talentsString !== "")
             writer.tag(17, WireType.LengthDelimited).string(message.talentsString);

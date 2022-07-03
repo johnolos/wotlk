@@ -19,6 +19,7 @@ import { HealingModel } from "./common";
 import { Cooldowns } from "./common";
 import { Profession } from "./common";
 import { Glyphs } from "./common";
+import { DeathKnight } from "./deathknight";
 import { ProtectionWarrior } from "./warrior";
 import { Warrior } from "./warrior";
 import { Warlock } from "./warlock";
@@ -171,6 +172,12 @@ export interface Player {
          * @generated from protobuf field: proto.ProtectionWarrior protection_warrior = 21;
          */
         protectionWarrior: ProtectionWarrior;
+    } | {
+        oneofKind: "deathKnight";
+        /**
+         * @generated from protobuf field: proto.DeathKnight death_knight = 31;
+         */
+        deathKnight: DeathKnight;
     } | {
         oneofKind: undefined;
     };

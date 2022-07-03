@@ -947,7 +947,11 @@ export declare enum Spec {
     /**
      * @generated from protobuf enum value: SpecProtectionWarrior = 11;
      */
-    SpecProtectionWarrior = 11
+    SpecProtectionWarrior = 11,
+    /**
+     * @generated from protobuf enum value: SpecDeathKnight = 15;
+     */
+    SpecDeathKnight = 15
 }
 /**
  * @generated from protobuf enum proto.Race
@@ -1075,7 +1079,11 @@ export declare enum Class {
     /**
      * @generated from protobuf enum value: ClassWarrior = 9;
      */
-    ClassWarrior = 9
+    ClassWarrior = 9,
+    /**
+     * @generated from protobuf enum value: ClassDeathKnight = 10;
+     */
+    ClassDeathKnight = 10
 }
 /**
  * @generated from protobuf enum proto.Profession
@@ -1297,11 +1305,7 @@ export declare enum Stat {
     /**
      * @generated from protobuf enum value: StatShadowResistance = 40;
      */
-    StatShadowResistance = 40,
-    /**
-     * @generated from protobuf enum value: StatFeralAttackPower = 41;
-     */
-    StatFeralAttackPower = 41
+    StatShadowResistance = 40
 }
 /**
  * @generated from protobuf enum proto.ItemType

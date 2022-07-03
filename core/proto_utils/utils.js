@@ -35,6 +35,7 @@ import { ProtectionPaladin, ProtectionPaladin_Rotation as ProtectionPaladinRotat
 import { ShadowPriest, SmitePriest_Rotation as SmitePriestRotation, ShadowPriest_Rotation as ShadowPriestRotation, PriestTalents, ShadowPriest_Options as ShadowPriestOptions, SmitePriest_Options as SmitePriestOptions, SmitePriest } from '/wotlk/core/proto/priest.js';
 import { Warlock, Warlock_Rotation as WarlockRotation, WarlockTalents, Warlock_Options as WarlockOptions } from '/wotlk/core/proto/warlock.js';
 import { Warrior, Warrior_Rotation as WarriorRotation, WarriorTalents, Warrior_Options as WarriorOptions } from '/wotlk/core/proto/warrior.js';
+import { DeathKnight, DeathKnight_Rotation as DeathKnightRotation, DeathKnightTalents, DeathKnight_Options as DeathKnightOptions } from '/wotlk/core/proto/deathknight.js';
 import { ProtectionWarrior, ProtectionWarrior_Rotation as ProtectionWarriorRotation, ProtectionWarrior_Options as ProtectionWarriorOptions } from '/wotlk/core/proto/warrior.js';
 export const NUM_SPECS = getEnumValues(Spec).length;
 // The order in which specs should be presented, when it matters.
@@ -55,6 +56,7 @@ export const naturalSpecOrder = [
     Spec.SpecWarlock,
     Spec.SpecWarrior,
     Spec.SpecProtectionWarrior,
+    Spec.SpecDeathKnight,
 ];
 export const specNames = {
     [Spec.SpecBalanceDruid]: 'Balance Druid',
@@ -72,6 +74,7 @@ export const specNames = {
     [Spec.SpecWarrior]: 'Warrior',
     [Spec.SpecProtectionWarrior]: 'Protection Warrior',
     [Spec.SpecSmitePriest]: 'Smite Priest',
+    [Spec.SpecDeathKnight]: 'Death Knight',
 };
 export const classColors = {
     [Class.ClassUnknown]: '#fff',
@@ -84,6 +87,7 @@ export const classColors = {
     [Class.ClassShaman]: '#2459ff',
     [Class.ClassWarlock]: '#9482c9',
     [Class.ClassWarrior]: '#c79c6e',
+    [Class.ClassDeathKnight]: '#c41e3a'
 };
 export const specIconsLarge = {
     [Spec.SpecBalanceDruid]: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_starfall.jpg',
@@ -101,6 +105,7 @@ export const specIconsLarge = {
     [Spec.SpecWarrior]: 'https://wow.zamimg.com/images/wow/icons/large/ability_warrior_innerrage.jpg',
     [Spec.SpecProtectionWarrior]: 'https://wow.zamimg.com/images/wow/icons/large/ability_warrior_defensivestance.jpg',
     [Spec.SpecSmitePriest]: 'https://wow.zamimg.com/images/wow/icons/large/spell_holy_holysmite.jpg',
+    [Spec.SpecDeathKnight]: 'https://wow.zamimg.com/images/wow/icons/medium/class_deathknight.jpg',
 };
 export const talentTreeIcons = {
     [Class.ClassUnknown]: [],
@@ -149,6 +154,11 @@ export const talentTreeIcons = {
         'https://wow.zamimg.com/images/wow/icons/medium/ability_warrior_innerrage.jpg',
         'https://wow.zamimg.com/images/wow/icons/medium/inv_shield_06.jpg',
     ],
+    [Class.ClassDeathKnight]: [
+        'https://wow.zamimg.com/images/wow/icons/medium/spell_deathknight_bloodpresence.jpg',
+        'https://wow.zamimg.com/images/wow/icons/medium/spell_deathknight_frostpresence.jpg',
+        'https://wow.zamimg.com/images/wow/icons/medium/spell_deathknight_unholypresence.jpg',
+    ],
 };
 export const titleIcons = {
     [Spec.SpecBalanceDruid]: '/wotlk/assets/balance_druid_icon.png',
@@ -166,6 +176,7 @@ export const titleIcons = {
     [Spec.SpecWarrior]: '/wotlk/assets/warrior_icon.png',
     [Spec.SpecProtectionWarrior]: '/wotlk/assets/protection_warrior_icon.png',
     [Spec.SpecSmitePriest]: '/wotlk/assets/smite_priest_icon.png',
+    [Spec.SpecDeathKnight]: 'https://wow.zamimg.com/images/wow/icons/medium/class_deathknight.jpg',
 };
 export const raidSimIcon = '/wotlk/assets/raid_icon.png';
 // Returns the index of the talent tree (0, 1, or 2) that has the most points.
@@ -579,6 +590,32 @@ export const specTypeFunctions = {
             ? player.spec.smitePriest.options || SmitePriestOptions.create()
             : SmitePriestOptions.create(),
     },
+    [Spec.SpecDeathKnight]: {
+        rotationCreate: () => DeathKnightRotation.create(),
+        rotationEquals: (a, b) => DeathKnightRotation.equals(a, b),
+        rotationCopy: (a) => DeathKnightRotation.clone(a),
+        rotationToJson: (a) => DeathKnightRotation.toJson(a),
+        rotationFromJson: (obj) => DeathKnightRotation.fromJson(obj),
+        rotationFromPlayer: (player) => player.spec.oneofKind == 'deathKnight'
+            ? player.spec.deathKnight.rotation || DeathKnightRotation.create()
+            : DeathKnightRotation.create(),
+        talentsCreate: () => DeathKnightTalents.create(),
+        talentsEquals: (a, b) => DeathKnightTalents.equals(a, b),
+        talentsCopy: (a) => DeathKnightTalents.clone(a),
+        talentsToJson: (a) => DeathKnightTalents.toJson(a),
+        talentsFromJson: (obj) => DeathKnightTalents.fromJson(obj),
+        talentsFromPlayer: (player) => player.spec.oneofKind == 'deathKnight'
+            ? player.spec.deathKnight.talents || DeathKnightTalents.create()
+            : DeathKnightTalents.create(),
+        optionsCreate: () => DeathKnightOptions.create(),
+        optionsEquals: (a, b) => DeathKnightOptions.equals(a, b),
+        optionsCopy: (a) => DeathKnightOptions.clone(a),
+        optionsToJson: (a) => DeathKnightOptions.toJson(a),
+        optionsFromJson: (obj) => DeathKnightOptions.fromJson(obj),
+        optionsFromPlayer: (player) => player.spec.oneofKind == 'deathKnight'
+            ? player.spec.deathKnight.options || DeathKnightOptions.create()
+            : DeathKnightOptions.create(),
+    },
 };
 export const raceToFaction = {
     [Race.RaceUnknown]: Faction.Unknown,
@@ -610,6 +647,7 @@ export const specToClass = {
     [Spec.SpecWarlock]: Class.ClassWarlock,
     [Spec.SpecWarrior]: Class.ClassWarrior,
     [Spec.SpecProtectionWarrior]: Class.ClassWarrior,
+    [Spec.SpecDeathKnight]: Class.ClassDeathKnight,
 };
 const druidRaces = [
     Race.RaceNightElf,
@@ -688,6 +726,19 @@ const warriorRaces = [
     Race.RaceTroll30,
     Race.RaceUndead,
 ];
+const deathKnightRaces = [
+    Race.RaceBloodElf,
+    Race.RaceDraenei,
+    Race.RaceDwarf,
+    Race.RaceGnome,
+    Race.RaceHuman,
+    Race.RaceNightElf,
+    Race.RaceOrc,
+    Race.RaceTauren,
+    Race.RaceTroll10,
+    Race.RaceTroll30,
+    Race.RaceUndead,
+];
 export const specToEligibleRaces = {
     [Spec.SpecBalanceDruid]: druidRaces,
     [Spec.SpecElementalShaman]: shamanRaces,
@@ -704,6 +755,7 @@ export const specToEligibleRaces = {
     [Spec.SpecWarrior]: warriorRaces,
     [Spec.SpecProtectionWarrior]: warriorRaces,
     [Spec.SpecSmitePriest]: priestRaces,
+    [Spec.SpecDeathKnight]: deathKnightRaces,
 };
 // Specs that can dual wield. This could be based on class, except that
 // Enhancement Shaman learn dual wield from a talent.
@@ -743,6 +795,7 @@ export const specToLocalStorageKey = {
     [Spec.SpecWarrior]: '__wotlk_warrior',
     [Spec.SpecProtectionWarrior]: '__wotlk_protection_warrior',
     [Spec.SpecSmitePriest]: '__wotlk_smite_priest',
+    [Spec.SpecDeathKnight]: '__wotlk_death_knight',
 };
 // Returns a copy of playerOptions, with the class field set.
 export function withSpecProto(spec, player, rotation, talents, specOptions) {
@@ -898,6 +951,16 @@ export function withSpecProto(spec, player, rotation, talents, specOptions) {
                 }),
             };
             return copy;
+        case Spec.SpecDeathKnight:
+            copy.spec = {
+                oneofKind: 'deathKnight',
+                deathKnight: DeathKnight.create({
+                    rotation: rotation,
+                    talents: talents,
+                    options: specOptions,
+                }),
+            };
+            return copy;
     }
 }
 export function playerToSpec(player) {
@@ -924,6 +987,7 @@ const classToMaxArmorType = {
     [Class.ClassShaman]: ArmorType.ArmorTypeMail,
     [Class.ClassWarlock]: ArmorType.ArmorTypeCloth,
     [Class.ClassWarrior]: ArmorType.ArmorTypePlate,
+    [Class.ClassDeathKnight]: ArmorType.ArmorTypePlate,
 };
 const classToEligibleRangedWeaponTypes = {
     [Class.ClassUnknown]: [],
@@ -950,6 +1014,9 @@ const classToEligibleRangedWeaponTypes = {
         RangedWeaponType.RangedWeaponTypeCrossbow,
         RangedWeaponType.RangedWeaponTypeGun,
         RangedWeaponType.RangedWeaponTypeThrown,
+    ],
+    [Class.ClassDeathKnight]: [
+    // TODO: what does DK put in ranged slot?
     ],
 };
 const classToEligibleWeaponTypes = {
@@ -1022,6 +1089,13 @@ const classToEligibleWeaponTypes = {
         { weaponType: WeaponType.WeaponTypeShield },
         { weaponType: WeaponType.WeaponTypeStaff, canUseTwoHand: true },
         { weaponType: WeaponType.WeaponTypeSword, canUseTwoHand: true },
+    ],
+    [Class.ClassDeathKnight]: [
+        { weaponType: WeaponType.WeaponTypeAxe, canUseTwoHand: true },
+        { weaponType: WeaponType.WeaponTypeMace, canUseTwoHand: true },
+        { weaponType: WeaponType.WeaponTypePolearm, canUseTwoHand: true },
+        { weaponType: WeaponType.WeaponTypeSword, canUseTwoHand: true },
+        // TODO: validate proficiencies
     ],
 };
 export function isSharpWeaponType(weaponType) {

@@ -68,6 +68,10 @@ export var Spec;
      * @generated from protobuf enum value: SpecProtectionWarrior = 11;
      */
     Spec[Spec["SpecProtectionWarrior"] = 11] = "SpecProtectionWarrior";
+    /**
+     * @generated from protobuf enum value: SpecDeathKnight = 15;
+     */
+    Spec[Spec["SpecDeathKnight"] = 15] = "SpecDeathKnight";
 })(Spec || (Spec = {}));
 /**
  * @generated from protobuf enum proto.Race
@@ -200,6 +204,10 @@ export var Class;
      * @generated from protobuf enum value: ClassWarrior = 9;
      */
     Class[Class["ClassWarrior"] = 9] = "ClassWarrior";
+    /**
+     * @generated from protobuf enum value: ClassDeathKnight = 10;
+     */
+    Class[Class["ClassDeathKnight"] = 10] = "ClassDeathKnight";
 })(Class || (Class = {}));
 /**
  * @generated from protobuf enum proto.Profession
@@ -424,10 +432,6 @@ export var Stat;
      * @generated from protobuf enum value: StatShadowResistance = 40;
      */
     Stat[Stat["StatShadowResistance"] = 40] = "StatShadowResistance";
-    /**
-     * @generated from protobuf enum value: StatFeralAttackPower = 41;
-     */
-    Stat[Stat["StatFeralAttackPower"] = 41] = "StatFeralAttackPower";
 })(Stat || (Stat = {}));
 /**
  * @generated from protobuf enum proto.ItemType

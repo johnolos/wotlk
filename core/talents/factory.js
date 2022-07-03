@@ -9,6 +9,7 @@ import { rogueTalentsConfig, rogueGlyphsConfig } from './rogue.js';
 import { shamanTalentsConfig, shamanGlyphsConfig } from './shaman.js';
 import { warlockTalentsConfig, warlockGlyphsConfig } from './warlock.js';
 import { warriorTalentsConfig, warriorGlyphsConfig } from './warrior.js';
+import { deathKnightTalentsConfig, deathKnightGlyphsConfig } from './deathknight.js';
 import { TalentsPicker } from './talents_picker.js';
 import { GlyphsPicker } from './glyphs_picker.js';
 import * as Mechanics from '/wotlk/core/constants/mechanics.js';
@@ -29,6 +30,7 @@ export function newGlyphsPicker(parent, player) {
 }
 const classTalentsConfig = {
     [Class.ClassUnknown]: [],
+    [Class.ClassDeathKnight]: deathKnightTalentsConfig,
     [Class.ClassDruid]: druidTalentsConfig,
     [Class.ClassShaman]: shamanTalentsConfig,
     [Class.ClassHunter]: hunterTalentsConfig,
@@ -41,6 +43,7 @@ const classTalentsConfig = {
 };
 const classGlyphsConfig = {
     [Class.ClassUnknown]: { majorGlyphs: [], minorGlyphs: [] },
+    [Class.ClassDeathKnight]: deathKnightGlyphsConfig,
     [Class.ClassDruid]: druidGlyphsConfig,
     [Class.ClassShaman]: shamanGlyphsConfig,
     [Class.ClassHunter]: hunterGlyphsConfig,
