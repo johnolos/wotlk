@@ -1,17 +1,5 @@
 import { ShamanMajorGlyph, ShamanMinorGlyph } from '/wotlk/core/proto/shaman.js';
-import { GlyphsPicker } from './glyphs_picker.js';
-import { TalentsPicker, newTalentsConfig } from './talents_picker.js';
-// Talents are the same for all Shaman specs, so its ok to just use ElementalShaman here
-export class ShamanTalentsPicker extends TalentsPicker {
-    constructor(parent, player) {
-        super(parent, player, shamanTalentsConfig);
-    }
-}
-export class ShamanGlyphsPicker extends GlyphsPicker {
-    constructor(parent, player) {
-        super(parent, player, shamanGlyphsConfig);
-    }
-}
+import { newTalentsConfig } from './talents_picker.js';
 export const shamanTalentsConfig = newTalentsConfig([
     {
         name: 'Elemental',

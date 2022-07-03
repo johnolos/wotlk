@@ -1,17 +1,5 @@
 import { PaladinMajorGlyph, PaladinMinorGlyph } from '/wotlk/core/proto/paladin.js';
-import { GlyphsPicker } from './glyphs_picker.js';
-import { TalentsPicker, newTalentsConfig } from './talents_picker.js';
-// Talents are the same for all Paladin specs, so its ok to just use RetributionPaladin here
-export class PaladinTalentsPicker extends TalentsPicker {
-    constructor(parent, player) {
-        super(parent, player, paladinTalentsConfig);
-    }
-}
-export class PaladinGlyphsPicker extends GlyphsPicker {
-    constructor(parent, player) {
-        super(parent, player, paladinGlyphsConfig);
-    }
-}
+import { newTalentsConfig } from './talents_picker.js';
 export const paladinTalentsConfig = newTalentsConfig([
     {
         name: 'Holy',

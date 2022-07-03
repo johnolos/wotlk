@@ -1,16 +1,5 @@
 import { WarlockMajorGlyph, WarlockMinorGlyph } from '/wotlk/core/proto/warlock.js';
-import { GlyphsPicker } from './glyphs_picker.js';
-import { TalentsPicker, newTalentsConfig } from './talents_picker.js';
-export class WarlockTalentsPicker extends TalentsPicker {
-    constructor(parent, player) {
-        super(parent, player, warlockTalentsConfig);
-    }
-}
-export class WarlockGlyphsPicker extends GlyphsPicker {
-    constructor(parent, player) {
-        super(parent, player, warlockGlyphsConfig);
-    }
-}
+import { newTalentsConfig } from './talents_picker.js';
 export const warlockTalentsConfig = newTalentsConfig([
     {
         name: 'Affliction',

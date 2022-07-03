@@ -1,16 +1,5 @@
 import { MageMajorGlyph, MageMinorGlyph } from '/wotlk/core/proto/mage.js';
-import { GlyphsPicker } from './glyphs_picker.js';
-import { TalentsPicker, newTalentsConfig } from './talents_picker.js';
-export class MageTalentsPicker extends TalentsPicker {
-    constructor(parent, player) {
-        super(parent, player, mageTalentsConfig);
-    }
-}
-export class MageGlyphsPicker extends GlyphsPicker {
-    constructor(parent, player) {
-        super(parent, player, mageGlyphsConfig);
-    }
-}
+import { newTalentsConfig } from './talents_picker.js';
 export const mageTalentsConfig = newTalentsConfig([
     {
         name: 'Arcane',

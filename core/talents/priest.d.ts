@@ -1,12 +1,5 @@
-import { Spec } from '/wotlk/core/proto/common.js';
-import { Player } from '/wotlk/core/player.js';
-import { GlyphsConfig, GlyphsPicker } from './glyphs_picker.js';
-import { TalentsConfig, TalentsPicker } from './talents_picker.js';
-export declare class PriestTalentsPicker extends TalentsPicker<Spec.SpecShadowPriest> {
-    constructor(parent: HTMLElement, player: Player<Spec.SpecShadowPriest>);
-}
-export declare class PriestGlyphsPicker extends GlyphsPicker {
-    constructor(parent: HTMLElement, player: Player<any>);
-}
-export declare const priestTalentsConfig: TalentsConfig<Spec.SpecShadowPriest>;
+import { PriestTalents } from '/wotlk/core/proto/priest.js';
+import { GlyphsConfig } from './glyphs_picker.js';
+import { TalentsConfig } from './talents_picker.js';
+export declare const priestTalentsConfig: TalentsConfig<PriestTalents>;
 export declare const priestGlyphsConfig: GlyphsConfig;

@@ -1,38 +1,42 @@
 import { Component } from '/wotlk/core/components/component.js';
-import { Spec } from '/wotlk/core/proto/common.js';
-import { SpecTalents } from '/wotlk/core/proto_utils/utils.js';
-import { Player } from '/wotlk/core/player.js';
-import { EventID } from '/wotlk/core/typed_event.js';
-export declare abstract class TalentsPicker<SpecType extends Spec> extends Component {
-    private readonly player;
+import { Input, InputConfig } from '/wotlk/core/components/input.js';
+export interface TalentsPickerConfig<ModObject> extends InputConfig<ModObject, string> {
+    numRows: number;
+    pointsPerRow: number;
+    maxPoints: number;
+}
+export declare class TalentsPicker<ModObject, TalentsProto> extends Input<ModObject, string> {
+    readonly numRows: number;
+    readonly pointsPerRow: number;
+    maxPoints: number;
     frozen: boolean;
-    readonly trees: Array<TalentTreePicker<SpecType>>;
-    constructor(parent: HTMLElement, player: Player<SpecType>, treeConfigs: TalentsConfig<SpecType>);
+    readonly trees: Array<TalentTreePicker<TalentsProto>>;
+    constructor(parent: HTMLElement, modObject: ModObject, treeConfigs: TalentsConfig<TalentsProto>, config: TalentsPickerConfig<ModObject>);
+    getInputElem(): HTMLElement;
+    getInputValue(): string;
+    setInputValue(newValue: string): void;
     get numPoints(): number;
     isFull(): boolean;
-    update(eventID: EventID): void;
-    getTalentsString(): string;
-    setTalentsString(eventID: EventID, str: string): void;
     freeze(): void;
 }
-declare class TalentTreePicker<SpecType extends Spec> extends Component {
+declare class TalentTreePicker<TalentsProto> extends Component {
     private readonly config;
     private readonly title;
-    readonly talents: Array<TalentPicker<SpecType>>;
-    readonly picker: TalentsPicker<SpecType>;
+    readonly talents: Array<TalentPicker<TalentsProto>>;
+    readonly picker: TalentsPicker<any, TalentsProto>;
     numPoints: number;
-    constructor(parent: HTMLElement, player: Player<SpecType>, config: TalentTreeConfig<SpecType>, picker: TalentsPicker<SpecType>);
+    constructor(parent: HTMLElement, config: TalentTreeConfig<TalentsProto>, picker: TalentsPicker<any, TalentsProto>);
     update(): void;
-    getTalent(location: TalentLocation): TalentPicker<SpecType>;
+    getTalent(location: TalentLocation): TalentPicker<TalentsProto>;
     getTalentsString(): string;
     setTalentsString(str: string): void;
 }
-declare class TalentPicker<SpecType extends Spec> extends Component {
-    readonly config: TalentConfig<SpecType>;
+declare class TalentPicker<TalentsProto> extends Component {
+    readonly config: TalentConfig<TalentsProto>;
     private readonly tree;
     private readonly pointsDisplay;
     private longTouchTimer?;
-    constructor(parent: HTMLElement, player: Player<SpecType>, config: TalentConfig<SpecType>, tree: TalentTreePicker<SpecType>);
+    constructor(parent: HTMLElement, config: TalentConfig<TalentsProto>, tree: TalentTreePicker<TalentsProto>);
     getRow(): number;
     getCol(): number;
     getPoints(): number;
@@ -42,23 +46,23 @@ declare class TalentPicker<SpecType extends Spec> extends Component {
     getSpellIdForPoints(numPoints: number): number;
     update(): void;
 }
-export declare type TalentsConfig<SpecType extends Spec> = Array<TalentTreeConfig<SpecType>>;
-export declare type TalentTreeConfig<SpecType extends Spec> = {
+export declare type TalentsConfig<TalentsProto> = Array<TalentTreeConfig<TalentsProto>>;
+export declare type TalentTreeConfig<TalentsProto> = {
     name: string;
     backgroundUrl: string;
-    talents: Array<TalentConfig<SpecType>>;
+    talents: Array<TalentConfig<TalentsProto>>;
 };
 export declare type TalentLocation = {
     rowIdx: number;
     colIdx: number;
 };
-export declare type TalentConfig<SpecType extends Spec> = {
-    fieldName?: keyof SpecTalents<SpecType>;
+export declare type TalentConfig<TalentsProto> = {
+    fieldName?: keyof TalentsProto;
     location: TalentLocation;
     prereqLocation?: TalentLocation;
     prereqOfLocation?: TalentLocation;
     spellIds: Array<number>;
     maxPoints: number;
 };
-export declare function newTalentsConfig<SpecType extends Spec>(talents: TalentsConfig<SpecType>): TalentsConfig<SpecType>;
+export declare function newTalentsConfig<TalentsProto>(talents: TalentsConfig<TalentsProto>): TalentsConfig<TalentsProto>;
 export {};

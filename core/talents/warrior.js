@@ -1,16 +1,5 @@
 import { WarriorMajorGlyph, WarriorMinorGlyph } from '/wotlk/core/proto/warrior.js';
-import { GlyphsPicker } from './glyphs_picker.js';
-import { TalentsPicker, newTalentsConfig } from './talents_picker.js';
-export class WarriorTalentsPicker extends TalentsPicker {
-    constructor(parent, player) {
-        super(parent, player, warriorTalentsConfig);
-    }
-}
-export class WarriorGlyphsPicker extends GlyphsPicker {
-    constructor(parent, player) {
-        super(parent, player, warriorGlyphsConfig);
-    }
-}
+import { newTalentsConfig } from './talents_picker.js';
 export const warriorTalentsConfig = newTalentsConfig([
     {
         name: 'Arms',

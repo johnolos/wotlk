@@ -1,16 +1,5 @@
 import { HunterMajorGlyph, HunterMinorGlyph } from '/wotlk/core/proto/hunter.js';
-import { GlyphsPicker } from './glyphs_picker.js';
-import { TalentsPicker, newTalentsConfig } from './talents_picker.js';
-export class HunterTalentsPicker extends TalentsPicker {
-    constructor(parent, player) {
-        super(parent, player, hunterTalentsConfig);
-    }
-}
-export class HunterGlyphsPicker extends GlyphsPicker {
-    constructor(parent, player) {
-        super(parent, player, hunterGlyphsConfig);
-    }
-}
+import { newTalentsConfig } from './talents_picker.js';
 export const hunterTalentsConfig = newTalentsConfig([
     {
         name: 'Beast Mastery',

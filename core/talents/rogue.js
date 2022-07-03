@@ -1,16 +1,5 @@
 import { RogueMajorGlyph, RogueMinorGlyph } from '/wotlk/core/proto/rogue.js';
-import { GlyphsPicker } from './glyphs_picker.js';
-import { TalentsPicker, newTalentsConfig } from './talents_picker.js';
-export class RogueTalentsPicker extends TalentsPicker {
-    constructor(parent, player) {
-        super(parent, player, rogueTalentsConfig);
-    }
-}
-export class RogueGlyphsPicker extends GlyphsPicker {
-    constructor(parent, player) {
-        super(parent, player, rogueGlyphsConfig);
-    }
-}
+import { newTalentsConfig } from './talents_picker.js';
 export const rogueTalentsConfig = newTalentsConfig([
     {
         name: 'Assassination',
