@@ -1927,6 +1927,8 @@ export declare enum Flask {
      */
     LesserFlaskOfResistance = 6,
     /**
+     * TBC
+     *
      * @generated from protobuf enum value: FlaskOfBlindingLight = 7;
      */
     FlaskOfBlindingLight = 7,
@@ -1964,49 +1966,91 @@ export declare enum BattleElixir {
      */
     BattleElixirUnknown = 0,
     /**
-     * @generated from protobuf enum value: AdeptsElixir = 1;
+     * @generated from protobuf enum value: ElixirOfAccuracy = 1;
      */
-    AdeptsElixir = 1,
+    ElixirOfAccuracy = 1,
     /**
-     * @generated from protobuf enum value: ElixirOfDemonslaying = 2;
+     * @generated from protobuf enum value: ElixirOfArmorPiercing = 2;
      */
-    ElixirOfDemonslaying = 2,
+    ElixirOfArmorPiercing = 2,
     /**
-     * @generated from protobuf enum value: ElixirOfMajorAgility = 3;
+     * @generated from protobuf enum value: ElixirOfDeadlyStrikes = 3;
      */
-    ElixirOfMajorAgility = 3,
+    ElixirOfDeadlyStrikes = 3,
     /**
-     * @generated from protobuf enum value: ElixirOfMajorFirePower = 4;
+     * @generated from protobuf enum value: ElixirOfExpertise = 4;
      */
-    ElixirOfMajorFirePower = 4,
+    ElixirOfExpertise = 4,
     /**
-     * @generated from protobuf enum value: ElixirOfMajorFrostPower = 5;
+     * @generated from protobuf enum value: ElixirOfLightningSpeed = 5;
      */
-    ElixirOfMajorFrostPower = 5,
+    ElixirOfLightningSpeed = 5,
     /**
-     * @generated from protobuf enum value: ElixirOfMajorShadowPower = 6;
+     * @generated from protobuf enum value: ElixirOfMightyAgility = 6;
      */
-    ElixirOfMajorShadowPower = 6,
+    ElixirOfMightyAgility = 6,
     /**
-     * @generated from protobuf enum value: ElixirOfMajorStrength = 7;
+     * @generated from protobuf enum value: ElixirOfMightyStrength = 7;
      */
-    ElixirOfMajorStrength = 7,
+    ElixirOfMightyStrength = 7,
     /**
-     * @generated from protobuf enum value: ElixirOfMastery = 10;
+     * @generated from protobuf enum value: GurusElixir = 8;
      */
-    ElixirOfMastery = 10,
+    GurusElixir = 8,
     /**
-     * @generated from protobuf enum value: ElixirOfTheMongoose = 8;
+     * @generated from protobuf enum value: SpellpowerElixir = 9;
      */
-    ElixirOfTheMongoose = 8,
+    SpellpowerElixir = 9,
     /**
-     * @generated from protobuf enum value: FelStrengthElixir = 9;
+     * @generated from protobuf enum value: WrathElixir = 10;
      */
-    FelStrengthElixir = 9,
+    WrathElixir = 10,
     /**
-     * @generated from protobuf enum value: GreaterArcaneElixir = 11;
+     * TBC
+     *
+     * @generated from protobuf enum value: AdeptsElixir = 11;
      */
-    GreaterArcaneElixir = 11
+    AdeptsElixir = 11,
+    /**
+     * @generated from protobuf enum value: ElixirOfDemonslaying = 12;
+     */
+    ElixirOfDemonslaying = 12,
+    /**
+     * @generated from protobuf enum value: ElixirOfMajorAgility = 13;
+     */
+    ElixirOfMajorAgility = 13,
+    /**
+     * @generated from protobuf enum value: ElixirOfMajorFirePower = 14;
+     */
+    ElixirOfMajorFirePower = 14,
+    /**
+     * @generated from protobuf enum value: ElixirOfMajorFrostPower = 15;
+     */
+    ElixirOfMajorFrostPower = 15,
+    /**
+     * @generated from protobuf enum value: ElixirOfMajorShadowPower = 16;
+     */
+    ElixirOfMajorShadowPower = 16,
+    /**
+     * @generated from protobuf enum value: ElixirOfMajorStrength = 17;
+     */
+    ElixirOfMajorStrength = 17,
+    /**
+     * @generated from protobuf enum value: ElixirOfMastery = 18;
+     */
+    ElixirOfMastery = 18,
+    /**
+     * @generated from protobuf enum value: ElixirOfTheMongoose = 19;
+     */
+    ElixirOfTheMongoose = 19,
+    /**
+     * @generated from protobuf enum value: FelStrengthElixir = 20;
+     */
+    FelStrengthElixir = 20,
+    /**
+     * @generated from protobuf enum value: GreaterArcaneElixir = 21;
+     */
+    GreaterArcaneElixir = 21
 }
 /**
  * @generated from protobuf enum proto.GuardianElixir
@@ -2017,29 +2061,55 @@ export declare enum GuardianElixir {
      */
     GuardianElixirUnknown = 0,
     /**
-     * @generated from protobuf enum value: ElixirOfDraenicWisdom = 1;
+     * @generated from protobuf enum value: ElixirOfMightyDefense = 1;
      */
-    ElixirOfDraenicWisdom = 1,
+    ElixirOfMightyDefense = 1,
     /**
-     * @generated from protobuf enum value: ElixirOfIronskin = 5;
+     * @generated from protobuf enum value: ElixirOfMightyFortitude = 2;
      */
-    ElixirOfIronskin = 5,
+    ElixirOfMightyFortitude = 2,
     /**
-     * @generated from protobuf enum value: ElixirOfMajorDefense = 6;
+     * @generated from protobuf enum value: ElixirOfMightyMageblood = 3;
      */
-    ElixirOfMajorDefense = 6,
+    ElixirOfMightyMageblood = 3,
     /**
-     * @generated from protobuf enum value: ElixirOfMajorFortitude = 4;
+     * @generated from protobuf enum value: ElixirOfMightyThoughts = 4;
      */
-    ElixirOfMajorFortitude = 4,
+    ElixirOfMightyThoughts = 4,
     /**
-     * @generated from protobuf enum value: ElixirOfMajorMageblood = 2;
+     * @generated from protobuf enum value: ElixirOfProtection = 5;
      */
-    ElixirOfMajorMageblood = 2,
+    ElixirOfProtection = 5,
     /**
-     * @generated from protobuf enum value: GiftOfArthas = 3;
+     * @generated from protobuf enum value: ElixirOfSpirit = 6;
      */
-    GiftOfArthas = 3
+    ElixirOfSpirit = 6,
+    /**
+     * TBC
+     *
+     * @generated from protobuf enum value: GiftOfArthas = 7;
+     */
+    GiftOfArthas = 7,
+    /**
+     * @generated from protobuf enum value: ElixirOfDraenicWisdom = 8;
+     */
+    ElixirOfDraenicWisdom = 8,
+    /**
+     * @generated from protobuf enum value: ElixirOfIronskin = 9;
+     */
+    ElixirOfIronskin = 9,
+    /**
+     * @generated from protobuf enum value: ElixirOfMajorDefense = 10;
+     */
+    ElixirOfMajorDefense = 10,
+    /**
+     * @generated from protobuf enum value: ElixirOfMajorFortitude = 11;
+     */
+    ElixirOfMajorFortitude = 11,
+    /**
+     * @generated from protobuf enum value: ElixirOfMajorMageblood = 12;
+     */
+    ElixirOfMajorMageblood = 12
 }
 /**
  * @generated from protobuf enum proto.Food

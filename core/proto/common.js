@@ -1073,6 +1073,8 @@ export var Flask;
      */
     Flask[Flask["LesserFlaskOfResistance"] = 6] = "LesserFlaskOfResistance";
     /**
+     * TBC
+     *
      * @generated from protobuf enum value: FlaskOfBlindingLight = 7;
      */
     Flask[Flask["FlaskOfBlindingLight"] = 7] = "FlaskOfBlindingLight";
@@ -1111,49 +1113,91 @@ export var BattleElixir;
      */
     BattleElixir[BattleElixir["BattleElixirUnknown"] = 0] = "BattleElixirUnknown";
     /**
-     * @generated from protobuf enum value: AdeptsElixir = 1;
+     * @generated from protobuf enum value: ElixirOfAccuracy = 1;
      */
-    BattleElixir[BattleElixir["AdeptsElixir"] = 1] = "AdeptsElixir";
+    BattleElixir[BattleElixir["ElixirOfAccuracy"] = 1] = "ElixirOfAccuracy";
     /**
-     * @generated from protobuf enum value: ElixirOfDemonslaying = 2;
+     * @generated from protobuf enum value: ElixirOfArmorPiercing = 2;
      */
-    BattleElixir[BattleElixir["ElixirOfDemonslaying"] = 2] = "ElixirOfDemonslaying";
+    BattleElixir[BattleElixir["ElixirOfArmorPiercing"] = 2] = "ElixirOfArmorPiercing";
     /**
-     * @generated from protobuf enum value: ElixirOfMajorAgility = 3;
+     * @generated from protobuf enum value: ElixirOfDeadlyStrikes = 3;
      */
-    BattleElixir[BattleElixir["ElixirOfMajorAgility"] = 3] = "ElixirOfMajorAgility";
+    BattleElixir[BattleElixir["ElixirOfDeadlyStrikes"] = 3] = "ElixirOfDeadlyStrikes";
     /**
-     * @generated from protobuf enum value: ElixirOfMajorFirePower = 4;
+     * @generated from protobuf enum value: ElixirOfExpertise = 4;
      */
-    BattleElixir[BattleElixir["ElixirOfMajorFirePower"] = 4] = "ElixirOfMajorFirePower";
+    BattleElixir[BattleElixir["ElixirOfExpertise"] = 4] = "ElixirOfExpertise";
     /**
-     * @generated from protobuf enum value: ElixirOfMajorFrostPower = 5;
+     * @generated from protobuf enum value: ElixirOfLightningSpeed = 5;
      */
-    BattleElixir[BattleElixir["ElixirOfMajorFrostPower"] = 5] = "ElixirOfMajorFrostPower";
+    BattleElixir[BattleElixir["ElixirOfLightningSpeed"] = 5] = "ElixirOfLightningSpeed";
     /**
-     * @generated from protobuf enum value: ElixirOfMajorShadowPower = 6;
+     * @generated from protobuf enum value: ElixirOfMightyAgility = 6;
      */
-    BattleElixir[BattleElixir["ElixirOfMajorShadowPower"] = 6] = "ElixirOfMajorShadowPower";
+    BattleElixir[BattleElixir["ElixirOfMightyAgility"] = 6] = "ElixirOfMightyAgility";
     /**
-     * @generated from protobuf enum value: ElixirOfMajorStrength = 7;
+     * @generated from protobuf enum value: ElixirOfMightyStrength = 7;
      */
-    BattleElixir[BattleElixir["ElixirOfMajorStrength"] = 7] = "ElixirOfMajorStrength";
+    BattleElixir[BattleElixir["ElixirOfMightyStrength"] = 7] = "ElixirOfMightyStrength";
     /**
-     * @generated from protobuf enum value: ElixirOfMastery = 10;
+     * @generated from protobuf enum value: GurusElixir = 8;
      */
-    BattleElixir[BattleElixir["ElixirOfMastery"] = 10] = "ElixirOfMastery";
+    BattleElixir[BattleElixir["GurusElixir"] = 8] = "GurusElixir";
     /**
-     * @generated from protobuf enum value: ElixirOfTheMongoose = 8;
+     * @generated from protobuf enum value: SpellpowerElixir = 9;
      */
-    BattleElixir[BattleElixir["ElixirOfTheMongoose"] = 8] = "ElixirOfTheMongoose";
+    BattleElixir[BattleElixir["SpellpowerElixir"] = 9] = "SpellpowerElixir";
     /**
-     * @generated from protobuf enum value: FelStrengthElixir = 9;
+     * @generated from protobuf enum value: WrathElixir = 10;
      */
-    BattleElixir[BattleElixir["FelStrengthElixir"] = 9] = "FelStrengthElixir";
+    BattleElixir[BattleElixir["WrathElixir"] = 10] = "WrathElixir";
     /**
-     * @generated from protobuf enum value: GreaterArcaneElixir = 11;
+     * TBC
+     *
+     * @generated from protobuf enum value: AdeptsElixir = 11;
      */
-    BattleElixir[BattleElixir["GreaterArcaneElixir"] = 11] = "GreaterArcaneElixir";
+    BattleElixir[BattleElixir["AdeptsElixir"] = 11] = "AdeptsElixir";
+    /**
+     * @generated from protobuf enum value: ElixirOfDemonslaying = 12;
+     */
+    BattleElixir[BattleElixir["ElixirOfDemonslaying"] = 12] = "ElixirOfDemonslaying";
+    /**
+     * @generated from protobuf enum value: ElixirOfMajorAgility = 13;
+     */
+    BattleElixir[BattleElixir["ElixirOfMajorAgility"] = 13] = "ElixirOfMajorAgility";
+    /**
+     * @generated from protobuf enum value: ElixirOfMajorFirePower = 14;
+     */
+    BattleElixir[BattleElixir["ElixirOfMajorFirePower"] = 14] = "ElixirOfMajorFirePower";
+    /**
+     * @generated from protobuf enum value: ElixirOfMajorFrostPower = 15;
+     */
+    BattleElixir[BattleElixir["ElixirOfMajorFrostPower"] = 15] = "ElixirOfMajorFrostPower";
+    /**
+     * @generated from protobuf enum value: ElixirOfMajorShadowPower = 16;
+     */
+    BattleElixir[BattleElixir["ElixirOfMajorShadowPower"] = 16] = "ElixirOfMajorShadowPower";
+    /**
+     * @generated from protobuf enum value: ElixirOfMajorStrength = 17;
+     */
+    BattleElixir[BattleElixir["ElixirOfMajorStrength"] = 17] = "ElixirOfMajorStrength";
+    /**
+     * @generated from protobuf enum value: ElixirOfMastery = 18;
+     */
+    BattleElixir[BattleElixir["ElixirOfMastery"] = 18] = "ElixirOfMastery";
+    /**
+     * @generated from protobuf enum value: ElixirOfTheMongoose = 19;
+     */
+    BattleElixir[BattleElixir["ElixirOfTheMongoose"] = 19] = "ElixirOfTheMongoose";
+    /**
+     * @generated from protobuf enum value: FelStrengthElixir = 20;
+     */
+    BattleElixir[BattleElixir["FelStrengthElixir"] = 20] = "FelStrengthElixir";
+    /**
+     * @generated from protobuf enum value: GreaterArcaneElixir = 21;
+     */
+    BattleElixir[BattleElixir["GreaterArcaneElixir"] = 21] = "GreaterArcaneElixir";
 })(BattleElixir || (BattleElixir = {}));
 /**
  * @generated from protobuf enum proto.GuardianElixir
@@ -1165,29 +1209,55 @@ export var GuardianElixir;
      */
     GuardianElixir[GuardianElixir["GuardianElixirUnknown"] = 0] = "GuardianElixirUnknown";
     /**
-     * @generated from protobuf enum value: ElixirOfDraenicWisdom = 1;
+     * @generated from protobuf enum value: ElixirOfMightyDefense = 1;
      */
-    GuardianElixir[GuardianElixir["ElixirOfDraenicWisdom"] = 1] = "ElixirOfDraenicWisdom";
+    GuardianElixir[GuardianElixir["ElixirOfMightyDefense"] = 1] = "ElixirOfMightyDefense";
     /**
-     * @generated from protobuf enum value: ElixirOfIronskin = 5;
+     * @generated from protobuf enum value: ElixirOfMightyFortitude = 2;
      */
-    GuardianElixir[GuardianElixir["ElixirOfIronskin"] = 5] = "ElixirOfIronskin";
+    GuardianElixir[GuardianElixir["ElixirOfMightyFortitude"] = 2] = "ElixirOfMightyFortitude";
     /**
-     * @generated from protobuf enum value: ElixirOfMajorDefense = 6;
+     * @generated from protobuf enum value: ElixirOfMightyMageblood = 3;
      */
-    GuardianElixir[GuardianElixir["ElixirOfMajorDefense"] = 6] = "ElixirOfMajorDefense";
+    GuardianElixir[GuardianElixir["ElixirOfMightyMageblood"] = 3] = "ElixirOfMightyMageblood";
     /**
-     * @generated from protobuf enum value: ElixirOfMajorFortitude = 4;
+     * @generated from protobuf enum value: ElixirOfMightyThoughts = 4;
      */
-    GuardianElixir[GuardianElixir["ElixirOfMajorFortitude"] = 4] = "ElixirOfMajorFortitude";
+    GuardianElixir[GuardianElixir["ElixirOfMightyThoughts"] = 4] = "ElixirOfMightyThoughts";
     /**
-     * @generated from protobuf enum value: ElixirOfMajorMageblood = 2;
+     * @generated from protobuf enum value: ElixirOfProtection = 5;
      */
-    GuardianElixir[GuardianElixir["ElixirOfMajorMageblood"] = 2] = "ElixirOfMajorMageblood";
+    GuardianElixir[GuardianElixir["ElixirOfProtection"] = 5] = "ElixirOfProtection";
     /**
-     * @generated from protobuf enum value: GiftOfArthas = 3;
+     * @generated from protobuf enum value: ElixirOfSpirit = 6;
      */
-    GuardianElixir[GuardianElixir["GiftOfArthas"] = 3] = "GiftOfArthas";
+    GuardianElixir[GuardianElixir["ElixirOfSpirit"] = 6] = "ElixirOfSpirit";
+    /**
+     * TBC
+     *
+     * @generated from protobuf enum value: GiftOfArthas = 7;
+     */
+    GuardianElixir[GuardianElixir["GiftOfArthas"] = 7] = "GiftOfArthas";
+    /**
+     * @generated from protobuf enum value: ElixirOfDraenicWisdom = 8;
+     */
+    GuardianElixir[GuardianElixir["ElixirOfDraenicWisdom"] = 8] = "ElixirOfDraenicWisdom";
+    /**
+     * @generated from protobuf enum value: ElixirOfIronskin = 9;
+     */
+    GuardianElixir[GuardianElixir["ElixirOfIronskin"] = 9] = "ElixirOfIronskin";
+    /**
+     * @generated from protobuf enum value: ElixirOfMajorDefense = 10;
+     */
+    GuardianElixir[GuardianElixir["ElixirOfMajorDefense"] = 10] = "ElixirOfMajorDefense";
+    /**
+     * @generated from protobuf enum value: ElixirOfMajorFortitude = 11;
+     */
+    GuardianElixir[GuardianElixir["ElixirOfMajorFortitude"] = 11] = "ElixirOfMajorFortitude";
+    /**
+     * @generated from protobuf enum value: ElixirOfMajorMageblood = 12;
+     */
+    GuardianElixir[GuardianElixir["ElixirOfMajorMageblood"] = 12] = "ElixirOfMajorMageblood";
 })(GuardianElixir || (GuardianElixir = {}));
 /**
  * @generated from protobuf enum proto.Food
