@@ -115,17 +115,13 @@ export var Race;
      */
     Race[Race["RaceTauren"] = 8] = "RaceTauren";
     /**
-     * @generated from protobuf enum value: RaceTroll10 = 9;
+     * @generated from protobuf enum value: RaceTroll = 9;
      */
-    Race[Race["RaceTroll10"] = 9] = "RaceTroll10";
+    Race[Race["RaceTroll"] = 9] = "RaceTroll";
     /**
-     * @generated from protobuf enum value: RaceTroll30 = 10;
+     * @generated from protobuf enum value: RaceUndead = 10;
      */
-    Race[Race["RaceTroll30"] = 10] = "RaceTroll30";
-    /**
-     * @generated from protobuf enum value: RaceUndead = 11;
-     */
-    Race[Race["RaceUndead"] = 11] = "RaceUndead";
+    Race[Race["RaceUndead"] = 10] = "RaceUndead";
 })(Race || (Race = {}));
 /**
  * @generated from protobuf enum proto.Faction
@@ -1639,8 +1635,7 @@ class PartyBuffs$Type extends MessageType {
             { no: 35, name: "devotion_aura", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 36, name: "retribution_aura", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 21, name: "trueshot_aura", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 3, name: "draenei_racial_melee", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 4, name: "draenei_racial_caster", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 3, name: "heroic_presence", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 5, name: "drums", kind: "enum", T: () => ["proto.Drums", Drums] },
             { no: 6, name: "atiesh_mage", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 7, name: "atiesh_warlock", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
@@ -1668,7 +1663,7 @@ class PartyBuffs$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { bloodlust: 0, ferociousInspiration: 0, bloodPact: 0, moonkinAura: 0, leaderOfThePack: 0, sanctityAura: 0, devotionAura: 0, retributionAura: 0, trueshotAura: false, draeneiRacialMelee: false, draeneiRacialCaster: false, drums: 0, atieshMage: 0, atieshWarlock: 0, braidedEterniumChain: false, eyeOfTheNight: false, chainOfTheTwilightOwl: false, jadePendantOfBlasting: false, manaSpringTotem: 0, manaTideTotems: 0, totemOfWrath: 0, wrathOfAirTotem: 0, snapshotImprovedWrathOfAirTotem: false, graceOfAirTotem: 0, strengthOfEarthTotem: 0, snapshotImprovedStrengthOfEarthTotem: false, tranquilAirTotem: false, windfuryTotemRank: 0, windfuryTotemIwt: 0, battleShout: 0, bsSolarianSapphire: false, snapshotBsSolarianSapphire: false, snapshotBsT2: false, snapshotBsBoomingVoiceRank: 0, commandingShout: 0 };
+        const message = { bloodlust: 0, ferociousInspiration: 0, bloodPact: 0, moonkinAura: 0, leaderOfThePack: 0, sanctityAura: 0, devotionAura: 0, retributionAura: 0, trueshotAura: false, heroicPresence: false, drums: 0, atieshMage: 0, atieshWarlock: 0, braidedEterniumChain: false, eyeOfTheNight: false, chainOfTheTwilightOwl: false, jadePendantOfBlasting: false, manaSpringTotem: 0, manaTideTotems: 0, totemOfWrath: 0, wrathOfAirTotem: 0, snapshotImprovedWrathOfAirTotem: false, graceOfAirTotem: 0, strengthOfEarthTotem: 0, snapshotImprovedStrengthOfEarthTotem: false, tranquilAirTotem: false, windfuryTotemRank: 0, windfuryTotemIwt: 0, battleShout: 0, bsSolarianSapphire: false, snapshotBsSolarianSapphire: false, snapshotBsT2: false, snapshotBsBoomingVoiceRank: 0, commandingShout: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1706,11 +1701,8 @@ class PartyBuffs$Type extends MessageType {
                 case /* bool trueshot_aura */ 21:
                     message.trueshotAura = reader.bool();
                     break;
-                case /* bool draenei_racial_melee */ 3:
-                    message.draeneiRacialMelee = reader.bool();
-                    break;
-                case /* bool draenei_racial_caster */ 4:
-                    message.draeneiRacialCaster = reader.bool();
+                case /* bool heroic_presence */ 3:
+                    message.heroicPresence = reader.bool();
                     break;
                 case /* proto.Drums drums */ 5:
                     message.drums = reader.int32();
@@ -1823,12 +1815,9 @@ class PartyBuffs$Type extends MessageType {
         /* bool trueshot_aura = 21; */
         if (message.trueshotAura !== false)
             writer.tag(21, WireType.Varint).bool(message.trueshotAura);
-        /* bool draenei_racial_melee = 3; */
-        if (message.draeneiRacialMelee !== false)
-            writer.tag(3, WireType.Varint).bool(message.draeneiRacialMelee);
-        /* bool draenei_racial_caster = 4; */
-        if (message.draeneiRacialCaster !== false)
-            writer.tag(4, WireType.Varint).bool(message.draeneiRacialCaster);
+        /* bool heroic_presence = 3; */
+        if (message.heroicPresence !== false)
+            writer.tag(3, WireType.Varint).bool(message.heroicPresence);
         /* proto.Drums drums = 5; */
         if (message.drums !== 0)
             writer.tag(5, WireType.Varint).int32(message.drums);

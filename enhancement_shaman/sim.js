@@ -133,7 +133,6 @@ export class EnhancementShamanSimUI extends IndividualSimUI {
                 IconInputs.WrathOfAirTotem,
                 IconInputs.TotemOfWrath,
                 IconInputs.BattleShout,
-                IconInputs.DraeneiRacialMelee,
                 IconInputs.LeaderOfThePack,
                 IconInputs.MoonkinAura,
                 IconInputs.FerociousInspiration,

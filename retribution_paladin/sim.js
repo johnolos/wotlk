@@ -145,7 +145,7 @@ export class RetributionPaladinSimUI extends IndividualSimUI {
                 IconInputs.StrengthOfEarthTotem,
                 IconInputs.GraceOfAirTotem,
                 IconInputs.BattleShout,
-                IconInputs.DraeneiRacialMelee,
+                IconInputs.HeroicPresence,
                 IconInputs.LeaderOfThePack,
                 IconInputs.FerociousInspiration,
                 IconInputs.TrueshotAura,

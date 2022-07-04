@@ -121,7 +121,7 @@ export class BalanceDruidSimUI extends IndividualSimUI {
                 IconInputs.TotemOfWrath,
                 IconInputs.ManaSpringTotem,
                 IconInputs.ManaTideTotem,
-                IconInputs.DraeneiRacialCaster,
+                IconInputs.HeroicPresence,
                 IconInputs.EyeOfTheNight,
                 IconInputs.ChainOfTheTwilightOwl,
                 IconInputs.JadePendantOfBlasting,

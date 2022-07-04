@@ -78,13 +78,9 @@ export interface PartyBuffs {
      */
     trueshotAura: boolean;
     /**
-     * @generated from protobuf field: bool draenei_racial_melee = 3;
+     * @generated from protobuf field: bool heroic_presence = 3;
      */
-    draeneiRacialMelee: boolean;
-    /**
-     * @generated from protobuf field: bool draenei_racial_caster = 4;
-     */
-    draeneiRacialCaster: boolean;
+    heroicPresence: boolean;
     /**
      * Drums
      *
@@ -990,17 +986,13 @@ export declare enum Race {
      */
     RaceTauren = 8,
     /**
-     * @generated from protobuf enum value: RaceTroll10 = 9;
+     * @generated from protobuf enum value: RaceTroll = 9;
      */
-    RaceTroll10 = 9,
+    RaceTroll = 9,
     /**
-     * @generated from protobuf enum value: RaceTroll30 = 10;
+     * @generated from protobuf enum value: RaceUndead = 10;
      */
-    RaceTroll30 = 10,
-    /**
-     * @generated from protobuf enum value: RaceUndead = 11;
-     */
-    RaceUndead = 11
+    RaceUndead = 10
 }
 /**
  * @generated from protobuf enum proto.Faction

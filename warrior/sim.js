@@ -121,7 +121,7 @@ export class WarriorSimUI extends IndividualSimUI {
                 IconInputs.FerociousInspiration,
                 IconInputs.TrueshotAura,
                 IconInputs.SanctityAura,
-                IconInputs.DraeneiRacialMelee,
+                IconInputs.HeroicPresence,
                 IconInputs.BraidedEterniumChain,
             ],
             playerBuffInputs: [
