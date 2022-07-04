@@ -5,13 +5,13 @@ import { TypedEvent } from '/wotlk/core/typed_event.js';
 import { isRightClick } from '/wotlk/core/utils.js';
 import { sum } from '/wotlk/core/utils.js';
 export class TalentsPicker extends Input {
-    constructor(parent, modObject, treeConfigs, config) {
+    constructor(parent, modObject, config) {
         super(parent, 'talents-picker-root', modObject, config);
-        this.numRows = config.numRows;
         this.pointsPerRow = config.pointsPerRow;
         this.maxPoints = config.maxPoints;
+        this.numRows = Math.max(...config.trees.map(treeConfig => treeConfig.talents.map(talentConfig => talentConfig.location.rowIdx).flat()).flat()) + 1;
         this.frozen = false;
-        this.trees = treeConfigs.map(treeConfig => new TalentTreePicker(this.rootElem, treeConfig, this));
+        this.trees = config.trees.map(treeConfig => new TalentTreePicker(this.rootElem, treeConfig, this));
         this.trees.forEach(tree => tree.talents.forEach(talent => talent.setPoints(0, false)));
         this.init();
     }
@@ -61,6 +61,8 @@ class TalentTreePicker extends Component {
         this.title = this.rootElem.getElementsByClassName('talent-tree-title')[0];
         const main = this.rootElem.getElementsByClassName('talent-tree-main')[0];
         main.style.backgroundImage = `url('${config.backgroundUrl}')`;
+        main.style.gridTemplateRows = `repeat(${this.picker.numRows}, 1fr)`;
+        main.style.height = `${8 * this.picker.numRows}vh`;
         this.talents = config.talents.map(talent => new TalentPicker(main, talent, this));
         this.talents.forEach(talent => {
             if (talent.config.prereqLocation) {

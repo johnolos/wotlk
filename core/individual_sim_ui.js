@@ -1,6 +1,7 @@
 import { BonusStatsPicker } from '/wotlk/core/components/bonus_stats_picker.js';
 import { BooleanPicker } from '/wotlk/core/components/boolean_picker.js';
 import { CharacterStats } from '/wotlk/core/components/character_stats.js';
+import { Class } from '/wotlk/core/proto/common.js';
 import { Consumes } from '/wotlk/core/proto/common.js';
 import { Cooldowns } from '/wotlk/core/proto/common.js';
 import { CooldownsPicker } from '/wotlk/core/components/cooldowns_picker.js';
@@ -12,6 +13,7 @@ import { EnumPicker } from '/wotlk/core/components/enum_picker.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { TypedEvent } from './typed_event.js';
 import { GearPicker } from '/wotlk/core/components/gear_picker.js';
+import { HunterPetTalentsPicker } from '/wotlk/core/talents/hunter_pet.js';
 import { IconEnumPicker } from '/wotlk/core/components/icon_enum_picker.js';
 import { IconPicker } from '/wotlk/core/components/icon_picker.js';
 import { ItemSlot } from '/wotlk/core/proto/common.js';
@@ -38,6 +40,7 @@ import { getEnumValues } from '/wotlk/core/utils.js';
 import { getMetaGemConditionDescription } from '/wotlk/core/proto_utils/gems.js';
 import { isDualWieldSpec } from '/wotlk/core/proto_utils/utils.js';
 import { launchedSpecs } from '/wotlk/core/launched_sims.js';
+import { makePetTypeInputConfig } from '/wotlk/core/talents/hunter_pet.js';
 import { newIndividualExporters } from '/wotlk/core/components/exporters.js';
 import { newIndividualImporters } from '/wotlk/core/components/importers.js';
 import { newGlyphsPicker } from '/wotlk/core/talents/factory.js';
@@ -620,13 +623,23 @@ export class IndividualSimUI extends SimUI {
     }
     addTalentsTab() {
         this.addTab('TALENTS', 'talents-tab', `
-			<div class="talents-tab-content">
-				<div class="talents-picker">
+			<div class="player-pet-toggle">
+			</div>
+			<div class="talents-content">
+				<div class="talents-tab-content">
+					<div class="talents-picker">
+					</div>
+					<div class="glyphs-picker">
+					</div>
 				</div>
-				<div class="glyphs-picker">
+				<div class="saved-talents-manager">
 				</div>
 			</div>
-			<div class="saved-talents-manager">
+			<div class="talents-content">
+				<div class="talents-tab-content">
+					<div class="pet-talents-picker">
+					</div>
+				</div>
 			</div>
 		`);
         const talentsPicker = newTalentsPicker(this.rootElem.getElementsByClassName('talents-picker')[0], this.player);
@@ -661,6 +674,36 @@ export class IndividualSimUI extends SimUI {
                     }),
                 });
             });
+            if (this.player.getClass() == Class.ClassHunter) {
+                const petTalentsPicker = new HunterPetTalentsPicker(this.rootElem.getElementsByClassName('pet-talents-picker')[0], this.player);
+                let curShown = 0;
+                const toggledElems = Array.from(this.rootElem.getElementsByClassName('talents-content'));
+                const updateToggle = () => {
+                    toggledElems[1 - curShown].style.display = 'none';
+                    toggledElems[curShown].style.removeProperty('display');
+                    if (curShown == 0) {
+                        petTypeToggle.rootElem.style.display = 'none';
+                    }
+                    else {
+                        petTypeToggle.rootElem.style.removeProperty('display');
+                    }
+                };
+                const toggleContainer = this.rootElem.getElementsByClassName('player-pet-toggle')[0];
+                const playerPetToggle = new EnumPicker(toggleContainer, this, {
+                    values: [
+                        { name: 'Player', value: 0 },
+                        { name: 'Pet', value: 1 },
+                    ],
+                    changedEvent: sim => new TypedEvent(),
+                    getValue: sim => curShown,
+                    setValue: (eventID, sim, newValue) => {
+                        curShown = newValue;
+                        updateToggle();
+                    },
+                });
+                const petTypeToggle = new EnumPicker(toggleContainer, this.player, makePetTypeInputConfig(false));
+                updateToggle();
+            }
         });
     }
     addDetailedResultsTab() {

@@ -1,7 +1,7 @@
 import { Component } from '/wotlk/core/components/component.js';
 import { Input, InputConfig } from '/wotlk/core/components/input.js';
-export interface TalentsPickerConfig<ModObject> extends InputConfig<ModObject, string> {
-    numRows: number;
+export interface TalentsPickerConfig<ModObject, TalentsProto> extends InputConfig<ModObject, string> {
+    trees: TalentsConfig<TalentsProto>;
     pointsPerRow: number;
     maxPoints: number;
 }
@@ -11,7 +11,7 @@ export declare class TalentsPicker<ModObject, TalentsProto> extends Input<ModObj
     maxPoints: number;
     frozen: boolean;
     readonly trees: Array<TalentTreePicker<TalentsProto>>;
-    constructor(parent: HTMLElement, modObject: ModObject, treeConfigs: TalentsConfig<TalentsProto>, config: TalentsPickerConfig<ModObject>);
+    constructor(parent: HTMLElement, modObject: ModObject, config: TalentsPickerConfig<ModObject, TalentsProto>);
     getInputElem(): HTMLElement;
     getInputValue(): string;
     setInputValue(newValue: string): void;

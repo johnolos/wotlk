@@ -668,6 +668,305 @@ class HunterTalents$Type extends MessageType {
  */
 export const HunterTalents = new HunterTalents$Type();
 // @generated message type with reflection information, may provide speed optimized methods
+class HunterPetTalents$Type extends MessageType {
+    constructor() {
+        super("proto.HunterPetTalents", [
+            { no: 1, name: "cobra_reflexes", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 2, name: "dive", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 3, name: "great_stamina", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 4, name: "natural_armor", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 5, name: "boars_speed", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 6, name: "mobility", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 7, name: "owls_focus", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 8, name: "spiked_collar", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 9, name: "culling_the_herd", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 10, name: "lionhearted", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 11, name: "carrion_feeder", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 12, name: "great_resistance", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 13, name: "cornered", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 14, name: "feeding_frenzy", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 15, name: "wolverine_bite", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 16, name: "roar_of_recovery", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 17, name: "bullheaded", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 18, name: "grace_of_the_mantis", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 19, name: "wild_hunt", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 20, name: "roar_of_sacrifice", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 21, name: "improved_cower", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 22, name: "bloodthirsty", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 23, name: "heart_of_the_pheonix", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 24, name: "spiders_bite", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 25, name: "rabid", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 26, name: "lick_your_wounds", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 27, name: "call_of_the_wild", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 28, name: "shark_attack", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 29, name: "charge", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 30, name: "blood_of_the_rhino", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 31, name: "pet_barding", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 32, name: "guard_dog", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 33, name: "thunderstomp", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 34, name: "last_stand", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 35, name: "taunt", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 36, name: "intervene", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 37, name: "silverback", kind: "scalar", T: 5 /*ScalarType.INT32*/ }
+        ]);
+    }
+    create(value) {
+        const message = { cobraReflexes: 0, dive: false, greatStamina: 0, naturalArmor: 0, boarsSpeed: false, mobility: 0, owlsFocus: 0, spikedCollar: 0, cullingTheHerd: 0, lionhearted: 0, carrionFeeder: false, greatResistance: 0, cornered: 0, feedingFrenzy: 0, wolverineBite: false, roarOfRecovery: false, bullheaded: false, graceOfTheMantis: 0, wildHunt: 0, roarOfSacrifice: false, improvedCower: 0, bloodthirsty: 0, heartOfThePheonix: false, spidersBite: 0, rabid: false, lickYourWounds: false, callOfTheWild: false, sharkAttack: 0, charge: false, bloodOfTheRhino: 0, petBarding: 0, guardDog: 0, thunderstomp: false, lastStand: false, taunt: false, intervene: false, silverback: 0 };
+        Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
+        if (value !== undefined)
+            reflectionMergePartial(this, message, value);
+        return message;
+    }
+    internalBinaryRead(reader, length, options, target) {
+        let message = target ?? this.create(), end = reader.pos + length;
+        while (reader.pos < end) {
+            let [fieldNo, wireType] = reader.tag();
+            switch (fieldNo) {
+                case /* int32 cobra_reflexes */ 1:
+                    message.cobraReflexes = reader.int32();
+                    break;
+                case /* bool dive */ 2:
+                    message.dive = reader.bool();
+                    break;
+                case /* int32 great_stamina */ 3:
+                    message.greatStamina = reader.int32();
+                    break;
+                case /* int32 natural_armor */ 4:
+                    message.naturalArmor = reader.int32();
+                    break;
+                case /* bool boars_speed */ 5:
+                    message.boarsSpeed = reader.bool();
+                    break;
+                case /* int32 mobility */ 6:
+                    message.mobility = reader.int32();
+                    break;
+                case /* int32 owls_focus */ 7:
+                    message.owlsFocus = reader.int32();
+                    break;
+                case /* int32 spiked_collar */ 8:
+                    message.spikedCollar = reader.int32();
+                    break;
+                case /* int32 culling_the_herd */ 9:
+                    message.cullingTheHerd = reader.int32();
+                    break;
+                case /* int32 lionhearted */ 10:
+                    message.lionhearted = reader.int32();
+                    break;
+                case /* bool carrion_feeder */ 11:
+                    message.carrionFeeder = reader.bool();
+                    break;
+                case /* int32 great_resistance */ 12:
+                    message.greatResistance = reader.int32();
+                    break;
+                case /* int32 cornered */ 13:
+                    message.cornered = reader.int32();
+                    break;
+                case /* int32 feeding_frenzy */ 14:
+                    message.feedingFrenzy = reader.int32();
+                    break;
+                case /* bool wolverine_bite */ 15:
+                    message.wolverineBite = reader.bool();
+                    break;
+                case /* bool roar_of_recovery */ 16:
+                    message.roarOfRecovery = reader.bool();
+                    break;
+                case /* bool bullheaded */ 17:
+                    message.bullheaded = reader.bool();
+                    break;
+                case /* int32 grace_of_the_mantis */ 18:
+                    message.graceOfTheMantis = reader.int32();
+                    break;
+                case /* int32 wild_hunt */ 19:
+                    message.wildHunt = reader.int32();
+                    break;
+                case /* bool roar_of_sacrifice */ 20:
+                    message.roarOfSacrifice = reader.bool();
+                    break;
+                case /* int32 improved_cower */ 21:
+                    message.improvedCower = reader.int32();
+                    break;
+                case /* int32 bloodthirsty */ 22:
+                    message.bloodthirsty = reader.int32();
+                    break;
+                case /* bool heart_of_the_pheonix */ 23:
+                    message.heartOfThePheonix = reader.bool();
+                    break;
+                case /* int32 spiders_bite */ 24:
+                    message.spidersBite = reader.int32();
+                    break;
+                case /* bool rabid */ 25:
+                    message.rabid = reader.bool();
+                    break;
+                case /* bool lick_your_wounds */ 26:
+                    message.lickYourWounds = reader.bool();
+                    break;
+                case /* bool call_of_the_wild */ 27:
+                    message.callOfTheWild = reader.bool();
+                    break;
+                case /* int32 shark_attack */ 28:
+                    message.sharkAttack = reader.int32();
+                    break;
+                case /* bool charge */ 29:
+                    message.charge = reader.bool();
+                    break;
+                case /* int32 blood_of_the_rhino */ 30:
+                    message.bloodOfTheRhino = reader.int32();
+                    break;
+                case /* int32 pet_barding */ 31:
+                    message.petBarding = reader.int32();
+                    break;
+                case /* int32 guard_dog */ 32:
+                    message.guardDog = reader.int32();
+                    break;
+                case /* bool thunderstomp */ 33:
+                    message.thunderstomp = reader.bool();
+                    break;
+                case /* bool last_stand */ 34:
+                    message.lastStand = reader.bool();
+                    break;
+                case /* bool taunt */ 35:
+                    message.taunt = reader.bool();
+                    break;
+                case /* bool intervene */ 36:
+                    message.intervene = reader.bool();
+                    break;
+                case /* int32 silverback */ 37:
+                    message.silverback = reader.int32();
+                    break;
+                default:
+                    let u = options.readUnknownField;
+                    if (u === "throw")
+                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
+                    let d = reader.skip(wireType);
+                    if (u !== false)
+                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
+            }
+        }
+        return message;
+    }
+    internalBinaryWrite(message, writer, options) {
+        /* int32 cobra_reflexes = 1; */
+        if (message.cobraReflexes !== 0)
+            writer.tag(1, WireType.Varint).int32(message.cobraReflexes);
+        /* bool dive = 2; */
+        if (message.dive !== false)
+            writer.tag(2, WireType.Varint).bool(message.dive);
+        /* int32 great_stamina = 3; */
+        if (message.greatStamina !== 0)
+            writer.tag(3, WireType.Varint).int32(message.greatStamina);
+        /* int32 natural_armor = 4; */
+        if (message.naturalArmor !== 0)
+            writer.tag(4, WireType.Varint).int32(message.naturalArmor);
+        /* bool boars_speed = 5; */
+        if (message.boarsSpeed !== false)
+            writer.tag(5, WireType.Varint).bool(message.boarsSpeed);
+        /* int32 mobility = 6; */
+        if (message.mobility !== 0)
+            writer.tag(6, WireType.Varint).int32(message.mobility);
+        /* int32 owls_focus = 7; */
+        if (message.owlsFocus !== 0)
+            writer.tag(7, WireType.Varint).int32(message.owlsFocus);
+        /* int32 spiked_collar = 8; */
+        if (message.spikedCollar !== 0)
+            writer.tag(8, WireType.Varint).int32(message.spikedCollar);
+        /* int32 culling_the_herd = 9; */
+        if (message.cullingTheHerd !== 0)
+            writer.tag(9, WireType.Varint).int32(message.cullingTheHerd);
+        /* int32 lionhearted = 10; */
+        if (message.lionhearted !== 0)
+            writer.tag(10, WireType.Varint).int32(message.lionhearted);
+        /* bool carrion_feeder = 11; */
+        if (message.carrionFeeder !== false)
+            writer.tag(11, WireType.Varint).bool(message.carrionFeeder);
+        /* int32 great_resistance = 12; */
+        if (message.greatResistance !== 0)
+            writer.tag(12, WireType.Varint).int32(message.greatResistance);
+        /* int32 cornered = 13; */
+        if (message.cornered !== 0)
+            writer.tag(13, WireType.Varint).int32(message.cornered);
+        /* int32 feeding_frenzy = 14; */
+        if (message.feedingFrenzy !== 0)
+            writer.tag(14, WireType.Varint).int32(message.feedingFrenzy);
+        /* bool wolverine_bite = 15; */
+        if (message.wolverineBite !== false)
+            writer.tag(15, WireType.Varint).bool(message.wolverineBite);
+        /* bool roar_of_recovery = 16; */
+        if (message.roarOfRecovery !== false)
+            writer.tag(16, WireType.Varint).bool(message.roarOfRecovery);
+        /* bool bullheaded = 17; */
+        if (message.bullheaded !== false)
+            writer.tag(17, WireType.Varint).bool(message.bullheaded);
+        /* int32 grace_of_the_mantis = 18; */
+        if (message.graceOfTheMantis !== 0)
+            writer.tag(18, WireType.Varint).int32(message.graceOfTheMantis);
+        /* int32 wild_hunt = 19; */
+        if (message.wildHunt !== 0)
+            writer.tag(19, WireType.Varint).int32(message.wildHunt);
+        /* bool roar_of_sacrifice = 20; */
+        if (message.roarOfSacrifice !== false)
+            writer.tag(20, WireType.Varint).bool(message.roarOfSacrifice);
+        /* int32 improved_cower = 21; */
+        if (message.improvedCower !== 0)
+            writer.tag(21, WireType.Varint).int32(message.improvedCower);
+        /* int32 bloodthirsty = 22; */
+        if (message.bloodthirsty !== 0)
+            writer.tag(22, WireType.Varint).int32(message.bloodthirsty);
+        /* bool heart_of_the_pheonix = 23; */
+        if (message.heartOfThePheonix !== false)
+            writer.tag(23, WireType.Varint).bool(message.heartOfThePheonix);
+        /* int32 spiders_bite = 24; */
+        if (message.spidersBite !== 0)
+            writer.tag(24, WireType.Varint).int32(message.spidersBite);
+        /* bool rabid = 25; */
+        if (message.rabid !== false)
+            writer.tag(25, WireType.Varint).bool(message.rabid);
+        /* bool lick_your_wounds = 26; */
+        if (message.lickYourWounds !== false)
+            writer.tag(26, WireType.Varint).bool(message.lickYourWounds);
+        /* bool call_of_the_wild = 27; */
+        if (message.callOfTheWild !== false)
+            writer.tag(27, WireType.Varint).bool(message.callOfTheWild);
+        /* int32 shark_attack = 28; */
+        if (message.sharkAttack !== 0)
+            writer.tag(28, WireType.Varint).int32(message.sharkAttack);
+        /* bool charge = 29; */
+        if (message.charge !== false)
+            writer.tag(29, WireType.Varint).bool(message.charge);
+        /* int32 blood_of_the_rhino = 30; */
+        if (message.bloodOfTheRhino !== 0)
+            writer.tag(30, WireType.Varint).int32(message.bloodOfTheRhino);
+        /* int32 pet_barding = 31; */
+        if (message.petBarding !== 0)
+            writer.tag(31, WireType.Varint).int32(message.petBarding);
+        /* int32 guard_dog = 32; */
+        if (message.guardDog !== 0)
+            writer.tag(32, WireType.Varint).int32(message.guardDog);
+        /* bool thunderstomp = 33; */
+        if (message.thunderstomp !== false)
+            writer.tag(33, WireType.Varint).bool(message.thunderstomp);
+        /* bool last_stand = 34; */
+        if (message.lastStand !== false)
+            writer.tag(34, WireType.Varint).bool(message.lastStand);
+        /* bool taunt = 35; */
+        if (message.taunt !== false)
+            writer.tag(35, WireType.Varint).bool(message.taunt);
+        /* bool intervene = 36; */
+        if (message.intervene !== false)
+            writer.tag(36, WireType.Varint).bool(message.intervene);
+        /* int32 silverback = 37; */
+        if (message.silverback !== 0)
+            writer.tag(37, WireType.Varint).int32(message.silverback);
+        let u = options.writeUnknownFields;
+        if (u !== false)
+            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+        return writer;
+    }
+}
+/**
+ * @generated MessageType for protobuf message proto.HunterPetTalents
+ */
+export const HunterPetTalents = new HunterPetTalents$Type();
+// @generated message type with reflection information, may provide speed optimized methods
 class Hunter$Type extends MessageType {
     constructor() {
         super("proto.Hunter", [
@@ -845,6 +1144,7 @@ class Hunter_Options$Type extends MessageType {
             { no: 1, name: "quiver_bonus", kind: "enum", T: () => ["proto.Hunter.Options.QuiverBonus", Hunter_Options_QuiverBonus] },
             { no: 2, name: "ammo", kind: "enum", T: () => ["proto.Hunter.Options.Ammo", Hunter_Options_Ammo] },
             { no: 3, name: "pet_type", kind: "enum", T: () => ["proto.Hunter.Options.PetType", Hunter_Options_PetType] },
+            { no: 8, name: "pet_talents", kind: "message", T: () => HunterPetTalents },
             { no: 4, name: "pet_uptime", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
             { no: 6, name: "pet_single_ability", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 5, name: "latency_ms", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
@@ -871,6 +1171,9 @@ class Hunter_Options$Type extends MessageType {
                     break;
                 case /* proto.Hunter.Options.PetType pet_type */ 3:
                     message.petType = reader.int32();
+                    break;
+                case /* proto.HunterPetTalents pet_talents */ 8:
+                    message.petTalents = HunterPetTalents.internalBinaryRead(reader, reader.uint32(), options, message.petTalents);
                     break;
                 case /* double pet_uptime */ 4:
                     message.petUptime = reader.double();
@@ -905,6 +1208,9 @@ class Hunter_Options$Type extends MessageType {
         /* proto.Hunter.Options.PetType pet_type = 3; */
         if (message.petType !== 0)
             writer.tag(3, WireType.Varint).int32(message.petType);
+        /* proto.HunterPetTalents pet_talents = 8; */
+        if (message.petTalents)
+            HunterPetTalents.internalBinaryWrite(message.petTalents, writer.tag(8, WireType.LengthDelimited).fork(), options).join();
         /* double pet_uptime = 4; */
         if (message.petUptime !== 0)
             writer.tag(4, WireType.Bit64).double(message.petUptime);

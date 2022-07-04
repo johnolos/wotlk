@@ -200,6 +200,165 @@ export interface HunterTalents {
     readiness: boolean;
 }
 /**
+ * @generated from protobuf message proto.HunterPetTalents
+ */
+export interface HunterPetTalents {
+    /**
+     * Cunning
+     *
+     * @generated from protobuf field: int32 cobra_reflexes = 1;
+     */
+    cobraReflexes: number;
+    /**
+     * @generated from protobuf field: bool dive = 2;
+     */
+    dive: boolean;
+    /**
+     * @generated from protobuf field: int32 great_stamina = 3;
+     */
+    greatStamina: number;
+    /**
+     * @generated from protobuf field: int32 natural_armor = 4;
+     */
+    naturalArmor: number;
+    /**
+     * @generated from protobuf field: bool boars_speed = 5;
+     */
+    boarsSpeed: boolean;
+    /**
+     * @generated from protobuf field: int32 mobility = 6;
+     */
+    mobility: number;
+    /**
+     * @generated from protobuf field: int32 owls_focus = 7;
+     */
+    owlsFocus: number;
+    /**
+     * @generated from protobuf field: int32 spiked_collar = 8;
+     */
+    spikedCollar: number;
+    /**
+     * @generated from protobuf field: int32 culling_the_herd = 9;
+     */
+    cullingTheHerd: number;
+    /**
+     * @generated from protobuf field: int32 lionhearted = 10;
+     */
+    lionhearted: number;
+    /**
+     * @generated from protobuf field: bool carrion_feeder = 11;
+     */
+    carrionFeeder: boolean;
+    /**
+     * @generated from protobuf field: int32 great_resistance = 12;
+     */
+    greatResistance: number;
+    /**
+     * @generated from protobuf field: int32 cornered = 13;
+     */
+    cornered: number;
+    /**
+     * @generated from protobuf field: int32 feeding_frenzy = 14;
+     */
+    feedingFrenzy: number;
+    /**
+     * @generated from protobuf field: bool wolverine_bite = 15;
+     */
+    wolverineBite: boolean;
+    /**
+     * @generated from protobuf field: bool roar_of_recovery = 16;
+     */
+    roarOfRecovery: boolean;
+    /**
+     * @generated from protobuf field: bool bullheaded = 17;
+     */
+    bullheaded: boolean;
+    /**
+     * @generated from protobuf field: int32 grace_of_the_mantis = 18;
+     */
+    graceOfTheMantis: number;
+    /**
+     * @generated from protobuf field: int32 wild_hunt = 19;
+     */
+    wildHunt: number;
+    /**
+     * @generated from protobuf field: bool roar_of_sacrifice = 20;
+     */
+    roarOfSacrifice: boolean;
+    /**
+     * Ferocity
+     *
+     * @generated from protobuf field: int32 improved_cower = 21;
+     */
+    improvedCower: number;
+    /**
+     * @generated from protobuf field: int32 bloodthirsty = 22;
+     */
+    bloodthirsty: number;
+    /**
+     * @generated from protobuf field: bool heart_of_the_pheonix = 23;
+     */
+    heartOfThePheonix: boolean;
+    /**
+     * @generated from protobuf field: int32 spiders_bite = 24;
+     */
+    spidersBite: number;
+    /**
+     * @generated from protobuf field: bool rabid = 25;
+     */
+    rabid: boolean;
+    /**
+     * @generated from protobuf field: bool lick_your_wounds = 26;
+     */
+    lickYourWounds: boolean;
+    /**
+     * @generated from protobuf field: bool call_of_the_wild = 27;
+     */
+    callOfTheWild: boolean;
+    /**
+     * @generated from protobuf field: int32 shark_attack = 28;
+     */
+    sharkAttack: number;
+    /**
+     * Tenacity
+     *
+     * @generated from protobuf field: bool charge = 29;
+     */
+    charge: boolean;
+    /**
+     * @generated from protobuf field: int32 blood_of_the_rhino = 30;
+     */
+    bloodOfTheRhino: number;
+    /**
+     * @generated from protobuf field: int32 pet_barding = 31;
+     */
+    petBarding: number;
+    /**
+     * @generated from protobuf field: int32 guard_dog = 32;
+     */
+    guardDog: number;
+    /**
+     * @generated from protobuf field: bool thunderstomp = 33;
+     */
+    thunderstomp: boolean;
+    /**
+     * @generated from protobuf field: bool last_stand = 34;
+     */
+    lastStand: boolean;
+    /**
+     * @generated from protobuf field: bool taunt = 35;
+     */
+    taunt: boolean;
+    /**
+     * @generated from protobuf field: bool intervene = 36;
+     */
+    intervene: boolean;
+    /**
+     * @generated from protobuf field: int32 silverback = 37;
+     */
+    silverback: number;
+}
+/**
  * @generated from protobuf message proto.Hunter
  */
 export interface Hunter {
@@ -323,6 +482,10 @@ export interface Hunter_Options {
      * @generated from protobuf field: proto.Hunter.Options.PetType pet_type = 3;
      */
     petType: Hunter_Options_PetType;
+    /**
+     * @generated from protobuf field: proto.HunterPetTalents pet_talents = 8;
+     */
+    petTalents?: HunterPetTalents;
     /**
      * @generated from protobuf field: double pet_uptime = 4;
      */
@@ -611,6 +774,16 @@ declare class HunterTalents$Type extends MessageType<HunterTalents> {
  * @generated MessageType for protobuf message proto.HunterTalents
  */
 export declare const HunterTalents: HunterTalents$Type;
+declare class HunterPetTalents$Type extends MessageType<HunterPetTalents> {
+    constructor();
+    create(value?: PartialMessage<HunterPetTalents>): HunterPetTalents;
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: HunterPetTalents): HunterPetTalents;
+    internalBinaryWrite(message: HunterPetTalents, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter;
+}
+/**
+ * @generated MessageType for protobuf message proto.HunterPetTalents
+ */
+export declare const HunterPetTalents: HunterPetTalents$Type;
 declare class Hunter$Type extends MessageType<Hunter> {
     constructor();
     create(value?: PartialMessage<Hunter>): Hunter;

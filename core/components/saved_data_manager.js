@@ -11,11 +11,14 @@ export class SavedDataManager extends Component {
         this.rootElem.innerHTML = `
     <div class="saved-data-container">
     </div>
-    <div class="saved-data-create-container">
+    <div class="saved-data-create-container presets-only-hide">
       <input class="saved-data-save-input" type="text" placeholder="Label">
       <button class="saved-data-save-button sim-button">SAVE CURRENT ${config.label.toUpperCase()}</button>
     </div>
     `;
+        if (config.presetsOnly) {
+            this.rootElem.classList.add('presets-only');
+        }
         this.savedDataDiv = this.rootElem.getElementsByClassName('saved-data-container')[0];
         this.saveInput = this.rootElem.getElementsByClassName('saved-data-save-input')[0];
         const saveButton = this.rootElem.getElementsByClassName('saved-data-save-button')[0];

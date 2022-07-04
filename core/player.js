@@ -2,7 +2,7 @@ import { Cooldowns, Consumes, Glyphs, HealingModel, IndividualBuffs, Profession,
 import { PlayerStats } from '/wotlk/core/proto/api.js';
 import { Player as PlayerProto } from '/wotlk/core/proto/api.js';
 import { getWeaponDPS } from '/wotlk/core/proto_utils/equipped_item.js';
-import { talentStringToProto } from '/wotlk/core/talents/factory.js';
+import { playerTalentStringToProto } from '/wotlk/core/talents/factory.js';
 import { Gear } from '/wotlk/core/proto_utils/gear.js';
 import { gemMatchesSocket, } from '/wotlk/core/proto_utils/gems.js';
 import { Stats } from '/wotlk/core/proto_utils/stats.js';
@@ -339,7 +339,7 @@ export class Player {
     }
     getTalents() {
         if (this.talents == null) {
-            this.talents = talentStringToProto(this.spec, this.talentsString);
+            this.talents = playerTalentStringToProto(this.spec, this.talentsString);
         }
         return this.talents;
     }

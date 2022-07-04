@@ -14,13 +14,13 @@ import { TalentsPicker } from './talents_picker.js';
 import { GlyphsPicker } from './glyphs_picker.js';
 import * as Mechanics from '/wotlk/core/constants/mechanics.js';
 export function newTalentsPicker(parent, player) {
-    return new TalentsPicker(parent, player, classTalentsConfig[player.getClass()], {
+    return new TalentsPicker(parent, player, {
+        trees: classTalentsConfig[player.getClass()],
         changedEvent: (player) => player.talentsChangeEmitter,
         getValue: (player) => player.getTalentsString(),
         setValue: (eventID, player, newValue) => {
             player.setTalentsString(eventID, newValue);
         },
-        numRows: 9,
         pointsPerRow: 5,
         maxPoints: Mechanics.CHARACTER_LEVEL - 9,
     });
@@ -70,10 +70,13 @@ export function talentSpellIdsToTalentString(playerClass, talentIds) {
     }).join('-').replace(/-+$/g, '');
     return talentsStr;
 }
-export function talentStringToProto(spec, talentString) {
-    const talentsConfig = classTalentsConfig[specToClass[spec]];
+export function playerTalentStringToProto(spec, talentString) {
     const specFunctions = specTypeFunctions[spec];
     const proto = specFunctions.talentsCreate();
+    const talentsConfig = classTalentsConfig[specToClass[spec]];
+    return talentStringToProto(proto, talentString, talentsConfig);
+}
+export function talentStringToProto(proto, talentString, talentsConfig) {
     talentString.split('-').forEach((treeString, treeIdx) => {
         const treeConfig = talentsConfig[treeIdx];
         [...treeString].forEach((talentString, i) => {
@@ -90,4 +93,13 @@ export function talentStringToProto(spec, talentString) {
         });
     });
     return proto;
+}
+// Note that this function will fail if any of the talent names are not defined. TODO: Remove that condition
+// once all talents are migrated to wrath and use all fields.
+export function protoToTalentString(proto, talentsConfig) {
+    return talentsConfig.map(treeConfig => {
+        return treeConfig.talents
+            .map(talentConfig => String(Number(proto[talentConfig.fieldName])))
+            .join('').replace(/0+$/g, '');
+    }).join('-').replace(/-+$/g, '');
 }

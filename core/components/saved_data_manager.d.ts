@@ -2,6 +2,7 @@ import { EventID, TypedEvent } from '/wotlk/core/typed_event.js';
 import { Component } from '/wotlk/core/components/component.js';
 export declare type SavedDataManagerConfig<ModObject, T> = {
     label: string;
+    presetsOnly?: boolean;
     storageKey: string;
     changeEmitters: Array<TypedEvent<any>>;
     equals: (a: T, b: T) => boolean;

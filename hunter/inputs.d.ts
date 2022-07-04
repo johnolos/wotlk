@@ -3,7 +3,7 @@ import { ActionId } from '/wotlk/core/proto_utils/action_id.js';
 import { Player } from '/wotlk/core/player.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
 import { EventID, TypedEvent } from '/wotlk/core/typed_event.js';
-import { Hunter_Rotation_StingType as StingType, Hunter_Rotation_WeaveType as WeaveType, Hunter_Options_Ammo as Ammo, Hunter_Options_QuiverBonus as QuiverBonus, Hunter_Options_PetType as PetType } from '/wotlk/core/proto/hunter.js';
+import { Hunter_Rotation_StingType as StingType, Hunter_Rotation_WeaveType as WeaveType, Hunter_Options_Ammo as Ammo, Hunter_Options_QuiverBonus as QuiverBonus } from '/wotlk/core/proto/hunter.js';
 export declare const Quiver: {
     extraCssClasses: string[];
     numColumns: number;
@@ -55,17 +55,7 @@ export declare const LatencyMs: {
 export declare const PetTypeInput: {
     type: "enum";
     getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
-    config: {
-        extraCssClasses: string[];
-        label: string;
-        values: {
-            name: string;
-            value: PetType;
-        }[];
-        changedEvent: (player: Player<Spec.SpecHunter>) => TypedEvent<void>;
-        getValue: (player: Player<Spec.SpecHunter>) => PetType;
-        setValue: (eventID: EventID, player: Player<Spec.SpecHunter>, newValue: number) => void;
-    };
+    config: import("/wotlk/core/components/enum_picker.js").EnumPickerConfig<Player<Spec.SpecHunter>>;
 };
 export declare const PetUptime: {
     type: "number";

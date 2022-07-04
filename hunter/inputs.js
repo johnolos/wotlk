@@ -1,5 +1,6 @@
 import { ActionId } from '/wotlk/core/proto_utils/action_id.js';
-import { Hunter_Rotation_StingType as StingType, Hunter_Rotation_WeaveType as WeaveType, Hunter_Options_Ammo as Ammo, Hunter_Options_QuiverBonus as QuiverBonus, Hunter_Options_PetType as PetType, } from '/wotlk/core/proto/hunter.js';
+import { makePetTypeInputConfig } from '/wotlk/core/talents/hunter_pet.js';
+import { Hunter_Rotation_StingType as StingType, Hunter_Rotation_WeaveType as WeaveType, Hunter_Options_Ammo as Ammo, Hunter_Options_QuiverBonus as QuiverBonus, } from '/wotlk/core/proto/hunter.js';
 // Configuration for spec-specific UI elements on the settings tab.
 // These don't need to be in a separate file but it keeps things cleaner.
 export const Quiver = {
@@ -71,30 +72,7 @@ export const LatencyMs = {
 export const PetTypeInput = {
     type: 'enum',
     getModObject: (simUI) => simUI.player,
-    config: {
-        extraCssClasses: [
-            'pet-type-picker',
-        ],
-        label: 'Pet',
-        values: [
-            { name: 'None', value: PetType.PetNone },
-            { name: 'Ravager', value: PetType.Ravager },
-            { name: 'Wind Serpent', value: PetType.WindSerpent },
-            { name: 'Bat', value: PetType.Bat },
-            { name: 'Bear', value: PetType.Bear },
-            { name: 'Cat', value: PetType.Cat },
-            { name: 'Crab', value: PetType.Crab },
-            { name: 'Owl', value: PetType.Owl },
-            { name: 'Raptor', value: PetType.Raptor },
-        ],
-        changedEvent: (player) => player.specOptionsChangeEmitter,
-        getValue: (player) => player.getSpecOptions().petType,
-        setValue: (eventID, player, newValue) => {
-            const newOptions = player.getSpecOptions();
-            newOptions.petType = newValue;
-            player.setSpecOptions(eventID, newOptions);
-        },
-    },
+    config: makePetTypeInputConfig(true),
 };
 export const PetUptime = {
     type: 'number',
