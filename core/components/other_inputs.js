@@ -64,15 +64,15 @@ export function makePhaseSelector(parent, sim) {
         },
     });
 }
-export const StartingPotion = {
+export const PrepopPotion = {
     type: 'enum',
     getModObject: (simUI) => simUI.player,
     config: {
         extraCssClasses: [
-            'starting-potion-picker',
+            'prepop-potion-picker',
         ],
-        label: 'Starting Potion',
-        labelTooltip: 'If set, this potion will be used instead of the default potion for the first few uses.',
+        label: 'Prepop Potion',
+        labelTooltip: 'If set, this potion will be used 1s before combat starts.',
         values: [
             { name: 'None', value: Potions.UnknownPotion },
             { name: 'Destruction', value: Potions.DestructionPotion },
@@ -81,31 +81,12 @@ export const StartingPotion = {
             { name: 'Fel Mana', value: Potions.FelManaPotion },
         ],
         changedEvent: (player) => player.consumesChangeEmitter,
-        getValue: (player) => player.getConsumes().startingPotion,
+        getValue: (player) => player.getConsumes().prepopPotion,
         setValue: (eventID, player, newValue) => {
             const newConsumes = player.getConsumes();
-            newConsumes.startingPotion = newValue;
+            newConsumes.prepopPotion = newValue;
             player.setConsumes(eventID, newConsumes);
         },
-    },
-};
-export const NumStartingPotions = {
-    type: 'number',
-    getModObject: (simUI) => simUI.player,
-    config: {
-        extraCssClasses: [
-            'num-starting-potions-picker',
-        ],
-        label: '# to use',
-        labelTooltip: 'The number of starting potions to use before going back to the default potion.',
-        changedEvent: (player) => player.consumesChangeEmitter,
-        getValue: (player) => player.getConsumes().numStartingPotions,
-        setValue: (eventID, player, newValue) => {
-            const newConsumes = player.getConsumes();
-            newConsumes.numStartingPotions = newValue;
-            player.setConsumes(eventID, newConsumes);
-        },
-        enableWhen: (player) => player.getConsumes().startingPotion != Potions.UnknownPotion,
     },
 };
 export const StartingConjured = {

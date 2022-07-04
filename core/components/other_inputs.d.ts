@@ -12,7 +12,7 @@ export declare function makeShow1hWeaponsSelector(parent: HTMLElement, sim: Sim)
 export declare function makeShow2hWeaponsSelector(parent: HTMLElement, sim: Sim): BooleanPicker<Sim>;
 export declare function makeShowMatchingGemsSelector(parent: HTMLElement, sim: Sim): BooleanPicker<Sim>;
 export declare function makePhaseSelector(parent: HTMLElement, sim: Sim): EnumPicker<Sim>;
-export declare const StartingPotion: {
+export declare const PrepopPotion: {
     type: "enum";
     getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
     config: {
@@ -26,19 +26,6 @@ export declare const StartingPotion: {
         changedEvent: (player: Player<any>) => TypedEvent<void>;
         getValue: (player: Player<any>) => Potions;
         setValue: (eventID: EventID, player: Player<any>, newValue: number) => void;
-    };
-};
-export declare const NumStartingPotions: {
-    type: "number";
-    getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
-    config: {
-        extraCssClasses: string[];
-        label: string;
-        labelTooltip: string;
-        changedEvent: (player: Player<any>) => TypedEvent<void>;
-        getValue: (player: Player<any>) => number;
-        setValue: (eventID: EventID, player: Player<any>, newValue: number) => void;
-        enableWhen: (player: Player<any>) => boolean;
     };
 };
 export declare const StartingConjured: {

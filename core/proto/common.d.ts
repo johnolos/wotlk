@@ -308,13 +308,9 @@ export interface Consumes {
      */
     defaultPotion: Potions;
     /**
-     * @generated from protobuf field: proto.Potions starting_potion = 16;
+     * @generated from protobuf field: proto.Potions prepop_potion = 16;
      */
-    startingPotion: Potions;
-    /**
-     * @generated from protobuf field: int32 num_starting_potions = 17;
-     */
-    numStartingPotions: number;
+    prepopPotion: Potions;
     /**
      * @generated from protobuf field: proto.Conjured default_conjured = 27;
      */
@@ -1760,37 +1756,57 @@ export declare enum Potions {
      */
     UnknownPotion = 0,
     /**
-     * @generated from protobuf enum value: DestructionPotion = 1;
+     * @generated from protobuf enum value: RunicHealingPotion = 1;
      */
-    DestructionPotion = 1,
+    RunicHealingPotion = 1,
     /**
-     * @generated from protobuf enum value: SuperManaPotion = 2;
+     * @generated from protobuf enum value: RunicManaPotion = 2;
      */
-    SuperManaPotion = 2,
+    RunicManaPotion = 2,
     /**
-     * @generated from protobuf enum value: HastePotion = 3;
+     * @generated from protobuf enum value: IndestructiblePotion = 3;
      */
-    HastePotion = 3,
+    IndestructiblePotion = 3,
     /**
-     * @generated from protobuf enum value: MightyRagePotion = 4;
+     * @generated from protobuf enum value: PotionOfSpeed = 4;
      */
-    MightyRagePotion = 4,
+    PotionOfSpeed = 4,
     /**
-     * @generated from protobuf enum value: FelManaPotion = 5;
+     * @generated from protobuf enum value: PotionOfWildMagic = 5;
      */
-    FelManaPotion = 5,
+    PotionOfWildMagic = 5,
     /**
-     * @generated from protobuf enum value: InsaneStrengthPotion = 6;
+     * @generated from protobuf enum value: DestructionPotion = 6;
      */
-    InsaneStrengthPotion = 6,
+    DestructionPotion = 6,
     /**
-     * @generated from protobuf enum value: IronshieldPotion = 7;
+     * @generated from protobuf enum value: SuperManaPotion = 7;
      */
-    IronshieldPotion = 7,
+    SuperManaPotion = 7,
     /**
-     * @generated from protobuf enum value: HeroicPotion = 8;
+     * @generated from protobuf enum value: HastePotion = 8;
      */
-    HeroicPotion = 8
+    HastePotion = 8,
+    /**
+     * @generated from protobuf enum value: MightyRagePotion = 9;
+     */
+    MightyRagePotion = 9,
+    /**
+     * @generated from protobuf enum value: FelManaPotion = 10;
+     */
+    FelManaPotion = 10,
+    /**
+     * @generated from protobuf enum value: InsaneStrengthPotion = 11;
+     */
+    InsaneStrengthPotion = 11,
+    /**
+     * @generated from protobuf enum value: IronshieldPotion = 12;
+     */
+    IronshieldPotion = 12,
+    /**
+     * @generated from protobuf enum value: HeroicPotion = 13;
+     */
+    HeroicPotion = 13
 }
 /**
  * @generated from protobuf enum proto.Conjured

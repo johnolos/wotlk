@@ -899,37 +899,57 @@ export var Potions;
      */
     Potions[Potions["UnknownPotion"] = 0] = "UnknownPotion";
     /**
-     * @generated from protobuf enum value: DestructionPotion = 1;
+     * @generated from protobuf enum value: RunicHealingPotion = 1;
      */
-    Potions[Potions["DestructionPotion"] = 1] = "DestructionPotion";
+    Potions[Potions["RunicHealingPotion"] = 1] = "RunicHealingPotion";
     /**
-     * @generated from protobuf enum value: SuperManaPotion = 2;
+     * @generated from protobuf enum value: RunicManaPotion = 2;
      */
-    Potions[Potions["SuperManaPotion"] = 2] = "SuperManaPotion";
+    Potions[Potions["RunicManaPotion"] = 2] = "RunicManaPotion";
     /**
-     * @generated from protobuf enum value: HastePotion = 3;
+     * @generated from protobuf enum value: IndestructiblePotion = 3;
      */
-    Potions[Potions["HastePotion"] = 3] = "HastePotion";
+    Potions[Potions["IndestructiblePotion"] = 3] = "IndestructiblePotion";
     /**
-     * @generated from protobuf enum value: MightyRagePotion = 4;
+     * @generated from protobuf enum value: PotionOfSpeed = 4;
      */
-    Potions[Potions["MightyRagePotion"] = 4] = "MightyRagePotion";
+    Potions[Potions["PotionOfSpeed"] = 4] = "PotionOfSpeed";
     /**
-     * @generated from protobuf enum value: FelManaPotion = 5;
+     * @generated from protobuf enum value: PotionOfWildMagic = 5;
      */
-    Potions[Potions["FelManaPotion"] = 5] = "FelManaPotion";
+    Potions[Potions["PotionOfWildMagic"] = 5] = "PotionOfWildMagic";
     /**
-     * @generated from protobuf enum value: InsaneStrengthPotion = 6;
+     * @generated from protobuf enum value: DestructionPotion = 6;
      */
-    Potions[Potions["InsaneStrengthPotion"] = 6] = "InsaneStrengthPotion";
+    Potions[Potions["DestructionPotion"] = 6] = "DestructionPotion";
     /**
-     * @generated from protobuf enum value: IronshieldPotion = 7;
+     * @generated from protobuf enum value: SuperManaPotion = 7;
      */
-    Potions[Potions["IronshieldPotion"] = 7] = "IronshieldPotion";
+    Potions[Potions["SuperManaPotion"] = 7] = "SuperManaPotion";
     /**
-     * @generated from protobuf enum value: HeroicPotion = 8;
+     * @generated from protobuf enum value: HastePotion = 8;
      */
-    Potions[Potions["HeroicPotion"] = 8] = "HeroicPotion";
+    Potions[Potions["HastePotion"] = 8] = "HastePotion";
+    /**
+     * @generated from protobuf enum value: MightyRagePotion = 9;
+     */
+    Potions[Potions["MightyRagePotion"] = 9] = "MightyRagePotion";
+    /**
+     * @generated from protobuf enum value: FelManaPotion = 10;
+     */
+    Potions[Potions["FelManaPotion"] = 10] = "FelManaPotion";
+    /**
+     * @generated from protobuf enum value: InsaneStrengthPotion = 11;
+     */
+    Potions[Potions["InsaneStrengthPotion"] = 11] = "InsaneStrengthPotion";
+    /**
+     * @generated from protobuf enum value: IronshieldPotion = 12;
+     */
+    Potions[Potions["IronshieldPotion"] = 12] = "IronshieldPotion";
+    /**
+     * @generated from protobuf enum value: HeroicPotion = 13;
+     */
+    Potions[Potions["HeroicPotion"] = 13] = "HeroicPotion";
 })(Potions || (Potions = {}));
 /**
  * @generated from protobuf enum proto.Conjured
@@ -1926,8 +1946,7 @@ class Consumes$Type extends MessageType {
             { no: 46, name: "pet_scroll_of_agility", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 47, name: "pet_scroll_of_strength", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 15, name: "default_potion", kind: "enum", T: () => ["proto.Potions", Potions] },
-            { no: 16, name: "starting_potion", kind: "enum", T: () => ["proto.Potions", Potions] },
-            { no: 17, name: "num_starting_potions", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 16, name: "prepop_potion", kind: "enum", T: () => ["proto.Potions", Potions] },
             { no: 27, name: "default_conjured", kind: "enum", T: () => ["proto.Conjured", Conjured] },
             { no: 48, name: "starting_conjured", kind: "enum", T: () => ["proto.Conjured", Conjured] },
             { no: 49, name: "num_starting_conjured", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
@@ -1938,7 +1957,7 @@ class Consumes$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { flask: 0, battleElixir: 0, guardianElixir: 0, mainHandImbue: 0, offHandImbue: 0, food: 0, petFood: 0, alchohol: 0, scrollOfAgility: 0, scrollOfStrength: 0, scrollOfSpirit: 0, scrollOfProtection: 0, petScrollOfAgility: 0, petScrollOfStrength: 0, defaultPotion: 0, startingPotion: 0, numStartingPotions: 0, defaultConjured: 0, startingConjured: 0, numStartingConjured: 0, drums: 0, superSapper: false, goblinSapper: false, fillerExplosive: 0 };
+        const message = { flask: 0, battleElixir: 0, guardianElixir: 0, mainHandImbue: 0, offHandImbue: 0, food: 0, petFood: 0, alchohol: 0, scrollOfAgility: 0, scrollOfStrength: 0, scrollOfSpirit: 0, scrollOfProtection: 0, petScrollOfAgility: 0, petScrollOfStrength: 0, defaultPotion: 0, prepopPotion: 0, defaultConjured: 0, startingConjured: 0, numStartingConjured: 0, drums: 0, superSapper: false, goblinSapper: false, fillerExplosive: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1994,11 +2013,8 @@ class Consumes$Type extends MessageType {
                 case /* proto.Potions default_potion */ 15:
                     message.defaultPotion = reader.int32();
                     break;
-                case /* proto.Potions starting_potion */ 16:
-                    message.startingPotion = reader.int32();
-                    break;
-                case /* int32 num_starting_potions */ 17:
-                    message.numStartingPotions = reader.int32();
+                case /* proto.Potions prepop_potion */ 16:
+                    message.prepopPotion = reader.int32();
                     break;
                 case /* proto.Conjured default_conjured */ 27:
                     message.defaultConjured = reader.int32();
@@ -2078,12 +2094,9 @@ class Consumes$Type extends MessageType {
         /* proto.Potions default_potion = 15; */
         if (message.defaultPotion !== 0)
             writer.tag(15, WireType.Varint).int32(message.defaultPotion);
-        /* proto.Potions starting_potion = 16; */
-        if (message.startingPotion !== 0)
-            writer.tag(16, WireType.Varint).int32(message.startingPotion);
-        /* int32 num_starting_potions = 17; */
-        if (message.numStartingPotions !== 0)
-            writer.tag(17, WireType.Varint).int32(message.numStartingPotions);
+        /* proto.Potions prepop_potion = 16; */
+        if (message.prepopPotion !== 0)
+            writer.tag(16, WireType.Varint).int32(message.prepopPotion);
         /* proto.Conjured default_conjured = 27; */
         if (message.defaultConjured !== 0)
             writer.tag(27, WireType.Varint).int32(message.defaultConjured);

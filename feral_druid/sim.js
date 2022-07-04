@@ -215,8 +215,7 @@ export class FeralDruidSimUI extends IndividualSimUI {
             otherInputs: {
                 inputs: [
                     DruidInputs.LatencyMs,
-                    OtherInputs.StartingPotion,
-                    OtherInputs.NumStartingPotions,
+                    OtherInputs.PrepopPotion,
                     OtherInputs.ExposeWeaknessUptime,
                     OtherInputs.ExposeWeaknessHunterAgility,
                     OtherInputs.SnapshotImprovedStrengthOfEarthTotem,
