@@ -17,7 +17,6 @@ export declare class Target {
     private minBaseDamage;
     private dualWield;
     private dualWieldPenalty;
-    private canCrush;
     private suppressDodge;
     private parryHaste;
     private spellSchool;
@@ -47,8 +46,6 @@ export declare class Target {
     setDualWield(eventID: EventID, newDualWield: boolean): void;
     getDualWieldPenalty(): boolean;
     setDualWieldPenalty(eventID: EventID, newDualWieldPenalty: boolean): void;
-    getCanCrush(): boolean;
-    setCanCrush(eventID: EventID, newCanCrush: boolean): void;
     getSuppressDodge(): boolean;
     setSuppressDodge(eventID: EventID, newSuppressDodge: boolean): void;
     getParryHaste(): boolean;

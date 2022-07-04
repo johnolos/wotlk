@@ -18,7 +18,6 @@ export class Target {
         this.minBaseDamage = 0;
         this.dualWield = false;
         this.dualWieldPenalty = false;
-        this.canCrush = true;
         this.suppressDodge = false;
         this.parryHaste = true;
         this.spellSchool = SpellSchool.SpellSchoolPhysical;
@@ -122,15 +121,6 @@ export class Target {
         this.dualWieldPenalty = newDualWieldPenalty;
         this.propChangeEmitter.emit(eventID);
     }
-    getCanCrush() {
-        return this.canCrush;
-    }
-    setCanCrush(eventID, newCanCrush) {
-        if (newCanCrush == this.canCrush)
-            return;
-        this.canCrush = newCanCrush;
-        this.propChangeEmitter.emit(eventID);
-    }
     getSuppressDodge() {
         return this.suppressDodge;
     }
@@ -184,7 +174,6 @@ export class Target {
             minBaseDamage: this.getMinBaseDamage(),
             dualWield: this.getDualWield(),
             dualWieldPenalty: this.getDualWieldPenalty(),
-            canCrush: this.getCanCrush(),
             suppressDodge: this.getSuppressDodge(),
             parryHaste: this.getParryHaste(),
             spellSchool: this.getSpellSchool(),
@@ -202,7 +191,6 @@ export class Target {
             this.setMinBaseDamage(eventID, proto.minBaseDamage);
             this.setDualWield(eventID, proto.dualWield);
             this.setDualWieldPenalty(eventID, proto.dualWieldPenalty);
-            this.setCanCrush(eventID, proto.canCrush);
             this.setSuppressDodge(eventID, proto.suppressDodge);
             this.setParryHaste(eventID, proto.parryHaste);
             this.setSpellSchool(eventID, proto.spellSchool);
@@ -223,7 +211,6 @@ export class Target {
             minBaseDamage: 10000,
             dualWield: false,
             dualWieldPenalty: false,
-            canCrush: true,
             suppressDodge: false,
             parryHaste: true,
             spellSchool: SpellSchool.SpellSchoolPhysical,

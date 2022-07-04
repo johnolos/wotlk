@@ -301,16 +301,6 @@ class TargetPicker extends Component {
             enableWhen: (target) => target.getDualWield(),
         });
         new BooleanPicker(section3, modTarget, {
-            label: 'Can Crush',
-            labelTooltip: 'Whether crushing blows should be included in the attack table. Only applies to level 73 enemies.',
-            changedEvent: (target) => target.changeEmitter,
-            getValue: (target) => target.getCanCrush(),
-            setValue: (eventID, target, newValue) => {
-                target.setCanCrush(eventID, newValue);
-            },
-            enableWhen: (target) => target.getLevel() == Mechanics.BOSS_LEVEL,
-        });
-        new BooleanPicker(section3, modTarget, {
             label: 'Parry Haste',
             labelTooltip: 'Whether this enemy will gain parry haste when parrying attacks.',
             changedEvent: (target) => target.propChangeEmitter,

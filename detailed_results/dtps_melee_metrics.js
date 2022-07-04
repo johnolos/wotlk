@@ -71,12 +71,6 @@ export class DtpsMeleeMetricsTable extends MetricsTable {
                 getValue: (metric) => metric.critPercent,
                 getDisplayString: (metric) => metric.critPercent.toFixed(2) + '%',
             },
-            {
-                name: 'Crush %',
-                tooltip: 'Crushes / Swings',
-                getValue: (metric) => metric.crushPercent,
-                getDisplayString: (metric) => metric.crushPercent.toFixed(2) + '%',
-            },
         ]);
     }
     getGroupedMetrics(resultData) {

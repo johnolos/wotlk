@@ -2446,7 +2446,6 @@ class Target$Type extends MessageType {
             { no: 8, name: "swing_speed", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
             { no: 9, name: "dual_wield", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 10, name: "dual_wield_penalty", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 11, name: "can_crush", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 12, name: "parry_haste", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 16, name: "suppress_dodge", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 13, name: "spell_school", kind: "enum", T: () => ["proto.SpellSchool", SpellSchool] },
@@ -2454,7 +2453,7 @@ class Target$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { id: 0, name: "", level: 0, mobType: 0, stats: [], minBaseDamage: 0, swingSpeed: 0, dualWield: false, dualWieldPenalty: false, canCrush: false, parryHaste: false, suppressDodge: false, spellSchool: 0, tankIndex: 0 };
+        const message = { id: 0, name: "", level: 0, mobType: 0, stats: [], minBaseDamage: 0, swingSpeed: 0, dualWield: false, dualWieldPenalty: false, parryHaste: false, suppressDodge: false, spellSchool: 0, tankIndex: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -2495,9 +2494,6 @@ class Target$Type extends MessageType {
                     break;
                 case /* bool dual_wield_penalty */ 10:
                     message.dualWieldPenalty = reader.bool();
-                    break;
-                case /* bool can_crush */ 11:
-                    message.canCrush = reader.bool();
                     break;
                 case /* bool parry_haste */ 12:
                     message.parryHaste = reader.bool();
@@ -2554,9 +2550,6 @@ class Target$Type extends MessageType {
         /* bool dual_wield_penalty = 10; */
         if (message.dualWieldPenalty !== false)
             writer.tag(10, WireType.Varint).bool(message.dualWieldPenalty);
-        /* bool can_crush = 11; */
-        if (message.canCrush !== false)
-            writer.tag(11, WireType.Varint).bool(message.canCrush);
         /* bool parry_haste = 12; */
         if (message.parryHaste !== false)
             writer.tag(12, WireType.Varint).bool(message.parryHaste);

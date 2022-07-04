@@ -490,10 +490,6 @@ export interface Target {
      */
     dualWieldPenalty: boolean;
     /**
-     * @generated from protobuf field: bool can_crush = 11;
-     */
-    canCrush: boolean;
-    /**
      * @generated from protobuf field: bool parry_haste = 12;
      */
     parryHaste: boolean;

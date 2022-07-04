@@ -186,7 +186,6 @@ export declare class ActionMetrics {
     get avgHit(): number;
     get avgHitThreat(): number;
     get critPercent(): number;
-    get crushPercent(): number;
     get misses(): number;
     get missPercent(): number;
     get dodges(): number;
@@ -221,7 +220,6 @@ export declare class TargetedActionMetrics {
     get avgHit(): number;
     get avgHitThreat(): number;
     get critPercent(): number;
-    get crushPercent(): number;
     get misses(): number;
     get missPercent(): number;
     get dodges(): number;

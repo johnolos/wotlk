@@ -448,9 +448,6 @@ export class ActionMetrics {
     get critPercent() {
         return this.combinedMetrics.critPercent;
     }
-    get crushPercent() {
-        return this.combinedMetrics.crushPercent;
-    }
     get misses() {
         return this.combinedMetrics.misses;
     }
@@ -538,14 +535,13 @@ export class TargetedActionMetrics {
         this.iterations = iterations;
         this.duration = duration;
         this.data = data;
-        this.landedHitsRaw = this.data.hits + this.data.crits + this.data.crushes + this.data.blocks + this.data.glances;
+        this.landedHitsRaw = this.data.hits + this.data.crits + this.data.blocks + this.data.glances;
         this.hitAttempts = this.data.misses
             + this.data.dodges
             + this.data.parries
             + this.data.blocks
             + this.data.glances
             + this.data.crits
-            + this.data.crushes
             + this.data.hits;
     }
     get damage() {
@@ -583,9 +579,6 @@ export class TargetedActionMetrics {
     get critPercent() {
         return (this.data.crits / (this.hitAttempts || 1)) * 100;
     }
-    get crushPercent() {
-        return (this.data.crushes / (this.hitAttempts || 1)) * 100;
-    }
     get misses() {
         return this.data.misses / this.iterations;
     }
@@ -622,7 +615,6 @@ export class TargetedActionMetrics {
             casts: sum(actions.map(a => a.data.casts)),
             hits: sum(actions.map(a => a.data.hits)),
             crits: sum(actions.map(a => a.data.crits)),
-            crushes: sum(actions.map(a => a.data.crushes)),
             misses: sum(actions.map(a => a.data.misses)),
             dodges: sum(actions.map(a => a.data.dodges)),
             parries: sum(actions.map(a => a.data.parries)),
