@@ -2,6 +2,7 @@ import { ActionID as ActionIdProto } from '/wotlk/core/proto/common.js';
 import { ResourceType } from '/wotlk/core/proto/api.js';
 import { Item } from '/wotlk/core/proto/common.js';
 import { OtherAction } from '/wotlk/core/proto/common.js';
+export declare const USE_WOTLK_DB = false;
 export declare class ActionId {
     readonly itemId: number;
     readonly spellId: number;
@@ -15,6 +16,8 @@ export declare class ActionId {
     equals(other: ActionId): boolean;
     equalsIgnoringTag(other: ActionId): boolean;
     setBackground(elem: HTMLElement): void;
+    static makeItemUrl(id: number): string;
+    static makeSpellUrl(id: number): string;
     setWowheadHref(elem: HTMLAnchorElement): void;
     setBackgroundAndHref(elem: HTMLAnchorElement): void;
     fillAndSet(elem: HTMLAnchorElement, setHref: boolean, setBackground: boolean): Promise<ActionId>;
@@ -32,7 +35,9 @@ export declare class ActionId {
     static fromItem(item: Item): ActionId;
     static fromProto(protoId: ActionIdProto): ActionId;
     static fromLogString(str: string): ActionId;
-    private static getTooltipDataHelper;
+    private static makeIconUrl;
+    private static getWowheadTooltipDataHelper;
+    private static getWotlkdbTooltipDataHelper;
     static getItemTooltipData(id: number): Promise<any>;
     static getSpellTooltipData(id: number): Promise<any>;
     static getTooltipData(actionId: ActionId): Promise<any>;

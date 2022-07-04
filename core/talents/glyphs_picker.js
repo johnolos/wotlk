@@ -1,4 +1,5 @@
 import { ItemQuality } from '/wotlk/core/proto/common.js';
+import { ActionId } from '/wotlk/core/proto_utils/action_id.js';
 import { setItemQualityCssClass } from '/wotlk/core/css_utils.js';
 import { TypedEvent } from '/wotlk/core/typed_event.js';
 import { Component } from '/wotlk/core/components/component.js';
@@ -78,7 +79,7 @@ class GlyphPicker extends Input {
     setInputValue(newValue) {
         this.selectedGlyph = this.glyphOptions.find(glyphData => glyphData.id == newValue) || emptyGlyphData;
         this.iconElem.style.backgroundImage = `url('${this.selectedGlyph.iconUrl}')`;
-        this.iconElem.href = this.selectedGlyph.id == 0 ? '' : 'https://wowhead.com/wotlk/item=' + this.selectedGlyph.id;
+        this.iconElem.href = this.selectedGlyph.id == 0 ? '' : ActionId.makeItemUrl(this.selectedGlyph.id);
     }
 }
 class GlyphSelectorModal extends Popup {
@@ -104,8 +105,8 @@ class GlyphSelectorModal extends Popup {
         <a class="selector-modal-list-item-name">${glyphData.name}</a>
 				<span class="selector-modal-list-item-description">${glyphData.description}</span>
       `;
-            listItemElem.children[0].href = glyphData.id == 0 ? '' : 'https://wowhead.com/wotlk/item=' + glyphData.id;
-            listItemElem.children[1].href = glyphData.id == 0 ? '' : 'https://wowhead.com/wotlk/item=' + glyphData.id;
+            listItemElem.children[0].href = glyphData.id == 0 ? '' : ActionId.makeItemUrl(glyphData.id);
+            listItemElem.children[1].href = glyphData.id == 0 ? '' : ActionId.makeItemUrl(glyphData.id);
             const iconElem = listItemElem.getElementsByClassName('selector-modal-list-item-icon')[0];
             iconElem.style.backgroundImage = `url('${glyphData.iconUrl}')`;
             const nameElem = listItemElem.getElementsByClassName('selector-modal-list-item-name')[0];

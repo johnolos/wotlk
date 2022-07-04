@@ -3,6 +3,8 @@ import { ResourceType } from '/wotlk/core/proto/api.js';
 import { OtherAction } from '/wotlk/core/proto/common.js';
 import { getWowheadItemId } from '/wotlk/core/proto_utils/equipped_item.js';
 import { NO_TARGET } from '/wotlk/core/proto_utils/utils.js';
+// If true uses wotlkdb.com, else uses wowhead.com.
+export const USE_WOTLK_DB = false;
 // Uniquely identifies a specific item / spell / thing in WoW. This object is immutable.
 export class ActionId {
     constructor(itemId, spellId, otherId, tag, baseName, name, iconUrl) {
@@ -92,12 +94,28 @@ export class ActionId {
             elem.style.backgroundImage = `url('${this.iconUrl}')`;
         }
     }
+    static makeItemUrl(id) {
+        if (USE_WOTLK_DB) {
+            return 'https://wotlkdb.com/?item=' + id;
+        }
+        else {
+            return 'https://wowhead.com/wotlk/item=' + id;
+        }
+    }
+    static makeSpellUrl(id) {
+        if (USE_WOTLK_DB) {
+            return 'https://wotlkdb.com/?spell=' + id;
+        }
+        else {
+            return 'https://wowhead.com/wotlk/spell=' + id;
+        }
+    }
     setWowheadHref(elem) {
         if (this.itemId) {
-            elem.href = 'https://wowhead.com/wotlk/item=' + this.itemId;
+            elem.href = ActionId.makeItemUrl(this.itemId);
         }
         else if (this.spellId) {
-            elem.href = 'https://wowhead.com/wotlk/spell=' + this.spellId;
+            elem.href = ActionId.makeSpellUrl(this.spellId);
         }
     }
     setBackgroundAndHref(elem) {
@@ -234,10 +252,10 @@ export class ActionId {
         }
         const idString = this.toProtoString();
         const iconOverrideId = idOverrides[idString] || null;
-        let iconUrl = "https://wow.zamimg.com/images/wow/icons/large/" + tooltipData['icon'] + ".jpg";
+        let iconUrl = ActionId.makeIconUrl(tooltipData['icon']);
         if (iconOverrideId) {
             const overrideTooltipData = await ActionId.getTooltipData(iconOverrideId);
-            iconUrl = "https://wow.zamimg.com/images/wow/icons/large/" + overrideTooltipData['icon'] + ".jpg";
+            iconUrl = ActionId.makeIconUrl(overrideTooltipData['icon']);
         }
         return new ActionId(this.itemId, this.spellId, this.otherId, this.tag, baseName, name, iconUrl);
     }
@@ -332,7 +350,15 @@ export class ActionId {
             return ActionId.fromEmpty();
         }
     }
-    static async getTooltipDataHelper(id, tooltipPostfix, cache) {
+    static makeIconUrl(iconLabel) {
+        if (USE_WOTLK_DB) {
+            return `https://wotlkdb.com/static/images/wow/icons/large/${iconLabel}.jpg`;
+        }
+        else {
+            return `https://wow.zamimg.com/images/wow/icons/large/${iconLabel}.jpg`;
+        }
+    }
+    static async getWowheadTooltipDataHelper(id, tooltipPostfix, cache) {
         if (!cache.has(id)) {
             const url = `https://wowhead.com/wotlk/tooltip/${tooltipPostfix}/${id}`;
             try {
@@ -343,6 +369,33 @@ export class ActionId {
                 console.error('Error while fetching url: ' + url + '\n\n' + e);
                 cache.set(id, Promise.resolve({
                     name: '',
+                    icon: '',
+                    tooltip: '',
+                }));
+            }
+        }
+        return cache.get(id);
+    }
+    static async getWotlkdbTooltipDataHelper(id, tooltipPostfix, cache) {
+        if (!cache.has(id)) {
+            const url = `https://wotlkdb.com/?${tooltipPostfix}=${id}&power`;
+            try {
+                const response = await fetch(url);
+                const data = await response.text();
+                const nameMatch = data.match(/name_enus: '(.*?)'/g);
+                const iconMatch = data.match(/icon: '(.*?)'/g);
+                const tooltipMatch = data.match(/tooltip_enus: '(.*?)'/g);
+                cache.set(id, Promise.resolve({
+                    name: nameMatch ? nameMatch[1] : '',
+                    icon: iconMatch ? iconMatch[1] : '',
+                    tooltip: tooltipMatch ? tooltipMatch[1] : '',
+                }));
+            }
+            catch (e) {
+                console.error('Error while fetching url: ' + url + '\n\n' + e);
+                cache.set(id, Promise.resolve({
+                    name: '',
+                    icon: '',
                     tooltip: '',
                 }));
             }
@@ -350,10 +403,20 @@ export class ActionId {
         return cache.get(id);
     }
     static async getItemTooltipData(id) {
-        return await ActionId.getTooltipDataHelper(id, 'item', itemToTooltipDataCache);
+        if (USE_WOTLK_DB) {
+            return await ActionId.getWotlkdbTooltipDataHelper(id, 'item', itemToTooltipDataCache);
+        }
+        else {
+            return await ActionId.getWowheadTooltipDataHelper(id, 'item', itemToTooltipDataCache);
+        }
     }
     static async getSpellTooltipData(id) {
-        return await ActionId.getTooltipDataHelper(id, 'spell', spellToTooltipDataCache);
+        if (USE_WOTLK_DB) {
+            return await ActionId.getWotlkdbTooltipDataHelper(id, 'spell', spellToTooltipDataCache);
+        }
+        else {
+            return await ActionId.getWowheadTooltipDataHelper(id, 'spell', spellToTooltipDataCache);
+        }
     }
     static async getTooltipData(actionId) {
         if (actionId.itemId) {
