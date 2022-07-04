@@ -1049,33 +1049,57 @@ export var Flask;
      */
     Flask[Flask["FlaskUnknown"] = 0] = "FlaskUnknown";
     /**
-     * @generated from protobuf enum value: FlaskOfBlindingLight = 1;
+     * @generated from protobuf enum value: FlaskOfTheFrostWyrm = 1;
      */
-    Flask[Flask["FlaskOfBlindingLight"] = 1] = "FlaskOfBlindingLight";
+    Flask[Flask["FlaskOfTheFrostWyrm"] = 1] = "FlaskOfTheFrostWyrm";
     /**
-     * @generated from protobuf enum value: FlaskOfMightyRestoration = 2;
+     * @generated from protobuf enum value: FlaskOfEndlessRage = 2;
      */
-    Flask[Flask["FlaskOfMightyRestoration"] = 2] = "FlaskOfMightyRestoration";
+    Flask[Flask["FlaskOfEndlessRage"] = 2] = "FlaskOfEndlessRage";
     /**
-     * @generated from protobuf enum value: FlaskOfPureDeath = 3;
+     * @generated from protobuf enum value: FlaskOfPureMojo = 3;
      */
-    Flask[Flask["FlaskOfPureDeath"] = 3] = "FlaskOfPureDeath";
+    Flask[Flask["FlaskOfPureMojo"] = 3] = "FlaskOfPureMojo";
     /**
-     * @generated from protobuf enum value: FlaskOfRelentlessAssault = 4;
+     * @generated from protobuf enum value: FlaskOfStoneblood = 4;
      */
-    Flask[Flask["FlaskOfRelentlessAssault"] = 4] = "FlaskOfRelentlessAssault";
+    Flask[Flask["FlaskOfStoneblood"] = 4] = "FlaskOfStoneblood";
     /**
-     * @generated from protobuf enum value: FlaskOfSupremePower = 5;
+     * @generated from protobuf enum value: LesserFlaskOfToughness = 5;
      */
-    Flask[Flask["FlaskOfSupremePower"] = 5] = "FlaskOfSupremePower";
+    Flask[Flask["LesserFlaskOfToughness"] = 5] = "LesserFlaskOfToughness";
     /**
-     * @generated from protobuf enum value: FlaskOfFortification = 6;
+     * @generated from protobuf enum value: LesserFlaskOfResistance = 6;
      */
-    Flask[Flask["FlaskOfFortification"] = 6] = "FlaskOfFortification";
+    Flask[Flask["LesserFlaskOfResistance"] = 6] = "LesserFlaskOfResistance";
     /**
-     * @generated from protobuf enum value: FlaskOfChromaticWonder = 7;
+     * @generated from protobuf enum value: FlaskOfBlindingLight = 7;
      */
-    Flask[Flask["FlaskOfChromaticWonder"] = 7] = "FlaskOfChromaticWonder";
+    Flask[Flask["FlaskOfBlindingLight"] = 7] = "FlaskOfBlindingLight";
+    /**
+     * @generated from protobuf enum value: FlaskOfMightyRestoration = 8;
+     */
+    Flask[Flask["FlaskOfMightyRestoration"] = 8] = "FlaskOfMightyRestoration";
+    /**
+     * @generated from protobuf enum value: FlaskOfPureDeath = 9;
+     */
+    Flask[Flask["FlaskOfPureDeath"] = 9] = "FlaskOfPureDeath";
+    /**
+     * @generated from protobuf enum value: FlaskOfRelentlessAssault = 10;
+     */
+    Flask[Flask["FlaskOfRelentlessAssault"] = 10] = "FlaskOfRelentlessAssault";
+    /**
+     * @generated from protobuf enum value: FlaskOfSupremePower = 11;
+     */
+    Flask[Flask["FlaskOfSupremePower"] = 11] = "FlaskOfSupremePower";
+    /**
+     * @generated from protobuf enum value: FlaskOfFortification = 12;
+     */
+    Flask[Flask["FlaskOfFortification"] = 12] = "FlaskOfFortification";
+    /**
+     * @generated from protobuf enum value: FlaskOfChromaticWonder = 13;
+     */
+    Flask[Flask["FlaskOfChromaticWonder"] = 13] = "FlaskOfChromaticWonder";
 })(Flask || (Flask = {}));
 /**
  * @generated from protobuf enum proto.BattleElixir

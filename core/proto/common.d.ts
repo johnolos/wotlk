@@ -1903,33 +1903,57 @@ export declare enum Flask {
      */
     FlaskUnknown = 0,
     /**
-     * @generated from protobuf enum value: FlaskOfBlindingLight = 1;
+     * @generated from protobuf enum value: FlaskOfTheFrostWyrm = 1;
      */
-    FlaskOfBlindingLight = 1,
+    FlaskOfTheFrostWyrm = 1,
     /**
-     * @generated from protobuf enum value: FlaskOfMightyRestoration = 2;
+     * @generated from protobuf enum value: FlaskOfEndlessRage = 2;
      */
-    FlaskOfMightyRestoration = 2,
+    FlaskOfEndlessRage = 2,
     /**
-     * @generated from protobuf enum value: FlaskOfPureDeath = 3;
+     * @generated from protobuf enum value: FlaskOfPureMojo = 3;
      */
-    FlaskOfPureDeath = 3,
+    FlaskOfPureMojo = 3,
     /**
-     * @generated from protobuf enum value: FlaskOfRelentlessAssault = 4;
+     * @generated from protobuf enum value: FlaskOfStoneblood = 4;
      */
-    FlaskOfRelentlessAssault = 4,
+    FlaskOfStoneblood = 4,
     /**
-     * @generated from protobuf enum value: FlaskOfSupremePower = 5;
+     * @generated from protobuf enum value: LesserFlaskOfToughness = 5;
      */
-    FlaskOfSupremePower = 5,
+    LesserFlaskOfToughness = 5,
     /**
-     * @generated from protobuf enum value: FlaskOfFortification = 6;
+     * @generated from protobuf enum value: LesserFlaskOfResistance = 6;
      */
-    FlaskOfFortification = 6,
+    LesserFlaskOfResistance = 6,
     /**
-     * @generated from protobuf enum value: FlaskOfChromaticWonder = 7;
+     * @generated from protobuf enum value: FlaskOfBlindingLight = 7;
      */
-    FlaskOfChromaticWonder = 7
+    FlaskOfBlindingLight = 7,
+    /**
+     * @generated from protobuf enum value: FlaskOfMightyRestoration = 8;
+     */
+    FlaskOfMightyRestoration = 8,
+    /**
+     * @generated from protobuf enum value: FlaskOfPureDeath = 9;
+     */
+    FlaskOfPureDeath = 9,
+    /**
+     * @generated from protobuf enum value: FlaskOfRelentlessAssault = 10;
+     */
+    FlaskOfRelentlessAssault = 10,
+    /**
+     * @generated from protobuf enum value: FlaskOfSupremePower = 11;
+     */
+    FlaskOfSupremePower = 11,
+    /**
+     * @generated from protobuf enum value: FlaskOfFortification = 12;
+     */
+    FlaskOfFortification = 12,
+    /**
+     * @generated from protobuf enum value: FlaskOfChromaticWonder = 13;
+     */
+    FlaskOfChromaticWonder = 13
 }
 /**
  * @generated from protobuf enum proto.BattleElixir
