@@ -1155,33 +1155,87 @@ export var Food;
      */
     Food[Food["FoodUnknown"] = 0] = "FoodUnknown";
     /**
-     * @generated from protobuf enum value: FoodBlackenedBasilisk = 1;
+     * @generated from protobuf enum value: FoodFishFeast = 1;
      */
-    Food[Food["FoodBlackenedBasilisk"] = 1] = "FoodBlackenedBasilisk";
+    Food[Food["FoodFishFeast"] = 1] = "FoodFishFeast";
     /**
-     * @generated from protobuf enum value: FoodGrilledMudfish = 2;
+     * @generated from protobuf enum value: FoodGreatFeast = 2;
      */
-    Food[Food["FoodGrilledMudfish"] = 2] = "FoodGrilledMudfish";
+    Food[Food["FoodGreatFeast"] = 2] = "FoodGreatFeast";
     /**
-     * @generated from protobuf enum value: FoodRavagerDog = 3;
+     * @generated from protobuf enum value: FoodBlackenedDragonfin = 3;
      */
-    Food[Food["FoodRavagerDog"] = 3] = "FoodRavagerDog";
+    Food[Food["FoodBlackenedDragonfin"] = 3] = "FoodBlackenedDragonfin";
     /**
-     * @generated from protobuf enum value: FoodRoastedClefthoof = 4;
+     * @generated from protobuf enum value: FoodHeartyRhino = 4;
      */
-    Food[Food["FoodRoastedClefthoof"] = 4] = "FoodRoastedClefthoof";
+    Food[Food["FoodHeartyRhino"] = 4] = "FoodHeartyRhino";
     /**
-     * @generated from protobuf enum value: FoodSkullfishSoup = 5;
+     * @generated from protobuf enum value: FoodMegaMammothMeal = 5;
      */
-    Food[Food["FoodSkullfishSoup"] = 5] = "FoodSkullfishSoup";
+    Food[Food["FoodMegaMammothMeal"] = 5] = "FoodMegaMammothMeal";
     /**
-     * @generated from protobuf enum value: FoodSpicyHotTalbuk = 6;
+     * @generated from protobuf enum value: FoodSpicedWormBurger = 6;
      */
-    Food[Food["FoodSpicyHotTalbuk"] = 6] = "FoodSpicyHotTalbuk";
+    Food[Food["FoodSpicedWormBurger"] = 6] = "FoodSpicedWormBurger";
     /**
-     * @generated from protobuf enum value: FoodFishermansFeast = 7;
+     * @generated from protobuf enum value: FoodRhinoliciousWormsteak = 7;
      */
-    Food[Food["FoodFishermansFeast"] = 7] = "FoodFishermansFeast";
+    Food[Food["FoodRhinoliciousWormsteak"] = 7] = "FoodRhinoliciousWormsteak";
+    /**
+     * @generated from protobuf enum value: FoodImperialMantaSteak = 8;
+     */
+    Food[Food["FoodImperialMantaSteak"] = 8] = "FoodImperialMantaSteak";
+    /**
+     * @generated from protobuf enum value: FoodSnapperExtreme = 9;
+     */
+    Food[Food["FoodSnapperExtreme"] = 9] = "FoodSnapperExtreme";
+    /**
+     * @generated from protobuf enum value: FoodMightyRhinoDogs = 10;
+     */
+    Food[Food["FoodMightyRhinoDogs"] = 10] = "FoodMightyRhinoDogs";
+    /**
+     * @generated from protobuf enum value: FoodFirecrackerSalmon = 11;
+     */
+    Food[Food["FoodFirecrackerSalmon"] = 11] = "FoodFirecrackerSalmon";
+    /**
+     * @generated from protobuf enum value: FoodCuttlesteak = 12;
+     */
+    Food[Food["FoodCuttlesteak"] = 12] = "FoodCuttlesteak";
+    /**
+     * @generated from protobuf enum value: FoodDragonfinFilet = 13;
+     */
+    Food[Food["FoodDragonfinFilet"] = 13] = "FoodDragonfinFilet";
+    /**
+     * TBC Foods
+     *
+     * @generated from protobuf enum value: FoodBlackenedBasilisk = 14;
+     */
+    Food[Food["FoodBlackenedBasilisk"] = 14] = "FoodBlackenedBasilisk";
+    /**
+     * @generated from protobuf enum value: FoodGrilledMudfish = 15;
+     */
+    Food[Food["FoodGrilledMudfish"] = 15] = "FoodGrilledMudfish";
+    /**
+     * @generated from protobuf enum value: FoodRavagerDog = 16;
+     */
+    Food[Food["FoodRavagerDog"] = 16] = "FoodRavagerDog";
+    /**
+     * @generated from protobuf enum value: FoodRoastedClefthoof = 17;
+     */
+    Food[Food["FoodRoastedClefthoof"] = 17] = "FoodRoastedClefthoof";
+    /**
+     * @generated from protobuf enum value: FoodSkullfishSoup = 18;
+     */
+    Food[Food["FoodSkullfishSoup"] = 18] = "FoodSkullfishSoup";
+    /**
+     * @generated from protobuf enum value: FoodSpicyHotTalbuk = 19;
+     */
+    Food[Food["FoodSpicyHotTalbuk"] = 19] = "FoodSpicyHotTalbuk";
+    /**
+     * @generated from protobuf enum value: FoodFishermansFeast = 20;
+     */
+    Food[Food["FoodFishermansFeast"] = 20] = "FoodFishermansFeast";
 })(Food || (Food = {}));
 /**
  * @generated from protobuf enum proto.PetFood

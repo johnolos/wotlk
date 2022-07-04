@@ -2010,33 +2010,87 @@ export declare enum Food {
      */
     FoodUnknown = 0,
     /**
-     * @generated from protobuf enum value: FoodBlackenedBasilisk = 1;
+     * @generated from protobuf enum value: FoodFishFeast = 1;
      */
-    FoodBlackenedBasilisk = 1,
+    FoodFishFeast = 1,
     /**
-     * @generated from protobuf enum value: FoodGrilledMudfish = 2;
+     * @generated from protobuf enum value: FoodGreatFeast = 2;
      */
-    FoodGrilledMudfish = 2,
+    FoodGreatFeast = 2,
     /**
-     * @generated from protobuf enum value: FoodRavagerDog = 3;
+     * @generated from protobuf enum value: FoodBlackenedDragonfin = 3;
      */
-    FoodRavagerDog = 3,
+    FoodBlackenedDragonfin = 3,
     /**
-     * @generated from protobuf enum value: FoodRoastedClefthoof = 4;
+     * @generated from protobuf enum value: FoodHeartyRhino = 4;
      */
-    FoodRoastedClefthoof = 4,
+    FoodHeartyRhino = 4,
     /**
-     * @generated from protobuf enum value: FoodSkullfishSoup = 5;
+     * @generated from protobuf enum value: FoodMegaMammothMeal = 5;
      */
-    FoodSkullfishSoup = 5,
+    FoodMegaMammothMeal = 5,
     /**
-     * @generated from protobuf enum value: FoodSpicyHotTalbuk = 6;
+     * @generated from protobuf enum value: FoodSpicedWormBurger = 6;
      */
-    FoodSpicyHotTalbuk = 6,
+    FoodSpicedWormBurger = 6,
     /**
-     * @generated from protobuf enum value: FoodFishermansFeast = 7;
+     * @generated from protobuf enum value: FoodRhinoliciousWormsteak = 7;
      */
-    FoodFishermansFeast = 7
+    FoodRhinoliciousWormsteak = 7,
+    /**
+     * @generated from protobuf enum value: FoodImperialMantaSteak = 8;
+     */
+    FoodImperialMantaSteak = 8,
+    /**
+     * @generated from protobuf enum value: FoodSnapperExtreme = 9;
+     */
+    FoodSnapperExtreme = 9,
+    /**
+     * @generated from protobuf enum value: FoodMightyRhinoDogs = 10;
+     */
+    FoodMightyRhinoDogs = 10,
+    /**
+     * @generated from protobuf enum value: FoodFirecrackerSalmon = 11;
+     */
+    FoodFirecrackerSalmon = 11,
+    /**
+     * @generated from protobuf enum value: FoodCuttlesteak = 12;
+     */
+    FoodCuttlesteak = 12,
+    /**
+     * @generated from protobuf enum value: FoodDragonfinFilet = 13;
+     */
+    FoodDragonfinFilet = 13,
+    /**
+     * TBC Foods
+     *
+     * @generated from protobuf enum value: FoodBlackenedBasilisk = 14;
+     */
+    FoodBlackenedBasilisk = 14,
+    /**
+     * @generated from protobuf enum value: FoodGrilledMudfish = 15;
+     */
+    FoodGrilledMudfish = 15,
+    /**
+     * @generated from protobuf enum value: FoodRavagerDog = 16;
+     */
+    FoodRavagerDog = 16,
+    /**
+     * @generated from protobuf enum value: FoodRoastedClefthoof = 17;
+     */
+    FoodRoastedClefthoof = 17,
+    /**
+     * @generated from protobuf enum value: FoodSkullfishSoup = 18;
+     */
+    FoodSkullfishSoup = 18,
+    /**
+     * @generated from protobuf enum value: FoodSpicyHotTalbuk = 19;
+     */
+    FoodSpicyHotTalbuk = 19,
+    /**
+     * @generated from protobuf enum value: FoodFishermansFeast = 20;
+     */
+    FoodFishermansFeast = 20
 }
 /**
  * @generated from protobuf enum proto.PetFood
