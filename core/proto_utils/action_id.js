@@ -358,6 +358,30 @@ export class ActionId {
             return `https://wow.zamimg.com/images/wow/icons/large/${iconLabel}.jpg`;
         }
     }
+    static async getDb(url) {
+        if (!ActionId.dbCache.has(url)) {
+            ActionId.dbCache.set(url, fetch(url)
+                .then(response => response.json())
+                .then(responseJson => {
+                const db = {};
+                responseJson.forEach(item => {
+                    db[item.ID] = item;
+                });
+                return db;
+            }));
+        }
+        return ActionId.dbCache.get(url);
+    }
+    static async getDbTooltipDataHelper(id, dbUrl) {
+        const db = await ActionId.getDb(dbUrl);
+        return db[id] ? {
+            name: db[id].Name,
+            icon: db[id].Icon,
+        } : {
+            name: '',
+            icon: '',
+        };
+    }
     static async getWowheadTooltipDataHelper(id, tooltipPostfix, cache) {
         if (!cache.has(id)) {
             const url = `https://wowhead.com/wotlk/tooltip/${tooltipPostfix}/${id}`;
@@ -403,12 +427,12 @@ export class ActionId {
         return cache.get(id);
     }
     static async getItemTooltipData(id) {
-        if (USE_WOTLK_DB) {
-            return await ActionId.getWotlkdbTooltipDataHelper(id, 'item', itemToTooltipDataCache);
-        }
-        else {
-            return await ActionId.getWowheadTooltipDataHelper(id, 'item', itemToTooltipDataCache);
-        }
+        return await ActionId.getDbTooltipDataHelper(id, '/wotlk/assets/item_data/all_items_db.json');
+        //if (USE_WOTLK_DB) {
+        //	return await ActionId.getWotlkdbTooltipDataHelper(id, 'item', itemToTooltipDataCache);
+        //} else {
+        //	return await ActionId.getWowheadTooltipDataHelper(id, 'item', itemToTooltipDataCache);
+        //}
     }
     static async getSpellTooltipData(id) {
         if (USE_WOTLK_DB) {
@@ -427,6 +451,7 @@ export class ActionId {
         }
     }
 }
+ActionId.dbCache = new Map();
 const itemToTooltipDataCache = new Map();
 const spellToTooltipDataCache = new Map();
 // Some items/spells have weird icons, so use this to show a different icon instead.

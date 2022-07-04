@@ -36,6 +36,9 @@ export declare class ActionId {
     static fromProto(protoId: ActionIdProto): ActionId;
     static fromLogString(str: string): ActionId;
     private static makeIconUrl;
+    private static dbCache;
+    private static getDb;
+    private static getDbTooltipDataHelper;
     private static getWowheadTooltipDataHelper;
     private static getWotlkdbTooltipDataHelper;
     static getItemTooltipData(id: number): Promise<any>;
