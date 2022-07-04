@@ -30,20 +30,21 @@ export const DemonArmor = {
         player.setSpecOptions(eventID, newOptions);
     },
 };
-export const Sacrifice = {
+/*export const Sacrifice = {
     id: ActionId.fromSpellId(18788),
     states: 2,
     extraCssClasses: [
         'sac-picker',
     ],
-    changedEvent: (player) => player.changeEmitter,
-    getValue: (player) => player.getSpecOptions().sacrificeSummon && player.getTalents().demonicSacrifice && player.getSpecOptions().summon != Summon.NoSummon,
-    setValue: (eventID, player, newValue) => {
+    changedEvent: (player: Player<Spec.SpecWarlock>) => player.changeEmitter,
+    getValue: (player: Player<Spec.SpecWarlock>) => player.getSpecOptions().sacrificeSummon && player.getTalents().demonicSacrifice && player.getSpecOptions().summon != Summon.NoSummon,
+    setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => {
         const newOptions = player.getSpecOptions();
         newOptions.sacrificeSummon = newValue;
         player.setSpecOptions(eventID, newOptions);
     },
 };
+*/
 export const DemonSummon = {
     extraCssClasses: [
         'warlock-summon-picker',

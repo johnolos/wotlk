@@ -73,11 +73,10 @@ export class WarlockSimUI extends IndividualSimUI {
                 // Default rotation settings.
                 rotation: Presets.DefaultRotation,
                 // Default talents.
-                talents: Presets.DestructionTalents.data,
+                talents: Presets.AfflictionTalents.data,
                 // Default spec-specific settings.
                 specOptions: WarlockOptions.create({
                     armor: Warlock_Options_Armor.FelArmor,
-                    sacrificeSummon: true,
                     summon: Warlock_Options_Summon.Succubus,
                 }),
                 // Default raid/party buffs settings.
@@ -112,7 +111,6 @@ export class WarlockSimUI extends IndividualSimUI {
                 WarlockInputs.FelArmor,
                 WarlockInputs.DemonArmor,
                 WarlockInputs.DemonSummon,
-                WarlockInputs.Sacrifice,
             ],
             // IconInputs to include in the 'Other Buffs' section on the settings tab.
             raidBuffInputs: [
@@ -224,10 +222,11 @@ export class WarlockSimUI extends IndividualSimUI {
             presets: {
                 // Preset talents that the user can quickly select.
                 talents: [
-                    Presets.AfflicationTalents,
-                    Presets.DemonologistTalents,
-                    Presets.DestructionTalents,
-                    Presets.T6DestroTalents,
+                    Presets.AfflictionTalents,
+                    /*					Presets.DemonologistTalents,
+                                        Presets.DestructionTalents,
+                                        Presets.T6DestroTalents,
+                    */ 
                 ],
                 // Preset gear configurations that the user can quickly select.
                 gear: [

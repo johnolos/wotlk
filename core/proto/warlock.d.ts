@@ -5,215 +5,341 @@ import type { IBinaryReader } from "@protobuf-ts/runtime";
 import type { PartialMessage } from "@protobuf-ts/runtime";
 import { MessageType } from "@protobuf-ts/runtime";
 /**
+ * WotLK talents
+ *
  * @generated from protobuf message proto.WarlockTalents
  */
 export interface WarlockTalents {
     /**
      * Affliction
      *
-     * @generated from protobuf field: int32 suppression = 1;
-     */
-    suppression: number;
-    /**
-     * @generated from protobuf field: int32 improved_corruption = 2;
-     */
-    improvedCorruption: number;
-    /**
-     * @generated from protobuf field: int32 improved_drain_soul = 49;
-     */
-    improvedDrainSoul: number;
-    /**
-     * @generated from protobuf field: int32 improved_life_tap = 3;
-     */
-    improvedLifeTap: number;
-    /**
-     * @generated from protobuf field: int32 soul_siphon = 4;
-     */
-    soulSiphon: number;
-    /**
-     * @generated from protobuf field: int32 improved_curse_of_agony = 5;
+     * @generated from protobuf field: int32 improved_curse_of_agony = 1;
      */
     improvedCurseOfAgony: number;
     /**
-     * @generated from protobuf field: bool amplify_curse = 6;
+     * @generated from protobuf field: int32 suppression = 2;
+     */
+    suppression: number;
+    /**
+     * @generated from protobuf field: int32 improved_corruption = 3;
+     */
+    improvedCorruption: number;
+    /**
+     * @generated from protobuf field: int32 improved_curse_of_weakness = 4;
+     */
+    improvedCurseOfWeakness: number;
+    /**
+     * @generated from protobuf field: int32 improved_drain_soul = 5;
+     */
+    improvedDrainSoul: number;
+    /**
+     * @generated from protobuf field: int32 improved_life_tap = 6;
+     */
+    improvedLifeTap: number;
+    /**
+     * @generated from protobuf field: int32 soul_siphon = 7;
+     */
+    soulSiphon: number;
+    /**
+     * @generated from protobuf field: int32 improved_fear = 8;
+     */
+    improvedFear: number;
+    /**
+     * @generated from protobuf field: int32 fel_concentration = 9;
+     */
+    felConcentration: number;
+    /**
+     * @generated from protobuf field: bool amplify_curse = 10;
      */
     amplifyCurse: boolean;
     /**
-     * @generated from protobuf field: int32 nightfall = 7;
+     * @generated from protobuf field: int32 grim_reach = 11;
+     */
+    grimReach: number;
+    /**
+     * @generated from protobuf field: int32 nightfall = 12;
      */
     nightfall: number;
     /**
-     * @generated from protobuf field: int32 empowered_corruption = 8;
+     * @generated from protobuf field: int32 empowered_corruption = 13;
      */
     empoweredCorruption: number;
     /**
-     * @generated from protobuf field: int32 shadow_embrace = 50;
+     * @generated from protobuf field: int32 shadow_embrace = 14;
      */
     shadowEmbrace: number;
     /**
-     * @generated from protobuf field: bool siphon_life = 9;
+     * @generated from protobuf field: bool siphon_life = 15;
      */
     siphonLife: boolean;
     /**
-     * @generated from protobuf field: int32 shadow_mastery = 10;
+     * @generated from protobuf field: bool curse_of_exhaustion = 16;
+     */
+    curseOfExhaustion: boolean;
+    /**
+     * @generated from protobuf field: int32 improved_felhunter = 17;
+     */
+    improvedFelhunter: number;
+    /**
+     * @generated from protobuf field: int32 shadow_mastery = 18;
      */
     shadowMastery: number;
     /**
-     * @generated from protobuf field: int32 contagion = 11;
+     * @generated from protobuf field: int32 eradication = 19;
+     */
+    eradication: number;
+    /**
+     * @generated from protobuf field: int32 contagion = 20;
      */
     contagion: number;
     /**
-     * @generated from protobuf field: bool dark_pact = 12;
+     * @generated from protobuf field: bool dark_pact = 21;
      */
     darkPact: boolean;
     /**
-     * @generated from protobuf field: int32 malediction = 13;
+     * @generated from protobuf field: int32 improved_howl_of_terror = 22;
+     */
+    improvedHowlOfTerror: number;
+    /**
+     * @generated from protobuf field: int32 malediction = 23;
      */
     malediction: number;
     /**
-     * @generated from protobuf field: bool unstable_affliction = 14;
+     * @generated from protobuf field: int32 deaths_embrace = 24;
+     */
+    deathsEmbrace: number;
+    /**
+     * @generated from protobuf field: bool unstable_affliction = 25;
      */
     unstableAffliction: boolean;
     /**
+     * @generated from protobuf field: bool pandemic = 26;
+     */
+    pandemic: boolean;
+    /**
+     * @generated from protobuf field: int32 everlasting_affliction = 27;
+     */
+    everlastingAffliction: number;
+    /**
+     * @generated from protobuf field: bool haunt = 28;
+     */
+    haunt: boolean;
+    /**
      * Demonology
      *
-     * @generated from protobuf field: int32 improved_imp = 15;
+     * @generated from protobuf field: int32 improved_healthstone = 29;
+     */
+    improvedHealthstone: number;
+    /**
+     * @generated from protobuf field: int32 improved_imp = 30;
      */
     improvedImp: number;
     /**
-     * @generated from protobuf field: int32 demonic_embrace = 16;
+     * @generated from protobuf field: int32 demonic_embrace = 31;
      */
     demonicEmbrace: number;
     /**
-     * @generated from protobuf field: int32 improved_voidwalker = 17;
+     * @generated from protobuf field: int32 fel_synergy = 32;
      */
-    improvedVoidwalker: number;
+    felSynergy: number;
     /**
-     * @generated from protobuf field: int32 fel_intellect = 18;
+     * @generated from protobuf field: int32 improved_health_funnel = 33;
      */
-    felIntellect: number;
+    improvedHealthFunnel: number;
     /**
-     * @generated from protobuf field: int32 improved_sayaad = 19;
+     * @generated from protobuf field: int32 demonic_brutality = 34;
+     */
+    demonicBrutality: number;
+    /**
+     * @generated from protobuf field: int32 fel_vitality = 35;
+     */
+    felVitality: number;
+    /**
+     * @generated from protobuf field: int32 improved_sayaad = 36;
      */
     improvedSayaad: number;
     /**
-     * @generated from protobuf field: int32 fel_stamina = 20;
-     */
-    felStamina: number;
-    /**
-     * @generated from protobuf field: int32 demonic_aegis = 21;
-     */
-    demonicAegis: number;
-    /**
-     * @generated from protobuf field: int32 unholy_power = 22;
-     */
-    unholyPower: number;
-    /**
-     * @generated from protobuf field: int32 improved_enslave_demon = 23;
-     */
-    improvedEnslaveDemon: number;
-    /**
-     * @generated from protobuf field: bool demonic_sacrifice = 24;
-     */
-    demonicSacrifice: boolean;
-    /**
-     * @generated from protobuf field: int32 master_conjuror = 25;
-     */
-    masterConjuror: number;
-    /**
-     * @generated from protobuf field: int32 mana_feed = 26;
-     */
-    manaFeed: number;
-    /**
-     * @generated from protobuf field: int32 master_demonologist = 27;
-     */
-    masterDemonologist: number;
-    /**
-     * @generated from protobuf field: bool soul_link = 28;
+     * @generated from protobuf field: bool soul_link = 37;
      */
     soulLink: boolean;
     /**
-     * @generated from protobuf field: int32 demonic_knowledge = 29;
+     * @generated from protobuf field: bool fel_domination = 38;
+     */
+    felDomination: boolean;
+    /**
+     * @generated from protobuf field: int32 demonic_aegis = 39;
+     */
+    demonicAegis: number;
+    /**
+     * @generated from protobuf field: int32 unholy_power = 40;
+     */
+    unholyPower: number;
+    /**
+     * @generated from protobuf field: int32 master_summoner = 41;
+     */
+    masterSummoner: number;
+    /**
+     * @generated from protobuf field: bool mana_feed = 42;
+     */
+    manaFeed: boolean;
+    /**
+     * @generated from protobuf field: int32 master_conjuror = 43;
+     */
+    masterConjuror: number;
+    /**
+     * @generated from protobuf field: int32 master_demonologist = 44;
+     */
+    masterDemonologist: number;
+    /**
+     * @generated from protobuf field: int32 molten_core = 45;
+     */
+    moltenCore: number;
+    /**
+     * @generated from protobuf field: int32 demonic_resilience = 46;
+     */
+    demonicResilience: number;
+    /**
+     * @generated from protobuf field: bool demonic_empowerment = 47;
+     */
+    demonicEmpowerment: boolean;
+    /**
+     * @generated from protobuf field: int32 demonic_knowledge = 48;
      */
     demonicKnowledge: number;
     /**
-     * @generated from protobuf field: int32 demonic_tactics = 30;
+     * @generated from protobuf field: int32 demonic_tactics = 49;
      */
     demonicTactics: number;
     /**
-     * @generated from protobuf field: bool summon_felguard = 31;
+     * @generated from protobuf field: int32 decimation = 50;
+     */
+    decimation: number;
+    /**
+     * @generated from protobuf field: int32 improved_demonic_tactics = 51;
+     */
+    improvedDemonicTactics: number;
+    /**
+     * @generated from protobuf field: bool summon_felguard = 52;
      */
     summonFelguard: boolean;
     /**
+     * @generated from protobuf field: int32 nemesis = 53;
+     */
+    nemesis: number;
+    /**
+     * @generated from protobuf field: int32 demonic_pact = 54;
+     */
+    demonicPact: number;
+    /**
+     * @generated from protobuf field: bool metamorphosis = 55;
+     */
+    metamorphosis: boolean;
+    /**
      * Destruction
      *
-     * @generated from protobuf field: int32 improved_shadow_bolt = 32;
+     * @generated from protobuf field: int32 improved_shadow_bolt = 56;
      */
     improvedShadowBolt: number;
     /**
-     * @generated from protobuf field: int32 cataclysm = 33;
-     */
-    cataclysm: number;
-    /**
-     * @generated from protobuf field: int32 bane = 34;
+     * @generated from protobuf field: int32 bane = 57;
      */
     bane: number;
     /**
-     * @generated from protobuf field: int32 improved_firebolt = 35;
+     * @generated from protobuf field: int32 aftermath = 58;
      */
-    improvedFirebolt: number;
+    aftermath: number;
     /**
-     * @generated from protobuf field: int32 improved_lash_of_pain = 36;
+     * @generated from protobuf field: int32 molten_skin = 59;
      */
-    improvedLashOfPain: number;
+    moltenSkin: number;
     /**
-     * @generated from protobuf field: int32 destructive_reach = 48;
+     * @generated from protobuf field: int32 cataclysm = 60;
      */
-    destructiveReach: number;
+    cataclysm: number;
     /**
-     * @generated from protobuf field: int32 devastation = 37;
+     * @generated from protobuf field: int32 demonic_power = 61;
      */
-    devastation: number;
+    demonicPower: number;
     /**
-     * @generated from protobuf field: bool shadowburn = 38;
+     * @generated from protobuf field: bool shadowburn = 62;
      */
     shadowburn: boolean;
     /**
-     * @generated from protobuf field: int32 improved_searing_pain = 39;
+     * @generated from protobuf field: int32 ruin = 63;
+     */
+    ruin: number;
+    /**
+     * @generated from protobuf field: int32 intensity = 64;
+     */
+    intensity: number;
+    /**
+     * @generated from protobuf field: int32 destructive_reach = 65;
+     */
+    destructiveReach: number;
+    /**
+     * @generated from protobuf field: int32 improved_searing_pain = 66;
      */
     improvedSearingPain: number;
     /**
-     * @generated from protobuf field: int32 improved_immolate = 40;
-     */
-    improvedImmolate: number;
-    /**
-     * @generated from protobuf field: bool ruin = 41;
-     */
-    ruin: boolean;
-    /**
-     * @generated from protobuf field: int32 emberstorm = 42;
-     */
-    emberstorm: number;
-    /**
-     * @generated from protobuf field: int32 backlash = 43;
+     * @generated from protobuf field: int32 backlash = 67;
      */
     backlash: number;
     /**
-     * @generated from protobuf field: bool conflagrate = 44;
+     * @generated from protobuf field: int32 improved_immolate = 68;
+     */
+    improvedImmolate: number;
+    /**
+     * @generated from protobuf field: bool devastation = 69;
+     */
+    devastation: boolean;
+    /**
+     * @generated from protobuf field: int32 nether_protection = 70;
+     */
+    netherProtection: number;
+    /**
+     * @generated from protobuf field: int32 emberstorm = 71;
+     */
+    emberstorm: number;
+    /**
+     * @generated from protobuf field: bool conflagrate = 72;
      */
     conflagrate: boolean;
     /**
-     * @generated from protobuf field: int32 soul_leech = 45;
+     * @generated from protobuf field: int32 soul_leech = 73;
      */
     soulLeech: number;
     /**
-     * @generated from protobuf field: int32 shadow_and_flame = 46;
+     * @generated from protobuf field: int32 pyroclasm = 74;
+     */
+    pyroclasm: number;
+    /**
+     * @generated from protobuf field: int32 shadow_and_flame = 75;
      */
     shadowAndFlame: number;
     /**
-     * @generated from protobuf field: bool shadowfury = 47;
+     * @generated from protobuf field: int32 improved_soul_leech = 76;
+     */
+    improvedSoulLeech: number;
+    /**
+     * @generated from protobuf field: int32 backdraft = 77;
+     */
+    backdraft: number;
+    /**
+     * @generated from protobuf field: bool shadowfury = 78;
      */
     shadowfury: boolean;
+    /**
+     * @generated from protobuf field: int32 empowered_imp = 79;
+     */
+    empoweredImp: number;
+    /**
+     * @generated from protobuf field: int32 fire_and_brimstone = 80;
+     */
+    fireAndBrimstone: number;
+    /**
+     * @generated from protobuf field: bool chaos_bolt = 81;
+     */
+    chaosBolt: boolean;
 }
 /**
  * @generated from protobuf message proto.Warlock
