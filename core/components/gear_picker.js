@@ -8,6 +8,8 @@ import { HandType } from '/wotlk/core/proto/common.js';
 import { WeaponType } from '/wotlk/core/proto/common.js';
 import { Item } from '/wotlk/core/proto/common.js';
 import { ItemSlot } from '/wotlk/core/proto/common.js';
+import { ItemType } from '/wotlk/core/proto/common.js';
+import { Profession } from '/wotlk/core/proto/common.js';
 import { enchantDescriptions } from '/wotlk/core/constants/enchants.js';
 import { ActionId } from '/wotlk/core/proto_utils/action_id.js';
 import { slotNames } from '/wotlk/core/proto_utils/names.js';
@@ -95,6 +97,11 @@ class ItemPicker extends Component {
         player.gearChangeEmitter.on(() => {
             this.item = player.getEquippedItem(slot);
         });
+        player.professionChangeEmitter.on(() => {
+            if (this._equippedItem != null) {
+                this.player.setWowheadData(this._equippedItem, this.iconElem);
+            }
+        });
     }
     set item(newItem) {
         // Clear everything first
@@ -113,7 +120,7 @@ class ItemPicker extends Component {
             if (newItem.enchant) {
                 this.enchantElem.textContent = enchantDescriptions.get(newItem.enchant.id) || newItem.enchant.name;
             }
-            newItem.item.gemSockets.forEach((socketColor, gemIdx) => {
+            newItem.allSocketColors().forEach((socketColor, gemIdx) => {
                 const gemIconElem = document.createElement('img');
                 gemIconElem.classList.add('item-picker-gem-icon');
                 setGemSocketCssClass(gemIconElem, socketColor);
@@ -126,6 +133,16 @@ class ItemPicker extends Component {
                     });
                 }
                 this.socketsContainerElem.appendChild(gemIconElem);
+                if (gemIdx == newItem.numPossibleSockets - 1 && [ItemType.ItemTypeWrist, ItemType.ItemTypeHands].includes(newItem.item.type)) {
+                    this.player.professionChangeEmitter.on(() => {
+                        if (this.player.hasProfession(Profession.Blacksmithing)) {
+                            gemIconElem.style.removeProperty('display');
+                        }
+                        else {
+                            gemIconElem.style.display = 'none';
+                        }
+                    });
+                }
             });
         }
         this._equippedItem = newItem;
@@ -200,8 +217,8 @@ class SelectorModal extends Popup {
         if (equippedItem == undefined) {
             return;
         }
-        const socketBonusEP = this.player.computeStatsEP(new Stats(equippedItem.item.socketBonus)) / equippedItem.item.gemSockets.length;
-        equippedItem.item.gemSockets.forEach((socketColor, socketIdx) => {
+        const socketBonusEP = this.player.computeStatsEP(new Stats(equippedItem.item.socketBonus)) / (equippedItem.item.gemSockets.length || 1);
+        equippedItem.curSocketColors(this.player.hasProfession(Profession.Blacksmithing)).forEach((socketColor, socketIdx) => {
             this.addTab('Gem ' + (socketIdx + 1), slot, equippedItem, this.player.getGems(socketColor).map((gem) => {
                 return {
                     item: gem,

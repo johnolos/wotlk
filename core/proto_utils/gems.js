@@ -4,6 +4,15 @@ socketToMatchingColors.set(GemColor.GemColorMeta, [GemColor.GemColorMeta]);
 socketToMatchingColors.set(GemColor.GemColorBlue, [GemColor.GemColorBlue, GemColor.GemColorPurple, GemColor.GemColorGreen, GemColor.GemColorPrismatic]);
 socketToMatchingColors.set(GemColor.GemColorRed, [GemColor.GemColorRed, GemColor.GemColorPurple, GemColor.GemColorOrange, GemColor.GemColorPrismatic]);
 socketToMatchingColors.set(GemColor.GemColorYellow, [GemColor.GemColorYellow, GemColor.GemColorOrange, GemColor.GemColorGreen, GemColor.GemColorPrismatic]);
+socketToMatchingColors.set(GemColor.GemColorPrismatic, [
+    GemColor.GemColorRed,
+    GemColor.GemColorOrange,
+    GemColor.GemColorYellow,
+    GemColor.GemColorGreen,
+    GemColor.GemColorBlue,
+    GemColor.GemColorPurple,
+    GemColor.GemColorPrismatic,
+]);
 // Whether the gem matches the given socket color, for the purposes of gaining the socket bonuses.
 export function gemMatchesSocket(gem, socketColor) {
     return gem.color == socketColor || (socketToMatchingColors.has(socketColor) && socketToMatchingColors.get(socketColor).includes(gem.color));
@@ -123,6 +132,7 @@ const gemSocketCssClasses = {
     [GemColor.GemColorMeta]: 'socket-color-meta',
     [GemColor.GemColorRed]: 'socket-color-red',
     [GemColor.GemColorYellow]: 'socket-color-yellow',
+    [GemColor.GemColorPrismatic]: 'socket-color-prismatic',
 };
 export function setGemSocketCssClass(elem, color) {
     Object.values(gemSocketCssClasses).forEach(cssClass => elem.classList.remove(cssClass));
@@ -137,6 +147,7 @@ const emptyGemSocketIcons = {
     [GemColor.GemColorMeta]: 'https://wow.zamimg.com/images/icons/socket-meta.gif',
     [GemColor.GemColorRed]: 'https://wow.zamimg.com/images/icons/socket-red.gif',
     [GemColor.GemColorYellow]: 'https://wow.zamimg.com/images/icons/socket-yellow.gif',
+    [GemColor.GemColorPrismatic]: 'https://wow.zamimg.com/images/icons/socket-prismatic.gif',
 };
 export function getEmptyGemSocketIconUrl(color) {
     if (emptyGemSocketIcons[color])

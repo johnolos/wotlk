@@ -1,7 +1,9 @@
 import { Enchant } from '/wotlk/core/proto/common.js';
 import { Gem } from '/wotlk/core/proto/common.js';
+import { GemColor } from '/wotlk/core/proto/common.js';
 import { Item } from '/wotlk/core/proto/common.js';
 import { ItemSpec } from '/wotlk/core/proto/common.js';
+import { ItemType } from '/wotlk/core/proto/common.js';
 import { Profession } from '/wotlk/core/proto/common.js';
 import { ActionId } from './action_id.js';
 import { enchantAppliesToItem } from './utils.js';
@@ -23,9 +25,10 @@ export class EquippedItem {
         this._item = item;
         this._enchant = enchant || null;
         this._gems = gems || [];
+        this.numPossibleSockets = this.numSockets(true);
         // Fill gems with null so we always have the same number of gems as gem slots.
-        if (this._gems.length < item.gemSockets.length) {
-            this._gems = this._gems.concat(new Array(item.gemSockets.length - this._gems.length).fill(null));
+        if (this._gems.length < this.numPossibleSockets) {
+            this._gems = this._gems.concat(new Array(this.numPossibleSockets - this._gems.length).fill(null));
         }
     }
     get item() {
@@ -66,7 +69,7 @@ export class EquippedItem {
             newEnchant = this._enchant;
         // Reorganize gems to match as many colors in the new item as possible.
         const newGems = new Array(item.gemSockets.length).fill(null);
-        this._gems.filter(gem => gem != null).forEach(gem => {
+        this._gems.slice(0, this._item.gemSockets.length).filter(gem => gem != null).forEach(gem => {
             const firstMatchingIndex = item.gemSockets.findIndex((socketColor, socketIdx) => !newGems[socketIdx] && gemMatchesSocket(gem, socketColor));
             const firstEligibleIndex = item.gemSockets.findIndex((socketColor, socketIdx) => !newGems[socketIdx] && gemEligibleForSocket(gem, socketColor));
             if (firstMatchingIndex != -1) {
@@ -76,6 +79,10 @@ export class EquippedItem {
                 newGems[firstEligibleIndex] = gem;
             }
         });
+        // Copy the extra socket gem directly.
+        if (this.couldHaveExtraSocket()) {
+            newGems.push(this._gems[this._gems.length - 1]);
+        }
         return new EquippedItem(item, newEnchant, newGems);
     }
     /**
@@ -126,6 +133,26 @@ export class EquippedItem {
             enchant: this._enchant?.id,
             gems: this._gems.map(gem => gem?.id || 0),
         });
+    }
+    // Whether this item could have an extra socket, assuming Blacksmithing.
+    couldHaveExtraSocket() {
+        return [ItemType.ItemTypeWaist, ItemType.ItemTypeWrist, ItemType.ItemTypeHands].includes(this.item.type);
+    }
+    hasExtraSocket(isBlacksmithing) {
+        return this.item.type == ItemType.ItemTypeWaist ||
+            (isBlacksmithing && [ItemType.ItemTypeWrist, ItemType.ItemTypeHands].includes(this.item.type));
+    }
+    numSockets(isBlacksmithing) {
+        return this._item.gemSockets.length + (this.hasExtraSocket(isBlacksmithing) ? 1 : 0);
+    }
+    hasExtraGem() {
+        return this._gems.length > this.item.gemSockets.length;
+    }
+    allSocketColors() {
+        return this.couldHaveExtraSocket() ? this._item.gemSockets.concat([GemColor.GemColorPrismatic]) : this._item.gemSockets;
+    }
+    curSocketColors(isBlacksmithing) {
+        return this.hasExtraSocket(isBlacksmithing) ? this._item.gemSockets.concat([GemColor.GemColorPrismatic]) : this._item.gemSockets;
     }
     getFailedProfessionRequirements(professions) {
         let failed = [];

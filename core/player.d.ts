@@ -83,6 +83,7 @@ export declare class Player<SpecType extends Spec> {
     getProfession2(): Profession;
     setProfession2(eventID: EventID, newProfession: Profession): void;
     getProfessions(): Array<Profession>;
+    hasProfession(prof: Profession): boolean;
     getShattFaction(): ShattrathFaction;
     setShattFaction(eventID: EventID, newFaction: ShattrathFaction): void;
     getFaction(): Faction;

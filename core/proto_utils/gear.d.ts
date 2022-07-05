@@ -34,6 +34,7 @@ export declare class Gear {
     hasActiveMetaGem(): boolean;
     hasInactiveMetaGem(): boolean;
     withoutMetaGem(): Gear;
+    withoutBlacksmithSockets(): Gear;
     hasBluntMHWeapon(): boolean;
     hasSharpMHWeapon(): boolean;
     hasBluntOHWeapon(): boolean;

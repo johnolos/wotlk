@@ -90,6 +90,10 @@
   border: 1px solid yellow !important;
 }
 
+#bootstrap-overrides .socket-color-prismatic {
+  border: 1px solid pink !important;
+}
+
 .dropdown-root {
   position: relative;
   display: inline-block !important;
@@ -371,6 +375,10 @@
 
 #bootstrap-overrides .socket-color-yellow {
   border: 1px solid yellow !important;
+}
+
+#bootstrap-overrides .socket-color-prismatic {
+  border: 1px solid pink !important;
 }
 
 .dropdown-root {
@@ -863,6 +871,10 @@ input, select {
   border: 1px solid yellow !important;
 }
 
+#bootstrap-overrides .socket-color-prismatic {
+  border: 1px solid pink !important;
+}
+
 .dropdown-root {
   position: relative;
   display: inline-block !important;
@@ -1072,6 +1084,10 @@ input, select {
 
 #bootstrap-overrides .socket-color-yellow {
   border: 1px solid yellow !important;
+}
+
+#bootstrap-overrides .socket-color-prismatic {
+  border: 1px solid pink !important;
 }
 
 .dropdown-root {
@@ -1522,6 +1538,10 @@ input, select {
 
 #bootstrap-overrides .socket-color-yellow {
   border: 1px solid yellow !important;
+}
+
+#bootstrap-overrides .socket-color-prismatic {
+  border: 1px solid pink !important;
 }
 
 .dropdown-root {

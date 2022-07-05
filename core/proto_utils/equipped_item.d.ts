@@ -1,5 +1,6 @@
 import { Enchant } from '/wotlk/core/proto/common.js';
 import { Gem } from '/wotlk/core/proto/common.js';
+import { GemColor } from '/wotlk/core/proto/common.js';
 import { Item } from '/wotlk/core/proto/common.js';
 import { ItemSpec } from '/wotlk/core/proto/common.js';
 import { Profession } from '/wotlk/core/proto/common.js';
@@ -15,6 +16,7 @@ export declare class EquippedItem {
     readonly _item: Item;
     readonly _enchant: Enchant | null;
     readonly _gems: Array<Gem | null>;
+    readonly numPossibleSockets: number;
     constructor(item: Item, enchant?: Enchant | null, gems?: Array<Gem | null>);
     get item(): Item;
     get enchant(): Enchant | null;
@@ -41,5 +43,11 @@ export declare class EquippedItem {
     removeGemsWithId(gemId: number): EquippedItem;
     asActionId(): ActionId;
     asSpec(): ItemSpec;
+    couldHaveExtraSocket(): boolean;
+    hasExtraSocket(isBlacksmithing: boolean): boolean;
+    numSockets(isBlacksmithing: boolean): number;
+    hasExtraGem(): boolean;
+    allSocketColors(): Array<GemColor>;
+    curSocketColors(isBlacksmithing: boolean): Array<GemColor>;
     getFailedProfessionRequirements(professions: Array<Profession>): Array<Item | Gem | Enchant>;
 }
