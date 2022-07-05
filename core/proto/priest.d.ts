@@ -6,151 +6,345 @@ import type { PartialMessage } from "@protobuf-ts/runtime";
 import { MessageType } from "@protobuf-ts/runtime";
 import { RaidTarget } from "./common";
 /**
+ * WotLK talents
+ *
  * @generated from protobuf message proto.PriestTalents
  */
 export interface PriestTalents {
     /**
      * Discipline
      *
-     * @generated from protobuf field: int32 wand_specialization = 1;
+     * @generated from protobuf field: int32 unbreakable_will = 1;
      */
-    wandSpecialization: number;
+    unbreakableWill: number;
     /**
-     * @generated from protobuf field: int32 silent_resolve = 31;
+     * @generated from protobuf field: int32 twin_disciplines = 2;
+     */
+    twinDisciplines: number;
+    /**
+     * @generated from protobuf field: int32 silent_resolve = 3;
      */
     silentResolve: number;
     /**
-     * @generated from protobuf field: int32 improved_power_word_fortitude = 34;
+     * @generated from protobuf field: int32 improved_inner_fire = 4;
+     */
+    improvedInnerFire: number;
+    /**
+     * @generated from protobuf field: int32 improved_power_word_fortitude = 5;
      */
     improvedPowerWordFortitude: number;
     /**
-     * @generated from protobuf field: bool inner_focus = 2;
+     * @generated from protobuf field: int32 martyrdom = 6;
      */
-    innerFocus: boolean;
+    martyrdom: number;
     /**
-     * @generated from protobuf field: int32 meditation = 3;
+     * @generated from protobuf field: int32 meditation = 7;
      */
     meditation: number;
     /**
-     * @generated from protobuf field: int32 mental_agility = 4;
+     * @generated from protobuf field: bool inner_focus = 8;
+     */
+    innerFocus: boolean;
+    /**
+     * @generated from protobuf field: int32 improved_power_word_shield = 9;
+     */
+    improvedPowerWordShield: number;
+    /**
+     * @generated from protobuf field: int32 absolution = 10;
+     */
+    absolution: number;
+    /**
+     * @generated from protobuf field: int32 mental_agility = 11;
      */
     mentalAgility: number;
     /**
-     * @generated from protobuf field: int32 mental_strength = 5;
+     * @generated from protobuf field: int32 improved_mana_burn = 12;
+     */
+    improvedManaBurn: number;
+    /**
+     * @generated from protobuf field: int32 reflective_shield = 13;
+     */
+    reflectiveShield: number;
+    /**
+     * @generated from protobuf field: int32 mental_strength = 14;
      */
     mentalStrength: number;
     /**
-     * @generated from protobuf field: bool divine_spirit = 6;
+     * @generated from protobuf field: bool soul_warding = 15;
      */
-    divineSpirit: boolean;
+    soulWarding: boolean;
     /**
-     * @generated from protobuf field: int32 improved_divine_spirit = 7;
-     */
-    improvedDivineSpirit: number;
-    /**
-     * @generated from protobuf field: int32 focused_power = 8;
+     * @generated from protobuf field: int32 focused_power = 16;
      */
     focusedPower: number;
     /**
-     * @generated from protobuf field: int32 force_of_will = 9;
-     */
-    forceOfWill: number;
-    /**
-     * @generated from protobuf field: bool power_infusion = 10;
-     */
-    powerInfusion: boolean;
-    /**
-     * @generated from protobuf field: int32 enlightenment = 11;
+     * @generated from protobuf field: int32 enlightenment = 17;
      */
     enlightenment: number;
     /**
+     * @generated from protobuf field: int32 focused_will = 18;
+     */
+    focusedWill: number;
+    /**
+     * @generated from protobuf field: bool power_infusion = 19;
+     */
+    powerInfusion: boolean;
+    /**
+     * @generated from protobuf field: int32 improved_flash_heal = 20;
+     */
+    improvedFlashHeal: number;
+    /**
+     * @generated from protobuf field: int32 renewed_hope = 21;
+     */
+    renewedHope: number;
+    /**
+     * @generated from protobuf field: int32 rapture = 22;
+     */
+    rapture: number;
+    /**
+     * @generated from protobuf field: int32 aspiration = 23;
+     */
+    aspiration: number;
+    /**
+     * @generated from protobuf field: int32 divine_aegis = 24;
+     */
+    divineAegis: number;
+    /**
+     * @generated from protobuf field: bool pain_suppression = 25;
+     */
+    painSuppression: boolean;
+    /**
+     * @generated from protobuf field: int32 grace = 26;
+     */
+    grace: number;
+    /**
+     * @generated from protobuf field: int32 borrowed_time = 27;
+     */
+    borrowedTime: number;
+    /**
+     * @generated from protobuf field: bool penance = 28;
+     */
+    penance: boolean;
+    /**
      * Holy
      *
-     * @generated from protobuf field: int32 holy_specialization = 12;
+     * @generated from protobuf field: int32 healing_focus = 29;
+     */
+    healingFocus: number;
+    /**
+     * @generated from protobuf field: int32 improved_renew = 30;
+     */
+    improvedRenew: number;
+    /**
+     * @generated from protobuf field: int32 holy_specialization = 31;
      */
     holySpecialization: number;
     /**
-     * @generated from protobuf field: int32 divine_fury = 13;
+     * @generated from protobuf field: int32 spell_warding = 32;
+     */
+    spellWarding: number;
+    /**
+     * @generated from protobuf field: int32 divine_fury = 33;
      */
     divineFury: number;
     /**
-     * @generated from protobuf field: bool holy_nova = 14;
+     * @generated from protobuf field: bool desperate_prayer = 34;
      */
-    holyNova: boolean;
+    desperatePrayer: boolean;
     /**
-     * @generated from protobuf field: int32 searing_light = 15;
+     * @generated from protobuf field: int32 blessed_recovery = 35;
+     */
+    blessedRecovery: number;
+    /**
+     * @generated from protobuf field: int32 inspiration = 36;
+     */
+    inspiration: number;
+    /**
+     * @generated from protobuf field: int32 holy_reach = 37;
+     */
+    holyReach: number;
+    /**
+     * @generated from protobuf field: int32 improved_healing = 38;
+     */
+    improvedHealing: number;
+    /**
+     * @generated from protobuf field: int32 searing_light = 39;
      */
     searingLight: number;
     /**
-     * @generated from protobuf field: int32 spiritual_guidance = 16;
+     * @generated from protobuf field: int32 healing_prayers = 40;
      */
-    spiritualGuidance: number;
+    healingPrayers: number;
     /**
-     * @generated from protobuf field: int32 surge_of_light = 17;
-     */
-    surgeOfLight: number;
-    /**
-     * @generated from protobuf field: bool spirit_of_redemption = 33;
+     * @generated from protobuf field: bool spirit_of_redemption = 41;
      */
     spiritOfRedemption: boolean;
     /**
+     * @generated from protobuf field: int32 spiritual_guidance = 42;
+     */
+    spiritualGuidance: number;
+    /**
+     * @generated from protobuf field: int32 surge_of_light = 43;
+     */
+    surgeOfLight: number;
+    /**
+     * @generated from protobuf field: int32 spiritual_healing = 44;
+     */
+    spiritualHealing: number;
+    /**
+     * @generated from protobuf field: int32 holy_concentration = 45;
+     */
+    holyConcentration: number;
+    /**
+     * @generated from protobuf field: bool lightwell = 46;
+     */
+    lightwell: boolean;
+    /**
+     * @generated from protobuf field: int32 blessed_resilience = 47;
+     */
+    blessedResilience: number;
+    /**
+     * @generated from protobuf field: int32 body_and_soul = 48;
+     */
+    bodyAndSoul: number;
+    /**
+     * @generated from protobuf field: int32 empowered_healing = 49;
+     */
+    empoweredHealing: number;
+    /**
+     * @generated from protobuf field: int32 serendipity = 50;
+     */
+    serendipity: number;
+    /**
+     * @generated from protobuf field: int32 empowered_renew = 51;
+     */
+    empoweredRenew: number;
+    /**
+     * @generated from protobuf field: bool circle_of_healing = 52;
+     */
+    circleOfHealing: boolean;
+    /**
+     * @generated from protobuf field: int32 test_of_faith = 53;
+     */
+    testOfFaith: number;
+    /**
+     * @generated from protobuf field: int32 divine_providence = 54;
+     */
+    divineProvidence: number;
+    /**
+     * @generated from protobuf field: bool guardian_spirit = 55;
+     */
+    guardianSpirit: boolean;
+    /**
      * Shadow
      *
-     * @generated from protobuf field: int32 shadow_affinity = 32;
+     * @generated from protobuf field: int32 spirit_tap = 56;
      */
-    shadowAffinity: number;
+    spiritTap: number;
     /**
-     * @generated from protobuf field: int32 improved_shadow_word_pain = 18;
+     * @generated from protobuf field: int32 improved_spirit_tap = 57;
      */
-    improvedShadowWordPain: number;
+    improvedSpiritTap: number;
     /**
-     * @generated from protobuf field: int32 shadow_focus = 19;
-     */
-    shadowFocus: number;
-    /**
-     * @generated from protobuf field: int32 improved_mind_blast = 20;
-     */
-    improvedMindBlast: number;
-    /**
-     * @generated from protobuf field: bool mind_flay = 21;
-     */
-    mindFlay: boolean;
-    /**
-     * @generated from protobuf field: int32 shadow_weaving = 22;
-     */
-    shadowWeaving: number;
-    /**
-     * @generated from protobuf field: bool vampiric_embrace = 23;
-     */
-    vampiricEmbrace: boolean;
-    /**
-     * @generated from protobuf field: int32 improved_vampiric_embrace = 24;
-     */
-    improvedVampiricEmbrace: number;
-    /**
-     * @generated from protobuf field: int32 focused_mind = 25;
-     */
-    focusedMind: number;
-    /**
-     * @generated from protobuf field: int32 darkness = 26;
+     * @generated from protobuf field: int32 darkness = 58;
      */
     darkness: number;
     /**
-     * @generated from protobuf field: bool shadowform = 27;
+     * @generated from protobuf field: int32 shadow_affinity = 59;
+     */
+    shadowAffinity: number;
+    /**
+     * @generated from protobuf field: int32 improved_shadow_word_pain = 60;
+     */
+    improvedShadowWordPain: number;
+    /**
+     * @generated from protobuf field: int32 shadow_focus = 61;
+     */
+    shadowFocus: number;
+    /**
+     * @generated from protobuf field: int32 improved_psychic_scream = 62;
+     */
+    improvedPsychicScream: number;
+    /**
+     * @generated from protobuf field: int32 improved_mind_blast = 63;
+     */
+    improvedMindBlast: number;
+    /**
+     * @generated from protobuf field: bool mind_flay = 64;
+     */
+    mindFlay: boolean;
+    /**
+     * @generated from protobuf field: int32 veiled_shadows = 65;
+     */
+    veiledShadows: number;
+    /**
+     * @generated from protobuf field: int32 shadow_reach = 66;
+     */
+    shadowReach: number;
+    /**
+     * @generated from protobuf field: int32 shadow_weaving = 67;
+     */
+    shadowWeaving: number;
+    /**
+     * @generated from protobuf field: bool silence = 68;
+     */
+    silence: boolean;
+    /**
+     * @generated from protobuf field: bool vampiric_embrace = 69;
+     */
+    vampiricEmbrace: boolean;
+    /**
+     * @generated from protobuf field: int32 improved_vampiric_embrace = 70;
+     */
+    improvedVampiricEmbrace: number;
+    /**
+     * @generated from protobuf field: int32 focused_mind = 71;
+     */
+    focusedMind: number;
+    /**
+     * @generated from protobuf field: int32 mind_melt = 72;
+     */
+    mindMelt: number;
+    /**
+     * @generated from protobuf field: int32 improved_devouring_plague = 73;
+     */
+    improvedDevouringPlague: number;
+    /**
+     * @generated from protobuf field: bool shadowform = 74;
      */
     shadowform: boolean;
     /**
-     * @generated from protobuf field: int32 shadow_power = 28;
+     * @generated from protobuf field: int32 shadow_power = 75;
      */
     shadowPower: number;
     /**
-     * @generated from protobuf field: int32 misery = 29;
+     * @generated from protobuf field: int32 improved_shadowform = 76;
+     */
+    improvedShadowform: number;
+    /**
+     * @generated from protobuf field: int32 misery = 77;
      */
     misery: number;
     /**
-     * @generated from protobuf field: bool vampiric_touch = 30;
+     * @generated from protobuf field: bool psychic_horror = 78;
+     */
+    psychicHorror: boolean;
+    /**
+     * @generated from protobuf field: bool vampiric_touch = 79;
      */
     vampiricTouch: boolean;
+    /**
+     * @generated from protobuf field: int32 pain_and_suffering = 80;
+     */
+    painAndSuffering: number;
+    /**
+     * @generated from protobuf field: int32 twisted_faith = 81;
+     */
+    twistedFaith: number;
+    /**
+     * @generated from protobuf field: bool dispersion = 82;
+     */
+    dispersion: boolean;
 }
 /**
  * @generated from protobuf message proto.ShadowPriest
