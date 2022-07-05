@@ -1463,6 +1463,10 @@ export var EnchantType;
      * @generated from protobuf enum value: EnchantTypeShield = 2;
      */
     EnchantType[EnchantType["EnchantTypeShield"] = 2] = "EnchantTypeShield";
+    /**
+     * @generated from protobuf enum value: EnchantTypeKit = 3;
+     */
+    EnchantType[EnchantType["EnchantTypeKit"] = 3] = "EnchantTypeKit";
 })(EnchantType || (EnchantType = {}));
 /**
  * ID for actions that aren't spells or items.
@@ -2785,11 +2789,12 @@ class Item$Type extends MessageType {
             { no: 11, name: "phase", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 12, name: "quality", kind: "enum", T: () => ["proto.ItemQuality", ItemQuality] },
             { no: 13, name: "unique", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 20, name: "ilvl", kind: "scalar", T: 5 /*ScalarType.INT32*/ }
+            { no: 20, name: "ilvl", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 21, name: "required_profession", kind: "enum", T: () => ["proto.Profession", Profession] }
         ]);
     }
     create(value) {
-        const message = { id: 0, wowheadId: 0, name: "", classAllowlist: [], type: 0, armorType: 0, weaponType: 0, handType: 0, rangedWeaponType: 0, stats: [], gemSockets: [], socketBonus: [], weaponDamageMin: 0, weaponDamageMax: 0, weaponSpeed: 0, phase: 0, quality: 0, unique: false, ilvl: 0 };
+        const message = { id: 0, wowheadId: 0, name: "", classAllowlist: [], type: 0, armorType: 0, weaponType: 0, handType: 0, rangedWeaponType: 0, stats: [], gemSockets: [], socketBonus: [], weaponDamageMin: 0, weaponDamageMax: 0, weaponSpeed: 0, phase: 0, quality: 0, unique: false, ilvl: 0, requiredProfession: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -2872,6 +2877,9 @@ class Item$Type extends MessageType {
                     break;
                 case /* int32 ilvl */ 20:
                     message.ilvl = reader.int32();
+                    break;
+                case /* proto.Profession required_profession */ 21:
+                    message.requiredProfession = reader.int32();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -2958,6 +2966,9 @@ class Item$Type extends MessageType {
         /* int32 ilvl = 20; */
         if (message.ilvl !== 0)
             writer.tag(20, WireType.Varint).int32(message.ilvl);
+        /* proto.Profession required_profession = 21; */
+        if (message.requiredProfession !== 0)
+            writer.tag(21, WireType.Varint).int32(message.requiredProfession);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
@@ -2981,11 +2992,12 @@ class Enchant$Type extends MessageType {
             { no: 7, name: "stats", kind: "scalar", repeat: 1 /*RepeatType.PACKED*/, T: 1 /*ScalarType.DOUBLE*/ },
             { no: 8, name: "quality", kind: "enum", T: () => ["proto.ItemQuality", ItemQuality] },
             { no: 11, name: "phase", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 13, name: "required_profession", kind: "enum", T: () => ["proto.Profession", Profession] },
             { no: 12, name: "class_allowlist", kind: "enum", repeat: 1 /*RepeatType.PACKED*/, T: () => ["proto.Class", Class] }
         ]);
     }
     create(value) {
-        const message = { id: 0, effectId: 0, name: "", isSpellId: false, type: 0, enchantType: 0, stats: [], quality: 0, phase: 0, classAllowlist: [] };
+        const message = { id: 0, effectId: 0, name: "", isSpellId: false, type: 0, enchantType: 0, stats: [], quality: 0, phase: 0, requiredProfession: 0, classAllowlist: [] };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -3026,6 +3038,9 @@ class Enchant$Type extends MessageType {
                     break;
                 case /* int32 phase */ 11:
                     message.phase = reader.int32();
+                    break;
+                case /* proto.Profession required_profession */ 13:
+                    message.requiredProfession = reader.int32();
                     break;
                 case /* repeated proto.Class class_allowlist */ 12:
                     if (wireType === WireType.LengthDelimited)
@@ -3077,6 +3092,9 @@ class Enchant$Type extends MessageType {
         /* int32 phase = 11; */
         if (message.phase !== 0)
             writer.tag(11, WireType.Varint).int32(message.phase);
+        /* proto.Profession required_profession = 13; */
+        if (message.requiredProfession !== 0)
+            writer.tag(13, WireType.Varint).int32(message.requiredProfession);
         /* repeated proto.Class class_allowlist = 12; */
         if (message.classAllowlist.length) {
             writer.tag(12, WireType.LengthDelimited).fork();
@@ -3104,11 +3122,12 @@ class Gem$Type extends MessageType {
             { no: 4, name: "color", kind: "enum", T: () => ["proto.GemColor", GemColor] },
             { no: 5, name: "phase", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 6, name: "quality", kind: "enum", T: () => ["proto.ItemQuality", ItemQuality] },
-            { no: 7, name: "unique", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 7, name: "unique", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 8, name: "required_profession", kind: "enum", T: () => ["proto.Profession", Profession] }
         ]);
     }
     create(value) {
-        const message = { id: 0, name: "", stats: [], color: 0, phase: 0, quality: 0, unique: false };
+        const message = { id: 0, name: "", stats: [], color: 0, phase: 0, quality: 0, unique: false, requiredProfession: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -3143,6 +3162,9 @@ class Gem$Type extends MessageType {
                     break;
                 case /* bool unique */ 7:
                     message.unique = reader.bool();
+                    break;
+                case /* proto.Profession required_profession */ 8:
+                    message.requiredProfession = reader.int32();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -3181,6 +3203,9 @@ class Gem$Type extends MessageType {
         /* bool unique = 7; */
         if (message.unique !== false)
             writer.tag(7, WireType.Varint).bool(message.unique);
+        /* proto.Profession required_profession = 8; */
+        if (message.requiredProfession !== 0)
+            writer.tag(8, WireType.Varint).int32(message.requiredProfession);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

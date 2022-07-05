@@ -658,6 +658,10 @@ export interface Item {
      * @generated from protobuf field: int32 ilvl = 20;
      */
     ilvl: number;
+    /**
+     * @generated from protobuf field: proto.Profession required_profession = 21;
+     */
+    requiredProfession: Profession;
 }
 /**
  * @generated from protobuf message proto.Enchant
@@ -703,6 +707,10 @@ export interface Enchant {
      */
     phase: number;
     /**
+     * @generated from protobuf field: proto.Profession required_profession = 13;
+     */
+    requiredProfession: Profession;
+    /**
      * Classes that are allowed to use the enchant. Empty indicates no special class restrictions.
      *
      * @generated from protobuf field: repeated proto.Class class_allowlist = 12;
@@ -741,6 +749,10 @@ export interface Gem {
      * @generated from protobuf field: bool unique = 7;
      */
     unique: boolean;
+    /**
+     * @generated from protobuf field: proto.Profession required_profession = 8;
+     */
+    requiredProfession: Profession;
 }
 /**
  * @generated from protobuf message proto.RaidTarget
@@ -2300,7 +2312,11 @@ export declare enum EnchantType {
     /**
      * @generated from protobuf enum value: EnchantTypeShield = 2;
      */
-    EnchantTypeShield = 2
+    EnchantTypeShield = 2,
+    /**
+     * @generated from protobuf enum value: EnchantTypeKit = 3;
+     */
+    EnchantTypeKit = 3
 }
 /**
  * ID for actions that aren't spells or items.
