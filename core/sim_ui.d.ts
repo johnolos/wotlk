@@ -5,7 +5,6 @@ import { Sim } from './sim.js';
 import { EventID, TypedEvent } from './typed_event.js';
 export interface SimWarning {
     updateOn: TypedEvent<any>;
-    shouldDisplay: () => boolean;
     getContent: () => string;
 }
 export interface SimUIConfig {

@@ -34,8 +34,7 @@ export class FeralDruidSimUI extends IndividualSimUI {
                 (simUI) => {
                     return {
                         updateOn: simUI.player.inFrontOfTargetChangeEmitter,
-                        shouldDisplay: () => simUI.player.getInFrontOfTarget(),
-                        getContent: () => 'Frontal rotation (without Shred) is not implemented.',
+                        getContent: () => simUI.player.getInFrontOfTarget() ? 'Frontal rotation (without Shred) is not implemented.' : '',
                     };
                 },
             ],

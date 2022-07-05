@@ -170,7 +170,7 @@ export class SimUI extends Component {
         topBar.appendChild(elem);
     }
     updateWarnings() {
-        const activeWarnings = this.warnings.filter(warning => warning.shouldDisplay());
+        const activeWarnings = this.warnings.map(warning => warning.getContent()).filter(content => content != '');
         const warningsElem = document.getElementsByClassName('warnings')[0];
         if (activeWarnings.length == 0) {
             warningsElem.style.display = 'none';
@@ -179,7 +179,7 @@ export class SimUI extends Component {
             warningsElem.style.display = 'initial';
             this.warningsTippy.setContent(`
 				<ul class="known-issues-tooltip">
-					${activeWarnings.map(warning => '<li>' + warning.getContent() + '</li>').join('')}
+					${activeWarnings.map(content => '<li>' + content + '</li>').join('')}
 				</ul>`);
         }
     }

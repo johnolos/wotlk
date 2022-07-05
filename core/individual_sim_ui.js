@@ -91,14 +91,15 @@ export class IndividualSimUI extends SimUI {
         if (!launchedSpecs.includes(this.player.spec)) {
             this.addWarning({
                 updateOn: new TypedEvent(),
-                shouldDisplay: () => true,
                 getContent: () => 'This sim has not yet been updated from its TBC state.',
             });
         }
         this.addWarning({
             updateOn: this.player.gearChangeEmitter,
-            shouldDisplay: () => this.player.getGear().hasInactiveMetaGem(),
             getContent: () => {
+                if (!this.player.getGear().hasInactiveMetaGem()) {
+                    return '';
+                }
                 const metaGem = this.player.getGear().getMetaGem();
                 return `Meta gem disabled (${metaGem.name}): ${getMetaGemConditionDescription(metaGem)}`;
             },
