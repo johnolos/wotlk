@@ -1,7 +1,7 @@
+import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { GemColor } from '/wotlk/core/proto/common.js';
 import { ItemSlot } from '/wotlk/core/proto/common.js';
 import { ItemSpec } from '/wotlk/core/proto/common.js';
-import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { equalsOrBothNull } from '/wotlk/core/utils.js';
 import { getEnumValues } from '/wotlk/core/utils.js';
 import { isBluntWeaponType, isSharpWeaponType } from '/wotlk/core/proto_utils/utils.js';
@@ -138,5 +138,10 @@ export class Gear {
     hasSharpOHWeapon() {
         const weapon = this.getEquippedItem(ItemSlot.ItemSlotOffHand);
         return weapon != null && isSharpWeaponType(weapon.item.weaponType);
+    }
+    getFailedProfessionRequirements(professions) {
+        return this.asArray().filter(ei => ei != null)
+            .map(ei => ei.getFailedProfessionRequirements(professions))
+            .flat();
     }
 }

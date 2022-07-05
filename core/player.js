@@ -209,6 +209,9 @@ export class Player {
             this.professionChangeEmitter.emit(eventID);
         }
     }
+    getProfessions() {
+        return [this.profession1, this.profession2].filter(p => p != Profession.ProfessionUnknown);
+    }
     getShattFaction() {
         return this.shattFaction;
     }

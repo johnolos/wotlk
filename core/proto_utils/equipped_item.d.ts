@@ -2,6 +2,7 @@ import { Enchant } from '/wotlk/core/proto/common.js';
 import { Gem } from '/wotlk/core/proto/common.js';
 import { Item } from '/wotlk/core/proto/common.js';
 import { ItemSpec } from '/wotlk/core/proto/common.js';
+import { Profession } from '/wotlk/core/proto/common.js';
 import { ActionId } from './action_id.js';
 export declare function getWowheadItemId(item: Item): number;
 export declare function getWeaponDPS(item: Item): number;
@@ -40,4 +41,5 @@ export declare class EquippedItem {
     removeGemsWithId(gemId: number): EquippedItem;
     asActionId(): ActionId;
     asSpec(): ItemSpec;
+    getFailedProfessionRequirements(professions: Array<Profession>): Array<Item | Gem | Enchant>;
 }

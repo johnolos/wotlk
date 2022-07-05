@@ -170,7 +170,7 @@ export class SimUI extends Component {
         topBar.appendChild(elem);
     }
     updateWarnings() {
-        const activeWarnings = this.warnings.map(warning => warning.getContent()).filter(content => content != '');
+        const activeWarnings = this.warnings.map(warning => warning.getContent()).flat().filter(content => content != '');
         const warningsElem = document.getElementsByClassName('warnings')[0];
         if (activeWarnings.length == 0) {
             warningsElem.style.display = 'none';

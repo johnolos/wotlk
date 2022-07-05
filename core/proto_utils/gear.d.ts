@@ -1,7 +1,10 @@
+import { Enchant } from '/wotlk/core/proto/common.js';
+import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { Gem } from '/wotlk/core/proto/common.js';
 import { GemColor } from '/wotlk/core/proto/common.js';
+import { Item } from '/wotlk/core/proto/common.js';
 import { ItemSlot } from '/wotlk/core/proto/common.js';
-import { EquipmentSpec } from '/wotlk/core/proto/common.js';
+import { Profession } from '/wotlk/core/proto/common.js';
 import { EquippedItem } from './equipped_item.js';
 declare type InternalGear = Record<ItemSlot, EquippedItem | null>;
 /**
@@ -35,5 +38,6 @@ export declare class Gear {
     hasSharpMHWeapon(): boolean;
     hasBluntOHWeapon(): boolean;
     hasSharpOHWeapon(): boolean;
+    getFailedProfessionRequirements(professions: Array<Profession>): Array<Item | Gem | Enchant>;
 }
 export {};
