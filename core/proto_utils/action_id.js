@@ -4,7 +4,7 @@ import { OtherAction } from '/wotlk/core/proto/common.js';
 import { getWowheadItemId } from '/wotlk/core/proto_utils/equipped_item.js';
 import { NO_TARGET } from '/wotlk/core/proto_utils/utils.js';
 // If true uses wotlkdb.com, else uses wowhead.com.
-export const USE_WOTLK_DB = false;
+export const USE_WOTLK_DB = true;
 // Uniquely identifies a specific item / spell / thing in WoW. This object is immutable.
 export class ActionId {
     constructor(itemId, spellId, otherId, tag, baseName, name, iconUrl) {
@@ -435,12 +435,12 @@ export class ActionId {
         //}
     }
     static async getSpellTooltipData(id) {
-        if (USE_WOTLK_DB) {
-            return await ActionId.getWotlkdbTooltipDataHelper(id, 'spell', spellToTooltipDataCache);
-        }
-        else {
-            return await ActionId.getWowheadTooltipDataHelper(id, 'spell', spellToTooltipDataCache);
-        }
+        return await ActionId.getDbTooltipDataHelper(id, '/wotlk/assets/spell_data/all_spells_db.json');
+        //if (USE_WOTLK_DB) {
+        //	return await ActionId.getWotlkdbTooltipDataHelper(id, 'spell', spellToTooltipDataCache);
+        //} else {
+        //	return await ActionId.getWowheadTooltipDataHelper(id, 'spell', spellToTooltipDataCache);
+        //}
     }
     static async getTooltipData(actionId) {
         if (actionId.itemId) {
