@@ -5,7 +5,7 @@ import { Flask } from '/wotlk/core/proto/common.js';
 import { Food } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
-import { EnhancementShaman_Rotation as EnhancementShamanRotation, EnhancementShaman_Options as EnhancementShamanOptions } from '/wotlk/core/proto/shaman.js';
+import { EnhancementShaman_Rotation as EnhancementShamanRotation, EnhancementShaman_Options as EnhancementShamanOptions, ShamanShield } from '/wotlk/core/proto/shaman.js';
 import { AirTotem, EarthTotem, FireTotem, WaterTotem, EnhancementShaman_Rotation_PrimaryShock as PrimaryShock, ShamanTotems, } from '/wotlk/core/proto/shaman.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // Preset options for this spec.
@@ -24,17 +24,14 @@ export const RestoSubspecTalents = {
 export const DefaultRotation = EnhancementShamanRotation.create({
     totems: ShamanTotems.create({
         earth: EarthTotem.StrengthOfEarthTotem,
-        air: AirTotem.GraceOfAirTotem,
+        air: AirTotem.WindfuryTotem,
         fire: FireTotem.SearingTotem,
         water: WaterTotem.ManaSpringTotem,
-        twistWindfury: true,
-        windfuryTotemRank: 5,
     }),
     primaryShock: PrimaryShock.Frost,
-    weaveFlameShock: true,
 });
 export const DefaultOptions = EnhancementShamanOptions.create({
-    waterShield: true,
+    shield: ShamanShield.LightningShield,
     bloodlust: true,
     delayOffhandSwings: true,
 });

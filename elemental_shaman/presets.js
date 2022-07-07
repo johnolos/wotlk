@@ -6,7 +6,7 @@ import { Food } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import { Faction } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
-import { ElementalShaman_Rotation as ElementalShamanRotation, ElementalShaman_Options as ElementalShamanOptions } from '/wotlk/core/proto/shaman.js';
+import { ElementalShaman_Rotation as ElementalShamanRotation, ElementalShaman_Options as ElementalShamanOptions, ShamanShield } from '/wotlk/core/proto/shaman.js';
 import { ElementalShaman_Rotation_RotationType as RotationType } from '/wotlk/core/proto/shaman.js';
 import { AirTotem, EarthTotem, FireTotem, WaterTotem, ShamanTotems, } from '/wotlk/core/proto/shaman.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
@@ -25,7 +25,7 @@ export const RestoTalents = {
 };
 export const DefaultRotation = ElementalShamanRotation.create({
     totems: ShamanTotems.create({
-        earth: EarthTotem.TremorTotem,
+        earth: EarthTotem.StrengthOfEarthTotem,
         air: AirTotem.WrathOfAirTotem,
         fire: FireTotem.TotemOfWrath,
         water: WaterTotem.ManaSpringTotem,
@@ -33,7 +33,7 @@ export const DefaultRotation = ElementalShamanRotation.create({
     type: RotationType.Adaptive,
 });
 export const DefaultOptions = ElementalShamanOptions.create({
-    waterShield: true,
+    shield: ShamanShield.WaterShield,
     bloodlust: true,
 });
 export const DefaultConsumes = Consumes.create({

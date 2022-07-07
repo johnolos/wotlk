@@ -93,7 +93,7 @@ export class SmitePriestSimUI extends IndividualSimUI {
                     drums: Drums.DrumsOfBattle,
                     bloodlust: 1,
                     manaSpringTotem: TristateEffect.TristateEffectRegular,
-                    wrathOfAirTotem: TristateEffect.TristateEffectRegular,
+                    wrathOfAirTotem: true,
                     sanctityAura: TristateEffect.TristateEffectImproved,
                 }),
                 individualBuffs: IndividualBuffs.create({
@@ -191,7 +191,6 @@ export class SmitePriestSimUI extends IndividualSimUI {
                     OtherInputs.ISBUptime,
                     OtherInputs.ShadowPriestDPS,
                     OtherInputs.PrepopPotion,
-                    OtherInputs.SnapshotImprovedWrathOfAirTotem,
                     OtherInputs.TankAssignment,
                 ],
             },

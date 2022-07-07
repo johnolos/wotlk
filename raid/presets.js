@@ -931,7 +931,6 @@ export const buffBotPresets = [
                 Spec.SpecMage,
                 Spec.SpecShadowPriest,
                 Spec.SpecSmitePriest,
-                Spec.SpecProtectionPaladin,
                 Spec.SpecEnhancementShaman,
                 Spec.SpecElementalShaman,
                 Spec.SpecWarlock,
@@ -941,26 +940,20 @@ export const buffBotPresets = [
                 Spec.SpecRogue,
                 Spec.SpecWarrior,
                 Spec.SpecProtectionWarrior,
-            ];
-            const goaSpecs = [
                 Spec.SpecFeralDruid,
                 Spec.SpecFeralTankDruid,
-                Spec.SpecHunter,
             ];
-            const [woaVotes, wfVotes, goaVotes] = [woaSpecs, wfSpecs, goaSpecs]
+            const [woaVotes, wfVotes] = [woaSpecs, wfSpecs]
                 .map(specs => partyProto.players
                 .filter(player => player.class != Class.ClassUnknown)
                 .map(player => playerToSpec(player))
                 .filter(playerSpec => specs.includes(playerSpec))
                 .length);
-            if (woaVotes >= wfVotes && woaVotes >= goaVotes) {
-                partyProto.buffs.wrathOfAirTotem = Math.max(partyProto.buffs.wrathOfAirTotem, TristateEffect.TristateEffectRegular);
-            }
-            else if (wfVotes >= goaVotes) {
-                partyProto.buffs.windfuryTotemRank = 5;
+            if (woaVotes >= wfVotes) {
+                partyProto.buffs.wrathOfAirTotem = true;
             }
             else {
-                partyProto.buffs.graceOfAirTotem = Math.max(partyProto.buffs.graceOfAirTotem, TristateEffect.TristateEffectRegular);
+                partyProto.buffs.windfuryTotem = TristateEffect.TristateEffectRegular;
             }
         },
     },

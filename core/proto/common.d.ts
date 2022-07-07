@@ -124,41 +124,25 @@ export interface PartyBuffs {
      */
     manaTideTotems: number;
     /**
-     * @generated from protobuf field: int32 totem_of_wrath = 13;
+     * @generated from protobuf field: bool totem_of_wrath = 13;
      */
-    totemOfWrath: number;
+    totemOfWrath: boolean;
     /**
-     * @generated from protobuf field: proto.TristateEffect wrath_of_air_totem = 14;
+     * @generated from protobuf field: bool wrath_of_air_totem = 14;
      */
-    wrathOfAirTotem: TristateEffect;
+    wrathOfAirTotem: boolean;
     /**
-     * @generated from protobuf field: bool snapshot_improved_wrath_of_air_totem = 25;
+     * @generated from protobuf field: proto.TristateEffect strength_of_earth_totem = 16;
      */
-    snapshotImprovedWrathOfAirTotem: boolean;
-    /**
-     * @generated from protobuf field: proto.TristateEffect grace_of_air_totem = 15;
-     */
-    graceOfAirTotem: TristateEffect;
-    /**
-     * @generated from protobuf field: proto.StrengthOfEarthType strength_of_earth_totem = 16;
-     */
-    strengthOfEarthTotem: StrengthOfEarthType;
-    /**
-     * @generated from protobuf field: bool snapshot_improved_strength_of_earth_totem = 31;
-     */
-    snapshotImprovedStrengthOfEarthTotem: boolean;
+    strengthOfEarthTotem: TristateEffect;
     /**
      * @generated from protobuf field: bool tranquil_air_totem = 26;
      */
     tranquilAirTotem: boolean;
     /**
-     * @generated from protobuf field: int32 windfury_totem_rank = 23;
+     * @generated from protobuf field: proto.TristateEffect windfury_totem = 23;
      */
-    windfuryTotemRank: number;
-    /**
-     * @generated from protobuf field: int32 windfury_totem_iwt = 24;
-     */
-    windfuryTotemIwt: number;
+    windfuryTotem: TristateEffect;
     /**
      * @generated from protobuf field: proto.TristateEffect battle_shout = 18;
      */
@@ -2227,31 +2211,6 @@ export declare enum Alchohol {
      * @generated from protobuf enum value: AlchoholKreegsStoutBeatdown = 1;
      */
     AlchoholKreegsStoutBeatdown = 1
-}
-/**
- * @generated from protobuf enum proto.StrengthOfEarthType
- */
-export declare enum StrengthOfEarthType {
-    /**
-     * @generated from protobuf enum value: None = 0;
-     */
-    None = 0,
-    /**
-     * @generated from protobuf enum value: Basic = 1;
-     */
-    Basic = 1,
-    /**
-     * @generated from protobuf enum value: CycloneBonus = 2;
-     */
-    CycloneBonus = 2,
-    /**
-     * @generated from protobuf enum value: EnhancingTotems = 3;
-     */
-    EnhancingTotems = 3,
-    /**
-     * @generated from protobuf enum value: EnhancingAndCyclone = 4;
-     */
-    EnhancingAndCyclone = 4
 }
 /**
  * @generated from protobuf enum proto.MobType

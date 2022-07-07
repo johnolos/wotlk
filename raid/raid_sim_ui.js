@@ -1,4 +1,3 @@
-import { BooleanPicker } from "/wotlk/core/components/boolean_picker.js";
 import { DetailedResults } from "/wotlk/core/components/detailed_results.js";
 import { EncounterPicker } from "/wotlk/core/components/encounter_picker.js";
 import { LogRunner } from "/wotlk/core/components/log_runner.js";
@@ -14,12 +13,10 @@ import { playerToSpec } from "/wotlk/core/proto_utils/utils.js";
 import { Sim } from "/wotlk/core/sim.js";
 import { SimUI } from "/wotlk/core/sim_ui.js";
 import { TypedEvent } from "/wotlk/core/typed_event.js";
-import { AssignmentsPicker } from "./assignments_picker.js";
 import { BlessingsPicker } from "./blessings_picker.js";
 import { newRaidExporters, newRaidImporters } from "./import_export.js";
 import { implementedSpecs } from "./presets.js";
 import { RaidPicker } from "./raid_picker.js";
-import { TanksPicker } from "./tanks_picker.js";
 const extraKnownIssues = [
 //'We\'re still missing implementations for many specs. If you\'d like to help us out, check out our <a href="https://github.com/wowsims/wotlk">Github project</a> or <a href="https://discord.gg/jJMPr9JWwx">join our discord</a>!',
 ];
@@ -194,18 +191,6 @@ export class RaidSimUI extends SimUI {
             content: Tooltips.BLESSINGS_SECTION,
             allowHTML: true,
             placement: 'left',
-        });
-        const assignmentsPicker = new AssignmentsPicker(this.rootElem.getElementsByClassName('assignments-section-container')[0], this);
-        const tanksPicker = new TanksPicker(this.rootElem.getElementsByClassName('tanks-section-container')[0], this);
-        const otherOptionsSectionElem = this.rootElem.getElementsByClassName('other-options-section')[0];
-        new BooleanPicker(otherOptionsSectionElem, this.sim.raid, {
-            label: 'Stagger Stormstrikes',
-            labelTooltip: 'When there are multiple Enhancement Shaman in the raid, causes them to coordinate their Stormstrike casts for optimal SS charge usage.',
-            changedEvent: (raid) => raid.staggerStormstrikesChangeEmitter,
-            getValue: (raid) => raid.getStaggerStormstrikes(),
-            setValue: (eventID, raid, newValue) => {
-                raid.setStaggerStormstrikes(eventID, newValue);
-            },
         });
         // Init Muuri layout only when settings tab is clicked, because it needs the elements
         // to be shown so it can calculate sizes.

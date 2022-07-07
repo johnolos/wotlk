@@ -86,7 +86,7 @@ export declare const ScrollOfStrengthV: IndividualSimIconPickerConfig<Player<any
 export declare const ScrollOfProtectionV: IndividualSimIconPickerConfig<Player<any>, boolean>;
 export declare const PetScrollOfAgilityV: IndividualSimIconPickerConfig<Player<any>, boolean>;
 export declare const PetScrollOfStrengthV: IndividualSimIconPickerConfig<Player<any>, boolean>;
-export declare const GraceOfAirTotem: {
+export declare const StrengthOfEarthTotem: {
     id: ActionId;
     states: number;
     improvedId: ActionId;
@@ -94,21 +94,12 @@ export declare const GraceOfAirTotem: {
     getValue: (party: Party) => TristateEffect;
     setValue: (eventID: EventID, party: Party, newValue: number) => void;
 };
-export declare const StrengthOfEarthTotem: {
-    id: ActionId;
-    states: number;
-    improvedId: ActionId;
-    improvedId2: ActionId;
-    changedEvent: (party: Party) => TypedEvent<void>;
-    getValue: (party: Party) => number;
-    setValue: (eventID: EventID, party: Party, newValue: number) => void;
-};
 export declare const WindfuryTotem: {
     id: ActionId;
     states: number;
     improvedId: ActionId;
     changedEvent: (party: Party) => TypedEvent<void>;
-    getValue: (party: Party) => 1 | 0 | 2;
+    getValue: (party: Party) => TristateEffect;
     setValue: (eventID: EventID, party: Party, newValue: number) => void;
 };
 export declare const BattleShout: {

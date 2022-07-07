@@ -117,32 +117,6 @@ export declare const ExposeWeaknessHunterAgility: {
         setValue: (eventID: EventID, raid: Raid, newValue: number) => void;
     };
 };
-export declare const SnapshotImprovedStrengthOfEarthTotem: {
-    type: "boolean";
-    getModObject: (simUI: IndividualSimUI<any>) => Party;
-    config: {
-        extraCssClasses: string[];
-        label: string;
-        labelTooltip: string;
-        changedEvent: (party: Party) => TypedEvent<void>;
-        getValue: (party: Party) => boolean;
-        setValue: (eventID: EventID, party: Party, newValue: boolean) => void;
-        enableWhen: (party: Party) => boolean;
-    };
-};
-export declare const SnapshotImprovedWrathOfAirTotem: {
-    type: "boolean";
-    getModObject: (simUI: IndividualSimUI<any>) => Party;
-    config: {
-        extraCssClasses: string[];
-        label: string;
-        labelTooltip: string;
-        changedEvent: (party: Party) => TypedEvent<void>;
-        getValue: (party: Party) => boolean;
-        setValue: (eventID: EventID, party: Party, newValue: boolean) => void;
-        enableWhen: (party: Party) => boolean;
-    };
-};
 export declare const SnapshotBsSolarianSapphire: {
     type: "boolean";
     getModObject: (simUI: IndividualSimUI<any>) => Party;

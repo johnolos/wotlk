@@ -13,13 +13,11 @@ export class Raid {
         this.buffs = RaidBuffs.create();
         this.debuffs = Debuffs.create();
         this.tanks = [];
-        this.staggerStormstrikes = false;
         // Emits when a raid member is added/removed/moved.
         this.compChangeEmitter = new TypedEvent();
         this.buffsChangeEmitter = new TypedEvent();
         this.debuffsChangeEmitter = new TypedEvent();
         this.tanksChangeEmitter = new TypedEvent();
-        this.staggerStormstrikesChangeEmitter = new TypedEvent();
         this.sim = sim;
         this.parties = [...Array(MAX_NUM_PARTIES).keys()].map(i => {
             const newParty = new Party(this, sim);
@@ -102,29 +100,18 @@ export class Raid {
         this.tanks = newTanks.map(tank => RaidTarget.clone(tank));
         this.tanksChangeEmitter.emit(eventID);
     }
-    getStaggerStormstrikes() {
-        return this.staggerStormstrikes;
-    }
-    setStaggerStormstrikes(eventID, newValue) {
-        if (this.staggerStormstrikes == newValue)
-            return;
-        this.staggerStormstrikes = newValue;
-        this.staggerStormstrikesChangeEmitter.emit(eventID);
-    }
     toProto(forExport) {
         return RaidProto.create({
             parties: this.parties.map(party => party.toProto(forExport)),
             buffs: this.getBuffs(),
             debuffs: this.getDebuffs(),
             tanks: this.getTanks(),
-            staggerStormstrikes: this.getStaggerStormstrikes(),
         });
     }
     fromProto(eventID, proto) {
         TypedEvent.freezeAllAndDo(() => {
             this.setBuffs(eventID, proto.buffs || RaidBuffs.create());
             this.setDebuffs(eventID, proto.debuffs || Debuffs.create());
-            this.setStaggerStormstrikes(eventID, proto.staggerStormstrikes);
             this.setTanks(eventID, proto.tanks);
             for (let i = 0; i < MAX_NUM_PARTIES; i++) {
                 if (proto.parties[i]) {

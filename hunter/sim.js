@@ -3,7 +3,6 @@ import { PartyBuffs } from '/wotlk/core/proto/common.js';
 import { IndividualBuffs } from '/wotlk/core/proto/common.js';
 import { Debuffs } from '/wotlk/core/proto/common.js';
 import { Stat } from '/wotlk/core/proto/common.js';
-import { StrengthOfEarthType } from '/wotlk/core/proto/common.js';
 import { TristateEffect } from '/wotlk/core/proto/common.js';
 import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
@@ -82,9 +81,8 @@ export class HunterSimUI extends IndividualSimUI {
                 }),
                 partyBuffs: PartyBuffs.create({
                     bloodlust: 1,
-                    graceOfAirTotem: TristateEffect.TristateEffectImproved,
-                    strengthOfEarthTotem: StrengthOfEarthType.EnhancingAndCyclone,
-                    windfuryTotemRank: 5,
+                    strengthOfEarthTotem: TristateEffect.TristateEffectImproved,
+                    windfuryTotem: TristateEffect.TristateEffectImproved,
                     battleShout: TristateEffect.TristateEffectImproved,
                     leaderOfThePack: TristateEffect.TristateEffectImproved,
                 }),
@@ -117,7 +115,6 @@ export class HunterSimUI extends IndividualSimUI {
             partyBuffInputs: [
                 IconInputs.DrumsOfBattleBuff,
                 IconInputs.Bloodlust,
-                IconInputs.GraceOfAirTotem,
                 IconInputs.WindfuryTotem,
                 IconInputs.StrengthOfEarthTotem,
                 IconInputs.ManaSpringTotem,
@@ -207,7 +204,6 @@ export class HunterSimUI extends IndividualSimUI {
                     OtherInputs.PrepopPotion,
                     OtherInputs.ExposeWeaknessUptime,
                     OtherInputs.ExposeWeaknessHunterAgility,
-                    OtherInputs.SnapshotImprovedStrengthOfEarthTotem,
                     OtherInputs.SnapshotBsSolarianSapphire,
                     OtherInputs.SnapshotBsT2,
                     OtherInputs.TankAssignment,

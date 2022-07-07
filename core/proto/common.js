@@ -1376,32 +1376,6 @@ export var Alchohol;
     Alchohol[Alchohol["AlchoholKreegsStoutBeatdown"] = 1] = "AlchoholKreegsStoutBeatdown";
 })(Alchohol || (Alchohol = {}));
 /**
- * @generated from protobuf enum proto.StrengthOfEarthType
- */
-export var StrengthOfEarthType;
-(function (StrengthOfEarthType) {
-    /**
-     * @generated from protobuf enum value: None = 0;
-     */
-    StrengthOfEarthType[StrengthOfEarthType["None"] = 0] = "None";
-    /**
-     * @generated from protobuf enum value: Basic = 1;
-     */
-    StrengthOfEarthType[StrengthOfEarthType["Basic"] = 1] = "Basic";
-    /**
-     * @generated from protobuf enum value: CycloneBonus = 2;
-     */
-    StrengthOfEarthType[StrengthOfEarthType["CycloneBonus"] = 2] = "CycloneBonus";
-    /**
-     * @generated from protobuf enum value: EnhancingTotems = 3;
-     */
-    StrengthOfEarthType[StrengthOfEarthType["EnhancingTotems"] = 3] = "EnhancingTotems";
-    /**
-     * @generated from protobuf enum value: EnhancingAndCyclone = 4;
-     */
-    StrengthOfEarthType[StrengthOfEarthType["EnhancingAndCyclone"] = 4] = "EnhancingAndCyclone";
-})(StrengthOfEarthType || (StrengthOfEarthType = {}));
-/**
  * @generated from protobuf enum proto.MobType
  */
 export var MobType;
@@ -1649,15 +1623,11 @@ class PartyBuffs$Type extends MessageType {
             { no: 11, name: "jade_pendant_of_blasting", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 12, name: "mana_spring_totem", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 17, name: "mana_tide_totems", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 13, name: "totem_of_wrath", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 14, name: "wrath_of_air_totem", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 25, name: "snapshot_improved_wrath_of_air_totem", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 15, name: "grace_of_air_totem", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 16, name: "strength_of_earth_totem", kind: "enum", T: () => ["proto.StrengthOfEarthType", StrengthOfEarthType] },
-            { no: 31, name: "snapshot_improved_strength_of_earth_totem", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 13, name: "totem_of_wrath", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 14, name: "wrath_of_air_totem", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 16, name: "strength_of_earth_totem", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 26, name: "tranquil_air_totem", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 23, name: "windfury_totem_rank", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 24, name: "windfury_totem_iwt", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 23, name: "windfury_totem", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 18, name: "battle_shout", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 28, name: "bs_solarian_sapphire", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 29, name: "snapshot_bs_solarian_sapphire", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
@@ -1667,7 +1637,7 @@ class PartyBuffs$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { bloodlust: 0, ferociousInspiration: 0, bloodPact: 0, moonkinAura: 0, leaderOfThePack: 0, sanctityAura: 0, devotionAura: 0, retributionAura: 0, trueshotAura: false, heroicPresence: false, drums: 0, atieshMage: 0, atieshWarlock: 0, braidedEterniumChain: false, eyeOfTheNight: false, chainOfTheTwilightOwl: false, jadePendantOfBlasting: false, manaSpringTotem: 0, manaTideTotems: 0, totemOfWrath: 0, wrathOfAirTotem: 0, snapshotImprovedWrathOfAirTotem: false, graceOfAirTotem: 0, strengthOfEarthTotem: 0, snapshotImprovedStrengthOfEarthTotem: false, tranquilAirTotem: false, windfuryTotemRank: 0, windfuryTotemIwt: 0, battleShout: 0, bsSolarianSapphire: false, snapshotBsSolarianSapphire: false, snapshotBsT2: false, snapshotBsBoomingVoiceRank: 0, commandingShout: 0 };
+        const message = { bloodlust: 0, ferociousInspiration: 0, bloodPact: 0, moonkinAura: 0, leaderOfThePack: 0, sanctityAura: 0, devotionAura: 0, retributionAura: 0, trueshotAura: false, heroicPresence: false, drums: 0, atieshMage: 0, atieshWarlock: 0, braidedEterniumChain: false, eyeOfTheNight: false, chainOfTheTwilightOwl: false, jadePendantOfBlasting: false, manaSpringTotem: 0, manaTideTotems: 0, totemOfWrath: false, wrathOfAirTotem: false, strengthOfEarthTotem: 0, tranquilAirTotem: false, windfuryTotem: 0, battleShout: 0, bsSolarianSapphire: false, snapshotBsSolarianSapphire: false, snapshotBsT2: false, snapshotBsBoomingVoiceRank: 0, commandingShout: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1735,32 +1705,20 @@ class PartyBuffs$Type extends MessageType {
                 case /* int32 mana_tide_totems */ 17:
                     message.manaTideTotems = reader.int32();
                     break;
-                case /* int32 totem_of_wrath */ 13:
-                    message.totemOfWrath = reader.int32();
+                case /* bool totem_of_wrath */ 13:
+                    message.totemOfWrath = reader.bool();
                     break;
-                case /* proto.TristateEffect wrath_of_air_totem */ 14:
-                    message.wrathOfAirTotem = reader.int32();
+                case /* bool wrath_of_air_totem */ 14:
+                    message.wrathOfAirTotem = reader.bool();
                     break;
-                case /* bool snapshot_improved_wrath_of_air_totem */ 25:
-                    message.snapshotImprovedWrathOfAirTotem = reader.bool();
-                    break;
-                case /* proto.TristateEffect grace_of_air_totem */ 15:
-                    message.graceOfAirTotem = reader.int32();
-                    break;
-                case /* proto.StrengthOfEarthType strength_of_earth_totem */ 16:
+                case /* proto.TristateEffect strength_of_earth_totem */ 16:
                     message.strengthOfEarthTotem = reader.int32();
-                    break;
-                case /* bool snapshot_improved_strength_of_earth_totem */ 31:
-                    message.snapshotImprovedStrengthOfEarthTotem = reader.bool();
                     break;
                 case /* bool tranquil_air_totem */ 26:
                     message.tranquilAirTotem = reader.bool();
                     break;
-                case /* int32 windfury_totem_rank */ 23:
-                    message.windfuryTotemRank = reader.int32();
-                    break;
-                case /* int32 windfury_totem_iwt */ 24:
-                    message.windfuryTotemIwt = reader.int32();
+                case /* proto.TristateEffect windfury_totem */ 23:
+                    message.windfuryTotem = reader.int32();
                     break;
                 case /* proto.TristateEffect battle_shout */ 18:
                     message.battleShout = reader.int32();
@@ -1849,33 +1807,21 @@ class PartyBuffs$Type extends MessageType {
         /* int32 mana_tide_totems = 17; */
         if (message.manaTideTotems !== 0)
             writer.tag(17, WireType.Varint).int32(message.manaTideTotems);
-        /* int32 totem_of_wrath = 13; */
-        if (message.totemOfWrath !== 0)
-            writer.tag(13, WireType.Varint).int32(message.totemOfWrath);
-        /* proto.TristateEffect wrath_of_air_totem = 14; */
-        if (message.wrathOfAirTotem !== 0)
-            writer.tag(14, WireType.Varint).int32(message.wrathOfAirTotem);
-        /* bool snapshot_improved_wrath_of_air_totem = 25; */
-        if (message.snapshotImprovedWrathOfAirTotem !== false)
-            writer.tag(25, WireType.Varint).bool(message.snapshotImprovedWrathOfAirTotem);
-        /* proto.TristateEffect grace_of_air_totem = 15; */
-        if (message.graceOfAirTotem !== 0)
-            writer.tag(15, WireType.Varint).int32(message.graceOfAirTotem);
-        /* proto.StrengthOfEarthType strength_of_earth_totem = 16; */
+        /* bool totem_of_wrath = 13; */
+        if (message.totemOfWrath !== false)
+            writer.tag(13, WireType.Varint).bool(message.totemOfWrath);
+        /* bool wrath_of_air_totem = 14; */
+        if (message.wrathOfAirTotem !== false)
+            writer.tag(14, WireType.Varint).bool(message.wrathOfAirTotem);
+        /* proto.TristateEffect strength_of_earth_totem = 16; */
         if (message.strengthOfEarthTotem !== 0)
             writer.tag(16, WireType.Varint).int32(message.strengthOfEarthTotem);
-        /* bool snapshot_improved_strength_of_earth_totem = 31; */
-        if (message.snapshotImprovedStrengthOfEarthTotem !== false)
-            writer.tag(31, WireType.Varint).bool(message.snapshotImprovedStrengthOfEarthTotem);
         /* bool tranquil_air_totem = 26; */
         if (message.tranquilAirTotem !== false)
             writer.tag(26, WireType.Varint).bool(message.tranquilAirTotem);
-        /* int32 windfury_totem_rank = 23; */
-        if (message.windfuryTotemRank !== 0)
-            writer.tag(23, WireType.Varint).int32(message.windfuryTotemRank);
-        /* int32 windfury_totem_iwt = 24; */
-        if (message.windfuryTotemIwt !== 0)
-            writer.tag(24, WireType.Varint).int32(message.windfuryTotemIwt);
+        /* proto.TristateEffect windfury_totem = 23; */
+        if (message.windfuryTotem !== 0)
+            writer.tag(23, WireType.Varint).int32(message.windfuryTotem);
         /* proto.TristateEffect battle_shout = 18; */
         if (message.battleShout !== 0)
             writer.tag(18, WireType.Varint).int32(message.battleShout);

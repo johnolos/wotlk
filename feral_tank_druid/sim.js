@@ -4,7 +4,6 @@ import { IndividualBuffs } from '/wotlk/core/proto/common.js';
 import { Debuffs } from '/wotlk/core/proto/common.js';
 import { Stat } from '/wotlk/core/proto/common.js';
 import { TristateEffect } from '/wotlk/core/proto/common.js';
-import { StrengthOfEarthType } from '/wotlk/core/proto/common.js';
 import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
 import { BattleElixir } from '/wotlk/core/proto/common.js';
@@ -96,8 +95,7 @@ export class FeralTankDruidSimUI extends IndividualSimUI {
                     drums: Drums.DrumsOfBattle,
                     bloodlust: 1,
                     braidedEterniumChain: true,
-                    graceOfAirTotem: TristateEffect.TristateEffectImproved,
-                    strengthOfEarthTotem: StrengthOfEarthType.EnhancingTotems,
+                    strengthOfEarthTotem: TristateEffect.TristateEffectImproved,
                     battleShout: TristateEffect.TristateEffectImproved,
                     snapshotBsSolarianSapphire: true,
                     sanctityAura: TristateEffect.TristateEffectImproved,
@@ -134,7 +132,6 @@ export class FeralTankDruidSimUI extends IndividualSimUI {
                 IconInputs.DrumsOfBattleBuff,
                 IconInputs.Bloodlust,
                 IconInputs.StrengthOfEarthTotem,
-                IconInputs.GraceOfAirTotem,
                 IconInputs.BattleShout,
                 IconInputs.CommandingShout,
                 IconInputs.HeroicPresence,
@@ -231,7 +228,6 @@ export class FeralTankDruidSimUI extends IndividualSimUI {
                     OtherInputs.ExposeWeaknessUptime,
                     OtherInputs.ExposeWeaknessHunterAgility,
                     OtherInputs.InspirationUptime,
-                    OtherInputs.SnapshotImprovedStrengthOfEarthTotem,
                     OtherInputs.SnapshotBsSolarianSapphire,
                     OtherInputs.SnapshotBsT2,
                     OtherInputs.InFrontOfTarget,

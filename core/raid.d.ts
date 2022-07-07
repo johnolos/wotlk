@@ -12,12 +12,10 @@ export declare class Raid {
     private buffs;
     private debuffs;
     private tanks;
-    private staggerStormstrikes;
     readonly compChangeEmitter: TypedEvent<void>;
     readonly buffsChangeEmitter: TypedEvent<void>;
     readonly debuffsChangeEmitter: TypedEvent<void>;
     readonly tanksChangeEmitter: TypedEvent<void>;
-    readonly staggerStormstrikesChangeEmitter: TypedEvent<void>;
     readonly changeEmitter: TypedEvent<void>;
     private parties;
     readonly sim: Sim;
@@ -37,8 +35,6 @@ export declare class Raid {
     setDebuffs(eventID: EventID, newDebuffs: Debuffs): void;
     getTanks(): Array<RaidTarget>;
     setTanks(eventID: EventID, newTanks: Array<RaidTarget>): void;
-    getStaggerStormstrikes(): boolean;
-    setStaggerStormstrikes(eventID: EventID, newValue: boolean): void;
     toProto(forExport?: boolean): RaidProto;
     fromProto(eventID: EventID, proto: RaidProto): void;
     clear(eventID: EventID): void;

@@ -90,8 +90,8 @@ export class ShadowPriestSimUI extends IndividualSimUI {
                     drums: Drums.DrumsOfBattle,
                     bloodlust: 1,
                     manaSpringTotem: TristateEffect.TristateEffectRegular,
-                    totemOfWrath: 1,
-                    wrathOfAirTotem: TristateEffect.TristateEffectRegular,
+                    totemOfWrath: true,
+                    wrathOfAirTotem: true,
                 }),
                 individualBuffs: IndividualBuffs.create({
                     blessingOfKings: true,
@@ -184,7 +184,6 @@ export class ShadowPriestSimUI extends IndividualSimUI {
                     OtherInputs.ISBUptime,
                     OtherInputs.ShadowPriestDPS,
                     OtherInputs.PrepopPotion,
-                    OtherInputs.SnapshotImprovedWrathOfAirTotem,
                     OtherInputs.TankAssignment,
                 ],
             },

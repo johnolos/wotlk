@@ -6,7 +6,6 @@ import { RaidTarget } from '/wotlk/core/proto/common.js';
 import { NO_TARGET } from '/wotlk/core/proto_utils/utils.js';
 import { Stat } from '/wotlk/core/proto/common.js';
 import { TristateEffect } from '/wotlk/core/proto/common.js';
-import { StrengthOfEarthType } from '/wotlk/core/proto/common.js';
 import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
 import { Alchohol } from '/wotlk/core/proto/common.js';
@@ -104,8 +103,7 @@ export class FeralDruidSimUI extends IndividualSimUI {
                     bloodlust: 1,
                     manaSpringTotem: TristateEffect.TristateEffectRegular,
                     braidedEterniumChain: true,
-                    graceOfAirTotem: TristateEffect.TristateEffectImproved,
-                    strengthOfEarthTotem: StrengthOfEarthType.EnhancingTotems,
+                    strengthOfEarthTotem: TristateEffect.TristateEffectImproved,
                     battleShout: TristateEffect.TristateEffectImproved,
                     snapshotBsSolarianSapphire: true,
                     sanctityAura: TristateEffect.TristateEffectImproved,
@@ -143,7 +141,6 @@ export class FeralDruidSimUI extends IndividualSimUI {
                 IconInputs.DrumsOfBattleBuff,
                 IconInputs.Bloodlust,
                 IconInputs.StrengthOfEarthTotem,
-                IconInputs.GraceOfAirTotem,
                 IconInputs.ManaSpringTotem,
                 IconInputs.BattleShout,
                 IconInputs.BraidedEterniumChain,
@@ -217,7 +214,6 @@ export class FeralDruidSimUI extends IndividualSimUI {
                     OtherInputs.PrepopPotion,
                     OtherInputs.ExposeWeaknessUptime,
                     OtherInputs.ExposeWeaknessHunterAgility,
-                    OtherInputs.SnapshotImprovedStrengthOfEarthTotem,
                     OtherInputs.SnapshotBsSolarianSapphire,
                     OtherInputs.SnapshotBsT2,
                     OtherInputs.TankAssignment,
