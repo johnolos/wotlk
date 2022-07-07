@@ -371,9 +371,9 @@ export interface Warrior_Options {
      */
     startingRage: number;
     /**
-     * @generated from protobuf field: bool use_weakness = 2;
+     * @generated from protobuf field: bool use_recklessness = 2;
      */
-    useWeakness: boolean;
+    useRecklessness: boolean;
     /**
      * @generated from protobuf field: proto.WarriorShout shout = 3;
      */

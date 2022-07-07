@@ -4,7 +4,7 @@ import { Player } from '/wotlk/core/player.js';
 import { EventID, TypedEvent } from '/wotlk/core/typed_event.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
 import { WarriorShout, Warrior_Rotation_SunderArmor as SunderArmor } from '/wotlk/core/proto/warrior.js';
-export declare const Weakness: {
+export declare const Recklessness: {
     id: ActionId;
     states: number;
     extraCssClasses: string[];

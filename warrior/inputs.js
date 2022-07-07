@@ -3,17 +3,17 @@ import { TypedEvent } from '/wotlk/core/typed_event.js';
 import { WarriorShout, Warrior_Rotation_SunderArmor as SunderArmor, } from '/wotlk/core/proto/warrior.js';
 // Configuration for spec-specific UI elements on the settings tab.
 // These don't need to be in a separate file but it keeps things cleaner.
-export const Weakness = {
+export const Recklessness = {
     id: ActionId.fromSpellId(1719),
     states: 2,
     extraCssClasses: [
-        'warrior-Weakness-picker',
+        'warrior-Recklessness-picker',
     ],
     changedEvent: (player) => player.specOptionsChangeEmitter,
-    getValue: (player) => player.getSpecOptions().useWeakness,
+    getValue: (player) => player.getSpecOptions().useRecklessness,
     setValue: (eventID, player, newValue) => {
         const newOptions = player.getSpecOptions();
-        newOptions.useWeakness = newValue;
+        newOptions.useRecklessness = newValue;
         player.setSpecOptions(eventID, newOptions);
     },
 };

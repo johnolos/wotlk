@@ -62,7 +62,7 @@ export const ArmsRotation = WarriorRotation.create({
 });
 export const DefaultOptions = WarriorOptions.create({
     startingRage: 0,
-    useWeakness: true,
+    useRecklessness: true,
     shout: WarriorShout.WarriorShoutBattle,
     precastShout: true,
     precastShoutSapphire: false,
