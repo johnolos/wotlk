@@ -196,7 +196,7 @@ export const shamanTalentsConfig = newTalentsConfig([
                 fieldName: 'lightningOverload',
                 location: {
                     rowIdx: 7,
-                    colIdx: 1,
+                    colIdx: 2,
                 },
                 spellIds: [30679],
                 maxPoints: 3,
@@ -413,7 +413,7 @@ export const shamanTalentsConfig = newTalentsConfig([
                 fieldName: 'frozenPower',
                 location: {
                     rowIdx: 5,
-                    colIdx: 2,
+                    colIdx: 3,
                 },
                 spellIds: [63373, 63374],
                 maxPoints: 2,
