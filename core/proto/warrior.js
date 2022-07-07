@@ -913,7 +913,7 @@ class Warrior_Options$Type extends MessageType {
     constructor() {
         super("proto.Warrior.Options", [
             { no: 1, name: "starting_rage", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
-            { no: 2, name: "use_recklessness", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 2, name: "use_weakness", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 3, name: "shout", kind: "enum", T: () => ["proto.WarriorShout", WarriorShout] },
             { no: 4, name: "precast_shout", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 5, name: "precast_shout_t2", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
@@ -921,7 +921,7 @@ class Warrior_Options$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { startingRage: 0, useRecklessness: false, shout: 0, precastShout: false, precastShoutT2: false, precastShoutSapphire: false };
+        const message = { startingRage: 0, useWeakness: false, shout: 0, precastShout: false, precastShoutT2: false, precastShoutSapphire: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -935,8 +935,8 @@ class Warrior_Options$Type extends MessageType {
                 case /* double starting_rage */ 1:
                     message.startingRage = reader.double();
                     break;
-                case /* bool use_recklessness */ 2:
-                    message.useRecklessness = reader.bool();
+                case /* bool use_weakness */ 2:
+                    message.useWeakness = reader.bool();
                     break;
                 case /* proto.WarriorShout shout */ 3:
                     message.shout = reader.int32();
@@ -965,9 +965,9 @@ class Warrior_Options$Type extends MessageType {
         /* double starting_rage = 1; */
         if (message.startingRage !== 0)
             writer.tag(1, WireType.Bit64).double(message.startingRage);
-        /* bool use_recklessness = 2; */
-        if (message.useRecklessness !== false)
-            writer.tag(2, WireType.Varint).bool(message.useRecklessness);
+        /* bool use_weakness = 2; */
+        if (message.useWeakness !== false)
+            writer.tag(2, WireType.Varint).bool(message.useWeakness);
         /* proto.WarriorShout shout = 3; */
         if (message.shout !== 0)
             writer.tag(3, WireType.Varint).int32(message.shout);

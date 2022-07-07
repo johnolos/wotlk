@@ -154,7 +154,7 @@ export class WarlockSimUI extends IndividualSimUI {
                 IconInputs.BloodFrenzy,
                 IconInputs.HuntersMark,
                 IconInputs.FaerieFire,
-                IconInputs.CurseOfRecklessness,
+                IconInputs.CurseOfWeakness,
             ],
             // Which options are selectable in the 'Consumes' section.
             consumeOptions: {

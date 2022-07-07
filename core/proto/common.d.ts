@@ -401,9 +401,9 @@ export interface Debuffs {
      */
     sunderArmor: boolean;
     /**
-     * @generated from protobuf field: bool curse_of_recklessness = 12;
+     * @generated from protobuf field: bool curse_of_weakness = 12;
      */
-    curseOfRecklessness: boolean;
+    curseOfWeakness: boolean;
     /**
      * @generated from protobuf field: proto.TristateEffect hunters_mark = 15;
      */

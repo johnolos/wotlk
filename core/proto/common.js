@@ -2234,7 +2234,7 @@ class Debuffs$Type extends MessageType {
             { no: 9, name: "expose_armor", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 10, name: "faerie_fire", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 11, name: "sunder_armor", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 12, name: "curse_of_recklessness", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 12, name: "curse_of_weakness", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 15, name: "hunters_mark", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 13, name: "expose_weakness_uptime", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
             { no: 14, name: "expose_weakness_hunter_agility", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
@@ -2248,7 +2248,7 @@ class Debuffs$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { judgementOfWisdom: false, judgementOfLight: false, improvedSealOfTheCrusader: false, misery: false, curseOfElements: 0, isbUptime: 0, shadowWeaving: false, improvedScorch: false, wintersChill: false, bloodFrenzy: false, giftOfArthas: false, mangle: false, exposeArmor: 0, faerieFire: 0, sunderArmor: false, curseOfRecklessness: false, huntersMark: 0, exposeWeaknessUptime: 0, exposeWeaknessHunterAgility: 0, demoralizingRoar: 0, demoralizingShout: 0, thunderClap: 0, insectSwarm: false, scorpidSting: false, shadowEmbrace: false, screech: false };
+        const message = { judgementOfWisdom: false, judgementOfLight: false, improvedSealOfTheCrusader: false, misery: false, curseOfElements: 0, isbUptime: 0, shadowWeaving: false, improvedScorch: false, wintersChill: false, bloodFrenzy: false, giftOfArthas: false, mangle: false, exposeArmor: 0, faerieFire: 0, sunderArmor: false, curseOfWeakness: false, huntersMark: 0, exposeWeaknessUptime: 0, exposeWeaknessHunterAgility: 0, demoralizingRoar: 0, demoralizingShout: 0, thunderClap: 0, insectSwarm: false, scorpidSting: false, shadowEmbrace: false, screech: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -2304,8 +2304,8 @@ class Debuffs$Type extends MessageType {
                 case /* bool sunder_armor */ 11:
                     message.sunderArmor = reader.bool();
                     break;
-                case /* bool curse_of_recklessness */ 12:
-                    message.curseOfRecklessness = reader.bool();
+                case /* bool curse_of_weakness */ 12:
+                    message.curseOfWeakness = reader.bool();
                     break;
                 case /* proto.TristateEffect hunters_mark */ 15:
                     message.huntersMark = reader.int32();
@@ -2394,9 +2394,9 @@ class Debuffs$Type extends MessageType {
         /* bool sunder_armor = 11; */
         if (message.sunderArmor !== false)
             writer.tag(11, WireType.Varint).bool(message.sunderArmor);
-        /* bool curse_of_recklessness = 12; */
-        if (message.curseOfRecklessness !== false)
-            writer.tag(12, WireType.Varint).bool(message.curseOfRecklessness);
+        /* bool curse_of_weakness = 12; */
+        if (message.curseOfWeakness !== false)
+            writer.tag(12, WireType.Varint).bool(message.curseOfWeakness);
         /* proto.TristateEffect hunters_mark = 15; */
         if (message.huntersMark !== 0)
             writer.tag(15, WireType.Varint).int32(message.huntersMark);

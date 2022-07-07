@@ -417,9 +417,9 @@ export declare enum Warlock_Rotation_Curse {
      */
     Elements = 1,
     /**
-     * @generated from protobuf enum value: Recklessness = 2;
+     * @generated from protobuf enum value: Weakness = 2;
      */
-    Recklessness = 2,
+    Weakness = 2,
     /**
      * @generated from protobuf enum value: Doom = 3;
      */

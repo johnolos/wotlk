@@ -39,9 +39,9 @@ export var Warlock_Rotation_Curse;
      */
     Warlock_Rotation_Curse[Warlock_Rotation_Curse["Elements"] = 1] = "Elements";
     /**
-     * @generated from protobuf enum value: Recklessness = 2;
+     * @generated from protobuf enum value: Weakness = 2;
      */
-    Warlock_Rotation_Curse[Warlock_Rotation_Curse["Recklessness"] = 2] = "Recklessness";
+    Warlock_Rotation_Curse[Warlock_Rotation_Curse["Weakness"] = 2] = "Weakness";
     /**
      * @generated from protobuf enum value: Doom = 3;
      */

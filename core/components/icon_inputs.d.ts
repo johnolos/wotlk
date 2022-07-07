@@ -64,7 +64,7 @@ export declare const Mangle: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const Misery: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const ShadowWeaving: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const CurseOfElements: IndividualSimIconPickerConfig<Raid, number>;
-export declare const CurseOfRecklessness: IndividualSimIconPickerConfig<Raid, boolean>;
+export declare const CurseOfWeakness: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const FaerieFire: IndividualSimIconPickerConfig<Raid, number>;
 export declare const ExposeArmor: IndividualSimIconPickerConfig<Raid, number>;
 export declare const SunderArmor: IndividualSimIconPickerConfig<Raid, boolean>;
