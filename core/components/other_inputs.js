@@ -131,25 +131,6 @@ export const NumStartingConjured = {
         enableWhen: (player) => player.getConsumes().startingConjured != Conjured.ConjuredUnknown,
     },
 };
-export const ShadowPriestDPS = {
-    type: 'number',
-    cssClass: 'shadow-priest-dps-picker',
-    getModObject: (simUI) => simUI.player,
-    config: {
-        extraCssClasses: [
-            'shadow-priest-dps-picker',
-            'within-raid-sim-hide',
-        ],
-        label: 'Shadow Priest DPS',
-        changedEvent: (player) => player.buffsChangeEmitter,
-        getValue: (player) => player.getBuffs().shadowPriestDps,
-        setValue: (eventID, player, newValue) => {
-            const buffs = player.getBuffs();
-            buffs.shadowPriestDps = newValue;
-            player.setBuffs(eventID, buffs);
-        },
-    },
-};
 export const ISBUptime = {
     type: 'number',
     getModObject: (simUI) => simUI.sim.raid,

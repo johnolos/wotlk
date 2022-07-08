@@ -198,9 +198,9 @@ export interface IndividualBuffs {
      */
     blessingOfMight: TristateEffect;
     /**
-     * @generated from protobuf field: int32 shadow_priest_dps = 4;
+     * @generated from protobuf field: bool replenishment = 4;
      */
-    shadowPriestDps: number;
+    replenishment: boolean;
     /**
      * @generated from protobuf field: bool unleashed_rage = 7;
      */

@@ -183,7 +183,6 @@ export class BalanceDruidSimUI extends IndividualSimUI {
             // Inputs to include in the 'Other' section on the settings tab.
             otherInputs: {
                 inputs: [
-                    OtherInputs.ShadowPriestDPS,
                     OtherInputs.PrepopPotion,
                     OtherInputs.TankAssignment,
                 ],

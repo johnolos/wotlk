@@ -40,9 +40,9 @@ export declare const ManaTideTotem: IndividualSimIconPickerConfig<Party, number>
 export declare const MoonkinAura: IndividualSimIconPickerConfig<Party, number>;
 export declare const RetributionAura: IndividualSimIconPickerConfig<Party, number>;
 export declare const SanctityAura: IndividualSimIconPickerConfig<Party, number>;
-export declare const TotemOfWrath: IndividualSimIconPickerConfig<Party, number>;
+export declare const TotemOfWrath: IndividualSimIconPickerConfig<Party, boolean>;
 export declare const TrueshotAura: IndividualSimIconPickerConfig<Party, boolean>;
-export declare const WrathOfAirTotem: IndividualSimIconPickerConfig<Party, number>;
+export declare const WrathOfAirTotem: IndividualSimIconPickerConfig<Party, boolean>;
 export declare const BloodPact: IndividualSimIconPickerConfig<Party, number>;
 export declare const DrumsOfBattleBuff: IndividualSimIconPickerConfig<Party, boolean>;
 export declare const DrumsOfRestorationBuff: IndividualSimIconPickerConfig<Party, boolean>;
@@ -54,6 +54,7 @@ export declare const BlessingOfWisdom: IndividualSimIconPickerConfig<Player<any>
 export declare const Innervate: IndividualSimIconPickerConfig<Player<any>, number>;
 export declare const PowerInfusion: IndividualSimIconPickerConfig<Player<any>, number>;
 export declare const UnleashedRage: IndividualSimIconPickerConfig<Player<any>, boolean>;
+export declare const Replenishment: IndividualSimIconPickerConfig<Player<any>, boolean>;
 export declare const BloodFrenzy: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const HuntersMark: IndividualSimIconPickerConfig<Raid, number>;
 export declare const ImprovedScorch: IndividualSimIconPickerConfig<Raid, boolean>;

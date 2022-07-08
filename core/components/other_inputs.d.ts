@@ -57,18 +57,6 @@ export declare const NumStartingConjured: {
         enableWhen: (player: Player<any>) => boolean;
     };
 };
-export declare const ShadowPriestDPS: {
-    type: "number";
-    cssClass: string;
-    getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
-    config: {
-        extraCssClasses: string[];
-        label: string;
-        changedEvent: (player: Player<any>) => TypedEvent<void>;
-        getValue: (player: Player<any>) => number;
-        setValue: (eventID: EventID, player: Player<any>, newValue: number) => void;
-    };
-};
 export declare const ISBUptime: {
     type: "number";
     getModObject: (simUI: IndividualSimUI<any>) => Raid;

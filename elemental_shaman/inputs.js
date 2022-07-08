@@ -10,7 +10,12 @@ export const IconWaterShield = {
     getValue: (player) => player.getSpecOptions().shield == ShamanShield.WaterShield,
     setValue: (eventID, player, newValue) => {
         const newOptions = player.getSpecOptions();
-        newOptions.shield = ShamanShield.WaterShield;
+        if (newValue) {
+            newOptions.shield = ShamanShield.WaterShield;
+        }
+        else {
+            newOptions.shield = ShamanShield.NoShield;
+        }
         player.setSpecOptions(eventID, newOptions);
     },
 };

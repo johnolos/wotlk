@@ -200,7 +200,6 @@ export class WarlockSimUI extends IndividualSimUI {
             otherInputs: {
                 inputs: [
                     OtherInputs.ISBUptime,
-                    OtherInputs.ShadowPriestDPS,
                     OtherInputs.PrepopPotion,
                     OtherInputs.TankAssignment,
                 ],

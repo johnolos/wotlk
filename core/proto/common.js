@@ -1859,7 +1859,7 @@ class IndividualBuffs$Type extends MessageType {
             { no: 9, name: "blessing_of_sanctuary", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 2, name: "blessing_of_wisdom", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 3, name: "blessing_of_might", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 4, name: "shadow_priest_dps", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 4, name: "replenishment", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 7, name: "unleashed_rage", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 5, name: "innervates", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 6, name: "power_infusions", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
@@ -1867,7 +1867,7 @@ class IndividualBuffs$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { blessingOfKings: false, blessingOfSalvation: false, blessingOfSanctuary: false, blessingOfWisdom: 0, blessingOfMight: 0, shadowPriestDps: 0, unleashedRage: false, innervates: 0, powerInfusions: 0, inspirationUptime: 0 };
+        const message = { blessingOfKings: false, blessingOfSalvation: false, blessingOfSanctuary: false, blessingOfWisdom: 0, blessingOfMight: 0, replenishment: false, unleashedRage: false, innervates: 0, powerInfusions: 0, inspirationUptime: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1893,8 +1893,8 @@ class IndividualBuffs$Type extends MessageType {
                 case /* proto.TristateEffect blessing_of_might */ 3:
                     message.blessingOfMight = reader.int32();
                     break;
-                case /* int32 shadow_priest_dps */ 4:
-                    message.shadowPriestDps = reader.int32();
+                case /* bool replenishment */ 4:
+                    message.replenishment = reader.bool();
                     break;
                 case /* bool unleashed_rage */ 7:
                     message.unleashedRage = reader.bool();
@@ -1935,9 +1935,9 @@ class IndividualBuffs$Type extends MessageType {
         /* proto.TristateEffect blessing_of_might = 3; */
         if (message.blessingOfMight !== 0)
             writer.tag(3, WireType.Varint).int32(message.blessingOfMight);
-        /* int32 shadow_priest_dps = 4; */
-        if (message.shadowPriestDps !== 0)
-            writer.tag(4, WireType.Varint).int32(message.shadowPriestDps);
+        /* bool replenishment = 4; */
+        if (message.replenishment !== false)
+            writer.tag(4, WireType.Varint).bool(message.replenishment);
         /* bool unleashed_rage = 7; */
         if (message.unleashedRage !== false)
             writer.tag(7, WireType.Varint).bool(message.unleashedRage);

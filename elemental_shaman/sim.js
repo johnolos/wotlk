@@ -61,6 +61,7 @@ export class ElementalShamanSimUI extends IndividualSimUI {
             // Which stats to display in the Character Stats section, at the bottom of the left-hand sidebar.
             displayStats: [
                 Stat.StatHealth,
+                Stat.StatMana,
                 Stat.StatStamina,
                 Stat.StatIntellect,
                 Stat.StatSpellPower,
@@ -81,14 +82,14 @@ export class ElementalShamanSimUI extends IndividualSimUI {
             },
             defaults: {
                 // Default equipped gear.
-                gear: Presets.P1_PRESET.gear,
+                gear: Presets.PRE_RAID_PRESET.gear,
                 // Default EP weights for sorting gear in the gear picker.
                 epWeights: Stats.fromMap({
-                    [Stat.StatIntellect]: 0.33,
+                    [Stat.StatIntellect]: 0.17,
                     [Stat.StatSpellPower]: 1,
                     [Stat.StatNatureSpellPower]: 1,
-                    [Stat.StatSpellCrit]: 0.78,
-                    [Stat.StatSpellHaste]: 1.25,
+                    [Stat.StatSpellCrit]: 1,
+                    [Stat.StatSpellHaste]: 1,
                     [Stat.StatMP5]: 0.08,
                 }),
                 // Default consumes settings.
@@ -112,6 +113,7 @@ export class ElementalShamanSimUI extends IndividualSimUI {
                     blessingOfSalvation: true,
                 }),
                 debuffs: Debuffs.create({
+                    faerieFire: TristateEffect.TristateEffectImproved,
                     judgementOfWisdom: true,
                     misery: true,
                 }),
@@ -129,9 +131,6 @@ export class ElementalShamanSimUI extends IndividualSimUI {
             ],
             partyBuffInputs: [
                 IconInputs.MoonkinAura,
-                IconInputs.DrumsOfBattleBuff,
-                IconInputs.DrumsOfRestorationBuff,
-                IconInputs.Bloodlust,
                 IconInputs.WrathOfAirTotem,
                 IconInputs.TotemOfWrath,
                 IconInputs.ManaSpringTotem,
@@ -141,7 +140,6 @@ export class ElementalShamanSimUI extends IndividualSimUI {
                 IconInputs.JadePendantOfBlasting,
                 IconInputs.AtieshWarlock,
                 IconInputs.AtieshMage,
-                IconInputs.SanctityAura,
             ],
             playerBuffInputs: [
                 IconInputs.BlessingOfKings,
@@ -152,14 +150,14 @@ export class ElementalShamanSimUI extends IndividualSimUI {
             ],
             // IconInputs to include in the 'Debuffs' section on the settings tab.
             debuffInputs: [
-                IconInputs.JudgementOfWisdom,
                 IconInputs.ImprovedSealOfTheCrusader,
                 IconInputs.Misery,
+                IconInputs.FaerieFire,
             ],
             // Which options are selectable in the 'Consumes' section.
             consumeOptions: {
                 potions: [
-                    Potions.SuperManaPotion,
+                    Potions.RunicManaPotion,
                     Potions.DestructionPotion,
                 ],
                 conjured: [
@@ -167,6 +165,7 @@ export class ElementalShamanSimUI extends IndividualSimUI {
                     Conjured.ConjuredFlameCap,
                 ],
                 flasks: [
+                    Flask.FlaskOfTheFrostWyrm,
                     Flask.FlaskOfBlindingLight,
                     Flask.FlaskOfSupremePower,
                 ],
@@ -185,8 +184,10 @@ export class ElementalShamanSimUI extends IndividualSimUI {
                     Alchohol.AlchoholKreegsStoutBeatdown,
                 ],
                 weaponImbues: [
-                    WeaponImbue.WeaponImbueBrilliantWizardOil,
-                    WeaponImbue.WeaponImbueSuperiorWizardOil,
+                    WeaponImbue.WeaponImbueShamanWindfury,
+                    WeaponImbue.WeaponImbueShamanFlametongue,
+                    WeaponImbue.WeaponImbueShamanFrostbrand,
+                    WeaponImbue.WeaponImbueShamanRockbiter,
                 ],
                 other: [],
             },
@@ -195,7 +196,6 @@ export class ElementalShamanSimUI extends IndividualSimUI {
             // Inputs to include in the 'Other' section on the settings tab.
             otherInputs: {
                 inputs: [
-                    OtherInputs.ShadowPriestDPS,
                     OtherInputs.PrepopPotion,
                     OtherInputs.TankAssignment,
                 ],
@@ -222,12 +222,7 @@ export class ElementalShamanSimUI extends IndividualSimUI {
                 ],
                 // Preset gear configurations that the user can quickly select.
                 gear: [
-                    Presets.P1_PRESET,
-                    Presets.P2_PRESET,
-                    Presets.P3_PRESET,
-                    Presets.P4_PRESET,
-                    Presets.P5_ALLIANCE_PRESET,
-                    Presets.P5_HORDE_PRESET,
+                    Presets.PRE_RAID_PRESET,
                 ],
             },
         });
