@@ -349,6 +349,10 @@ export interface Debuffs {
      */
     isbUptime: number;
     /**
+     * @generated from protobuf field: bool improved_shadow_bolt = 27;
+     */
+    improvedShadowBolt: boolean;
+    /**
      * @generated from protobuf field: bool shadow_weaving = 18;
      */
     shadowWeaving: boolean;
