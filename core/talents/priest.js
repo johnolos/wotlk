@@ -3,7 +3,7 @@ import { newTalentsConfig } from './talents_picker.js';
 export const priestTalentsConfig = newTalentsConfig([
     {
         name: "Discipline",
-        backgroundUrl: "https://wow.zamimg.com/images/wow/talents/backgrounds/wotlk/302.jpg",
+        backgroundUrl: "https://wow.zamimg.com/images/wow/talents/backgrounds/wrath/201.jpg",
         talents: [
             {
                 //fieldName: "unbreakableWill",
@@ -371,7 +371,7 @@ export const priestTalentsConfig = newTalentsConfig([
     },
     {
         name: "Holy",
-        backgroundUrl: "https://wow.zamimg.com/images/wow/talents/backgrounds/wotlk/302.jpg",
+        backgroundUrl: "https://wow.zamimg.com/images/wow/talents/backgrounds/wrath/202.jpg",
         talents: [
             {
                 // //fieldName: "healingFocus",
@@ -734,7 +734,7 @@ export const priestTalentsConfig = newTalentsConfig([
     },
     {
         name: "Shadow",
-        backgroundUrl: "https://wow.zamimg.com/images/wow/talents/backgrounds/wotlk/302.jpg",
+        backgroundUrl: "https://wow.zamimg.com/images/wow/talents/backgrounds/wrath/203.jpg",
         talents: [
             {
                 // //fieldName: "spiritTap",
