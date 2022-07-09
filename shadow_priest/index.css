@@ -3032,7 +3032,6 @@ input, select {
   border-radius: 6px;
   margin: 1px;
   flex: 1;
-  max-width: calc(32vh + 8px);
 }
 
 .talent-tree-header {
@@ -3062,7 +3061,6 @@ input, select {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   background-size: 100% 100%;
-  width: 32vh;
   border-radius: 4px;
 }
 
@@ -3072,11 +3070,9 @@ input, select {
   position: relative;
   cursor: pointer;
   display: inline-block;
-  width: 70%;
-  height: 70%;
   border: 1px solid #40BF40;
   border-radius: 4px;
-  margin: 10px;
+  margin: 15%;
 }
 
 .talent-picker-root[data-points="0"]:not(.talent-picker-can-add) {

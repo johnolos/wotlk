@@ -316,53 +316,88 @@ class HunterTalents$Type extends MessageType {
             { no: 1, name: "improved_aspect_of_the_hawk", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 2, name: "endurance_training", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 3, name: "focused_fire", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 4, name: "unleashed_fury", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 5, name: "ferocity", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 6, name: "bestial_discipline", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 45, name: "animal_handler", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 7, name: "frenzy", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 8, name: "ferocious_inspiration", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 9, name: "bestial_wrath", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 10, name: "serpents_swiftness", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 11, name: "the_beast_within", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 12, name: "lethal_shots", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 13, name: "improved_hunters_mark", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 14, name: "efficiency", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 15, name: "go_for_the_throat", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 16, name: "improved_arcane_shot", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 17, name: "aimed_shot", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 18, name: "rapid_killing", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 19, name: "improved_stings", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 20, name: "mortal_shots", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 21, name: "scatter_shot", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 22, name: "barrage", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 23, name: "combat_experience", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 24, name: "ranged_weapon_specialization", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 25, name: "careful_aim", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 26, name: "trueshot_aura", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 27, name: "improved_barrage", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 28, name: "master_marksman", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 29, name: "silencing_shot", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 30, name: "monster_slaying", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 31, name: "humanoid_slaying", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 32, name: "savage_strikes", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 46, name: "deflection", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 33, name: "clever_traps", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 34, name: "survivalist", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 35, name: "trap_mastery", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 36, name: "surefooted", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 37, name: "survival_instincts", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 38, name: "killer_instinct", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 39, name: "resourcefulness", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 40, name: "lightning_reflexes", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 41, name: "thrill_of_the_hunt", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 42, name: "expose_weakness", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 43, name: "master_tactician", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 44, name: "readiness", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 4, name: "improved_aspect_of_the_monkey", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 5, name: "thick_hide", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 6, name: "improved_revive_pet", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 7, name: "pathfinding", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 8, name: "aspect_mastery", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 9, name: "unleashed_fury", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 10, name: "improved_mend_pet", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 11, name: "ferocity", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 12, name: "spirit_bond", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 13, name: "intimidation", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 14, name: "bestial_discipline", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 15, name: "animal_handler", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 16, name: "frenzy", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 17, name: "ferocious_inspiration", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 18, name: "bestial_wrath", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 19, name: "catlike_reflexes", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 20, name: "invigoration", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 21, name: "serpents_swiftness", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 22, name: "longevity", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 23, name: "the_beast_within", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 24, name: "cobra_strikes", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 25, name: "kindred_spirits", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 26, name: "beast_mastery", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 27, name: "improved_concussive_shot", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 28, name: "focused_aim", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 29, name: "lethal_shots", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 30, name: "careful_aim", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 31, name: "improved_hunters_mark", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 32, name: "mortal_shots", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 33, name: "go_for_the_throat", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 34, name: "improved_arcane_shot", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 35, name: "aimed_shot", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 36, name: "rapid_killing", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 37, name: "improved_stings", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 38, name: "efficiency", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 39, name: "concussive_barrage", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 40, name: "readiness", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 41, name: "barrage", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 42, name: "combat_experience", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 43, name: "ranged_weapon_specialization", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 44, name: "piercing_shots", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 45, name: "trueshot_aura", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 46, name: "improved_barrage", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 47, name: "master_marksman", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 48, name: "rapid_recuperation", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 49, name: "wild_quiver", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 50, name: "silencing_shot", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 51, name: "improved_steady_shot", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 52, name: "marked_for_death", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 53, name: "chimera_shot", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 54, name: "improved_tracking", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 55, name: "hawk_eye", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 56, name: "savage_strikes", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 57, name: "surefooted", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 58, name: "entrapment", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 59, name: "trap_mastery", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 60, name: "survival_instincts", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 61, name: "survivalist", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 62, name: "scatter_shot", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 63, name: "deflection", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 64, name: "survival_tactics", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 65, name: "t_n_t", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 66, name: "lock_and_load", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 67, name: "hunter_vs_wild", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 68, name: "killer_instinct", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 69, name: "counterattack", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 70, name: "lightning_reflexes", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 71, name: "resourcefulness", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 72, name: "expose_weakness", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 73, name: "wyvern_sting", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 74, name: "thrill_of_the_hunt", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 75, name: "master_tactician", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 76, name: "noxious_stings", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 77, name: "point_of_no_escape", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 78, name: "black_arrow", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 79, name: "sniper_training", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 80, name: "hunting_party", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 81, name: "explosive_shot", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { improvedAspectOfTheHawk: 0, enduranceTraining: 0, focusedFire: 0, unleashedFury: 0, ferocity: 0, bestialDiscipline: 0, animalHandler: 0, frenzy: 0, ferociousInspiration: 0, bestialWrath: false, serpentsSwiftness: 0, theBeastWithin: false, lethalShots: 0, improvedHuntersMark: 0, efficiency: 0, goForTheThroat: 0, improvedArcaneShot: 0, aimedShot: false, rapidKilling: 0, improvedStings: 0, mortalShots: 0, scatterShot: false, barrage: 0, combatExperience: 0, rangedWeaponSpecialization: 0, carefulAim: 0, trueshotAura: false, improvedBarrage: 0, masterMarksman: 0, silencingShot: false, monsterSlaying: 0, humanoidSlaying: 0, savageStrikes: 0, deflection: 0, cleverTraps: 0, survivalist: 0, trapMastery: 0, surefooted: 0, survivalInstincts: 0, killerInstinct: 0, resourcefulness: 0, lightningReflexes: 0, thrillOfTheHunt: 0, exposeWeakness: 0, masterTactician: 0, readiness: false };
+        const message = { improvedAspectOfTheHawk: 0, enduranceTraining: 0, focusedFire: 0, improvedAspectOfTheMonkey: 0, thickHide: 0, improvedRevivePet: 0, pathfinding: 0, aspectMastery: false, unleashedFury: 0, improvedMendPet: 0, ferocity: 0, spiritBond: 0, intimidation: false, bestialDiscipline: 0, animalHandler: 0, frenzy: 0, ferociousInspiration: 0, bestialWrath: false, catlikeReflexes: 0, invigoration: 0, serpentsSwiftness: 0, longevity: 0, theBeastWithin: false, cobraStrikes: 0, kindredSpirits: 0, beastMastery: false, improvedConcussiveShot: 0, focusedAim: 0, lethalShots: 0, carefulAim: 0, improvedHuntersMark: 0, mortalShots: 0, goForTheThroat: 0, improvedArcaneShot: 0, aimedShot: false, rapidKilling: 0, improvedStings: 0, efficiency: 0, concussiveBarrage: 0, readiness: false, barrage: 0, combatExperience: 0, rangedWeaponSpecialization: 0, piercingShots: 0, trueshotAura: false, improvedBarrage: 0, masterMarksman: 0, rapidRecuperation: 0, wildQuiver: 0, silencingShot: false, improvedSteadyShot: 0, markedForDeath: 0, chimeraShot: false, improvedTracking: 0, hawkEye: 0, savageStrikes: 0, surefooted: 0, entrapment: 0, trapMastery: 0, survivalInstincts: 0, survivalist: 0, scatterShot: false, deflection: 0, survivalTactics: 0, tNT: 0, lockAndLoad: 0, hunterVsWild: 0, killerInstinct: 0, counterattack: false, lightningReflexes: 0, resourcefulness: 0, exposeWeakness: 0, wyvernSting: false, thrillOfTheHunt: 0, masterTactician: 0, noxiousStings: 0, pointOfNoEscape: 0, blackArrow: false, sniperTraining: 0, huntingParty: 0, explosiveShot: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -382,134 +417,239 @@ class HunterTalents$Type extends MessageType {
                 case /* int32 focused_fire */ 3:
                     message.focusedFire = reader.int32();
                     break;
-                case /* int32 unleashed_fury */ 4:
+                case /* int32 improved_aspect_of_the_monkey */ 4:
+                    message.improvedAspectOfTheMonkey = reader.int32();
+                    break;
+                case /* int32 thick_hide */ 5:
+                    message.thickHide = reader.int32();
+                    break;
+                case /* int32 improved_revive_pet */ 6:
+                    message.improvedRevivePet = reader.int32();
+                    break;
+                case /* int32 pathfinding */ 7:
+                    message.pathfinding = reader.int32();
+                    break;
+                case /* bool aspect_mastery */ 8:
+                    message.aspectMastery = reader.bool();
+                    break;
+                case /* int32 unleashed_fury */ 9:
                     message.unleashedFury = reader.int32();
                     break;
-                case /* int32 ferocity */ 5:
+                case /* int32 improved_mend_pet */ 10:
+                    message.improvedMendPet = reader.int32();
+                    break;
+                case /* int32 ferocity */ 11:
                     message.ferocity = reader.int32();
                     break;
-                case /* int32 bestial_discipline */ 6:
+                case /* int32 spirit_bond */ 12:
+                    message.spiritBond = reader.int32();
+                    break;
+                case /* bool intimidation */ 13:
+                    message.intimidation = reader.bool();
+                    break;
+                case /* int32 bestial_discipline */ 14:
                     message.bestialDiscipline = reader.int32();
                     break;
-                case /* int32 animal_handler */ 45:
+                case /* int32 animal_handler */ 15:
                     message.animalHandler = reader.int32();
                     break;
-                case /* int32 frenzy */ 7:
+                case /* int32 frenzy */ 16:
                     message.frenzy = reader.int32();
                     break;
-                case /* int32 ferocious_inspiration */ 8:
+                case /* int32 ferocious_inspiration */ 17:
                     message.ferociousInspiration = reader.int32();
                     break;
-                case /* bool bestial_wrath */ 9:
+                case /* bool bestial_wrath */ 18:
                     message.bestialWrath = reader.bool();
                     break;
-                case /* int32 serpents_swiftness */ 10:
+                case /* int32 catlike_reflexes */ 19:
+                    message.catlikeReflexes = reader.int32();
+                    break;
+                case /* int32 invigoration */ 20:
+                    message.invigoration = reader.int32();
+                    break;
+                case /* int32 serpents_swiftness */ 21:
                     message.serpentsSwiftness = reader.int32();
                     break;
-                case /* bool the_beast_within */ 11:
+                case /* int32 longevity */ 22:
+                    message.longevity = reader.int32();
+                    break;
+                case /* bool the_beast_within */ 23:
                     message.theBeastWithin = reader.bool();
                     break;
-                case /* int32 lethal_shots */ 12:
+                case /* int32 cobra_strikes */ 24:
+                    message.cobraStrikes = reader.int32();
+                    break;
+                case /* int32 kindred_spirits */ 25:
+                    message.kindredSpirits = reader.int32();
+                    break;
+                case /* bool beast_mastery */ 26:
+                    message.beastMastery = reader.bool();
+                    break;
+                case /* int32 improved_concussive_shot */ 27:
+                    message.improvedConcussiveShot = reader.int32();
+                    break;
+                case /* int32 focused_aim */ 28:
+                    message.focusedAim = reader.int32();
+                    break;
+                case /* int32 lethal_shots */ 29:
                     message.lethalShots = reader.int32();
                     break;
-                case /* int32 improved_hunters_mark */ 13:
-                    message.improvedHuntersMark = reader.int32();
-                    break;
-                case /* int32 efficiency */ 14:
-                    message.efficiency = reader.int32();
-                    break;
-                case /* int32 go_for_the_throat */ 15:
-                    message.goForTheThroat = reader.int32();
-                    break;
-                case /* int32 improved_arcane_shot */ 16:
-                    message.improvedArcaneShot = reader.int32();
-                    break;
-                case /* bool aimed_shot */ 17:
-                    message.aimedShot = reader.bool();
-                    break;
-                case /* int32 rapid_killing */ 18:
-                    message.rapidKilling = reader.int32();
-                    break;
-                case /* int32 improved_stings */ 19:
-                    message.improvedStings = reader.int32();
-                    break;
-                case /* int32 mortal_shots */ 20:
-                    message.mortalShots = reader.int32();
-                    break;
-                case /* bool scatter_shot */ 21:
-                    message.scatterShot = reader.bool();
-                    break;
-                case /* int32 barrage */ 22:
-                    message.barrage = reader.int32();
-                    break;
-                case /* int32 combat_experience */ 23:
-                    message.combatExperience = reader.int32();
-                    break;
-                case /* int32 ranged_weapon_specialization */ 24:
-                    message.rangedWeaponSpecialization = reader.int32();
-                    break;
-                case /* int32 careful_aim */ 25:
+                case /* int32 careful_aim */ 30:
                     message.carefulAim = reader.int32();
                     break;
-                case /* bool trueshot_aura */ 26:
+                case /* int32 improved_hunters_mark */ 31:
+                    message.improvedHuntersMark = reader.int32();
+                    break;
+                case /* int32 mortal_shots */ 32:
+                    message.mortalShots = reader.int32();
+                    break;
+                case /* int32 go_for_the_throat */ 33:
+                    message.goForTheThroat = reader.int32();
+                    break;
+                case /* int32 improved_arcane_shot */ 34:
+                    message.improvedArcaneShot = reader.int32();
+                    break;
+                case /* bool aimed_shot */ 35:
+                    message.aimedShot = reader.bool();
+                    break;
+                case /* int32 rapid_killing */ 36:
+                    message.rapidKilling = reader.int32();
+                    break;
+                case /* int32 improved_stings */ 37:
+                    message.improvedStings = reader.int32();
+                    break;
+                case /* int32 efficiency */ 38:
+                    message.efficiency = reader.int32();
+                    break;
+                case /* int32 concussive_barrage */ 39:
+                    message.concussiveBarrage = reader.int32();
+                    break;
+                case /* bool readiness */ 40:
+                    message.readiness = reader.bool();
+                    break;
+                case /* int32 barrage */ 41:
+                    message.barrage = reader.int32();
+                    break;
+                case /* int32 combat_experience */ 42:
+                    message.combatExperience = reader.int32();
+                    break;
+                case /* int32 ranged_weapon_specialization */ 43:
+                    message.rangedWeaponSpecialization = reader.int32();
+                    break;
+                case /* int32 piercing_shots */ 44:
+                    message.piercingShots = reader.int32();
+                    break;
+                case /* bool trueshot_aura */ 45:
                     message.trueshotAura = reader.bool();
                     break;
-                case /* int32 improved_barrage */ 27:
+                case /* int32 improved_barrage */ 46:
                     message.improvedBarrage = reader.int32();
                     break;
-                case /* int32 master_marksman */ 28:
+                case /* int32 master_marksman */ 47:
                     message.masterMarksman = reader.int32();
                     break;
-                case /* bool silencing_shot */ 29:
+                case /* int32 rapid_recuperation */ 48:
+                    message.rapidRecuperation = reader.int32();
+                    break;
+                case /* int32 wild_quiver */ 49:
+                    message.wildQuiver = reader.int32();
+                    break;
+                case /* bool silencing_shot */ 50:
                     message.silencingShot = reader.bool();
                     break;
-                case /* int32 monster_slaying */ 30:
-                    message.monsterSlaying = reader.int32();
+                case /* int32 improved_steady_shot */ 51:
+                    message.improvedSteadyShot = reader.int32();
                     break;
-                case /* int32 humanoid_slaying */ 31:
-                    message.humanoidSlaying = reader.int32();
+                case /* int32 marked_for_death */ 52:
+                    message.markedForDeath = reader.int32();
                     break;
-                case /* int32 savage_strikes */ 32:
+                case /* bool chimera_shot */ 53:
+                    message.chimeraShot = reader.bool();
+                    break;
+                case /* int32 improved_tracking */ 54:
+                    message.improvedTracking = reader.int32();
+                    break;
+                case /* int32 hawk_eye */ 55:
+                    message.hawkEye = reader.int32();
+                    break;
+                case /* int32 savage_strikes */ 56:
                     message.savageStrikes = reader.int32();
                     break;
-                case /* int32 deflection */ 46:
-                    message.deflection = reader.int32();
-                    break;
-                case /* int32 clever_traps */ 33:
-                    message.cleverTraps = reader.int32();
-                    break;
-                case /* int32 survivalist */ 34:
-                    message.survivalist = reader.int32();
-                    break;
-                case /* int32 trap_mastery */ 35:
-                    message.trapMastery = reader.int32();
-                    break;
-                case /* int32 surefooted */ 36:
+                case /* int32 surefooted */ 57:
                     message.surefooted = reader.int32();
                     break;
-                case /* int32 survival_instincts */ 37:
+                case /* int32 entrapment */ 58:
+                    message.entrapment = reader.int32();
+                    break;
+                case /* int32 trap_mastery */ 59:
+                    message.trapMastery = reader.int32();
+                    break;
+                case /* int32 survival_instincts */ 60:
                     message.survivalInstincts = reader.int32();
                     break;
-                case /* int32 killer_instinct */ 38:
+                case /* int32 survivalist */ 61:
+                    message.survivalist = reader.int32();
+                    break;
+                case /* bool scatter_shot */ 62:
+                    message.scatterShot = reader.bool();
+                    break;
+                case /* int32 deflection */ 63:
+                    message.deflection = reader.int32();
+                    break;
+                case /* int32 survival_tactics */ 64:
+                    message.survivalTactics = reader.int32();
+                    break;
+                case /* int32 t_n_t */ 65:
+                    message.tNT = reader.int32();
+                    break;
+                case /* int32 lock_and_load */ 66:
+                    message.lockAndLoad = reader.int32();
+                    break;
+                case /* int32 hunter_vs_wild */ 67:
+                    message.hunterVsWild = reader.int32();
+                    break;
+                case /* int32 killer_instinct */ 68:
                     message.killerInstinct = reader.int32();
                     break;
-                case /* int32 resourcefulness */ 39:
-                    message.resourcefulness = reader.int32();
+                case /* bool counterattack */ 69:
+                    message.counterattack = reader.bool();
                     break;
-                case /* int32 lightning_reflexes */ 40:
+                case /* int32 lightning_reflexes */ 70:
                     message.lightningReflexes = reader.int32();
                     break;
-                case /* int32 thrill_of_the_hunt */ 41:
-                    message.thrillOfTheHunt = reader.int32();
+                case /* int32 resourcefulness */ 71:
+                    message.resourcefulness = reader.int32();
                     break;
-                case /* int32 expose_weakness */ 42:
+                case /* int32 expose_weakness */ 72:
                     message.exposeWeakness = reader.int32();
                     break;
-                case /* int32 master_tactician */ 43:
+                case /* bool wyvern_sting */ 73:
+                    message.wyvernSting = reader.bool();
+                    break;
+                case /* int32 thrill_of_the_hunt */ 74:
+                    message.thrillOfTheHunt = reader.int32();
+                    break;
+                case /* int32 master_tactician */ 75:
                     message.masterTactician = reader.int32();
                     break;
-                case /* bool readiness */ 44:
-                    message.readiness = reader.bool();
+                case /* int32 noxious_stings */ 76:
+                    message.noxiousStings = reader.int32();
+                    break;
+                case /* int32 point_of_no_escape */ 77:
+                    message.pointOfNoEscape = reader.int32();
+                    break;
+                case /* bool black_arrow */ 78:
+                    message.blackArrow = reader.bool();
+                    break;
+                case /* int32 sniper_training */ 79:
+                    message.sniperTraining = reader.int32();
+                    break;
+                case /* int32 hunting_party */ 80:
+                    message.huntingParty = reader.int32();
+                    break;
+                case /* bool explosive_shot */ 81:
+                    message.explosiveShot = reader.bool();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -532,135 +672,240 @@ class HunterTalents$Type extends MessageType {
         /* int32 focused_fire = 3; */
         if (message.focusedFire !== 0)
             writer.tag(3, WireType.Varint).int32(message.focusedFire);
-        /* int32 unleashed_fury = 4; */
+        /* int32 improved_aspect_of_the_monkey = 4; */
+        if (message.improvedAspectOfTheMonkey !== 0)
+            writer.tag(4, WireType.Varint).int32(message.improvedAspectOfTheMonkey);
+        /* int32 thick_hide = 5; */
+        if (message.thickHide !== 0)
+            writer.tag(5, WireType.Varint).int32(message.thickHide);
+        /* int32 improved_revive_pet = 6; */
+        if (message.improvedRevivePet !== 0)
+            writer.tag(6, WireType.Varint).int32(message.improvedRevivePet);
+        /* int32 pathfinding = 7; */
+        if (message.pathfinding !== 0)
+            writer.tag(7, WireType.Varint).int32(message.pathfinding);
+        /* bool aspect_mastery = 8; */
+        if (message.aspectMastery !== false)
+            writer.tag(8, WireType.Varint).bool(message.aspectMastery);
+        /* int32 unleashed_fury = 9; */
         if (message.unleashedFury !== 0)
-            writer.tag(4, WireType.Varint).int32(message.unleashedFury);
-        /* int32 ferocity = 5; */
+            writer.tag(9, WireType.Varint).int32(message.unleashedFury);
+        /* int32 improved_mend_pet = 10; */
+        if (message.improvedMendPet !== 0)
+            writer.tag(10, WireType.Varint).int32(message.improvedMendPet);
+        /* int32 ferocity = 11; */
         if (message.ferocity !== 0)
-            writer.tag(5, WireType.Varint).int32(message.ferocity);
-        /* int32 bestial_discipline = 6; */
+            writer.tag(11, WireType.Varint).int32(message.ferocity);
+        /* int32 spirit_bond = 12; */
+        if (message.spiritBond !== 0)
+            writer.tag(12, WireType.Varint).int32(message.spiritBond);
+        /* bool intimidation = 13; */
+        if (message.intimidation !== false)
+            writer.tag(13, WireType.Varint).bool(message.intimidation);
+        /* int32 bestial_discipline = 14; */
         if (message.bestialDiscipline !== 0)
-            writer.tag(6, WireType.Varint).int32(message.bestialDiscipline);
-        /* int32 animal_handler = 45; */
+            writer.tag(14, WireType.Varint).int32(message.bestialDiscipline);
+        /* int32 animal_handler = 15; */
         if (message.animalHandler !== 0)
-            writer.tag(45, WireType.Varint).int32(message.animalHandler);
-        /* int32 frenzy = 7; */
+            writer.tag(15, WireType.Varint).int32(message.animalHandler);
+        /* int32 frenzy = 16; */
         if (message.frenzy !== 0)
-            writer.tag(7, WireType.Varint).int32(message.frenzy);
-        /* int32 ferocious_inspiration = 8; */
+            writer.tag(16, WireType.Varint).int32(message.frenzy);
+        /* int32 ferocious_inspiration = 17; */
         if (message.ferociousInspiration !== 0)
-            writer.tag(8, WireType.Varint).int32(message.ferociousInspiration);
-        /* bool bestial_wrath = 9; */
+            writer.tag(17, WireType.Varint).int32(message.ferociousInspiration);
+        /* bool bestial_wrath = 18; */
         if (message.bestialWrath !== false)
-            writer.tag(9, WireType.Varint).bool(message.bestialWrath);
-        /* int32 serpents_swiftness = 10; */
+            writer.tag(18, WireType.Varint).bool(message.bestialWrath);
+        /* int32 catlike_reflexes = 19; */
+        if (message.catlikeReflexes !== 0)
+            writer.tag(19, WireType.Varint).int32(message.catlikeReflexes);
+        /* int32 invigoration = 20; */
+        if (message.invigoration !== 0)
+            writer.tag(20, WireType.Varint).int32(message.invigoration);
+        /* int32 serpents_swiftness = 21; */
         if (message.serpentsSwiftness !== 0)
-            writer.tag(10, WireType.Varint).int32(message.serpentsSwiftness);
-        /* bool the_beast_within = 11; */
+            writer.tag(21, WireType.Varint).int32(message.serpentsSwiftness);
+        /* int32 longevity = 22; */
+        if (message.longevity !== 0)
+            writer.tag(22, WireType.Varint).int32(message.longevity);
+        /* bool the_beast_within = 23; */
         if (message.theBeastWithin !== false)
-            writer.tag(11, WireType.Varint).bool(message.theBeastWithin);
-        /* int32 lethal_shots = 12; */
+            writer.tag(23, WireType.Varint).bool(message.theBeastWithin);
+        /* int32 cobra_strikes = 24; */
+        if (message.cobraStrikes !== 0)
+            writer.tag(24, WireType.Varint).int32(message.cobraStrikes);
+        /* int32 kindred_spirits = 25; */
+        if (message.kindredSpirits !== 0)
+            writer.tag(25, WireType.Varint).int32(message.kindredSpirits);
+        /* bool beast_mastery = 26; */
+        if (message.beastMastery !== false)
+            writer.tag(26, WireType.Varint).bool(message.beastMastery);
+        /* int32 improved_concussive_shot = 27; */
+        if (message.improvedConcussiveShot !== 0)
+            writer.tag(27, WireType.Varint).int32(message.improvedConcussiveShot);
+        /* int32 focused_aim = 28; */
+        if (message.focusedAim !== 0)
+            writer.tag(28, WireType.Varint).int32(message.focusedAim);
+        /* int32 lethal_shots = 29; */
         if (message.lethalShots !== 0)
-            writer.tag(12, WireType.Varint).int32(message.lethalShots);
-        /* int32 improved_hunters_mark = 13; */
-        if (message.improvedHuntersMark !== 0)
-            writer.tag(13, WireType.Varint).int32(message.improvedHuntersMark);
-        /* int32 efficiency = 14; */
-        if (message.efficiency !== 0)
-            writer.tag(14, WireType.Varint).int32(message.efficiency);
-        /* int32 go_for_the_throat = 15; */
-        if (message.goForTheThroat !== 0)
-            writer.tag(15, WireType.Varint).int32(message.goForTheThroat);
-        /* int32 improved_arcane_shot = 16; */
-        if (message.improvedArcaneShot !== 0)
-            writer.tag(16, WireType.Varint).int32(message.improvedArcaneShot);
-        /* bool aimed_shot = 17; */
-        if (message.aimedShot !== false)
-            writer.tag(17, WireType.Varint).bool(message.aimedShot);
-        /* int32 rapid_killing = 18; */
-        if (message.rapidKilling !== 0)
-            writer.tag(18, WireType.Varint).int32(message.rapidKilling);
-        /* int32 improved_stings = 19; */
-        if (message.improvedStings !== 0)
-            writer.tag(19, WireType.Varint).int32(message.improvedStings);
-        /* int32 mortal_shots = 20; */
-        if (message.mortalShots !== 0)
-            writer.tag(20, WireType.Varint).int32(message.mortalShots);
-        /* bool scatter_shot = 21; */
-        if (message.scatterShot !== false)
-            writer.tag(21, WireType.Varint).bool(message.scatterShot);
-        /* int32 barrage = 22; */
-        if (message.barrage !== 0)
-            writer.tag(22, WireType.Varint).int32(message.barrage);
-        /* int32 combat_experience = 23; */
-        if (message.combatExperience !== 0)
-            writer.tag(23, WireType.Varint).int32(message.combatExperience);
-        /* int32 ranged_weapon_specialization = 24; */
-        if (message.rangedWeaponSpecialization !== 0)
-            writer.tag(24, WireType.Varint).int32(message.rangedWeaponSpecialization);
-        /* int32 careful_aim = 25; */
+            writer.tag(29, WireType.Varint).int32(message.lethalShots);
+        /* int32 careful_aim = 30; */
         if (message.carefulAim !== 0)
-            writer.tag(25, WireType.Varint).int32(message.carefulAim);
-        /* bool trueshot_aura = 26; */
-        if (message.trueshotAura !== false)
-            writer.tag(26, WireType.Varint).bool(message.trueshotAura);
-        /* int32 improved_barrage = 27; */
-        if (message.improvedBarrage !== 0)
-            writer.tag(27, WireType.Varint).int32(message.improvedBarrage);
-        /* int32 master_marksman = 28; */
-        if (message.masterMarksman !== 0)
-            writer.tag(28, WireType.Varint).int32(message.masterMarksman);
-        /* bool silencing_shot = 29; */
-        if (message.silencingShot !== false)
-            writer.tag(29, WireType.Varint).bool(message.silencingShot);
-        /* int32 monster_slaying = 30; */
-        if (message.monsterSlaying !== 0)
-            writer.tag(30, WireType.Varint).int32(message.monsterSlaying);
-        /* int32 humanoid_slaying = 31; */
-        if (message.humanoidSlaying !== 0)
-            writer.tag(31, WireType.Varint).int32(message.humanoidSlaying);
-        /* int32 savage_strikes = 32; */
-        if (message.savageStrikes !== 0)
-            writer.tag(32, WireType.Varint).int32(message.savageStrikes);
-        /* int32 deflection = 46; */
-        if (message.deflection !== 0)
-            writer.tag(46, WireType.Varint).int32(message.deflection);
-        /* int32 clever_traps = 33; */
-        if (message.cleverTraps !== 0)
-            writer.tag(33, WireType.Varint).int32(message.cleverTraps);
-        /* int32 survivalist = 34; */
-        if (message.survivalist !== 0)
-            writer.tag(34, WireType.Varint).int32(message.survivalist);
-        /* int32 trap_mastery = 35; */
-        if (message.trapMastery !== 0)
-            writer.tag(35, WireType.Varint).int32(message.trapMastery);
-        /* int32 surefooted = 36; */
-        if (message.surefooted !== 0)
-            writer.tag(36, WireType.Varint).int32(message.surefooted);
-        /* int32 survival_instincts = 37; */
-        if (message.survivalInstincts !== 0)
-            writer.tag(37, WireType.Varint).int32(message.survivalInstincts);
-        /* int32 killer_instinct = 38; */
-        if (message.killerInstinct !== 0)
-            writer.tag(38, WireType.Varint).int32(message.killerInstinct);
-        /* int32 resourcefulness = 39; */
-        if (message.resourcefulness !== 0)
-            writer.tag(39, WireType.Varint).int32(message.resourcefulness);
-        /* int32 lightning_reflexes = 40; */
-        if (message.lightningReflexes !== 0)
-            writer.tag(40, WireType.Varint).int32(message.lightningReflexes);
-        /* int32 thrill_of_the_hunt = 41; */
-        if (message.thrillOfTheHunt !== 0)
-            writer.tag(41, WireType.Varint).int32(message.thrillOfTheHunt);
-        /* int32 expose_weakness = 42; */
-        if (message.exposeWeakness !== 0)
-            writer.tag(42, WireType.Varint).int32(message.exposeWeakness);
-        /* int32 master_tactician = 43; */
-        if (message.masterTactician !== 0)
-            writer.tag(43, WireType.Varint).int32(message.masterTactician);
-        /* bool readiness = 44; */
+            writer.tag(30, WireType.Varint).int32(message.carefulAim);
+        /* int32 improved_hunters_mark = 31; */
+        if (message.improvedHuntersMark !== 0)
+            writer.tag(31, WireType.Varint).int32(message.improvedHuntersMark);
+        /* int32 mortal_shots = 32; */
+        if (message.mortalShots !== 0)
+            writer.tag(32, WireType.Varint).int32(message.mortalShots);
+        /* int32 go_for_the_throat = 33; */
+        if (message.goForTheThroat !== 0)
+            writer.tag(33, WireType.Varint).int32(message.goForTheThroat);
+        /* int32 improved_arcane_shot = 34; */
+        if (message.improvedArcaneShot !== 0)
+            writer.tag(34, WireType.Varint).int32(message.improvedArcaneShot);
+        /* bool aimed_shot = 35; */
+        if (message.aimedShot !== false)
+            writer.tag(35, WireType.Varint).bool(message.aimedShot);
+        /* int32 rapid_killing = 36; */
+        if (message.rapidKilling !== 0)
+            writer.tag(36, WireType.Varint).int32(message.rapidKilling);
+        /* int32 improved_stings = 37; */
+        if (message.improvedStings !== 0)
+            writer.tag(37, WireType.Varint).int32(message.improvedStings);
+        /* int32 efficiency = 38; */
+        if (message.efficiency !== 0)
+            writer.tag(38, WireType.Varint).int32(message.efficiency);
+        /* int32 concussive_barrage = 39; */
+        if (message.concussiveBarrage !== 0)
+            writer.tag(39, WireType.Varint).int32(message.concussiveBarrage);
+        /* bool readiness = 40; */
         if (message.readiness !== false)
-            writer.tag(44, WireType.Varint).bool(message.readiness);
+            writer.tag(40, WireType.Varint).bool(message.readiness);
+        /* int32 barrage = 41; */
+        if (message.barrage !== 0)
+            writer.tag(41, WireType.Varint).int32(message.barrage);
+        /* int32 combat_experience = 42; */
+        if (message.combatExperience !== 0)
+            writer.tag(42, WireType.Varint).int32(message.combatExperience);
+        /* int32 ranged_weapon_specialization = 43; */
+        if (message.rangedWeaponSpecialization !== 0)
+            writer.tag(43, WireType.Varint).int32(message.rangedWeaponSpecialization);
+        /* int32 piercing_shots = 44; */
+        if (message.piercingShots !== 0)
+            writer.tag(44, WireType.Varint).int32(message.piercingShots);
+        /* bool trueshot_aura = 45; */
+        if (message.trueshotAura !== false)
+            writer.tag(45, WireType.Varint).bool(message.trueshotAura);
+        /* int32 improved_barrage = 46; */
+        if (message.improvedBarrage !== 0)
+            writer.tag(46, WireType.Varint).int32(message.improvedBarrage);
+        /* int32 master_marksman = 47; */
+        if (message.masterMarksman !== 0)
+            writer.tag(47, WireType.Varint).int32(message.masterMarksman);
+        /* int32 rapid_recuperation = 48; */
+        if (message.rapidRecuperation !== 0)
+            writer.tag(48, WireType.Varint).int32(message.rapidRecuperation);
+        /* int32 wild_quiver = 49; */
+        if (message.wildQuiver !== 0)
+            writer.tag(49, WireType.Varint).int32(message.wildQuiver);
+        /* bool silencing_shot = 50; */
+        if (message.silencingShot !== false)
+            writer.tag(50, WireType.Varint).bool(message.silencingShot);
+        /* int32 improved_steady_shot = 51; */
+        if (message.improvedSteadyShot !== 0)
+            writer.tag(51, WireType.Varint).int32(message.improvedSteadyShot);
+        /* int32 marked_for_death = 52; */
+        if (message.markedForDeath !== 0)
+            writer.tag(52, WireType.Varint).int32(message.markedForDeath);
+        /* bool chimera_shot = 53; */
+        if (message.chimeraShot !== false)
+            writer.tag(53, WireType.Varint).bool(message.chimeraShot);
+        /* int32 improved_tracking = 54; */
+        if (message.improvedTracking !== 0)
+            writer.tag(54, WireType.Varint).int32(message.improvedTracking);
+        /* int32 hawk_eye = 55; */
+        if (message.hawkEye !== 0)
+            writer.tag(55, WireType.Varint).int32(message.hawkEye);
+        /* int32 savage_strikes = 56; */
+        if (message.savageStrikes !== 0)
+            writer.tag(56, WireType.Varint).int32(message.savageStrikes);
+        /* int32 surefooted = 57; */
+        if (message.surefooted !== 0)
+            writer.tag(57, WireType.Varint).int32(message.surefooted);
+        /* int32 entrapment = 58; */
+        if (message.entrapment !== 0)
+            writer.tag(58, WireType.Varint).int32(message.entrapment);
+        /* int32 trap_mastery = 59; */
+        if (message.trapMastery !== 0)
+            writer.tag(59, WireType.Varint).int32(message.trapMastery);
+        /* int32 survival_instincts = 60; */
+        if (message.survivalInstincts !== 0)
+            writer.tag(60, WireType.Varint).int32(message.survivalInstincts);
+        /* int32 survivalist = 61; */
+        if (message.survivalist !== 0)
+            writer.tag(61, WireType.Varint).int32(message.survivalist);
+        /* bool scatter_shot = 62; */
+        if (message.scatterShot !== false)
+            writer.tag(62, WireType.Varint).bool(message.scatterShot);
+        /* int32 deflection = 63; */
+        if (message.deflection !== 0)
+            writer.tag(63, WireType.Varint).int32(message.deflection);
+        /* int32 survival_tactics = 64; */
+        if (message.survivalTactics !== 0)
+            writer.tag(64, WireType.Varint).int32(message.survivalTactics);
+        /* int32 t_n_t = 65; */
+        if (message.tNT !== 0)
+            writer.tag(65, WireType.Varint).int32(message.tNT);
+        /* int32 lock_and_load = 66; */
+        if (message.lockAndLoad !== 0)
+            writer.tag(66, WireType.Varint).int32(message.lockAndLoad);
+        /* int32 hunter_vs_wild = 67; */
+        if (message.hunterVsWild !== 0)
+            writer.tag(67, WireType.Varint).int32(message.hunterVsWild);
+        /* int32 killer_instinct = 68; */
+        if (message.killerInstinct !== 0)
+            writer.tag(68, WireType.Varint).int32(message.killerInstinct);
+        /* bool counterattack = 69; */
+        if (message.counterattack !== false)
+            writer.tag(69, WireType.Varint).bool(message.counterattack);
+        /* int32 lightning_reflexes = 70; */
+        if (message.lightningReflexes !== 0)
+            writer.tag(70, WireType.Varint).int32(message.lightningReflexes);
+        /* int32 resourcefulness = 71; */
+        if (message.resourcefulness !== 0)
+            writer.tag(71, WireType.Varint).int32(message.resourcefulness);
+        /* int32 expose_weakness = 72; */
+        if (message.exposeWeakness !== 0)
+            writer.tag(72, WireType.Varint).int32(message.exposeWeakness);
+        /* bool wyvern_sting = 73; */
+        if (message.wyvernSting !== false)
+            writer.tag(73, WireType.Varint).bool(message.wyvernSting);
+        /* int32 thrill_of_the_hunt = 74; */
+        if (message.thrillOfTheHunt !== 0)
+            writer.tag(74, WireType.Varint).int32(message.thrillOfTheHunt);
+        /* int32 master_tactician = 75; */
+        if (message.masterTactician !== 0)
+            writer.tag(75, WireType.Varint).int32(message.masterTactician);
+        /* int32 noxious_stings = 76; */
+        if (message.noxiousStings !== 0)
+            writer.tag(76, WireType.Varint).int32(message.noxiousStings);
+        /* int32 point_of_no_escape = 77; */
+        if (message.pointOfNoEscape !== 0)
+            writer.tag(77, WireType.Varint).int32(message.pointOfNoEscape);
+        /* bool black_arrow = 78; */
+        if (message.blackArrow !== false)
+            writer.tag(78, WireType.Varint).bool(message.blackArrow);
+        /* int32 sniper_training = 79; */
+        if (message.sniperTraining !== 0)
+            writer.tag(79, WireType.Varint).int32(message.sniperTraining);
+        /* int32 hunting_party = 80; */
+        if (message.huntingParty !== 0)
+            writer.tag(80, WireType.Varint).int32(message.huntingParty);
+        /* bool explosive_shot = 81; */
+        if (message.explosiveShot !== false)
+            writer.tag(81, WireType.Varint).bool(message.explosiveShot);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
