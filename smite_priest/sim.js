@@ -86,7 +86,7 @@ export class SmitePriestSimUI extends IndividualSimUI {
                 // Default raid/party buffs settings.
                 raidBuffs: RaidBuffs.create({
                     arcaneBrilliance: true,
-                    divineSpirit: TristateEffect.TristateEffectImproved,
+                    divineSpirit: true,
                     giftOfTheWild: TristateEffect.TristateEffectImproved,
                 }),
                 partyBuffs: PartyBuffs.create({
@@ -211,10 +211,6 @@ export class SmitePriestSimUI extends IndividualSimUI {
                 // Preset gear configurations that the user can quickly select.
                 gear: [
                     Presets.P1_PRESET,
-                    Presets.P2_PRESET,
-                    Presets.P3_PRESET,
-                    Presets.P4_PRESET,
-                    Presets.P5_PRESET,
                 ],
             },
         });

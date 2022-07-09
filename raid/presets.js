@@ -449,17 +449,9 @@ export const playerPresets = [
             [Faction.Unknown]: {},
             [Faction.Alliance]: {
                 1: ShadowPriestPresets.P1_PRESET.gear,
-                2: ShadowPriestPresets.P2_PRESET.gear,
-                3: ShadowPriestPresets.P3_PRESET.gear,
-                4: ShadowPriestPresets.P4_PRESET.gear,
-                5: ShadowPriestPresets.P5_PRESET.gear,
             },
             [Faction.Horde]: {
                 1: ShadowPriestPresets.P1_PRESET.gear,
-                2: ShadowPriestPresets.P2_PRESET.gear,
-                3: ShadowPriestPresets.P3_PRESET.gear,
-                4: ShadowPriestPresets.P4_PRESET.gear,
-                5: ShadowPriestPresets.P5_PRESET.gear,
             },
         },
         tooltip: specNames[Spec.SpecShadowPriest],
@@ -481,17 +473,9 @@ export const playerPresets = [
             [Faction.Unknown]: {},
             [Faction.Alliance]: {
                 1: SmitePriestPresets.P1_PRESET.gear,
-                2: SmitePriestPresets.P2_PRESET.gear,
-                3: SmitePriestPresets.P3_PRESET.gear,
-                4: SmitePriestPresets.P4_PRESET.gear,
-                5: SmitePriestPresets.P5_PRESET.gear,
             },
             [Faction.Horde]: {
                 1: SmitePriestPresets.P1_PRESET.gear,
-                2: SmitePriestPresets.P2_PRESET.gear,
-                3: SmitePriestPresets.P3_PRESET.gear,
-                4: SmitePriestPresets.P4_PRESET.gear,
-                5: SmitePriestPresets.P5_PRESET.gear,
             },
         },
         tooltip: specNames[Spec.SpecSmitePriest],
@@ -893,7 +877,7 @@ export const buffBotPresets = [
         modifyRaidProto: (buffBot, raidProto, partyProto) => {
             raidProto.buffs.shadowProtection = true;
             raidProto.buffs.powerWordFortitude = TristateEffect.TristateEffectImproved;
-            raidProto.buffs.divineSpirit = TristateEffect.TristateEffectImproved;
+            raidProto.buffs.divineSpirit = true;
             const powerInfusionIndex = buffBot.getPowerInfusionAssignment().targetIndex;
             if (powerInfusionIndex != NO_TARGET) {
                 const partyIndex = Math.floor(powerInfusionIndex / 5);

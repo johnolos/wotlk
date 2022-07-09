@@ -372,21 +372,13 @@ export interface ShadowPriest_Rotation {
      */
     rotationType: ShadowPriest_Rotation_RotationType;
     /**
-     * @generated from protobuf field: bool use_dev_plague = 3;
-     */
-    useDevPlague: boolean;
-    /**
-     * @generated from protobuf field: bool precast_vt = 4;
+     * @generated from protobuf field: bool precast_vt = 2;
      */
     precastVt: boolean;
     /**
-     * @generated from protobuf field: double latency = 5;
+     * @generated from protobuf field: double latency = 3;
      */
     latency: number;
-    /**
-     * @generated from protobuf field: bool use_starshards = 6;
-     */
-    useStarshards: boolean;
 }
 /**
  * @generated from protobuf enum proto.ShadowPriest.Rotation.RotationType
@@ -444,19 +436,11 @@ export interface SmitePriest_Rotation {
      */
     rotationType: SmitePriest_Rotation_RotationType;
     /**
-     * @generated from protobuf field: bool use_dev_plague = 3;
-     */
-    useDevPlague: boolean;
-    /**
-     * @generated from protobuf field: bool use_starshards = 4;
-     */
-    useStarshards: boolean;
-    /**
-     * @generated from protobuf field: bool use_mind_blast = 5;
+     * @generated from protobuf field: bool use_mind_blast = 2;
      */
     useMindBlast: boolean;
     /**
-     * @generated from protobuf field: bool use_shadow_word_death = 6;
+     * @generated from protobuf field: bool use_shadow_word_death = 3;
      */
     useShadowWordDeath: boolean;
 }

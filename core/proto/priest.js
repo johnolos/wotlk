@@ -876,14 +876,12 @@ class ShadowPriest_Rotation$Type extends MessageType {
     constructor() {
         super("proto.ShadowPriest.Rotation", [
             { no: 1, name: "rotation_type", kind: "enum", T: () => ["proto.ShadowPriest.Rotation.RotationType", ShadowPriest_Rotation_RotationType] },
-            { no: 3, name: "use_dev_plague", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 4, name: "precast_vt", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 5, name: "latency", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
-            { no: 6, name: "use_starshards", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 2, name: "precast_vt", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 3, name: "latency", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ }
         ]);
     }
     create(value) {
-        const message = { rotationType: 0, useDevPlague: false, precastVt: false, latency: 0, useStarshards: false };
+        const message = { rotationType: 0, precastVt: false, latency: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -897,17 +895,11 @@ class ShadowPriest_Rotation$Type extends MessageType {
                 case /* proto.ShadowPriest.Rotation.RotationType rotation_type */ 1:
                     message.rotationType = reader.int32();
                     break;
-                case /* bool use_dev_plague */ 3:
-                    message.useDevPlague = reader.bool();
-                    break;
-                case /* bool precast_vt */ 4:
+                case /* bool precast_vt */ 2:
                     message.precastVt = reader.bool();
                     break;
-                case /* double latency */ 5:
+                case /* double latency */ 3:
                     message.latency = reader.double();
-                    break;
-                case /* bool use_starshards */ 6:
-                    message.useStarshards = reader.bool();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -924,18 +916,12 @@ class ShadowPriest_Rotation$Type extends MessageType {
         /* proto.ShadowPriest.Rotation.RotationType rotation_type = 1; */
         if (message.rotationType !== 0)
             writer.tag(1, WireType.Varint).int32(message.rotationType);
-        /* bool use_dev_plague = 3; */
-        if (message.useDevPlague !== false)
-            writer.tag(3, WireType.Varint).bool(message.useDevPlague);
-        /* bool precast_vt = 4; */
+        /* bool precast_vt = 2; */
         if (message.precastVt !== false)
-            writer.tag(4, WireType.Varint).bool(message.precastVt);
-        /* double latency = 5; */
+            writer.tag(2, WireType.Varint).bool(message.precastVt);
+        /* double latency = 3; */
         if (message.latency !== 0)
-            writer.tag(5, WireType.Bit64).double(message.latency);
-        /* bool use_starshards = 6; */
-        if (message.useStarshards !== false)
-            writer.tag(6, WireType.Varint).bool(message.useStarshards);
+            writer.tag(3, WireType.Bit64).double(message.latency);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
@@ -1059,14 +1045,12 @@ class SmitePriest_Rotation$Type extends MessageType {
     constructor() {
         super("proto.SmitePriest.Rotation", [
             { no: 1, name: "rotation_type", kind: "enum", T: () => ["proto.SmitePriest.Rotation.RotationType", SmitePriest_Rotation_RotationType] },
-            { no: 3, name: "use_dev_plague", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 4, name: "use_starshards", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 5, name: "use_mind_blast", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 6, name: "use_shadow_word_death", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 2, name: "use_mind_blast", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 3, name: "use_shadow_word_death", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { rotationType: 0, useDevPlague: false, useStarshards: false, useMindBlast: false, useShadowWordDeath: false };
+        const message = { rotationType: 0, useMindBlast: false, useShadowWordDeath: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1080,16 +1064,10 @@ class SmitePriest_Rotation$Type extends MessageType {
                 case /* proto.SmitePriest.Rotation.RotationType rotation_type */ 1:
                     message.rotationType = reader.int32();
                     break;
-                case /* bool use_dev_plague */ 3:
-                    message.useDevPlague = reader.bool();
-                    break;
-                case /* bool use_starshards */ 4:
-                    message.useStarshards = reader.bool();
-                    break;
-                case /* bool use_mind_blast */ 5:
+                case /* bool use_mind_blast */ 2:
                     message.useMindBlast = reader.bool();
                     break;
-                case /* bool use_shadow_word_death */ 6:
+                case /* bool use_shadow_word_death */ 3:
                     message.useShadowWordDeath = reader.bool();
                     break;
                 default:
@@ -1107,18 +1085,12 @@ class SmitePriest_Rotation$Type extends MessageType {
         /* proto.SmitePriest.Rotation.RotationType rotation_type = 1; */
         if (message.rotationType !== 0)
             writer.tag(1, WireType.Varint).int32(message.rotationType);
-        /* bool use_dev_plague = 3; */
-        if (message.useDevPlague !== false)
-            writer.tag(3, WireType.Varint).bool(message.useDevPlague);
-        /* bool use_starshards = 4; */
-        if (message.useStarshards !== false)
-            writer.tag(4, WireType.Varint).bool(message.useStarshards);
-        /* bool use_mind_blast = 5; */
+        /* bool use_mind_blast = 2; */
         if (message.useMindBlast !== false)
-            writer.tag(5, WireType.Varint).bool(message.useMindBlast);
-        /* bool use_shadow_word_death = 6; */
+            writer.tag(2, WireType.Varint).bool(message.useMindBlast);
+        /* bool use_shadow_word_death = 3; */
         if (message.useShadowWordDeath !== false)
-            writer.tag(6, WireType.Varint).bool(message.useShadowWordDeath);
+            writer.tag(3, WireType.Varint).bool(message.useShadowWordDeath);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

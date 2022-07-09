@@ -27,7 +27,6 @@ export declare const SmitePriestRotationConfig: {
             changedEvent: (player: Player<Spec.SpecSmitePriest>) => TypedEvent<void>;
             getValue: (player: Player<Spec.SpecSmitePriest>) => RotationType;
             setValue: (eventID: EventID, player: Player<Spec.SpecSmitePriest>, newValue: number) => void;
-            enableWhen?: undefined;
         };
     } | {
         type: "boolean";
@@ -39,33 +38,6 @@ export declare const SmitePriestRotationConfig: {
             changedEvent: (player: Player<Spec.SpecSmitePriest>) => TypedEvent<void>;
             getValue: (player: Player<Spec.SpecSmitePriest>) => boolean;
             setValue: (eventID: EventID, player: Player<Spec.SpecSmitePriest>, newValue: boolean) => void;
-            values?: undefined;
-            enableWhen?: undefined;
-        };
-    } | {
-        type: "boolean";
-        cssClass: string;
-        getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
-        config: {
-            label: string;
-            labelTooltip: string;
-            changedEvent: (player: Player<Spec.SpecSmitePriest>) => TypedEvent<void>;
-            getValue: (player: Player<Spec.SpecSmitePriest>) => boolean;
-            setValue: (eventID: EventID, player: Player<Spec.SpecSmitePriest>, newValue: boolean) => void;
-            enableWhen: (player: Player<Spec.SpecSmitePriest>) => boolean;
-            values?: undefined;
-        };
-    } | {
-        type: "boolean";
-        cssClass: string;
-        getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
-        config: {
-            label: string;
-            labelTooltip: string;
-            changedEvent: (player: Player<Spec.SpecSmitePriest>) => TypedEvent<void>;
-            getValue: (player: Player<Spec.SpecSmitePriest>) => boolean;
-            setValue: (eventID: EventID, player: Player<Spec.SpecSmitePriest>, newValue: boolean) => void;
-            enableWhen: (player: Player<Spec.SpecShadowPriest>) => boolean;
             values?: undefined;
         };
     })[];

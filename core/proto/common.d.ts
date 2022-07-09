@@ -23,9 +23,9 @@ export interface RaidBuffs {
      */
     shadowProtection: boolean;
     /**
-     * @generated from protobuf field: proto.TristateEffect divine_spirit = 4;
+     * @generated from protobuf field: bool divine_spirit = 4;
      */
-    divineSpirit: TristateEffect;
+    divineSpirit: boolean;
     /**
      * @generated from protobuf field: proto.TristateEffect gift_of_the_wild = 5;
      */

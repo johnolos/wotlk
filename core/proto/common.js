@@ -1525,13 +1525,13 @@ class RaidBuffs$Type extends MessageType {
             { no: 1, name: "arcane_brilliance", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 7, name: "power_word_fortitude", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 8, name: "shadow_protection", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 4, name: "divine_spirit", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 4, name: "divine_spirit", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 5, name: "gift_of_the_wild", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 6, name: "thorns", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] }
         ]);
     }
     create(value) {
-        const message = { arcaneBrilliance: false, powerWordFortitude: 0, shadowProtection: false, divineSpirit: 0, giftOfTheWild: 0, thorns: 0 };
+        const message = { arcaneBrilliance: false, powerWordFortitude: 0, shadowProtection: false, divineSpirit: false, giftOfTheWild: 0, thorns: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1551,8 +1551,8 @@ class RaidBuffs$Type extends MessageType {
                 case /* bool shadow_protection */ 8:
                     message.shadowProtection = reader.bool();
                     break;
-                case /* proto.TristateEffect divine_spirit */ 4:
-                    message.divineSpirit = reader.int32();
+                case /* bool divine_spirit */ 4:
+                    message.divineSpirit = reader.bool();
                     break;
                 case /* proto.TristateEffect gift_of_the_wild */ 5:
                     message.giftOfTheWild = reader.int32();
@@ -1581,9 +1581,9 @@ class RaidBuffs$Type extends MessageType {
         /* bool shadow_protection = 8; */
         if (message.shadowProtection !== false)
             writer.tag(8, WireType.Varint).bool(message.shadowProtection);
-        /* proto.TristateEffect divine_spirit = 4; */
-        if (message.divineSpirit !== 0)
-            writer.tag(4, WireType.Varint).int32(message.divineSpirit);
+        /* bool divine_spirit = 4; */
+        if (message.divineSpirit !== false)
+            writer.tag(4, WireType.Varint).bool(message.divineSpirit);
         /* proto.TristateEffect gift_of_the_wild = 5; */
         if (message.giftOfTheWild !== 0)
             writer.tag(5, WireType.Varint).int32(message.giftOfTheWild);

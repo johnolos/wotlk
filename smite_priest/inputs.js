@@ -1,5 +1,5 @@
 import { SmitePriest_Rotation_RotationType as RotationType } from '/wotlk/core/proto/priest.js';
-import { Race, RaidTarget } from '/wotlk/core/proto/common.js';
+import { RaidTarget } from '/wotlk/core/proto/common.js';
 import { NO_TARGET } from '/wotlk/core/proto_utils/utils.js';
 import { ActionId } from '/wotlk/core/proto_utils/action_id.js';
 // Configuration for spec-specific UI elements on the settings tab.
@@ -92,40 +92,6 @@ export const SmitePriestRotationConfig = {
                     newRotation.useShadowWordDeath = newValue;
                     player.setRotation(eventID, newRotation);
                 },
-            },
-        },
-        {
-            type: 'boolean',
-            cssClass: 'devplague-picker',
-            getModObject: (simUI) => simUI.player,
-            config: {
-                label: 'Use Devouring Plague',
-                labelTooltip: 'Use Devouring Plague whenever off CD.',
-                changedEvent: (player) => player.raceChangeEmitter,
-                getValue: (player) => player.getRotation().useDevPlague,
-                setValue: (eventID, player, newValue) => {
-                    const newRotation = player.getRotation();
-                    newRotation.useDevPlague = newValue;
-                    player.setRotation(eventID, newRotation);
-                },
-                enableWhen: (player) => player.getRace() == Race.RaceUndead,
-            },
-        },
-        {
-            type: 'boolean',
-            cssClass: 'starshards-picker',
-            getModObject: (simUI) => simUI.player,
-            config: {
-                label: 'Use starshards',
-                labelTooltip: 'Use Starshards whenever off CD.',
-                changedEvent: (player) => player.raceChangeEmitter,
-                getValue: (player) => player.getRotation().useStarshards,
-                setValue: (eventID, player, newValue) => {
-                    const newRotation = player.getRotation();
-                    newRotation.useStarshards = newValue;
-                    player.setRotation(eventID, newRotation);
-                },
-                enableWhen: (player) => player.getRace() == Race.RaceNightElf,
             },
         },
     ],
