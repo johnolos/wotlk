@@ -549,29 +549,33 @@ export declare enum Hunter_Options_Ammo {
      */
     AmmoNone = 0,
     /**
-     * @generated from protobuf enum value: TimelessArrow = 1;
+     * @generated from protobuf enum value: IcebladeArrow = 1;
      */
-    TimelessArrow = 1,
+    IcebladeArrow = 1,
     /**
-     * @generated from protobuf enum value: MysteriousArrow = 2;
+     * @generated from protobuf enum value: SaroniteRazorheads = 2;
      */
-    MysteriousArrow = 2,
+    SaroniteRazorheads = 2,
     /**
-     * @generated from protobuf enum value: AdamantiteStinger = 3;
+     * @generated from protobuf enum value: TerrorshaftArrow = 3;
      */
-    AdamantiteStinger = 3,
+    TerrorshaftArrow = 3,
     /**
-     * @generated from protobuf enum value: WardensArrow = 4;
+     * @generated from protobuf enum value: TimelessArrow = 4;
      */
-    WardensArrow = 4,
+    TimelessArrow = 4,
     /**
-     * @generated from protobuf enum value: HalaaniRazorshaft = 5;
+     * @generated from protobuf enum value: MysteriousArrow = 5;
      */
-    HalaaniRazorshaft = 5,
+    MysteriousArrow = 5,
     /**
-     * @generated from protobuf enum value: BlackflightArrow = 6;
+     * @generated from protobuf enum value: AdamantiteStinger = 6;
      */
-    BlackflightArrow = 6
+    AdamantiteStinger = 6,
+    /**
+     * @generated from protobuf enum value: BlackflightArrow = 7;
+     */
+    BlackflightArrow = 7
 }
 /**
  * @generated from protobuf enum proto.Hunter.Options.PetType

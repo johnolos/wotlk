@@ -87,29 +87,33 @@ export var Hunter_Options_Ammo;
      */
     Hunter_Options_Ammo[Hunter_Options_Ammo["AmmoNone"] = 0] = "AmmoNone";
     /**
-     * @generated from protobuf enum value: TimelessArrow = 1;
+     * @generated from protobuf enum value: IcebladeArrow = 1;
      */
-    Hunter_Options_Ammo[Hunter_Options_Ammo["TimelessArrow"] = 1] = "TimelessArrow";
+    Hunter_Options_Ammo[Hunter_Options_Ammo["IcebladeArrow"] = 1] = "IcebladeArrow";
     /**
-     * @generated from protobuf enum value: MysteriousArrow = 2;
+     * @generated from protobuf enum value: SaroniteRazorheads = 2;
      */
-    Hunter_Options_Ammo[Hunter_Options_Ammo["MysteriousArrow"] = 2] = "MysteriousArrow";
+    Hunter_Options_Ammo[Hunter_Options_Ammo["SaroniteRazorheads"] = 2] = "SaroniteRazorheads";
     /**
-     * @generated from protobuf enum value: AdamantiteStinger = 3;
+     * @generated from protobuf enum value: TerrorshaftArrow = 3;
      */
-    Hunter_Options_Ammo[Hunter_Options_Ammo["AdamantiteStinger"] = 3] = "AdamantiteStinger";
+    Hunter_Options_Ammo[Hunter_Options_Ammo["TerrorshaftArrow"] = 3] = "TerrorshaftArrow";
     /**
-     * @generated from protobuf enum value: WardensArrow = 4;
+     * @generated from protobuf enum value: TimelessArrow = 4;
      */
-    Hunter_Options_Ammo[Hunter_Options_Ammo["WardensArrow"] = 4] = "WardensArrow";
+    Hunter_Options_Ammo[Hunter_Options_Ammo["TimelessArrow"] = 4] = "TimelessArrow";
     /**
-     * @generated from protobuf enum value: HalaaniRazorshaft = 5;
+     * @generated from protobuf enum value: MysteriousArrow = 5;
      */
-    Hunter_Options_Ammo[Hunter_Options_Ammo["HalaaniRazorshaft"] = 5] = "HalaaniRazorshaft";
+    Hunter_Options_Ammo[Hunter_Options_Ammo["MysteriousArrow"] = 5] = "MysteriousArrow";
     /**
-     * @generated from protobuf enum value: BlackflightArrow = 6;
+     * @generated from protobuf enum value: AdamantiteStinger = 6;
      */
-    Hunter_Options_Ammo[Hunter_Options_Ammo["BlackflightArrow"] = 6] = "BlackflightArrow";
+    Hunter_Options_Ammo[Hunter_Options_Ammo["AdamantiteStinger"] = 6] = "AdamantiteStinger";
+    /**
+     * @generated from protobuf enum value: BlackflightArrow = 7;
+     */
+    Hunter_Options_Ammo[Hunter_Options_Ammo["BlackflightArrow"] = 7] = "BlackflightArrow";
 })(Hunter_Options_Ammo || (Hunter_Options_Ammo = {}));
 /**
  * @generated from protobuf enum proto.Hunter.Options.PetType
