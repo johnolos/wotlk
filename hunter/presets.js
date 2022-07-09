@@ -4,7 +4,7 @@ import { Flask } from '/wotlk/core/proto/common.js';
 import { Food } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
-import { Hunter_Rotation as HunterRotation, Hunter_Rotation_WeaveType as WeaveType, Hunter_Options as HunterOptions, Hunter_Options_Ammo as Ammo, Hunter_Options_QuiverBonus as QuiverBonus, Hunter_Options_PetType as PetType, } from '/wotlk/core/proto/hunter.js';
+import { Hunter_Rotation as HunterRotation, Hunter_Rotation_WeaveType as WeaveType, Hunter_Options as HunterOptions, Hunter_Options_Ammo as Ammo, Hunter_Options_PetType as PetType, } from '/wotlk/core/proto/hunter.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // Preset options for this spec.
 // Eventually we will import these values for the raid sim too, so its good to
@@ -34,7 +34,6 @@ export const DefaultRotation = HunterRotation.create({
     percentWeaved: 0.8,
 });
 export const DefaultOptions = HunterOptions.create({
-    quiverBonus: QuiverBonus.Speed15,
     ammo: Ammo.TimelessArrow,
     petType: PetType.Ravager,
     petUptime: 1,

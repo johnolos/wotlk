@@ -611,19 +611,15 @@ export declare enum Hunter_Rotation_WeaveType {
  */
 export interface Hunter_Options {
     /**
-     * @generated from protobuf field: proto.Hunter.Options.QuiverBonus quiver_bonus = 1;
-     */
-    quiverBonus: Hunter_Options_QuiverBonus;
-    /**
-     * @generated from protobuf field: proto.Hunter.Options.Ammo ammo = 2;
+     * @generated from protobuf field: proto.Hunter.Options.Ammo ammo = 1;
      */
     ammo: Hunter_Options_Ammo;
     /**
-     * @generated from protobuf field: proto.Hunter.Options.PetType pet_type = 3;
+     * @generated from protobuf field: proto.Hunter.Options.PetType pet_type = 2;
      */
     petType: Hunter_Options_PetType;
     /**
-     * @generated from protobuf field: proto.HunterPetTalents pet_talents = 8;
+     * @generated from protobuf field: proto.HunterPetTalents pet_talents = 3;
      */
     petTalents?: HunterPetTalents;
     /**
@@ -631,11 +627,11 @@ export interface Hunter_Options {
      */
     petUptime: number;
     /**
-     * @generated from protobuf field: bool pet_single_ability = 6;
+     * @generated from protobuf field: bool pet_single_ability = 5;
      */
     petSingleAbility: boolean;
     /**
-     * @generated from protobuf field: int32 latency_ms = 5;
+     * @generated from protobuf field: int32 latency_ms = 6;
      */
     latencyMs: number;
     /**
@@ -646,39 +642,6 @@ export interface Hunter_Options {
      * @generated from protobuf field: bool remove_randomness = 7;
      */
     removeRandomness: boolean;
-}
-/**
- * @generated from protobuf enum proto.Hunter.Options.QuiverBonus
- */
-export declare enum Hunter_Options_QuiverBonus {
-    /**
-     * @generated from protobuf enum value: QuiverNone = 0;
-     */
-    QuiverNone = 0,
-    /**
-     * @generated from protobuf enum value: Speed10 = 1;
-     */
-    Speed10 = 1,
-    /**
-     * @generated from protobuf enum value: Speed11 = 2;
-     */
-    Speed11 = 2,
-    /**
-     * @generated from protobuf enum value: Speed12 = 3;
-     */
-    Speed12 = 3,
-    /**
-     * @generated from protobuf enum value: Speed13 = 4;
-     */
-    Speed13 = 4,
-    /**
-     * @generated from protobuf enum value: Speed14 = 5;
-     */
-    Speed14 = 5,
-    /**
-     * @generated from protobuf enum value: Speed15 = 6;
-     */
-    Speed15 = 6
 }
 /**
  * @generated from protobuf enum proto.Hunter.Options.Ammo

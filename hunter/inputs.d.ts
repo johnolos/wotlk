@@ -3,25 +3,7 @@ import { ActionId } from '/wotlk/core/proto_utils/action_id.js';
 import { Player } from '/wotlk/core/player.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
 import { EventID, TypedEvent } from '/wotlk/core/typed_event.js';
-import { Hunter_Rotation_StingType as StingType, Hunter_Rotation_WeaveType as WeaveType, Hunter_Options_Ammo as Ammo, Hunter_Options_QuiverBonus as QuiverBonus } from '/wotlk/core/proto/hunter.js';
-export declare const Quiver: {
-    extraCssClasses: string[];
-    numColumns: number;
-    values: ({
-        color: string;
-        value: QuiverBonus;
-        actionId?: undefined;
-    } | {
-        actionId: ActionId;
-        value: QuiverBonus;
-        color?: undefined;
-    })[];
-    equals: (a: QuiverBonus, b: QuiverBonus) => boolean;
-    zeroValue: QuiverBonus;
-    changedEvent: (player: Player<Spec.SpecHunter>) => TypedEvent<void>;
-    getValue: (player: Player<Spec.SpecHunter>) => QuiverBonus;
-    setValue: (eventID: EventID, player: Player<Spec.SpecHunter>, newValue: number) => void;
-};
+import { Hunter_Rotation_StingType as StingType, Hunter_Rotation_WeaveType as WeaveType, Hunter_Options_Ammo as Ammo } from '/wotlk/core/proto/hunter.js';
 export declare const WeaponAmmo: {
     extraCssClasses: string[];
     numColumns: number;

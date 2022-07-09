@@ -44,40 +44,6 @@ export var Hunter_Rotation_WeaveType;
     Hunter_Rotation_WeaveType[Hunter_Rotation_WeaveType["WeaveFull"] = 3] = "WeaveFull";
 })(Hunter_Rotation_WeaveType || (Hunter_Rotation_WeaveType = {}));
 /**
- * @generated from protobuf enum proto.Hunter.Options.QuiverBonus
- */
-export var Hunter_Options_QuiverBonus;
-(function (Hunter_Options_QuiverBonus) {
-    /**
-     * @generated from protobuf enum value: QuiverNone = 0;
-     */
-    Hunter_Options_QuiverBonus[Hunter_Options_QuiverBonus["QuiverNone"] = 0] = "QuiverNone";
-    /**
-     * @generated from protobuf enum value: Speed10 = 1;
-     */
-    Hunter_Options_QuiverBonus[Hunter_Options_QuiverBonus["Speed10"] = 1] = "Speed10";
-    /**
-     * @generated from protobuf enum value: Speed11 = 2;
-     */
-    Hunter_Options_QuiverBonus[Hunter_Options_QuiverBonus["Speed11"] = 2] = "Speed11";
-    /**
-     * @generated from protobuf enum value: Speed12 = 3;
-     */
-    Hunter_Options_QuiverBonus[Hunter_Options_QuiverBonus["Speed12"] = 3] = "Speed12";
-    /**
-     * @generated from protobuf enum value: Speed13 = 4;
-     */
-    Hunter_Options_QuiverBonus[Hunter_Options_QuiverBonus["Speed13"] = 4] = "Speed13";
-    /**
-     * @generated from protobuf enum value: Speed14 = 5;
-     */
-    Hunter_Options_QuiverBonus[Hunter_Options_QuiverBonus["Speed14"] = 5] = "Speed14";
-    /**
-     * @generated from protobuf enum value: Speed15 = 6;
-     */
-    Hunter_Options_QuiverBonus[Hunter_Options_QuiverBonus["Speed15"] = 6] = "Speed15";
-})(Hunter_Options_QuiverBonus || (Hunter_Options_QuiverBonus = {}));
-/**
  * @generated from protobuf enum proto.Hunter.Options.Ammo
  */
 export var Hunter_Options_Ammo;
@@ -1390,18 +1356,17 @@ export const Hunter_Rotation = new Hunter_Rotation$Type();
 class Hunter_Options$Type extends MessageType {
     constructor() {
         super("proto.Hunter.Options", [
-            { no: 1, name: "quiver_bonus", kind: "enum", T: () => ["proto.Hunter.Options.QuiverBonus", Hunter_Options_QuiverBonus] },
-            { no: 2, name: "ammo", kind: "enum", T: () => ["proto.Hunter.Options.Ammo", Hunter_Options_Ammo] },
-            { no: 3, name: "pet_type", kind: "enum", T: () => ["proto.Hunter.Options.PetType", Hunter_Options_PetType] },
-            { no: 8, name: "pet_talents", kind: "message", T: () => HunterPetTalents },
+            { no: 1, name: "ammo", kind: "enum", T: () => ["proto.Hunter.Options.Ammo", Hunter_Options_Ammo] },
+            { no: 2, name: "pet_type", kind: "enum", T: () => ["proto.Hunter.Options.PetType", Hunter_Options_PetType] },
+            { no: 3, name: "pet_talents", kind: "message", T: () => HunterPetTalents },
             { no: 4, name: "pet_uptime", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
-            { no: 6, name: "pet_single_ability", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 5, name: "latency_ms", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 5, name: "pet_single_ability", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 6, name: "latency_ms", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 7, name: "remove_randomness", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { quiverBonus: 0, ammo: 0, petType: 0, petUptime: 0, petSingleAbility: false, latencyMs: 0, removeRandomness: false };
+        const message = { ammo: 0, petType: 0, petUptime: 0, petSingleAbility: false, latencyMs: 0, removeRandomness: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1412,25 +1377,22 @@ class Hunter_Options$Type extends MessageType {
         while (reader.pos < end) {
             let [fieldNo, wireType] = reader.tag();
             switch (fieldNo) {
-                case /* proto.Hunter.Options.QuiverBonus quiver_bonus */ 1:
-                    message.quiverBonus = reader.int32();
-                    break;
-                case /* proto.Hunter.Options.Ammo ammo */ 2:
+                case /* proto.Hunter.Options.Ammo ammo */ 1:
                     message.ammo = reader.int32();
                     break;
-                case /* proto.Hunter.Options.PetType pet_type */ 3:
+                case /* proto.Hunter.Options.PetType pet_type */ 2:
                     message.petType = reader.int32();
                     break;
-                case /* proto.HunterPetTalents pet_talents */ 8:
+                case /* proto.HunterPetTalents pet_talents */ 3:
                     message.petTalents = HunterPetTalents.internalBinaryRead(reader, reader.uint32(), options, message.petTalents);
                     break;
                 case /* double pet_uptime */ 4:
                     message.petUptime = reader.double();
                     break;
-                case /* bool pet_single_ability */ 6:
+                case /* bool pet_single_ability */ 5:
                     message.petSingleAbility = reader.bool();
                     break;
-                case /* int32 latency_ms */ 5:
+                case /* int32 latency_ms */ 6:
                     message.latencyMs = reader.int32();
                     break;
                 case /* bool remove_randomness */ 7:
@@ -1448,27 +1410,24 @@ class Hunter_Options$Type extends MessageType {
         return message;
     }
     internalBinaryWrite(message, writer, options) {
-        /* proto.Hunter.Options.QuiverBonus quiver_bonus = 1; */
-        if (message.quiverBonus !== 0)
-            writer.tag(1, WireType.Varint).int32(message.quiverBonus);
-        /* proto.Hunter.Options.Ammo ammo = 2; */
+        /* proto.Hunter.Options.Ammo ammo = 1; */
         if (message.ammo !== 0)
-            writer.tag(2, WireType.Varint).int32(message.ammo);
-        /* proto.Hunter.Options.PetType pet_type = 3; */
+            writer.tag(1, WireType.Varint).int32(message.ammo);
+        /* proto.Hunter.Options.PetType pet_type = 2; */
         if (message.petType !== 0)
-            writer.tag(3, WireType.Varint).int32(message.petType);
-        /* proto.HunterPetTalents pet_talents = 8; */
+            writer.tag(2, WireType.Varint).int32(message.petType);
+        /* proto.HunterPetTalents pet_talents = 3; */
         if (message.petTalents)
-            HunterPetTalents.internalBinaryWrite(message.petTalents, writer.tag(8, WireType.LengthDelimited).fork(), options).join();
+            HunterPetTalents.internalBinaryWrite(message.petTalents, writer.tag(3, WireType.LengthDelimited).fork(), options).join();
         /* double pet_uptime = 4; */
         if (message.petUptime !== 0)
             writer.tag(4, WireType.Bit64).double(message.petUptime);
-        /* bool pet_single_ability = 6; */
+        /* bool pet_single_ability = 5; */
         if (message.petSingleAbility !== false)
-            writer.tag(6, WireType.Varint).bool(message.petSingleAbility);
-        /* int32 latency_ms = 5; */
+            writer.tag(5, WireType.Varint).bool(message.petSingleAbility);
+        /* int32 latency_ms = 6; */
         if (message.latencyMs !== 0)
-            writer.tag(5, WireType.Varint).int32(message.latencyMs);
+            writer.tag(6, WireType.Varint).int32(message.latencyMs);
         /* bool remove_randomness = 7; */
         if (message.removeRandomness !== false)
             writer.tag(7, WireType.Varint).bool(message.removeRandomness);
