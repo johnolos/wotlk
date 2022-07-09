@@ -144,7 +144,6 @@ export class RetributionPaladinSimUI extends IndividualSimUI {
                 IconInputs.BattleShout,
                 IconInputs.HeroicPresence,
                 IconInputs.LeaderOfThePack,
-                IconInputs.FerociousInspiration,
                 IconInputs.TrueshotAura,
                 IconInputs.BraidedEterniumChain,
             ],

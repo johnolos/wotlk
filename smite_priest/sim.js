@@ -94,7 +94,6 @@ export class SmitePriestSimUI extends IndividualSimUI {
                     bloodlust: 1,
                     manaSpringTotem: TristateEffect.TristateEffectRegular,
                     wrathOfAirTotem: true,
-                    sanctityAura: TristateEffect.TristateEffectImproved,
                 }),
                 individualBuffs: IndividualBuffs.create({
                     blessingOfKings: true,
@@ -133,7 +132,6 @@ export class SmitePriestSimUI extends IndividualSimUI {
                 IconInputs.JadePendantOfBlasting,
                 IconInputs.AtieshWarlock,
                 IconInputs.AtieshMage,
-                IconInputs.SanctityAura,
             ],
             playerBuffInputs: [
                 IconInputs.BlessingOfKings,

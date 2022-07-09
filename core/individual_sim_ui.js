@@ -379,7 +379,9 @@ export class IndividualSimUI extends SimUI {
         configureIconSection(selfBuffsSection, this.individualConfig.selfBuffInputs.map(iconInput => new IndividualSimIconPicker(selfBuffsSection, this.player, iconInput, this)), Tooltips.SELF_BUFFS_SECTION);
         const buffsSection = this.rootElem.getElementsByClassName('buffs-section')[0];
         configureIconSection(buffsSection, [
-            this.individualConfig.raidBuffInputs.map(iconInput => new IndividualSimIconPicker(buffsSection, this.sim.raid, iconInput, this)),
+            this.individualConfig.raidBuffInputs
+                .concat([IconInputs.FerociousInspiration])
+                .map(iconInput => new IndividualSimIconPicker(buffsSection, this.sim.raid, iconInput, this)),
             this.individualConfig.playerBuffInputs.map(iconInput => new IndividualSimIconPicker(buffsSection, this.player, iconInput, this)),
             this.individualConfig.partyBuffInputs.map(iconInput => new IndividualSimIconPicker(buffsSection, this.player.getParty(), iconInput, this)),
         ].flat(), Tooltips.OTHER_BUFFS_SECTION);

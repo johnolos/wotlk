@@ -15,11 +15,11 @@ export interface RaidBuffs {
      */
     arcaneBrilliance: boolean;
     /**
-     * @generated from protobuf field: proto.TristateEffect power_word_fortitude = 7;
+     * @generated from protobuf field: proto.TristateEffect power_word_fortitude = 2;
      */
     powerWordFortitude: TristateEffect;
     /**
-     * @generated from protobuf field: bool shadow_protection = 8;
+     * @generated from protobuf field: bool shadow_protection = 3;
      */
     shadowProtection: boolean;
     /**
@@ -34,6 +34,20 @@ export interface RaidBuffs {
      * @generated from protobuf field: proto.TristateEffect thorns = 6;
      */
     thorns: TristateEffect;
+    /**
+     * % Damage Buffs
+     *
+     * @generated from protobuf field: bool arcane_empowerment = 7;
+     */
+    arcaneEmpowerment: boolean;
+    /**
+     * @generated from protobuf field: bool ferocious_inspiration = 8;
+     */
+    ferociousInspiration: boolean;
+    /**
+     * @generated from protobuf field: bool sanctified_retribution = 9;
+     */
+    sanctifiedRetribution: boolean;
 }
 /**
  * Buffs that affect a single party.
@@ -46,10 +60,6 @@ export interface PartyBuffs {
      */
     bloodlust: number;
     /**
-     * @generated from protobuf field: int32 ferocious_inspiration = 22;
-     */
-    ferociousInspiration: number;
-    /**
      * @generated from protobuf field: proto.TristateEffect blood_pact = 34;
      */
     bloodPact: TristateEffect;
@@ -61,10 +71,6 @@ export interface PartyBuffs {
      * @generated from protobuf field: proto.TristateEffect leader_of_the_pack = 19;
      */
     leaderOfThePack: TristateEffect;
-    /**
-     * @generated from protobuf field: proto.TristateEffect sanctity_aura = 20;
-     */
-    sanctityAura: TristateEffect;
     /**
      * @generated from protobuf field: proto.TristateEffect devotion_aura = 35;
      */

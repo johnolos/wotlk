@@ -1523,15 +1523,18 @@ class RaidBuffs$Type extends MessageType {
     constructor() {
         super("proto.RaidBuffs", [
             { no: 1, name: "arcane_brilliance", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 7, name: "power_word_fortitude", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 8, name: "shadow_protection", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 2, name: "power_word_fortitude", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 3, name: "shadow_protection", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 4, name: "divine_spirit", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 5, name: "gift_of_the_wild", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 6, name: "thorns", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] }
+            { no: 6, name: "thorns", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 7, name: "arcane_empowerment", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 8, name: "ferocious_inspiration", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 9, name: "sanctified_retribution", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { arcaneBrilliance: false, powerWordFortitude: 0, shadowProtection: false, divineSpirit: false, giftOfTheWild: 0, thorns: 0 };
+        const message = { arcaneBrilliance: false, powerWordFortitude: 0, shadowProtection: false, divineSpirit: false, giftOfTheWild: 0, thorns: 0, arcaneEmpowerment: false, ferociousInspiration: false, sanctifiedRetribution: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1545,10 +1548,10 @@ class RaidBuffs$Type extends MessageType {
                 case /* bool arcane_brilliance */ 1:
                     message.arcaneBrilliance = reader.bool();
                     break;
-                case /* proto.TristateEffect power_word_fortitude */ 7:
+                case /* proto.TristateEffect power_word_fortitude */ 2:
                     message.powerWordFortitude = reader.int32();
                     break;
-                case /* bool shadow_protection */ 8:
+                case /* bool shadow_protection */ 3:
                     message.shadowProtection = reader.bool();
                     break;
                 case /* bool divine_spirit */ 4:
@@ -1559,6 +1562,15 @@ class RaidBuffs$Type extends MessageType {
                     break;
                 case /* proto.TristateEffect thorns */ 6:
                     message.thorns = reader.int32();
+                    break;
+                case /* bool arcane_empowerment */ 7:
+                    message.arcaneEmpowerment = reader.bool();
+                    break;
+                case /* bool ferocious_inspiration */ 8:
+                    message.ferociousInspiration = reader.bool();
+                    break;
+                case /* bool sanctified_retribution */ 9:
+                    message.sanctifiedRetribution = reader.bool();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -1575,12 +1587,12 @@ class RaidBuffs$Type extends MessageType {
         /* bool arcane_brilliance = 1; */
         if (message.arcaneBrilliance !== false)
             writer.tag(1, WireType.Varint).bool(message.arcaneBrilliance);
-        /* proto.TristateEffect power_word_fortitude = 7; */
+        /* proto.TristateEffect power_word_fortitude = 2; */
         if (message.powerWordFortitude !== 0)
-            writer.tag(7, WireType.Varint).int32(message.powerWordFortitude);
-        /* bool shadow_protection = 8; */
+            writer.tag(2, WireType.Varint).int32(message.powerWordFortitude);
+        /* bool shadow_protection = 3; */
         if (message.shadowProtection !== false)
-            writer.tag(8, WireType.Varint).bool(message.shadowProtection);
+            writer.tag(3, WireType.Varint).bool(message.shadowProtection);
         /* bool divine_spirit = 4; */
         if (message.divineSpirit !== false)
             writer.tag(4, WireType.Varint).bool(message.divineSpirit);
@@ -1590,6 +1602,15 @@ class RaidBuffs$Type extends MessageType {
         /* proto.TristateEffect thorns = 6; */
         if (message.thorns !== 0)
             writer.tag(6, WireType.Varint).int32(message.thorns);
+        /* bool arcane_empowerment = 7; */
+        if (message.arcaneEmpowerment !== false)
+            writer.tag(7, WireType.Varint).bool(message.arcaneEmpowerment);
+        /* bool ferocious_inspiration = 8; */
+        if (message.ferociousInspiration !== false)
+            writer.tag(8, WireType.Varint).bool(message.ferociousInspiration);
+        /* bool sanctified_retribution = 9; */
+        if (message.sanctifiedRetribution !== false)
+            writer.tag(9, WireType.Varint).bool(message.sanctifiedRetribution);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
@@ -1605,11 +1626,9 @@ class PartyBuffs$Type extends MessageType {
     constructor() {
         super("proto.PartyBuffs", [
             { no: 1, name: "bloodlust", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 22, name: "ferocious_inspiration", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 34, name: "blood_pact", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 2, name: "moonkin_aura", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 19, name: "leader_of_the_pack", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 20, name: "sanctity_aura", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 35, name: "devotion_aura", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 36, name: "retribution_aura", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 21, name: "trueshot_aura", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
@@ -1637,7 +1656,7 @@ class PartyBuffs$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { bloodlust: 0, ferociousInspiration: 0, bloodPact: 0, moonkinAura: 0, leaderOfThePack: 0, sanctityAura: 0, devotionAura: 0, retributionAura: 0, trueshotAura: false, heroicPresence: false, drums: 0, atieshMage: 0, atieshWarlock: 0, braidedEterniumChain: false, eyeOfTheNight: false, chainOfTheTwilightOwl: false, jadePendantOfBlasting: false, manaSpringTotem: 0, manaTideTotems: 0, totemOfWrath: false, wrathOfAirTotem: false, strengthOfEarthTotem: 0, tranquilAirTotem: false, windfuryTotem: 0, battleShout: 0, bsSolarianSapphire: false, snapshotBsSolarianSapphire: false, snapshotBsT2: false, snapshotBsBoomingVoiceRank: 0, commandingShout: 0 };
+        const message = { bloodlust: 0, bloodPact: 0, moonkinAura: 0, leaderOfThePack: 0, devotionAura: 0, retributionAura: 0, trueshotAura: false, heroicPresence: false, drums: 0, atieshMage: 0, atieshWarlock: 0, braidedEterniumChain: false, eyeOfTheNight: false, chainOfTheTwilightOwl: false, jadePendantOfBlasting: false, manaSpringTotem: 0, manaTideTotems: 0, totemOfWrath: false, wrathOfAirTotem: false, strengthOfEarthTotem: 0, tranquilAirTotem: false, windfuryTotem: 0, battleShout: 0, bsSolarianSapphire: false, snapshotBsSolarianSapphire: false, snapshotBsT2: false, snapshotBsBoomingVoiceRank: 0, commandingShout: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1651,9 +1670,6 @@ class PartyBuffs$Type extends MessageType {
                 case /* int32 bloodlust */ 1:
                     message.bloodlust = reader.int32();
                     break;
-                case /* int32 ferocious_inspiration */ 22:
-                    message.ferociousInspiration = reader.int32();
-                    break;
                 case /* proto.TristateEffect blood_pact */ 34:
                     message.bloodPact = reader.int32();
                     break;
@@ -1662,9 +1678,6 @@ class PartyBuffs$Type extends MessageType {
                     break;
                 case /* proto.TristateEffect leader_of_the_pack */ 19:
                     message.leaderOfThePack = reader.int32();
-                    break;
-                case /* proto.TristateEffect sanctity_aura */ 20:
-                    message.sanctityAura = reader.int32();
                     break;
                 case /* proto.TristateEffect devotion_aura */ 35:
                     message.devotionAura = reader.int32();
@@ -1753,9 +1766,6 @@ class PartyBuffs$Type extends MessageType {
         /* int32 bloodlust = 1; */
         if (message.bloodlust !== 0)
             writer.tag(1, WireType.Varint).int32(message.bloodlust);
-        /* int32 ferocious_inspiration = 22; */
-        if (message.ferociousInspiration !== 0)
-            writer.tag(22, WireType.Varint).int32(message.ferociousInspiration);
         /* proto.TristateEffect blood_pact = 34; */
         if (message.bloodPact !== 0)
             writer.tag(34, WireType.Varint).int32(message.bloodPact);
@@ -1765,9 +1775,6 @@ class PartyBuffs$Type extends MessageType {
         /* proto.TristateEffect leader_of_the_pack = 19; */
         if (message.leaderOfThePack !== 0)
             writer.tag(19, WireType.Varint).int32(message.leaderOfThePack);
-        /* proto.TristateEffect sanctity_aura = 20; */
-        if (message.sanctityAura !== 0)
-            writer.tag(20, WireType.Varint).int32(message.sanctityAura);
         /* proto.TristateEffect devotion_aura = 35; */
         if (message.devotionAura !== 0)
             writer.tag(35, WireType.Varint).int32(message.devotionAura);
