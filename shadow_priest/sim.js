@@ -10,7 +10,6 @@ import { BattleElixir } from '/wotlk/core/proto/common.js';
 import { Flask } from '/wotlk/core/proto/common.js';
 import { Food } from '/wotlk/core/proto/common.js';
 import { GuardianElixir } from '/wotlk/core/proto/common.js';
-import { Drums } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import * as IconInputs from '/wotlk/core/components/icon_inputs.js';
 import * as OtherInputs from '/wotlk/core/components/other_inputs.js';
@@ -82,18 +81,15 @@ export class ShadowPriestSimUI extends IndividualSimUI {
                     arcaneBrilliance: true,
                     divineSpirit: true,
                     giftOfTheWild: TristateEffect.TristateEffectImproved,
-                }),
-                partyBuffs: PartyBuffs.create({
-                    drums: Drums.DrumsOfBattle,
-                    bloodlust: 1,
+                    bloodlust: true,
                     manaSpringTotem: TristateEffect.TristateEffectRegular,
                     totemOfWrath: true,
                     wrathOfAirTotem: true,
                 }),
+                partyBuffs: PartyBuffs.create({}),
                 individualBuffs: IndividualBuffs.create({
                     blessingOfKings: true,
                     blessingOfWisdom: 2,
-                    blessingOfSalvation: true,
                 }),
                 debuffs: Debuffs.create({
                     judgementOfWisdom: true,
@@ -108,13 +104,13 @@ export class ShadowPriestSimUI extends IndividualSimUI {
                 IconInputs.ArcaneBrilliance,
                 IconInputs.DivineSpirit,
                 IconInputs.GiftOfTheWild,
-            ],
-            partyBuffInputs: [
                 IconInputs.MoonkinAura,
                 IconInputs.Bloodlust,
                 IconInputs.WrathOfAirTotem,
                 IconInputs.TotemOfWrath,
                 IconInputs.ManaSpringTotem,
+            ],
+            partyBuffInputs: [
                 IconInputs.ManaTideTotem,
                 IconInputs.HeroicPresence,
             ],
@@ -127,7 +123,6 @@ export class ShadowPriestSimUI extends IndividualSimUI {
             // IconInputs to include in the 'Debuffs' section on the settings tab.
             debuffInputs: [
                 IconInputs.JudgementOfWisdom,
-                IconInputs.ImprovedSealOfTheCrusader,
                 IconInputs.CurseOfElements,
             ],
             // Which options are selectable in the 'Consumes' section.
@@ -162,7 +157,6 @@ export class ShadowPriestSimUI extends IndividualSimUI {
             // Inputs to include in the 'Other' section on the settings tab.
             otherInputs: {
                 inputs: [
-                    OtherInputs.ISBUptime,
                     OtherInputs.PrepopPotion,
                     OtherInputs.TankAssignment,
                 ],

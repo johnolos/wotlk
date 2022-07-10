@@ -1,5 +1,4 @@
 import { Class } from '/wotlk/core/proto/common.js';
-import { Drums } from '/wotlk/core/proto/common.js';
 import { Race } from '/wotlk/core/proto/common.js';
 import { Spec } from '/wotlk/core/proto/common.js';
 import { TristateEffect } from '/wotlk/core/proto/common.js';
@@ -736,7 +735,7 @@ export const buffBotPresets = [
             raidProto.buffs.giftOfTheWild = Math.max(raidProto.buffs.giftOfTheWild, TristateEffect.TristateEffectRegular);
             raidProto.buffs.thorns = Math.max(raidProto.buffs.thorns, TristateEffect.TristateEffectRegular);
             raidProto.debuffs.faerieFire = Math.max(raidProto.debuffs.faerieFire, TristateEffect.TristateEffectRegular);
-            partyProto.buffs.leaderOfThePack = Math.max(partyProto.buffs.leaderOfThePack, TristateEffect.TristateEffectRegular);
+            raidProto.buffs.leaderOfThePack = Math.max(raidProto.buffs.leaderOfThePack, TristateEffect.TristateEffectRegular);
             const innervateIndex = buffBot.getInnervateAssignment().targetIndex;
             if (innervateIndex != NO_TARGET) {
                 const partyIndex = Math.floor(innervateIndex / 5);
@@ -828,19 +827,6 @@ export const buffBotPresets = [
     },
     {
         // The value of this field must never change, to preserve local storage data.
-        buffBotId: 'JoC Paladin',
-        spec: Spec.SpecRetributionPaladin,
-        deprecated: true,
-        name: 'JoC Paladin',
-        tooltip: 'JoC Paladin: Adds a set of blessings and Improved Judgement of the Crusader (+3% crit).',
-        iconUrl: 'https://wow.zamimg.com/images/wow/icons/large/spell_holy_holysmite.jpg',
-        modifyRaidProto: (buffBot, raidProto, partyProto) => {
-            // Blessings are handled elswhere.
-            raidProto.debuffs.improvedSealOfTheCrusader = true;
-        },
-    },
-    {
-        // The value of this field must never change, to preserve local storage data.
         buffBotId: 'Holy Priest',
         spec: Spec.SpecShadowPriest,
         name: 'Holy Priest',
@@ -878,12 +864,11 @@ export const buffBotPresets = [
         buffBotId: 'Resto Shaman',
         spec: Spec.SpecElementalShaman,
         name: 'Resto Shaman',
-        tooltip: 'Resto Shaman: Adds Bloodlust, Mana Spring Totem, Mana Tide Totem, Strength of Earth Totem, and Drums of Battle. Chooses air totem based on party composition.',
+        tooltip: 'Resto Shaman: Adds Bloodlust, Mana Spring Totem, Mana Tide Totem, Strength of Earth Totem. Chooses air totem based on party composition.',
         iconUrl: talentTreeIcons[Class.ClassShaman][2],
         modifyRaidProto: (buffBot, raidProto, partyProto) => {
-            partyProto.buffs.drums = Drums.DrumsOfBattle;
-            partyProto.buffs.bloodlust++;
-            partyProto.buffs.manaSpringTotem = TristateEffect.TristateEffectImproved;
+            raidProto.buffs.bloodlust = true;
+            raidProto.buffs.manaSpringTotem = TristateEffect.TristateEffectImproved;
             partyProto.buffs.manaTideTotems++;
             // Choose which air totem to drop based on party composition.
             const woaSpecs = [
@@ -910,53 +895,11 @@ export const buffBotPresets = [
                 .filter(playerSpec => specs.includes(playerSpec))
                 .length);
             if (woaVotes >= wfVotes) {
-                partyProto.buffs.wrathOfAirTotem = true;
+                raidProto.buffs.wrathOfAirTotem = true;
             }
             else {
-                partyProto.buffs.windfuryTotem = TristateEffect.TristateEffectRegular;
+                raidProto.buffs.windfuryTotem = TristateEffect.TristateEffectRegular;
             }
-        },
-    },
-    {
-        // The value of this field must never change, to preserve local storage data.
-        buffBotId: 'CoE Warlock',
-        spec: Spec.SpecWarlock,
-        deprecated: true,
-        name: 'CoE Warlock',
-        tooltip: 'CoE Warlock: Adds Curse of Elements (regular). Also adds +20% uptime to ISB.',
-        iconUrl: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_chilltouch.jpg',
-        modifyRaidProto: (buffBot, raidProto, partyProto) => {
-            const debuffs = raidProto.debuffs;
-            debuffs.curseOfElements = Math.max(debuffs.curseOfElements, TristateEffect.TristateEffectRegular);
-            debuffs.isbUptime = Math.min(1.0, debuffs.isbUptime + 0.2);
-        },
-    },
-    {
-        // The value of this field must never change, to preserve local storage data.
-        buffBotId: 'Malediction Warlock',
-        spec: Spec.SpecWarlock,
-        name: 'Aff Warlock',
-        deprecated: true,
-        tooltip: 'Affliction Warlock: Adds Curse of Elements (improved). Also adds +20% uptime to ISB.',
-        iconUrl: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_curseofachimonde.jpg',
-        modifyRaidProto: (buffBot, raidProto, partyProto) => {
-            const debuffs = raidProto.debuffs;
-            debuffs.curseOfElements = TristateEffect.TristateEffectImproved;
-            debuffs.isbUptime = Math.min(1.0, debuffs.isbUptime + 0.2);
-        },
-    },
-    {
-        // The value of this field must never change, to preserve local storage data.
-        buffBotId: 'CoW Warlock',
-        spec: Spec.SpecWarlock,
-        deprecated: true,
-        name: 'CoW Warlock',
-        tooltip: 'CoW Warlock: Adds Curse of Weakness. Also adds +20% uptime to ISB.',
-        iconUrl: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_unholystrength.jpg',
-        modifyRaidProto: (buffBot, raidProto, partyProto) => {
-            const debuffs = raidProto.debuffs;
-            debuffs.curseOfWeakness = true;
-            debuffs.isbUptime = Math.min(1.0, debuffs.isbUptime + 0.2);
         },
     },
     {
@@ -968,7 +911,7 @@ export const buffBotPresets = [
         tooltip: 'Arms Warrior: Adds Sunder Armor, Blood Frenzy, and Improved Battle Shout.',
         iconUrl: 'https://wow.zamimg.com/images/wow/icons/medium/ability_warrior_savageblow.jpg',
         modifyRaidProto: (buffBot, raidProto, partyProto) => {
-            partyProto.buffs.battleShout = TristateEffect.TristateEffectImproved;
+            raidProto.buffs.battleShout = TristateEffect.TristateEffectImproved;
             const debuffs = raidProto.debuffs;
             debuffs.sunderArmor = true;
             debuffs.bloodFrenzy = true;
@@ -983,7 +926,7 @@ export const buffBotPresets = [
         tooltip: 'Fury Warrior: Adds Sunder Armor and Improved Battle Shout.',
         iconUrl: 'https://wow.zamimg.com/images/wow/icons/medium/ability_warrior_innerrage.jpg',
         modifyRaidProto: (buffBot, raidProto, partyProto) => {
-            partyProto.buffs.battleShout = TristateEffect.TristateEffectImproved;
+            raidProto.buffs.battleShout = TristateEffect.TristateEffectImproved;
             const debuffs = raidProto.debuffs;
             debuffs.sunderArmor = true;
         },

@@ -91,16 +91,14 @@ export class EnhancementShamanSimUI extends IndividualSimUI {
                     arcaneBrilliance: true,
                     divineSpirit: true,
                     giftOfTheWild: TristateEffect.TristateEffectImproved,
-                }),
-                partyBuffs: PartyBuffs.create({
                     battleShout: TristateEffect.TristateEffectImproved,
                     leaderOfThePack: TristateEffect.TristateEffectImproved,
                 }),
+                partyBuffs: PartyBuffs.create({}),
                 individualBuffs: IndividualBuffs.create({
                     blessingOfKings: true,
                     blessingOfWisdom: TristateEffect.TristateEffectImproved,
                     blessingOfMight: TristateEffect.TristateEffectImproved,
-                    blessingOfSalvation: true,
                 }),
                 debuffs: Debuffs.create({
                     bloodFrenzy: true,
@@ -109,11 +107,8 @@ export class EnhancementShamanSimUI extends IndividualSimUI {
                     curseOfElements: TristateEffect.TristateEffectRegular,
                     faerieFire: TristateEffect.TristateEffectImproved,
                     judgementOfWisdom: true,
-                    improvedSealOfTheCrusader: true,
                     misery: true,
                     huntersMark: TristateEffect.TristateEffectImproved,
-                    exposeWeaknessUptime: 0.95,
-                    exposeWeaknessHunterAgility: 1200,
                 }),
             },
             // IconInputs to include in the 'Self Buffs' section on the settings tab.
@@ -126,9 +121,6 @@ export class EnhancementShamanSimUI extends IndividualSimUI {
             raidBuffInputs: [
                 IconInputs.ArcaneBrilliance,
                 IconInputs.GiftOfTheWild,
-            ],
-            partyBuffInputs: [
-                IconInputs.DrumsOfBattleBuff,
                 IconInputs.Bloodlust,
                 IconInputs.ManaSpringTotem,
                 IconInputs.WrathOfAirTotem,
@@ -137,6 +129,8 @@ export class EnhancementShamanSimUI extends IndividualSimUI {
                 IconInputs.LeaderOfThePack,
                 IconInputs.MoonkinAura,
                 IconInputs.TrueshotAura,
+            ],
+            partyBuffInputs: [
                 IconInputs.BraidedEterniumChain,
                 IconInputs.EyeOfTheNight,
                 IconInputs.ChainOfTheTwilightOwl,
@@ -145,12 +139,10 @@ export class EnhancementShamanSimUI extends IndividualSimUI {
                 IconInputs.BlessingOfKings,
                 IconInputs.BlessingOfWisdom,
                 IconInputs.BlessingOfMight,
-                IconInputs.BlessingOfSalvation,
             ],
             // IconInputs to include in the 'Debuffs' section on the settings tab.
             debuffInputs: [
                 IconInputs.BloodFrenzy,
-                IconInputs.ImprovedSealOfTheCrusader,
                 IconInputs.JudgementOfWisdom,
                 IconInputs.HuntersMark,
                 IconInputs.FaerieFire,
@@ -218,10 +210,6 @@ export class EnhancementShamanSimUI extends IndividualSimUI {
                 inputs: [
                     ShamanInputs.DelayOffhandSwings,
                     OtherInputs.PrepopPotion,
-                    OtherInputs.ExposeWeaknessUptime,
-                    OtherInputs.ExposeWeaknessHunterAgility,
-                    OtherInputs.SnapshotBsSolarianSapphire,
-                    OtherInputs.SnapshotBsT2,
                     OtherInputs.TankAssignment,
                     OtherInputs.InFrontOfTarget,
                 ],

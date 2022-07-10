@@ -11,7 +11,6 @@ import { Flask } from '/wotlk/core/proto/common.js';
 import { Food } from '/wotlk/core/proto/common.js';
 import { GuardianElixir } from '/wotlk/core/proto/common.js';
 import { Conjured } from '/wotlk/core/proto/common.js';
-import { Drums } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
 import * as IconInputs from '/wotlk/core/components/icon_inputs.js';
@@ -100,27 +99,22 @@ export class ProtectionWarriorSimUI extends IndividualSimUI {
                     shadowProtection: true,
                     giftOfTheWild: TristateEffect.TristateEffectImproved,
                     thorns: TristateEffect.TristateEffectImproved,
-                }),
-                partyBuffs: PartyBuffs.create({
-                    bloodlust: 1,
-                    drums: Drums.DrumsOfBattle,
+                    bloodlust: true,
                     strengthOfEarthTotem: TristateEffect.TristateEffectImproved,
                     windfuryTotem: TristateEffect.TristateEffectImproved,
                     leaderOfThePack: TristateEffect.TristateEffectImproved,
+                    unleashedRage: true,
                 }),
+                partyBuffs: PartyBuffs.create({}),
                 individualBuffs: IndividualBuffs.create({
                     blessingOfKings: true,
                     blessingOfMight: TristateEffect.TristateEffectImproved,
-                    unleashedRage: true,
                 }),
                 debuffs: Debuffs.create({
                     mangle: true,
                     curseOfWeakness: true,
                     faerieFire: TristateEffect.TristateEffectImproved,
-                    improvedSealOfTheCrusader: true,
                     huntersMark: TristateEffect.TristateEffectImproved,
-                    exposeWeaknessUptime: 0.95,
-                    exposeWeaknessHunterAgility: 1200,
                 }),
             },
             // IconInputs to include in the 'Self Buffs' section on the settings tab.
@@ -134,9 +128,6 @@ export class ProtectionWarriorSimUI extends IndividualSimUI {
                 IconInputs.ShadowProtection,
                 IconInputs.GiftOfTheWild,
                 IconInputs.Thorns,
-            ],
-            partyBuffInputs: [
-                IconInputs.DrumsOfBattleBuff,
                 IconInputs.Bloodlust,
                 IconInputs.StrengthOfEarthTotem,
                 IconInputs.WindfuryTotem,
@@ -146,22 +137,22 @@ export class ProtectionWarriorSimUI extends IndividualSimUI {
                 IconInputs.TrueshotAura,
                 IconInputs.DevotionAura,
                 IconInputs.RetributionAura,
+                IconInputs.BloodPact,
+                IconInputs.UnleashedRage,
+            ],
+            partyBuffInputs: [
                 IconInputs.HeroicPresence,
                 IconInputs.BraidedEterniumChain,
-                IconInputs.BloodPact,
             ],
             playerBuffInputs: [
                 IconInputs.BlessingOfKings,
                 IconInputs.BlessingOfMight,
                 IconInputs.BlessingOfSanctuary,
-                IconInputs.BlessingOfSalvation,
-                IconInputs.UnleashedRage,
             ],
             // IconInputs to include in the 'Debuffs' section on the settings tab.
             debuffInputs: [
                 IconInputs.BloodFrenzy,
                 IconInputs.Mangle,
-                IconInputs.ImprovedSealOfTheCrusader,
                 IconInputs.JudgementOfLight,
                 IconInputs.JudgementOfWisdom,
                 IconInputs.HuntersMark,
@@ -240,9 +231,6 @@ export class ProtectionWarriorSimUI extends IndividualSimUI {
                     ProtectionWarriorInputs.PrecastShout,
                     ProtectionWarriorInputs.PrecastShoutWithSapphire,
                     ProtectionWarriorInputs.PrecastShoutWithT2,
-                    OtherInputs.ExposeWeaknessUptime,
-                    OtherInputs.ExposeWeaknessHunterAgility,
-                    OtherInputs.InspirationUptime,
                     OtherInputs.InFrontOfTarget,
                 ],
             },

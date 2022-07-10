@@ -110,7 +110,6 @@ export class ElementalShamanSimUI extends IndividualSimUI {
                 individualBuffs: IndividualBuffs.create({
                     blessingOfKings: true,
                     blessingOfWisdom: 2,
-                    blessingOfSalvation: true,
                 }),
                 debuffs: Debuffs.create({
                     faerieFire: TristateEffect.TristateEffectImproved,
@@ -128,29 +127,26 @@ export class ElementalShamanSimUI extends IndividualSimUI {
                 IconInputs.ArcaneBrilliance,
                 IconInputs.DivineSpirit,
                 IconInputs.GiftOfTheWild,
-            ],
-            partyBuffInputs: [
                 IconInputs.MoonkinAura,
                 IconInputs.WrathOfAirTotem,
                 IconInputs.TotemOfWrath,
                 IconInputs.ManaSpringTotem,
+            ],
+            partyBuffInputs: [
                 IconInputs.ManaTideTotem,
                 IconInputs.EyeOfTheNight,
                 IconInputs.ChainOfTheTwilightOwl,
-                IconInputs.JadePendantOfBlasting,
                 IconInputs.AtieshWarlock,
                 IconInputs.AtieshMage,
             ],
             playerBuffInputs: [
                 IconInputs.BlessingOfKings,
                 IconInputs.BlessingOfWisdom,
-                IconInputs.BlessingOfSalvation,
                 IconInputs.Innervate,
                 IconInputs.PowerInfusion,
             ],
             // IconInputs to include in the 'Debuffs' section on the settings tab.
             debuffInputs: [
-                IconInputs.ImprovedSealOfTheCrusader,
                 IconInputs.Misery,
                 IconInputs.FaerieFire,
             ],

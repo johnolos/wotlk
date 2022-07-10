@@ -11,7 +11,6 @@ import { Flask } from '/wotlk/core/proto/common.js';
 import { Food } from '/wotlk/core/proto/common.js';
 import { GuardianElixir } from '/wotlk/core/proto/common.js';
 import { Conjured } from '/wotlk/core/proto/common.js';
-import { Drums } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import * as IconInputs from '/wotlk/core/components/icon_inputs.js';
 import * as OtherInputs from '/wotlk/core/components/other_inputs.js';
@@ -91,30 +90,25 @@ export class FeralTankDruidSimUI extends IndividualSimUI {
                     shadowProtection: true,
                     giftOfTheWild: TristateEffect.TristateEffectImproved,
                     thorns: TristateEffect.TristateEffectImproved,
-                }),
-                partyBuffs: PartyBuffs.create({
-                    drums: Drums.DrumsOfBattle,
-                    bloodlust: 1,
-                    braidedEterniumChain: true,
+                    bloodlust: true,
                     strengthOfEarthTotem: TristateEffect.TristateEffectImproved,
                     battleShout: TristateEffect.TristateEffectImproved,
-                    snapshotBsSolarianSapphire: true,
+                    unleashedRage: true,
+                }),
+                partyBuffs: PartyBuffs.create({
+                    braidedEterniumChain: true,
                 }),
                 individualBuffs: IndividualBuffs.create({
                     blessingOfKings: true,
                     blessingOfMight: TristateEffect.TristateEffectImproved,
-                    unleashedRage: true,
                 }),
                 debuffs: Debuffs.create({
-                    improvedSealOfTheCrusader: true,
                     bloodFrenzy: true,
                     exposeArmor: TristateEffect.TristateEffectImproved,
                     faerieFire: TristateEffect.TristateEffectImproved,
                     sunderArmor: true,
                     curseOfWeakness: true,
                     huntersMark: TristateEffect.TristateEffectImproved,
-                    exposeWeaknessUptime: 0.95,
-                    exposeWeaknessHunterAgility: 1200,
                     thunderClap: TristateEffect.TristateEffectImproved,
                     demoralizingShout: TristateEffect.TristateEffectImproved,
                 }),
@@ -127,31 +121,29 @@ export class FeralTankDruidSimUI extends IndividualSimUI {
                 IconInputs.ShadowProtection,
                 IconInputs.GiftOfTheWild,
                 IconInputs.Thorns,
-            ],
-            partyBuffInputs: [
-                IconInputs.DrumsOfBattleBuff,
                 IconInputs.Bloodlust,
                 IconInputs.StrengthOfEarthTotem,
                 IconInputs.BattleShout,
                 IconInputs.CommandingShout,
-                IconInputs.HeroicPresence,
                 IconInputs.DevotionAura,
                 IconInputs.RetributionAura,
                 IconInputs.TrueshotAura,
-                IconInputs.BraidedEterniumChain,
                 IconInputs.BloodPact,
+                IconInputs.UnleashedRage,
+            ],
+            partyBuffInputs: [
+                IconInputs.BraidedEterniumChain,
+                IconInputs.HeroicPresence,
             ],
             playerBuffInputs: [
                 IconInputs.BlessingOfKings,
                 IconInputs.BlessingOfMight,
                 IconInputs.BlessingOfSanctuary,
-                IconInputs.UnleashedRage,
             ],
             // IconInputs to include in the 'Debuffs' section on the settings tab.
             debuffInputs: [
                 IconInputs.BloodFrenzy,
                 IconInputs.Mangle,
-                IconInputs.ImprovedSealOfTheCrusader,
                 IconInputs.JudgementOfLight,
                 IconInputs.JudgementOfWisdom,
                 IconInputs.HuntersMark,
@@ -223,11 +215,6 @@ export class FeralTankDruidSimUI extends IndividualSimUI {
                     OtherInputs.HpPercentForDefensives,
                     DruidInputs.StartingRage,
                     OtherInputs.PrepopPotion,
-                    OtherInputs.ExposeWeaknessUptime,
-                    OtherInputs.ExposeWeaknessHunterAgility,
-                    OtherInputs.InspirationUptime,
-                    OtherInputs.SnapshotBsSolarianSapphire,
-                    OtherInputs.SnapshotBsT2,
                     OtherInputs.InFrontOfTarget,
                 ],
             },

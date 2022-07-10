@@ -2,7 +2,6 @@ import { Faction } from '/wotlk/core/proto/common.js';
 import { Item } from '/wotlk/core/proto/common.js';
 import { Profession } from '/wotlk/core/proto/common.js';
 import { RaidTarget } from '/wotlk/core/proto/common.js';
-import { Spec } from '/wotlk/core/proto/common.js';
 import { ComputeStatsRequest } from '/wotlk/core/proto/api.js';
 import { GearListRequest } from '/wotlk/core/proto/api.js';
 import { RaidSimRequest } from '/wotlk/core/proto/api.js';
@@ -14,10 +13,8 @@ import { Gear } from '/wotlk/core/proto_utils/gear.js';
 import { SimResult } from '/wotlk/core/proto_utils/sim_result.js';
 import { gemEligibleForSocket } from '/wotlk/core/proto_utils/gems.js';
 import { gemMatchesSocket } from '/wotlk/core/proto_utils/gems.js';
-import { specTypeFunctions } from '/wotlk/core/proto_utils/utils.js';
 import { getEligibleItemSlots } from '/wotlk/core/proto_utils/utils.js';
 import { getEligibleEnchantSlots } from '/wotlk/core/proto_utils/utils.js';
-import { playerToSpec } from '/wotlk/core/proto_utils/utils.js';
 import { Encounter } from './encounter.js';
 import { Raid } from './raid.js';
 import { TypedEvent } from './typed_event.js';
@@ -121,12 +118,7 @@ export class Sim {
     makeRaidSimRequest(debug) {
         const raid = this.getModifiedRaidProto();
         const encounter = this.encounter.toProto();
-        const hunters = raid.parties.map(party => party.players).flat().filter(player => player.name && playerToSpec(player) == Spec.SpecHunter);
-        if (hunters.some(hunter => specTypeFunctions[Spec.SpecHunter].talentsFromPlayer(hunter).exposeWeakness > 0)) {
-            if (raid.debuffs) {
-                raid.debuffs.exposeWeaknessUptime = 0;
-            }
-        }
+        // TODO: remove any replenishment from sim request here? probably makes more sense to do it inside the sim to protect against accidents
         return RaidSimRequest.create({
             raid: raid,
             encounter: encounter,

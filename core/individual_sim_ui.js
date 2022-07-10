@@ -424,7 +424,6 @@ export class IndividualSimUI extends SimUI {
             }
         }
         const tradeConsumesElem = this.rootElem.getElementsByClassName('consumes-trade')[0];
-        new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.DrumsInput, this);
         new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.SuperSapper, this);
         new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.GoblinSapper, this);
         new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.FillerExplosiveInput, this);

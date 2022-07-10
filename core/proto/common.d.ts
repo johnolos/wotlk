@@ -11,17 +11,17 @@ import { MessageType } from "@protobuf-ts/runtime";
  */
 export interface RaidBuffs {
     /**
-     * @generated from protobuf field: bool arcane_brilliance = 1;
-     */
-    arcaneBrilliance: boolean;
-    /**
-     * @generated from protobuf field: proto.TristateEffect power_word_fortitude = 2;
+     * @generated from protobuf field: proto.TristateEffect power_word_fortitude = 1;
      */
     powerWordFortitude: TristateEffect;
     /**
-     * @generated from protobuf field: bool shadow_protection = 3;
+     * @generated from protobuf field: bool arcane_brilliance = 2;
      */
-    shadowProtection: boolean;
+    arcaneBrilliance: boolean;
+    /**
+     * @generated from protobuf field: bool fel_intelligence = 3;
+     */
+    felIntelligence: boolean;
     /**
      * @generated from protobuf field: bool divine_spirit = 4;
      */
@@ -31,23 +31,139 @@ export interface RaidBuffs {
      */
     giftOfTheWild: TristateEffect;
     /**
-     * @generated from protobuf field: proto.TristateEffect thorns = 6;
+     * @generated from protobuf field: bool shadow_protection = 6;
      */
-    thorns: TristateEffect;
+    shadowProtection: boolean;
     /**
-     * % Damage Buffs
+     * @generated from protobuf field: bool swift_retribution = 7;
+     */
+    swiftRetribution: boolean;
+    /**
+     * @generated from protobuf field: proto.TristateEffect moonkin_aura = 8;
+     */
+    moonkinAura: TristateEffect;
+    /**
+     * @generated from protobuf field: bool elemental_oath = 9;
+     */
+    elementalOath: boolean;
+    /**
+     * @generated from protobuf field: bool totem_of_wrath = 10;
+     */
+    totemOfWrath: boolean;
+    /**
+     * @generated from protobuf field: int32 demonic_pact = 37;
+     */
+    demonicPact: number;
+    /**
+     * +Health
      *
-     * @generated from protobuf field: bool arcane_empowerment = 7;
+     * @generated from protobuf field: proto.TristateEffect commanding_shout = 11;
      */
-    arcaneEmpowerment: boolean;
+    commandingShout: TristateEffect;
     /**
-     * @generated from protobuf field: bool ferocious_inspiration = 8;
+     * @generated from protobuf field: proto.TristateEffect blood_pact = 12;
+     */
+    bloodPact: TristateEffect;
+    /**
+     * 155 agi/str
+     *
+     * @generated from protobuf field: bool horn_of_winter = 13;
+     */
+    hornOfWinter: boolean;
+    /**
+     * @generated from protobuf field: proto.TristateEffect strength_of_earth_totem = 14;
+     */
+    strengthOfEarthTotem: TristateEffect;
+    /**
+     * 20% Melee Haste
+     *
+     * @generated from protobuf field: proto.TristateEffect icy_talons = 15;
+     */
+    icyTalons: TristateEffect;
+    /**
+     * @generated from protobuf field: proto.TristateEffect windfury_totem = 16;
+     */
+    windfuryTotem: TristateEffect;
+    /**
+     * +AP
+     *
+     * @generated from protobuf field: proto.TristateEffect battle_shout = 17;
+     */
+    battleShout: TristateEffect;
+    /**
+     * 10% AP
+     *
+     * @generated from protobuf field: bool trueshot_aura = 18;
+     */
+    trueshotAura: boolean;
+    /**
+     * @generated from protobuf field: bool unleashed_rage = 19;
+     */
+    unleashedRage: boolean;
+    /**
+     * @generated from protobuf field: bool abominations_might = 20;
+     */
+    abominationsMight: boolean;
+    /**
+     * 5% phy crit
+     *
+     * @generated from protobuf field: proto.TristateEffect leader_of_the_pack = 21;
+     */
+    leaderOfThePack: TristateEffect;
+    /**
+     * @generated from protobuf field: bool rampage = 22;
+     */
+    rampage: boolean;
+    /**
+     * 3% dmg
+     *
+     * @generated from protobuf field: bool ferocious_inspiration = 23;
      */
     ferociousInspiration: boolean;
     /**
-     * @generated from protobuf field: bool sanctified_retribution = 9;
+     * @generated from protobuf field: bool sanctified_retribution = 24;
      */
     sanctifiedRetribution: boolean;
+    /**
+     * @generated from protobuf field: bool arcane_empowerment = 25;
+     */
+    arcaneEmpowerment: boolean;
+    /**
+     * @generated from protobuf field: proto.TristateEffect mana_spring_totem = 26;
+     */
+    manaSpringTotem: TristateEffect;
+    /**
+     * 5% spell haste
+     *
+     * @generated from protobuf field: bool wrath_of_air_totem = 27;
+     */
+    wrathOfAirTotem: boolean;
+    /**
+     * @generated from protobuf field: bool bloodlust = 29;
+     */
+    bloodlust: boolean;
+    /**
+     * @generated from protobuf field: proto.TristateEffect thorns = 32;
+     */
+    thorns: TristateEffect;
+    /**
+     * @generated from protobuf field: proto.TristateEffect devotion_aura = 33;
+     */
+    devotionAura: TristateEffect;
+    /**
+     * @generated from protobuf field: proto.TristateEffect retribution_aura = 34;
+     */
+    retributionAura: TristateEffect;
+    /**
+     * Drums
+     *
+     * @generated from protobuf field: bool DrumsOfKings = 38 [json_name = "DrumsOfKings"];
+     */
+    drumsOfKings: boolean;
+    /**
+     * @generated from protobuf field: bool DrumsOfWild = 39 [json_name = "DrumsOfWild"];
+     */
+    drumsOfWild: boolean;
 }
 /**
  * Buffs that affect a single party.
@@ -55,44 +171,6 @@ export interface RaidBuffs {
  * @generated from protobuf message proto.PartyBuffs
  */
 export interface PartyBuffs {
-    /**
-     * @generated from protobuf field: int32 bloodlust = 1;
-     */
-    bloodlust: number;
-    /**
-     * @generated from protobuf field: proto.TristateEffect blood_pact = 34;
-     */
-    bloodPact: TristateEffect;
-    /**
-     * @generated from protobuf field: proto.TristateEffect moonkin_aura = 2;
-     */
-    moonkinAura: TristateEffect;
-    /**
-     * @generated from protobuf field: proto.TristateEffect leader_of_the_pack = 19;
-     */
-    leaderOfThePack: TristateEffect;
-    /**
-     * @generated from protobuf field: proto.TristateEffect devotion_aura = 35;
-     */
-    devotionAura: TristateEffect;
-    /**
-     * @generated from protobuf field: proto.TristateEffect retribution_aura = 36;
-     */
-    retributionAura: TristateEffect;
-    /**
-     * @generated from protobuf field: bool trueshot_aura = 21;
-     */
-    trueshotAura: boolean;
-    /**
-     * @generated from protobuf field: bool heroic_presence = 3;
-     */
-    heroicPresence: boolean;
-    /**
-     * Drums
-     *
-     * @generated from protobuf field: proto.Drums drums = 5;
-     */
-    drums: Drums;
     /**
      * Item Buffs
      *
@@ -116,85 +194,28 @@ export interface PartyBuffs {
      */
     chainOfTheTwilightOwl: boolean;
     /**
-     * @generated from protobuf field: bool jade_pendant_of_blasting = 11;
-     */
-    jadePendantOfBlasting: boolean;
-    /**
-     * Totems
+     * Group buffs
      *
-     * @generated from protobuf field: proto.TristateEffect mana_spring_totem = 12;
-     */
-    manaSpringTotem: TristateEffect;
-    /**
-     * @generated from protobuf field: int32 mana_tide_totems = 17;
+     * @generated from protobuf field: int32 mana_tide_totems = 11;
      */
     manaTideTotems: number;
     /**
-     * @generated from protobuf field: bool totem_of_wrath = 13;
+     * @generated from protobuf field: bool heroic_presence = 30;
      */
-    totemOfWrath: boolean;
-    /**
-     * @generated from protobuf field: bool wrath_of_air_totem = 14;
-     */
-    wrathOfAirTotem: boolean;
-    /**
-     * @generated from protobuf field: proto.TristateEffect strength_of_earth_totem = 16;
-     */
-    strengthOfEarthTotem: TristateEffect;
-    /**
-     * @generated from protobuf field: bool tranquil_air_totem = 26;
-     */
-    tranquilAirTotem: boolean;
-    /**
-     * @generated from protobuf field: proto.TristateEffect windfury_totem = 23;
-     */
-    windfuryTotem: TristateEffect;
-    /**
-     * @generated from protobuf field: proto.TristateEffect battle_shout = 18;
-     */
-    battleShout: TristateEffect;
-    /**
-     * @generated from protobuf field: bool bs_solarian_sapphire = 28;
-     */
-    bsSolarianSapphire: boolean;
-    /**
-     * @generated from protobuf field: bool snapshot_bs_solarian_sapphire = 29;
-     */
-    snapshotBsSolarianSapphire: boolean;
-    /**
-     * @generated from protobuf field: bool snapshot_bs_t2 = 30;
-     */
-    snapshotBsT2: boolean;
-    /**
-     * @generated from protobuf field: int32 snapshot_bs_booming_voice_rank = 33;
-     */
-    snapshotBsBoomingVoiceRank: number;
-    /**
-     * Mitigation buffs
-     *
-     * @generated from protobuf field: proto.TristateEffect commanding_shout = 32;
-     */
-    commandingShout: TristateEffect;
+    heroicPresence: boolean;
 }
 /**
- * Buffs are only used by individual sims, never the raid sim.
- * These are usually individuals of actions taken by other Characters.
+ * These are usually individual actions taken by other Characters.
  *
  * @generated from protobuf message proto.IndividualBuffs
  */
 export interface IndividualBuffs {
     /**
+     * Blessings, used for raid sim and individual sim
+     *
      * @generated from protobuf field: bool blessing_of_kings = 1;
      */
     blessingOfKings: boolean;
-    /**
-     * @generated from protobuf field: bool blessing_of_salvation = 8;
-     */
-    blessingOfSalvation: boolean;
-    /**
-     * @generated from protobuf field: bool blessing_of_sanctuary = 9;
-     */
-    blessingOfSanctuary: boolean;
     /**
      * @generated from protobuf field: proto.TristateEffect blessing_of_wisdom = 2;
      */
@@ -204,27 +225,43 @@ export interface IndividualBuffs {
      */
     blessingOfMight: TristateEffect;
     /**
-     * @generated from protobuf field: bool replenishment = 4;
+     * @generated from protobuf field: bool blessing_of_sanctuary = 4;
      */
-    replenishment: boolean;
-    /**
-     * @generated from protobuf field: bool unleashed_rage = 7;
-     */
-    unleashedRage: boolean;
+    blessingOfSanctuary: boolean;
     /**
      * How many of each of these buffs the player will be receiving.
      *
-     * @generated from protobuf field: int32 innervates = 5;
+     * @generated from protobuf field: int32 hymn_of_hope = 5;
+     */
+    hymnOfHope: number;
+    /**
+     * @generated from protobuf field: int32 hand_of_salvation = 6;
+     */
+    handOfSalvation: number;
+    /**
+     * @generated from protobuf field: int32 rapture = 7;
+     */
+    rapture: number;
+    /**
+     * @generated from protobuf field: int32 innervates = 8;
      */
     innervates: number;
     /**
-     * @generated from protobuf field: int32 power_infusions = 6;
+     * @generated from protobuf field: int32 power_infusions = 9;
      */
     powerInfusions: number;
     /**
-     * @generated from protobuf field: double inspiration_uptime = 10;
+     * @generated from protobuf field: int32 unholy_frenzy = 10;
      */
-    inspirationUptime: number;
+    unholyFrenzy: number;
+    /**
+     * @generated from protobuf field: int32 revitalize = 11;
+     */
+    revitalize: number;
+    /**
+     * @generated from protobuf field: bool replenishment = 12;
+     */
+    replenishment: boolean;
 }
 /**
  * @generated from protobuf message proto.Consumes
@@ -310,10 +347,6 @@ export interface Consumes {
      */
     numStartingConjured: number;
     /**
-     * @generated from protobuf field: proto.Drums drums = 19;
-     */
-    drums: Drums;
-    /**
      * @generated from protobuf field: bool super_sapper = 50;
      */
     superSapper: boolean;
@@ -325,6 +358,14 @@ export interface Consumes {
      * @generated from protobuf field: proto.Explosive filler_explosive = 52;
      */
     fillerExplosive: Explosive;
+    /**
+     * @generated from protobuf field: bool DrumsOfKings = 54 [json_name = "DrumsOfKings"];
+     */
+    drumsOfKings: boolean;
+    /**
+     * @generated from protobuf field: bool DrumsOfWild = 55 [json_name = "DrumsOfWild"];
+     */
+    drumsOfWild: boolean;
 }
 /**
  * @generated from protobuf message proto.Debuffs
@@ -335,47 +376,65 @@ export interface Debuffs {
      */
     judgementOfWisdom: boolean;
     /**
-     * @generated from protobuf field: bool judgement_of_light = 25;
+     * @generated from protobuf field: bool judgement_of_light = 2;
      */
     judgementOfLight: boolean;
-    /**
-     * @generated from protobuf field: bool improved_seal_of_the_crusader = 2;
-     */
-    improvedSealOfTheCrusader: boolean;
     /**
      * @generated from protobuf field: bool misery = 3;
      */
     misery: boolean;
     /**
-     * @generated from protobuf field: proto.TristateEffect curse_of_elements = 4;
+     * @generated from protobuf field: proto.TristateEffect faerie_fire = 4;
+     */
+    faerieFire: TristateEffect;
+    /**
+     * @generated from protobuf field: proto.TristateEffect curse_of_elements = 5;
      */
     curseOfElements: TristateEffect;
     /**
-     * @generated from protobuf field: double isb_uptime = 5;
+     * @generated from protobuf field: proto.TristateEffect ebon_plaguebringer = 6;
      */
-    isbUptime: number;
+    ebonPlaguebringer: TristateEffect;
     /**
-     * @generated from protobuf field: bool improved_shadow_bolt = 27;
+     * +3% to crit against target
+     *
+     * @generated from protobuf field: bool heart_of_the_crusader = 7;
+     */
+    heartOfTheCrusader: boolean;
+    /**
+     * @generated from protobuf field: bool master_poisoner = 8;
+     */
+    masterPoisoner: boolean;
+    /**
+     * @generated from protobuf field: bool totem_of_wrath = 9;
+     */
+    totemOfWrath: boolean;
+    /**
+     * 13% spell dmg
+     *
+     * @generated from protobuf field: bool improved_shadow_bolt = 10;
      */
     improvedShadowBolt: boolean;
     /**
-     * @generated from protobuf field: bool shadow_weaving = 18;
-     */
-    shadowWeaving: boolean;
-    /**
-     * @generated from protobuf field: bool improved_scorch = 6;
+     * @generated from protobuf field: bool improved_scorch = 11;
      */
     improvedScorch: boolean;
     /**
-     * @generated from protobuf field: bool winters_chill = 7;
+     * @generated from protobuf field: bool winters_chill = 12;
      */
     wintersChill: boolean;
     /**
-     * @generated from protobuf field: bool blood_frenzy = 8;
+     * @generated from protobuf field: bool blood_frenzy = 13;
      */
     bloodFrenzy: boolean;
     /**
-     * @generated from protobuf field: bool gift_of_arthas = 17;
+     * @generated from protobuf field: bool savage_combat = 14;
+     */
+    savageCombat: boolean;
+    /**
+     * TODO: validate these
+     *
+     * @generated from protobuf field: bool gift_of_arthas = 15;
      */
     giftOfArthas: boolean;
     /**
@@ -383,59 +442,47 @@ export interface Debuffs {
      */
     mangle: boolean;
     /**
-     * @generated from protobuf field: proto.TristateEffect expose_armor = 9;
+     * @generated from protobuf field: proto.TristateEffect expose_armor = 17;
      */
     exposeArmor: TristateEffect;
     /**
-     * @generated from protobuf field: proto.TristateEffect faerie_fire = 10;
-     */
-    faerieFire: TristateEffect;
-    /**
-     * @generated from protobuf field: bool sunder_armor = 11;
+     * @generated from protobuf field: bool sunder_armor = 18;
      */
     sunderArmor: boolean;
     /**
-     * @generated from protobuf field: bool curse_of_weakness = 12;
+     * @generated from protobuf field: bool curse_of_weakness = 19;
      */
     curseOfWeakness: boolean;
     /**
-     * @generated from protobuf field: proto.TristateEffect hunters_mark = 15;
+     * @generated from protobuf field: proto.TristateEffect hunters_mark = 20;
      */
     huntersMark: TristateEffect;
     /**
-     * @generated from protobuf field: double expose_weakness_uptime = 13;
-     */
-    exposeWeaknessUptime: number;
-    /**
-     * @generated from protobuf field: double expose_weakness_hunter_agility = 14;
-     */
-    exposeWeaknessHunterAgility: number;
-    /**
-     * @generated from protobuf field: proto.TristateEffect demoralizing_roar = 19;
+     * @generated from protobuf field: proto.TristateEffect demoralizing_roar = 22;
      */
     demoralizingRoar: TristateEffect;
     /**
-     * @generated from protobuf field: proto.TristateEffect demoralizing_shout = 20;
+     * @generated from protobuf field: proto.TristateEffect demoralizing_shout = 23;
      */
     demoralizingShout: TristateEffect;
     /**
-     * @generated from protobuf field: proto.TristateEffect thunder_clap = 21;
+     * @generated from protobuf field: proto.TristateEffect thunder_clap = 24;
      */
     thunderClap: TristateEffect;
     /**
-     * @generated from protobuf field: bool insect_swarm = 22;
+     * @generated from protobuf field: bool insect_swarm = 25;
      */
     insectSwarm: boolean;
     /**
-     * @generated from protobuf field: bool scorpid_sting = 23;
+     * @generated from protobuf field: bool scorpid_sting = 26;
      */
     scorpidSting: boolean;
     /**
-     * @generated from protobuf field: bool shadow_embrace = 24;
+     * @generated from protobuf field: bool shadow_embrace = 27;
      */
     shadowEmbrace: boolean;
     /**
-     * @generated from protobuf field: bool screech = 26;
+     * @generated from protobuf field: bool screech = 28;
      */
     screech: boolean;
 }
@@ -1694,27 +1741,6 @@ export declare enum TristateEffect {
      * @generated from protobuf enum value: TristateEffectImproved = 2;
      */
     TristateEffectImproved = 2
-}
-/**
- * @generated from protobuf enum proto.Drums
- */
-export declare enum Drums {
-    /**
-     * @generated from protobuf enum value: DrumsUnknown = 0;
-     */
-    DrumsUnknown = 0,
-    /**
-     * @generated from protobuf enum value: DrumsOfBattle = 1;
-     */
-    DrumsOfBattle = 1,
-    /**
-     * @generated from protobuf enum value: DrumsOfRestoration = 2;
-     */
-    DrumsOfRestoration = 2,
-    /**
-     * @generated from protobuf enum value: DrumsOfWar = 3;
-     */
-    DrumsOfWar = 3
 }
 /**
  * @generated from protobuf enum proto.Explosive

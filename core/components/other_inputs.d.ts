@@ -2,10 +2,8 @@ import { BooleanPicker } from '/wotlk/core/components/boolean_picker.js';
 import { EnumPicker } from '/wotlk/core/components/enum_picker.js';
 import { Conjured } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
-import { Party } from '/wotlk/core/party.js';
 import { Player } from '/wotlk/core/player.js';
 import { Sim } from '/wotlk/core/sim.js';
-import { Raid } from '/wotlk/core/raid.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
 import { EventID, TypedEvent } from '/wotlk/core/typed_event.js';
 export declare function makeShow1hWeaponsSelector(parent: HTMLElement, sim: Sim): BooleanPicker<Sim>;
@@ -55,80 +53,6 @@ export declare const NumStartingConjured: {
         getValue: (player: Player<any>) => number;
         setValue: (eventID: EventID, player: Player<any>, newValue: number) => void;
         enableWhen: (player: Player<any>) => boolean;
-    };
-};
-export declare const ISBUptime: {
-    type: "number";
-    getModObject: (simUI: IndividualSimUI<any>) => Raid;
-    config: {
-        extraCssClasses: string[];
-        label: string;
-        labelTooltip: string;
-        changedEvent: (raid: Raid) => TypedEvent<void>;
-        getValue: (raid: Raid) => number;
-        setValue: (eventID: EventID, raid: Raid, newValue: number) => void;
-    };
-};
-export declare const InspirationUptime: {
-    type: "number";
-    getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
-    config: {
-        extraCssClasses: string[];
-        label: string;
-        labelTooltip: string;
-        changedEvent: (player: Player<any>) => TypedEvent<void>;
-        getValue: (player: Player<any>) => number;
-        setValue: (eventID: EventID, player: Player<any>, newValue: number) => void;
-    };
-};
-export declare const ExposeWeaknessUptime: {
-    type: "number";
-    getModObject: (simUI: IndividualSimUI<any>) => Raid;
-    config: {
-        extraCssClasses: string[];
-        label: string;
-        labelTooltip: string;
-        changedEvent: (raid: Raid) => TypedEvent<void>;
-        getValue: (raid: Raid) => number;
-        setValue: (eventID: EventID, raid: Raid, newValue: number) => void;
-    };
-};
-export declare const ExposeWeaknessHunterAgility: {
-    type: "number";
-    getModObject: (simUI: IndividualSimUI<any>) => Raid;
-    config: {
-        extraCssClasses: string[];
-        label: string;
-        labelTooltip: string;
-        changedEvent: (raid: Raid) => TypedEvent<void>;
-        getValue: (raid: Raid) => number;
-        setValue: (eventID: EventID, raid: Raid, newValue: number) => void;
-    };
-};
-export declare const SnapshotBsSolarianSapphire: {
-    type: "boolean";
-    getModObject: (simUI: IndividualSimUI<any>) => Party;
-    config: {
-        extraCssClasses: string[];
-        label: string;
-        labelTooltip: string;
-        changedEvent: (party: Party) => TypedEvent<void>;
-        getValue: (party: Party) => boolean;
-        setValue: (eventID: EventID, party: Party, newValue: boolean) => void;
-        enableWhen: (party: Party) => boolean;
-    };
-};
-export declare const SnapshotBsT2: {
-    type: "boolean";
-    getModObject: (simUI: IndividualSimUI<any>) => Party;
-    config: {
-        extraCssClasses: string[];
-        label: string;
-        labelTooltip: string;
-        changedEvent: (party: Party) => TypedEvent<void>;
-        getValue: (party: Party) => boolean;
-        setValue: (eventID: EventID, party: Party, newValue: boolean) => void;
-        enableWhen: (party: Party) => boolean;
     };
 };
 export declare const InFrontOfTarget: {

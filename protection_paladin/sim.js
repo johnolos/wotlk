@@ -12,7 +12,6 @@ import { Flask } from '/wotlk/core/proto/common.js';
 import { Food } from '/wotlk/core/proto/common.js';
 import { GuardianElixir } from '/wotlk/core/proto/common.js';
 import { Conjured } from '/wotlk/core/proto/common.js';
-import { Drums } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
 import * as IconInputs from '/wotlk/core/components/icon_inputs.js';
@@ -113,20 +112,17 @@ export class ProtectionPaladinSimUI extends IndividualSimUI {
                     shadowProtection: true,
                     giftOfTheWild: TristateEffect.TristateEffectImproved,
                     thorns: TristateEffect.TristateEffectImproved,
-                }),
-                partyBuffs: PartyBuffs.create({
-                    bloodlust: 1,
-                    drums: Drums.DrumsOfBattle,
+                    bloodlust: true,
                     manaSpringTotem: TristateEffect.TristateEffectRegular,
+                    unleashedRage: true,
                 }),
+                partyBuffs: PartyBuffs.create({}),
                 individualBuffs: IndividualBuffs.create({
                     blessingOfKings: true,
                     blessingOfSanctuary: true,
                     blessingOfWisdom: TristateEffect.TristateEffectImproved,
-                    unleashedRage: true,
                 }),
                 debuffs: Debuffs.create({
-                    improvedSealOfTheCrusader: true,
                     misery: true,
                     bloodFrenzy: true,
                     exposeArmor: TristateEffect.TristateEffectImproved,
@@ -134,8 +130,6 @@ export class ProtectionPaladinSimUI extends IndividualSimUI {
                     faerieFire: TristateEffect.TristateEffectImproved,
                     curseOfWeakness: true,
                     huntersMark: TristateEffect.TristateEffectImproved,
-                    exposeWeaknessUptime: 0.95,
-                    exposeWeaknessHunterAgility: 1200,
                 }),
             },
             // IconInputs to include in the 'Self Buffs' section on the settings tab.
@@ -148,9 +142,6 @@ export class ProtectionPaladinSimUI extends IndividualSimUI {
                 IconInputs.DivineSpirit,
                 IconInputs.GiftOfTheWild,
                 IconInputs.Thorns,
-            ],
-            partyBuffInputs: [
-                IconInputs.DrumsOfBattleBuff,
                 IconInputs.Bloodlust,
                 IconInputs.ManaSpringTotem,
                 IconInputs.TotemOfWrath,
@@ -158,12 +149,15 @@ export class ProtectionPaladinSimUI extends IndividualSimUI {
                 IconInputs.StrengthOfEarthTotem,
                 IconInputs.BattleShout,
                 IconInputs.CommandingShout,
-                IconInputs.HeroicPresence,
                 IconInputs.LeaderOfThePack,
                 IconInputs.TrueshotAura,
                 IconInputs.DevotionAura,
                 IconInputs.RetributionAura,
                 IconInputs.BloodPact,
+                IconInputs.UnleashedRage,
+            ],
+            partyBuffInputs: [
+                IconInputs.HeroicPresence,
                 IconInputs.BraidedEterniumChain,
             ],
             playerBuffInputs: [
@@ -171,14 +165,11 @@ export class ProtectionPaladinSimUI extends IndividualSimUI {
                 IconInputs.BlessingOfWisdom,
                 IconInputs.BlessingOfMight,
                 IconInputs.BlessingOfSanctuary,
-                IconInputs.BlessingOfSalvation,
-                IconInputs.UnleashedRage,
             ],
             // IconInputs to include in the 'Debuffs' section on the settings tab.
             debuffInputs: [
                 IconInputs.JudgementOfWisdom,
                 IconInputs.JudgementOfLight,
-                IconInputs.ImprovedSealOfTheCrusader,
                 IconInputs.SunderArmor,
                 IconInputs.ExposeArmor,
                 IconInputs.BloodFrenzy,
@@ -263,9 +254,6 @@ export class ProtectionPaladinSimUI extends IndividualSimUI {
                     OtherInputs.HpPercentForDefensives,
                     ProtectionPaladinInputs.AuraSelection,
                     ProtectionPaladinInputs.UseAvengingWrath,
-                    OtherInputs.ExposeWeaknessUptime,
-                    OtherInputs.ExposeWeaknessHunterAgility,
-                    OtherInputs.InspirationUptime,
                     OtherInputs.InFrontOfTarget,
                 ],
             },
