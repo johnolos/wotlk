@@ -112,7 +112,7 @@ export class ProtectionWarriorSimUI extends IndividualSimUI {
                 }),
                 debuffs: Debuffs.create({
                     mangle: true,
-                    curseOfWeakness: true,
+                    curseOfWeakness: TristateEffect.TristateEffectRegular,
                     faerieFire: TristateEffect.TristateEffectImproved,
                     huntersMark: TristateEffect.TristateEffectImproved,
                 }),

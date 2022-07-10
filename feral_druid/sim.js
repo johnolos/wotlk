@@ -116,7 +116,7 @@ export class FeralDruidSimUI extends IndividualSimUI {
                     exposeArmor: TristateEffect.TristateEffectImproved,
                     faerieFire: TristateEffect.TristateEffectImproved,
                     sunderArmor: true,
-                    curseOfWeakness: true,
+                    curseOfWeakness: TristateEffect.TristateEffectRegular,
                     huntersMark: TristateEffect.TristateEffectImproved,
                 }),
             },

@@ -128,7 +128,7 @@ export class ProtectionPaladinSimUI extends IndividualSimUI {
                     exposeArmor: TristateEffect.TristateEffectImproved,
                     sunderArmor: true,
                     faerieFire: TristateEffect.TristateEffectImproved,
-                    curseOfWeakness: true,
+                    curseOfWeakness: TristateEffect.TristateEffectRegular,
                     huntersMark: TristateEffect.TristateEffectImproved,
                 }),
             },

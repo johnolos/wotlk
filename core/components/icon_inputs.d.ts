@@ -56,7 +56,7 @@ export declare const JudgementOfWisdom: IndividualSimIconPickerConfig<Raid, bool
 export declare const JudgementOfLight: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const Mangle: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const Misery: IndividualSimIconPickerConfig<Raid, boolean>;
-export declare const CurseOfElements: IndividualSimIconPickerConfig<Raid, number>;
+export declare const CurseOfElements: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const CurseOfWeakness: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const FaerieFire: IndividualSimIconPickerConfig<Raid, number>;
 export declare const ExposeArmor: IndividualSimIconPickerConfig<Raid, number>;

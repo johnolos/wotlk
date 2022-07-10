@@ -388,9 +388,9 @@ export interface Debuffs {
      */
     faerieFire: TristateEffect;
     /**
-     * @generated from protobuf field: proto.TristateEffect curse_of_elements = 5;
+     * @generated from protobuf field: bool curse_of_elements = 5;
      */
-    curseOfElements: TristateEffect;
+    curseOfElements: boolean;
     /**
      * @generated from protobuf field: proto.TristateEffect ebon_plaguebringer = 6;
      */
@@ -450,9 +450,9 @@ export interface Debuffs {
      */
     sunderArmor: boolean;
     /**
-     * @generated from protobuf field: bool curse_of_weakness = 19;
+     * @generated from protobuf field: proto.TristateEffect curse_of_weakness = 19;
      */
-    curseOfWeakness: boolean;
+    curseOfWeakness: TristateEffect;
     /**
      * @generated from protobuf field: proto.TristateEffect hunters_mark = 20;
      */

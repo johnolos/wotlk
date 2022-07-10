@@ -106,7 +106,7 @@ export class RogueSimUI extends IndividualSimUI {
                     bloodFrenzy: true,
                     mangle: true,
                     sunderArmor: true,
-                    curseOfWeakness: true,
+                    curseOfWeakness: TristateEffect.TristateEffectRegular,
                     faerieFire: TristateEffect.TristateEffectImproved,
                     misery: true,
                     huntersMark: TristateEffect.TristateEffectImproved,

@@ -99,7 +99,7 @@ export class SmitePriestSimUI extends IndividualSimUI {
                 debuffs: Debuffs.create({
                     judgementOfWisdom: true,
                     misery: true,
-                    curseOfElements: TristateEffect.TristateEffectRegular,
+                    curseOfElements: true,
                 }),
             },
             // IconInputs to include in the 'Self Buffs' section on the settings tab.

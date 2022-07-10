@@ -92,10 +92,10 @@ export class HunterSimUI extends IndividualSimUI {
                 }),
                 debuffs: Debuffs.create({
                     sunderArmor: true,
-                    curseOfWeakness: true,
+                    curseOfWeakness: TristateEffect.TristateEffectRegular,
                     faerieFire: TristateEffect.TristateEffectImproved,
                     judgementOfWisdom: true,
-                    curseOfElements: TristateEffect.TristateEffectRegular,
+                    curseOfElements: true,
                 }),
             },
             // IconInputs to include in the 'Self Buffs' section on the settings tab.

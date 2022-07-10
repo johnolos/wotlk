@@ -107,7 +107,7 @@ export class FeralTankDruidSimUI extends IndividualSimUI {
                     exposeArmor: TristateEffect.TristateEffectImproved,
                     faerieFire: TristateEffect.TristateEffectImproved,
                     sunderArmor: true,
-                    curseOfWeakness: true,
+                    curseOfWeakness: TristateEffect.TristateEffectRegular,
                     huntersMark: TristateEffect.TristateEffectImproved,
                     thunderClap: TristateEffect.TristateEffectImproved,
                     demoralizingShout: TristateEffect.TristateEffectImproved,
