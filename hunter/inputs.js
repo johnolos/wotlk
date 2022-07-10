@@ -87,6 +87,25 @@ export const PetSingleAbility = {
         },
     },
 };
+export const SniperTrainingUptime = {
+    type: 'number',
+    getModObject: (simUI) => simUI.player,
+    config: {
+        extraCssClasses: [
+            'sniper-training-uptime-picker',
+        ],
+        label: 'ST Uptime (%)',
+        labelTooltip: 'Uptime for the Sniper Training talent, as a percent of the fight duration.',
+        changedEvent: (player) => player.specOptionsChangeEmitter,
+        getValue: (player) => player.getSpecOptions().sniperTrainingUptime * 100,
+        setValue: (eventID, player, newValue) => {
+            const newOptions = player.getSpecOptions();
+            newOptions.sniperTrainingUptime = newValue / 100;
+            player.setSpecOptions(eventID, newOptions);
+        },
+        showWhen: (player) => player.getTalents().sniperTraining > 0,
+    },
+};
 export const HunterRotationConfig = {
     inputs: [
         {

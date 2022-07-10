@@ -63,6 +63,19 @@ export declare const PetSingleAbility: {
         setValue: (eventID: EventID, player: Player<Spec.SpecHunter>, newValue: boolean) => void;
     };
 };
+export declare const SniperTrainingUptime: {
+    type: "number";
+    getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
+    config: {
+        extraCssClasses: string[];
+        label: string;
+        labelTooltip: string;
+        changedEvent: (player: Player<Spec.SpecHunter>) => TypedEvent<void>;
+        getValue: (player: Player<Spec.SpecHunter>) => number;
+        setValue: (eventID: EventID, player: Player<Spec.SpecHunter>, newValue: number) => void;
+        showWhen: (player: Player<Spec.SpecHunter>) => boolean;
+    };
+};
 export declare const HunterRotationConfig: {
     inputs: ({
         type: "boolean";

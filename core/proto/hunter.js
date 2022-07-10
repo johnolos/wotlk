@@ -1362,11 +1362,12 @@ class Hunter_Options$Type extends MessageType {
             { no: 4, name: "pet_uptime", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
             { no: 5, name: "pet_single_ability", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 6, name: "latency_ms", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 7, name: "remove_randomness", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 7, name: "sniper_training_uptime", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
+            { no: 8, name: "remove_randomness", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { ammo: 0, petType: 0, petUptime: 0, petSingleAbility: false, latencyMs: 0, removeRandomness: false };
+        const message = { ammo: 0, petType: 0, petUptime: 0, petSingleAbility: false, latencyMs: 0, sniperTrainingUptime: 0, removeRandomness: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1395,7 +1396,10 @@ class Hunter_Options$Type extends MessageType {
                 case /* int32 latency_ms */ 6:
                     message.latencyMs = reader.int32();
                     break;
-                case /* bool remove_randomness */ 7:
+                case /* double sniper_training_uptime */ 7:
+                    message.sniperTrainingUptime = reader.double();
+                    break;
+                case /* bool remove_randomness */ 8:
                     message.removeRandomness = reader.bool();
                     break;
                 default:
@@ -1428,9 +1432,12 @@ class Hunter_Options$Type extends MessageType {
         /* int32 latency_ms = 6; */
         if (message.latencyMs !== 0)
             writer.tag(6, WireType.Varint).int32(message.latencyMs);
-        /* bool remove_randomness = 7; */
+        /* double sniper_training_uptime = 7; */
+        if (message.sniperTrainingUptime !== 0)
+            writer.tag(7, WireType.Bit64).double(message.sniperTrainingUptime);
+        /* bool remove_randomness = 8; */
         if (message.removeRandomness !== false)
-            writer.tag(7, WireType.Varint).bool(message.removeRandomness);
+            writer.tag(8, WireType.Varint).bool(message.removeRandomness);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

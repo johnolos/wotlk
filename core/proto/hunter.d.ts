@@ -635,11 +635,15 @@ export interface Hunter_Options {
      */
     latencyMs: number;
     /**
+     * @generated from protobuf field: double sniper_training_uptime = 7;
+     */
+    sniperTrainingUptime: number;
+    /**
      * For internal use only.
      * Used for hunter presims to avoid artifacts caused by randomness when
      * calculating average ability damage from a low sample size.
      *
-     * @generated from protobuf field: bool remove_randomness = 7;
+     * @generated from protobuf field: bool remove_randomness = 8;
      */
     removeRandomness: boolean;
 }
