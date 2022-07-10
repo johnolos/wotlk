@@ -388,13 +388,19 @@ export interface Debuffs {
      */
     faerieFire: TristateEffect;
     /**
+     * 13% bonus spell damage
+     *
      * @generated from protobuf field: bool curse_of_elements = 5;
      */
     curseOfElements: boolean;
     /**
-     * @generated from protobuf field: proto.TristateEffect ebon_plaguebringer = 6;
+     * @generated from protobuf field: bool ebon_plaguebringer = 6;
      */
-    ebonPlaguebringer: TristateEffect;
+    ebonPlaguebringer: boolean;
+    /**
+     * @generated from protobuf field: bool earth_and_moon = 29;
+     */
+    earthAndMoon: boolean;
     /**
      * +3% to crit against target
      *
@@ -410,7 +416,7 @@ export interface Debuffs {
      */
     totemOfWrath: boolean;
     /**
-     * 13% spell dmg
+     * 5% spell crit
      *
      * @generated from protobuf field: bool improved_shadow_bolt = 10;
      */

@@ -182,7 +182,6 @@ export class ProtectionPaladinSimUI extends IndividualSimUI {
                 IconInputs.DemoralizingShout,
                 IconInputs.Screech,
                 IconInputs.ThunderClap,
-                IconInputs.ShadowEmbrace,
                 IconInputs.InsectSwarm,
                 IconInputs.ScorpidSting,
             ],

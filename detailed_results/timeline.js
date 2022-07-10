@@ -153,7 +153,12 @@ export class Timeline extends ResultComponent {
             rotationOption.classList.remove('hide');
             const threatOption = this.rootElem.getElementsByClassName('threat-option')[0];
             threatOption.classList.add('hide');
-            this.updateRotationChart(player, duration);
+            try {
+                this.updateRotationChart(player, duration);
+            }
+            catch (e) {
+                console.log("Failed to update rotation chart: ", e);
+            }
             const dpsData = this.addDpsSeries(player, options, '');
             this.addDpsYAxis(dpsData.maxDps, options);
             tooltipHandlers.push(dpsData.tooltipHandler);
@@ -398,7 +403,12 @@ export class Timeline extends ResultComponent {
         }
         const target = targets[0];
         this.clearRotationChart();
-        this.drawRotationTimeRuler(this.rotationTimeline.getElementsByClassName('rotation-timeline-canvas')[0], duration);
+        try {
+            this.drawRotationTimeRuler(this.rotationTimeline.getElementsByClassName('rotation-timeline-canvas')[0], duration);
+        }
+        catch (e) {
+            console.log("Failed to draw rotation: ", e);
+        }
         orderedResourceTypes.forEach(resourceType => this.addResourceRow(resourceType, player.groupedResourceLogs[resourceType], duration));
         const buffsById = Object.values(bucket(player.auraUptimeLogs, log => log.actionId.toString()));
         buffsById.sort((a, b) => stringComparator(a[0].actionId.name, b[0].actionId.name));

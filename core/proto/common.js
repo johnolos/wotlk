@@ -2204,7 +2204,8 @@ class Debuffs$Type extends MessageType {
             { no: 3, name: "misery", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 4, name: "faerie_fire", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 5, name: "curse_of_elements", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 6, name: "ebon_plaguebringer", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 6, name: "ebon_plaguebringer", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 29, name: "earth_and_moon", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 7, name: "heart_of_the_crusader", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 8, name: "master_poisoner", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 9, name: "totem_of_wrath", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
@@ -2229,7 +2230,7 @@ class Debuffs$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { judgementOfWisdom: false, judgementOfLight: false, misery: false, faerieFire: 0, curseOfElements: false, ebonPlaguebringer: 0, heartOfTheCrusader: false, masterPoisoner: false, totemOfWrath: false, improvedShadowBolt: false, improvedScorch: false, wintersChill: false, bloodFrenzy: false, savageCombat: false, giftOfArthas: false, mangle: false, exposeArmor: 0, sunderArmor: false, curseOfWeakness: 0, huntersMark: 0, demoralizingRoar: 0, demoralizingShout: 0, thunderClap: 0, insectSwarm: false, scorpidSting: false, shadowEmbrace: false, screech: false };
+        const message = { judgementOfWisdom: false, judgementOfLight: false, misery: false, faerieFire: 0, curseOfElements: false, ebonPlaguebringer: false, earthAndMoon: false, heartOfTheCrusader: false, masterPoisoner: false, totemOfWrath: false, improvedShadowBolt: false, improvedScorch: false, wintersChill: false, bloodFrenzy: false, savageCombat: false, giftOfArthas: false, mangle: false, exposeArmor: 0, sunderArmor: false, curseOfWeakness: 0, huntersMark: 0, demoralizingRoar: 0, demoralizingShout: 0, thunderClap: 0, insectSwarm: false, scorpidSting: false, shadowEmbrace: false, screech: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -2255,8 +2256,11 @@ class Debuffs$Type extends MessageType {
                 case /* bool curse_of_elements */ 5:
                     message.curseOfElements = reader.bool();
                     break;
-                case /* proto.TristateEffect ebon_plaguebringer */ 6:
-                    message.ebonPlaguebringer = reader.int32();
+                case /* bool ebon_plaguebringer */ 6:
+                    message.ebonPlaguebringer = reader.bool();
+                    break;
+                case /* bool earth_and_moon */ 29:
+                    message.earthAndMoon = reader.bool();
                     break;
                 case /* bool heart_of_the_crusader */ 7:
                     message.heartOfTheCrusader = reader.bool();
@@ -2348,9 +2352,12 @@ class Debuffs$Type extends MessageType {
         /* bool curse_of_elements = 5; */
         if (message.curseOfElements !== false)
             writer.tag(5, WireType.Varint).bool(message.curseOfElements);
-        /* proto.TristateEffect ebon_plaguebringer = 6; */
-        if (message.ebonPlaguebringer !== 0)
-            writer.tag(6, WireType.Varint).int32(message.ebonPlaguebringer);
+        /* bool ebon_plaguebringer = 6; */
+        if (message.ebonPlaguebringer !== false)
+            writer.tag(6, WireType.Varint).bool(message.ebonPlaguebringer);
+        /* bool earth_and_moon = 29; */
+        if (message.earthAndMoon !== false)
+            writer.tag(29, WireType.Varint).bool(message.earthAndMoon);
         /* bool heart_of_the_crusader = 7; */
         if (message.heartOfTheCrusader !== false)
             writer.tag(7, WireType.Varint).bool(message.heartOfTheCrusader);
