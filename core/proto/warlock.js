@@ -939,11 +939,12 @@ class Warlock_Rotation$Type extends MessageType {
             { no: 2, name: "curse", kind: "enum", T: () => ["proto.Warlock.Rotation.Curse", Warlock_Rotation_Curse] },
             { no: 3, name: "immolate", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 4, name: "corruption", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 5, name: "detonate_seed", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 5, name: "detonate_seed", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 6, name: "haunt", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { primarySpell: 0, curse: 0, immolate: false, corruption: false, detonateSeed: false };
+        const message = { primarySpell: 0, curse: 0, immolate: false, corruption: false, detonateSeed: false, haunt: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -968,6 +969,9 @@ class Warlock_Rotation$Type extends MessageType {
                     break;
                 case /* bool detonate_seed */ 5:
                     message.detonateSeed = reader.bool();
+                    break;
+                case /* bool haunt */ 6:
+                    message.haunt = reader.bool();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -996,6 +1000,9 @@ class Warlock_Rotation$Type extends MessageType {
         /* bool detonate_seed = 5; */
         if (message.detonateSeed !== false)
             writer.tag(5, WireType.Varint).bool(message.detonateSeed);
+        /* bool haunt = 6; */
+        if (message.haunt !== false)
+            writer.tag(6, WireType.Varint).bool(message.haunt);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

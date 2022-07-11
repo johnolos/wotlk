@@ -382,6 +382,10 @@ export interface Warlock_Rotation {
      * @generated from protobuf field: bool detonate_seed = 5;
      */
     detonateSeed: boolean;
+    /**
+     * @generated from protobuf field: bool haunt = 6;
+     */
+    haunt: boolean;
 }
 /**
  * @generated from protobuf enum proto.Warlock.Rotation.PrimarySpell
