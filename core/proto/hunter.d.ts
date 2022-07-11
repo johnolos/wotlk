@@ -778,9 +778,9 @@ export declare enum HunterMajorGlyph {
      */
     GlyphOfFrostTrap = 42906,
     /**
-     * @generated from protobuf enum value: GlyphOfHunterSMark = 42907;
+     * @generated from protobuf enum value: GlyphOfHuntersMark = 42907;
      */
-    GlyphOfHunterSMark = 42907,
+    GlyphOfHuntersMark = 42907,
     /**
      * @generated from protobuf enum value: GlyphOfImmolationTrap = 42908;
      */

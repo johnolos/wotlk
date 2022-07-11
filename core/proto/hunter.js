@@ -177,9 +177,9 @@ export var HunterMajorGlyph;
      */
     HunterMajorGlyph[HunterMajorGlyph["GlyphOfFrostTrap"] = 42906] = "GlyphOfFrostTrap";
     /**
-     * @generated from protobuf enum value: GlyphOfHunterSMark = 42907;
+     * @generated from protobuf enum value: GlyphOfHuntersMark = 42907;
      */
-    HunterMajorGlyph[HunterMajorGlyph["GlyphOfHunterSMark"] = 42907] = "GlyphOfHunterSMark";
+    HunterMajorGlyph[HunterMajorGlyph["GlyphOfHuntersMark"] = 42907] = "GlyphOfHuntersMark";
     /**
      * @generated from protobuf enum value: GlyphOfImmolationTrap = 42908;
      */
