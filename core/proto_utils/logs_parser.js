@@ -575,47 +575,21 @@ export class CastLog extends SimLog {
             const abilityCastsCompleted = castCompletedLogsByAbility[bucketKey];
             const abilityDamageDealt = damageDealtLogsByAbility[bucketKey];
             const actionId = abilityCastsBegan[0].actionId;
-            const getCastCompleted = (cbIndex) => {
-                if (!abilityCastsCompleted) {
-                    return null;
+            let ddIdx = 0;
+            for (let cbIdx = 0; cbIdx < abilityCastsBegan.length; cbIdx++) {
+                const cbLog = abilityCastsBegan[cbIdx];
+                // Assume cast completed log is the same index because they always come in pairs.
+                // Only exception is final pair, where there might be a cast began without a cast completed.
+                const ccLog = abilityCastsCompleted[cbIdx] || null;
+                const nextCcLog = abilityCastsCompleted[cbIdx + 1] || null;
+                // Find all damage dealt logs between the cur and next cast completed logs.
+                let ddLogs = [];
+                while (abilityDamageDealt && ddIdx < abilityDamageDealt.length && (!nextCcLog || abilityDamageDealt[ddIdx].timestamp < nextCcLog.timestamp)) {
+                    ddLogs.push(abilityDamageDealt[ddIdx]);
+                    ddIdx++;
                 }
-                if (cbIndex >= abilityCastsBegan.length) {
-                    return null;
-                }
-                const nextBeganIndex = abilityCastsBegan[cbIndex + 1]?.logIndex || null;
-                return abilityCastsCompleted.find(ccl => ccl.logIndex > abilityCastsBegan[cbIndex].logIndex
-                    && (nextBeganIndex == null || ccl.logIndex < nextBeganIndex)
-                    && toBucketKey(ccl.actionId) == toBucketKey(actionId)) || null;
-            };
-            if (!abilityDamageDealt) {
-                abilityCastsBegan.forEach((castBegan, i) => castLogs.push(new CastLog(castBegan, getCastCompleted(i), [])));
-                return;
+                castLogs.push(new CastLog(cbLog, ccLog, ddLogs));
             }
-            let curCCL = null;
-            let nextCCL = getCastCompleted(0);
-            let curDamageDealtLogs = [];
-            let curCbIndex = -1;
-            abilityDamageDealt.forEach(ddLog => {
-                if (curCbIndex >= abilityCastsBegan.length) {
-                    return;
-                }
-                if (nextCCL == null || ddLog.logIndex < nextCCL.logIndex) {
-                    curDamageDealtLogs.push(ddLog);
-                }
-                else {
-                    if (curCbIndex != -1) {
-                        castLogs.push(new CastLog(abilityCastsBegan[curCbIndex], curCCL, curDamageDealtLogs));
-                    }
-                    curDamageDealtLogs = [ddLog];
-                    curCbIndex++;
-                    if (curCbIndex >= abilityCastsBegan.length) {
-                        return;
-                    }
-                    curCCL = nextCCL;
-                    nextCCL = getCastCompleted(curCbIndex + 1);
-                }
-            });
-            castLogs.push(new CastLog(abilityCastsBegan[curCbIndex], curCCL, curDamageDealtLogs));
         });
         castLogs.sort((a, b) => a.timestamp - b.timestamp);
         return castLogs;

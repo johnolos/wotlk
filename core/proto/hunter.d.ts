@@ -528,10 +528,6 @@ export interface Hunter_Rotation {
      */
     useArcaneShot: boolean;
     /**
-     * @generated from protobuf field: bool precast_aimed_shot = 3;
-     */
-    precastAimedShot: boolean;
-    /**
      * @generated from protobuf field: bool lazy_rotation = 12;
      */
     lazyRotation: boolean;

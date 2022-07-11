@@ -256,20 +256,5 @@ export const HunterRotationConfig = {
                 showWhen: (player) => player.getRotation().weave != WeaveType.WeaveNone,
             },
         },
-        {
-            type: 'boolean', cssClass: 'precast-aimed-shot-picker',
-            getModObject: (simUI) => simUI.player,
-            config: {
-                label: 'Precast Aimed Shot',
-                labelTooltip: 'Starts the encounter with an instant Aimed Shot.',
-                changedEvent: (player) => player.rotationChangeEmitter,
-                getValue: (player) => player.getRotation().precastAimedShot,
-                setValue: (eventID, player, newValue) => {
-                    const newRotation = player.getRotation();
-                    newRotation.precastAimedShot = newValue;
-                    player.setRotation(eventID, newRotation);
-                },
-            },
-        },
     ],
 };

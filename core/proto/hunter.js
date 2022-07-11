@@ -1248,7 +1248,6 @@ class Hunter_Rotation$Type extends MessageType {
         super("proto.Hunter.Rotation", [
             { no: 1, name: "use_multi_shot", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 2, name: "use_arcane_shot", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 3, name: "precast_aimed_shot", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 12, name: "lazy_rotation", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 5, name: "sting", kind: "enum", T: () => ["proto.Hunter.Rotation.StingType", Hunter_Rotation_StingType] },
             { no: 6, name: "viper_start_mana_percent", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
@@ -1259,7 +1258,7 @@ class Hunter_Rotation$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { useMultiShot: false, useArcaneShot: false, precastAimedShot: false, lazyRotation: false, sting: 0, viperStartManaPercent: 0, viperStopManaPercent: 0, weave: 0, timeToWeaveMs: 0, percentWeaved: 0 };
+        const message = { useMultiShot: false, useArcaneShot: false, lazyRotation: false, sting: 0, viperStartManaPercent: 0, viperStopManaPercent: 0, weave: 0, timeToWeaveMs: 0, percentWeaved: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1275,9 +1274,6 @@ class Hunter_Rotation$Type extends MessageType {
                     break;
                 case /* bool use_arcane_shot */ 2:
                     message.useArcaneShot = reader.bool();
-                    break;
-                case /* bool precast_aimed_shot */ 3:
-                    message.precastAimedShot = reader.bool();
                     break;
                 case /* bool lazy_rotation */ 12:
                     message.lazyRotation = reader.bool();
@@ -1318,9 +1314,6 @@ class Hunter_Rotation$Type extends MessageType {
         /* bool use_arcane_shot = 2; */
         if (message.useArcaneShot !== false)
             writer.tag(2, WireType.Varint).bool(message.useArcaneShot);
-        /* bool precast_aimed_shot = 3; */
-        if (message.precastAimedShot !== false)
-            writer.tag(3, WireType.Varint).bool(message.precastAimedShot);
         /* bool lazy_rotation = 12; */
         if (message.lazyRotation !== false)
             writer.tag(12, WireType.Varint).bool(message.lazyRotation);
