@@ -4,7 +4,7 @@ import { OtherAction } from '/wotlk/core/proto/common.js';
 import { getWowheadItemId } from '/wotlk/core/proto_utils/equipped_item.js';
 import { NO_TARGET } from '/wotlk/core/proto_utils/utils.js';
 // If true uses wotlkdb.com, else uses wowhead.com.
-export const USE_WOTLK_DB = true;
+export const USE_WOTLK_DB = false;
 // Uniquely identifies a specific item / spell / thing in WoW. This object is immutable.
 export class ActionId {
     constructor(itemId, spellId, otherId, tag, baseName, name, iconUrl) {
@@ -502,4 +502,9 @@ export const resourceTypeToIcon = {
     [ResourceType.ResourceTypeRage]: 'https://wow.zamimg.com/images/wow/icons/medium/spell_misc_emotionangry.jpg',
     [ResourceType.ResourceTypeComboPoints]: 'https://wow.zamimg.com/images/wow/icons/medium/inv_mace_2h_pvp410_c_01.jpg',
     [ResourceType.ResourceTypeFocus]: 'https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_focusfire.jpg',
+    [ResourceType.ResourceTypeRunicPower]: 'https://wow.zamimg.com/images/wow/icons/medium/inv_sword_62.jpg',
+    [ResourceType.ResourceTypeBloodRune]: 'https://wow.zamimg.com/images/wow/icons/medium/spell_deathknight_deathstrike.jpg',
+    [ResourceType.ResourceTypeFrostRune]: 'https://wow.zamimg.com/images/wow/icons/medium/spell_deathknight_empowerruneblade2.jpg',
+    [ResourceType.ResourceTypeUnholyRune]: 'https://wow.zamimg.com/images/wow/icons/medium/spell_deathknight_empowerruneblade.jpg',
+    [ResourceType.ResourceTypeDeathRune]: 'https://wow.zamimg.com/images/wow/icons/medium/spell_deathknight_scourgestrike.jpg',
 };

@@ -73,6 +73,26 @@ export var ResourceType;
      * @generated from protobuf enum value: ResourceTypeHealth = 6;
      */
     ResourceType[ResourceType["ResourceTypeHealth"] = 6] = "ResourceTypeHealth";
+    /**
+     * @generated from protobuf enum value: ResourceTypeRunicPower = 7;
+     */
+    ResourceType[ResourceType["ResourceTypeRunicPower"] = 7] = "ResourceTypeRunicPower";
+    /**
+     * @generated from protobuf enum value: ResourceTypeBloodRune = 8;
+     */
+    ResourceType[ResourceType["ResourceTypeBloodRune"] = 8] = "ResourceTypeBloodRune";
+    /**
+     * @generated from protobuf enum value: ResourceTypeFrostRune = 9;
+     */
+    ResourceType[ResourceType["ResourceTypeFrostRune"] = 9] = "ResourceTypeFrostRune";
+    /**
+     * @generated from protobuf enum value: ResourceTypeUnholyRune = 10;
+     */
+    ResourceType[ResourceType["ResourceTypeUnholyRune"] = 10] = "ResourceTypeUnholyRune";
+    /**
+     * @generated from protobuf enum value: ResourceTypeDeathRune = 11;
+     */
+    ResourceType[ResourceType["ResourceTypeDeathRune"] = 11] = "ResourceTypeDeathRune";
 })(ResourceType || (ResourceType = {}));
 // @generated message type with reflection information, may provide speed optimized methods
 class Player$Type extends MessageType {

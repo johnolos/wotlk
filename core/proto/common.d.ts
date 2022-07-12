@@ -1549,7 +1549,11 @@ export declare enum RangedWeaponType {
     /**
      * @generated from protobuf enum value: RangedWeaponTypeWand = 8;
      */
-    RangedWeaponTypeWand = 8
+    RangedWeaponTypeWand = 8,
+    /**
+     * @generated from protobuf enum value: RangedWeaponTypeSigil = 9;
+     */
+    RangedWeaponTypeSigil = 9
 }
 /**
  * All slots on the gear menu where a single item can be worn.
@@ -2392,7 +2396,31 @@ export declare enum OtherAction {
      *
      * @generated from protobuf enum value: OtherActionHealingModel = 12;
      */
-    OtherActionHealingModel = 12
+    OtherActionHealingModel = 12,
+    /**
+     * Indicates healing received from healing model.
+     *
+     * @generated from protobuf enum value: OtherActionBloodRuneGain = 13;
+     */
+    OtherActionBloodRuneGain = 13,
+    /**
+     * Indicates healing received from healing model.
+     *
+     * @generated from protobuf enum value: OtherActionFrostRuneGain = 14;
+     */
+    OtherActionFrostRuneGain = 14,
+    /**
+     * Indicates healing received from healing model.
+     *
+     * @generated from protobuf enum value: OtherActionUnholyRuneGain = 15;
+     */
+    OtherActionUnholyRuneGain = 15,
+    /**
+     * Indicates healing received from healing model.
+     *
+     * @generated from protobuf enum value: OtherActionDeathRuneGain = 16;
+     */
+    OtherActionDeathRuneGain = 16
 }
 declare class RaidBuffs$Type extends MessageType<RaidBuffs> {
     constructor();

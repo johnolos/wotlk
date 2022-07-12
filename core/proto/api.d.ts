@@ -897,7 +897,27 @@ export declare enum ResourceType {
     /**
      * @generated from protobuf enum value: ResourceTypeHealth = 6;
      */
-    ResourceTypeHealth = 6
+    ResourceTypeHealth = 6,
+    /**
+     * @generated from protobuf enum value: ResourceTypeRunicPower = 7;
+     */
+    ResourceTypeRunicPower = 7,
+    /**
+     * @generated from protobuf enum value: ResourceTypeBloodRune = 8;
+     */
+    ResourceTypeBloodRune = 8,
+    /**
+     * @generated from protobuf enum value: ResourceTypeFrostRune = 9;
+     */
+    ResourceTypeFrostRune = 9,
+    /**
+     * @generated from protobuf enum value: ResourceTypeUnholyRune = 10;
+     */
+    ResourceTypeUnholyRune = 10,
+    /**
+     * @generated from protobuf enum value: ResourceTypeDeathRune = 11;
+     */
+    ResourceTypeDeathRune = 11
 }
 declare class Player$Type extends MessageType<Player> {
     constructor();

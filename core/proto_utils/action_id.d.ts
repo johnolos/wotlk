@@ -2,7 +2,7 @@ import { ActionID as ActionIdProto } from '/wotlk/core/proto/common.js';
 import { ResourceType } from '/wotlk/core/proto/api.js';
 import { Item } from '/wotlk/core/proto/common.js';
 import { OtherAction } from '/wotlk/core/proto/common.js';
-export declare const USE_WOTLK_DB = true;
+export declare const USE_WOTLK_DB = false;
 export declare class ActionId {
     readonly itemId: number;
     readonly spellId: number;

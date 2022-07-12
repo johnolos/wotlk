@@ -634,6 +634,10 @@ export var RangedWeaponType;
      * @generated from protobuf enum value: RangedWeaponTypeWand = 8;
      */
     RangedWeaponType[RangedWeaponType["RangedWeaponTypeWand"] = 8] = "RangedWeaponTypeWand";
+    /**
+     * @generated from protobuf enum value: RangedWeaponTypeSigil = 9;
+     */
+    RangedWeaponType[RangedWeaponType["RangedWeaponTypeSigil"] = 9] = "RangedWeaponTypeSigil";
 })(RangedWeaponType || (RangedWeaponType = {}));
 /**
  * All slots on the gear menu where a single item can be worn.
@@ -1495,6 +1499,30 @@ export var OtherAction;
      * @generated from protobuf enum value: OtherActionHealingModel = 12;
      */
     OtherAction[OtherAction["OtherActionHealingModel"] = 12] = "OtherActionHealingModel";
+    /**
+     * Indicates healing received from healing model.
+     *
+     * @generated from protobuf enum value: OtherActionBloodRuneGain = 13;
+     */
+    OtherAction[OtherAction["OtherActionBloodRuneGain"] = 13] = "OtherActionBloodRuneGain";
+    /**
+     * Indicates healing received from healing model.
+     *
+     * @generated from protobuf enum value: OtherActionFrostRuneGain = 14;
+     */
+    OtherAction[OtherAction["OtherActionFrostRuneGain"] = 14] = "OtherActionFrostRuneGain";
+    /**
+     * Indicates healing received from healing model.
+     *
+     * @generated from protobuf enum value: OtherActionUnholyRuneGain = 15;
+     */
+    OtherAction[OtherAction["OtherActionUnholyRuneGain"] = 15] = "OtherActionUnholyRuneGain";
+    /**
+     * Indicates healing received from healing model.
+     *
+     * @generated from protobuf enum value: OtherActionDeathRuneGain = 16;
+     */
+    OtherAction[OtherAction["OtherActionDeathRuneGain"] = 16] = "OtherActionDeathRuneGain";
 })(OtherAction || (OtherAction = {}));
 // @generated message type with reflection information, may provide speed optimized methods
 class RaidBuffs$Type extends MessageType {

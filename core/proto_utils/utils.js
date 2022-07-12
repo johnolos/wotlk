@@ -757,6 +757,7 @@ const dualWieldSpecs = [
     Spec.SpecRogue,
     Spec.SpecWarrior,
     Spec.SpecProtectionWarrior,
+    Spec.SpecDeathKnight,
 ];
 export function isDualWieldSpec(spec) {
     return dualWieldSpecs.includes(spec);
@@ -1008,7 +1009,7 @@ const classToEligibleRangedWeaponTypes = {
         RangedWeaponType.RangedWeaponTypeThrown,
     ],
     [Class.ClassDeathKnight]: [
-    // TODO: what does DK put in ranged slot?
+        RangedWeaponType.RangedWeaponTypeSigil,
     ],
 };
 const classToEligibleWeaponTypes = {
@@ -1301,6 +1302,7 @@ export function makeDefaultBlessings(numPaladins) {
         { spec: Spec.SpecWarlock, blessings: [Blessings.BlessingOfKings, Blessings.BlessingOfWisdom] },
         { spec: Spec.SpecWarrior, blessings: [Blessings.BlessingOfKings, Blessings.BlessingOfMight] },
         { spec: Spec.SpecProtectionWarrior, blessings: [Blessings.BlessingOfKings, Blessings.BlessingOfMight, Blessings.BlessingOfSanctuary] },
+        { spec: Spec.SpecDeathKnight, blessings: [Blessings.BlessingOfKings, Blessings.BlessingOfMight, Blessings.BlessingOfSalvation] },
     ]);
 }
 ;
@@ -1311,4 +1313,9 @@ export const orderedResourceTypes = [
     ResourceType.ResourceTypeRage,
     ResourceType.ResourceTypeComboPoints,
     ResourceType.ResourceTypeFocus,
+    ResourceType.ResourceTypeRunicPower,
+    ResourceType.ResourceTypeBloodRune,
+    ResourceType.ResourceTypeFrostRune,
+    ResourceType.ResourceTypeUnholyRune,
+    ResourceType.ResourceTypeDeathRune,
 ];
