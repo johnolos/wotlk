@@ -105,13 +105,23 @@ export class IndividualSimUI extends SimUI {
             },
         });
         this.addWarning({
-            updateOn: this.player.gearChangeEmitter,
+            updateOn: TypedEvent.onAny([this.player.gearChangeEmitter, this.player.professionChangeEmitter]),
             getContent: () => {
                 const failedProfReqs = this.player.getGear().getFailedProfessionRequirements(this.player.getProfessions());
                 if (failedProfReqs.length == 0) {
                     return '';
                 }
                 return failedProfReqs.map(fpr => `${fpr.name} requires ${professionNames[fpr.requiredProfession]}, but it is not selected.`);
+            },
+        });
+        this.addWarning({
+            updateOn: this.player.gearChangeEmitter,
+            getContent: () => {
+                const jcGems = this.player.getGear().getJCGems();
+                if (jcGems.length <= 3) {
+                    return '';
+                }
+                return `Only 3 Jewelcrafting Gems are allowed, but ${jcGems.length} are equipped.`;
             },
         });
         (config.warnings || []).forEach(warning => this.addWarning(warning(this)));

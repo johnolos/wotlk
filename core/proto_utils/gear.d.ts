@@ -30,6 +30,7 @@ export declare class Gear {
     asSpec(): EquipmentSpec;
     getAllGems(): Array<Gem>;
     getGemsOfColor(color: GemColor): Array<Gem>;
+    getJCGems(): Array<Gem>;
     getMetaGem(): Gem | null;
     hasActiveMetaGem(): boolean;
     hasInactiveMetaGem(): boolean;

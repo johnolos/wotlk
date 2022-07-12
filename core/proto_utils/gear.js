@@ -2,6 +2,7 @@ import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { GemColor } from '/wotlk/core/proto/common.js';
 import { ItemSlot } from '/wotlk/core/proto/common.js';
 import { ItemSpec } from '/wotlk/core/proto/common.js';
+import { Profession } from '/wotlk/core/proto/common.js';
 import { equalsOrBothNull } from '/wotlk/core/utils.js';
 import { getEnumValues } from '/wotlk/core/utils.js';
 import { isBluntWeaponType, isSharpWeaponType } from '/wotlk/core/proto_utils/utils.js';
@@ -97,6 +98,9 @@ export class Gear {
     }
     getGemsOfColor(color) {
         return this.getAllGems().filter(gem => gem.color == color);
+    }
+    getJCGems() {
+        return this.getAllGems().filter(gem => gem.requiredProfession == Profession.Jewelcrafting);
     }
     getMetaGem() {
         return this.getGemsOfColor(GemColor.GemColorMeta)[0] || null;
