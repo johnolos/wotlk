@@ -190,7 +190,6 @@ export class ElementalShamanSimUI extends IndividualSimUI {
                     WeaponImbue.WeaponImbueShamanWindfury,
                     WeaponImbue.WeaponImbueShamanFlametongue,
                     WeaponImbue.WeaponImbueShamanFrostbrand,
-                    WeaponImbue.WeaponImbueShamanRockbiter,
                 ],
                 other: [],
             },
