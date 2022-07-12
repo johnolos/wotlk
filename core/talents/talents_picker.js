@@ -24,6 +24,9 @@ export class TalentsPicker extends Input {
     setInputValue(newValue) {
         const parts = newValue.split('-');
         this.trees.forEach((tree, idx) => tree.setTalentsString(parts[idx] || ''));
+        this.updateTrees();
+    }
+    updateTrees() {
         if (this.isFull()) {
             this.rootElem.classList.add('talents-full');
         }
@@ -42,6 +45,12 @@ export class TalentsPicker extends Input {
     freeze() {
         this.frozen = true;
         this.rootElem.classList.add('frozen');
+    }
+    setMaxPoints(newMaxPoints) {
+        if (newMaxPoints != this.maxPoints) {
+            this.maxPoints = newMaxPoints;
+            this.updateTrees();
+        }
     }
 }
 class TalentTreePicker extends Component {

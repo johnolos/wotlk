@@ -15,9 +15,11 @@ export declare class TalentsPicker<ModObject, TalentsProto> extends Input<ModObj
     getInputElem(): HTMLElement;
     getInputValue(): string;
     setInputValue(newValue: string): void;
+    updateTrees(): void;
     get numPoints(): number;
     isFull(): boolean;
     freeze(): void;
+    setMaxPoints(newMaxPoints: number): void;
 }
 declare class TalentTreePicker<TalentsProto> extends Component {
     private readonly config;

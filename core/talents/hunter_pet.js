@@ -132,14 +132,12 @@ export class HunterPetTalentsPicker extends Component {
                 }
             }
         });
-        //this.isBM = this.getIsBM();
-        //player.talentsChangeEmitter.on(() => {
-        //	const isBM = this.getIsBM();
-        //	if (isBM != this.isBM) {
-        //		this.isBM = isBM;
-        //		pickers.forEach(picker => picker.setMaxTalents(isBM ? 20 : 16));
-        //	}
-        //});
+        const updateIsBM = () => {
+            const maxPoints = this.player.getTalents().beastMastery ? 20 : 16;
+            pickers.forEach(picker => picker.setMaxPoints(maxPoints));
+        };
+        player.talentsChangeEmitter.on(updateIsBM);
+        updateIsBM();
     }
     getPetTalentsFromPlayer() {
         return this.player.getSpecOptions().petTalents || HunterPetTalents.create();
