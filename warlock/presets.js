@@ -11,44 +11,36 @@ import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // keep them in a separate file.
 // Default talents. Uses the wowhead calculator format, make the talents on
 // https://wowhead.com/wotlk/talent-calc and copy the numbers in the url.
-/*export const DestructionTalents = {
+export const DestructionTalents = {
     name: 'Destruction',
-    data: '-20501301332001-50500051220051053105',
+    data: '-03310030002-05203205220331051335131351',
 };
-
-export const T6DestroTalents = {
-    name: 'Catabolt',
-    data: '-20501301332001-55500051221001303025',
-};
-*/
 export const AfflictionTalents = {
     name: 'Affliction',
     data: '2350002030023510253510331151--55000005',
 };
-/*export const DemonologistTalents = {
-    name: 'Demonologist',
-    data: '01-2050030133250101501351-5050005112',
+export const DemonologyTalents = {
+    name: 'Demonology',
+    data: '-203203301035012530135201351-550000052',
 };
-*/
-export const DefaultRotation = WarlockRotation.create({
-    primarySpell: Warlock_Rotation_PrimarySpell.Shadowbolt,
+export const DestructionRotation = WarlockRotation.create({
+    primarySpell: Warlock_Rotation_PrimarySpell.Incinerate,
     immolate: true,
+    chaosBolt: true,
     curse: Warlock_Rotation_Curse.Doom,
     detonateSeed: true,
 });
 export const AfflictionRotation = WarlockRotation.create({
     primarySpell: Warlock_Rotation_PrimarySpell.Shadowbolt,
-    immolate: true,
     corruption: true,
     haunt: true,
-    curse: Warlock_Rotation_Curse.Elements,
+    curse: Warlock_Rotation_Curse.Doom,
     detonateSeed: true,
 });
 export const DemonologyRotation = WarlockRotation.create({
     primarySpell: Warlock_Rotation_PrimarySpell.Shadowbolt,
-    immolate: true,
     corruption: true,
-    curse: Warlock_Rotation_Curse.Elements,
+    curse: Warlock_Rotation_Curse.Doom,
     detonateSeed: true,
 });
 export const DefaultOptions = WarlockOptions.create({
@@ -57,11 +49,11 @@ export const DefaultOptions = WarlockOptions.create({
 });
 export const AfflictionOptions = WarlockOptions.create({
     armor: Armor.FelArmor,
-    summon: Summon.Imp,
+    summon: Summon.Felhunter,
 });
 export const DemonologyOptions = WarlockOptions.create({
     armor: Armor.FelArmor,
-    summon: Summon.Felgaurd,
+    summon: Summon.Felguard,
 });
 export const DefaultConsumes = Consumes.create({
     flask: Flask.FlaskOfPureDeath,

@@ -77,13 +77,13 @@ export var Warlock_Options_Summon;
      */
     Warlock_Options_Summon[Warlock_Options_Summon["Succubus"] = 3] = "Succubus";
     /**
-     * @generated from protobuf enum value: Felhound = 4;
+     * @generated from protobuf enum value: Felhunter = 4;
      */
-    Warlock_Options_Summon[Warlock_Options_Summon["Felhound"] = 4] = "Felhound";
+    Warlock_Options_Summon[Warlock_Options_Summon["Felhunter"] = 4] = "Felhunter";
     /**
-     * @generated from protobuf enum value: Felgaurd = 5;
+     * @generated from protobuf enum value: Felguard = 5;
      */
-    Warlock_Options_Summon[Warlock_Options_Summon["Felgaurd"] = 5] = "Felgaurd";
+    Warlock_Options_Summon[Warlock_Options_Summon["Felguard"] = 5] = "Felguard";
 })(Warlock_Options_Summon || (Warlock_Options_Summon = {}));
 /**
  * @generated from protobuf enum proto.Warlock.Options.Armor
@@ -940,11 +940,13 @@ class Warlock_Rotation$Type extends MessageType {
             { no: 3, name: "immolate", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 4, name: "corruption", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 5, name: "detonate_seed", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 6, name: "haunt", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 6, name: "haunt", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 7, name: "chaos_bolt", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 8, name: "unstable_affliction", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { primarySpell: 0, curse: 0, immolate: false, corruption: false, detonateSeed: false, haunt: false };
+        const message = { primarySpell: 0, curse: 0, immolate: false, corruption: false, detonateSeed: false, haunt: false, chaosBolt: false, unstableAffliction: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -972,6 +974,12 @@ class Warlock_Rotation$Type extends MessageType {
                     break;
                 case /* bool haunt */ 6:
                     message.haunt = reader.bool();
+                    break;
+                case /* bool chaos_bolt */ 7:
+                    message.chaosBolt = reader.bool();
+                    break;
+                case /* bool unstable_affliction */ 8:
+                    message.unstableAffliction = reader.bool();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -1003,6 +1011,12 @@ class Warlock_Rotation$Type extends MessageType {
         /* bool haunt = 6; */
         if (message.haunt !== false)
             writer.tag(6, WireType.Varint).bool(message.haunt);
+        /* bool chaos_bolt = 7; */
+        if (message.chaosBolt !== false)
+            writer.tag(7, WireType.Varint).bool(message.chaosBolt);
+        /* bool unstable_affliction = 8; */
+        if (message.unstableAffliction !== false)
+            writer.tag(8, WireType.Varint).bool(message.unstableAffliction);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

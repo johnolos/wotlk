@@ -73,7 +73,7 @@ export class Title extends Component {
         option.appendChild(labelDiv);
         if (!data.color) { // Hacky check for 'isButton'
             const simLabel = document.createElement('span');
-            simLabel.textContent = 'TBC SIMULATOR';
+            simLabel.textContent = 'WotLK Simulator';
             simLabel.classList.add('sim-title-sim-label', 'sim-title-label');
             labelDiv.appendChild(simLabel);
         }

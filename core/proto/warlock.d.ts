@@ -386,6 +386,14 @@ export interface Warlock_Rotation {
      * @generated from protobuf field: bool haunt = 6;
      */
     haunt: boolean;
+    /**
+     * @generated from protobuf field: bool chaos_bolt = 7;
+     */
+    chaosBolt: boolean;
+    /**
+     * @generated from protobuf field: bool unstable_affliction = 8;
+     */
+    unstableAffliction: boolean;
 }
 /**
  * @generated from protobuf enum proto.Warlock.Rotation.PrimarySpell
@@ -475,13 +483,13 @@ export declare enum Warlock_Options_Summon {
      */
     Succubus = 3,
     /**
-     * @generated from protobuf enum value: Felhound = 4;
+     * @generated from protobuf enum value: Felhunter = 4;
      */
-    Felhound = 4,
+    Felhunter = 4,
     /**
-     * @generated from protobuf enum value: Felgaurd = 5;
+     * @generated from protobuf enum value: Felguard = 5;
      */
-    Felgaurd = 5
+    Felguard = 5
 }
 /**
  * @generated from protobuf enum proto.Warlock.Options.Armor

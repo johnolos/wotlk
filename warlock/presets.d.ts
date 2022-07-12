@@ -1,11 +1,19 @@
 import { Consumes } from '/wotlk/core/proto/common.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { Warlock_Rotation as WarlockRotation, Warlock_Options as WarlockOptions } from '/wotlk/core/proto/warlock.js';
+export declare const DestructionTalents: {
+    name: string;
+    data: string;
+};
 export declare const AfflictionTalents: {
     name: string;
     data: string;
 };
-export declare const DefaultRotation: WarlockRotation;
+export declare const DemonologyTalents: {
+    name: string;
+    data: string;
+};
+export declare const DestructionRotation: WarlockRotation;
 export declare const AfflictionRotation: WarlockRotation;
 export declare const DemonologyRotation: WarlockRotation;
 export declare const DefaultOptions: WarlockOptions;

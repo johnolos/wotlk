@@ -2,31 +2,50 @@ import { Warlock_Rotation_PrimarySpell as PrimarySpell, Warlock_Rotation_Curse a
 import { ActionId } from '/wotlk/core/proto_utils/action_id.js';
 // Configuration for spec-specific UI elements on the settings tab.
 // These don't need to be in a separate file but it keeps things cleaner.
-export const FelArmor = {
-    id: ActionId.fromSpellId(28189),
-    states: 2,
+// export const FelArmor = {
+// 	id: ActionId.fromSpellId(47893),
+// 	states: 2,
+// 	extraCssClasses: [
+// 		'fel-armor-picker',
+// 	],
+// 	changedEvent: (player: Player<Spec.SpecWarlock>) => player.specOptionsChangeEmitter,
+// 	getValue: (player: Player<Spec.SpecWarlock>) => player.getSpecOptions().armor == Armor.FelArmor,
+// 	setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => {
+// 		const newOptions = player.getSpecOptions();
+// 		newOptions.armor = newValue ? Armor.FelArmor : Armor.NoArmor;
+// 		player.setSpecOptions(eventID, newOptions);
+// 	},
+// };
+// export const DemonArmor = {
+// 	id: ActionId.fromSpellId(47889),
+// 	states: 2,
+// 	extraCssClasses: [
+// 		'demon-armor-picker',
+// 	],
+// 	changedEvent: (player: Player<Spec.SpecWarlock>) => player.specOptionsChangeEmitter,
+// 	getValue: (player: Player<Spec.SpecWarlock>) => player.getSpecOptions().armor == Armor.DemonArmor,
+// 	setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => {
+// 		const newOptions = player.getSpecOptions();
+// 		newOptions.armor = newValue ? Armor.DemonArmor : Armor.NoArmor;
+// 		player.setSpecOptions(eventID, newOptions);
+// 	},
+// };
+export const WarlockArmor = {
     extraCssClasses: [
-        'fel-armor-picker',
+        'warlock-armor-picker',
     ],
+    numColumns: 2,
+    values: [
+        { actionId: ActionId.fromSpellId(47893), value: Armor.FelArmor },
+        { actionId: ActionId.fromSpellId(47889), value: Armor.DemonArmor },
+    ],
+    equals: (a, b) => a == b,
+    zeroValue: Armor.NoArmor,
     changedEvent: (player) => player.specOptionsChangeEmitter,
-    getValue: (player) => player.getSpecOptions().armor == Armor.FelArmor,
+    getValue: (player) => player.getSpecOptions().armor,
     setValue: (eventID, player, newValue) => {
         const newOptions = player.getSpecOptions();
-        newOptions.armor = newValue ? Armor.FelArmor : Armor.NoArmor;
-        player.setSpecOptions(eventID, newOptions);
-    },
-};
-export const DemonArmor = {
-    id: ActionId.fromSpellId(27260),
-    states: 2,
-    extraCssClasses: [
-        'demon-armor-picker',
-    ],
-    changedEvent: (player) => player.specOptionsChangeEmitter,
-    getValue: (player) => player.getSpecOptions().armor == Armor.DemonArmor,
-    setValue: (eventID, player, newValue) => {
-        const newOptions = player.getSpecOptions();
-        newOptions.armor = newValue ? Armor.DemonArmor : Armor.NoArmor;
+        newOptions.armor = newValue;
         player.setSpecOptions(eventID, newOptions);
     },
 };
@@ -49,14 +68,14 @@ export const DemonSummon = {
     extraCssClasses: [
         'warlock-summon-picker',
     ],
-    numColumns: 2,
+    numColumns: 3,
     values: [
-        { color: '82e89d', value: Summon.NoSummon },
+        { color: '808080', value: Summon.NoSummon },
         { actionId: ActionId.fromSpellId(688), value: Summon.Imp },
         // { actionId: ActionId.fromSpellId(697), value: Summon.Voidwalker },
         { actionId: ActionId.fromSpellId(712), value: Summon.Succubus },
-        // { actionId: ActionId.fromSpellId(691), value: Summon.Felhound },
-        { actionId: ActionId.fromSpellId(30146), value: Summon.Felgaurd },
+        { actionId: ActionId.fromSpellId(691), value: Summon.Felhunter },
+        { actionId: ActionId.fromSpellId(30146), value: Summon.Felguard },
     ],
     equals: (a, b) => a == b,
     zeroValue: Summon.NoSummon,
@@ -140,17 +159,56 @@ export const WarlockRotationConfig = {
             getModObject: (simUI) => simUI.player,
             config: {
                 extraCssClasses: [
+                    'unstableaffliction-picker',
+                ],
+                label: 'Use Unstable Affliction',
+                labelTooltip: 'Use Unstable Affliction as the next cast after the dot expires.',
+                changedEvent: (player) => player.talentsChangeEmitter,
+                getValue: (player) => player.getRotation().unstableAffliction,
+                setValue: (eventID, player, newValue) => {
+                    const newRotation = player.getRotation();
+                    newRotation.unstableAffliction = newValue;
+                    player.setRotation(eventID, newRotation);
+                },
+                enableWhen: (player) => player.getTalents().unstableAffliction,
+            },
+        },
+        {
+            type: 'boolean',
+            getModObject: (simUI) => simUI.player,
+            config: {
+                extraCssClasses: [
                     'haunt-picker',
                 ],
                 label: 'Use Haunt',
                 labelTooltip: 'Use Haunt as the next cast after the buff expires.',
-                changedEvent: (player) => player.rotationChangeEmitter,
+                changedEvent: (player) => player.talentsChangeEmitter,
                 getValue: (player) => player.getRotation().haunt,
                 setValue: (eventID, player, newValue) => {
                     const newRotation = player.getRotation();
                     newRotation.haunt = newValue;
                     player.setRotation(eventID, newRotation);
                 },
+                enableWhen: (player) => player.getTalents().haunt,
+            },
+        },
+        {
+            type: 'boolean',
+            getModObject: (simUI) => simUI.player,
+            config: {
+                extraCssClasses: [
+                    'ChaosBolt-picker',
+                ],
+                label: 'Use Chaos Bolt',
+                labelTooltip: 'Use Chaos Bolt as the next cast when CD is up.',
+                changedEvent: (player) => player.talentsChangeEmitter,
+                getValue: (player) => player.getRotation().chaosBolt,
+                setValue: (eventID, player, newValue) => {
+                    const newRotation = player.getRotation();
+                    newRotation.chaosBolt = newValue;
+                    player.setRotation(eventID, newRotation);
+                },
+                enableWhen: (player) => player.getTalents().chaosBolt,
             },
         },
         {
