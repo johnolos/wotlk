@@ -7,7 +7,8 @@ export declare class Encounter {
     readonly sim: Sim;
     private duration;
     private durationVariation;
-    private executeProportion;
+    private executeProportion20;
+    private executeProportion35;
     private useHealth;
     private targets;
     readonly targetsChangeEmitter: TypedEvent<void>;
@@ -20,8 +21,10 @@ export declare class Encounter {
     setDurationVariation(eventID: EventID, newDuration: number): void;
     getDuration(): number;
     setDuration(eventID: EventID, newDuration: number): void;
-    getExecuteProportion(): number;
-    setExecuteProportion(eventID: EventID, newExecuteProportion: number): void;
+    getExecuteProportion20(): number;
+    setExecuteProportion20(eventID: EventID, newExecuteProportion20: number): void;
+    getExecuteProportion35(): number;
+    setExecuteProportion35(eventID: EventID, newExecuteProportion35: number): void;
     getUseHealth(): boolean;
     setUseHealth(eventID: EventID, newUseHealth: boolean): void;
     getNumTargets(): number;

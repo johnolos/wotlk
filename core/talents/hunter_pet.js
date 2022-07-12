@@ -535,7 +535,7 @@ const ferocityPetTalentsConfig = newTalentsConfig([
                     rowIdx: 2,
                     colIdx: 3,
                 },
-                spellIds: [19596],
+                spellIds: [61685],
                 maxPoints: 1,
             },
             {
@@ -649,7 +649,7 @@ const tenacityPetTalentsConfig = newTalentsConfig([
                     rowIdx: 0,
                     colIdx: 1,
                 },
-                spellIds: [19596],
+                spellIds: [61685],
                 maxPoints: 1,
             },
             {

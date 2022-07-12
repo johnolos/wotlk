@@ -7,7 +7,8 @@ export class Encounter {
     constructor(sim) {
         this.duration = 180;
         this.durationVariation = 5;
-        this.executeProportion = 0.2;
+        this.executeProportion20 = 0.2;
+        this.executeProportion35 = 0.35;
         this.useHealth = false;
         this.targetsChangeEmitter = new TypedEvent();
         this.durationChangeEmitter = new TypedEvent();
@@ -43,13 +44,22 @@ export class Encounter {
         this.duration = newDuration;
         this.durationChangeEmitter.emit(eventID);
     }
-    getExecuteProportion() {
-        return this.executeProportion;
+    getExecuteProportion20() {
+        return this.executeProportion20;
     }
-    setExecuteProportion(eventID, newExecuteProportion) {
-        if (newExecuteProportion == this.executeProportion)
+    setExecuteProportion20(eventID, newExecuteProportion20) {
+        if (newExecuteProportion20 == this.executeProportion20)
             return;
-        this.executeProportion = newExecuteProportion;
+        this.executeProportion20 = newExecuteProportion20;
+        this.executeProportionChangeEmitter.emit(eventID);
+    }
+    getExecuteProportion35() {
+        return this.executeProportion35;
+    }
+    setExecuteProportion35(eventID, newExecuteProportion35) {
+        if (newExecuteProportion35 == this.executeProportion35)
+            return;
+        this.executeProportion35 = newExecuteProportion35;
         this.executeProportionChangeEmitter.emit(eventID);
     }
     getUseHealth() {
@@ -97,7 +107,8 @@ export class Encounter {
         return EncounterProto.create({
             duration: this.duration,
             durationVariation: this.durationVariation,
-            executeProportion: this.executeProportion,
+            executeProportion20: this.executeProportion20,
+            executeProportion35: this.executeProportion35,
             useHealth: this.useHealth,
             targets: this.targets.map(target => target.toProto()),
         });
@@ -106,7 +117,8 @@ export class Encounter {
         TypedEvent.freezeAllAndDo(() => {
             this.setDuration(eventID, proto.duration);
             this.setDurationVariation(eventID, proto.durationVariation);
-            this.setExecuteProportion(eventID, proto.executeProportion);
+            this.setExecuteProportion20(eventID, proto.executeProportion20);
+            this.setExecuteProportion35(eventID, proto.executeProportion35);
             this.setUseHealth(eventID, proto.useHealth);
             if (proto.targets.length > 0) {
                 this.setTargets(eventID, proto.targets.map(targetProto => {
@@ -124,7 +136,8 @@ export class Encounter {
         this.fromProto(eventID, EncounterProto.create({
             duration: 180,
             durationVariation: 5,
-            executeProportion: 0.2,
+            executeProportion20: 0.2,
+            executeProportion35: 0.35,
             targets: [Target.defaultProto()],
         }));
     }

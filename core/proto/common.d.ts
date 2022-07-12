@@ -567,17 +567,23 @@ export interface Encounter {
     /**
      * Variation in the duration
      *
-     * @generated from protobuf field: double duration_variation = 4;
+     * @generated from protobuf field: double duration_variation = 2;
      */
     durationVariation: number;
     /**
      * The ratio of the encounter duration, between 0 and 1, for which the targets
-     * will be in execute range for the purposes of Warrior Execute, Mage Molten
+     * will be in execute range (<= 20%) for the purposes of Warrior Execute, Mage Molten
      * Fury, etc.
      *
-     * @generated from protobuf field: double execute_proportion = 3;
+     * @generated from protobuf field: double execute_proportion_20 = 3;
      */
-    executeProportion: number;
+    executeProportion20: number;
+    /**
+     * Same as execute_proportion but for 35%.
+     *
+     * @generated from protobuf field: double execute_proportion_35 = 4;
+     */
+    executeProportion35: number;
     /**
      * If set, will use the targets health value instead of a duration for fight length.
      *
@@ -587,7 +593,7 @@ export interface Encounter {
     /**
      * If type != Simple or Custom, then this may be empty.
      *
-     * @generated from protobuf field: repeated proto.Target targets = 2;
+     * @generated from protobuf field: repeated proto.Target targets = 6;
      */
     targets: Target[];
 }
