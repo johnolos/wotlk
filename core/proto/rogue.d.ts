@@ -15,201 +15,337 @@ export interface RogueTalents {
      */
     improvedEviscerate: number;
     /**
-     * @generated from protobuf field: int32 malice = 2;
+     * @generated from protobuf field: int32 remorseless_attacks = 2;
+     */
+    remorselessAttacks: number;
+    /**
+     * @generated from protobuf field: int32 malice = 3;
      */
     malice: number;
     /**
-     * @generated from protobuf field: int32 ruthlessness = 3;
+     * @generated from protobuf field: int32 ruthlessness = 4;
      */
     ruthlessness: number;
     /**
-     * @generated from protobuf field: int32 murder = 4;
+     * @generated from protobuf field: int32 blood_spatter = 5;
      */
-    murder: number;
+    bloodSpatter: number;
     /**
-     * @generated from protobuf field: int32 puncturing_wounds = 5;
+     * @generated from protobuf field: int32 puncturing_wounds = 6;
      */
     puncturingWounds: number;
     /**
-     * @generated from protobuf field: bool relentless_strikes = 6;
-     */
-    relentlessStrikes: boolean;
-    /**
-     * @generated from protobuf field: int32 improved_expose_armor = 7;
-     */
-    improvedExposeArmor: number;
-    /**
-     * @generated from protobuf field: int32 lethality = 8;
-     */
-    lethality: number;
-    /**
-     * @generated from protobuf field: int32 vile_poisons = 9;
-     */
-    vilePoisons: number;
-    /**
-     * @generated from protobuf field: int32 improved_poisons = 10;
-     */
-    improvedPoisons: number;
-    /**
-     * @generated from protobuf field: bool cold_blood = 11;
-     */
-    coldBlood: boolean;
-    /**
-     * @generated from protobuf field: int32 quick_recovery = 12;
-     */
-    quickRecovery: number;
-    /**
-     * @generated from protobuf field: int32 seal_fate = 13;
-     */
-    sealFate: number;
-    /**
-     * @generated from protobuf field: int32 master_poisoner = 14;
-     */
-    masterPoisoner: number;
-    /**
-     * @generated from protobuf field: bool vigor = 15;
+     * @generated from protobuf field: bool vigor = 7;
      */
     vigor: boolean;
     /**
-     * @generated from protobuf field: int32 find_weakness = 16;
+     * @generated from protobuf field: int32 improved_expose_armor = 8;
+     */
+    improvedExposeArmor: number;
+    /**
+     * @generated from protobuf field: int32 lethality = 9;
+     */
+    lethality: number;
+    /**
+     * @generated from protobuf field: int32 vile_poisons = 10;
+     */
+    vilePoisons: number;
+    /**
+     * @generated from protobuf field: int32 improved_poisons = 11;
+     */
+    improvedPoisons: number;
+    /**
+     * @generated from protobuf field: int32 fleet_footed = 12;
+     */
+    fleetFooted: number;
+    /**
+     * @generated from protobuf field: bool cold_blood = 13;
+     */
+    coldBlood: boolean;
+    /**
+     * @generated from protobuf field: int32 improved_kidney_shot = 14;
+     */
+    improvedKidneyShot: number;
+    /**
+     * @generated from protobuf field: int32 quick_recovery = 15;
+     */
+    quickRecovery: number;
+    /**
+     * @generated from protobuf field: int32 seal_fate = 16;
+     */
+    sealFate: number;
+    /**
+     * @generated from protobuf field: int32 murder = 17;
+     */
+    murder: number;
+    /**
+     * @generated from protobuf field: int32 deadly_brew = 18;
+     */
+    deadlyBrew: number;
+    /**
+     * @generated from protobuf field: bool overkill = 19;
+     */
+    overkill: boolean;
+    /**
+     * @generated from protobuf field: int32 deadened_nerves = 20;
+     */
+    deadenedNerves: number;
+    /**
+     * @generated from protobuf field: int32 focused_attacks = 21;
+     */
+    focusedAttacks: number;
+    /**
+     * @generated from protobuf field: int32 find_weakness = 22;
      */
     findWeakness: number;
     /**
-     * @generated from protobuf field: bool mutilate = 17;
+     * @generated from protobuf field: int32 master_poisoner = 23;
+     */
+    masterPoisoner: number;
+    /**
+     * @generated from protobuf field: bool mutilate = 24;
      */
     mutilate: boolean;
     /**
+     * @generated from protobuf field: int32 turn_the_tables = 25;
+     */
+    turnTheTables: number;
+    /**
+     * @generated from protobuf field: int32 cut_to_the_chase = 26;
+     */
+    cutToTheChase: number;
+    /**
+     * @generated from protobuf field: bool hunger_for_blood = 27;
+     */
+    hungerForBlood: boolean;
+    /**
      * Combat
      *
-     * @generated from protobuf field: int32 improved_sinister_strike = 18;
+     * @generated from protobuf field: int32 improved_gouge = 28;
+     */
+    improvedGouge: number;
+    /**
+     * @generated from protobuf field: int32 improved_sinister_strike = 29;
      */
     improvedSinisterStrike: number;
     /**
-     * @generated from protobuf field: int32 lightning_reflexes = 48;
-     */
-    lightningReflexes: number;
-    /**
-     * @generated from protobuf field: int32 improved_slice_and_dice = 19;
-     */
-    improvedSliceAndDice: number;
-    /**
-     * @generated from protobuf field: int32 deflection = 49;
-     */
-    deflection: number;
-    /**
-     * @generated from protobuf field: int32 precision = 20;
-     */
-    precision: number;
-    /**
-     * @generated from protobuf field: int32 dagger_specialization = 21;
-     */
-    daggerSpecialization: number;
-    /**
-     * @generated from protobuf field: int32 dual_wield_specialization = 22;
+     * @generated from protobuf field: int32 dual_wield_specialization = 30;
      */
     dualWieldSpecialization: number;
     /**
-     * @generated from protobuf field: int32 mace_specialization = 23;
+     * @generated from protobuf field: int32 improved_slice_and_dice = 31;
      */
-    maceSpecialization: number;
+    improvedSliceAndDice: number;
     /**
-     * @generated from protobuf field: bool blade_flurry = 24;
+     * @generated from protobuf field: int32 deflection = 32;
      */
-    bladeFlurry: boolean;
+    deflection: number;
     /**
-     * @generated from protobuf field: int32 sword_specialization = 25;
+     * @generated from protobuf field: int32 precision = 33;
      */
-    swordSpecialization: number;
+    precision: number;
     /**
-     * @generated from protobuf field: int32 fist_weapon_specialization = 26;
+     * @generated from protobuf field: int32 endurance = 34;
      */
-    fistWeaponSpecialization: number;
+    endurance: number;
     /**
-     * @generated from protobuf field: int32 weapon_expertise = 27;
+     * @generated from protobuf field: bool riposte = 35;
      */
-    weaponExpertise: number;
+    riposte: boolean;
     /**
-     * @generated from protobuf field: int32 aggression = 28;
+     * @generated from protobuf field: int32 close_quarters_combat = 36;
+     */
+    closeQuartersCombat: number;
+    /**
+     * @generated from protobuf field: int32 improved_kick = 37;
+     */
+    improvedKick: number;
+    /**
+     * @generated from protobuf field: int32 improved_sprint = 38;
+     */
+    improvedSprint: number;
+    /**
+     * @generated from protobuf field: int32 lightning_reflexes = 39;
+     */
+    lightningReflexes: number;
+    /**
+     * @generated from protobuf field: int32 aggression = 40;
      */
     aggression: number;
     /**
-     * @generated from protobuf field: int32 vitality = 29;
+     * @generated from protobuf field: int32 mace_specialization = 41;
+     */
+    maceSpecialization: number;
+    /**
+     * @generated from protobuf field: bool blade_flurry = 42;
+     */
+    bladeFlurry: boolean;
+    /**
+     * @generated from protobuf field: int32 hack_and_slash = 43;
+     */
+    hackAndSlash: number;
+    /**
+     * @generated from protobuf field: int32 weapon_expertise = 44;
+     */
+    weaponExpertise: number;
+    /**
+     * @generated from protobuf field: int32 blade_twisting = 45;
+     */
+    bladeTwisting: number;
+    /**
+     * @generated from protobuf field: int32 vitality = 46;
      */
     vitality: number;
     /**
-     * @generated from protobuf field: bool adrenaline_rush = 30;
+     * @generated from protobuf field: bool adrenaline_rush = 47;
      */
     adrenalineRush: boolean;
     /**
-     * @generated from protobuf field: int32 combat_potency = 31;
+     * @generated from protobuf field: int32 nerves_of_steel = 48;
+     */
+    nervesOfSteel: number;
+    /**
+     * @generated from protobuf field: int32 throwing_specialization = 49;
+     */
+    throwingSpecialization: number;
+    /**
+     * @generated from protobuf field: int32 combat_potency = 50;
      */
     combatPotency: number;
     /**
-     * @generated from protobuf field: bool surprise_attacks = 32;
+     * @generated from protobuf field: int32 unfair_advantage = 51;
+     */
+    unfairAdvantage: number;
+    /**
+     * @generated from protobuf field: bool surprise_attacks = 52;
      */
     surpriseAttacks: boolean;
     /**
+     * @generated from protobuf field: int32 savage_combat = 53;
+     */
+    savageCombat: number;
+    /**
+     * @generated from protobuf field: int32 prey_on_the_weak = 54;
+     */
+    preyOnTheWeak: number;
+    /**
+     * @generated from protobuf field: bool killing_spree = 55;
+     */
+    killingSpree: boolean;
+    /**
      * Subtlety
      *
-     * @generated from protobuf field: int32 opportunity = 33;
+     * @generated from protobuf field: int32 relentless_strikes = 56;
+     */
+    relentlessStrikes: number;
+    /**
+     * @generated from protobuf field: int32 master_of_deception = 57;
+     */
+    masterOfDeception: number;
+    /**
+     * @generated from protobuf field: int32 opportunity = 58;
      */
     opportunity: number;
     /**
-     * @generated from protobuf field: int32 sleight_of_hand = 46;
+     * @generated from protobuf field: int32 sleight_of_hand = 59;
      */
     sleightOfHand: number;
     /**
-     * @generated from protobuf field: int32 initiative = 34;
+     * @generated from protobuf field: int32 dirty_tricks = 60;
      */
-    initiative: number;
+    dirtyTricks: number;
     /**
-     * @generated from protobuf field: bool ghostly_strike = 35;
+     * @generated from protobuf field: int32 camouflage = 61;
      */
-    ghostlyStrike: boolean;
+    camouflage: number;
     /**
-     * @generated from protobuf field: int32 improved_ambush = 36;
-     */
-    improvedAmbush: number;
-    /**
-     * @generated from protobuf field: int32 elusiveness = 47;
+     * @generated from protobuf field: int32 elusiveness = 62;
      */
     elusiveness: number;
     /**
-     * @generated from protobuf field: int32 serrated_blades = 37;
+     * @generated from protobuf field: bool ghostly_strike = 63;
+     */
+    ghostlyStrike: boolean;
+    /**
+     * @generated from protobuf field: int32 serrated_blades = 64;
      */
     serratedBlades: number;
     /**
-     * @generated from protobuf field: bool preparation = 38;
+     * @generated from protobuf field: int32 setup = 65;
+     */
+    setup: number;
+    /**
+     * @generated from protobuf field: int32 initiative = 66;
+     */
+    initiative: number;
+    /**
+     * @generated from protobuf field: int32 improved_ambush = 67;
+     */
+    improvedAmbush: number;
+    /**
+     * @generated from protobuf field: int32 heightened_senses = 68;
+     */
+    heightenedSenses: number;
+    /**
+     * @generated from protobuf field: bool preparation = 69;
      */
     preparation: boolean;
     /**
-     * @generated from protobuf field: int32 dirty_deeds = 39;
+     * @generated from protobuf field: int32 dirty_deeds = 70;
      */
     dirtyDeeds: number;
     /**
-     * @generated from protobuf field: bool hemorrhage = 40;
+     * @generated from protobuf field: bool hemorrhage = 71;
      */
     hemorrhage: boolean;
     /**
-     * @generated from protobuf field: int32 master_of_subtlety = 41;
+     * @generated from protobuf field: int32 master_of_subtlety = 72;
      */
     masterOfSubtlety: number;
     /**
-     * @generated from protobuf field: int32 deadliness = 42;
+     * @generated from protobuf field: int32 deadliness = 73;
      */
     deadliness: number;
     /**
-     * @generated from protobuf field: bool premeditation = 43;
+     * @generated from protobuf field: int32 enveloping_shadows = 74;
+     */
+    envelopingShadows: number;
+    /**
+     * @generated from protobuf field: bool premeditation = 75;
      */
     premeditation: boolean;
     /**
-     * @generated from protobuf field: int32 sinister_calling = 44;
+     * @generated from protobuf field: int32 cheat_death = 76;
+     */
+    cheatDeath: number;
+    /**
+     * @generated from protobuf field: int32 sinister_calling = 77;
      */
     sinisterCalling: number;
     /**
-     * @generated from protobuf field: bool shadowstep = 45;
+     * @generated from protobuf field: int32 waylay = 78;
+     */
+    waylay: number;
+    /**
+     * @generated from protobuf field: int32 honor_among_thieves = 79;
+     */
+    honorAmongThieves: number;
+    /**
+     * @generated from protobuf field: bool shadowstep = 80;
      */
     shadowstep: boolean;
+    /**
+     * @generated from protobuf field: int32 filthy_tricks = 81;
+     */
+    filthyTricks: number;
+    /**
+     * @generated from protobuf field: int32 slaughter_from_the_shadows = 82;
+     */
+    slaughterFromTheShadows: number;
+    /**
+     * @generated from protobuf field: bool shadow_dance = 83;
+     */
+    shadowDance: boolean;
 }
 /**
  * @generated from protobuf message proto.Rogue
