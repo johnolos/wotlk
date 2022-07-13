@@ -77,9 +77,9 @@ export interface RaidBuffs {
     /**
      * 20% Melee Haste
      *
-     * @generated from protobuf field: proto.TristateEffect icy_talons = 15;
+     * @generated from protobuf field: bool icy_talons = 15;
      */
-    icyTalons: TristateEffect;
+    icyTalons: boolean;
     /**
      * @generated from protobuf field: proto.TristateEffect windfury_totem = 16;
      */

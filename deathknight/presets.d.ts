@@ -5,6 +5,10 @@ export declare const FrostTalents: {
     name: string;
     data: string;
 };
+export declare const UnholyDualWieldTalents: {
+    name: string;
+    data: string;
+};
 export declare const DefaultRotation: DeathKnightRotation;
 export declare const DefaultOptions: DeathKnightOptions;
 export declare const DefaultConsumes: Consumes;

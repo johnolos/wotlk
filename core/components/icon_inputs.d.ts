@@ -17,6 +17,7 @@ import { Raid } from '/wotlk/core/raid.js';
 import { EventID, TypedEvent } from '/wotlk/core/typed_event.js';
 import { IconEnumPickerConfig } from './icon_enum_picker.js';
 export declare const AbominationsMight: IndividualSimIconPickerConfig<Raid, boolean>;
+export declare const IcyTalons: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const ArcaneBrilliance: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const FelIntelligence: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const DivineSpirit: IndividualSimIconPickerConfig<Raid, boolean>;

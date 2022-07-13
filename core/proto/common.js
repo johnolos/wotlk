@@ -1543,7 +1543,7 @@ class RaidBuffs$Type extends MessageType {
             { no: 12, name: "blood_pact", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 13, name: "horn_of_winter", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 14, name: "strength_of_earth_totem", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 15, name: "icy_talons", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 15, name: "icy_talons", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 16, name: "windfury_totem", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 17, name: "battle_shout", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 18, name: "trueshot_aura", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
@@ -1565,7 +1565,7 @@ class RaidBuffs$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { powerWordFortitude: 0, arcaneBrilliance: false, felIntelligence: false, divineSpirit: false, giftOfTheWild: 0, shadowProtection: false, swiftRetribution: false, moonkinAura: 0, elementalOath: false, totemOfWrath: false, demonicPact: 0, commandingShout: 0, bloodPact: 0, hornOfWinter: false, strengthOfEarthTotem: 0, icyTalons: 0, windfuryTotem: 0, battleShout: 0, trueshotAura: false, unleashedRage: false, abominationsMight: false, leaderOfThePack: 0, rampage: false, ferociousInspiration: false, sanctifiedRetribution: false, arcaneEmpowerment: false, manaSpringTotem: 0, wrathOfAirTotem: false, bloodlust: false, thorns: 0, devotionAura: 0, retributionAura: 0, drumsOfKings: false, drumsOfWild: false };
+        const message = { powerWordFortitude: 0, arcaneBrilliance: false, felIntelligence: false, divineSpirit: false, giftOfTheWild: 0, shadowProtection: false, swiftRetribution: false, moonkinAura: 0, elementalOath: false, totemOfWrath: false, demonicPact: 0, commandingShout: 0, bloodPact: 0, hornOfWinter: false, strengthOfEarthTotem: 0, icyTalons: false, windfuryTotem: 0, battleShout: 0, trueshotAura: false, unleashedRage: false, abominationsMight: false, leaderOfThePack: 0, rampage: false, ferociousInspiration: false, sanctifiedRetribution: false, arcaneEmpowerment: false, manaSpringTotem: 0, wrathOfAirTotem: false, bloodlust: false, thorns: 0, devotionAura: 0, retributionAura: 0, drumsOfKings: false, drumsOfWild: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1621,8 +1621,8 @@ class RaidBuffs$Type extends MessageType {
                 case /* proto.TristateEffect strength_of_earth_totem */ 14:
                     message.strengthOfEarthTotem = reader.int32();
                     break;
-                case /* proto.TristateEffect icy_talons */ 15:
-                    message.icyTalons = reader.int32();
+                case /* bool icy_talons */ 15:
+                    message.icyTalons = reader.bool();
                     break;
                 case /* proto.TristateEffect windfury_totem */ 16:
                     message.windfuryTotem = reader.int32();
@@ -1735,9 +1735,9 @@ class RaidBuffs$Type extends MessageType {
         /* proto.TristateEffect strength_of_earth_totem = 14; */
         if (message.strengthOfEarthTotem !== 0)
             writer.tag(14, WireType.Varint).int32(message.strengthOfEarthTotem);
-        /* proto.TristateEffect icy_talons = 15; */
-        if (message.icyTalons !== 0)
-            writer.tag(15, WireType.Varint).int32(message.icyTalons);
+        /* bool icy_talons = 15; */
+        if (message.icyTalons !== false)
+            writer.tag(15, WireType.Varint).bool(message.icyTalons);
         /* proto.TristateEffect windfury_totem = 16; */
         if (message.windfuryTotem !== 0)
             writer.tag(16, WireType.Varint).int32(message.windfuryTotem);

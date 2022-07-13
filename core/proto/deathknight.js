@@ -12,6 +12,114 @@ export var DeathKnightMajorGlyph;
      * @generated from protobuf enum value: DeathKnightMajorGlyphNone = 0;
      */
     DeathKnightMajorGlyph[DeathKnightMajorGlyph["DeathKnightMajorGlyphNone"] = 0] = "DeathKnightMajorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfAntiMagicShell = 43533;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfAntiMagicShell"] = 43533] = "GlyphOfAntiMagicShell";
+    /**
+     * @generated from protobuf enum value: GlyphOfBloodStrike = 43826;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfBloodStrike"] = 43826] = "GlyphOfBloodStrike";
+    /**
+     * @generated from protobuf enum value: GlyphOfBoneShield = 43536;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfBoneShield"] = 43536] = "GlyphOfBoneShield";
+    /**
+     * @generated from protobuf enum value: GlyphOfChainsOfIce = 43537;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfChainsOfIce"] = 43537] = "GlyphOfChainsOfIce";
+    /**
+     * @generated from protobuf enum value: GlyphOfDancingRuneWeapon = 45799;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfDancingRuneWeapon"] = 45799] = "GlyphOfDancingRuneWeapon";
+    /**
+     * @generated from protobuf enum value: GlyphOfDarkCommand = 43538;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfDarkCommand"] = 43538] = "GlyphOfDarkCommand";
+    /**
+     * @generated from protobuf enum value: GlyphOfDarkDeath = 45804;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfDarkDeath"] = 45804] = "GlyphOfDarkDeath";
+    /**
+     * @generated from protobuf enum value: GlyphOfDeathAndDecay = 43542;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfDeathAndDecay"] = 43542] = "GlyphOfDeathAndDecay";
+    /**
+     * @generated from protobuf enum value: GlyphOfDeathGrip = 43541;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfDeathGrip"] = 43541] = "GlyphOfDeathGrip";
+    /**
+     * @generated from protobuf enum value: GlyphOfDeathStrike = 43827;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfDeathStrike"] = 43827] = "GlyphOfDeathStrike";
+    /**
+     * @generated from protobuf enum value: GlyphOfDisease = 45805;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfDisease"] = 45805] = "GlyphOfDisease";
+    /**
+     * @generated from protobuf enum value: GlyphOfFrostStrike = 43543;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfFrostStrike"] = 43543] = "GlyphOfFrostStrike";
+    /**
+     * @generated from protobuf enum value: GlyphOfHeartStrike = 43534;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfHeartStrike"] = 43534] = "GlyphOfHeartStrike";
+    /**
+     * @generated from protobuf enum value: GlyphOfHowlingBlast = 45806;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfHowlingBlast"] = 45806] = "GlyphOfHowlingBlast";
+    /**
+     * @generated from protobuf enum value: GlyphOfHungeringCold = 45800;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfHungeringCold"] = 45800] = "GlyphOfHungeringCold";
+    /**
+     * @generated from protobuf enum value: GlyphOfIceboundFortitude = 43545;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfIceboundFortitude"] = 43545] = "GlyphOfIceboundFortitude";
+    /**
+     * @generated from protobuf enum value: GlyphOfIcyTouch = 43546;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfIcyTouch"] = 43546] = "GlyphOfIcyTouch";
+    /**
+     * @generated from protobuf enum value: GlyphOfObliterate = 43547;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfObliterate"] = 43547] = "GlyphOfObliterate";
+    /**
+     * @generated from protobuf enum value: GlyphOfPlagueStrike = 43548;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfPlagueStrike"] = 43548] = "GlyphOfPlagueStrike";
+    /**
+     * @generated from protobuf enum value: GlyphOfRuneStrike = 43550;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfRuneStrike"] = 43550] = "GlyphOfRuneStrike";
+    /**
+     * @generated from protobuf enum value: GlyphOfRuneTap = 43825;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfRuneTap"] = 43825] = "GlyphOfRuneTap";
+    /**
+     * @generated from protobuf enum value: GlyphOfScourgeStrike = 43551;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfScourgeStrike"] = 43551] = "GlyphOfScourgeStrike";
+    /**
+     * @generated from protobuf enum value: GlyphOfStrangulate = 43552;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfStrangulate"] = 43552] = "GlyphOfStrangulate";
+    /**
+     * @generated from protobuf enum value: GlyphOfTheGhoul = 43549;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfTheGhoul"] = 43549] = "GlyphOfTheGhoul";
+    /**
+     * @generated from protobuf enum value: GlyphOfUnbreakableArmor = 43553;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfUnbreakableArmor"] = 43553] = "GlyphOfUnbreakableArmor";
+    /**
+     * @generated from protobuf enum value: GlyphOfUnholyBlight = 45803;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfUnholyBlight"] = 45803] = "GlyphOfUnholyBlight";
+    /**
+     * @generated from protobuf enum value: GlyphOfVampiricBlood = 43554;
+     */
+    DeathKnightMajorGlyph[DeathKnightMajorGlyph["GlyphOfVampiricBlood"] = 43554] = "GlyphOfVampiricBlood";
 })(DeathKnightMajorGlyph || (DeathKnightMajorGlyph = {}));
 /**
  * @generated from protobuf enum proto.DeathKnightMinorGlyph
@@ -22,6 +130,30 @@ export var DeathKnightMinorGlyph;
      * @generated from protobuf enum value: DeathKnightMinorGlyphNone = 0;
      */
     DeathKnightMinorGlyph[DeathKnightMinorGlyph["DeathKnightMinorGlyphNone"] = 0] = "DeathKnightMinorGlyphNone";
+    /**
+     * @generated from protobuf enum value: GlyphOfBloodTap = 43535;
+     */
+    DeathKnightMinorGlyph[DeathKnightMinorGlyph["GlyphOfBloodTap"] = 43535] = "GlyphOfBloodTap";
+    /**
+     * @generated from protobuf enum value: GlyphOfCorpseExplosion = 43671;
+     */
+    DeathKnightMinorGlyph[DeathKnightMinorGlyph["GlyphOfCorpseExplosion"] = 43671] = "GlyphOfCorpseExplosion";
+    /**
+     * @generated from protobuf enum value: GlyphOfDeathSEmbrace = 43539;
+     */
+    DeathKnightMinorGlyph[DeathKnightMinorGlyph["GlyphOfDeathSEmbrace"] = 43539] = "GlyphOfDeathSEmbrace";
+    /**
+     * @generated from protobuf enum value: GlyphOfHornOfWinter = 43544;
+     */
+    DeathKnightMinorGlyph[DeathKnightMinorGlyph["GlyphOfHornOfWinter"] = 43544] = "GlyphOfHornOfWinter";
+    /**
+     * @generated from protobuf enum value: GlyphOfPestilence = 43672;
+     */
+    DeathKnightMinorGlyph[DeathKnightMinorGlyph["GlyphOfPestilence"] = 43672] = "GlyphOfPestilence";
+    /**
+     * @generated from protobuf enum value: GlyphOfRaiseDead = 43673;
+     */
+    DeathKnightMinorGlyph[DeathKnightMinorGlyph["GlyphOfRaiseDead"] = 43673] = "GlyphOfRaiseDead";
 })(DeathKnightMinorGlyph || (DeathKnightMinorGlyph = {}));
 // @generated message type with reflection information, may provide speed optimized methods
 class DeathKnightTalents$Type extends MessageType {
@@ -769,19 +901,40 @@ export const DeathKnight_Rotation = new DeathKnight_Rotation$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class DeathKnight_Options$Type extends MessageType {
     constructor() {
-        super("proto.DeathKnight.Options", []);
+        super("proto.DeathKnight.Options", [
+            { no: 1, name: "starting_runic_power", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ }
+        ]);
     }
     create(value) {
-        const message = {};
+        const message = { startingRunicPower: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
         return message;
     }
     internalBinaryRead(reader, length, options, target) {
-        return target ?? this.create();
+        let message = target ?? this.create(), end = reader.pos + length;
+        while (reader.pos < end) {
+            let [fieldNo, wireType] = reader.tag();
+            switch (fieldNo) {
+                case /* double starting_runic_power */ 1:
+                    message.startingRunicPower = reader.double();
+                    break;
+                default:
+                    let u = options.readUnknownField;
+                    if (u === "throw")
+                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
+                    let d = reader.skip(wireType);
+                    if (u !== false)
+                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
+            }
+        }
+        return message;
     }
     internalBinaryWrite(message, writer, options) {
+        /* double starting_runic_power = 1; */
+        if (message.startingRunicPower !== 0)
+            writer.tag(1, WireType.Bit64).double(message.startingRunicPower);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

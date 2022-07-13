@@ -393,6 +393,10 @@ export interface DeathKnight_Rotation {
  * @generated from protobuf message proto.DeathKnight.Options
  */
 export interface DeathKnight_Options {
+    /**
+     * @generated from protobuf field: double starting_runic_power = 1;
+     */
+    startingRunicPower: number;
 }
 /**
  * @generated from protobuf enum proto.DeathKnightMajorGlyph
@@ -401,7 +405,115 @@ export declare enum DeathKnightMajorGlyph {
     /**
      * @generated from protobuf enum value: DeathKnightMajorGlyphNone = 0;
      */
-    DeathKnightMajorGlyphNone = 0
+    DeathKnightMajorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfAntiMagicShell = 43533;
+     */
+    GlyphOfAntiMagicShell = 43533,
+    /**
+     * @generated from protobuf enum value: GlyphOfBloodStrike = 43826;
+     */
+    GlyphOfBloodStrike = 43826,
+    /**
+     * @generated from protobuf enum value: GlyphOfBoneShield = 43536;
+     */
+    GlyphOfBoneShield = 43536,
+    /**
+     * @generated from protobuf enum value: GlyphOfChainsOfIce = 43537;
+     */
+    GlyphOfChainsOfIce = 43537,
+    /**
+     * @generated from protobuf enum value: GlyphOfDancingRuneWeapon = 45799;
+     */
+    GlyphOfDancingRuneWeapon = 45799,
+    /**
+     * @generated from protobuf enum value: GlyphOfDarkCommand = 43538;
+     */
+    GlyphOfDarkCommand = 43538,
+    /**
+     * @generated from protobuf enum value: GlyphOfDarkDeath = 45804;
+     */
+    GlyphOfDarkDeath = 45804,
+    /**
+     * @generated from protobuf enum value: GlyphOfDeathAndDecay = 43542;
+     */
+    GlyphOfDeathAndDecay = 43542,
+    /**
+     * @generated from protobuf enum value: GlyphOfDeathGrip = 43541;
+     */
+    GlyphOfDeathGrip = 43541,
+    /**
+     * @generated from protobuf enum value: GlyphOfDeathStrike = 43827;
+     */
+    GlyphOfDeathStrike = 43827,
+    /**
+     * @generated from protobuf enum value: GlyphOfDisease = 45805;
+     */
+    GlyphOfDisease = 45805,
+    /**
+     * @generated from protobuf enum value: GlyphOfFrostStrike = 43543;
+     */
+    GlyphOfFrostStrike = 43543,
+    /**
+     * @generated from protobuf enum value: GlyphOfHeartStrike = 43534;
+     */
+    GlyphOfHeartStrike = 43534,
+    /**
+     * @generated from protobuf enum value: GlyphOfHowlingBlast = 45806;
+     */
+    GlyphOfHowlingBlast = 45806,
+    /**
+     * @generated from protobuf enum value: GlyphOfHungeringCold = 45800;
+     */
+    GlyphOfHungeringCold = 45800,
+    /**
+     * @generated from protobuf enum value: GlyphOfIceboundFortitude = 43545;
+     */
+    GlyphOfIceboundFortitude = 43545,
+    /**
+     * @generated from protobuf enum value: GlyphOfIcyTouch = 43546;
+     */
+    GlyphOfIcyTouch = 43546,
+    /**
+     * @generated from protobuf enum value: GlyphOfObliterate = 43547;
+     */
+    GlyphOfObliterate = 43547,
+    /**
+     * @generated from protobuf enum value: GlyphOfPlagueStrike = 43548;
+     */
+    GlyphOfPlagueStrike = 43548,
+    /**
+     * @generated from protobuf enum value: GlyphOfRuneStrike = 43550;
+     */
+    GlyphOfRuneStrike = 43550,
+    /**
+     * @generated from protobuf enum value: GlyphOfRuneTap = 43825;
+     */
+    GlyphOfRuneTap = 43825,
+    /**
+     * @generated from protobuf enum value: GlyphOfScourgeStrike = 43551;
+     */
+    GlyphOfScourgeStrike = 43551,
+    /**
+     * @generated from protobuf enum value: GlyphOfStrangulate = 43552;
+     */
+    GlyphOfStrangulate = 43552,
+    /**
+     * @generated from protobuf enum value: GlyphOfTheGhoul = 43549;
+     */
+    GlyphOfTheGhoul = 43549,
+    /**
+     * @generated from protobuf enum value: GlyphOfUnbreakableArmor = 43553;
+     */
+    GlyphOfUnbreakableArmor = 43553,
+    /**
+     * @generated from protobuf enum value: GlyphOfUnholyBlight = 45803;
+     */
+    GlyphOfUnholyBlight = 45803,
+    /**
+     * @generated from protobuf enum value: GlyphOfVampiricBlood = 43554;
+     */
+    GlyphOfVampiricBlood = 43554
 }
 /**
  * @generated from protobuf enum proto.DeathKnightMinorGlyph
@@ -410,7 +522,31 @@ export declare enum DeathKnightMinorGlyph {
     /**
      * @generated from protobuf enum value: DeathKnightMinorGlyphNone = 0;
      */
-    DeathKnightMinorGlyphNone = 0
+    DeathKnightMinorGlyphNone = 0,
+    /**
+     * @generated from protobuf enum value: GlyphOfBloodTap = 43535;
+     */
+    GlyphOfBloodTap = 43535,
+    /**
+     * @generated from protobuf enum value: GlyphOfCorpseExplosion = 43671;
+     */
+    GlyphOfCorpseExplosion = 43671,
+    /**
+     * @generated from protobuf enum value: GlyphOfDeathSEmbrace = 43539;
+     */
+    GlyphOfDeathSEmbrace = 43539,
+    /**
+     * @generated from protobuf enum value: GlyphOfHornOfWinter = 43544;
+     */
+    GlyphOfHornOfWinter = 43544,
+    /**
+     * @generated from protobuf enum value: GlyphOfPestilence = 43672;
+     */
+    GlyphOfPestilence = 43672,
+    /**
+     * @generated from protobuf enum value: GlyphOfRaiseDead = 43673;
+     */
+    GlyphOfRaiseDead = 43673
 }
 declare class DeathKnightTalents$Type extends MessageType<DeathKnightTalents> {
     constructor();
