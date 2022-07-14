@@ -13,10 +13,19 @@ export declare const DemonologyTalents: {
     name: string;
     data: string;
 };
-export declare const DestructionRotation: WarlockRotation;
-export declare const AfflictionRotation: WarlockRotation;
-export declare const DemonologyRotation: WarlockRotation;
-export declare const DefaultOptions: WarlockOptions;
+export declare const DestructionRotation: {
+    name: string;
+    rotation: WarlockRotation;
+};
+export declare const AfflictionRotation: {
+    name: string;
+    rotation: WarlockRotation;
+};
+export declare const DemonologyRotation: {
+    name: string;
+    rotation: WarlockRotation;
+};
+export declare const DestructionOptions: WarlockOptions;
 export declare const AfflictionOptions: WarlockOptions;
 export declare const DemonologyOptions: WarlockOptions;
 export declare const DefaultConsumes: Consumes;

@@ -91,6 +91,7 @@ export interface IndividualSimUIConfig<SpecType extends Spec> {
         debuffs: Debuffs;
     };
     selfBuffInputs: Array<IndividualSimIconPickerConfig<Player<any>, any>>;
+    petInputs?: Array<IndividualSimIconPickerConfig<Player<any>, any>>;
     raidBuffInputs: Array<IndividualSimIconPickerConfig<Raid, any>>;
     partyBuffInputs: Array<IndividualSimIconPickerConfig<Party, any>>;
     playerBuffInputs: Array<IndividualSimIconPickerConfig<Player<any>, any>>;
@@ -106,6 +107,7 @@ export interface IndividualSimUIConfig<SpecType extends Spec> {
     presets: {
         gear: Array<PresetGear>;
         talents: Array<SavedDataConfig<Player<any>, string>>;
+        rotation?: Array<SavedDataConfig<Player<any>, string>>;
     };
 }
 export interface GearAndStats {

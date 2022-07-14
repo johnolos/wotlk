@@ -70,7 +70,7 @@ export class WarlockSimUI extends IndividualSimUI {
                 // Default consumes settings.
                 consumes: Presets.DefaultConsumes,
                 // Default rotation settings.
-                rotation: Presets.AfflictionRotation,
+                rotation: Presets.AfflictionRotation.rotation,
                 // Default talents.
                 talents: Presets.AfflictionTalents.data,
                 // Default spec-specific settings.
@@ -102,8 +102,14 @@ export class WarlockSimUI extends IndividualSimUI {
             },
             // IconInputs to include in the 'Self Buffs' section on the settings tab.
             selfBuffInputs: [
-                WarlockInputs.WarlockArmor,
-                WarlockInputs.DemonSummon,
+                WarlockInputs.FelArmor,
+                WarlockInputs.DemonArmor,
+            ],
+            petInputs: [
+                WarlockInputs.SummonImp,
+                WarlockInputs.SummonSuccubus,
+                WarlockInputs.SummonFelhunter,
+                WarlockInputs.SummonFelguard,
             ],
             // IconInputs to include in the 'Other Buffs' section on the settings tab.
             raidBuffInputs: [
@@ -209,6 +215,12 @@ export class WarlockSimUI extends IndividualSimUI {
                     Presets.DemonologyTalents,
                     Presets.DestructionTalents,
                 ],
+                // // Preset rotations that the user can quickly select.
+                // rotation: [
+                // 	Presets.AfflictionRotation,
+                // 	Presets.DemonologyRotation,
+                // 	Presets.DestructionRotation,
+                // ],
                 // Preset gear configurations that the user can quickly select.
                 gear: [
                     Presets.P1_DESTRO,

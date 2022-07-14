@@ -1,39 +1,56 @@
-import { Warlock_Rotation_PrimarySpell as PrimarySpell, Warlock_Rotation_Curse as Curse, Warlock_Options_Armor as Armor, Warlock_Options_Summon as Summon } from '/wotlk/core/proto/warlock.js';
+import { Warlock_Rotation_PrimarySpell as PrimarySpell, Warlock_Rotation_Curse as Curse } from '/wotlk/core/proto/warlock.js';
 import { Spec } from '/wotlk/core/proto/common.js';
 import { ActionId } from '/wotlk/core/proto_utils/action_id.js';
 import { Player } from '/wotlk/core/player.js';
 import { EventID, TypedEvent } from '/wotlk/core/typed_event.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
-export declare const WarlockArmor: {
+export declare const FelArmor: {
+    id: ActionId;
+    states: number;
     extraCssClasses: string[];
-    numColumns: number;
-    values: {
-        actionId: ActionId;
-        value: Armor;
-    }[];
-    equals: (a: Armor, b: Armor) => boolean;
-    zeroValue: Armor;
     changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
-    getValue: (player: Player<Spec.SpecWarlock>) => Armor;
-    setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: number) => void;
+    getValue: (player: Player<Spec.SpecWarlock>) => boolean;
+    setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => void;
 };
-export declare const DemonSummon: {
+export declare const DemonArmor: {
+    id: ActionId;
+    states: number;
     extraCssClasses: string[];
-    numColumns: number;
-    values: ({
-        color: string;
-        value: Summon;
-        actionId?: undefined;
-    } | {
-        actionId: ActionId;
-        value: Summon;
-        color?: undefined;
-    })[];
-    equals: (a: Summon, b: Summon) => boolean;
-    zeroValue: Summon;
     changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
-    getValue: (player: Player<Spec.SpecWarlock>) => Summon;
-    setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: number) => void;
+    getValue: (player: Player<Spec.SpecWarlock>) => boolean;
+    setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => void;
+};
+export declare const SummonImp: {
+    id: ActionId;
+    states: number;
+    extraCssClasses: string[];
+    changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
+    getValue: (player: Player<Spec.SpecWarlock>) => boolean;
+    setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => void;
+};
+export declare const SummonSuccubus: {
+    id: ActionId;
+    states: number;
+    extraCssClasses: string[];
+    changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
+    getValue: (player: Player<Spec.SpecWarlock>) => boolean;
+    setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => void;
+};
+export declare const SummonFelhunter: {
+    id: ActionId;
+    states: number;
+    extraCssClasses: string[];
+    changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
+    getValue: (player: Player<Spec.SpecWarlock>) => boolean;
+    setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => void;
+};
+export declare const SummonFelguard: {
+    id: ActionId;
+    states: number;
+    extraCssClasses: string[];
+    changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
+    getValue: (player: Player<Spec.SpecWarlock>) => boolean;
+    setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => void;
 };
 export declare const WarlockRotationConfig: {
     inputs: ({

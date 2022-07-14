@@ -91,7 +91,14 @@ export class IndividualSimUI extends SimUI {
         if (!launchedSpecs.includes(this.player.spec)) {
             this.addWarning({
                 updateOn: new TypedEvent(),
-                getContent: () => 'This sim has not yet been updated from its TBC state.',
+                getContent: () => {
+                    if (this.player.getClass() == Class.ClassWarlock) {
+                        return 'This sim is under current development for Wrath of the Lich King. Talents and Glyphs are mostly ready but rotations are under development.';
+                    }
+                    else {
+                        return 'This sim has not yet been updated from its TBC state.';
+                    }
+                },
             });
         }
         this.addWarning({
@@ -274,6 +281,13 @@ export class IndividualSimUI extends SimUI {
         });
     }
     addSettingsTab() {
+        var petsSelectionSection = ``;
+        if (this.individualConfig.petInputs?.length) {
+            petsSelectionSection = `
+			   <fieldset class="settings-section pets-section">
+					<legend>Pets</legend>
+				</fieldset>`;
+        }
         this.addTab('SETTINGS', 'settings-tab', `
 			<div class="settings-inputs">
 				<div class="settings-section-container">
@@ -293,6 +307,11 @@ export class IndividualSimUI extends SimUI {
 					<fieldset class="settings-section self-buffs-section">
 						<legend>Self Buffs</legend>
 					</fieldset>
+		`
+            +
+                petsSelectionSection
+            +
+                `
 				</div>
 				<div class="settings-section-container within-raid-sim-hide">
 					<fieldset class="settings-section buffs-section">
@@ -387,6 +406,10 @@ export class IndividualSimUI extends SimUI {
         };
         const selfBuffsSection = this.rootElem.getElementsByClassName('self-buffs-section')[0];
         configureIconSection(selfBuffsSection, this.individualConfig.selfBuffInputs.map(iconInput => new IndividualSimIconPicker(selfBuffsSection, this.player, iconInput, this)), Tooltips.SELF_BUFFS_SECTION);
+        if (this.individualConfig.petInputs?.length) {
+            const petsSection = this.rootElem.getElementsByClassName('pets-section')[0];
+            configureIconSection(petsSection, this.individualConfig.petInputs.map(iconInput => new IndividualSimIconPicker(petsSection, this.player, iconInput, this)), Tooltips.PETS_SECTION);
+        }
         const buffsSection = this.rootElem.getElementsByClassName('buffs-section')[0];
         configureIconSection(buffsSection, [
             this.individualConfig.raidBuffInputs

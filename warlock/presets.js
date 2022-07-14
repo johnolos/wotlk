@@ -23,29 +23,38 @@ export const DemonologyTalents = {
     name: 'Demonology',
     data: '-203203301035012530135201351-550000052',
 };
-export const DestructionRotation = WarlockRotation.create({
-    primarySpell: Warlock_Rotation_PrimarySpell.Incinerate,
-    immolate: true,
-    chaosBolt: true,
-    curse: Warlock_Rotation_Curse.Doom,
-    detonateSeed: true,
-});
-export const AfflictionRotation = WarlockRotation.create({
-    primarySpell: Warlock_Rotation_PrimarySpell.Shadowbolt,
-    corruption: true,
-    haunt: true,
-    curse: Warlock_Rotation_Curse.Doom,
-    detonateSeed: true,
-});
-export const DemonologyRotation = WarlockRotation.create({
-    primarySpell: Warlock_Rotation_PrimarySpell.Shadowbolt,
-    corruption: true,
-    curse: Warlock_Rotation_Curse.Doom,
-    detonateSeed: true,
-});
-export const DefaultOptions = WarlockOptions.create({
+export const DestructionRotation = {
+    name: 'Destruction',
+    rotation: WarlockRotation.create({
+        primarySpell: Warlock_Rotation_PrimarySpell.Incinerate,
+        immolate: true,
+        chaosBolt: true,
+        curse: Warlock_Rotation_Curse.Doom,
+        detonateSeed: true,
+    })
+};
+export const AfflictionRotation = {
+    name: 'Affliction',
+    rotation: WarlockRotation.create({
+        primarySpell: Warlock_Rotation_PrimarySpell.Shadowbolt,
+        corruption: true,
+        haunt: true,
+        curse: Warlock_Rotation_Curse.Doom,
+        detonateSeed: true,
+    })
+};
+export const DemonologyRotation = {
+    name: 'Demonology',
+    rotation: WarlockRotation.create({
+        primarySpell: Warlock_Rotation_PrimarySpell.Shadowbolt,
+        corruption: true,
+        curse: Warlock_Rotation_Curse.Elements,
+        detonateSeed: true,
+    })
+};
+export const DestructionOptions = WarlockOptions.create({
     armor: Armor.FelArmor,
-    summon: Summon.Succubus,
+    summon: Summon.Imp,
 });
 export const AfflictionOptions = WarlockOptions.create({
     armor: Armor.FelArmor,
