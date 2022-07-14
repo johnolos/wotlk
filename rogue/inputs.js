@@ -16,8 +16,6 @@ export const RogueRotationConfig = {
                         tooltip: 'Automatically selects a builder based on weapons/talents.',
                     },
                     { name: 'Sinister Strike', value: Builder.SinisterStrike },
-                    { name: 'Backstab', value: Builder.Backstab },
-                    { name: 'Hemorrhage', value: Builder.Hemorrhage },
                     { name: 'Mutilate', value: Builder.Mutilate },
                 ],
                 changedEvent: (player) => player.rotationChangeEmitter,

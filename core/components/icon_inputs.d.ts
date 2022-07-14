@@ -45,6 +45,7 @@ export declare const HornOfWinter: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const StrengthOfEarthTotem: IndividualSimIconPickerConfig<Raid, number>;
 export declare const WindfuryTotem: IndividualSimIconPickerConfig<Raid, number>;
 export declare const ImprovedIcyTalons: IndividualSimIconPickerConfig<Raid, boolean>;
+export declare const SwiftRetribution: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const AtieshMage: IndividualSimIconPickerConfig<Party, number>;
 export declare const AtieshWarlock: IndividualSimIconPickerConfig<Party, number>;
 export declare const BraidedEterniumChain: IndividualSimIconPickerConfig<Party, boolean>;
