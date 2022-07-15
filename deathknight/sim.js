@@ -164,6 +164,9 @@ export class DeathKnightSimUI extends IndividualSimUI {
                 ],
                 alcohol: [],
                 weaponImbues: [],
+                pet: [
+                    IconInputs.KiblersBits,
+                ],
                 other: [
                     IconInputs.ScrollOfAgilityV,
                     IconInputs.ScrollOfStrengthV,
@@ -199,6 +202,7 @@ export class DeathKnightSimUI extends IndividualSimUI {
                 // Preset gear configurations that the user can quickly select.
                 gear: [
                     Presets.P1_FROST_BIS_PRESET,
+                    Presets.P1_UNHOLY_DW_BIS_PRESET,
                 ],
             },
         });

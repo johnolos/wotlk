@@ -12,6 +12,11 @@ export declare const UnholyDualWieldTalents: {
 export declare const DefaultRotation: DeathKnightRotation;
 export declare const DefaultOptions: DeathKnightOptions;
 export declare const DefaultConsumes: Consumes;
+export declare const P1_UNHOLY_DW_BIS_PRESET: {
+    name: string;
+    toolbar: string;
+    gear: EquipmentSpec;
+};
 export declare const P1_FROST_PRE_BIS_PRESET: {
     name: string;
     tooltip: string;
