@@ -1,4 +1,5 @@
 export declare const SELF_BUFFS_SECTION = "Buffs you will cast yourself.";
+export declare const SPELLS_SECTION = "Spells you will cast. Choices ignored for an Automatic Rotation Preset.";
 export declare const PETS_SECTION = "Your pet or summon.";
 export declare const OTHER_BUFFS_SECTION = "Buffs provided by other party/raid members.";
 export declare const DEBUFFS_SECTION = "Debuffs applied by other raid members.";

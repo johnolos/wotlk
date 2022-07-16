@@ -288,6 +288,13 @@ export class IndividualSimUI extends SimUI {
 					<legend>Pets</legend>
 				</fieldset>`;
         }
+        var spellSection = ``;
+        if (this.individualConfig.spellInputs?.length) {
+            spellSection = `
+			   <fieldset class="settings-section spell-section">
+					<legend>Spells</legend>
+				</fieldset>`;
+        }
         this.addTab('SETTINGS', 'settings-tab', `
 			<div class="settings-inputs">
 				<div class="settings-section-container">
@@ -297,6 +304,11 @@ export class IndividualSimUI extends SimUI {
 					<fieldset class="settings-section race-section">
 						<legend>Player</legend>
 					</fieldset>
+			`
+            +
+                spellSection
+            +
+                `
 					<fieldset class="settings-section rotation-section">
 						<legend>Rotation</legend>
 					</fieldset>
@@ -307,7 +319,7 @@ export class IndividualSimUI extends SimUI {
 					<fieldset class="settings-section self-buffs-section">
 						<legend>Self Buffs</legend>
 					</fieldset>
-		`
+			`
             +
                 petsSelectionSection
             +
@@ -494,6 +506,10 @@ export class IndividualSimUI extends SimUI {
                 }
             });
         };
+        if (this.individualConfig.spellInputs?.length) {
+            const spellSection = this.rootElem.getElementsByClassName('spell-section')[0];
+            configureIconSection(spellSection, this.individualConfig.spellInputs.map(iconInput => new IndividualSimIconPicker(spellSection, this.player, iconInput, this)), Tooltips.SPELLS_SECTION);
+        }
         configureInputSection(this.rootElem.getElementsByClassName('rotation-section')[0], this.individualConfig.rotationInputs);
         if (this.individualConfig.otherInputs?.inputs.length) {
             configureInputSection(this.rootElem.getElementsByClassName('other-settings-section')[0], this.individualConfig.otherInputs);

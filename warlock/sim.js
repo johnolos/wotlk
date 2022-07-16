@@ -188,6 +188,16 @@ export class WarlockSimUI extends IndividualSimUI {
             },
             // Inputs to include in the 'Rotation' section on the settings tab.
             rotationInputs: WarlockInputs.WarlockRotationConfig,
+            spellInputs: [
+                WarlockInputs.PrimarySpellShadowbolt,
+                WarlockInputs.PrimarySpellIncinerate,
+                WarlockInputs.PrimarySpellSeed,
+                WarlockInputs.SecondaryDotImmolate,
+                WarlockInputs.SecondaryDotUnstableAffliction,
+                WarlockInputs.SpecSpellChaosBolt,
+                WarlockInputs.SpecSpellHaunt,
+                WarlockInputs.CorruptionSpell,
+            ],
             // Inputs to include in the 'Other' section on the settings tab.
             otherInputs: {
                 inputs: [
@@ -215,13 +225,13 @@ export class WarlockSimUI extends IndividualSimUI {
                     Presets.DemonologyTalents,
                     Presets.DestructionTalents,
                 ],
-                // // Preset rotations that the user can quickly select.
+                // Preset rotations that the user can quickly select.
                 // rotation: [
                 // 	Presets.AfflictionRotation,
                 // 	Presets.DemonologyRotation,
                 // 	Presets.DestructionRotation,
                 // ],
-                // Preset gear configurations that the user can quickly select.
+                //Preset gear configurations that the user can quickly select.
                 gear: [
                     Presets.P1_DESTRO,
                     Presets.P2_DESTRO,

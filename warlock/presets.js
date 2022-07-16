@@ -4,7 +4,7 @@ import { Food } from '/wotlk/core/proto/common.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
-import { Warlock_Rotation as WarlockRotation, Warlock_Options as WarlockOptions, Warlock_Rotation_PrimarySpell, Warlock_Rotation_Curse, Warlock_Options_Armor as Armor, Warlock_Options_Summon as Summon } from '/wotlk/core/proto/warlock.js';
+import { Warlock_Rotation as WarlockRotation, Warlock_Options as WarlockOptions, Warlock_Rotation_PrimarySpell as PrimarySpell, Warlock_Rotation_SecondaryDot as SecondaryDot, Warlock_Rotation_SpecSpell as SpecSpell, Warlock_Rotation_Curse as Curse, Warlock_Options_Armor as Armor, Warlock_Options_Summon as Summon } from '/wotlk/core/proto/warlock.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // Preset options for this spec.
 // Eventually we will import these values for the raid sim too, so its good to
@@ -26,29 +26,32 @@ export const DemonologyTalents = {
 export const DestructionRotation = {
     name: 'Destruction',
     rotation: WarlockRotation.create({
-        primarySpell: Warlock_Rotation_PrimarySpell.Incinerate,
-        immolate: true,
-        chaosBolt: true,
-        curse: Warlock_Rotation_Curse.Doom,
+        primarySpell: PrimarySpell.Incinerate,
+        secondaryDot: SecondaryDot.Immolate,
+        specSpell: SpecSpell.ChaosBolt,
+        curse: Curse.Doom,
         detonateSeed: true,
     })
 };
 export const AfflictionRotation = {
     name: 'Affliction',
     rotation: WarlockRotation.create({
-        primarySpell: Warlock_Rotation_PrimarySpell.Shadowbolt,
+        primarySpell: PrimarySpell.Shadowbolt,
+        secondaryDot: SecondaryDot.UnstableAffliction,
         corruption: true,
-        haunt: true,
-        curse: Warlock_Rotation_Curse.Doom,
+        specSpell: SpecSpell.Haunt,
+        curse: Curse.Doom,
         detonateSeed: true,
     })
 };
 export const DemonologyRotation = {
     name: 'Demonology',
     rotation: WarlockRotation.create({
-        primarySpell: Warlock_Rotation_PrimarySpell.Shadowbolt,
+        primarySpell: PrimarySpell.Shadowbolt,
+        secondaryDot: SecondaryDot.Immolate,
         corruption: true,
-        curse: Warlock_Rotation_Curse.Elements,
+        specSpell: SpecSpell.NoSpecSpell,
+        curse: Curse.Elements,
         detonateSeed: true,
     })
 };

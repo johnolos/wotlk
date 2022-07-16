@@ -4,6 +4,20 @@ import { reflectionMergePartial } from '/wotlk/protobuf-ts/index.js';
 import { MESSAGE_TYPE } from '/wotlk/protobuf-ts/index.js';
 import { MessageType } from '/wotlk/protobuf-ts/index.js';
 /**
+ * @generated from protobuf enum proto.Warlock.Rotation.Preset
+ */
+export var Warlock_Rotation_Preset;
+(function (Warlock_Rotation_Preset) {
+    /**
+     * @generated from protobuf enum value: Manual = 0;
+     */
+    Warlock_Rotation_Preset[Warlock_Rotation_Preset["Manual"] = 0] = "Manual";
+    /**
+     * @generated from protobuf enum value: Automatic = 1;
+     */
+    Warlock_Rotation_Preset[Warlock_Rotation_Preset["Automatic"] = 1] = "Automatic";
+})(Warlock_Rotation_Preset || (Warlock_Rotation_Preset = {}));
+/**
  * @generated from protobuf enum proto.Warlock.Rotation.PrimarySpell
  */
 export var Warlock_Rotation_PrimarySpell;
@@ -55,6 +69,42 @@ export var Warlock_Rotation_Curse;
      */
     Warlock_Rotation_Curse[Warlock_Rotation_Curse["Tongues"] = 5] = "Tongues";
 })(Warlock_Rotation_Curse || (Warlock_Rotation_Curse = {}));
+/**
+ * @generated from protobuf enum proto.Warlock.Rotation.SecondaryDot
+ */
+export var Warlock_Rotation_SecondaryDot;
+(function (Warlock_Rotation_SecondaryDot) {
+    /**
+     * @generated from protobuf enum value: NoSecondaryDot = 0;
+     */
+    Warlock_Rotation_SecondaryDot[Warlock_Rotation_SecondaryDot["NoSecondaryDot"] = 0] = "NoSecondaryDot";
+    /**
+     * @generated from protobuf enum value: Immolate = 1;
+     */
+    Warlock_Rotation_SecondaryDot[Warlock_Rotation_SecondaryDot["Immolate"] = 1] = "Immolate";
+    /**
+     * @generated from protobuf enum value: UnstableAffliction = 2;
+     */
+    Warlock_Rotation_SecondaryDot[Warlock_Rotation_SecondaryDot["UnstableAffliction"] = 2] = "UnstableAffliction";
+})(Warlock_Rotation_SecondaryDot || (Warlock_Rotation_SecondaryDot = {}));
+/**
+ * @generated from protobuf enum proto.Warlock.Rotation.SpecSpell
+ */
+export var Warlock_Rotation_SpecSpell;
+(function (Warlock_Rotation_SpecSpell) {
+    /**
+     * @generated from protobuf enum value: NoSpecSpell = 0;
+     */
+    Warlock_Rotation_SpecSpell[Warlock_Rotation_SpecSpell["NoSpecSpell"] = 0] = "NoSpecSpell";
+    /**
+     * @generated from protobuf enum value: ChaosBolt = 1;
+     */
+    Warlock_Rotation_SpecSpell[Warlock_Rotation_SpecSpell["ChaosBolt"] = 1] = "ChaosBolt";
+    /**
+     * @generated from protobuf enum value: Haunt = 2;
+     */
+    Warlock_Rotation_SpecSpell[Warlock_Rotation_SpecSpell["Haunt"] = 2] = "Haunt";
+})(Warlock_Rotation_SpecSpell || (Warlock_Rotation_SpecSpell = {}));
 /**
  * @generated from protobuf enum proto.Warlock.Options.Summon
  */
@@ -935,18 +985,17 @@ export const Warlock = new Warlock$Type();
 class Warlock_Rotation$Type extends MessageType {
     constructor() {
         super("proto.Warlock.Rotation", [
-            { no: 1, name: "primary_spell", kind: "enum", T: () => ["proto.Warlock.Rotation.PrimarySpell", Warlock_Rotation_PrimarySpell] },
+            { no: 1, name: "preset", kind: "enum", T: () => ["proto.Warlock.Rotation.Preset", Warlock_Rotation_Preset] },
             { no: 2, name: "curse", kind: "enum", T: () => ["proto.Warlock.Rotation.Curse", Warlock_Rotation_Curse] },
-            { no: 3, name: "immolate", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 4, name: "corruption", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 5, name: "detonate_seed", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 6, name: "haunt", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 7, name: "chaos_bolt", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 8, name: "unstable_affliction", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 3, name: "primary_spell", kind: "enum", T: () => ["proto.Warlock.Rotation.PrimarySpell", Warlock_Rotation_PrimarySpell] },
+            { no: 4, name: "secondary_dot", kind: "enum", T: () => ["proto.Warlock.Rotation.SecondaryDot", Warlock_Rotation_SecondaryDot] },
+            { no: 5, name: "corruption", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 6, name: "detonate_seed", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 7, name: "spec_spell", kind: "enum", T: () => ["proto.Warlock.Rotation.SpecSpell", Warlock_Rotation_SpecSpell] }
         ]);
     }
     create(value) {
-        const message = { primarySpell: 0, curse: 0, immolate: false, corruption: false, detonateSeed: false, haunt: false, chaosBolt: false, unstableAffliction: false };
+        const message = { preset: 0, curse: 0, primarySpell: 0, secondaryDot: 0, corruption: false, detonateSeed: false, specSpell: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -957,29 +1006,26 @@ class Warlock_Rotation$Type extends MessageType {
         while (reader.pos < end) {
             let [fieldNo, wireType] = reader.tag();
             switch (fieldNo) {
-                case /* proto.Warlock.Rotation.PrimarySpell primary_spell */ 1:
-                    message.primarySpell = reader.int32();
+                case /* proto.Warlock.Rotation.Preset preset */ 1:
+                    message.preset = reader.int32();
                     break;
                 case /* proto.Warlock.Rotation.Curse curse */ 2:
                     message.curse = reader.int32();
                     break;
-                case /* bool immolate */ 3:
-                    message.immolate = reader.bool();
+                case /* proto.Warlock.Rotation.PrimarySpell primary_spell */ 3:
+                    message.primarySpell = reader.int32();
                     break;
-                case /* bool corruption */ 4:
+                case /* proto.Warlock.Rotation.SecondaryDot secondary_dot */ 4:
+                    message.secondaryDot = reader.int32();
+                    break;
+                case /* bool corruption */ 5:
                     message.corruption = reader.bool();
                     break;
-                case /* bool detonate_seed */ 5:
+                case /* bool detonate_seed */ 6:
                     message.detonateSeed = reader.bool();
                     break;
-                case /* bool haunt */ 6:
-                    message.haunt = reader.bool();
-                    break;
-                case /* bool chaos_bolt */ 7:
-                    message.chaosBolt = reader.bool();
-                    break;
-                case /* bool unstable_affliction */ 8:
-                    message.unstableAffliction = reader.bool();
+                case /* proto.Warlock.Rotation.SpecSpell spec_spell */ 7:
+                    message.specSpell = reader.int32();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -993,30 +1039,27 @@ class Warlock_Rotation$Type extends MessageType {
         return message;
     }
     internalBinaryWrite(message, writer, options) {
-        /* proto.Warlock.Rotation.PrimarySpell primary_spell = 1; */
-        if (message.primarySpell !== 0)
-            writer.tag(1, WireType.Varint).int32(message.primarySpell);
+        /* proto.Warlock.Rotation.Preset preset = 1; */
+        if (message.preset !== 0)
+            writer.tag(1, WireType.Varint).int32(message.preset);
         /* proto.Warlock.Rotation.Curse curse = 2; */
         if (message.curse !== 0)
             writer.tag(2, WireType.Varint).int32(message.curse);
-        /* bool immolate = 3; */
-        if (message.immolate !== false)
-            writer.tag(3, WireType.Varint).bool(message.immolate);
-        /* bool corruption = 4; */
+        /* proto.Warlock.Rotation.PrimarySpell primary_spell = 3; */
+        if (message.primarySpell !== 0)
+            writer.tag(3, WireType.Varint).int32(message.primarySpell);
+        /* proto.Warlock.Rotation.SecondaryDot secondary_dot = 4; */
+        if (message.secondaryDot !== 0)
+            writer.tag(4, WireType.Varint).int32(message.secondaryDot);
+        /* bool corruption = 5; */
         if (message.corruption !== false)
-            writer.tag(4, WireType.Varint).bool(message.corruption);
-        /* bool detonate_seed = 5; */
+            writer.tag(5, WireType.Varint).bool(message.corruption);
+        /* bool detonate_seed = 6; */
         if (message.detonateSeed !== false)
-            writer.tag(5, WireType.Varint).bool(message.detonateSeed);
-        /* bool haunt = 6; */
-        if (message.haunt !== false)
-            writer.tag(6, WireType.Varint).bool(message.haunt);
-        /* bool chaos_bolt = 7; */
-        if (message.chaosBolt !== false)
-            writer.tag(7, WireType.Varint).bool(message.chaosBolt);
-        /* bool unstable_affliction = 8; */
-        if (message.unstableAffliction !== false)
-            writer.tag(8, WireType.Varint).bool(message.unstableAffliction);
+            writer.tag(6, WireType.Varint).bool(message.detonateSeed);
+        /* proto.Warlock.Rotation.SpecSpell spec_spell = 7; */
+        if (message.specSpell !== 0)
+            writer.tag(7, WireType.Varint).int32(message.specSpell);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
@@ -1032,12 +1075,11 @@ class Warlock_Options$Type extends MessageType {
     constructor() {
         super("proto.Warlock.Options", [
             { no: 1, name: "armor", kind: "enum", T: () => ["proto.Warlock.Options.Armor", Warlock_Options_Armor] },
-            { no: 2, name: "summon", kind: "enum", T: () => ["proto.Warlock.Options.Summon", Warlock_Options_Summon] },
-            { no: 3, name: "sacrifice_summon", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 2, name: "summon", kind: "enum", T: () => ["proto.Warlock.Options.Summon", Warlock_Options_Summon] }
         ]);
     }
     create(value) {
-        const message = { armor: 0, summon: 0, sacrificeSummon: false };
+        const message = { armor: 0, summon: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1053,9 +1095,6 @@ class Warlock_Options$Type extends MessageType {
                     break;
                 case /* proto.Warlock.Options.Summon summon */ 2:
                     message.summon = reader.int32();
-                    break;
-                case /* bool sacrifice_summon */ 3:
-                    message.sacrificeSummon = reader.bool();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -1075,9 +1114,6 @@ class Warlock_Options$Type extends MessageType {
         /* proto.Warlock.Options.Summon summon = 2; */
         if (message.summon !== 0)
             writer.tag(2, WireType.Varint).int32(message.summon);
-        /* bool sacrifice_summon = 3; */
-        if (message.sacrificeSummon !== false)
-            writer.tag(3, WireType.Varint).bool(message.sacrificeSummon);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

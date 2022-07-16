@@ -97,6 +97,7 @@ export interface IndividualSimUIConfig<SpecType extends Spec> {
     playerBuffInputs: Array<IndividualSimIconPickerConfig<Player<any>, any>>;
     debuffInputs: Array<IndividualSimIconPickerConfig<Raid, any>>;
     rotationInputs: InputSection;
+    spellInputs?: Array<IndividualSimIconPickerConfig<Player<any>, any>>;
     otherInputs?: InputSection;
     consumeOptions?: ConsumeOptions;
     additionalSections?: Record<string, InputSection>;

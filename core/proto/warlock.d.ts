@@ -363,37 +363,46 @@ export interface Warlock {
  */
 export interface Warlock_Rotation {
     /**
-     * @generated from protobuf field: proto.Warlock.Rotation.PrimarySpell primary_spell = 1;
+     * @generated from protobuf field: proto.Warlock.Rotation.Preset preset = 1;
      */
-    primarySpell: Warlock_Rotation_PrimarySpell;
+    preset: Warlock_Rotation_Preset;
     /**
      * @generated from protobuf field: proto.Warlock.Rotation.Curse curse = 2;
      */
     curse: Warlock_Rotation_Curse;
     /**
-     * @generated from protobuf field: bool immolate = 3;
+     * @generated from protobuf field: proto.Warlock.Rotation.PrimarySpell primary_spell = 3;
      */
-    immolate: boolean;
+    primarySpell: Warlock_Rotation_PrimarySpell;
     /**
-     * @generated from protobuf field: bool corruption = 4;
+     * @generated from protobuf field: proto.Warlock.Rotation.SecondaryDot secondary_dot = 4;
+     */
+    secondaryDot: Warlock_Rotation_SecondaryDot;
+    /**
+     * @generated from protobuf field: bool corruption = 5;
      */
     corruption: boolean;
     /**
-     * @generated from protobuf field: bool detonate_seed = 5;
+     * @generated from protobuf field: bool detonate_seed = 6;
      */
     detonateSeed: boolean;
     /**
-     * @generated from protobuf field: bool haunt = 6;
+     * @generated from protobuf field: proto.Warlock.Rotation.SpecSpell spec_spell = 7;
      */
-    haunt: boolean;
+    specSpell: Warlock_Rotation_SpecSpell;
+}
+/**
+ * @generated from protobuf enum proto.Warlock.Rotation.Preset
+ */
+export declare enum Warlock_Rotation_Preset {
     /**
-     * @generated from protobuf field: bool chaos_bolt = 7;
+     * @generated from protobuf enum value: Manual = 0;
      */
-    chaosBolt: boolean;
+    Manual = 0,
     /**
-     * @generated from protobuf field: bool unstable_affliction = 8;
+     * @generated from protobuf enum value: Automatic = 1;
      */
-    unstableAffliction: boolean;
+    Automatic = 1
 }
 /**
  * @generated from protobuf enum proto.Warlock.Rotation.PrimarySpell
@@ -446,6 +455,40 @@ export declare enum Warlock_Rotation_Curse {
     Tongues = 5
 }
 /**
+ * @generated from protobuf enum proto.Warlock.Rotation.SecondaryDot
+ */
+export declare enum Warlock_Rotation_SecondaryDot {
+    /**
+     * @generated from protobuf enum value: NoSecondaryDot = 0;
+     */
+    NoSecondaryDot = 0,
+    /**
+     * @generated from protobuf enum value: Immolate = 1;
+     */
+    Immolate = 1,
+    /**
+     * @generated from protobuf enum value: UnstableAffliction = 2;
+     */
+    UnstableAffliction = 2
+}
+/**
+ * @generated from protobuf enum proto.Warlock.Rotation.SpecSpell
+ */
+export declare enum Warlock_Rotation_SpecSpell {
+    /**
+     * @generated from protobuf enum value: NoSpecSpell = 0;
+     */
+    NoSpecSpell = 0,
+    /**
+     * @generated from protobuf enum value: ChaosBolt = 1;
+     */
+    ChaosBolt = 1,
+    /**
+     * @generated from protobuf enum value: Haunt = 2;
+     */
+    Haunt = 2
+}
+/**
  * @generated from protobuf message proto.Warlock.Options
  */
 export interface Warlock_Options {
@@ -457,10 +500,6 @@ export interface Warlock_Options {
      * @generated from protobuf field: proto.Warlock.Options.Summon summon = 2;
      */
     summon: Warlock_Options_Summon;
-    /**
-     * @generated from protobuf field: bool sacrifice_summon = 3;
-     */
-    sacrificeSummon: boolean;
 }
 /**
  * @generated from protobuf enum proto.Warlock.Options.Summon
