@@ -91,37 +91,133 @@ export var Hunter_Options_PetType;
      */
     Hunter_Options_PetType[Hunter_Options_PetType["PetNone"] = 0] = "PetNone";
     /**
-     * @generated from protobuf enum value: Bat = 5;
+     * @generated from protobuf enum value: Bat = 1;
      */
-    Hunter_Options_PetType[Hunter_Options_PetType["Bat"] = 5] = "Bat";
+    Hunter_Options_PetType[Hunter_Options_PetType["Bat"] = 1] = "Bat";
     /**
-     * @generated from protobuf enum value: Bear = 7;
+     * @generated from protobuf enum value: Bear = 2;
      */
-    Hunter_Options_PetType[Hunter_Options_PetType["Bear"] = 7] = "Bear";
+    Hunter_Options_PetType[Hunter_Options_PetType["Bear"] = 2] = "Bear";
     /**
-     * @generated from protobuf enum value: Cat = 2;
+     * @generated from protobuf enum value: BirdOfPrey = 3;
      */
-    Hunter_Options_PetType[Hunter_Options_PetType["Cat"] = 2] = "Cat";
+    Hunter_Options_PetType[Hunter_Options_PetType["BirdOfPrey"] = 3] = "BirdOfPrey";
     /**
-     * @generated from protobuf enum value: Crab = 8;
+     * @generated from protobuf enum value: Boar = 4;
      */
-    Hunter_Options_PetType[Hunter_Options_PetType["Crab"] = 8] = "Crab";
+    Hunter_Options_PetType[Hunter_Options_PetType["Boar"] = 4] = "Boar";
     /**
-     * @generated from protobuf enum value: Owl = 4;
+     * @generated from protobuf enum value: CarrionBird = 5;
      */
-    Hunter_Options_PetType[Hunter_Options_PetType["Owl"] = 4] = "Owl";
+    Hunter_Options_PetType[Hunter_Options_PetType["CarrionBird"] = 5] = "CarrionBird";
     /**
-     * @generated from protobuf enum value: Raptor = 3;
+     * @generated from protobuf enum value: Cat = 6;
      */
-    Hunter_Options_PetType[Hunter_Options_PetType["Raptor"] = 3] = "Raptor";
+    Hunter_Options_PetType[Hunter_Options_PetType["Cat"] = 6] = "Cat";
     /**
-     * @generated from protobuf enum value: Ravager = 1;
+     * @generated from protobuf enum value: Chimaera = 7;
      */
-    Hunter_Options_PetType[Hunter_Options_PetType["Ravager"] = 1] = "Ravager";
+    Hunter_Options_PetType[Hunter_Options_PetType["Chimaera"] = 7] = "Chimaera";
     /**
-     * @generated from protobuf enum value: WindSerpent = 6;
+     * @generated from protobuf enum value: CoreHound = 8;
      */
-    Hunter_Options_PetType[Hunter_Options_PetType["WindSerpent"] = 6] = "WindSerpent";
+    Hunter_Options_PetType[Hunter_Options_PetType["CoreHound"] = 8] = "CoreHound";
+    /**
+     * @generated from protobuf enum value: Crab = 9;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Crab"] = 9] = "Crab";
+    /**
+     * @generated from protobuf enum value: Crocolisk = 10;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Crocolisk"] = 10] = "Crocolisk";
+    /**
+     * @generated from protobuf enum value: Devilsaur = 11;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Devilsaur"] = 11] = "Devilsaur";
+    /**
+     * @generated from protobuf enum value: Dragonhawk = 12;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Dragonhawk"] = 12] = "Dragonhawk";
+    /**
+     * @generated from protobuf enum value: Gorilla = 13;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Gorilla"] = 13] = "Gorilla";
+    /**
+     * @generated from protobuf enum value: Hyena = 14;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Hyena"] = 14] = "Hyena";
+    /**
+     * @generated from protobuf enum value: Moth = 15;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Moth"] = 15] = "Moth";
+    /**
+     * @generated from protobuf enum value: NetherRay = 16;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["NetherRay"] = 16] = "NetherRay";
+    /**
+     * @generated from protobuf enum value: Raptor = 17;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Raptor"] = 17] = "Raptor";
+    /**
+     * @generated from protobuf enum value: Ravager = 18;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Ravager"] = 18] = "Ravager";
+    /**
+     * @generated from protobuf enum value: Rhino = 19;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Rhino"] = 19] = "Rhino";
+    /**
+     * @generated from protobuf enum value: Scorpid = 20;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Scorpid"] = 20] = "Scorpid";
+    /**
+     * @generated from protobuf enum value: Serpent = 21;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Serpent"] = 21] = "Serpent";
+    /**
+     * @generated from protobuf enum value: Silithid = 22;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Silithid"] = 22] = "Silithid";
+    /**
+     * @generated from protobuf enum value: Spider = 23;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Spider"] = 23] = "Spider";
+    /**
+     * @generated from protobuf enum value: SpiritBeast = 24;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["SpiritBeast"] = 24] = "SpiritBeast";
+    /**
+     * @generated from protobuf enum value: SporeBat = 25;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["SporeBat"] = 25] = "SporeBat";
+    /**
+     * @generated from protobuf enum value: Tallstrider = 26;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Tallstrider"] = 26] = "Tallstrider";
+    /**
+     * @generated from protobuf enum value: Turtle = 27;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Turtle"] = 27] = "Turtle";
+    /**
+     * @generated from protobuf enum value: WarpStalker = 28;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["WarpStalker"] = 28] = "WarpStalker";
+    /**
+     * @generated from protobuf enum value: Wasp = 29;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Wasp"] = 29] = "Wasp";
+    /**
+     * @generated from protobuf enum value: WindSerpent = 30;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["WindSerpent"] = 30] = "WindSerpent";
+    /**
+     * @generated from protobuf enum value: Wolf = 31;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Wolf"] = 31] = "Wolf";
+    /**
+     * @generated from protobuf enum value: Worm = 32;
+     */
+    Hunter_Options_PetType[Hunter_Options_PetType["Worm"] = 32] = "Worm";
 })(Hunter_Options_PetType || (Hunter_Options_PetType = {}));
 /**
  * @generated from protobuf enum proto.HunterMajorGlyph
@@ -1353,14 +1449,13 @@ class Hunter_Options$Type extends MessageType {
             { no: 2, name: "pet_type", kind: "enum", T: () => ["proto.Hunter.Options.PetType", Hunter_Options_PetType] },
             { no: 3, name: "pet_talents", kind: "message", T: () => HunterPetTalents },
             { no: 4, name: "pet_uptime", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
-            { no: 5, name: "pet_single_ability", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 6, name: "latency_ms", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 7, name: "sniper_training_uptime", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
             { no: 8, name: "remove_randomness", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { ammo: 0, petType: 0, petUptime: 0, petSingleAbility: false, latencyMs: 0, sniperTrainingUptime: 0, removeRandomness: false };
+        const message = { ammo: 0, petType: 0, petUptime: 0, latencyMs: 0, sniperTrainingUptime: 0, removeRandomness: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1382,9 +1477,6 @@ class Hunter_Options$Type extends MessageType {
                     break;
                 case /* double pet_uptime */ 4:
                     message.petUptime = reader.double();
-                    break;
-                case /* bool pet_single_ability */ 5:
-                    message.petSingleAbility = reader.bool();
                     break;
                 case /* int32 latency_ms */ 6:
                     message.latencyMs = reader.int32();
@@ -1419,9 +1511,6 @@ class Hunter_Options$Type extends MessageType {
         /* double pet_uptime = 4; */
         if (message.petUptime !== 0)
             writer.tag(4, WireType.Bit64).double(message.petUptime);
-        /* bool pet_single_ability = 5; */
-        if (message.petSingleAbility !== false)
-            writer.tag(5, WireType.Varint).bool(message.petSingleAbility);
         /* int32 latency_ms = 6; */
         if (message.latencyMs !== 0)
             writer.tag(6, WireType.Varint).int32(message.latencyMs);

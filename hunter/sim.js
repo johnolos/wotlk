@@ -6,6 +6,7 @@ import { Stat } from '/wotlk/core/proto/common.js';
 import { TristateEffect } from '/wotlk/core/proto/common.js';
 import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
+import { TypedEvent } from '/wotlk/core/typed_event.js';
 import { BattleElixir } from '/wotlk/core/proto/common.js';
 import { Flask } from '/wotlk/core/proto/common.js';
 import { Food } from '/wotlk/core/proto/common.js';
@@ -13,6 +14,7 @@ import { GuardianElixir } from '/wotlk/core/proto/common.js';
 import { Conjured } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
+import { Hunter_Options_PetType as PetType, } from '/wotlk/core/proto/hunter.js';
 import * as IconInputs from '/wotlk/core/components/icon_inputs.js';
 import * as OtherInputs from '/wotlk/core/components/other_inputs.js';
 import * as HunterInputs from './inputs.js';
@@ -23,6 +25,31 @@ export class HunterSimUI extends IndividualSimUI {
             cssClass: 'hunter-sim-ui',
             // List any known bugs / issues here and they'll be shown on the site.
             knownIssues: [],
+            warnings: [
+                // Warning when using exotic pet without BM talented.
+                (simUI) => {
+                    return {
+                        updateOn: TypedEvent.onAny([simUI.player.talentsChangeEmitter, simUI.player.specOptionsChangeEmitter]),
+                        getContent: () => {
+                            const petIsExotic = [
+                                PetType.Chimaera,
+                                PetType.CoreHound,
+                                PetType.Devilsaur,
+                                PetType.Silithid,
+                                PetType.SpiritBeast,
+                                PetType.Worm,
+                            ].includes(simUI.player.getSpecOptions().petType);
+                            const isBM = simUI.player.getTalents().beastMastery;
+                            if (petIsExotic && !isBM) {
+                                return 'Cannot use exotic pets without the Beast Mastery talent.';
+                            }
+                            else {
+                                return '';
+                            }
+                        },
+                    };
+                },
+            ],
             // All stats for which EP should be calculated.
             epStats: [
                 Stat.StatIntellect,
@@ -190,7 +217,7 @@ export class HunterSimUI extends IndividualSimUI {
                 inputs: [
                     HunterInputs.PetTypeInput,
                     HunterInputs.PetUptime,
-                    HunterInputs.PetSingleAbility,
+                    //HunterInputs.PetSingleAbility,
                     HunterInputs.SniperTrainingUptime,
                     HunterInputs.LatencyMs,
                     OtherInputs.PrepopPotion,

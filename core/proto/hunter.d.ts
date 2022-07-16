@@ -623,10 +623,6 @@ export interface Hunter_Options {
      */
     petUptime: number;
     /**
-     * @generated from protobuf field: bool pet_single_ability = 5;
-     */
-    petSingleAbility: boolean;
-    /**
      * @generated from protobuf field: int32 latency_ms = 6;
      */
     latencyMs: number;
@@ -689,37 +685,133 @@ export declare enum Hunter_Options_PetType {
      */
     PetNone = 0,
     /**
-     * @generated from protobuf enum value: Bat = 5;
+     * @generated from protobuf enum value: Bat = 1;
      */
-    Bat = 5,
+    Bat = 1,
     /**
-     * @generated from protobuf enum value: Bear = 7;
+     * @generated from protobuf enum value: Bear = 2;
      */
-    Bear = 7,
+    Bear = 2,
     /**
-     * @generated from protobuf enum value: Cat = 2;
+     * @generated from protobuf enum value: BirdOfPrey = 3;
      */
-    Cat = 2,
+    BirdOfPrey = 3,
     /**
-     * @generated from protobuf enum value: Crab = 8;
+     * @generated from protobuf enum value: Boar = 4;
      */
-    Crab = 8,
+    Boar = 4,
     /**
-     * @generated from protobuf enum value: Owl = 4;
+     * @generated from protobuf enum value: CarrionBird = 5;
      */
-    Owl = 4,
+    CarrionBird = 5,
     /**
-     * @generated from protobuf enum value: Raptor = 3;
+     * @generated from protobuf enum value: Cat = 6;
      */
-    Raptor = 3,
+    Cat = 6,
     /**
-     * @generated from protobuf enum value: Ravager = 1;
+     * @generated from protobuf enum value: Chimaera = 7;
      */
-    Ravager = 1,
+    Chimaera = 7,
     /**
-     * @generated from protobuf enum value: WindSerpent = 6;
+     * @generated from protobuf enum value: CoreHound = 8;
      */
-    WindSerpent = 6
+    CoreHound = 8,
+    /**
+     * @generated from protobuf enum value: Crab = 9;
+     */
+    Crab = 9,
+    /**
+     * @generated from protobuf enum value: Crocolisk = 10;
+     */
+    Crocolisk = 10,
+    /**
+     * @generated from protobuf enum value: Devilsaur = 11;
+     */
+    Devilsaur = 11,
+    /**
+     * @generated from protobuf enum value: Dragonhawk = 12;
+     */
+    Dragonhawk = 12,
+    /**
+     * @generated from protobuf enum value: Gorilla = 13;
+     */
+    Gorilla = 13,
+    /**
+     * @generated from protobuf enum value: Hyena = 14;
+     */
+    Hyena = 14,
+    /**
+     * @generated from protobuf enum value: Moth = 15;
+     */
+    Moth = 15,
+    /**
+     * @generated from protobuf enum value: NetherRay = 16;
+     */
+    NetherRay = 16,
+    /**
+     * @generated from protobuf enum value: Raptor = 17;
+     */
+    Raptor = 17,
+    /**
+     * @generated from protobuf enum value: Ravager = 18;
+     */
+    Ravager = 18,
+    /**
+     * @generated from protobuf enum value: Rhino = 19;
+     */
+    Rhino = 19,
+    /**
+     * @generated from protobuf enum value: Scorpid = 20;
+     */
+    Scorpid = 20,
+    /**
+     * @generated from protobuf enum value: Serpent = 21;
+     */
+    Serpent = 21,
+    /**
+     * @generated from protobuf enum value: Silithid = 22;
+     */
+    Silithid = 22,
+    /**
+     * @generated from protobuf enum value: Spider = 23;
+     */
+    Spider = 23,
+    /**
+     * @generated from protobuf enum value: SpiritBeast = 24;
+     */
+    SpiritBeast = 24,
+    /**
+     * @generated from protobuf enum value: SporeBat = 25;
+     */
+    SporeBat = 25,
+    /**
+     * @generated from protobuf enum value: Tallstrider = 26;
+     */
+    Tallstrider = 26,
+    /**
+     * @generated from protobuf enum value: Turtle = 27;
+     */
+    Turtle = 27,
+    /**
+     * @generated from protobuf enum value: WarpStalker = 28;
+     */
+    WarpStalker = 28,
+    /**
+     * @generated from protobuf enum value: Wasp = 29;
+     */
+    Wasp = 29,
+    /**
+     * @generated from protobuf enum value: WindSerpent = 30;
+     */
+    WindSerpent = 30,
+    /**
+     * @generated from protobuf enum value: Wolf = 31;
+     */
+    Wolf = 31,
+    /**
+     * @generated from protobuf enum value: Worm = 32;
+     */
+    Worm = 32
 }
 /**
  * @generated from protobuf enum proto.HunterMajorGlyph
