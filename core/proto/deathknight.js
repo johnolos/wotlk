@@ -902,11 +902,13 @@ export const DeathKnight_Rotation = new DeathKnight_Rotation$Type();
 class DeathKnight_Options$Type extends MessageType {
     constructor() {
         super("proto.DeathKnight.Options", [
-            { no: 1, name: "starting_runic_power", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ }
+            { no: 1, name: "starting_runic_power", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
+            { no: 2, name: "pet_uptime", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
+            { no: 3, name: "precast_ghoul_frenzy", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { startingRunicPower: 0 };
+        const message = { startingRunicPower: 0, petUptime: 0, precastGhoulFrenzy: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -919,6 +921,12 @@ class DeathKnight_Options$Type extends MessageType {
             switch (fieldNo) {
                 case /* double starting_runic_power */ 1:
                     message.startingRunicPower = reader.double();
+                    break;
+                case /* double pet_uptime */ 2:
+                    message.petUptime = reader.double();
+                    break;
+                case /* bool precast_ghoul_frenzy */ 3:
+                    message.precastGhoulFrenzy = reader.bool();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -935,6 +943,12 @@ class DeathKnight_Options$Type extends MessageType {
         /* double starting_runic_power = 1; */
         if (message.startingRunicPower !== 0)
             writer.tag(1, WireType.Bit64).double(message.startingRunicPower);
+        /* double pet_uptime = 2; */
+        if (message.petUptime !== 0)
+            writer.tag(2, WireType.Bit64).double(message.petUptime);
+        /* bool precast_ghoul_frenzy = 3; */
+        if (message.precastGhoulFrenzy !== false)
+            writer.tag(3, WireType.Varint).bool(message.precastGhoulFrenzy);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

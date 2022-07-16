@@ -18,6 +18,42 @@ export const StartingRunicPower = {
         },
     },
 };
+export const PetUptime = {
+    type: 'number',
+    getModObject: (simUI) => simUI.player,
+    config: {
+        extraCssClasses: [
+            'ghoul-uptime-picker',
+        ],
+        label: 'Ghoul Uptime (%)',
+        labelTooltip: 'Percent of the fight duration for which your ghoul will be on target.',
+        changedEvent: (player) => player.specOptionsChangeEmitter,
+        getValue: (player) => player.getSpecOptions().petUptime * 100,
+        setValue: (eventID, player, newValue) => {
+            const newOptions = player.getSpecOptions();
+            newOptions.petUptime = newValue / 100;
+            player.setSpecOptions(eventID, newOptions);
+        },
+    },
+};
+export const PrecastGhoulFrenzy = {
+    type: 'boolean',
+    getModObject: (simUI) => simUI.player,
+    config: {
+        extraCssClasses: [
+            'precast-ghoul-frenzy-picker',
+        ],
+        label: 'Pre-Cast Ghoul Frenzy',
+        labelTooltip: 'Cast Ghoul Frenzy 10 seconds before combat starts.',
+        changedEvent: (player) => player.specOptionsChangeEmitter,
+        getValue: (player) => player.getSpecOptions().precastGhoulFrenzy,
+        setValue: (eventID, player, newValue) => {
+            const newOptions = player.getSpecOptions();
+            newOptions.precastGhoulFrenzy = newValue;
+            player.setSpecOptions(eventID, newOptions);
+        },
+    },
+};
 export const DeathKnightRotationConfig = {
     inputs: [],
 };

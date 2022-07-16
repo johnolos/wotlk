@@ -397,6 +397,14 @@ export interface DeathKnight_Options {
      * @generated from protobuf field: double starting_runic_power = 1;
      */
     startingRunicPower: number;
+    /**
+     * @generated from protobuf field: double pet_uptime = 2;
+     */
+    petUptime: number;
+    /**
+     * @generated from protobuf field: bool precast_ghoul_frenzy = 3;
+     */
+    precastGhoulFrenzy: boolean;
 }
 /**
  * @generated from protobuf enum proto.DeathKnightMajorGlyph

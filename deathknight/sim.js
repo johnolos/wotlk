@@ -178,6 +178,8 @@ export class DeathKnightSimUI extends IndividualSimUI {
             otherInputs: {
                 inputs: [
                     DeathKnightInputs.StartingRunicPower,
+                    DeathKnightInputs.PetUptime,
+                    DeathKnightInputs.PrecastGhoulFrenzy,
                     OtherInputs.TankAssignment,
                     OtherInputs.InFrontOfTarget,
                 ],
