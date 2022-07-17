@@ -1,4 +1,5 @@
 import { ActionId } from '/wotlk/core/proto_utils/action_id.js';
+import { TypedEvent } from '/wotlk/core/typed_event.js';
 import { makePetTypeInputConfig } from '/wotlk/core/talents/hunter_pet.js';
 import { Hunter_Rotation_StingType as StingType, Hunter_Options_Ammo as Ammo, } from '/wotlk/core/proto/hunter.js';
 // Configuration for spec-specific UI elements on the settings tab.
@@ -96,7 +97,7 @@ export const SniperTrainingUptime = {
         ],
         label: 'ST Uptime (%)',
         labelTooltip: 'Uptime for the Sniper Training talent, as a percent of the fight duration.',
-        changedEvent: (player) => player.specOptionsChangeEmitter,
+        changedEvent: (player) => TypedEvent.onAny([player.specOptionsChangeEmitter, player.talentsChangeEmitter]),
         getValue: (player) => player.getSpecOptions().sniperTrainingUptime * 100,
         setValue: (eventID, player, newValue) => {
             const newOptions = player.getSpecOptions();

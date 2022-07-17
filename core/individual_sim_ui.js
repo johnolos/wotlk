@@ -724,12 +724,6 @@ export class IndividualSimUI extends SimUI {
             toJson: (a) => SavedTalents.toJson(a),
             fromJson: (obj) => SavedTalents.fromJson(obj),
         });
-        // Add a url parameter to help people trapped in the wrong talents   ;)
-        const freezeTalents = this.individualConfig.freezeTalents && !(new URLSearchParams(window.location.search).has('unlockTalents'));
-        if (freezeTalents) {
-            savedTalentsManager.freeze();
-            talentsPicker.freeze();
-        }
         this.sim.waitForInit().then(() => {
             savedTalentsManager.loadUserData();
             this.individualConfig.presets.talents.forEach(config => {

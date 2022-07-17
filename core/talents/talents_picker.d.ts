@@ -9,7 +9,6 @@ export declare class TalentsPicker<ModObject, TalentsProto> extends Input<ModObj
     readonly numRows: number;
     readonly pointsPerRow: number;
     maxPoints: number;
-    frozen: boolean;
     readonly trees: Array<TalentTreePicker<TalentsProto>>;
     constructor(parent: HTMLElement, modObject: ModObject, config: TalentsPickerConfig<ModObject, TalentsProto>);
     getInputElem(): HTMLElement;
@@ -18,7 +17,6 @@ export declare class TalentsPicker<ModObject, TalentsProto> extends Input<ModObj
     updateTrees(): void;
     get numPoints(): number;
     isFull(): boolean;
-    freeze(): void;
     setMaxPoints(newMaxPoints: number): void;
 }
 declare class TalentTreePicker<TalentsProto> extends Component {

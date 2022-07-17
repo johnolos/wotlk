@@ -105,7 +105,6 @@ export interface IndividualSimUIConfig<SpecType extends Spec> {
     additionalIconSections?: Record<string, Array<IndividualSimIconPickerConfig<Player<any>, any>>>;
     customSections?: Array<(simUI: IndividualSimUI<SpecType>, parentElem: HTMLElement) => string>;
     encounterPicker: EncounterPickerConfig;
-    freezeTalents?: boolean;
     presets: {
         gear: Array<PresetGear>;
         talents: Array<SavedDataConfig<Player<any>, SavedTalents>>;

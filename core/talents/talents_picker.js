@@ -10,7 +10,6 @@ export class TalentsPicker extends Input {
         this.pointsPerRow = config.pointsPerRow;
         this.maxPoints = config.maxPoints;
         this.numRows = Math.max(...config.trees.map(treeConfig => treeConfig.talents.map(talentConfig => talentConfig.location.rowIdx).flat()).flat()) + 1;
-        this.frozen = false;
         this.trees = config.trees.map(treeConfig => new TalentTreePicker(this.rootElem, treeConfig, this));
         this.trees.forEach(tree => tree.talents.forEach(talent => talent.setPoints(0, false)));
         this.init();
@@ -40,11 +39,6 @@ export class TalentsPicker extends Input {
     }
     isFull() {
         return this.numPoints >= this.maxPoints;
-    }
-    // Freezes the talent calculator so that user input cannot change it.
-    freeze() {
-        this.frozen = true;
-        this.rootElem.classList.add('frozen');
     }
     setMaxPoints(newMaxPoints) {
         if (newMaxPoints != this.maxPoints) {
@@ -82,10 +76,8 @@ class TalentTreePicker extends Component {
         });
         const reset = this.rootElem.getElementsByClassName('talent-tree-reset')[0];
         reset.addEventListener('click', event => {
-            if (!this.picker.frozen) {
-                this.talents.forEach(talent => talent.setPoints(0, false));
-                this.picker.inputChanged(TypedEvent.nextEventID());
-            }
+            this.talents.forEach(talent => talent.setPoints(0, false));
+            this.picker.inputChanged(TypedEvent.nextEventID());
         });
     }
     update() {
@@ -133,8 +125,6 @@ class TalentPicker extends Component {
         });
         this.rootElem.addEventListener('touchend', event => {
             event.preventDefault();
-            if (this.tree.picker.frozen)
-                return;
             if (this.longTouchTimer != undefined) {
                 clearTimeout(this.longTouchTimer);
                 this.longTouchTimer = undefined;
@@ -150,8 +140,6 @@ class TalentPicker extends Component {
             this.tree.picker.inputChanged(TypedEvent.nextEventID());
         });
         this.rootElem.addEventListener('mousedown', event => {
-            if (this.tree.picker.frozen)
-                return;
             const rightClick = isRightClick(event);
             if (rightClick) {
                 this.setPoints(this.getPoints() - 1, true);
