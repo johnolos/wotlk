@@ -64,18 +64,6 @@ export declare const JudgementSelection: {
         setValue: (eventID: EventID, player: Player<Spec.SpecRetributionPaladin>, newValue: number) => void;
     };
 };
-export declare const CrusaderStrikeDelayMS: {
-    type: "number";
-    cssClass: string;
-    getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
-    config: {
-        label: string;
-        labelTooltip: string;
-        changedEvent: (player: Player<Spec.SpecRetributionPaladin>) => import("/wotlk/core/typed_event.js").TypedEvent<void>;
-        getValue: (player: Player<Spec.SpecRetributionPaladin>) => number;
-        setValue: (eventID: EventID, player: Player<Spec.SpecRetributionPaladin>, newValue: number) => void;
-    };
-};
 /*** Leave this for now. We'll ignore HasteLeeway for initial release, but we might come back to it at some point  ***/
 export declare const DamgeTakenPerSecond: {
     type: "number";

@@ -11,213 +11,321 @@ export interface PaladinTalents {
     /**
      * Holy
      *
-     * @generated from protobuf field: int32 divine_strength = 1;
+     * @generated from protobuf field: int32 spiritual_focus = 1;
      */
-    divineStrength: number;
+    spiritualFocus: number;
     /**
-     * @generated from protobuf field: int32 divine_intellect = 2;
+     * @generated from protobuf field: int32 seals_of_the_pure = 2;
+     */
+    sealsOfThePure: number;
+    /**
+     * @generated from protobuf field: int32 healing_light = 3;
+     */
+    healingLight: number;
+    /**
+     * @generated from protobuf field: int32 divine_intellect = 4;
      */
     divineIntellect: number;
     /**
-     * @generated from protobuf field: int32 improved_seal_of_righteousness = 3;
+     * @generated from protobuf field: int32 unyielding_faith = 5;
      */
-    improvedSealOfRighteousness: number;
+    unyieldingFaith: number;
     /**
-     * @generated from protobuf field: int32 illumination = 34;
+     * @generated from protobuf field: bool aura_mastery = 6;
+     */
+    auraMastery: boolean;
+    /**
+     * @generated from protobuf field: int32 illumination = 7;
      */
     illumination: number;
     /**
-     * @generated from protobuf field: int32 improved_blessing_of_wisdom = 4;
+     * @generated from protobuf field: int32 improved_lay_on_hands = 8;
+     */
+    improvedLayOnHands: number;
+    /**
+     * @generated from protobuf field: int32 improved_concentration_aura = 9;
+     */
+    improvedConcentrationAura: number;
+    /**
+     * @generated from protobuf field: int32 improved_blessing_of_wisdom = 10;
      */
     improvedBlessingOfWisdom: number;
     /**
-     * @generated from protobuf field: bool divine_favor = 5;
+     * @generated from protobuf field: int32 blessed_hands = 11;
+     */
+    blessedHands: number;
+    /**
+     * @generated from protobuf field: int32 pure_of_heart = 12;
+     */
+    pureOfHeart: number;
+    /**
+     * @generated from protobuf field: bool divine_favor = 13;
      */
     divineFavor: boolean;
     /**
-     * @generated from protobuf field: int32 purifying_power = 6;
+     * @generated from protobuf field: int32 sanctified_light = 14;
+     */
+    sanctifiedLight: number;
+    /**
+     * @generated from protobuf field: int32 purifying_power = 15;
      */
     purifyingPower: number;
     /**
-     * @generated from protobuf field: int32 holy_power = 7;
+     * @generated from protobuf field: int32 holy_power = 16;
      */
     holyPower: number;
     /**
-     * @generated from protobuf field: bool holy_shock = 8;
+     * @generated from protobuf field: int32 lights_grace = 17;
+     */
+    lightsGrace: number;
+    /**
+     * @generated from protobuf field: bool holy_shock = 18;
      */
     holyShock: boolean;
     /**
-     * @generated from protobuf field: int32 blessed_life = 51;
+     * @generated from protobuf field: int32 blessed_life = 19;
      */
     blessedLife: number;
     /**
-     * @generated from protobuf field: int32 holy_guidance = 9;
+     * @generated from protobuf field: int32 sacred_cleansing = 20;
+     */
+    sacredCleansing: number;
+    /**
+     * @generated from protobuf field: int32 holy_guidance = 21;
      */
     holyGuidance: number;
     /**
-     * @generated from protobuf field: bool divine_illumination = 10;
+     * @generated from protobuf field: bool divine_illumination = 22;
      */
     divineIllumination: boolean;
     /**
+     * @generated from protobuf field: int32 judgements_of_the_pure = 23;
+     */
+    judgementsOfThePure: number;
+    /**
+     * @generated from protobuf field: int32 infusion_of_light = 24;
+     */
+    infusionOfLight: number;
+    /**
+     * @generated from protobuf field: int32 enlightened_judgements = 25;
+     */
+    enlightenedJudgements: number;
+    /**
+     * @generated from protobuf field: bool beacon_of_light = 26;
+     */
+    beaconOfLight: boolean;
+    /**
      * Protection
      *
-     * @generated from protobuf field: int32 improved_devotion_aura = 35;
+     * @generated from protobuf field: int32 divinity = 27;
      */
-    improvedDevotionAura: number;
+    divinity: number;
     /**
-     * @generated from protobuf field: int32 redoubt = 36;
+     * @generated from protobuf field: int32 divine_strength = 28;
      */
-    redoubt: number;
+    divineStrength: number;
     /**
-     * @generated from protobuf field: int32 precision = 11;
+     * @generated from protobuf field: int32 stoicism = 29;
      */
-    precision: number;
+    stoicism: number;
     /**
-     * @generated from protobuf field: int32 toughness = 37;
+     * @generated from protobuf field: int32 guardians_favor = 30;
      */
-    toughness: number;
+    guardiansFavor: number;
     /**
-     * @generated from protobuf field: bool blessing_of_kings = 12;
-     */
-    blessingOfKings: boolean;
-    /**
-     * @generated from protobuf field: int32 improved_righteous_fury = 38;
-     */
-    improvedRighteousFury: number;
-    /**
-     * @generated from protobuf field: int32 shield_specialization = 39;
-     */
-    shieldSpecialization: number;
-    /**
-     * @generated from protobuf field: int32 anticipation = 40;
+     * @generated from protobuf field: int32 anticipation = 31;
      */
     anticipation: number;
     /**
-     * @generated from protobuf field: int32 spell_warding = 41;
+     * @generated from protobuf field: bool divine_sacrifice = 32;
      */
-    spellWarding: number;
+    divineSacrifice: boolean;
     /**
-     * @generated from protobuf field: bool blessing_of_sanctuary = 42;
+     * @generated from protobuf field: int32 improved_righteous_fury = 33;
+     */
+    improvedRighteousFury: number;
+    /**
+     * @generated from protobuf field: int32 toughness = 34;
+     */
+    toughness: number;
+    /**
+     * @generated from protobuf field: int32 divine_guardian = 35;
+     */
+    divineGuardian: number;
+    /**
+     * @generated from protobuf field: int32 improved_hammer_of_justice = 36;
+     */
+    improvedHammerOfJustice: number;
+    /**
+     * @generated from protobuf field: int32 improved_devotion_aura = 37;
+     */
+    improvedDevotionAura: number;
+    /**
+     * @generated from protobuf field: bool blessing_of_sanctuary = 38;
      */
     blessingOfSanctuary: boolean;
     /**
-     * @generated from protobuf field: int32 reckoning = 13;
+     * @generated from protobuf field: int32 reckoning = 39;
      */
     reckoning: number;
     /**
-     * @generated from protobuf field: int32 sacred_duty = 14;
+     * @generated from protobuf field: int32 sacred_duty = 40;
      */
     sacredDuty: number;
     /**
-     * @generated from protobuf field: int32 one_handed_weapon_specialization = 15;
+     * @generated from protobuf field: int32 one_handed_weapon_specialization = 41;
      */
     oneHandedWeaponSpecialization: number;
     /**
-     * @generated from protobuf field: int32 improved_holy_shield = 43;
+     * @generated from protobuf field: int32 spiritual_attunement = 42;
      */
-    improvedHolyShield: number;
+    spiritualAttunement: number;
     /**
-     * @generated from protobuf field: bool holy_shield = 44;
+     * @generated from protobuf field: bool holy_shield = 43;
      */
     holyShield: boolean;
     /**
-     * @generated from protobuf field: int32 ardent_defender = 45;
+     * @generated from protobuf field: int32 ardent_defender = 44;
      */
     ardentDefender: number;
     /**
-     * @generated from protobuf field: int32 combat_expertise = 16;
+     * @generated from protobuf field: int32 redoubt = 45;
+     */
+    redoubt: number;
+    /**
+     * @generated from protobuf field: int32 combat_expertise = 46;
      */
     combatExpertise: number;
     /**
-     * @generated from protobuf field: bool avengers_shield = 17;
+     * @generated from protobuf field: int32 touched_by_the_light = 47;
+     */
+    touchedByTheLight: number;
+    /**
+     * @generated from protobuf field: bool avengers_shield = 48;
      */
     avengersShield: boolean;
     /**
+     * @generated from protobuf field: int32 guarded_by_the_light = 49;
+     */
+    guardedByTheLight: number;
+    /**
+     * @generated from protobuf field: int32 shield_of_the_templar = 50;
+     */
+    shieldOfTheTemplar: number;
+    /**
+     * @generated from protobuf field: int32 judgements_of_the_just = 51;
+     */
+    judgementsOfTheJust: number;
+    /**
+     * @generated from protobuf field: bool hammer_of_the_righteous = 52;
+     */
+    hammerOfTheRighteous: boolean;
+    /**
      * Retribution
      *
-     * @generated from protobuf field: int32 improved_blessing_of_might = 18;
-     */
-    improvedBlessingOfMight: number;
-    /**
-     * @generated from protobuf field: int32 benediction = 19;
-     */
-    benediction: number;
-    /**
-     * @generated from protobuf field: int32 improved_judgement = 20;
-     */
-    improvedJudgement: number;
-    /**
-     * @generated from protobuf field: int32 improved_seal_of_the_crusader = 21;
-     */
-    improvedSealOfTheCrusader: number;
-    /**
-     * @generated from protobuf field: int32 deflection = 46;
+     * @generated from protobuf field: int32 deflection = 53;
      */
     deflection: number;
     /**
-     * @generated from protobuf field: int32 vindication = 22;
+     * @generated from protobuf field: int32 benediction = 54;
+     */
+    benediction: number;
+    /**
+     * @generated from protobuf field: int32 improved_judgements = 55;
+     */
+    improvedJudgements: number;
+    /**
+     * @generated from protobuf field: int32 heart_of_the_crusader = 56;
+     */
+    heartOfTheCrusader: number;
+    /**
+     * @generated from protobuf field: int32 improved_blessing_of_might = 57;
+     */
+    improvedBlessingOfMight: number;
+    /**
+     * @generated from protobuf field: int32 vindication = 58;
      */
     vindication: number;
     /**
-     * @generated from protobuf field: int32 conviction = 23;
+     * @generated from protobuf field: int32 conviction = 59;
      */
     conviction: number;
     /**
-     * @generated from protobuf field: bool seal_of_command = 24;
+     * @generated from protobuf field: bool seal_of_command = 60;
      */
     sealOfCommand: boolean;
     /**
-     * @generated from protobuf field: int32 pursuit_of_justice = 47;
+     * @generated from protobuf field: int32 pursuit_of_justice = 61;
      */
     pursuitOfJustice: number;
     /**
-     * @generated from protobuf field: int32 eye_for_an_eye = 48;
+     * @generated from protobuf field: int32 eye_for_an_eye = 62;
      */
     eyeForAnEye: number;
     /**
-     * @generated from protobuf field: int32 improved_retribution_aura = 49;
+     * @generated from protobuf field: int32 sanctity_of_battle = 63;
      */
-    improvedRetributionAura: number;
+    sanctityOfBattle: number;
     /**
-     * @generated from protobuf field: int32 crusade = 25;
+     * @generated from protobuf field: int32 crusade = 64;
      */
     crusade: number;
     /**
-     * @generated from protobuf field: int32 two_handed_weapon_specialization = 26;
+     * @generated from protobuf field: int32 two_handed_weapon_specialization = 65;
      */
     twoHandedWeaponSpecialization: number;
     /**
-     * @generated from protobuf field: bool sanctity_aura = 27;
+     * @generated from protobuf field: bool sanctified_retribution = 66;
      */
-    sanctityAura: boolean;
+    sanctifiedRetribution: boolean;
     /**
-     * @generated from protobuf field: int32 improved_sanctity_aura = 28;
-     */
-    improvedSanctityAura: number;
-    /**
-     * @generated from protobuf field: int32 vengeance = 29;
+     * @generated from protobuf field: int32 vengeance = 67;
      */
     vengeance: number;
     /**
-     * @generated from protobuf field: int32 sanctified_judgement = 30;
-     */
-    sanctifiedJudgement: number;
-    /**
-     * @generated from protobuf field: int32 sanctified_seals = 31;
-     */
-    sanctifiedSeals: number;
-    /**
-     * @generated from protobuf field: int32 divine_purpose = 50;
+     * @generated from protobuf field: int32 divine_purpose = 68;
      */
     divinePurpose: number;
     /**
-     * @generated from protobuf field: int32 fanaticism = 32;
+     * @generated from protobuf field: int32 the_art_of_war = 69;
+     */
+    theArtOfWar: number;
+    /**
+     * @generated from protobuf field: bool repentance = 70;
+     */
+    repentance: boolean;
+    /**
+     * @generated from protobuf field: int32 judgements_of_the_wise = 71;
+     */
+    judgementsOfTheWise: number;
+    /**
+     * @generated from protobuf field: int32 fanaticism = 72;
      */
     fanaticism: number;
     /**
-     * @generated from protobuf field: bool crusader_strike = 33;
+     * @generated from protobuf field: int32 sanctified_wrath = 73;
+     */
+    sanctifiedWrath: number;
+    /**
+     * @generated from protobuf field: int32 swift_retribution = 74;
+     */
+    swiftRetribution: number;
+    /**
+     * @generated from protobuf field: bool crusader_strike = 75;
      */
     crusaderStrike: boolean;
+    /**
+     * @generated from protobuf field: int32 sheath_of_light = 76;
+     */
+    sheathOfLight: number;
+    /**
+     * @generated from protobuf field: int32 righteous_vengeance = 77;
+     */
+    righteousVengeance: number;
+    /**
+     * @generated from protobuf field: bool divine_storm = 78;
+     */
+    divineStorm: boolean;
 }
 /**
  * @generated from protobuf message proto.RetributionPaladin
@@ -283,14 +391,6 @@ export interface RetributionPaladin_Options {
      */
     aura: PaladinAura;
     /**
-     * @generated from protobuf field: int32 crusader_strike_delay_ms = 2;
-     */
-    crusaderStrikeDelayMs: number;
-    /**
-     * @generated from protobuf field: int32 haste_leeway_ms = 3;
-     */
-    hasteLeewayMs: number;
-    /**
      * @generated from protobuf field: double damage_taken_per_second = 4;
      */
     damageTakenPerSecond: number;
@@ -308,9 +408,9 @@ export declare enum RetributionPaladin_Options_Judgement {
      */
     Wisdom = 1,
     /**
-     * @generated from protobuf enum value: Crusader = 2;
+     * @generated from protobuf enum value: Light = 2;
      */
-    Crusader = 2
+    Light = 2
 }
 /**
  * @generated from protobuf message proto.ProtectionPaladin

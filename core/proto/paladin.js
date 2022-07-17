@@ -39,9 +39,9 @@ export var RetributionPaladin_Options_Judgement;
      */
     RetributionPaladin_Options_Judgement[RetributionPaladin_Options_Judgement["Wisdom"] = 1] = "Wisdom";
     /**
-     * @generated from protobuf enum value: Crusader = 2;
+     * @generated from protobuf enum value: Light = 2;
      */
-    RetributionPaladin_Options_Judgement[RetributionPaladin_Options_Judgement["Crusader"] = 2] = "Crusader";
+    RetributionPaladin_Options_Judgement[RetributionPaladin_Options_Judgement["Light"] = 2] = "Light";
 })(RetributionPaladin_Options_Judgement || (RetributionPaladin_Options_Judgement = {}));
 /**
  * @generated from protobuf enum proto.PaladinMajorGlyph
@@ -289,61 +289,88 @@ export var PaladinJudgement;
 class PaladinTalents$Type extends MessageType {
     constructor() {
         super("proto.PaladinTalents", [
-            { no: 1, name: "divine_strength", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 2, name: "divine_intellect", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 3, name: "improved_seal_of_righteousness", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 34, name: "illumination", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 4, name: "improved_blessing_of_wisdom", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 5, name: "divine_favor", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 6, name: "purifying_power", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 7, name: "holy_power", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 8, name: "holy_shock", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 51, name: "blessed_life", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 9, name: "holy_guidance", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 10, name: "divine_illumination", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 35, name: "improved_devotion_aura", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 36, name: "redoubt", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 11, name: "precision", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 37, name: "toughness", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 12, name: "blessing_of_kings", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 38, name: "improved_righteous_fury", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 39, name: "shield_specialization", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 40, name: "anticipation", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 41, name: "spell_warding", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 42, name: "blessing_of_sanctuary", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 13, name: "reckoning", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 14, name: "sacred_duty", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 15, name: "one_handed_weapon_specialization", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 43, name: "improved_holy_shield", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 44, name: "holy_shield", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 45, name: "ardent_defender", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 16, name: "combat_expertise", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 17, name: "avengers_shield", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 18, name: "improved_blessing_of_might", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 19, name: "benediction", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 20, name: "improved_judgement", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 21, name: "improved_seal_of_the_crusader", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 46, name: "deflection", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 22, name: "vindication", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 23, name: "conviction", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 24, name: "seal_of_command", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 47, name: "pursuit_of_justice", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 48, name: "eye_for_an_eye", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 49, name: "improved_retribution_aura", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 25, name: "crusade", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 26, name: "two_handed_weapon_specialization", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 27, name: "sanctity_aura", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 28, name: "improved_sanctity_aura", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 29, name: "vengeance", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 30, name: "sanctified_judgement", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 31, name: "sanctified_seals", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 50, name: "divine_purpose", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 32, name: "fanaticism", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 33, name: "crusader_strike", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 1, name: "spiritual_focus", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 2, name: "seals_of_the_pure", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 3, name: "healing_light", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 4, name: "divine_intellect", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 5, name: "unyielding_faith", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 6, name: "aura_mastery", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 7, name: "illumination", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 8, name: "improved_lay_on_hands", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 9, name: "improved_concentration_aura", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 10, name: "improved_blessing_of_wisdom", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 11, name: "blessed_hands", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 12, name: "pure_of_heart", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 13, name: "divine_favor", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 14, name: "sanctified_light", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 15, name: "purifying_power", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 16, name: "holy_power", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 17, name: "lights_grace", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 18, name: "holy_shock", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 19, name: "blessed_life", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 20, name: "sacred_cleansing", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 21, name: "holy_guidance", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 22, name: "divine_illumination", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 23, name: "judgements_of_the_pure", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 24, name: "infusion_of_light", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 25, name: "enlightened_judgements", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 26, name: "beacon_of_light", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 27, name: "divinity", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 28, name: "divine_strength", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 29, name: "stoicism", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 30, name: "guardians_favor", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 31, name: "anticipation", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 32, name: "divine_sacrifice", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 33, name: "improved_righteous_fury", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 34, name: "toughness", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 35, name: "divine_guardian", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 36, name: "improved_hammer_of_justice", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 37, name: "improved_devotion_aura", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 38, name: "blessing_of_sanctuary", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 39, name: "reckoning", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 40, name: "sacred_duty", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 41, name: "one_handed_weapon_specialization", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 42, name: "spiritual_attunement", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 43, name: "holy_shield", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 44, name: "ardent_defender", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 45, name: "redoubt", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 46, name: "combat_expertise", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 47, name: "touched_by_the_light", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 48, name: "avengers_shield", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 49, name: "guarded_by_the_light", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 50, name: "shield_of_the_templar", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 51, name: "judgements_of_the_just", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 52, name: "hammer_of_the_righteous", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 53, name: "deflection", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 54, name: "benediction", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 55, name: "improved_judgements", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 56, name: "heart_of_the_crusader", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 57, name: "improved_blessing_of_might", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 58, name: "vindication", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 59, name: "conviction", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 60, name: "seal_of_command", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 61, name: "pursuit_of_justice", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 62, name: "eye_for_an_eye", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 63, name: "sanctity_of_battle", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 64, name: "crusade", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 65, name: "two_handed_weapon_specialization", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 66, name: "sanctified_retribution", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 67, name: "vengeance", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 68, name: "divine_purpose", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 69, name: "the_art_of_war", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 70, name: "repentance", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 71, name: "judgements_of_the_wise", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 72, name: "fanaticism", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 73, name: "sanctified_wrath", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 74, name: "swift_retribution", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 75, name: "crusader_strike", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 76, name: "sheath_of_light", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 77, name: "righteous_vengeance", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 78, name: "divine_storm", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { divineStrength: 0, divineIntellect: 0, improvedSealOfRighteousness: 0, illumination: 0, improvedBlessingOfWisdom: 0, divineFavor: false, purifyingPower: 0, holyPower: 0, holyShock: false, blessedLife: 0, holyGuidance: 0, divineIllumination: false, improvedDevotionAura: 0, redoubt: 0, precision: 0, toughness: 0, blessingOfKings: false, improvedRighteousFury: 0, shieldSpecialization: 0, anticipation: 0, spellWarding: 0, blessingOfSanctuary: false, reckoning: 0, sacredDuty: 0, oneHandedWeaponSpecialization: 0, improvedHolyShield: 0, holyShield: false, ardentDefender: 0, combatExpertise: 0, avengersShield: false, improvedBlessingOfMight: 0, benediction: 0, improvedJudgement: 0, improvedSealOfTheCrusader: 0, deflection: 0, vindication: 0, conviction: 0, sealOfCommand: false, pursuitOfJustice: 0, eyeForAnEye: 0, improvedRetributionAura: 0, crusade: 0, twoHandedWeaponSpecialization: 0, sanctityAura: false, improvedSanctityAura: 0, vengeance: 0, sanctifiedJudgement: 0, sanctifiedSeals: 0, divinePurpose: 0, fanaticism: 0, crusaderStrike: false };
+        const message = { spiritualFocus: 0, sealsOfThePure: 0, healingLight: 0, divineIntellect: 0, unyieldingFaith: 0, auraMastery: false, illumination: 0, improvedLayOnHands: 0, improvedConcentrationAura: 0, improvedBlessingOfWisdom: 0, blessedHands: 0, pureOfHeart: 0, divineFavor: false, sanctifiedLight: 0, purifyingPower: 0, holyPower: 0, lightsGrace: 0, holyShock: false, blessedLife: 0, sacredCleansing: 0, holyGuidance: 0, divineIllumination: false, judgementsOfThePure: 0, infusionOfLight: 0, enlightenedJudgements: 0, beaconOfLight: false, divinity: 0, divineStrength: 0, stoicism: 0, guardiansFavor: 0, anticipation: 0, divineSacrifice: false, improvedRighteousFury: 0, toughness: 0, divineGuardian: 0, improvedHammerOfJustice: 0, improvedDevotionAura: 0, blessingOfSanctuary: false, reckoning: 0, sacredDuty: 0, oneHandedWeaponSpecialization: 0, spiritualAttunement: 0, holyShield: false, ardentDefender: 0, redoubt: 0, combatExpertise: 0, touchedByTheLight: 0, avengersShield: false, guardedByTheLight: 0, shieldOfTheTemplar: 0, judgementsOfTheJust: 0, hammerOfTheRighteous: false, deflection: 0, benediction: 0, improvedJudgements: 0, heartOfTheCrusader: 0, improvedBlessingOfMight: 0, vindication: 0, conviction: 0, sealOfCommand: false, pursuitOfJustice: 0, eyeForAnEye: 0, sanctityOfBattle: 0, crusade: 0, twoHandedWeaponSpecialization: 0, sanctifiedRetribution: false, vengeance: 0, divinePurpose: 0, theArtOfWar: 0, repentance: false, judgementsOfTheWise: 0, fanaticism: 0, sanctifiedWrath: 0, swiftRetribution: 0, crusaderStrike: false, sheathOfLight: 0, righteousVengeance: 0, divineStorm: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -354,158 +381,239 @@ class PaladinTalents$Type extends MessageType {
         while (reader.pos < end) {
             let [fieldNo, wireType] = reader.tag();
             switch (fieldNo) {
-                case /* int32 divine_strength */ 1:
-                    message.divineStrength = reader.int32();
+                case /* int32 spiritual_focus */ 1:
+                    message.spiritualFocus = reader.int32();
                     break;
-                case /* int32 divine_intellect */ 2:
+                case /* int32 seals_of_the_pure */ 2:
+                    message.sealsOfThePure = reader.int32();
+                    break;
+                case /* int32 healing_light */ 3:
+                    message.healingLight = reader.int32();
+                    break;
+                case /* int32 divine_intellect */ 4:
                     message.divineIntellect = reader.int32();
                     break;
-                case /* int32 improved_seal_of_righteousness */ 3:
-                    message.improvedSealOfRighteousness = reader.int32();
+                case /* int32 unyielding_faith */ 5:
+                    message.unyieldingFaith = reader.int32();
                     break;
-                case /* int32 illumination */ 34:
+                case /* bool aura_mastery */ 6:
+                    message.auraMastery = reader.bool();
+                    break;
+                case /* int32 illumination */ 7:
                     message.illumination = reader.int32();
                     break;
-                case /* int32 improved_blessing_of_wisdom */ 4:
+                case /* int32 improved_lay_on_hands */ 8:
+                    message.improvedLayOnHands = reader.int32();
+                    break;
+                case /* int32 improved_concentration_aura */ 9:
+                    message.improvedConcentrationAura = reader.int32();
+                    break;
+                case /* int32 improved_blessing_of_wisdom */ 10:
                     message.improvedBlessingOfWisdom = reader.int32();
                     break;
-                case /* bool divine_favor */ 5:
+                case /* int32 blessed_hands */ 11:
+                    message.blessedHands = reader.int32();
+                    break;
+                case /* int32 pure_of_heart */ 12:
+                    message.pureOfHeart = reader.int32();
+                    break;
+                case /* bool divine_favor */ 13:
                     message.divineFavor = reader.bool();
                     break;
-                case /* int32 purifying_power */ 6:
+                case /* int32 sanctified_light */ 14:
+                    message.sanctifiedLight = reader.int32();
+                    break;
+                case /* int32 purifying_power */ 15:
                     message.purifyingPower = reader.int32();
                     break;
-                case /* int32 holy_power */ 7:
+                case /* int32 holy_power */ 16:
                     message.holyPower = reader.int32();
                     break;
-                case /* bool holy_shock */ 8:
+                case /* int32 lights_grace */ 17:
+                    message.lightsGrace = reader.int32();
+                    break;
+                case /* bool holy_shock */ 18:
                     message.holyShock = reader.bool();
                     break;
-                case /* int32 blessed_life */ 51:
+                case /* int32 blessed_life */ 19:
                     message.blessedLife = reader.int32();
                     break;
-                case /* int32 holy_guidance */ 9:
+                case /* int32 sacred_cleansing */ 20:
+                    message.sacredCleansing = reader.int32();
+                    break;
+                case /* int32 holy_guidance */ 21:
                     message.holyGuidance = reader.int32();
                     break;
-                case /* bool divine_illumination */ 10:
+                case /* bool divine_illumination */ 22:
                     message.divineIllumination = reader.bool();
                     break;
-                case /* int32 improved_devotion_aura */ 35:
-                    message.improvedDevotionAura = reader.int32();
+                case /* int32 judgements_of_the_pure */ 23:
+                    message.judgementsOfThePure = reader.int32();
                     break;
-                case /* int32 redoubt */ 36:
-                    message.redoubt = reader.int32();
+                case /* int32 infusion_of_light */ 24:
+                    message.infusionOfLight = reader.int32();
                     break;
-                case /* int32 precision */ 11:
-                    message.precision = reader.int32();
+                case /* int32 enlightened_judgements */ 25:
+                    message.enlightenedJudgements = reader.int32();
                     break;
-                case /* int32 toughness */ 37:
-                    message.toughness = reader.int32();
+                case /* bool beacon_of_light */ 26:
+                    message.beaconOfLight = reader.bool();
                     break;
-                case /* bool blessing_of_kings */ 12:
-                    message.blessingOfKings = reader.bool();
+                case /* int32 divinity */ 27:
+                    message.divinity = reader.int32();
                     break;
-                case /* int32 improved_righteous_fury */ 38:
-                    message.improvedRighteousFury = reader.int32();
+                case /* int32 divine_strength */ 28:
+                    message.divineStrength = reader.int32();
                     break;
-                case /* int32 shield_specialization */ 39:
-                    message.shieldSpecialization = reader.int32();
+                case /* int32 stoicism */ 29:
+                    message.stoicism = reader.int32();
                     break;
-                case /* int32 anticipation */ 40:
+                case /* int32 guardians_favor */ 30:
+                    message.guardiansFavor = reader.int32();
+                    break;
+                case /* int32 anticipation */ 31:
                     message.anticipation = reader.int32();
                     break;
-                case /* int32 spell_warding */ 41:
-                    message.spellWarding = reader.int32();
+                case /* bool divine_sacrifice */ 32:
+                    message.divineSacrifice = reader.bool();
                     break;
-                case /* bool blessing_of_sanctuary */ 42:
+                case /* int32 improved_righteous_fury */ 33:
+                    message.improvedRighteousFury = reader.int32();
+                    break;
+                case /* int32 toughness */ 34:
+                    message.toughness = reader.int32();
+                    break;
+                case /* int32 divine_guardian */ 35:
+                    message.divineGuardian = reader.int32();
+                    break;
+                case /* int32 improved_hammer_of_justice */ 36:
+                    message.improvedHammerOfJustice = reader.int32();
+                    break;
+                case /* int32 improved_devotion_aura */ 37:
+                    message.improvedDevotionAura = reader.int32();
+                    break;
+                case /* bool blessing_of_sanctuary */ 38:
                     message.blessingOfSanctuary = reader.bool();
                     break;
-                case /* int32 reckoning */ 13:
+                case /* int32 reckoning */ 39:
                     message.reckoning = reader.int32();
                     break;
-                case /* int32 sacred_duty */ 14:
+                case /* int32 sacred_duty */ 40:
                     message.sacredDuty = reader.int32();
                     break;
-                case /* int32 one_handed_weapon_specialization */ 15:
+                case /* int32 one_handed_weapon_specialization */ 41:
                     message.oneHandedWeaponSpecialization = reader.int32();
                     break;
-                case /* int32 improved_holy_shield */ 43:
-                    message.improvedHolyShield = reader.int32();
+                case /* int32 spiritual_attunement */ 42:
+                    message.spiritualAttunement = reader.int32();
                     break;
-                case /* bool holy_shield */ 44:
+                case /* bool holy_shield */ 43:
                     message.holyShield = reader.bool();
                     break;
-                case /* int32 ardent_defender */ 45:
+                case /* int32 ardent_defender */ 44:
                     message.ardentDefender = reader.int32();
                     break;
-                case /* int32 combat_expertise */ 16:
+                case /* int32 redoubt */ 45:
+                    message.redoubt = reader.int32();
+                    break;
+                case /* int32 combat_expertise */ 46:
                     message.combatExpertise = reader.int32();
                     break;
-                case /* bool avengers_shield */ 17:
+                case /* int32 touched_by_the_light */ 47:
+                    message.touchedByTheLight = reader.int32();
+                    break;
+                case /* bool avengers_shield */ 48:
                     message.avengersShield = reader.bool();
                     break;
-                case /* int32 improved_blessing_of_might */ 18:
-                    message.improvedBlessingOfMight = reader.int32();
+                case /* int32 guarded_by_the_light */ 49:
+                    message.guardedByTheLight = reader.int32();
                     break;
-                case /* int32 benediction */ 19:
-                    message.benediction = reader.int32();
+                case /* int32 shield_of_the_templar */ 50:
+                    message.shieldOfTheTemplar = reader.int32();
                     break;
-                case /* int32 improved_judgement */ 20:
-                    message.improvedJudgement = reader.int32();
+                case /* int32 judgements_of_the_just */ 51:
+                    message.judgementsOfTheJust = reader.int32();
                     break;
-                case /* int32 improved_seal_of_the_crusader */ 21:
-                    message.improvedSealOfTheCrusader = reader.int32();
+                case /* bool hammer_of_the_righteous */ 52:
+                    message.hammerOfTheRighteous = reader.bool();
                     break;
-                case /* int32 deflection */ 46:
+                case /* int32 deflection */ 53:
                     message.deflection = reader.int32();
                     break;
-                case /* int32 vindication */ 22:
+                case /* int32 benediction */ 54:
+                    message.benediction = reader.int32();
+                    break;
+                case /* int32 improved_judgements */ 55:
+                    message.improvedJudgements = reader.int32();
+                    break;
+                case /* int32 heart_of_the_crusader */ 56:
+                    message.heartOfTheCrusader = reader.int32();
+                    break;
+                case /* int32 improved_blessing_of_might */ 57:
+                    message.improvedBlessingOfMight = reader.int32();
+                    break;
+                case /* int32 vindication */ 58:
                     message.vindication = reader.int32();
                     break;
-                case /* int32 conviction */ 23:
+                case /* int32 conviction */ 59:
                     message.conviction = reader.int32();
                     break;
-                case /* bool seal_of_command */ 24:
+                case /* bool seal_of_command */ 60:
                     message.sealOfCommand = reader.bool();
                     break;
-                case /* int32 pursuit_of_justice */ 47:
+                case /* int32 pursuit_of_justice */ 61:
                     message.pursuitOfJustice = reader.int32();
                     break;
-                case /* int32 eye_for_an_eye */ 48:
+                case /* int32 eye_for_an_eye */ 62:
                     message.eyeForAnEye = reader.int32();
                     break;
-                case /* int32 improved_retribution_aura */ 49:
-                    message.improvedRetributionAura = reader.int32();
+                case /* int32 sanctity_of_battle */ 63:
+                    message.sanctityOfBattle = reader.int32();
                     break;
-                case /* int32 crusade */ 25:
+                case /* int32 crusade */ 64:
                     message.crusade = reader.int32();
                     break;
-                case /* int32 two_handed_weapon_specialization */ 26:
+                case /* int32 two_handed_weapon_specialization */ 65:
                     message.twoHandedWeaponSpecialization = reader.int32();
                     break;
-                case /* bool sanctity_aura */ 27:
-                    message.sanctityAura = reader.bool();
+                case /* bool sanctified_retribution */ 66:
+                    message.sanctifiedRetribution = reader.bool();
                     break;
-                case /* int32 improved_sanctity_aura */ 28:
-                    message.improvedSanctityAura = reader.int32();
-                    break;
-                case /* int32 vengeance */ 29:
+                case /* int32 vengeance */ 67:
                     message.vengeance = reader.int32();
                     break;
-                case /* int32 sanctified_judgement */ 30:
-                    message.sanctifiedJudgement = reader.int32();
-                    break;
-                case /* int32 sanctified_seals */ 31:
-                    message.sanctifiedSeals = reader.int32();
-                    break;
-                case /* int32 divine_purpose */ 50:
+                case /* int32 divine_purpose */ 68:
                     message.divinePurpose = reader.int32();
                     break;
-                case /* int32 fanaticism */ 32:
+                case /* int32 the_art_of_war */ 69:
+                    message.theArtOfWar = reader.int32();
+                    break;
+                case /* bool repentance */ 70:
+                    message.repentance = reader.bool();
+                    break;
+                case /* int32 judgements_of_the_wise */ 71:
+                    message.judgementsOfTheWise = reader.int32();
+                    break;
+                case /* int32 fanaticism */ 72:
                     message.fanaticism = reader.int32();
                     break;
-                case /* bool crusader_strike */ 33:
+                case /* int32 sanctified_wrath */ 73:
+                    message.sanctifiedWrath = reader.int32();
+                    break;
+                case /* int32 swift_retribution */ 74:
+                    message.swiftRetribution = reader.int32();
+                    break;
+                case /* bool crusader_strike */ 75:
                     message.crusaderStrike = reader.bool();
+                    break;
+                case /* int32 sheath_of_light */ 76:
+                    message.sheathOfLight = reader.int32();
+                    break;
+                case /* int32 righteous_vengeance */ 77:
+                    message.righteousVengeance = reader.int32();
+                    break;
+                case /* bool divine_storm */ 78:
+                    message.divineStorm = reader.bool();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -519,159 +627,240 @@ class PaladinTalents$Type extends MessageType {
         return message;
     }
     internalBinaryWrite(message, writer, options) {
-        /* int32 divine_strength = 1; */
-        if (message.divineStrength !== 0)
-            writer.tag(1, WireType.Varint).int32(message.divineStrength);
-        /* int32 divine_intellect = 2; */
+        /* int32 spiritual_focus = 1; */
+        if (message.spiritualFocus !== 0)
+            writer.tag(1, WireType.Varint).int32(message.spiritualFocus);
+        /* int32 seals_of_the_pure = 2; */
+        if (message.sealsOfThePure !== 0)
+            writer.tag(2, WireType.Varint).int32(message.sealsOfThePure);
+        /* int32 healing_light = 3; */
+        if (message.healingLight !== 0)
+            writer.tag(3, WireType.Varint).int32(message.healingLight);
+        /* int32 divine_intellect = 4; */
         if (message.divineIntellect !== 0)
-            writer.tag(2, WireType.Varint).int32(message.divineIntellect);
-        /* int32 improved_seal_of_righteousness = 3; */
-        if (message.improvedSealOfRighteousness !== 0)
-            writer.tag(3, WireType.Varint).int32(message.improvedSealOfRighteousness);
-        /* int32 illumination = 34; */
+            writer.tag(4, WireType.Varint).int32(message.divineIntellect);
+        /* int32 unyielding_faith = 5; */
+        if (message.unyieldingFaith !== 0)
+            writer.tag(5, WireType.Varint).int32(message.unyieldingFaith);
+        /* bool aura_mastery = 6; */
+        if (message.auraMastery !== false)
+            writer.tag(6, WireType.Varint).bool(message.auraMastery);
+        /* int32 illumination = 7; */
         if (message.illumination !== 0)
-            writer.tag(34, WireType.Varint).int32(message.illumination);
-        /* int32 improved_blessing_of_wisdom = 4; */
+            writer.tag(7, WireType.Varint).int32(message.illumination);
+        /* int32 improved_lay_on_hands = 8; */
+        if (message.improvedLayOnHands !== 0)
+            writer.tag(8, WireType.Varint).int32(message.improvedLayOnHands);
+        /* int32 improved_concentration_aura = 9; */
+        if (message.improvedConcentrationAura !== 0)
+            writer.tag(9, WireType.Varint).int32(message.improvedConcentrationAura);
+        /* int32 improved_blessing_of_wisdom = 10; */
         if (message.improvedBlessingOfWisdom !== 0)
-            writer.tag(4, WireType.Varint).int32(message.improvedBlessingOfWisdom);
-        /* bool divine_favor = 5; */
+            writer.tag(10, WireType.Varint).int32(message.improvedBlessingOfWisdom);
+        /* int32 blessed_hands = 11; */
+        if (message.blessedHands !== 0)
+            writer.tag(11, WireType.Varint).int32(message.blessedHands);
+        /* int32 pure_of_heart = 12; */
+        if (message.pureOfHeart !== 0)
+            writer.tag(12, WireType.Varint).int32(message.pureOfHeart);
+        /* bool divine_favor = 13; */
         if (message.divineFavor !== false)
-            writer.tag(5, WireType.Varint).bool(message.divineFavor);
-        /* int32 purifying_power = 6; */
+            writer.tag(13, WireType.Varint).bool(message.divineFavor);
+        /* int32 sanctified_light = 14; */
+        if (message.sanctifiedLight !== 0)
+            writer.tag(14, WireType.Varint).int32(message.sanctifiedLight);
+        /* int32 purifying_power = 15; */
         if (message.purifyingPower !== 0)
-            writer.tag(6, WireType.Varint).int32(message.purifyingPower);
-        /* int32 holy_power = 7; */
+            writer.tag(15, WireType.Varint).int32(message.purifyingPower);
+        /* int32 holy_power = 16; */
         if (message.holyPower !== 0)
-            writer.tag(7, WireType.Varint).int32(message.holyPower);
-        /* bool holy_shock = 8; */
+            writer.tag(16, WireType.Varint).int32(message.holyPower);
+        /* int32 lights_grace = 17; */
+        if (message.lightsGrace !== 0)
+            writer.tag(17, WireType.Varint).int32(message.lightsGrace);
+        /* bool holy_shock = 18; */
         if (message.holyShock !== false)
-            writer.tag(8, WireType.Varint).bool(message.holyShock);
-        /* int32 blessed_life = 51; */
+            writer.tag(18, WireType.Varint).bool(message.holyShock);
+        /* int32 blessed_life = 19; */
         if (message.blessedLife !== 0)
-            writer.tag(51, WireType.Varint).int32(message.blessedLife);
-        /* int32 holy_guidance = 9; */
+            writer.tag(19, WireType.Varint).int32(message.blessedLife);
+        /* int32 sacred_cleansing = 20; */
+        if (message.sacredCleansing !== 0)
+            writer.tag(20, WireType.Varint).int32(message.sacredCleansing);
+        /* int32 holy_guidance = 21; */
         if (message.holyGuidance !== 0)
-            writer.tag(9, WireType.Varint).int32(message.holyGuidance);
-        /* bool divine_illumination = 10; */
+            writer.tag(21, WireType.Varint).int32(message.holyGuidance);
+        /* bool divine_illumination = 22; */
         if (message.divineIllumination !== false)
-            writer.tag(10, WireType.Varint).bool(message.divineIllumination);
-        /* int32 improved_devotion_aura = 35; */
-        if (message.improvedDevotionAura !== 0)
-            writer.tag(35, WireType.Varint).int32(message.improvedDevotionAura);
-        /* int32 redoubt = 36; */
-        if (message.redoubt !== 0)
-            writer.tag(36, WireType.Varint).int32(message.redoubt);
-        /* int32 precision = 11; */
-        if (message.precision !== 0)
-            writer.tag(11, WireType.Varint).int32(message.precision);
-        /* int32 toughness = 37; */
-        if (message.toughness !== 0)
-            writer.tag(37, WireType.Varint).int32(message.toughness);
-        /* bool blessing_of_kings = 12; */
-        if (message.blessingOfKings !== false)
-            writer.tag(12, WireType.Varint).bool(message.blessingOfKings);
-        /* int32 improved_righteous_fury = 38; */
-        if (message.improvedRighteousFury !== 0)
-            writer.tag(38, WireType.Varint).int32(message.improvedRighteousFury);
-        /* int32 shield_specialization = 39; */
-        if (message.shieldSpecialization !== 0)
-            writer.tag(39, WireType.Varint).int32(message.shieldSpecialization);
-        /* int32 anticipation = 40; */
+            writer.tag(22, WireType.Varint).bool(message.divineIllumination);
+        /* int32 judgements_of_the_pure = 23; */
+        if (message.judgementsOfThePure !== 0)
+            writer.tag(23, WireType.Varint).int32(message.judgementsOfThePure);
+        /* int32 infusion_of_light = 24; */
+        if (message.infusionOfLight !== 0)
+            writer.tag(24, WireType.Varint).int32(message.infusionOfLight);
+        /* int32 enlightened_judgements = 25; */
+        if (message.enlightenedJudgements !== 0)
+            writer.tag(25, WireType.Varint).int32(message.enlightenedJudgements);
+        /* bool beacon_of_light = 26; */
+        if (message.beaconOfLight !== false)
+            writer.tag(26, WireType.Varint).bool(message.beaconOfLight);
+        /* int32 divinity = 27; */
+        if (message.divinity !== 0)
+            writer.tag(27, WireType.Varint).int32(message.divinity);
+        /* int32 divine_strength = 28; */
+        if (message.divineStrength !== 0)
+            writer.tag(28, WireType.Varint).int32(message.divineStrength);
+        /* int32 stoicism = 29; */
+        if (message.stoicism !== 0)
+            writer.tag(29, WireType.Varint).int32(message.stoicism);
+        /* int32 guardians_favor = 30; */
+        if (message.guardiansFavor !== 0)
+            writer.tag(30, WireType.Varint).int32(message.guardiansFavor);
+        /* int32 anticipation = 31; */
         if (message.anticipation !== 0)
-            writer.tag(40, WireType.Varint).int32(message.anticipation);
-        /* int32 spell_warding = 41; */
-        if (message.spellWarding !== 0)
-            writer.tag(41, WireType.Varint).int32(message.spellWarding);
-        /* bool blessing_of_sanctuary = 42; */
+            writer.tag(31, WireType.Varint).int32(message.anticipation);
+        /* bool divine_sacrifice = 32; */
+        if (message.divineSacrifice !== false)
+            writer.tag(32, WireType.Varint).bool(message.divineSacrifice);
+        /* int32 improved_righteous_fury = 33; */
+        if (message.improvedRighteousFury !== 0)
+            writer.tag(33, WireType.Varint).int32(message.improvedRighteousFury);
+        /* int32 toughness = 34; */
+        if (message.toughness !== 0)
+            writer.tag(34, WireType.Varint).int32(message.toughness);
+        /* int32 divine_guardian = 35; */
+        if (message.divineGuardian !== 0)
+            writer.tag(35, WireType.Varint).int32(message.divineGuardian);
+        /* int32 improved_hammer_of_justice = 36; */
+        if (message.improvedHammerOfJustice !== 0)
+            writer.tag(36, WireType.Varint).int32(message.improvedHammerOfJustice);
+        /* int32 improved_devotion_aura = 37; */
+        if (message.improvedDevotionAura !== 0)
+            writer.tag(37, WireType.Varint).int32(message.improvedDevotionAura);
+        /* bool blessing_of_sanctuary = 38; */
         if (message.blessingOfSanctuary !== false)
-            writer.tag(42, WireType.Varint).bool(message.blessingOfSanctuary);
-        /* int32 reckoning = 13; */
+            writer.tag(38, WireType.Varint).bool(message.blessingOfSanctuary);
+        /* int32 reckoning = 39; */
         if (message.reckoning !== 0)
-            writer.tag(13, WireType.Varint).int32(message.reckoning);
-        /* int32 sacred_duty = 14; */
+            writer.tag(39, WireType.Varint).int32(message.reckoning);
+        /* int32 sacred_duty = 40; */
         if (message.sacredDuty !== 0)
-            writer.tag(14, WireType.Varint).int32(message.sacredDuty);
-        /* int32 one_handed_weapon_specialization = 15; */
+            writer.tag(40, WireType.Varint).int32(message.sacredDuty);
+        /* int32 one_handed_weapon_specialization = 41; */
         if (message.oneHandedWeaponSpecialization !== 0)
-            writer.tag(15, WireType.Varint).int32(message.oneHandedWeaponSpecialization);
-        /* int32 improved_holy_shield = 43; */
-        if (message.improvedHolyShield !== 0)
-            writer.tag(43, WireType.Varint).int32(message.improvedHolyShield);
-        /* bool holy_shield = 44; */
+            writer.tag(41, WireType.Varint).int32(message.oneHandedWeaponSpecialization);
+        /* int32 spiritual_attunement = 42; */
+        if (message.spiritualAttunement !== 0)
+            writer.tag(42, WireType.Varint).int32(message.spiritualAttunement);
+        /* bool holy_shield = 43; */
         if (message.holyShield !== false)
-            writer.tag(44, WireType.Varint).bool(message.holyShield);
-        /* int32 ardent_defender = 45; */
+            writer.tag(43, WireType.Varint).bool(message.holyShield);
+        /* int32 ardent_defender = 44; */
         if (message.ardentDefender !== 0)
-            writer.tag(45, WireType.Varint).int32(message.ardentDefender);
-        /* int32 combat_expertise = 16; */
+            writer.tag(44, WireType.Varint).int32(message.ardentDefender);
+        /* int32 redoubt = 45; */
+        if (message.redoubt !== 0)
+            writer.tag(45, WireType.Varint).int32(message.redoubt);
+        /* int32 combat_expertise = 46; */
         if (message.combatExpertise !== 0)
-            writer.tag(16, WireType.Varint).int32(message.combatExpertise);
-        /* bool avengers_shield = 17; */
+            writer.tag(46, WireType.Varint).int32(message.combatExpertise);
+        /* int32 touched_by_the_light = 47; */
+        if (message.touchedByTheLight !== 0)
+            writer.tag(47, WireType.Varint).int32(message.touchedByTheLight);
+        /* bool avengers_shield = 48; */
         if (message.avengersShield !== false)
-            writer.tag(17, WireType.Varint).bool(message.avengersShield);
-        /* int32 improved_blessing_of_might = 18; */
-        if (message.improvedBlessingOfMight !== 0)
-            writer.tag(18, WireType.Varint).int32(message.improvedBlessingOfMight);
-        /* int32 benediction = 19; */
-        if (message.benediction !== 0)
-            writer.tag(19, WireType.Varint).int32(message.benediction);
-        /* int32 improved_judgement = 20; */
-        if (message.improvedJudgement !== 0)
-            writer.tag(20, WireType.Varint).int32(message.improvedJudgement);
-        /* int32 improved_seal_of_the_crusader = 21; */
-        if (message.improvedSealOfTheCrusader !== 0)
-            writer.tag(21, WireType.Varint).int32(message.improvedSealOfTheCrusader);
-        /* int32 deflection = 46; */
+            writer.tag(48, WireType.Varint).bool(message.avengersShield);
+        /* int32 guarded_by_the_light = 49; */
+        if (message.guardedByTheLight !== 0)
+            writer.tag(49, WireType.Varint).int32(message.guardedByTheLight);
+        /* int32 shield_of_the_templar = 50; */
+        if (message.shieldOfTheTemplar !== 0)
+            writer.tag(50, WireType.Varint).int32(message.shieldOfTheTemplar);
+        /* int32 judgements_of_the_just = 51; */
+        if (message.judgementsOfTheJust !== 0)
+            writer.tag(51, WireType.Varint).int32(message.judgementsOfTheJust);
+        /* bool hammer_of_the_righteous = 52; */
+        if (message.hammerOfTheRighteous !== false)
+            writer.tag(52, WireType.Varint).bool(message.hammerOfTheRighteous);
+        /* int32 deflection = 53; */
         if (message.deflection !== 0)
-            writer.tag(46, WireType.Varint).int32(message.deflection);
-        /* int32 vindication = 22; */
+            writer.tag(53, WireType.Varint).int32(message.deflection);
+        /* int32 benediction = 54; */
+        if (message.benediction !== 0)
+            writer.tag(54, WireType.Varint).int32(message.benediction);
+        /* int32 improved_judgements = 55; */
+        if (message.improvedJudgements !== 0)
+            writer.tag(55, WireType.Varint).int32(message.improvedJudgements);
+        /* int32 heart_of_the_crusader = 56; */
+        if (message.heartOfTheCrusader !== 0)
+            writer.tag(56, WireType.Varint).int32(message.heartOfTheCrusader);
+        /* int32 improved_blessing_of_might = 57; */
+        if (message.improvedBlessingOfMight !== 0)
+            writer.tag(57, WireType.Varint).int32(message.improvedBlessingOfMight);
+        /* int32 vindication = 58; */
         if (message.vindication !== 0)
-            writer.tag(22, WireType.Varint).int32(message.vindication);
-        /* int32 conviction = 23; */
+            writer.tag(58, WireType.Varint).int32(message.vindication);
+        /* int32 conviction = 59; */
         if (message.conviction !== 0)
-            writer.tag(23, WireType.Varint).int32(message.conviction);
-        /* bool seal_of_command = 24; */
+            writer.tag(59, WireType.Varint).int32(message.conviction);
+        /* bool seal_of_command = 60; */
         if (message.sealOfCommand !== false)
-            writer.tag(24, WireType.Varint).bool(message.sealOfCommand);
-        /* int32 pursuit_of_justice = 47; */
+            writer.tag(60, WireType.Varint).bool(message.sealOfCommand);
+        /* int32 pursuit_of_justice = 61; */
         if (message.pursuitOfJustice !== 0)
-            writer.tag(47, WireType.Varint).int32(message.pursuitOfJustice);
-        /* int32 eye_for_an_eye = 48; */
+            writer.tag(61, WireType.Varint).int32(message.pursuitOfJustice);
+        /* int32 eye_for_an_eye = 62; */
         if (message.eyeForAnEye !== 0)
-            writer.tag(48, WireType.Varint).int32(message.eyeForAnEye);
-        /* int32 improved_retribution_aura = 49; */
-        if (message.improvedRetributionAura !== 0)
-            writer.tag(49, WireType.Varint).int32(message.improvedRetributionAura);
-        /* int32 crusade = 25; */
+            writer.tag(62, WireType.Varint).int32(message.eyeForAnEye);
+        /* int32 sanctity_of_battle = 63; */
+        if (message.sanctityOfBattle !== 0)
+            writer.tag(63, WireType.Varint).int32(message.sanctityOfBattle);
+        /* int32 crusade = 64; */
         if (message.crusade !== 0)
-            writer.tag(25, WireType.Varint).int32(message.crusade);
-        /* int32 two_handed_weapon_specialization = 26; */
+            writer.tag(64, WireType.Varint).int32(message.crusade);
+        /* int32 two_handed_weapon_specialization = 65; */
         if (message.twoHandedWeaponSpecialization !== 0)
-            writer.tag(26, WireType.Varint).int32(message.twoHandedWeaponSpecialization);
-        /* bool sanctity_aura = 27; */
-        if (message.sanctityAura !== false)
-            writer.tag(27, WireType.Varint).bool(message.sanctityAura);
-        /* int32 improved_sanctity_aura = 28; */
-        if (message.improvedSanctityAura !== 0)
-            writer.tag(28, WireType.Varint).int32(message.improvedSanctityAura);
-        /* int32 vengeance = 29; */
+            writer.tag(65, WireType.Varint).int32(message.twoHandedWeaponSpecialization);
+        /* bool sanctified_retribution = 66; */
+        if (message.sanctifiedRetribution !== false)
+            writer.tag(66, WireType.Varint).bool(message.sanctifiedRetribution);
+        /* int32 vengeance = 67; */
         if (message.vengeance !== 0)
-            writer.tag(29, WireType.Varint).int32(message.vengeance);
-        /* int32 sanctified_judgement = 30; */
-        if (message.sanctifiedJudgement !== 0)
-            writer.tag(30, WireType.Varint).int32(message.sanctifiedJudgement);
-        /* int32 sanctified_seals = 31; */
-        if (message.sanctifiedSeals !== 0)
-            writer.tag(31, WireType.Varint).int32(message.sanctifiedSeals);
-        /* int32 divine_purpose = 50; */
+            writer.tag(67, WireType.Varint).int32(message.vengeance);
+        /* int32 divine_purpose = 68; */
         if (message.divinePurpose !== 0)
-            writer.tag(50, WireType.Varint).int32(message.divinePurpose);
-        /* int32 fanaticism = 32; */
+            writer.tag(68, WireType.Varint).int32(message.divinePurpose);
+        /* int32 the_art_of_war = 69; */
+        if (message.theArtOfWar !== 0)
+            writer.tag(69, WireType.Varint).int32(message.theArtOfWar);
+        /* bool repentance = 70; */
+        if (message.repentance !== false)
+            writer.tag(70, WireType.Varint).bool(message.repentance);
+        /* int32 judgements_of_the_wise = 71; */
+        if (message.judgementsOfTheWise !== 0)
+            writer.tag(71, WireType.Varint).int32(message.judgementsOfTheWise);
+        /* int32 fanaticism = 72; */
         if (message.fanaticism !== 0)
-            writer.tag(32, WireType.Varint).int32(message.fanaticism);
-        /* bool crusader_strike = 33; */
+            writer.tag(72, WireType.Varint).int32(message.fanaticism);
+        /* int32 sanctified_wrath = 73; */
+        if (message.sanctifiedWrath !== 0)
+            writer.tag(73, WireType.Varint).int32(message.sanctifiedWrath);
+        /* int32 swift_retribution = 74; */
+        if (message.swiftRetribution !== 0)
+            writer.tag(74, WireType.Varint).int32(message.swiftRetribution);
+        /* bool crusader_strike = 75; */
         if (message.crusaderStrike !== false)
-            writer.tag(33, WireType.Varint).bool(message.crusaderStrike);
+            writer.tag(75, WireType.Varint).bool(message.crusaderStrike);
+        /* int32 sheath_of_light = 76; */
+        if (message.sheathOfLight !== 0)
+            writer.tag(76, WireType.Varint).int32(message.sheathOfLight);
+        /* int32 righteous_vengeance = 77; */
+        if (message.righteousVengeance !== 0)
+            writer.tag(77, WireType.Varint).int32(message.righteousVengeance);
+        /* bool divine_storm = 78; */
+        if (message.divineStorm !== false)
+            writer.tag(78, WireType.Varint).bool(message.divineStorm);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
@@ -803,13 +992,11 @@ class RetributionPaladin_Options$Type extends MessageType {
         super("proto.RetributionPaladin.Options", [
             { no: 1, name: "judgement", kind: "enum", T: () => ["proto.RetributionPaladin.Options.Judgement", RetributionPaladin_Options_Judgement] },
             { no: 5, name: "aura", kind: "enum", T: () => ["proto.PaladinAura", PaladinAura] },
-            { no: 2, name: "crusader_strike_delay_ms", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 3, name: "haste_leeway_ms", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 4, name: "damage_taken_per_second", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ }
         ]);
     }
     create(value) {
-        const message = { judgement: 0, aura: 0, crusaderStrikeDelayMs: 0, hasteLeewayMs: 0, damageTakenPerSecond: 0 };
+        const message = { judgement: 0, aura: 0, damageTakenPerSecond: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -825,12 +1012,6 @@ class RetributionPaladin_Options$Type extends MessageType {
                     break;
                 case /* proto.PaladinAura aura */ 5:
                     message.aura = reader.int32();
-                    break;
-                case /* int32 crusader_strike_delay_ms */ 2:
-                    message.crusaderStrikeDelayMs = reader.int32();
-                    break;
-                case /* int32 haste_leeway_ms */ 3:
-                    message.hasteLeewayMs = reader.int32();
                     break;
                 case /* double damage_taken_per_second */ 4:
                     message.damageTakenPerSecond = reader.double();
@@ -853,12 +1034,6 @@ class RetributionPaladin_Options$Type extends MessageType {
         /* proto.PaladinAura aura = 5; */
         if (message.aura !== 0)
             writer.tag(5, WireType.Varint).int32(message.aura);
-        /* int32 crusader_strike_delay_ms = 2; */
-        if (message.crusaderStrikeDelayMs !== 0)
-            writer.tag(2, WireType.Varint).int32(message.crusaderStrikeDelayMs);
-        /* int32 haste_leeway_ms = 3; */
-        if (message.hasteLeewayMs !== 0)
-            writer.tag(3, WireType.Varint).int32(message.hasteLeewayMs);
         /* double damage_taken_per_second = 4; */
         if (message.damageTakenPerSecond !== 0)
             writer.tag(4, WireType.Bit64).double(message.damageTakenPerSecond);

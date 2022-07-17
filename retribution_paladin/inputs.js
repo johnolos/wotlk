@@ -74,8 +74,7 @@ export const JudgementSelection = {
     getModObject: (simUI) => simUI.player,
     config: {
         label: 'Judgement',
-        labelTooltip: 'Judgement debuff you will use on the target during the encounter. \
-		If Improved Seal of the Crusader is talented, the Improved Judgement of the Crusader debuff will be applied.',
+        labelTooltip: 'Judgement debuff you will use on the target during the encounter.',
         values: [
             {
                 name: 'None', value: Judgement.None,
@@ -84,7 +83,7 @@ export const JudgementSelection = {
                 name: 'Judgement of Wisdom', value: Judgement.Wisdom,
             },
             {
-                name: 'Judgement of the Crusader', value: Judgement.Crusader,
+                name: 'Judgement of Light', value: Judgement.Light,
             },
         ],
         changedEvent: (player) => player.specOptionsChangeEmitter,
@@ -92,21 +91,6 @@ export const JudgementSelection = {
         setValue: (eventID, player, newValue) => {
             const newOptions = player.getSpecOptions();
             newOptions.judgement = newValue;
-            player.setSpecOptions(eventID, newOptions);
-        },
-    },
-};
-export const CrusaderStrikeDelayMS = {
-    type: 'number', cssClass: 'cs-delay-picker',
-    getModObject: (simUI) => simUI.player,
-    config: {
-        label: 'Crusader Strike Delay (MS)',
-        labelTooltip: 'Maximum time (in miliseconds) Crusader Strike will be delayed in order to seal twist. Experiment with values between 0 - 3000 miliseconds.',
-        changedEvent: (player) => player.specOptionsChangeEmitter,
-        getValue: (player) => player.getSpecOptions().crusaderStrikeDelayMs,
-        setValue: (eventID, player, newValue) => {
-            const newOptions = player.getSpecOptions();
-            newOptions.crusaderStrikeDelayMs = newValue;
             player.setSpecOptions(eventID, newOptions);
         },
     },

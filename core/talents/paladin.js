@@ -6,61 +6,70 @@ export const paladinTalentsConfig = newTalentsConfig([
         backgroundUrl: 'https://wow.zamimg.com/images/wow/talents/backgrounds/classic/382.jpg',
         talents: [
             {
-                fieldName: 'divineStrength',
+                fieldName: 'spiritualFocus',
                 location: {
                     rowIdx: 0,
-                    colIdx: 1,
-                },
-                spellIds: [20262],
-                maxPoints: 5,
-            },
-            {
-                fieldName: 'divineIntellect',
-                location: {
-                    rowIdx: 0,
-                    colIdx: 2,
-                },
-                spellIds: [20257],
-                maxPoints: 5,
-            },
-            {
-                //fieldName: 'spiritualFocus',
-                location: {
-                    rowIdx: 1,
                     colIdx: 1,
                 },
                 spellIds: [20205],
                 maxPoints: 5,
             },
             {
-                fieldName: 'improvedSealOfRighteousness',
+                fieldName: 'sealsOfThePure',
                 location: {
-                    rowIdx: 1,
+                    rowIdx: 0,
                     colIdx: 2,
                 },
                 spellIds: [20224, 20225, 20330],
                 maxPoints: 5,
             },
             {
-                //fieldName: 'healingLight',
+                fieldName: 'healingLight',
                 location: {
-                    rowIdx: 2,
+                    rowIdx: 1,
                     colIdx: 0,
                 },
                 spellIds: [20237],
                 maxPoints: 3,
             },
             {
-                //fieldName: 'auraMastery',
+                fieldName: 'divineIntellect',
+                location: {
+                    rowIdx: 1,
+                    colIdx: 1,
+                },
+                spellIds: [20257],
+                maxPoints: 5,
+            },
+            {
+                fieldName: 'unyieldingFaith',
+                location: {
+                    rowIdx: 1,
+                    colIdx: 2,
+                },
+                spellIds: [9453, 25836],
+                maxPoints: 2,
+            },
+            {
+                fieldName: 'auraMastery',
                 location: {
                     rowIdx: 2,
-                    colIdx: 1,
+                    colIdx: 0,
                 },
                 spellIds: [31821],
                 maxPoints: 1,
             },
             {
-                //fieldName: 'improvedLayOnHands',
+                fieldName: 'illumination',
+                location: {
+                    rowIdx: 2,
+                    colIdx: 1,
+                },
+                spellIds: [20210, 20212],
+                maxPoints: 5,
+            },
+            {
+                fieldName: 'improvedLayOnHands',
                 location: {
                     rowIdx: 2,
                     colIdx: 2,
@@ -69,22 +78,13 @@ export const paladinTalentsConfig = newTalentsConfig([
                 maxPoints: 2,
             },
             {
-                //fieldName: 'unyieldingFaith',
-                location: {
-                    rowIdx: 2,
-                    colIdx: 3,
-                },
-                spellIds: [9453, 25836],
-                maxPoints: 2,
-            },
-            {
-                fieldName: 'illumination',
+                fieldName: 'improvedConcentrationAura',
                 location: {
                     rowIdx: 3,
-                    colIdx: 1,
+                    colIdx: 0,
                 },
-                spellIds: [20210, 20212],
-                maxPoints: 5,
+                spellIds: [20254],
+                maxPoints: 3,
             },
             {
                 fieldName: 'improvedBlessingOfWisdom',
@@ -96,13 +96,22 @@ export const paladinTalentsConfig = newTalentsConfig([
                 maxPoints: 2,
             },
             {
-                //fieldName: 'pureOfHeart',
+                fieldName: 'blessedHands',
+                location: {
+                    rowIdx: 3,
+                    colIdx: 3,
+                },
+                spellIds: [53660],
+                maxPoints: 2,
+            },
+            {
+                fieldName: 'pureOfHeart',
                 location: {
                     rowIdx: 4,
                     colIdx: 0,
                 },
                 spellIds: [31822],
-                maxPoints: 3,
+                maxPoints: 2,
             },
             {
                 fieldName: 'divineFavor',
@@ -111,14 +120,14 @@ export const paladinTalentsConfig = newTalentsConfig([
                     colIdx: 1,
                 },
                 prereqLocation: {
-                    rowIdx: 3,
+                    rowIdx: 2,
                     colIdx: 1,
                 },
                 spellIds: [20216],
                 maxPoints: 1,
             },
             {
-                //fieldName: 'sanctifiedLight',
+                fieldName: 'sanctifiedLight',
                 location: {
                     rowIdx: 4,
                     colIdx: 2,
@@ -145,7 +154,7 @@ export const paladinTalentsConfig = newTalentsConfig([
                 maxPoints: 5,
             },
             {
-                //fieldName: 'lightsGrace',
+                fieldName: 'lightsGrace',
                 location: {
                     rowIdx: 6,
                     colIdx: 0,
@@ -176,10 +185,19 @@ export const paladinTalentsConfig = newTalentsConfig([
                 maxPoints: 3,
             },
             {
+                fieldName: 'sacredCleansing',
+                location: {
+                    rowIdx: 7,
+                    colIdx: 0,
+                },
+                spellIds: [53551],
+                maxPoints: 3,
+            },
+            {
                 fieldName: 'holyGuidance',
                 location: {
                     rowIdx: 7,
-                    colIdx: 1,
+                    colIdx: 2,
                 },
                 spellIds: [31837],
                 maxPoints: 5,
@@ -188,9 +206,49 @@ export const paladinTalentsConfig = newTalentsConfig([
                 fieldName: 'divineIllumination',
                 location: {
                     rowIdx: 8,
-                    colIdx: 1,
+                    colIdx: 0,
                 },
                 spellIds: [31842],
+                maxPoints: 1,
+            },
+            {
+                fieldName: 'judgementsOfThePure',
+                location: {
+                    rowIdx: 8,
+                    colIdx: 2,
+                },
+                spellIds: [53671, 53673, 54151, 54154, 54155],
+                maxPoints: 5,
+            },
+            {
+                fieldName: 'infusionOfLight',
+                location: {
+                    rowIdx: 9,
+                    colIdx: 1,
+                },
+                prereqLocation: {
+                    rowIdx: 6,
+                    colIdx: 1,
+                },
+                spellIds: [53569, 53576],
+                maxPoints: 2,
+            },
+            {
+                fieldName: 'enlightenedJudgements',
+                location: {
+                    rowIdx: 9,
+                    colIdx: 2,
+                },
+                spellIds: [53556],
+                maxPoints: 2,
+            },
+            {
+                fieldName: 'beaconOfLight',
+                location: {
+                    rowIdx: 10,
+                    colIdx: 1,
+                },
+                spellIds: [53563],
                 maxPoints: 1,
             },
         ],
@@ -200,34 +258,34 @@ export const paladinTalentsConfig = newTalentsConfig([
         backgroundUrl: 'https://wow.zamimg.com/images/wow/talents/backgrounds/classic/383.jpg',
         talents: [
             {
-                fieldName: 'improvedDevotionAura',
+                fieldName: 'divinity',
                 location: {
                     rowIdx: 0,
                     colIdx: 1,
                 },
-                spellIds: [20138],
+                spellIds: [63646],
                 maxPoints: 5,
             },
             {
-                fieldName: 'redoubt',
+                fieldName: 'divineStrength',
                 location: {
                     rowIdx: 0,
                     colIdx: 2,
                 },
-                spellIds: [20127, 20130, 20135],
+                spellIds: [20262],
                 maxPoints: 5,
             },
             {
-                fieldName: 'precision',
+                fieldName: 'stoicism',
                 location: {
                     rowIdx: 1,
                     colIdx: 0,
                 },
-                spellIds: [20189, 20192],
+                spellIds: [31844, 31845, 53519],
                 maxPoints: 3,
             },
             {
-                //fieldName: 'guardiansFavor',
+                fieldName: 'guardiansFavor',
                 location: {
                     rowIdx: 1,
                     colIdx: 1,
@@ -236,21 +294,21 @@ export const paladinTalentsConfig = newTalentsConfig([
                 maxPoints: 2,
             },
             {
-                fieldName: 'toughness',
+                fieldName: 'anticipation',
                 location: {
                     rowIdx: 1,
-                    colIdx: 3,
+                    colIdx: 2,
                 },
-                spellIds: [20143],
+                spellIds: [20096],
                 maxPoints: 5,
             },
             {
-                fieldName: 'blessingOfKings',
+                fieldName: 'divineSacrifice',
                 location: {
                     rowIdx: 2,
                     colIdx: 0,
                 },
-                spellIds: [20217],
+                spellIds: [64205],
                 maxPoints: 1,
             },
             {
@@ -263,62 +321,44 @@ export const paladinTalentsConfig = newTalentsConfig([
                 maxPoints: 3,
             },
             {
-                fieldName: 'shieldSpecialization',
+                fieldName: 'toughness',
                 location: {
                     rowIdx: 2,
                     colIdx: 2,
                 },
-                prereqLocation: {
-                    rowIdx: 0,
-                    colIdx: 2,
-                },
-                spellIds: [20148],
-                maxPoints: 3,
-            },
-            {
-                fieldName: 'anticipation',
-                location: {
-                    rowIdx: 2,
-                    colIdx: 3,
-                },
-                spellIds: [20096],
+                spellIds: [20143],
                 maxPoints: 5,
             },
             {
-                //fieldName: 'stoicism',
+                fieldName: 'divineGuardian',
                 location: {
                     rowIdx: 3,
                     colIdx: 0,
                 },
-                spellIds: [31844],
+                prereqLocation: {
+                    rowIdx: 2,
+                    colIdx: 0,
+                },
+                spellIds: [53527, 53530],
                 maxPoints: 2,
             },
             {
-                //fieldName: 'improvedHammerOfJustice',
+                fieldName: 'improvedHammerOfJustice',
                 location: {
                     rowIdx: 3,
                     colIdx: 1,
                 },
                 spellIds: [20487],
-                maxPoints: 3,
+                maxPoints: 2,
             },
             {
-                //fieldName: 'improvedConcentrationAura',
+                fieldName: 'improvedDevotionAura',
                 location: {
                     rowIdx: 3,
                     colIdx: 2,
                 },
-                spellIds: [20254],
+                spellIds: [20138],
                 maxPoints: 3,
-            },
-            {
-                fieldName: 'spellWarding',
-                location: {
-                    rowIdx: 4,
-                    colIdx: 0,
-                },
-                spellIds: [31846],
-                maxPoints: 2,
             },
             {
                 fieldName: 'blessingOfSanctuary',
@@ -354,19 +394,15 @@ export const paladinTalentsConfig = newTalentsConfig([
                     colIdx: 2,
                 },
                 spellIds: [20196],
-                maxPoints: 5,
+                maxPoints: 3,
             },
             {
-                fieldName: 'improvedHolyShield',
+                fieldName: 'spiritualAttunement',
                 location: {
                     rowIdx: 6,
                     colIdx: 0,
                 },
-                prereqLocation: {
-                    rowIdx: 6,
-                    colIdx: 1,
-                },
-                spellIds: [41021, 41026],
+                spellIds: [31785, 33776],
                 maxPoints: 2,
             },
             {
@@ -389,7 +425,16 @@ export const paladinTalentsConfig = newTalentsConfig([
                     colIdx: 2,
                 },
                 spellIds: [31850],
-                maxPoints: 5,
+                maxPoints: 3,
+            },
+            {
+                fieldName: 'redoubt',
+                location: {
+                    rowIdx: 7,
+                    colIdx: 0,
+                },
+                spellIds: [20127, 20130, 20135],
+                maxPoints: 3,
             },
             {
                 fieldName: 'combatExpertise',
@@ -398,7 +443,16 @@ export const paladinTalentsConfig = newTalentsConfig([
                     colIdx: 2,
                 },
                 spellIds: [31858],
-                maxPoints: 5,
+                maxPoints: 3,
+            },
+            {
+                fieldName: 'touchedByTheLight',
+                location: {
+                    rowIdx: 8,
+                    colIdx: 0,
+                },
+                spellIds: [53590],
+                maxPoints: 3,
             },
             {
                 fieldName: 'avengersShield',
@@ -413,6 +467,46 @@ export const paladinTalentsConfig = newTalentsConfig([
                 spellIds: [31935],
                 maxPoints: 1,
             },
+            {
+                fieldName: 'guardedByTheLight',
+                location: {
+                    rowIdx: 8,
+                    colIdx: 2,
+                },
+                spellIds: [53583, 53585],
+                maxPoints: 2,
+            },
+            {
+                fieldName: 'shieldOfTheTemplar',
+                location: {
+                    rowIdx: 9,
+                    colIdx: 1,
+                },
+                prereqLocation: {
+                    rowIdx: 8,
+                    colIdx: 2,
+                },
+                spellIds: [53709],
+                maxPoints: 3,
+            },
+            {
+                fieldName: 'judgementsOfTheJust',
+                location: {
+                    rowIdx: 9,
+                    colIdx: 2,
+                },
+                spellIds: [53695],
+                maxPoints: 2,
+            },
+            {
+                fieldName: 'hammerOfTheRighteous',
+                location: {
+                    rowIdx: 10,
+                    colIdx: 1,
+                },
+                spellIds: [53595],
+                maxPoints: 1,
+            },
         ],
     },
     {
@@ -420,12 +514,12 @@ export const paladinTalentsConfig = newTalentsConfig([
         backgroundUrl: 'https://wow.zamimg.com/images/wow/talents/backgrounds/classic/381.jpg',
         talents: [
             {
-                fieldName: 'improvedBlessingOfMight',
+                fieldName: 'deflection',
                 location: {
                     rowIdx: 0,
                     colIdx: 1,
                 },
-                spellIds: [20042, 20045],
+                spellIds: [20060],
                 maxPoints: 5,
             },
             {
@@ -438,7 +532,7 @@ export const paladinTalentsConfig = newTalentsConfig([
                 maxPoints: 5,
             },
             {
-                fieldName: 'improvedJudgement',
+                fieldName: 'improvedJudgements',
                 location: {
                     rowIdx: 1,
                     colIdx: 0,
@@ -447,7 +541,7 @@ export const paladinTalentsConfig = newTalentsConfig([
                 maxPoints: 2,
             },
             {
-                fieldName: 'improvedSealOfTheCrusader',
+                fieldName: 'heartOfTheCrusader',
                 location: {
                     rowIdx: 1,
                     colIdx: 1,
@@ -456,13 +550,13 @@ export const paladinTalentsConfig = newTalentsConfig([
                 maxPoints: 3,
             },
             {
-                fieldName: 'deflection',
+                fieldName: 'improvedBlessingOfMight',
                 location: {
                     rowIdx: 1,
                     colIdx: 2,
                 },
-                spellIds: [20060],
-                maxPoints: 5,
+                spellIds: [20042, 20045],
+                maxPoints: 2,
             },
             {
                 fieldName: 'vindication',
@@ -470,8 +564,8 @@ export const paladinTalentsConfig = newTalentsConfig([
                     rowIdx: 2,
                     colIdx: 0,
                 },
-                spellIds: [9452, 26016, 26021],
-                maxPoints: 3,
+                spellIds: [9452, 26016],
+                maxPoints: 2,
             },
             {
                 fieldName: 'conviction',
@@ -497,8 +591,8 @@ export const paladinTalentsConfig = newTalentsConfig([
                     rowIdx: 2,
                     colIdx: 3,
                 },
-                spellIds: [26022, 26023, 44414],
-                maxPoints: 3,
+                spellIds: [26022],
+                maxPoints: 2,
             },
             {
                 fieldName: 'eyeForAnEye',
@@ -510,13 +604,13 @@ export const paladinTalentsConfig = newTalentsConfig([
                 maxPoints: 2,
             },
             {
-                fieldName: 'improvedRetributionAura',
+                fieldName: 'sanctityOfBattle',
                 location: {
                     rowIdx: 3,
                     colIdx: 2,
                 },
-                spellIds: [20091],
-                maxPoints: 2,
+                spellIds: [32043, 35396, 35397],
+                maxPoints: 3,
             },
             {
                 fieldName: 'crusade',
@@ -537,26 +631,13 @@ export const paladinTalentsConfig = newTalentsConfig([
                 maxPoints: 3,
             },
             {
-                fieldName: 'sanctityAura',
+                fieldName: 'sanctifiedRetribution',
                 location: {
-                    rowIdx: 4,
-                    colIdx: 2,
-                },
-                spellIds: [20218],
-                maxPoints: 1,
-            },
-            {
-                fieldName: 'improvedSanctityAura',
-                location: {
-                    rowIdx: 4,
-                    colIdx: 3,
-                },
-                prereqLocation: {
                     rowIdx: 4,
                     colIdx: 2,
                 },
                 spellIds: [31869],
-                maxPoints: 2,
+                maxPoints: 1,
             },
             {
                 fieldName: 'vengeance',
@@ -564,29 +645,33 @@ export const paladinTalentsConfig = newTalentsConfig([
                     rowIdx: 5,
                     colIdx: 1,
                 },
-                spellIds: [20049, 20056],
-                maxPoints: 5,
+                prereqLocation: {
+                    rowIdx: 2,
+                    colIdx: 1,
+                },
+                spellIds: [20049, 20056, 20057],
+                maxPoints: 3,
             },
             {
-                fieldName: 'sanctifiedJudgement',
+                fieldName: 'divinePurpose',
                 location: {
                     rowIdx: 5,
                     colIdx: 2,
                 },
-                spellIds: [31876],
-                maxPoints: 3,
+                spellIds: [31871],
+                maxPoints: 2,
             },
             {
-                fieldName: 'sanctifiedSeals',
+                fieldName: 'theArtOfWar',
                 location: {
                     rowIdx: 6,
                     colIdx: 0,
                 },
-                spellIds: [32043, 35396],
-                maxPoints: 3,
+                spellIds: [53486, 53488],
+                maxPoints: 2,
             },
             {
-                //fieldName: 'repentance',
+                fieldName: 'repentance',
                 location: {
                     rowIdx: 6,
                     colIdx: 1,
@@ -595,12 +680,12 @@ export const paladinTalentsConfig = newTalentsConfig([
                 maxPoints: 1,
             },
             {
-                fieldName: 'divinePurpose',
+                fieldName: 'judgementsOfTheWise',
                 location: {
                     rowIdx: 6,
                     colIdx: 2,
                 },
-                spellIds: [31871],
+                spellIds: [31876],
                 maxPoints: 3,
             },
             {
@@ -614,7 +699,25 @@ export const paladinTalentsConfig = newTalentsConfig([
                     colIdx: 1,
                 },
                 spellIds: [31879],
-                maxPoints: 5,
+                maxPoints: 3,
+            },
+            {
+                fieldName: 'sanctifiedWrath',
+                location: {
+                    rowIdx: 7,
+                    colIdx: 2,
+                },
+                spellIds: [53375],
+                maxPoints: 2,
+            },
+            {
+                fieldName: 'swiftRetribution',
+                location: {
+                    rowIdx: 8,
+                    colIdx: 0,
+                },
+                spellIds: [53379, 53484, 53648],
+                maxPoints: 3,
             },
             {
                 fieldName: 'crusaderStrike',
@@ -623,6 +726,33 @@ export const paladinTalentsConfig = newTalentsConfig([
                     colIdx: 1,
                 },
                 spellIds: [35395],
+                maxPoints: 1,
+            },
+            {
+                fieldName: 'sheathOfLight',
+                location: {
+                    rowIdx: 8,
+                    colIdx: 2,
+                },
+                spellIds: [53501],
+                maxPoints: 3,
+            },
+            {
+                fieldName: 'righteousVengeance',
+                location: {
+                    rowIdx: 9,
+                    colIdx: 1,
+                },
+                spellIds: [53380],
+                maxPoints: 3,
+            },
+            {
+                fieldName: 'divineStorm',
+                location: {
+                    rowIdx: 10,
+                    colIdx: 1,
+                },
+                spellIds: [53385],
                 maxPoints: 1,
             },
         ],
