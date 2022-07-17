@@ -460,10 +460,6 @@ export interface Debuffs {
      */
     curseOfWeakness: TristateEffect;
     /**
-     * @generated from protobuf field: proto.TristateEffect hunters_mark = 20;
-     */
-    huntersMark: TristateEffect;
-    /**
      * @generated from protobuf field: proto.TristateEffect demoralizing_roar = 22;
      */
     demoralizingRoar: TristateEffect;

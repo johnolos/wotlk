@@ -94,7 +94,6 @@ export class DeathKnightSimUI extends IndividualSimUI {
                     faerieFire: TristateEffect.TristateEffectImproved,
                     judgementOfWisdom: true,
                     misery: true,
-                    huntersMark: TristateEffect.TristateEffectImproved,
                 }),
             },
             // IconInputs to include in the 'Self Buffs' section on the settings tab.
@@ -122,7 +121,6 @@ export class DeathKnightSimUI extends IndividualSimUI {
             debuffInputs: [
                 IconInputs.BloodFrenzy,
                 IconInputs.JudgementOfWisdom,
-                IconInputs.HuntersMark,
                 IconInputs.FaerieFire,
                 IconInputs.SunderArmor,
                 IconInputs.ExposeArmor,

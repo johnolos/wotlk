@@ -114,7 +114,6 @@ export class ProtectionWarriorSimUI extends IndividualSimUI {
                     mangle: true,
                     curseOfWeakness: TristateEffect.TristateEffectRegular,
                     faerieFire: TristateEffect.TristateEffectImproved,
-                    huntersMark: TristateEffect.TristateEffectImproved,
                 }),
             },
             // IconInputs to include in the 'Self Buffs' section on the settings tab.
@@ -155,7 +154,6 @@ export class ProtectionWarriorSimUI extends IndividualSimUI {
                 IconInputs.Mangle,
                 IconInputs.JudgementOfLight,
                 IconInputs.JudgementOfWisdom,
-                IconInputs.HuntersMark,
                 IconInputs.FaerieFire,
                 IconInputs.SunderArmor,
                 IconInputs.ExposeArmor,

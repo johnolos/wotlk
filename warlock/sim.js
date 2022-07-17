@@ -144,7 +144,6 @@ export class WarlockSimUI extends IndividualSimUI {
                 IconInputs.ExposeArmor,
                 IconInputs.SunderArmor,
                 IconInputs.BloodFrenzy,
-                IconInputs.HuntersMark,
                 IconInputs.FaerieFire,
                 IconInputs.CurseOfWeakness,
             ],

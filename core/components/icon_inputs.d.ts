@@ -1,4 +1,3 @@
-import { ActionId } from '/wotlk/core/proto_utils/action_id.js';
 import { Alchohol } from '/wotlk/core/proto/common.js';
 import { BattleElixir } from '/wotlk/core/proto/common.js';
 import { Explosive } from '/wotlk/core/proto/common.js';
@@ -8,13 +7,11 @@ import { GuardianElixir } from '/wotlk/core/proto/common.js';
 import { Conjured } from '/wotlk/core/proto/common.js';
 import { PetFood } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
-import { TristateEffect } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
 import { IndividualSimIconPickerConfig } from '/wotlk/core/individual_sim_ui.js';
 import { Party } from '/wotlk/core/party.js';
 import { Player } from '/wotlk/core/player.js';
 import { Raid } from '/wotlk/core/raid.js';
-import { EventID, TypedEvent } from '/wotlk/core/typed_event.js';
 import { IconEnumPickerConfig } from './icon_enum_picker.js';
 export declare const AbominationsMight: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const IcyTalons: IndividualSimIconPickerConfig<Raid, boolean>;
@@ -46,6 +43,7 @@ export declare const StrengthOfEarthTotem: IndividualSimIconPickerConfig<Raid, n
 export declare const WindfuryTotem: IndividualSimIconPickerConfig<Raid, number>;
 export declare const ImprovedIcyTalons: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const SwiftRetribution: IndividualSimIconPickerConfig<Raid, boolean>;
+export declare const BattleShout: IndividualSimIconPickerConfig<Raid, number>;
 export declare const AtieshMage: IndividualSimIconPickerConfig<Party, number>;
 export declare const AtieshWarlock: IndividualSimIconPickerConfig<Party, number>;
 export declare const BraidedEterniumChain: IndividualSimIconPickerConfig<Party, boolean>;
@@ -62,7 +60,6 @@ export declare const PowerInfusion: IndividualSimIconPickerConfig<Player<any>, n
 export declare const Replenishment: IndividualSimIconPickerConfig<Player<any>, boolean>;
 export declare const BloodFrenzy: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const SavageCombat: IndividualSimIconPickerConfig<Raid, boolean>;
-export declare const HuntersMark: IndividualSimIconPickerConfig<Raid, number>;
 export declare const ImprovedShadowbolt: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const ImprovedScorch: IndividualSimIconPickerConfig<Raid, boolean>;
 export declare const WintersChill: IndividualSimIconPickerConfig<Raid, boolean>;
@@ -96,15 +93,6 @@ export declare const ScrollOfStrengthV: IndividualSimIconPickerConfig<Player<any
 export declare const ScrollOfProtectionV: IndividualSimIconPickerConfig<Player<any>, boolean>;
 export declare const PetScrollOfAgilityV: IndividualSimIconPickerConfig<Player<any>, boolean>;
 export declare const PetScrollOfStrengthV: IndividualSimIconPickerConfig<Player<any>, boolean>;
-export declare const BattleShout: {
-    id: ActionId;
-    states: number;
-    improvedId: ActionId;
-    improvedId2: ActionId;
-    changedEvent: (raid: Raid) => TypedEvent<void>;
-    getValue: (raid: Raid) => TristateEffect;
-    setValue: (eventID: EventID, raid: Raid, newValue: number) => void;
-};
 export declare const makePotionsInput: (options: Potions[]) => IconEnumPickerConfig<Player<any>, Potions>;
 export declare const makeConjuredInput: (options: Conjured[]) => IconEnumPickerConfig<Player<any>, Conjured>;
 export declare const makeFlasksInput: (options: Flask[]) => IconEnumPickerConfig<Player<any>, Flask>;

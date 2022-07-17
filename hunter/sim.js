@@ -156,7 +156,6 @@ export class HunterSimUI extends IndividualSimUI {
             debuffInputs: [
                 IconInputs.BloodFrenzy,
                 IconInputs.JudgementOfWisdom,
-                IconInputs.HuntersMark,
                 IconInputs.FaerieFire,
                 IconInputs.SunderArmor,
                 IconInputs.ExposeArmor,

@@ -32,8 +32,8 @@ export function newIndividualImporters(simUI) {
         menuElem.appendChild(itemElem);
     };
     addMenuItem('Json', () => new IndividualJsonImporter(menuElem, simUI), true);
-    addMenuItem('70U', () => new Individual70UImporter(menuElem, simUI), true);
-    addMenuItem('Addon', () => new IndividualAddonImporter(menuElem, simUI), true);
+    addMenuItem('80U', () => new Individual80UImporter(menuElem, simUI), true);
+    //addMenuItem('Addon', () => new IndividualAddonImporter(menuElem, simUI), true);
     return importSettings;
 }
 export class Importer extends Popup {
@@ -149,13 +149,13 @@ class IndividualJsonImporter extends Importer {
         this.close();
     }
 }
-class Individual70UImporter extends Importer {
+class Individual80UImporter extends Importer {
     constructor(parent, simUI) {
-        super(parent, '70 Upgrades Import', true);
+        super(parent, '80 Upgrades Import', true);
         this.simUI = simUI;
         this.descriptionElem.innerHTML = `
 			<p>
-				Import settings from <a href="https://seventyupgrades.com" target="_blank">Seventy Upgrades</a>.
+				Import settings from <a href="https://eightyupgrades.com" target="_blank">Eighty Upgrades</a>.
 			</p>
 			<p>
 				This feature imports gear, race, and (optionally) talents. It does NOT import buffs, debuffs, consumes, rotation, or custom stats.

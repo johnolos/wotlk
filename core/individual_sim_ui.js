@@ -23,6 +23,7 @@ import { IndividualSimSettings } from '/wotlk/core/proto/ui.js';
 import { LogRunner } from '/wotlk/core/components/log_runner.js';
 import { NumberPicker } from '/wotlk/core/components/number_picker.js';
 import { PartyBuffs } from '/wotlk/core/proto/common.js';
+import { Potions } from '/wotlk/core/proto/common.js';
 import { Profession } from '/wotlk/core/proto/common.js';
 import { RaidBuffs } from '/wotlk/core/proto/common.js';
 import { SavedDataManager } from '/wotlk/core/components/saved_data_manager.js';
@@ -33,6 +34,7 @@ import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { SettingsMenu } from '/wotlk/core/components/settings_menu.js';
 import { ShattrathFaction } from '/wotlk/core/proto/common.js';
 import { SimUI } from './sim_ui.js';
+import { Stat } from '/wotlk/core/proto/common.js';
 import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { shattFactionNames } from '/wotlk/core/proto_utils/names.js';
 import { addRaidSimAction } from '/wotlk/core/components/raid_sim_action.js';
@@ -434,8 +436,15 @@ export class IndividualSimUI extends SimUI {
         const debuffsSection = this.rootElem.getElementsByClassName('debuffs-section')[0];
         configureIconSection(debuffsSection, this.individualConfig.debuffInputs.map(iconInput => new IndividualSimIconPicker(debuffsSection, this.sim.raid, iconInput, this)), Tooltips.DEBUFFS_SECTION);
         if (this.individualConfig.consumeOptions?.potions.length) {
+            const options = [
+                { stats: [Stat.StatStamina], item: Potions.RunicHealingPotion },
+                { stats: [Stat.StatIntellect], item: Potions.RunicManaPotion },
+                { stats: [Stat.StatArmor], item: Potions.IndestructiblePotion },
+                { stats: [Stat.StatMeleeHaste, Stat.StatSpellHaste], item: Potions.PotionOfSpeed },
+                { stats: [Stat.StatMeleeCrit, Stat.StatSpellCrit, Stat.StatSpellPower], item: Potions.PotionOfWildMagic },
+            ];
             const elem = this.rootElem.getElementsByClassName('consumes-potions')[0];
-            new IconEnumPicker(elem, this.player, IconInputs.makePotionsInput(this.individualConfig.consumeOptions.potions));
+            new IconEnumPicker(elem, this.player, IconInputs.makePotionsInput(this.splitRelevantOptions(options)));
         }
         if (this.individualConfig.consumeOptions?.conjured.length) {
             const elem = this.rootElem.getElementsByClassName('consumes-conjured')[0];
@@ -886,5 +895,10 @@ export class IndividualSimUI extends SimUI {
             }
             this.sim.encounter.fromProto(eventID, settings.encounter || EncounterProto.create());
         });
+    }
+    splitRelevantOptions(options) {
+        return options
+            .filter(option => option.stats.some(stat => this.individualConfig.epStats.includes(stat)))
+            .map(option => option.item);
     }
 }

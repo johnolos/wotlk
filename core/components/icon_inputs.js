@@ -14,10 +14,10 @@ import { TypedEvent } from '/wotlk/core/typed_event.js';
 // Raid Buffs
 export const AbominationsMight = makeBooleanRaidBuffInput(ActionId.fromSpellId(53137), 'abominationsMight');
 export const IcyTalons = makeBooleanRaidBuffInput(ActionId.fromSpellId(55610), 'icyTalons');
-export const ArcaneBrilliance = makeBooleanRaidBuffInput(ActionId.fromSpellId(27127), 'arcaneBrilliance');
+export const ArcaneBrilliance = makeBooleanRaidBuffInput(ActionId.fromSpellId(43002), 'arcaneBrilliance');
 export const FelIntelligence = makeBooleanRaidBuffInput(ActionId.fromSpellId(57567), 'felIntelligence');
 export const DivineSpirit = makeBooleanRaidBuffInput(ActionId.fromSpellId(48073), 'divineSpirit');
-export const GiftOfTheWild = makeTristateRaidBuffInput(ActionId.fromSpellId(26991), ActionId.fromSpellId(17051), 'giftOfTheWild');
+export const GiftOfTheWild = makeTristateRaidBuffInput(ActionId.fromSpellId(48470), ActionId.fromSpellId(17051), 'giftOfTheWild');
 export const Thorns = makeTristateRaidBuffInput(ActionId.fromSpellId(26992), ActionId.fromSpellId(16840), 'thorns');
 export const PowerWordFortitude = makeTristateRaidBuffInput(ActionId.fromSpellId(25389), ActionId.fromSpellId(14767), 'powerWordFortitude');
 export const ShadowProtection = makeBooleanRaidBuffInput(ActionId.fromSpellId(39374), 'shadowProtection');
@@ -28,7 +28,7 @@ export const Bloodlust = makeBooleanRaidBuffInput(ActionId.fromSpellId(2825), 'b
 export const CommandingShout = makeTristateRaidBuffInput(ActionId.fromSpellId(469), ActionId.fromSpellId(12861), 'commandingShout');
 export const DevotionAura = makeTristateRaidBuffInput(ActionId.fromSpellId(27149), ActionId.fromSpellId(20142), 'devotionAura');
 export const LeaderOfThePack = makeTristateRaidBuffInput(ActionId.fromSpellId(17007), ActionId.fromItemId(32387), 'leaderOfThePack');
-export const ManaSpringTotem = makeTristateRaidBuffInput(ActionId.fromSpellId(25570), ActionId.fromSpellId(16206), 'manaSpringTotem');
+export const ManaSpringTotem = makeTristateRaidBuffInput(ActionId.fromSpellId(58774), ActionId.fromSpellId(16206), 'manaSpringTotem');
 export const MoonkinAura = makeTristateRaidBuffInput(ActionId.fromSpellId(24907), ActionId.fromSpellId(48396), 'moonkinAura');
 export const ElementalOath = makeBooleanRaidBuffInput(ActionId.fromSpellId(51470), 'elementalOath');
 export const RetributionAura = makeTristateRaidBuffInput(ActionId.fromSpellId(27150), ActionId.fromSpellId(20092), 'retributionAura');
@@ -38,10 +38,11 @@ export const WrathOfAirTotem = makeBooleanRaidBuffInput(ActionId.fromSpellId(373
 export const BloodPact = makeTristateRaidBuffInput(ActionId.fromSpellId(27268), ActionId.fromSpellId(18696), 'bloodPact');
 export const UnleashedRage = makeBooleanRaidBuffInput(ActionId.fromSpellId(30811), 'unleashedRage');
 export const HornOfWinter = makeBooleanRaidBuffInput(ActionId.fromSpellId(57623), 'hornOfWinter');
-export const StrengthOfEarthTotem = makeTristateRaidBuffInput(ActionId.fromSpellId(25528), ActionId.fromSpellId(52456), 'strengthOfEarthTotem');
-export const WindfuryTotem = makeTristateRaidBuffInput(ActionId.fromSpellId(25587), ActionId.fromSpellId(29193), 'windfuryTotem');
+export const StrengthOfEarthTotem = makeTristateRaidBuffInput(ActionId.fromSpellId(58643), ActionId.fromSpellId(52456), 'strengthOfEarthTotem');
+export const WindfuryTotem = makeTristateRaidBuffInput(ActionId.fromSpellId(65990), ActionId.fromSpellId(29193), 'windfuryTotem');
 export const ImprovedIcyTalons = makeBooleanRaidBuffInput(ActionId.fromSpellId(55610), 'icyTalons');
 export const SwiftRetribution = makeBooleanRaidBuffInput(ActionId.fromSpellId(53648), 'swiftRetribution');
+export const BattleShout = makeTristateRaidBuffInput(ActionId.fromSpellId(47436), ActionId.fromSpellId(12861), 'battleShout');
 // Party Buffs
 export const AtieshMage = makeMultistatePartyBuffInput(ActionId.fromSpellId(28142), 5, 'atieshMage');
 export const AtieshWarlock = makeMultistatePartyBuffInput(ActionId.fromSpellId(28143), 5, 'atieshWarlock');
@@ -53,16 +54,15 @@ export const ManaTideTotem = makeMultistatePartyBuffInput(ActionId.fromSpellId(1
 // TODO: drum buff icons
 // Individual Buffs
 export const BlessingOfKings = makeBooleanIndividualBuffInput(ActionId.fromSpellId(25898), 'blessingOfKings');
-export const BlessingOfMight = makeTristateIndividualBuffInput(ActionId.fromSpellId(27140), ActionId.fromSpellId(20048), 'blessingOfMight');
+export const BlessingOfMight = makeTristateIndividualBuffInput(ActionId.fromSpellId(48934), ActionId.fromSpellId(20048), 'blessingOfMight');
 export const BlessingOfSanctuary = makeBooleanIndividualBuffInput(ActionId.fromSpellId(27169), 'blessingOfSanctuary');
-export const BlessingOfWisdom = makeTristateIndividualBuffInput(ActionId.fromSpellId(27143), ActionId.fromSpellId(20245), 'blessingOfWisdom');
+export const BlessingOfWisdom = makeTristateIndividualBuffInput(ActionId.fromSpellId(48938), ActionId.fromSpellId(20245), 'blessingOfWisdom');
 export const Innervate = makeMultistateIndividualBuffInput(ActionId.fromSpellId(29166), 11, 'innervates');
 export const PowerInfusion = makeMultistateIndividualBuffInput(ActionId.fromSpellId(10060), 11, 'powerInfusions');
 export const Replenishment = makeBooleanIndividualBuffInput(ActionId.fromSpellId(57669), 'replenishment');
 // Debuffs
 export const BloodFrenzy = makeBooleanDebuffInput(ActionId.fromSpellId(29859), 'bloodFrenzy');
 export const SavageCombat = makeBooleanDebuffInput(ActionId.fromSpellId(58413), 'savageCombat');
-export const HuntersMark = makeTristateDebuffInput(ActionId.fromSpellId(53338), ActionId.fromSpellId(19423), 'huntersMark');
 export const ImprovedShadowbolt = makeBooleanDebuffInput(ActionId.fromSpellId(17803), 'improvedShadowBolt');
 export const ImprovedScorch = makeBooleanDebuffInput(ActionId.fromSpellId(12873), 'improvedScorch');
 export const WintersChill = makeBooleanDebuffInput(ActionId.fromSpellId(28593), 'wintersChill');
@@ -292,19 +292,6 @@ function makeEnumValueConsumeInput(id, consumesFieldName, enumValue, exclusivity
 //////////////////////////////////////////////////////////////////////
 // Custom buffs that don't fit into any of the helper functions above.
 //////////////////////////////////////////////////////////////////////
-export const BattleShout = {
-    id: ActionId.fromSpellId(2048),
-    states: 3,
-    improvedId: ActionId.fromSpellId(12861),
-    improvedId2: ActionId.fromItemId(30446),
-    changedEvent: (raid) => raid.buffsChangeEmitter,
-    getValue: (raid) => raid.getBuffs().battleShout,
-    setValue: (eventID, raid, newValue) => {
-        const newBuffs = raid.getBuffs();
-        newBuffs.battleShout = newValue;
-        raid.setBuffs(eventID, newBuffs);
-    },
-};
 export const makePotionsInput = makeConsumeInputFactory('defaultPotion', [
     { actionId: ActionId.fromItemId(33447), value: Potions.RunicHealingPotion },
     { actionId: ActionId.fromItemId(33448), value: Potions.RunicManaPotion },

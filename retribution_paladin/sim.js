@@ -117,7 +117,6 @@ export class RetributionPaladinSimUI extends IndividualSimUI {
                     sunderArmor: true,
                     faerieFire: TristateEffect.TristateEffectImproved,
                     curseOfWeakness: TristateEffect.TristateEffectRegular,
-                    huntersMark: TristateEffect.TristateEffectImproved,
                 }),
             },
             // IconInputs to include in the 'Self Buffs' section on the settings tab.
@@ -151,7 +150,6 @@ export class RetributionPaladinSimUI extends IndividualSimUI {
                 IconInputs.ExposeArmor,
                 IconInputs.SunderArmor,
                 IconInputs.BloodFrenzy,
-                IconInputs.HuntersMark,
                 IconInputs.FaerieFire,
                 IconInputs.CurseOfWeakness,
                 IconInputs.CurseOfElements,

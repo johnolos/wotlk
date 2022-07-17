@@ -155,6 +155,7 @@ export declare abstract class IndividualSimUI<SpecType extends Spec> extends Sim
     getStorageKey(keyPart: string): string;
     toProto(): IndividualSimSettings;
     fromProto(eventID: EventID, settings: IndividualSimSettings): void;
+    splitRelevantOptions<T>(options: Array<StatOption<T>>): Array<T>;
 }
 export declare type ExclusivityTag = 'Battle Elixir' | 'Drums' | 'Food' | 'Pet Food' | 'Alchohol' | 'Guardian Elixir' | 'Potion' | 'Conjured' | 'Spirit' | 'MH Weapon Imbue' | 'OH Weapon Imbue';
 export interface ExclusiveEffect {
@@ -162,4 +163,8 @@ export interface ExclusiveEffect {
     changedEvent: TypedEvent<any>;
     isActive: () => boolean;
     deactivate: (eventID: EventID) => void;
+}
+export interface StatOption<T> {
+    stats: Array<Stat>;
+    item: T;
 }

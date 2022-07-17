@@ -89,7 +89,6 @@ export class WarriorSimUI extends IndividualSimUI {
                     sunderArmor: true,
                     curseOfWeakness: TristateEffect.TristateEffectRegular,
                     faerieFire: TristateEffect.TristateEffectImproved,
-                    huntersMark: TristateEffect.TristateEffectImproved,
                 }),
             },
             // IconInputs to include in the 'Self Buffs' section on the settings tab.
@@ -120,7 +119,6 @@ export class WarriorSimUI extends IndividualSimUI {
             debuffInputs: [
                 IconInputs.BloodFrenzy,
                 IconInputs.Mangle,
-                IconInputs.HuntersMark,
                 IconInputs.FaerieFire,
                 IconInputs.SunderArmor,
                 IconInputs.ExposeArmor,

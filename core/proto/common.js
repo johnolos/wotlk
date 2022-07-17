@@ -2247,7 +2247,6 @@ class Debuffs$Type extends MessageType {
             { no: 17, name: "expose_armor", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 18, name: "sunder_armor", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 19, name: "curse_of_weakness", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 20, name: "hunters_mark", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 22, name: "demoralizing_roar", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 23, name: "demoralizing_shout", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 24, name: "thunder_clap", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
@@ -2258,7 +2257,7 @@ class Debuffs$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { judgementOfWisdom: false, judgementOfLight: false, misery: false, faerieFire: 0, curseOfElements: false, ebonPlaguebringer: false, earthAndMoon: false, heartOfTheCrusader: false, masterPoisoner: false, totemOfWrath: false, improvedShadowBolt: false, improvedScorch: false, wintersChill: false, bloodFrenzy: false, savageCombat: false, giftOfArthas: false, mangle: false, exposeArmor: 0, sunderArmor: false, curseOfWeakness: 0, huntersMark: 0, demoralizingRoar: 0, demoralizingShout: 0, thunderClap: 0, insectSwarm: false, scorpidSting: false, shadowEmbrace: false, screech: false };
+        const message = { judgementOfWisdom: false, judgementOfLight: false, misery: false, faerieFire: 0, curseOfElements: false, ebonPlaguebringer: false, earthAndMoon: false, heartOfTheCrusader: false, masterPoisoner: false, totemOfWrath: false, improvedShadowBolt: false, improvedScorch: false, wintersChill: false, bloodFrenzy: false, savageCombat: false, giftOfArthas: false, mangle: false, exposeArmor: 0, sunderArmor: false, curseOfWeakness: 0, demoralizingRoar: 0, demoralizingShout: 0, thunderClap: 0, insectSwarm: false, scorpidSting: false, shadowEmbrace: false, screech: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -2328,9 +2327,6 @@ class Debuffs$Type extends MessageType {
                     break;
                 case /* proto.TristateEffect curse_of_weakness */ 19:
                     message.curseOfWeakness = reader.int32();
-                    break;
-                case /* proto.TristateEffect hunters_mark */ 20:
-                    message.huntersMark = reader.int32();
                     break;
                 case /* proto.TristateEffect demoralizing_roar */ 22:
                     message.demoralizingRoar = reader.int32();
@@ -2425,9 +2421,6 @@ class Debuffs$Type extends MessageType {
         /* proto.TristateEffect curse_of_weakness = 19; */
         if (message.curseOfWeakness !== 0)
             writer.tag(19, WireType.Varint).int32(message.curseOfWeakness);
-        /* proto.TristateEffect hunters_mark = 20; */
-        if (message.huntersMark !== 0)
-            writer.tag(20, WireType.Varint).int32(message.huntersMark);
         /* proto.TristateEffect demoralizing_roar = 22; */
         if (message.demoralizingRoar !== 0)
             writer.tag(22, WireType.Varint).int32(message.demoralizingRoar);
