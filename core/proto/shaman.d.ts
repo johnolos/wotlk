@@ -412,6 +412,10 @@ export interface ElementalShaman_Rotation {
      * @generated from protobuf field: proto.ElementalShaman.Rotation.RotationType type = 1;
      */
     type: ElementalShaman_Rotation_RotationType;
+    /**
+     * @generated from protobuf field: bool in_thunderstorm_range = 2;
+     */
+    inThunderstormRange: boolean;
 }
 /**
  * @generated from protobuf enum proto.ElementalShaman.Rotation.RotationType

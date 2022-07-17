@@ -1055,11 +1055,12 @@ class ElementalShaman_Rotation$Type extends MessageType {
     constructor() {
         super("proto.ElementalShaman.Rotation", [
             { no: 3, name: "totems", kind: "message", T: () => ShamanTotems },
-            { no: 1, name: "type", kind: "enum", T: () => ["proto.ElementalShaman.Rotation.RotationType", ElementalShaman_Rotation_RotationType] }
+            { no: 1, name: "type", kind: "enum", T: () => ["proto.ElementalShaman.Rotation.RotationType", ElementalShaman_Rotation_RotationType] },
+            { no: 2, name: "in_thunderstorm_range", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { type: 0 };
+        const message = { type: 0, inThunderstormRange: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1075,6 +1076,9 @@ class ElementalShaman_Rotation$Type extends MessageType {
                     break;
                 case /* proto.ElementalShaman.Rotation.RotationType type */ 1:
                     message.type = reader.int32();
+                    break;
+                case /* bool in_thunderstorm_range */ 2:
+                    message.inThunderstormRange = reader.bool();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -1094,6 +1098,9 @@ class ElementalShaman_Rotation$Type extends MessageType {
         /* proto.ElementalShaman.Rotation.RotationType type = 1; */
         if (message.type !== 0)
             writer.tag(1, WireType.Varint).int32(message.type);
+        /* bool in_thunderstorm_range = 2; */
+        if (message.inThunderstormRange !== false)
+            writer.tag(2, WireType.Varint).bool(message.inThunderstormRange);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

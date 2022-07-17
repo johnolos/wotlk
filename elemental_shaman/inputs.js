@@ -41,6 +41,23 @@ export const ElementalShamanRotationConfig = {
                 },
             },
         },
+        {
+            type: 'boolean',
+            cssClass: '',
+            getModObject: (simUI) => simUI.player,
+            config: {
+                label: 'In Thunderstorm Range',
+                labelTooltip: 'Thunderstorm will hit all targets when cast. Ignores knockback.',
+                changedEvent: (player) => player.talentsChangeEmitter,
+                getValue: (player) => player.getRotation().inThunderstormRange,
+                setValue: (eventID, player, newValue) => {
+                    const newRotation = player.getRotation();
+                    newRotation.inThunderstormRange = newValue;
+                    player.setRotation(eventID, newRotation);
+                },
+                enableWhen: (player) => player.getTalents().thunderstorm,
+            },
+        }
     ],
 };
 function makeBooleanShamanBuffInput(id, optionsFieldName) {
