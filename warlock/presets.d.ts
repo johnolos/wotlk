@@ -2,15 +2,15 @@ import { Consumes } from '/wotlk/core/proto/common.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { Warlock_Rotation as WarlockRotation, Warlock_Options as WarlockOptions } from '/wotlk/core/proto/warlock.js';
-export declare const DestructionTalents: {
-    name: string;
-    data: SavedTalents;
-};
 export declare const AfflictionTalents: {
     name: string;
     data: SavedTalents;
 };
 export declare const DemonologyTalents: {
+    name: string;
+    data: SavedTalents;
+};
+export declare const DestructionTalents: {
     name: string;
     data: SavedTalents;
 };
