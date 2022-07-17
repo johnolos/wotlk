@@ -94,6 +94,7 @@ export class DeathKnightSimUI extends IndividualSimUI {
                     faerieFire: TristateEffect.TristateEffectImproved,
                     judgementOfWisdom: true,
                     misery: true,
+                    ebonPlaguebringer: true,
                 }),
             },
             // IconInputs to include in the 'Self Buffs' section on the settings tab.
@@ -196,10 +197,12 @@ export class DeathKnightSimUI extends IndividualSimUI {
                 // Preset talents that the user can quickly select.
                 talents: [
                     Presets.FrostTalents,
+                    Presets.FrostUnholyTalents,
                     Presets.UnholyDualWieldTalents,
                 ],
                 // Preset gear configurations that the user can quickly select.
                 gear: [
+                    Presets.P1_FROST_PRE_BIS_PRESET,
                     Presets.P1_FROST_BIS_PRESET,
                     Presets.P1_UNHOLY_DW_BIS_PRESET,
                 ],

@@ -6,6 +6,10 @@ export declare const FrostTalents: {
     name: string;
     data: SavedTalents;
 };
+export declare const FrostUnholyTalents: {
+    name: string;
+    data: SavedTalents;
+};
 export declare const UnholyDualWieldTalents: {
     name: string;
     data: SavedTalents;
