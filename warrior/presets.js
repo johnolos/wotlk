@@ -4,6 +4,7 @@ import { Flask } from '/wotlk/core/proto/common.js';
 import { Food } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { WarriorShout, Warrior_Rotation as WarriorRotation, Warrior_Rotation_SunderArmor as SunderArmor, Warrior_Options as WarriorOptions, } from '/wotlk/core/proto/warrior.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // Preset options for this spec.
@@ -13,15 +14,21 @@ import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // https://wowhead.com/wotlk/talent-calc and copy the numbers in the url.
 export const ArmsSlamTalents = {
     name: 'Arms Slam',
-    data: '32003301352010500221-0550000500521203',
+    data: SavedTalents.create({
+        talentsString: '32003301352010500221-0550000500521203',
+    }),
 };
 export const ArmsDWTalents = {
     name: 'Arms DW',
-    data: '33005301302010510321-0550000520501203',
+    data: SavedTalents.create({
+        talentsString: '33005301302010510321-0550000520501203',
+    }),
 };
 export const FuryTalents = {
     name: 'Fury',
-    data: '3500501130201-05050005505012050115',
+    data: SavedTalents.create({
+        talentsString: '3500501130201-05050005505012050115',
+    }),
 };
 export const DefaultRotation = WarriorRotation.create({
     useOverpower: false,

@@ -22,28 +22,6 @@ export var Hunter_Rotation_StingType;
     Hunter_Rotation_StingType[Hunter_Rotation_StingType["SerpentSting"] = 2] = "SerpentSting";
 })(Hunter_Rotation_StingType || (Hunter_Rotation_StingType = {}));
 /**
- * @generated from protobuf enum proto.Hunter.Rotation.WeaveType
- */
-export var Hunter_Rotation_WeaveType;
-(function (Hunter_Rotation_WeaveType) {
-    /**
-     * @generated from protobuf enum value: WeaveNone = 0;
-     */
-    Hunter_Rotation_WeaveType[Hunter_Rotation_WeaveType["WeaveNone"] = 0] = "WeaveNone";
-    /**
-     * @generated from protobuf enum value: WeaveAutosOnly = 1;
-     */
-    Hunter_Rotation_WeaveType[Hunter_Rotation_WeaveType["WeaveAutosOnly"] = 1] = "WeaveAutosOnly";
-    /**
-     * @generated from protobuf enum value: WeaveRaptorOnly = 2;
-     */
-    Hunter_Rotation_WeaveType[Hunter_Rotation_WeaveType["WeaveRaptorOnly"] = 2] = "WeaveRaptorOnly";
-    /**
-     * @generated from protobuf enum value: WeaveFull = 3;
-     */
-    Hunter_Rotation_WeaveType[Hunter_Rotation_WeaveType["WeaveFull"] = 3] = "WeaveFull";
-})(Hunter_Rotation_WeaveType || (Hunter_Rotation_WeaveType = {}));
-/**
  * @generated from protobuf enum proto.Hunter.Options.Ammo
  */
 export var Hunter_Options_Ammo;
@@ -1342,19 +1320,13 @@ export const Hunter = new Hunter$Type();
 class Hunter_Rotation$Type extends MessageType {
     constructor() {
         super("proto.Hunter.Rotation", [
-            { no: 1, name: "use_multi_shot", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "use_arcane_shot", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 12, name: "lazy_rotation", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 5, name: "sting", kind: "enum", T: () => ["proto.Hunter.Rotation.StingType", Hunter_Rotation_StingType] },
             { no: 6, name: "viper_start_mana_percent", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
-            { no: 7, name: "viper_stop_mana_percent", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
-            { no: 11, name: "weave", kind: "enum", T: () => ["proto.Hunter.Rotation.WeaveType", Hunter_Rotation_WeaveType] },
-            { no: 9, name: "time_to_weave_ms", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 10, name: "percent_weaved", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ }
+            { no: 7, name: "viper_stop_mana_percent", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ }
         ]);
     }
     create(value) {
-        const message = { useMultiShot: false, useArcaneShot: false, lazyRotation: false, sting: 0, viperStartManaPercent: 0, viperStopManaPercent: 0, weave: 0, timeToWeaveMs: 0, percentWeaved: 0 };
+        const message = { sting: 0, viperStartManaPercent: 0, viperStopManaPercent: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1365,15 +1337,6 @@ class Hunter_Rotation$Type extends MessageType {
         while (reader.pos < end) {
             let [fieldNo, wireType] = reader.tag();
             switch (fieldNo) {
-                case /* bool use_multi_shot */ 1:
-                    message.useMultiShot = reader.bool();
-                    break;
-                case /* bool use_arcane_shot */ 2:
-                    message.useArcaneShot = reader.bool();
-                    break;
-                case /* bool lazy_rotation */ 12:
-                    message.lazyRotation = reader.bool();
-                    break;
                 case /* proto.Hunter.Rotation.StingType sting */ 5:
                     message.sting = reader.int32();
                     break;
@@ -1382,15 +1345,6 @@ class Hunter_Rotation$Type extends MessageType {
                     break;
                 case /* double viper_stop_mana_percent */ 7:
                     message.viperStopManaPercent = reader.double();
-                    break;
-                case /* proto.Hunter.Rotation.WeaveType weave */ 11:
-                    message.weave = reader.int32();
-                    break;
-                case /* int32 time_to_weave_ms */ 9:
-                    message.timeToWeaveMs = reader.int32();
-                    break;
-                case /* double percent_weaved */ 10:
-                    message.percentWeaved = reader.double();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -1404,15 +1358,6 @@ class Hunter_Rotation$Type extends MessageType {
         return message;
     }
     internalBinaryWrite(message, writer, options) {
-        /* bool use_multi_shot = 1; */
-        if (message.useMultiShot !== false)
-            writer.tag(1, WireType.Varint).bool(message.useMultiShot);
-        /* bool use_arcane_shot = 2; */
-        if (message.useArcaneShot !== false)
-            writer.tag(2, WireType.Varint).bool(message.useArcaneShot);
-        /* bool lazy_rotation = 12; */
-        if (message.lazyRotation !== false)
-            writer.tag(12, WireType.Varint).bool(message.lazyRotation);
         /* proto.Hunter.Rotation.StingType sting = 5; */
         if (message.sting !== 0)
             writer.tag(5, WireType.Varint).int32(message.sting);
@@ -1422,15 +1367,6 @@ class Hunter_Rotation$Type extends MessageType {
         /* double viper_stop_mana_percent = 7; */
         if (message.viperStopManaPercent !== 0)
             writer.tag(7, WireType.Bit64).double(message.viperStopManaPercent);
-        /* proto.Hunter.Rotation.WeaveType weave = 11; */
-        if (message.weave !== 0)
-            writer.tag(11, WireType.Varint).int32(message.weave);
-        /* int32 time_to_weave_ms = 9; */
-        if (message.timeToWeaveMs !== 0)
-            writer.tag(9, WireType.Varint).int32(message.timeToWeaveMs);
-        /* double percent_weaved = 10; */
-        if (message.percentWeaved !== 0)
-            writer.tag(10, WireType.Bit64).double(message.percentWeaved);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

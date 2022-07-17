@@ -1,18 +1,11 @@
 import { Consumes } from '/wotlk/core/proto/common.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { Player } from '/wotlk/core/player.js';
 import { BalanceDruid_Rotation as BalanceDruidRotation, BalanceDruid_Options as BalanceDruidOptions } from '/wotlk/core/proto/druid.js';
 export declare const StandardTalents: {
     name: string;
-    data: string;
-};
-export declare const DreamstateTalents: {
-    name: string;
-    data: string;
-};
-export declare const RestoTalents: {
-    name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const DefaultRotation: BalanceDruidRotation;
 export declare const DefaultOptions: BalanceDruidOptions;

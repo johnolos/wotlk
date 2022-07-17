@@ -5,6 +5,7 @@ import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
 import { Faction } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { BalanceDruid_Rotation as BalanceDruidRotation, BalanceDruid_Options as BalanceDruidOptions } from '/wotlk/core/proto/druid.js';
 import { BalanceDruid_Rotation_PrimarySpell as PrimarySpell } from '/wotlk/core/proto/druid.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
@@ -15,15 +16,9 @@ import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // https://wowhead.com/wotlk/talent-calc and copy the numbers in the url.
 export const StandardTalents = {
     name: 'Standard',
-    data: '510022312503135231351--520033',
-};
-export const DreamstateTalents = {
-    name: 'Dreamstate',
-    data: '5003223122031312303--500503400314',
-};
-export const RestoTalents = {
-    name: 'Resto',
-    data: '--50353351531522531351',
+    data: SavedTalents.create({
+        talentsString: '510022312503135231351--520033',
+    }),
 };
 export const DefaultRotation = BalanceDruidRotation.create({
     primarySpell: PrimarySpell.Adaptive,

@@ -4,6 +4,7 @@ import { Flask } from '/wotlk/core/proto/common.js';
 import { Food } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { EnhancementShaman_Rotation as EnhancementShamanRotation, EnhancementShaman_Options as EnhancementShamanOptions, ShamanShield } from '/wotlk/core/proto/shaman.js';
 import { AirTotem, EarthTotem, FireTotem, WaterTotem, EnhancementShaman_Rotation_PrimaryShock as PrimaryShock, ShamanTotems, } from '/wotlk/core/proto/shaman.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
@@ -14,11 +15,15 @@ import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // https://wowhead.com/wotlk/talent-calc and copy the numbers in the url.
 export const StandardTalents = {
     name: 'Ele Sub',
-    data: '250030502-502500210501133531151',
+    data: SavedTalents.create({
+        talentsString: '250030502-502500210501133531151',
+    }),
 };
 export const RestoSubspecTalents = {
     name: 'Resto Sub',
-    data: '02-502500210502133531151-05005301',
+    data: SavedTalents.create({
+        talentsString: '02-502500210502133531151-05005301',
+    }),
 };
 export const DefaultRotation = EnhancementShamanRotation.create({
     totems: ShamanTotems.create({

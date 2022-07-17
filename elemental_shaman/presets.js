@@ -3,6 +3,7 @@ import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { Flask } from '/wotlk/core/proto/common.js';
 import { Food } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
 import { ElementalShaman_Rotation as ElementalShamanRotation, ElementalShaman_Options as ElementalShamanOptions, ShamanShield } from '/wotlk/core/proto/shaman.js';
 import { ElementalShaman_Rotation_RotationType as RotationType } from '/wotlk/core/proto/shaman.js';
@@ -15,11 +16,15 @@ import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // https://wowhead.com/wotlk/talent-calc and copy the numbers in the url.
 export const StandardTalents = {
     name: 'Standard',
-    data: '0532001523212351322301351-005052031',
+    data: SavedTalents.create({
+        talentsString: '0532001523212351322301351-005052031',
+    }),
 };
 export const RestoTalents = {
     name: 'Resto',
-    data: '5003--55035051355310510321',
+    data: SavedTalents.create({
+        talentsString: '5003--55035051355310510321',
+    }),
 };
 export const DefaultRotation = ElementalShamanRotation.create({
     totems: ShamanTotems.create({

@@ -1,19 +1,20 @@
 import { Consumes } from '/wotlk/core/proto/common.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { Spec } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { Player } from '/wotlk/core/player.js';
 import { ProtectionPaladin_Rotation as ProtectionPaladinRotation, ProtectionPaladin_Options as ProtectionPaladinOptions } from '/wotlk/core/proto/paladin.js';
 export declare const AvengersShieldTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const ArdentDefenderTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const SanctityTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const DefaultRotation: ProtectionPaladinRotation;
 export declare const DefaultOptions: ProtectionPaladinOptions;

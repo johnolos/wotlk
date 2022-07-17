@@ -13,6 +13,7 @@ import { EnumPicker } from '/wotlk/core/components/enum_picker.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { TypedEvent } from './typed_event.js';
 import { GearPicker } from '/wotlk/core/components/gear_picker.js';
+import { Glyphs } from '/wotlk/core/proto/common.js';
 import { HunterPetTalentsPicker } from '/wotlk/core/talents/hunter_pet.js';
 import { IconEnumPicker } from '/wotlk/core/components/icon_enum_picker.js';
 import { IconPicker } from '/wotlk/core/components/icon_picker.js';
@@ -710,9 +711,15 @@ export class IndividualSimUI extends SimUI {
             storageKey: this.getSavedTalentsStorageKey(),
             getData: (player) => SavedTalents.create({
                 talentsString: player.getTalentsString(),
+                glyphs: player.getGlyphs(),
             }),
-            setData: (eventID, player, newTalents) => player.setTalentsString(eventID, newTalents.talentsString),
-            changeEmitters: [this.player.talentsChangeEmitter],
+            setData: (eventID, player, newTalents) => {
+                TypedEvent.freezeAllAndDo(() => {
+                    player.setTalentsString(eventID, newTalents.talentsString);
+                    player.setGlyphs(eventID, newTalents.glyphs || Glyphs.create());
+                });
+            },
+            changeEmitters: [this.player.talentsChangeEmitter, this.player.glyphsChangeEmitter],
             equals: (a, b) => SavedTalents.equals(a, b),
             toJson: (a) => SavedTalents.toJson(a),
             fromJson: (obj) => SavedTalents.fromJson(obj),
@@ -730,9 +737,7 @@ export class IndividualSimUI extends SimUI {
                 savedTalentsManager.addSavedData({
                     name: config.name,
                     isPreset: true,
-                    data: SavedTalents.create({
-                        talentsString: config.data,
-                    }),
+                    data: config.data,
                 });
             });
             if (this.player.getClass() == Class.ClassHunter) {
@@ -788,7 +793,8 @@ export class IndividualSimUI extends SimUI {
             this.player.setGear(eventID, this.sim.lookupEquipmentSpec(this.individualConfig.defaults.gear));
             this.player.setConsumes(eventID, this.individualConfig.defaults.consumes);
             this.player.setRotation(eventID, this.individualConfig.defaults.rotation);
-            this.player.setTalentsString(eventID, this.individualConfig.defaults.talents);
+            this.player.setTalentsString(eventID, this.individualConfig.defaults.talents.talentsString);
+            this.player.setGlyphs(eventID, this.individualConfig.defaults.talents.glyphs || Glyphs.create());
             this.player.setSpecOptions(eventID, this.individualConfig.defaults.specOptions);
             this.player.setBuffs(eventID, this.individualConfig.defaults.individualBuffs);
             this.player.getParty().setBuffs(eventID, this.individualConfig.defaults.partyBuffs);

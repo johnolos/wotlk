@@ -4,6 +4,7 @@ import { Flask } from '/wotlk/core/proto/common.js';
 import { Food } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { SmitePriest_Rotation as Rotation, SmitePriest_Options as Options, SmitePriest_Rotation_RotationType } from '/wotlk/core/proto/priest.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // Preset options for this spec.
@@ -13,11 +14,15 @@ import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // https://wowhead.com/wotlk/talent-calc and copy the numbers in the url.
 export const StandardTalents = {
     name: 'Standard',
-    data: '5012300130505120501-005551002020052',
+    data: SavedTalents.create({
+        talentsString: '5012300130505120501-005551002020052',
+    }),
 };
 export const HolyTalents = {
     name: 'Holy',
-    data: '50023011305-235050032002150520051',
+    data: SavedTalents.create({
+        talentsString: '50023011305-235050032002150520051',
+    }),
 };
 export const DefaultRotation = Rotation.create({
     rotationType: SmitePriest_Rotation_RotationType.Basic,

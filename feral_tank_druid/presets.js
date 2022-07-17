@@ -6,6 +6,7 @@ import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import { Conjured } from '/wotlk/core/proto/common.js';
 import { RaidTarget } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { NO_TARGET } from '/wotlk/core/proto_utils/utils.js';
 import { FeralTankDruid_Rotation as DruidRotation, FeralTankDruid_Rotation_Swipe as Swipe, FeralTankDruid_Options as DruidOptions } from '/wotlk/core/proto/druid.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
@@ -16,11 +17,9 @@ import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // https://wowhead.com/wotlk/talent-calc and copy the numbers in the url.
 export const StandardTalents = {
     name: 'Standard',
-    data: '-503032132322105301251-05503301',
-};
-export const DemoRoarTalents = {
-    name: 'DemoRoar',
-    data: '-553032132322105301051-05503001',
+    data: SavedTalents.create({
+        talentsString: '-503032132322105301251-05503301',
+    }),
 };
 export const DefaultRotation = DruidRotation.create({
     maulRageThreshold: 50,

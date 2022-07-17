@@ -875,19 +875,40 @@ export const DeathKnight = new DeathKnight$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class DeathKnight_Rotation$Type extends MessageType {
     constructor() {
-        super("proto.DeathKnight.Rotation", []);
+        super("proto.DeathKnight.Rotation", [
+            { no: 1, name: "use_death_and_decay", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+        ]);
     }
     create(value) {
-        const message = {};
+        const message = { useDeathAndDecay: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
         return message;
     }
     internalBinaryRead(reader, length, options, target) {
-        return target ?? this.create();
+        let message = target ?? this.create(), end = reader.pos + length;
+        while (reader.pos < end) {
+            let [fieldNo, wireType] = reader.tag();
+            switch (fieldNo) {
+                case /* bool use_death_and_decay */ 1:
+                    message.useDeathAndDecay = reader.bool();
+                    break;
+                default:
+                    let u = options.readUnknownField;
+                    if (u === "throw")
+                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
+                    let d = reader.skip(wireType);
+                    if (u !== false)
+                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
+            }
+        }
+        return message;
     }
     internalBinaryWrite(message, writer, options) {
+        /* bool use_death_and_decay = 1; */
+        if (message.useDeathAndDecay !== false)
+            writer.tag(1, WireType.Varint).bool(message.useDeathAndDecay);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

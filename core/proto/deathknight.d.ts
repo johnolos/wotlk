@@ -388,6 +388,10 @@ export interface DeathKnight {
  * @generated from protobuf message proto.DeathKnight.Rotation
  */
 export interface DeathKnight_Rotation {
+    /**
+     * @generated from protobuf field: bool use_death_and_decay = 1;
+     */
+    useDeathAndDecay: boolean;
 }
 /**
  * @generated from protobuf message proto.DeathKnight.Options

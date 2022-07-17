@@ -3,6 +3,7 @@ import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { Flask } from '/wotlk/core/proto/common.js';
 import { Food } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { DeathKnight_Rotation as DeathKnightRotation, DeathKnight_Options as DeathKnightOptions, } from '/wotlk/core/proto/deathknight.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // Preset options for this spec.
@@ -12,11 +13,15 @@ import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // https://wotlk.wowhead.com/talent-calc and copy the numbers in the url.
 export const FrostTalents = {
     name: 'Frost Dps',
-    data: '23050005-32005350352203012300033101351',
+    data: SavedTalents.create({
+        talentsString: '23050005-32005350352203012300033101351',
+    }),
 };
 export const UnholyDualWieldTalents = {
     name: 'Unholy Dual Wield Dps',
-    data: '-320033500002-2302303050032150000150013133151',
+    data: SavedTalents.create({
+        talentsString: '-320033500002-2302303050032150000150013133151',
+    }),
 };
 export const DefaultRotation = DeathKnightRotation.create({});
 export const DefaultOptions = DeathKnightOptions.create({

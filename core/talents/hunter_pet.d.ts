@@ -18,4 +18,7 @@ export declare class HunterPetTalentsPicker extends Component {
     getPetTalentsFromPlayer(): HunterPetTalents;
     getCategoryFromPlayer(): PetCategory;
 }
+export declare const cunningDefault: HunterPetTalents;
+export declare const ferocityDefault: HunterPetTalents;
+export declare const tenacityDefault: HunterPetTalents;
 export {};

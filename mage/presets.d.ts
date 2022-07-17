@@ -1,23 +1,24 @@
 import { Consumes } from '/wotlk/core/proto/common.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { Spec } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { Player } from '/wotlk/core/player.js';
 import { Mage_Rotation as MageRotation, Mage_Options as MageOptions } from '/wotlk/core/proto/mage.js';
 export declare const ArcaneTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const FireTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const FrostTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const DeepFrostTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const DefaultFireRotation: MageRotation;
 export declare const DefaultFireOptions: MageOptions;

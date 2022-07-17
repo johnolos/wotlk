@@ -1,13 +1,14 @@
 import { Consumes } from '/wotlk/core/proto/common.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { ElementalShaman_Rotation as ElementalShamanRotation, ElementalShaman_Options as ElementalShamanOptions } from '/wotlk/core/proto/shaman.js';
 export declare const StandardTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const RestoTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const DefaultRotation: ElementalShamanRotation;
 export declare const DefaultOptions: ElementalShamanOptions;

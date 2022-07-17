@@ -3,6 +3,7 @@ import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { Flask } from '/wotlk/core/proto/common.js';
 import { Food } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { PaladinAura as PaladinAura, RetributionPaladin_Rotation as RetributionPaladinRotation, RetributionPaladin_Options as RetributionPaladinOptions, RetributionPaladin_Rotation_ConsecrationRank as ConsecrationRank, RetributionPaladin_Options_Judgement as Judgement, } from '/wotlk/core/proto/paladin.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // Preset options for this spec.
@@ -12,11 +13,15 @@ import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // https://wowhead.com/wotlk/talent-calc and copy the numbers in the url.
 export const RetKingsPaladinTalents = {
     name: 'Ret w/ Kings',
-    data: '5-503201-0523005130033125231051',
+    data: SavedTalents.create({
+        talentsString: '5-503201-0523005130033125231051',
+    }),
 };
 export const RetNoKingsPaladinTalents = {
     name: 'Ret w/out Kings',
-    data: '52-503-0523005130033125331051',
+    data: SavedTalents.create({
+        talentsString: '52-503-0523005130033125331051',
+    }),
 };
 export const DefaultRotation = RetributionPaladinRotation.create({
     consecrationRank: ConsecrationRank.None,

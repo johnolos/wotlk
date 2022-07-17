@@ -516,21 +516,13 @@ export interface Hunter {
     options?: Hunter_Options;
 }
 /**
+ * bool use_multi_shot = 1;
+ * bool use_arcane_shot = 2;
+ * bool lazy_rotation = 12; // Restricts to 1 action between each auto shot.
+ *
  * @generated from protobuf message proto.Hunter.Rotation
  */
 export interface Hunter_Rotation {
-    /**
-     * @generated from protobuf field: bool use_multi_shot = 1;
-     */
-    useMultiShot: boolean;
-    /**
-     * @generated from protobuf field: bool use_arcane_shot = 2;
-     */
-    useArcaneShot: boolean;
-    /**
-     * @generated from protobuf field: bool lazy_rotation = 12;
-     */
-    lazyRotation: boolean;
     /**
      * @generated from protobuf field: proto.Hunter.Rotation.StingType sting = 5;
      */
@@ -547,22 +539,6 @@ export interface Hunter_Rotation {
      * @generated from protobuf field: double viper_stop_mana_percent = 7;
      */
     viperStopManaPercent: number;
-    /**
-     * @generated from protobuf field: proto.Hunter.Rotation.WeaveType weave = 11;
-     */
-    weave: Hunter_Rotation_WeaveType;
-    /**
-     * Time in milliseconds from when the hunter starts moving to when they reengage their ranged autos.
-     *
-     * @generated from protobuf field: int32 time_to_weave_ms = 9;
-     */
-    timeToWeaveMs: number;
-    /**
-     * Percent of fight (0-1) to use melee weaving.
-     *
-     * @generated from protobuf field: double percent_weaved = 10;
-     */
-    percentWeaved: number;
 }
 /**
  * @generated from protobuf enum proto.Hunter.Rotation.StingType
@@ -580,27 +556,6 @@ export declare enum Hunter_Rotation_StingType {
      * @generated from protobuf enum value: SerpentSting = 2;
      */
     SerpentSting = 2
-}
-/**
- * @generated from protobuf enum proto.Hunter.Rotation.WeaveType
- */
-export declare enum Hunter_Rotation_WeaveType {
-    /**
-     * @generated from protobuf enum value: WeaveNone = 0;
-     */
-    WeaveNone = 0,
-    /**
-     * @generated from protobuf enum value: WeaveAutosOnly = 1;
-     */
-    WeaveAutosOnly = 1,
-    /**
-     * @generated from protobuf enum value: WeaveRaptorOnly = 2;
-     */
-    WeaveRaptorOnly = 2,
-    /**
-     * @generated from protobuf enum value: WeaveFull = 3;
-     */
-    WeaveFull = 3
 }
 /**
  * @generated from protobuf message proto.Hunter.Options

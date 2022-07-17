@@ -5,6 +5,7 @@ import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import { Conjured } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { FeralDruid_Rotation as FeralDruidRotation, FeralDruid_Options as FeralDruidOptions } from '/wotlk/core/proto/druid.js';
 import { FeralDruid_Rotation_FinishingMove as FinishingMove } from '/wotlk/core/proto/druid.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
@@ -15,11 +16,9 @@ import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // https://wowhead.com/wotlk/talent-calc and copy the numbers in the url.
 export const StandardTalents = {
     name: 'Standard',
-    data: '-503032132322105301251-05503301',
-};
-export const MonocatTalents = {
-    name: 'Monocat',
-    data: '-553002132322105301051-05503301',
+    data: SavedTalents.create({
+        talentsString: '-503032132322105301251-05503301',
+    }),
 };
 export const DefaultRotation = FeralDruidRotation.create({
     finishingMove: FinishingMove.Rip,

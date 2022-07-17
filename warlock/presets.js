@@ -4,6 +4,7 @@ import { Food } from '/wotlk/core/proto/common.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { Warlock_Rotation as WarlockRotation, Warlock_Options as WarlockOptions, Warlock_Rotation_PrimarySpell as PrimarySpell, Warlock_Rotation_SecondaryDot as SecondaryDot, Warlock_Rotation_SpecSpell as SpecSpell, Warlock_Rotation_Curse as Curse, Warlock_Options_Armor as Armor, Warlock_Options_Summon as Summon } from '/wotlk/core/proto/warlock.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // Preset options for this spec.
@@ -13,49 +14,46 @@ import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // https://wowhead.com/wotlk/talent-calc and copy the numbers in the url.
 export const DestructionTalents = {
     name: 'Destruction',
-    data: '-03310030002-05203205220331051335131351',
+    data: SavedTalents.create({
+        talentsString: '-03310030002-05203205220331051335131351',
+    }),
 };
 export const AfflictionTalents = {
     name: 'Affliction',
-    data: '2350002030023510253510331151--55000005',
+    data: SavedTalents.create({
+        talentsString: '2350002030023510253510331151--55000005',
+    }),
 };
 export const DemonologyTalents = {
     name: 'Demonology',
-    data: '-203203301035012530135201351-550000052',
+    data: SavedTalents.create({
+        talentsString: '-203203301035012530135201351-550000052',
+    }),
 };
-export const AfflictionRotation = {
-    name: 'Affliction',
-    rotation: WarlockRotation.create({
-        primarySpell: PrimarySpell.Shadowbolt,
-        secondaryDot: SecondaryDot.UnstableAffliction,
-        specSpell: SpecSpell.Haunt,
-        curse: Curse.Agony,
-        corruption: true,
-        detonateSeed: true,
-    })
-};
-export const DemonologyRotation = {
-    name: 'Demonology',
-    rotation: WarlockRotation.create({
-        primarySpell: PrimarySpell.Shadowbolt,
-        secondaryDot: SecondaryDot.Immolate,
-        specSpell: SpecSpell.NoSpecSpell,
-        curse: Curse.Doom,
-        corruption: true,
-        detonateSeed: true,
-    })
-};
-export const DestructionRotation = {
-    name: 'Destruction',
-    rotation: WarlockRotation.create({
-        primarySpell: PrimarySpell.Incinerate,
-        secondaryDot: SecondaryDot.Immolate,
-        specSpell: SpecSpell.ChaosBolt,
-        curse: Curse.Doom,
-        corruption: true,
-        detonateSeed: true,
-    })
-};
+export const AfflictionRotation = WarlockRotation.create({
+    primarySpell: PrimarySpell.Shadowbolt,
+    secondaryDot: SecondaryDot.UnstableAffliction,
+    specSpell: SpecSpell.Haunt,
+    curse: Curse.Agony,
+    corruption: true,
+    detonateSeed: true,
+});
+export const DemonologyRotation = WarlockRotation.create({
+    primarySpell: PrimarySpell.Shadowbolt,
+    secondaryDot: SecondaryDot.Immolate,
+    specSpell: SpecSpell.NoSpecSpell,
+    curse: Curse.Doom,
+    corruption: true,
+    detonateSeed: true,
+});
+export const DestructionRotation = WarlockRotation.create({
+    primarySpell: PrimarySpell.Incinerate,
+    secondaryDot: SecondaryDot.Immolate,
+    specSpell: SpecSpell.ChaosBolt,
+    curse: Curse.Doom,
+    corruption: true,
+    detonateSeed: true,
+});
 export const AfflictionOptions = WarlockOptions.create({
     armor: Armor.FelArmor,
     summon: Summon.Felhunter,

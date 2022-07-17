@@ -1,13 +1,10 @@
 import { Consumes } from '/wotlk/core/proto/common.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { FeralTankDruid_Rotation as DruidRotation, FeralTankDruid_Options as DruidOptions } from '/wotlk/core/proto/druid.js';
 export declare const StandardTalents: {
     name: string;
-    data: string;
-};
-export declare const DemoRoarTalents: {
-    name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const DefaultRotation: DruidRotation;
 export declare const DefaultOptions: DruidOptions;

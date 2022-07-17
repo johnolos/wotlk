@@ -1,17 +1,18 @@
 import { Consumes } from '/wotlk/core/proto/common.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { ProtectionWarrior_Rotation as ProtectionWarriorRotation, ProtectionWarrior_Options as ProtectionWarriorOptions } from '/wotlk/core/proto/warrior.js';
 export declare const StandardTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const ImpDemoTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const ImpaleProtTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const DefaultRotation: ProtectionWarriorRotation;
 export declare const DefaultOptions: ProtectionWarriorOptions;

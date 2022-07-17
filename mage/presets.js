@@ -5,6 +5,7 @@ import { Flask } from '/wotlk/core/proto/common.js';
 import { Food } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { Mage_Rotation as MageRotation, Mage_Options as MageOptions } from '/wotlk/core/proto/mage.js';
 import { Mage_Rotation_Type as RotationType, Mage_Rotation_ArcaneRotation as ArcaneRotation, Mage_Rotation_FireRotation as FireRotation, Mage_Rotation_FrostRotation as FrostRotation } from '/wotlk/core/proto/mage.js';
 import { Mage_Rotation_FireRotation_PrimarySpell as PrimaryFireSpell } from '/wotlk/core/proto/mage.js';
@@ -18,19 +19,27 @@ import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // https://wowhead.com/wotlk/talent-calc and copy the numbers in the url.
 export const ArcaneTalents = {
     name: 'Arcane',
-    data: '2500250300030150330125--053500031003001',
+    data: SavedTalents.create({
+        talentsString: '2500250300030150330125--053500031003001',
+    }),
 };
 export const FireTalents = {
     name: 'Fire',
-    data: '2-505202012303331053125-043500001',
+    data: SavedTalents.create({
+        talentsString: '2-505202012303331053125-043500001',
+    }),
 };
 export const FrostTalents = {
     name: 'Frost',
-    data: '2500250300030150330125--053500031003001',
+    data: SavedTalents.create({
+        talentsString: '2500250300030150330125--053500031003001',
+    }),
 };
 export const DeepFrostTalents = {
     name: 'Deep Frost',
-    data: '230015031003--0535000310230012241551',
+    data: SavedTalents.create({
+        talentsString: '230015031003--0535000310230012241551',
+    }),
 };
 export const DefaultFireRotation = MageRotation.create({
     type: RotationType.Fire,

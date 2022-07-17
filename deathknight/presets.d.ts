@@ -1,13 +1,14 @@
 import { Consumes } from '/wotlk/core/proto/common.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { DeathKnight_Rotation as DeathKnightRotation, DeathKnight_Options as DeathKnightOptions } from '/wotlk/core/proto/deathknight.js';
 export declare const FrostTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const UnholyDualWieldTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const DefaultRotation: DeathKnightRotation;
 export declare const DefaultOptions: DeathKnightOptions;

@@ -1,15 +1,16 @@
 import { Consumes } from '/wotlk/core/proto/common.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { Spec } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { Player } from '/wotlk/core/player.js';
 import { RetributionPaladin_Rotation as RetributionPaladinRotation, RetributionPaladin_Options as RetributionPaladinOptions } from '/wotlk/core/proto/paladin.js';
 export declare const RetKingsPaladinTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const RetNoKingsPaladinTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const DefaultRotation: RetributionPaladinRotation;
 export declare const DefaultOptions: RetributionPaladinOptions;

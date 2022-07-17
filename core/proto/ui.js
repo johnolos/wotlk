@@ -7,6 +7,7 @@ import { RaidSimResult } from './api.js';
 import { RaidSimRequest } from './api.js';
 import { Raid } from './api.js';
 import { Blessings } from './paladin.js';
+import { Glyphs } from './common.js';
 import { Cooldowns } from './common.js';
 import { Race } from './common.js';
 import { Consumes } from './common.js';
@@ -360,7 +361,8 @@ export const SavedSettings = new SavedSettings$Type();
 class SavedTalents$Type extends MessageType {
     constructor() {
         super("proto.SavedTalents", [
-            { no: 1, name: "talents_string", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
+            { no: 1, name: "talents_string", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+            { no: 2, name: "glyphs", kind: "message", T: () => Glyphs }
         ]);
     }
     create(value) {
@@ -378,6 +380,9 @@ class SavedTalents$Type extends MessageType {
                 case /* string talents_string */ 1:
                     message.talentsString = reader.string();
                     break;
+                case /* proto.Glyphs glyphs */ 2:
+                    message.glyphs = Glyphs.internalBinaryRead(reader, reader.uint32(), options, message.glyphs);
+                    break;
                 default:
                     let u = options.readUnknownField;
                     if (u === "throw")
@@ -393,6 +398,9 @@ class SavedTalents$Type extends MessageType {
         /* string talents_string = 1; */
         if (message.talentsString !== "")
             writer.tag(1, WireType.LengthDelimited).string(message.talentsString);
+        /* proto.Glyphs glyphs = 2; */
+        if (message.glyphs)
+            Glyphs.internalBinaryWrite(message.glyphs, writer.tag(2, WireType.LengthDelimited).fork(), options).join();
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

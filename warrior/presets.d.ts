@@ -1,19 +1,20 @@
 import { Consumes } from '/wotlk/core/proto/common.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { Spec } from '/wotlk/core/proto/common.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { Player } from '/wotlk/core/player.js';
 import { Warrior_Rotation as WarriorRotation, Warrior_Options as WarriorOptions } from '/wotlk/core/proto/warrior.js';
 export declare const ArmsSlamTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const ArmsDWTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const FuryTalents: {
     name: string;
-    data: string;
+    data: SavedTalents;
 };
 export declare const DefaultRotation: WarriorRotation;
 export declare const ArmsRotation: WarriorRotation;

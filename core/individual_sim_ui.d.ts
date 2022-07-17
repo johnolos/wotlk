@@ -26,6 +26,7 @@ import { Race } from '/wotlk/core/proto/common.js';
 import { Raid } from './raid.js';
 import { RaidBuffs } from '/wotlk/core/proto/common.js';
 import { SavedDataConfig } from '/wotlk/core/components/saved_data_manager.js';
+import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { SimUI, SimWarning } from './sim_ui.js';
 import { Spec } from '/wotlk/core/proto/common.js';
 import { SpecOptions } from '/wotlk/core/proto_utils/utils.js';
@@ -83,7 +84,7 @@ export interface IndividualSimUIConfig<SpecType extends Spec> {
         epWeights: Stats;
         consumes: Consumes;
         rotation: SpecRotation<SpecType>;
-        talents: string;
+        talents: SavedTalents;
         specOptions: SpecOptions<SpecType>;
         raidBuffs: RaidBuffs;
         partyBuffs: PartyBuffs;
@@ -107,7 +108,7 @@ export interface IndividualSimUIConfig<SpecType extends Spec> {
     freezeTalents?: boolean;
     presets: {
         gear: Array<PresetGear>;
-        talents: Array<SavedDataConfig<Player<any>, string>>;
+        talents: Array<SavedDataConfig<Player<any>, SavedTalents>>;
         rotation?: Array<SavedDataConfig<Player<any>, string>>;
     };
 }

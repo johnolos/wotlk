@@ -8,6 +8,7 @@ import { RaidSimResult } from "./api";
 import { RaidSimRequest } from "./api";
 import { Raid } from "./api";
 import { Blessings } from "./paladin";
+import { Glyphs } from "./common";
 import { Cooldowns } from "./common";
 import { Race } from "./common";
 import { Consumes } from "./common";
@@ -146,6 +147,10 @@ export interface SavedTalents {
      * @generated from protobuf field: string talents_string = 1;
      */
     talentsString: string;
+    /**
+     * @generated from protobuf field: proto.Glyphs glyphs = 2;
+     */
+    glyphs?: Glyphs;
 }
 /**
  * A buff bot placed in a raid.
