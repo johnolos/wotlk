@@ -390,6 +390,10 @@ export interface Warlock_Rotation {
      * @generated from protobuf field: proto.Warlock.Rotation.SpecSpell spec_spell = 7;
      */
     specSpell: Warlock_Rotation_SpecSpell;
+    /**
+     * @generated from protobuf field: proto.Warlock.Rotation.Type type = 8;
+     */
+    type: Warlock_Rotation_Type;
 }
 /**
  * @generated from protobuf enum proto.Warlock.Rotation.Preset
@@ -403,6 +407,23 @@ export declare enum Warlock_Rotation_Preset {
      * @generated from protobuf enum value: Automatic = 1;
      */
     Automatic = 1
+}
+/**
+ * @generated from protobuf enum proto.Warlock.Rotation.Type
+ */
+export declare enum Warlock_Rotation_Type {
+    /**
+     * @generated from protobuf enum value: Affliction = 0;
+     */
+    Affliction = 0,
+    /**
+     * @generated from protobuf enum value: Demonology = 1;
+     */
+    Demonology = 1,
+    /**
+     * @generated from protobuf enum value: Destruction = 2;
+     */
+    Destruction = 2
 }
 /**
  * @generated from protobuf enum proto.Warlock.Rotation.PrimarySpell

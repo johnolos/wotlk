@@ -18,6 +18,24 @@ export var Warlock_Rotation_Preset;
     Warlock_Rotation_Preset[Warlock_Rotation_Preset["Automatic"] = 1] = "Automatic";
 })(Warlock_Rotation_Preset || (Warlock_Rotation_Preset = {}));
 /**
+ * @generated from protobuf enum proto.Warlock.Rotation.Type
+ */
+export var Warlock_Rotation_Type;
+(function (Warlock_Rotation_Type) {
+    /**
+     * @generated from protobuf enum value: Affliction = 0;
+     */
+    Warlock_Rotation_Type[Warlock_Rotation_Type["Affliction"] = 0] = "Affliction";
+    /**
+     * @generated from protobuf enum value: Demonology = 1;
+     */
+    Warlock_Rotation_Type[Warlock_Rotation_Type["Demonology"] = 1] = "Demonology";
+    /**
+     * @generated from protobuf enum value: Destruction = 2;
+     */
+    Warlock_Rotation_Type[Warlock_Rotation_Type["Destruction"] = 2] = "Destruction";
+})(Warlock_Rotation_Type || (Warlock_Rotation_Type = {}));
+/**
  * @generated from protobuf enum proto.Warlock.Rotation.PrimarySpell
  */
 export var Warlock_Rotation_PrimarySpell;
@@ -991,11 +1009,12 @@ class Warlock_Rotation$Type extends MessageType {
             { no: 4, name: "secondary_dot", kind: "enum", T: () => ["proto.Warlock.Rotation.SecondaryDot", Warlock_Rotation_SecondaryDot] },
             { no: 5, name: "corruption", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 6, name: "detonate_seed", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 7, name: "spec_spell", kind: "enum", T: () => ["proto.Warlock.Rotation.SpecSpell", Warlock_Rotation_SpecSpell] }
+            { no: 7, name: "spec_spell", kind: "enum", T: () => ["proto.Warlock.Rotation.SpecSpell", Warlock_Rotation_SpecSpell] },
+            { no: 8, name: "type", kind: "enum", T: () => ["proto.Warlock.Rotation.Type", Warlock_Rotation_Type] }
         ]);
     }
     create(value) {
-        const message = { preset: 0, curse: 0, primarySpell: 0, secondaryDot: 0, corruption: false, detonateSeed: false, specSpell: 0 };
+        const message = { preset: 0, curse: 0, primarySpell: 0, secondaryDot: 0, corruption: false, detonateSeed: false, specSpell: 0, type: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1026,6 +1045,9 @@ class Warlock_Rotation$Type extends MessageType {
                     break;
                 case /* proto.Warlock.Rotation.SpecSpell spec_spell */ 7:
                     message.specSpell = reader.int32();
+                    break;
+                case /* proto.Warlock.Rotation.Type type */ 8:
+                    message.type = reader.int32();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -1060,6 +1082,9 @@ class Warlock_Rotation$Type extends MessageType {
         /* proto.Warlock.Rotation.SpecSpell spec_spell = 7; */
         if (message.specSpell !== 0)
             writer.tag(7, WireType.Varint).int32(message.specSpell);
+        /* proto.Warlock.Rotation.Type type = 8; */
+        if (message.type !== 0)
+            writer.tag(8, WireType.Varint).int32(message.type);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

@@ -1,4 +1,4 @@
-import { Warlock_Rotation_Preset as RotationPreset, Warlock_Rotation_Curse as Curse } from '/wotlk/core/proto/warlock.js';
+import { Warlock_Rotation_Type as RotationType, Warlock_Rotation_Preset as RotationPreset, Warlock_Rotation_Curse as Curse } from '/wotlk/core/proto/warlock.js';
 import { Spec } from '/wotlk/core/proto/common.js';
 import { ActionId } from '/wotlk/core/proto_utils/action_id.js';
 import { Player } from '/wotlk/core/player.js';
@@ -51,6 +51,7 @@ export declare const SummonFelguard: {
     changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
     getValue: (player: Player<Spec.SpecWarlock>) => boolean;
     setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => void;
+    showWhen: (player: Player<Spec.SpecWarlock>) => boolean;
 };
 export declare const PrimarySpellShadowbolt: {
     id: ActionId;
@@ -91,7 +92,7 @@ export declare const SecondaryDotUnstableAffliction: {
     changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
     getValue: (player: Player<Spec.SpecWarlock>) => boolean;
     setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => void;
-    enableWhen: (player: Player<Spec.SpecWarlock>) => boolean;
+    showWhen: (player: Player<Spec.SpecWarlock>) => boolean;
 };
 export declare const SpecSpellChaosBolt: {
     id: ActionId;
@@ -100,7 +101,7 @@ export declare const SpecSpellChaosBolt: {
     changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
     getValue: (player: Player<Spec.SpecWarlock>) => boolean;
     setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => void;
-    enableWhen: (player: Player<Spec.SpecWarlock>) => boolean;
+    showWhen: (player: Player<Spec.SpecWarlock>) => boolean;
 };
 export declare const SpecSpellHaunt: {
     id: ActionId;
@@ -109,7 +110,7 @@ export declare const SpecSpellHaunt: {
     changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
     getValue: (player: Player<Spec.SpecWarlock>) => boolean;
     setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => void;
-    enableWhen: (player: Player<Spec.SpecWarlock>) => boolean;
+    showWhen: (player: Player<Spec.SpecWarlock>) => boolean;
 };
 export declare const CorruptionSpell: {
     id: ActionId;
@@ -118,10 +119,25 @@ export declare const CorruptionSpell: {
     changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
     getValue: (player: Player<Spec.SpecWarlock>) => boolean;
     setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => void;
-    enableWhen: (player: Player<Spec.SpecWarlock>) => boolean;
 };
 export declare const WarlockRotationConfig: {
     inputs: ({
+        type: "enum";
+        getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
+        config: {
+            extraCssClasses: string[];
+            label: string;
+            labelTooltip: string;
+            values: {
+                name: string;
+                value: RotationType;
+            }[];
+            changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
+            getValue: (player: Player<Spec.SpecWarlock>) => RotationType;
+            setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: number) => void;
+            showWhen?: undefined;
+        };
+    } | {
         type: "enum";
         getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
         config: {
@@ -135,7 +151,7 @@ export declare const WarlockRotationConfig: {
             changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
             getValue: (player: Player<Spec.SpecWarlock>) => RotationPreset;
             setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: number) => void;
-            enableWhen?: undefined;
+            showWhen?: undefined;
         };
     } | {
         type: "enum";
@@ -151,7 +167,7 @@ export declare const WarlockRotationConfig: {
             changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
             getValue: (player: Player<Spec.SpecWarlock>) => Curse;
             setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: number) => void;
-            enableWhen: (player: Player<Spec.SpecWarlock>) => boolean;
+            showWhen?: undefined;
         };
     } | {
         type: "boolean";
@@ -163,7 +179,7 @@ export declare const WarlockRotationConfig: {
             changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
             getValue: (player: Player<Spec.SpecWarlock>) => boolean;
             setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => void;
-            enableWhen: (player: Player<Spec.SpecWarlock>) => boolean;
+            showWhen: (player: Player<Spec.SpecWarlock>) => boolean;
             values?: undefined;
         };
     })[];
