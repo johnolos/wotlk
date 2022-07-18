@@ -2,9 +2,10 @@ import { Consumes } from '/wotlk/core/proto/common.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { Flask } from '/wotlk/core/proto/common.js';
 import { Food } from '/wotlk/core/proto/common.js';
+import { Glyphs } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
 import { SavedTalents } from '/wotlk/core/proto/ui.js';
-import { ShadowPriest_Rotation as Rotation, ShadowPriest_Options as Options, ShadowPriest_Rotation_RotationType } from '/wotlk/core/proto/priest.js';
+import { ShadowPriest_Rotation as Rotation, ShadowPriest_Options as Options, ShadowPriest_Rotation_RotationType, PriestMajorGlyph as MajorGlyph, PriestMinorGlyph as MinorGlyph, } from '/wotlk/core/proto/priest.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // Preset options for this spec.
 // Eventually we will import these values for the raid sim too, so its good to
@@ -15,6 +16,14 @@ export const StandardTalents = {
     name: 'Standard',
     data: SavedTalents.create({
         talentsString: '05032031--325023051223010323151301351',
+        glyphs: Glyphs.create({
+            major1: MajorGlyph.GlyphOfShadow,
+            major2: MajorGlyph.GlyphOfMindFlay,
+            major3: MajorGlyph.GlyphOfDispersion,
+            minor1: MinorGlyph.GlyphOfFortitude,
+            minor2: MinorGlyph.GlyphOfShadowProtection,
+            minor3: MinorGlyph.GlyphOfShadowfiend,
+        }),
     }),
 };
 export const DefaultRotation = Rotation.create({

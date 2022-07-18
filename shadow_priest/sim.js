@@ -73,10 +73,12 @@ export class ShadowPriestSimUI extends IndividualSimUI {
                 // Default raid/party buffs settings.
                 raidBuffs: RaidBuffs.create({
                     arcaneBrilliance: true,
+                    arcaneEmpowerment: true,
+                    bloodlust: true,
                     divineSpirit: true,
                     giftOfTheWild: TristateEffect.TristateEffectImproved,
-                    bloodlust: true,
                     manaSpringTotem: TristateEffect.TristateEffectRegular,
+                    moonkinAura: TristateEffect.TristateEffectImproved,
                     totemOfWrath: true,
                     wrathOfAirTotem: true,
                 }),

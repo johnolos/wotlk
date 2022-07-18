@@ -73,10 +73,8 @@ export const PrepopPotion = {
         labelTooltip: 'If set, this potion will be used 1s before combat starts.',
         values: [
             { name: 'None', value: Potions.UnknownPotion },
-            { name: 'Destruction', value: Potions.DestructionPotion },
-            { name: 'Haste', value: Potions.HastePotion },
-            { name: 'Super Mana', value: Potions.SuperManaPotion },
-            { name: 'Fel Mana', value: Potions.FelManaPotion },
+            { name: 'Speed', value: Potions.PotionOfSpeed },
+            { name: 'Wild Magic', value: Potions.PotionOfWildMagic },
         ],
         changedEvent: (player) => player.consumesChangeEmitter,
         getValue: (player) => player.getConsumes().prepopPotion,
