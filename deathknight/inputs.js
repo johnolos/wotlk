@@ -72,8 +72,63 @@ export const UseDeathAndDecay = {
         },
     },
 };
+export const UnholyPresenceOpener = {
+    type: 'boolean',
+    getModObject: (simUI) => simUI.player,
+    config: {
+        extraCssClasses: [
+            'unholy-presence-opener-picker',
+        ],
+        label: 'Unholy Presence Opener',
+        labelTooltip: 'Start fight in unholy presence and change to blood after gargoyle.',
+        changedEvent: (player) => player.specOptionsChangeEmitter,
+        getValue: (player) => player.getRotation().unholyPresenceOpener,
+        setValue: (eventID, player, newValue) => {
+            const newRotation = player.getRotation();
+            newRotation.unholyPresenceOpener = newValue;
+            player.setRotation(eventID, newRotation);
+        },
+    },
+};
+export const RefreshHornOfWinter = {
+    type: 'boolean',
+    getModObject: (simUI) => simUI.player,
+    config: {
+        extraCssClasses: [
+            'refresh-horn-of-winter-picker',
+        ],
+        label: 'Refresh Horn of Winter',
+        labelTooltip: 'Refresh Horn of Winter on free GCDs.',
+        changedEvent: (player) => player.specOptionsChangeEmitter,
+        getValue: (player) => player.getSpecOptions().refreshHornOfWinter,
+        setValue: (eventID, player, newValue) => {
+            const newOptions = player.getSpecOptions();
+            newOptions.refreshHornOfWinter = newValue;
+            player.setSpecOptions(eventID, newOptions);
+        },
+    },
+};
+export const PrecastHornOfWinter = {
+    type: 'boolean',
+    getModObject: (simUI) => simUI.player,
+    config: {
+        extraCssClasses: [
+            'precast-horn-of-winter-picker',
+        ],
+        label: 'Pre-Cast Horn of Winter',
+        labelTooltip: 'Precast Horn of Winter for 10 extra runic power before fight.',
+        changedEvent: (player) => player.specOptionsChangeEmitter,
+        getValue: (player) => player.getSpecOptions().precastHornOfWinter,
+        setValue: (eventID, player, newValue) => {
+            const newOptions = player.getSpecOptions();
+            newOptions.precastHornOfWinter = newValue;
+            player.setSpecOptions(eventID, newOptions);
+        },
+    },
+};
 export const DeathKnightRotationConfig = {
     inputs: [
         UseDeathAndDecay,
+        UnholyPresenceOpener,
     ],
 };
