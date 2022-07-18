@@ -45,8 +45,6 @@ export const DefaultConsumes = Consumes.create({
     food: Food.FoodRoastedClefthoof,
     mainHandImbue: WeaponImbue.WeaponImbueShamanWindfury,
     offHandImbue: WeaponImbue.WeaponImbueShamanWindfury,
-    scrollOfAgility: 5,
-    scrollOfStrength: 5,
 });
 export const P1_PRESET = {
     name: 'P1 Preset',

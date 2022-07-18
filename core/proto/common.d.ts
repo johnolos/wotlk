@@ -157,13 +157,39 @@ export interface RaidBuffs {
     /**
      * Drums
      *
-     * @generated from protobuf field: bool DrumsOfKings = 38 [json_name = "DrumsOfKings"];
+     * @generated from protobuf field: bool drums_of_forgotten_kings = 38;
      */
-    drumsOfKings: boolean;
+    drumsOfForgottenKings: boolean;
     /**
-     * @generated from protobuf field: bool DrumsOfWild = 39 [json_name = "DrumsOfWild"];
+     * @generated from protobuf field: bool drums_of_the_wild = 39;
      */
-    drumsOfWild: boolean;
+    drumsOfTheWild: boolean;
+    /**
+     * Scroll
+     *
+     * @generated from protobuf field: bool scroll_of_protection = 40;
+     */
+    scrollOfProtection: boolean;
+    /**
+     * @generated from protobuf field: bool scroll_of_stamina = 41;
+     */
+    scrollOfStamina: boolean;
+    /**
+     * @generated from protobuf field: bool scroll_of_strength = 42;
+     */
+    scrollOfStrength: boolean;
+    /**
+     * @generated from protobuf field: bool scroll_of_agility = 43;
+     */
+    scrollOfAgility: boolean;
+    /**
+     * @generated from protobuf field: bool scroll_of_intellect = 44;
+     */
+    scrollOfIntellect: boolean;
+    /**
+     * @generated from protobuf field: bool scroll_of_spirit = 45;
+     */
+    scrollOfSpirit: boolean;
 }
 /**
  * Buffs that affect a single party.
@@ -296,25 +322,6 @@ export interface Consumes {
      */
     petFood: PetFood;
     /**
-     * 0 means no scroll, otherwise value is the scroll level.
-     * E.g. 5 indicates Scroll of Agility V.
-     *
-     * @generated from protobuf field: int32 scroll_of_agility = 44;
-     */
-    scrollOfAgility: number;
-    /**
-     * @generated from protobuf field: int32 scroll_of_strength = 43;
-     */
-    scrollOfStrength: number;
-    /**
-     * @generated from protobuf field: int32 scroll_of_spirit = 45;
-     */
-    scrollOfSpirit: number;
-    /**
-     * @generated from protobuf field: int32 scroll_of_protection = 53;
-     */
-    scrollOfProtection: number;
-    /**
      * @generated from protobuf field: int32 pet_scroll_of_agility = 46;
      */
     petScrollOfAgility: number;
@@ -354,14 +361,6 @@ export interface Consumes {
      * @generated from protobuf field: proto.Explosive filler_explosive = 52;
      */
     fillerExplosive: Explosive;
-    /**
-     * @generated from protobuf field: bool DrumsOfKings = 54 [json_name = "DrumsOfKings"];
-     */
-    drumsOfKings: boolean;
-    /**
-     * @generated from protobuf field: bool DrumsOfWild = 55 [json_name = "DrumsOfWild"];
-     */
-    drumsOfWild: boolean;
 }
 /**
  * @generated from protobuf message proto.Debuffs

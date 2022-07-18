@@ -10,44 +10,44 @@ import { Potions } from '/wotlk/core/proto/common.js';
 import { TristateEffect } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
 import { TypedEvent } from '/wotlk/core/typed_event.js';
-// Keep each section in alphabetical order.
 // Raid Buffs
 export const AllStatsBuff = makeMultiIconInput([
     makeBooleanRaidBuffInput2(ActionId.fromSpellId(17051), 'giftOfTheWild', TristateEffect.TristateEffectImproved),
     makeBooleanRaidBuffInput2(ActionId.fromSpellId(48470), 'giftOfTheWild', TristateEffect.TristateEffectRegular),
-    // drums
+    makeBooleanRaidBuffInput2(ActionId.fromItemId(49634), 'drumsOfTheWild'),
 ]);
 export const AllStatsPercentBuff = makeMultiIconInput([
     makeBooleanIndividualBuffInput2(ActionId.fromSpellId(25898), 'blessingOfKings'),
-    // blessing of sanctuary
-    // drums
+    makeBooleanRaidBuffInput2(ActionId.fromItemId(49633), 'drumsOfForgottenKings'),
+    makeBooleanIndividualBuffInput2(ActionId.fromSpellId(25889), 'blessingOfSanctuary'),
 ]);
 export const ArmorBuff = makeMultiIconInput([
     makeBooleanRaidBuffInput2(ActionId.fromSpellId(20140), 'devotionAura', TristateEffect.TristateEffectImproved),
     makeBooleanRaidBuffInput2(ActionId.fromSpellId(48942), 'devotionAura', TristateEffect.TristateEffectRegular),
+    makeBooleanRaidBuffInput2(ActionId.fromItemId(43468), 'scrollOfProtection'),
     // stoneskin?
-    // scroll
 ]);
 export const StaminaBuff = makeMultiIconInput([
     makeBooleanRaidBuffInput2(ActionId.fromSpellId(14767), 'powerWordFortitude', TristateEffect.TristateEffectImproved),
     makeBooleanRaidBuffInput2(ActionId.fromSpellId(25389), 'powerWordFortitude', TristateEffect.TristateEffectRegular),
-    //scroll
+    makeBooleanRaidBuffInput2(ActionId.fromItemId(37094), 'scrollOfStamina'),
 ]);
 export const StrengthAndAgilityBuff = makeMultiIconInput([
     makeBooleanRaidBuffInput2(ActionId.fromSpellId(52456), 'strengthOfEarthTotem', TristateEffect.TristateEffectImproved),
     makeBooleanRaidBuffInput2(ActionId.fromSpellId(58643), 'strengthOfEarthTotem', TristateEffect.TristateEffectRegular),
     makeBooleanRaidBuffInput2(ActionId.fromSpellId(57623), 'hornOfWinter'),
-    // scroll
+    makeBooleanRaidBuffInput2(ActionId.fromItemId(43464), 'scrollOfAgility'),
+    makeBooleanRaidBuffInput2(ActionId.fromItemId(43466), 'scrollOfStrength'),
 ]);
 export const IntellectBuff = makeMultiIconInput([
     makeBooleanRaidBuffInput2(ActionId.fromSpellId(43002), 'arcaneBrilliance'),
     makeBooleanRaidBuffInput2(ActionId.fromSpellId(57567), 'felIntelligence'),
-    // scroll
+    makeBooleanRaidBuffInput2(ActionId.fromItemId(37092), 'scrollOfIntellect'),
 ]);
 export const SpiritBuff = makeMultiIconInput([
     makeBooleanRaidBuffInput2(ActionId.fromSpellId(48073), 'divineSpirit'),
     makeBooleanRaidBuffInput2(ActionId.fromSpellId(57567), 'felIntelligence'),
-    // scroll
+    makeBooleanRaidBuffInput2(ActionId.fromItemId(37098), 'scrollOfSpirit'),
 ]);
 export const AttackPowerBuff = makeMultiIconInput([
     makeBooleanIndividualBuffInput2(ActionId.fromSpellId(20045), 'blessingOfMight', TristateEffect.TristateEffectImproved),
@@ -66,7 +66,7 @@ export const DamagePercentBuff = makeMultiIconInput([
     makeBooleanRaidBuffInput2(ActionId.fromSpellId(34460), 'ferociousInspiration'),
 ]);
 export const DamageReductionPercentBuff = makeMultiIconInput([
-    makeBooleanIndividualBuffInput2(ActionId.fromSpellId(27169), 'blessingOfSanctuary'),
+    makeBooleanIndividualBuffInput2(ActionId.fromSpellId(25889), 'blessingOfSanctuary'),
     // vigilance
     // renewed hope
 ]);
@@ -195,10 +195,6 @@ export const GiftOfArthas = makeBooleanDebuffInput(ActionId.fromSpellId(11374), 
 export const SuperSapper = makeBooleanConsumeInput(ActionId.fromItemId(23827), 'superSapper', [], onSetExplosives);
 export const GoblinSapper = makeBooleanConsumeInput(ActionId.fromItemId(10646), 'goblinSapper', [], onSetExplosives);
 export const KiblersBits = makeEnumValueConsumeInput(ActionId.fromItemId(33874), 'petFood', PetFood.PetFoodKiblersBits, ['Pet Food']);
-export const ScrollOfAgilityV = makeEnumValueConsumeInput(ActionId.fromItemId(27498), 'scrollOfAgility', 5);
-export const ScrollOfSpiritV = makeEnumValueConsumeInput(ActionId.fromItemId(27501), 'scrollOfSpirit', 5, ['Spirit']);
-export const ScrollOfStrengthV = makeEnumValueConsumeInput(ActionId.fromItemId(27503), 'scrollOfStrength', 5);
-export const ScrollOfProtectionV = makeEnumValueConsumeInput(ActionId.fromItemId(27500), 'scrollOfProtection', 5);
 export const PetScrollOfAgilityV = makeEnumValueConsumeInput(ActionId.fromItemId(27498), 'petScrollOfAgility', 5);
 export const PetScrollOfStrengthV = makeEnumValueConsumeInput(ActionId.fromItemId(27503), 'petScrollOfStrength', 5);
 function makeMultiIconInput(inputs) {

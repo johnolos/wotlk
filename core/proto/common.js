@@ -1552,12 +1552,18 @@ class RaidBuffs$Type extends MessageType {
             { no: 32, name: "thorns", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 33, name: "devotion_aura", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 34, name: "retribution_aura", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 38, name: "DrumsOfKings", kind: "scalar", jsonName: "DrumsOfKings", T: 8 /*ScalarType.BOOL*/ },
-            { no: 39, name: "DrumsOfWild", kind: "scalar", jsonName: "DrumsOfWild", T: 8 /*ScalarType.BOOL*/ }
+            { no: 38, name: "drums_of_forgotten_kings", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 39, name: "drums_of_the_wild", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 40, name: "scroll_of_protection", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 41, name: "scroll_of_stamina", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 42, name: "scroll_of_strength", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 43, name: "scroll_of_agility", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 44, name: "scroll_of_intellect", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 45, name: "scroll_of_spirit", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { powerWordFortitude: 0, arcaneBrilliance: false, felIntelligence: false, divineSpirit: false, giftOfTheWild: 0, shadowProtection: false, swiftRetribution: false, moonkinAura: 0, elementalOath: false, totemOfWrath: false, demonicPact: 0, commandingShout: 0, bloodPact: 0, hornOfWinter: false, strengthOfEarthTotem: 0, icyTalons: false, windfuryTotem: 0, battleShout: 0, trueshotAura: false, unleashedRage: false, abominationsMight: false, leaderOfThePack: 0, rampage: false, ferociousInspiration: false, sanctifiedRetribution: false, arcaneEmpowerment: false, manaSpringTotem: 0, wrathOfAirTotem: false, bloodlust: false, thorns: 0, devotionAura: 0, retributionAura: 0, drumsOfKings: false, drumsOfWild: false };
+        const message = { powerWordFortitude: 0, arcaneBrilliance: false, felIntelligence: false, divineSpirit: false, giftOfTheWild: 0, shadowProtection: false, swiftRetribution: false, moonkinAura: 0, elementalOath: false, totemOfWrath: false, demonicPact: 0, commandingShout: 0, bloodPact: 0, hornOfWinter: false, strengthOfEarthTotem: 0, icyTalons: false, windfuryTotem: 0, battleShout: 0, trueshotAura: false, unleashedRage: false, abominationsMight: false, leaderOfThePack: 0, rampage: false, ferociousInspiration: false, sanctifiedRetribution: false, arcaneEmpowerment: false, manaSpringTotem: 0, wrathOfAirTotem: false, bloodlust: false, thorns: 0, devotionAura: 0, retributionAura: 0, drumsOfForgottenKings: false, drumsOfTheWild: false, scrollOfProtection: false, scrollOfStamina: false, scrollOfStrength: false, scrollOfAgility: false, scrollOfIntellect: false, scrollOfSpirit: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1664,11 +1670,29 @@ class RaidBuffs$Type extends MessageType {
                 case /* proto.TristateEffect retribution_aura */ 34:
                     message.retributionAura = reader.int32();
                     break;
-                case /* bool DrumsOfKings = 38 [json_name = "DrumsOfKings"];*/ 38:
-                    message.drumsOfKings = reader.bool();
+                case /* bool drums_of_forgotten_kings */ 38:
+                    message.drumsOfForgottenKings = reader.bool();
                     break;
-                case /* bool DrumsOfWild = 39 [json_name = "DrumsOfWild"];*/ 39:
-                    message.drumsOfWild = reader.bool();
+                case /* bool drums_of_the_wild */ 39:
+                    message.drumsOfTheWild = reader.bool();
+                    break;
+                case /* bool scroll_of_protection */ 40:
+                    message.scrollOfProtection = reader.bool();
+                    break;
+                case /* bool scroll_of_stamina */ 41:
+                    message.scrollOfStamina = reader.bool();
+                    break;
+                case /* bool scroll_of_strength */ 42:
+                    message.scrollOfStrength = reader.bool();
+                    break;
+                case /* bool scroll_of_agility */ 43:
+                    message.scrollOfAgility = reader.bool();
+                    break;
+                case /* bool scroll_of_intellect */ 44:
+                    message.scrollOfIntellect = reader.bool();
+                    break;
+                case /* bool scroll_of_spirit */ 45:
+                    message.scrollOfSpirit = reader.bool();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -1778,12 +1802,30 @@ class RaidBuffs$Type extends MessageType {
         /* proto.TristateEffect retribution_aura = 34; */
         if (message.retributionAura !== 0)
             writer.tag(34, WireType.Varint).int32(message.retributionAura);
-        /* bool DrumsOfKings = 38 [json_name = "DrumsOfKings"]; */
-        if (message.drumsOfKings !== false)
-            writer.tag(38, WireType.Varint).bool(message.drumsOfKings);
-        /* bool DrumsOfWild = 39 [json_name = "DrumsOfWild"]; */
-        if (message.drumsOfWild !== false)
-            writer.tag(39, WireType.Varint).bool(message.drumsOfWild);
+        /* bool drums_of_forgotten_kings = 38; */
+        if (message.drumsOfForgottenKings !== false)
+            writer.tag(38, WireType.Varint).bool(message.drumsOfForgottenKings);
+        /* bool drums_of_the_wild = 39; */
+        if (message.drumsOfTheWild !== false)
+            writer.tag(39, WireType.Varint).bool(message.drumsOfTheWild);
+        /* bool scroll_of_protection = 40; */
+        if (message.scrollOfProtection !== false)
+            writer.tag(40, WireType.Varint).bool(message.scrollOfProtection);
+        /* bool scroll_of_stamina = 41; */
+        if (message.scrollOfStamina !== false)
+            writer.tag(41, WireType.Varint).bool(message.scrollOfStamina);
+        /* bool scroll_of_strength = 42; */
+        if (message.scrollOfStrength !== false)
+            writer.tag(42, WireType.Varint).bool(message.scrollOfStrength);
+        /* bool scroll_of_agility = 43; */
+        if (message.scrollOfAgility !== false)
+            writer.tag(43, WireType.Varint).bool(message.scrollOfAgility);
+        /* bool scroll_of_intellect = 44; */
+        if (message.scrollOfIntellect !== false)
+            writer.tag(44, WireType.Varint).bool(message.scrollOfIntellect);
+        /* bool scroll_of_spirit = 45; */
+        if (message.scrollOfSpirit !== false)
+            writer.tag(45, WireType.Varint).bool(message.scrollOfSpirit);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
@@ -2018,10 +2060,6 @@ class Consumes$Type extends MessageType {
             { no: 33, name: "off_hand_imbue", kind: "enum", T: () => ["proto.WeaponImbue", WeaponImbue] },
             { no: 41, name: "food", kind: "enum", T: () => ["proto.Food", Food] },
             { no: 37, name: "pet_food", kind: "enum", T: () => ["proto.PetFood", PetFood] },
-            { no: 44, name: "scroll_of_agility", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 43, name: "scroll_of_strength", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 45, name: "scroll_of_spirit", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 53, name: "scroll_of_protection", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 46, name: "pet_scroll_of_agility", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 47, name: "pet_scroll_of_strength", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 15, name: "default_potion", kind: "enum", T: () => ["proto.Potions", Potions] },
@@ -2031,13 +2069,11 @@ class Consumes$Type extends MessageType {
             { no: 49, name: "num_starting_conjured", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 50, name: "super_sapper", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 51, name: "goblin_sapper", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 52, name: "filler_explosive", kind: "enum", T: () => ["proto.Explosive", Explosive] },
-            { no: 54, name: "DrumsOfKings", kind: "scalar", jsonName: "DrumsOfKings", T: 8 /*ScalarType.BOOL*/ },
-            { no: 55, name: "DrumsOfWild", kind: "scalar", jsonName: "DrumsOfWild", T: 8 /*ScalarType.BOOL*/ }
+            { no: 52, name: "filler_explosive", kind: "enum", T: () => ["proto.Explosive", Explosive] }
         ]);
     }
     create(value) {
-        const message = { flask: 0, battleElixir: 0, guardianElixir: 0, mainHandImbue: 0, offHandImbue: 0, food: 0, petFood: 0, scrollOfAgility: 0, scrollOfStrength: 0, scrollOfSpirit: 0, scrollOfProtection: 0, petScrollOfAgility: 0, petScrollOfStrength: 0, defaultPotion: 0, prepopPotion: 0, defaultConjured: 0, startingConjured: 0, numStartingConjured: 0, superSapper: false, goblinSapper: false, fillerExplosive: 0, drumsOfKings: false, drumsOfWild: false };
+        const message = { flask: 0, battleElixir: 0, guardianElixir: 0, mainHandImbue: 0, offHandImbue: 0, food: 0, petFood: 0, petScrollOfAgility: 0, petScrollOfStrength: 0, defaultPotion: 0, prepopPotion: 0, defaultConjured: 0, startingConjured: 0, numStartingConjured: 0, superSapper: false, goblinSapper: false, fillerExplosive: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -2069,18 +2105,6 @@ class Consumes$Type extends MessageType {
                 case /* proto.PetFood pet_food */ 37:
                     message.petFood = reader.int32();
                     break;
-                case /* int32 scroll_of_agility */ 44:
-                    message.scrollOfAgility = reader.int32();
-                    break;
-                case /* int32 scroll_of_strength */ 43:
-                    message.scrollOfStrength = reader.int32();
-                    break;
-                case /* int32 scroll_of_spirit */ 45:
-                    message.scrollOfSpirit = reader.int32();
-                    break;
-                case /* int32 scroll_of_protection */ 53:
-                    message.scrollOfProtection = reader.int32();
-                    break;
                 case /* int32 pet_scroll_of_agility */ 46:
                     message.petScrollOfAgility = reader.int32();
                     break;
@@ -2110,12 +2134,6 @@ class Consumes$Type extends MessageType {
                     break;
                 case /* proto.Explosive filler_explosive */ 52:
                     message.fillerExplosive = reader.int32();
-                    break;
-                case /* bool DrumsOfKings = 54 [json_name = "DrumsOfKings"];*/ 54:
-                    message.drumsOfKings = reader.bool();
-                    break;
-                case /* bool DrumsOfWild = 55 [json_name = "DrumsOfWild"];*/ 55:
-                    message.drumsOfWild = reader.bool();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -2150,18 +2168,6 @@ class Consumes$Type extends MessageType {
         /* proto.PetFood pet_food = 37; */
         if (message.petFood !== 0)
             writer.tag(37, WireType.Varint).int32(message.petFood);
-        /* int32 scroll_of_agility = 44; */
-        if (message.scrollOfAgility !== 0)
-            writer.tag(44, WireType.Varint).int32(message.scrollOfAgility);
-        /* int32 scroll_of_strength = 43; */
-        if (message.scrollOfStrength !== 0)
-            writer.tag(43, WireType.Varint).int32(message.scrollOfStrength);
-        /* int32 scroll_of_spirit = 45; */
-        if (message.scrollOfSpirit !== 0)
-            writer.tag(45, WireType.Varint).int32(message.scrollOfSpirit);
-        /* int32 scroll_of_protection = 53; */
-        if (message.scrollOfProtection !== 0)
-            writer.tag(53, WireType.Varint).int32(message.scrollOfProtection);
         /* int32 pet_scroll_of_agility = 46; */
         if (message.petScrollOfAgility !== 0)
             writer.tag(46, WireType.Varint).int32(message.petScrollOfAgility);
@@ -2192,12 +2198,6 @@ class Consumes$Type extends MessageType {
         /* proto.Explosive filler_explosive = 52; */
         if (message.fillerExplosive !== 0)
             writer.tag(52, WireType.Varint).int32(message.fillerExplosive);
-        /* bool DrumsOfKings = 54 [json_name = "DrumsOfKings"]; */
-        if (message.drumsOfKings !== false)
-            writer.tag(54, WireType.Varint).bool(message.drumsOfKings);
-        /* bool DrumsOfWild = 55 [json_name = "DrumsOfWild"]; */
-        if (message.drumsOfWild !== false)
-            writer.tag(55, WireType.Varint).bool(message.drumsOfWild);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
