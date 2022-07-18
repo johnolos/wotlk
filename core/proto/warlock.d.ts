@@ -434,9 +434,9 @@ export declare enum Warlock_Rotation_PrimarySpell {
      */
     UnknownSpell = 0,
     /**
-     * @generated from protobuf enum value: Shadowbolt = 1;
+     * @generated from protobuf enum value: ShadowBolt = 1;
      */
-    Shadowbolt = 1,
+    ShadowBolt = 1,
     /**
      * @generated from protobuf enum value: Incinerate = 2;
      */

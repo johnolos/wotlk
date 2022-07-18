@@ -413,9 +413,9 @@ export interface Debuffs {
     /**
      * 5% spell crit
      *
-     * @generated from protobuf field: bool improved_shadow_bolt = 10;
+     * @generated from protobuf field: bool shadow_mastery = 10;
      */
-    improvedShadowBolt: boolean;
+    shadowMastery: boolean;
     /**
      * @generated from protobuf field: bool improved_scorch = 11;
      */

@@ -53,7 +53,7 @@ export declare const SummonFelguard: {
     setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => void;
     showWhen: (player: Player<Spec.SpecWarlock>) => boolean;
 };
-export declare const PrimarySpellShadowbolt: {
+export declare const PrimarySpellShadowBolt: {
     id: ActionId;
     states: number;
     extraCssClasses: string[];

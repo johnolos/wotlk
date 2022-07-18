@@ -45,9 +45,9 @@ export var Warlock_Rotation_PrimarySpell;
      */
     Warlock_Rotation_PrimarySpell[Warlock_Rotation_PrimarySpell["UnknownSpell"] = 0] = "UnknownSpell";
     /**
-     * @generated from protobuf enum value: Shadowbolt = 1;
+     * @generated from protobuf enum value: ShadowBolt = 1;
      */
-    Warlock_Rotation_PrimarySpell[Warlock_Rotation_PrimarySpell["Shadowbolt"] = 1] = "Shadowbolt";
+    Warlock_Rotation_PrimarySpell[Warlock_Rotation_PrimarySpell["ShadowBolt"] = 1] = "ShadowBolt";
     /**
      * @generated from protobuf enum value: Incinerate = 2;
      */

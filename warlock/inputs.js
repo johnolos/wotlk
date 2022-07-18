@@ -1,4 +1,4 @@
-import { Warlock_Rotation_Type as RotationType, Warlock_Rotation_Preset as RotationPreset, Warlock_Rotation_PrimarySpell as PrimarySpell, Warlock_Rotation_SecondaryDot as SecondaryDot, Warlock_Rotation_SpecSpell as SpecSpell, Warlock_Rotation_Curse as Curse, Warlock_Options_Armor as Armor, Warlock_Options_Summon as Summon } from '/wotlk/core/proto/warlock.js';
+import { Warlock_Rotation_Type as RotationType, Warlock_Rotation_Preset as RotationPreset, Warlock_Rotation_PrimarySpell as PrimarySpell, Warlock_Rotation_SecondaryDot as SecondaryDot, Warlock_Rotation_SpecSpell as SpecSpell, Warlock_Rotation_Curse as Curse, Warlock_Options_Armor as Armor, Warlock_Options_Summon as Summon, } from '/wotlk/core/proto/warlock.js';
 import { Glyphs } from '/wotlk/core/proto/common.js';
 import { ActionId } from '/wotlk/core/proto_utils/action_id.js';
 import { TypedEvent } from '/wotlk/core/typed_event.js';
@@ -90,17 +90,17 @@ export const SummonFelguard = {
     },
     showWhen: (player) => player.getTalents().summonFelguard,
 };
-export const PrimarySpellShadowbolt = {
+export const PrimarySpellShadowBolt = {
     id: ActionId.fromSpellId(47809),
     states: 2,
     extraCssClasses: [
-        'Shadowbolt-picker',
+        'ShadowBolt-picker',
     ],
     changedEvent: (player) => player.rotationChangeEmitter,
-    getValue: (player) => player.getRotation().primarySpell == PrimarySpell.Shadowbolt,
+    getValue: (player) => player.getRotation().primarySpell == PrimarySpell.ShadowBolt,
     setValue: (eventID, player, newValue) => {
         const newRotation = player.getRotation();
-        newRotation.primarySpell = newValue ? PrimarySpell.Shadowbolt : PrimarySpell.Shadowbolt;
+        newRotation.primarySpell = newValue ? PrimarySpell.ShadowBolt : PrimarySpell.ShadowBolt;
         newRotation.preset = RotationPreset.Manual;
         player.setRotation(eventID, newRotation);
     },
@@ -115,7 +115,7 @@ export const PrimarySpellIncinerate = {
     getValue: (player) => player.getRotation().primarySpell == PrimarySpell.Incinerate,
     setValue: (eventID, player, newValue) => {
         const newRotation = player.getRotation();
-        newRotation.primarySpell = newValue ? PrimarySpell.Incinerate : PrimarySpell.Shadowbolt;
+        newRotation.primarySpell = newValue ? PrimarySpell.Incinerate : PrimarySpell.ShadowBolt;
         newRotation.preset = RotationPreset.Manual;
         player.setRotation(eventID, newRotation);
     },
@@ -130,7 +130,7 @@ export const PrimarySpellSeed = {
     getValue: (player) => player.getRotation().primarySpell == PrimarySpell.Seed,
     setValue: (eventID, player, newValue) => {
         const newRotation = player.getRotation();
-        newRotation.primarySpell = newValue ? PrimarySpell.Seed : PrimarySpell.Shadowbolt;
+        newRotation.primarySpell = newValue ? PrimarySpell.Seed : PrimarySpell.ShadowBolt;
         newRotation.preset = RotationPreset.Manual;
         newRotation.corruption = false;
         player.setRotation(eventID, newRotation);
@@ -210,7 +210,7 @@ export const CorruptionSpell = {
     setValue: (eventID, player, newValue) => {
         const newRotation = player.getRotation();
         newRotation.corruption = newValue;
-        newRotation.primarySpell = PrimarySpell.Shadowbolt;
+        newRotation.primarySpell = PrimarySpell.ShadowBolt;
         newRotation.preset = RotationPreset.Manual;
         player.setRotation(eventID, newRotation);
     },

@@ -2222,7 +2222,7 @@ class Debuffs$Type extends MessageType {
             { no: 7, name: "heart_of_the_crusader", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 8, name: "master_poisoner", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 9, name: "totem_of_wrath", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 10, name: "improved_shadow_bolt", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 10, name: "shadow_mastery", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 11, name: "improved_scorch", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 12, name: "winters_chill", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 13, name: "blood_frenzy", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
@@ -2242,7 +2242,7 @@ class Debuffs$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { judgementOfWisdom: false, judgementOfLight: false, misery: false, faerieFire: 0, curseOfElements: false, ebonPlaguebringer: false, earthAndMoon: false, heartOfTheCrusader: false, masterPoisoner: false, totemOfWrath: false, improvedShadowBolt: false, improvedScorch: false, wintersChill: false, bloodFrenzy: false, savageCombat: false, giftOfArthas: false, mangle: false, exposeArmor: 0, sunderArmor: false, curseOfWeakness: 0, demoralizingRoar: 0, demoralizingShout: 0, thunderClap: 0, insectSwarm: false, scorpidSting: false, shadowEmbrace: false, screech: false };
+        const message = { judgementOfWisdom: false, judgementOfLight: false, misery: false, faerieFire: 0, curseOfElements: false, ebonPlaguebringer: false, earthAndMoon: false, heartOfTheCrusader: false, masterPoisoner: false, totemOfWrath: false, shadowMastery: false, improvedScorch: false, wintersChill: false, bloodFrenzy: false, savageCombat: false, giftOfArthas: false, mangle: false, exposeArmor: 0, sunderArmor: false, curseOfWeakness: 0, demoralizingRoar: 0, demoralizingShout: 0, thunderClap: 0, insectSwarm: false, scorpidSting: false, shadowEmbrace: false, screech: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -2283,8 +2283,8 @@ class Debuffs$Type extends MessageType {
                 case /* bool totem_of_wrath */ 9:
                     message.totemOfWrath = reader.bool();
                     break;
-                case /* bool improved_shadow_bolt */ 10:
-                    message.improvedShadowBolt = reader.bool();
+                case /* bool shadow_mastery */ 10:
+                    message.shadowMastery = reader.bool();
                     break;
                 case /* bool improved_scorch */ 11:
                     message.improvedScorch = reader.bool();
@@ -2376,9 +2376,9 @@ class Debuffs$Type extends MessageType {
         /* bool totem_of_wrath = 9; */
         if (message.totemOfWrath !== false)
             writer.tag(9, WireType.Varint).bool(message.totemOfWrath);
-        /* bool improved_shadow_bolt = 10; */
-        if (message.improvedShadowBolt !== false)
-            writer.tag(10, WireType.Varint).bool(message.improvedShadowBolt);
+        /* bool shadow_mastery = 10; */
+        if (message.shadowMastery !== false)
+            writer.tag(10, WireType.Varint).bool(message.shadowMastery);
         /* bool improved_scorch = 11; */
         if (message.improvedScorch !== false)
             writer.tag(11, WireType.Varint).bool(message.improvedScorch);

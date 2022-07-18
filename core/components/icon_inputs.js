@@ -175,7 +175,7 @@ export const PhysicalDamageDebuff = makeMultiIconInput([
     makeBooleanDebuffInput2(ActionId.fromSpellId(58413), 'savageCombat'),
 ]);
 export const SpellCritDebuff = makeMultiIconInput([
-    makeBooleanDebuffInput2(ActionId.fromSpellId(17803), 'improvedShadowBolt'),
+    makeBooleanDebuffInput2(ActionId.fromSpellId(17800), 'shadowMastery'),
     makeBooleanDebuffInput2(ActionId.fromSpellId(12873), 'improvedScorch'),
     makeBooleanDebuffInput2(ActionId.fromSpellId(28593), 'wintersChill'),
 ]);

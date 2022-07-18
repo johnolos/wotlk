@@ -6,7 +6,7 @@ import { Stat } from '/wotlk/core/proto/common.js';
 import { TristateEffect } from '/wotlk/core/proto/common.js';
 import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
-import { Warlock_Options as WarlockOptions, Warlock_Options_Armor, Warlock_Options_Summon } from '/wotlk/core/proto/warlock.js';
+import { Warlock_Options as WarlockOptions, Warlock_Options_Armor, Warlock_Options_Summon, } from '/wotlk/core/proto/warlock.js';
 import * as OtherInputs from '/wotlk/core/components/other_inputs.js';
 import * as WarlockInputs from './inputs.js';
 import * as Presets from './presets.js';
@@ -105,7 +105,7 @@ export class WarlockSimUI extends IndividualSimUI {
             // Inputs to include in the 'Rotation' section on the settings tab.
             rotationInputs: WarlockInputs.WarlockRotationConfig,
             spellInputs: [
-                WarlockInputs.PrimarySpellShadowbolt,
+                WarlockInputs.PrimarySpellShadowBolt,
                 WarlockInputs.PrimarySpellIncinerate,
                 WarlockInputs.PrimarySpellSeed,
                 WarlockInputs.SecondaryDotImmolate,

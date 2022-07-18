@@ -56,7 +56,7 @@ export const DestructionTalents = {
     }),
 };
 export const AfflictionRotation = WarlockRotation.create({
-    primarySpell: PrimarySpell.Shadowbolt,
+    primarySpell: PrimarySpell.ShadowBolt,
     secondaryDot: SecondaryDot.UnstableAffliction,
     specSpell: SpecSpell.Haunt,
     curse: Curse.Agony,
@@ -64,7 +64,7 @@ export const AfflictionRotation = WarlockRotation.create({
     detonateSeed: true,
 });
 export const DemonologyRotation = WarlockRotation.create({
-    primarySpell: PrimarySpell.Shadowbolt,
+    primarySpell: PrimarySpell.ShadowBolt,
     secondaryDot: SecondaryDot.Immolate,
     specSpell: SpecSpell.NoSpecSpell,
     curse: Curse.Doom,
