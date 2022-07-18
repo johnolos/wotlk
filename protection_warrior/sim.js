@@ -6,14 +6,6 @@ import { Stat } from '/wotlk/core/proto/common.js';
 import { TristateEffect } from '/wotlk/core/proto/common.js';
 import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
-import { BattleElixir } from '/wotlk/core/proto/common.js';
-import { Flask } from '/wotlk/core/proto/common.js';
-import { Food } from '/wotlk/core/proto/common.js';
-import { GuardianElixir } from '/wotlk/core/proto/common.js';
-import { Conjured } from '/wotlk/core/proto/common.js';
-import { Potions } from '/wotlk/core/proto/common.js';
-import { WeaponImbue } from '/wotlk/core/proto/common.js';
-import * as IconInputs from '/wotlk/core/components/icon_inputs.js';
 import * as OtherInputs from '/wotlk/core/components/other_inputs.js';
 import * as ProtectionWarriorInputs from './inputs.js';
 import * as Presets from './presets.js';
@@ -121,100 +113,6 @@ export class ProtectionWarriorSimUI extends IndividualSimUI {
                 ProtectionWarriorInputs.ShoutPicker,
                 ProtectionWarriorInputs.ShieldWall,
             ],
-            // IconInputs to include in the 'Other Buffs' section on the settings tab.
-            raidBuffInputs: [
-                IconInputs.PowerWordFortitude,
-                IconInputs.ShadowProtection,
-                IconInputs.GiftOfTheWild,
-                IconInputs.Thorns,
-                IconInputs.Bloodlust,
-                IconInputs.StrengthOfEarthTotem,
-                IconInputs.WindfuryTotem,
-                IconInputs.BattleShout,
-                IconInputs.CommandingShout,
-                IconInputs.LeaderOfThePack,
-                IconInputs.TrueshotAura,
-                IconInputs.DevotionAura,
-                IconInputs.RetributionAura,
-                IconInputs.BloodPact,
-                IconInputs.UnleashedRage,
-            ],
-            partyBuffInputs: [
-                IconInputs.HeroicPresence,
-                IconInputs.BraidedEterniumChain,
-            ],
-            playerBuffInputs: [
-                IconInputs.BlessingOfKings,
-                IconInputs.BlessingOfMight,
-                IconInputs.BlessingOfSanctuary,
-            ],
-            // IconInputs to include in the 'Debuffs' section on the settings tab.
-            debuffInputs: [
-                IconInputs.BloodFrenzy,
-                IconInputs.Mangle,
-                IconInputs.JudgementOfLight,
-                IconInputs.JudgementOfWisdom,
-                IconInputs.FaerieFire,
-                IconInputs.SunderArmor,
-                IconInputs.ExposeArmor,
-                IconInputs.CurseOfWeakness,
-                IconInputs.GiftOfArthas,
-                IconInputs.DemoralizingRoar,
-                IconInputs.DemoralizingShout,
-                IconInputs.Screech,
-                IconInputs.ThunderClap,
-                IconInputs.InsectSwarm,
-                IconInputs.ScorpidSting,
-            ],
-            // Which options are selectable in the 'Consumes' section.
-            consumeOptions: {
-                potions: [
-                    Potions.IronshieldPotion,
-                    Potions.HastePotion,
-                    Potions.MightyRagePotion,
-                    Potions.InsaneStrengthPotion,
-                ],
-                conjured: [
-                    Conjured.ConjuredFlameCap,
-                    Conjured.ConjuredHealthstone,
-                ],
-                flasks: [
-                    Flask.FlaskOfRelentlessAssault,
-                    Flask.FlaskOfFortification,
-                    Flask.FlaskOfChromaticWonder,
-                ],
-                battleElixirs: [
-                    BattleElixir.ElixirOfDemonslaying,
-                    BattleElixir.ElixirOfMajorStrength,
-                    BattleElixir.ElixirOfMajorAgility,
-                    BattleElixir.ElixirOfTheMongoose,
-                    BattleElixir.ElixirOfMastery,
-                ],
-                guardianElixirs: [
-                    GuardianElixir.ElixirOfMajorFortitude,
-                    GuardianElixir.ElixirOfMajorDefense,
-                    GuardianElixir.ElixirOfIronskin,
-                    GuardianElixir.GiftOfArthas,
-                ],
-                food: [
-                    Food.FoodRoastedClefthoof,
-                    Food.FoodGrilledMudfish,
-                    Food.FoodSpicyHotTalbuk,
-                    Food.FoodRavagerDog,
-                    Food.FoodFishermansFeast,
-                ],
-                alcohol: [],
-                weaponImbues: [
-                    WeaponImbue.WeaponImbueAdamantiteSharpeningStone,
-                    WeaponImbue.WeaponImbueAdamantiteWeightstone,
-                    WeaponImbue.WeaponImbueRighteousWeaponCoating,
-                ],
-                other: [
-                    IconInputs.ScrollOfAgilityV,
-                    IconInputs.ScrollOfStrengthV,
-                    IconInputs.ScrollOfProtectionV,
-                ],
-            },
             // Inputs to include in the 'Rotation' section on the settings tab.
             rotationInputs: ProtectionWarriorInputs.ProtectionWarriorRotationConfig,
             // Inputs to include in the 'Other' section on the settings tab.

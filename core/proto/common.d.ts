@@ -296,10 +296,6 @@ export interface Consumes {
      */
     petFood: PetFood;
     /**
-     * @generated from protobuf field: proto.Alchohol alchohol = 42;
-     */
-    alchohol: Alchohol;
-    /**
      * 0 means no scroll, otherwise value is the scroll level.
      * E.g. 5 indicates Scroll of Agility V.
      *
@@ -2243,22 +2239,15 @@ export declare enum PetFood {
      */
     PetFoodUnknown = 0,
     /**
-     * @generated from protobuf enum value: PetFoodKiblersBits = 1;
+     * @generated from protobuf enum value: PetFoodSpicyMammothTreats = 1;
      */
-    PetFoodKiblersBits = 1
-}
-/**
- * @generated from protobuf enum proto.Alchohol
- */
-export declare enum Alchohol {
+    PetFoodSpicyMammothTreats = 1,
     /**
-     * @generated from protobuf enum value: AlchoholUnknown = 0;
+     * TBC
+     *
+     * @generated from protobuf enum value: PetFoodKiblersBits = 2;
      */
-    AlchoholUnknown = 0,
-    /**
-     * @generated from protobuf enum value: AlchoholKreegsStoutBeatdown = 1;
-     */
-    AlchoholKreegsStoutBeatdown = 1
+    PetFoodKiblersBits = 2
 }
 /**
  * @generated from protobuf enum proto.MobType

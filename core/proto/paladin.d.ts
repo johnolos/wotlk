@@ -348,69 +348,31 @@ export interface RetributionPaladin {
  * @generated from protobuf message proto.RetributionPaladin.Rotation
  */
 export interface RetributionPaladin_Rotation {
-    /**
-     * @generated from protobuf field: proto.RetributionPaladin.Rotation.ConsecrationRank consecration_rank = 1;
-     */
-    consecrationRank: RetributionPaladin_Rotation_ConsecrationRank;
-    /**
-     * @generated from protobuf field: bool use_exorcism = 2;
-     */
-    useExorcism: boolean;
-}
-/**
- * @generated from protobuf enum proto.RetributionPaladin.Rotation.ConsecrationRank
- */
-export declare enum RetributionPaladin_Rotation_ConsecrationRank {
-    /**
-     * @generated from protobuf enum value: None = 0;
-     */
-    None = 0,
-    /**
-     * @generated from protobuf enum value: Rank1 = 1;
-     */
-    Rank1 = 1,
-    /**
-     * @generated from protobuf enum value: Rank4 = 2;
-     */
-    Rank4 = 2,
-    /**
-     * @generated from protobuf enum value: Rank6 = 3;
-     */
-    Rank6 = 3
 }
 /**
  * @generated from protobuf message proto.RetributionPaladin.Options
  */
 export interface RetributionPaladin_Options {
     /**
-     * @generated from protobuf field: proto.RetributionPaladin.Options.Judgement judgement = 1;
+     * @generated from protobuf field: proto.PaladinJudgement judgement = 1;
      */
-    judgement: RetributionPaladin_Options_Judgement;
+    judgement: PaladinJudgement;
     /**
-     * @generated from protobuf field: proto.PaladinAura aura = 5;
+     * @generated from protobuf field: proto.PaladinSeal seal = 2;
+     */
+    seal: PaladinSeal;
+    /**
+     * @generated from protobuf field: proto.PaladinAura aura = 3;
      */
     aura: PaladinAura;
     /**
      * @generated from protobuf field: double damage_taken_per_second = 4;
      */
     damageTakenPerSecond: number;
-}
-/**
- * @generated from protobuf enum proto.RetributionPaladin.Options.Judgement
- */
-export declare enum RetributionPaladin_Options_Judgement {
     /**
-     * @generated from protobuf enum value: None = 0;
+     * @generated from protobuf field: bool use_avenging_wrath = 5;
      */
-    None = 0,
-    /**
-     * @generated from protobuf enum value: Wisdom = 1;
-     */
-    Wisdom = 1,
-    /**
-     * @generated from protobuf enum value: Light = 2;
-     */
-    Light = 2
+    useAvengingWrath: boolean;
 }
 /**
  * @generated from protobuf message proto.ProtectionPaladin
@@ -437,29 +399,29 @@ export interface ProtectionPaladin_Rotation {
      * @generated from protobuf field: bool prioritize_holy_shield = 1;
      */
     prioritizeHolyShield: boolean;
-    /**
-     * @generated from protobuf field: int32 consecration_rank = 2;
-     */
-    consecrationRank: number;
-    /**
-     * @generated from protobuf field: bool use_exorcism = 3;
-     */
-    useExorcism: boolean;
-    /**
-     * @generated from protobuf field: proto.PaladinJudgement maintain_judgement = 4;
-     */
-    maintainJudgement: PaladinJudgement;
 }
 /**
  * @generated from protobuf message proto.ProtectionPaladin.Options
  */
 export interface ProtectionPaladin_Options {
     /**
-     * @generated from protobuf field: proto.PaladinAura aura = 1;
+     * @generated from protobuf field: proto.PaladinJudgement judgement = 1;
+     */
+    judgement: PaladinJudgement;
+    /**
+     * @generated from protobuf field: proto.PaladinSeal seal = 2;
+     */
+    seal: PaladinSeal;
+    /**
+     * @generated from protobuf field: proto.PaladinAura aura = 3;
      */
     aura: PaladinAura;
     /**
-     * @generated from protobuf field: bool use_avenging_wrath = 2;
+     * @generated from protobuf field: double damage_taken_per_second = 4;
+     */
+    damageTakenPerSecond: number;
+    /**
+     * @generated from protobuf field: bool use_avenging_wrath = 5;
      */
     useAvengingWrath: boolean;
 }
@@ -659,10 +621,6 @@ export declare enum PaladinAura {
      */
     NoPaladinAura = 0,
     /**
-     * @generated from protobuf enum value: SanctityAura = 1;
-     */
-    SanctityAura = 1,
-    /**
      * @generated from protobuf enum value: DevotionAura = 2;
      */
     DevotionAura = 2,
@@ -672,33 +630,34 @@ export declare enum PaladinAura {
     RetributionAura = 3
 }
 /**
+ * @generated from protobuf enum proto.PaladinSeal
+ */
+export declare enum PaladinSeal {
+    /**
+     * @generated from protobuf enum value: Vengeance = 0;
+     */
+    Vengeance = 0,
+    /**
+     * @generated from protobuf enum value: Command = 1;
+     */
+    Command = 1,
+    /**
+     * @generated from protobuf enum value: Righteousness = 2;
+     */
+    Righteousness = 2
+}
+/**
  * @generated from protobuf enum proto.PaladinJudgement
  */
 export declare enum PaladinJudgement {
     /**
-     * @generated from protobuf enum value: NoPaladinJudgement = 0;
+     * @generated from protobuf enum value: JudgementOfWisdom = 0;
      */
-    NoPaladinJudgement = 0,
+    JudgementOfWisdom = 0,
     /**
-     * @generated from protobuf enum value: JudgementOfWisdom = 1;
+     * @generated from protobuf enum value: JudgementOfLight = 1;
      */
-    JudgementOfWisdom = 1,
-    /**
-     * @generated from protobuf enum value: JudgementOfLight = 2;
-     */
-    JudgementOfLight = 2,
-    /**
-     * @generated from protobuf enum value: JudgementOfCrusader = 3;
-     */
-    JudgementOfCrusader = 3,
-    /**
-     * @generated from protobuf enum value: JudgementOfVengeance = 4;
-     */
-    JudgementOfVengeance = 4,
-    /**
-     * @generated from protobuf enum value: JudgementOfRighteousness = 5;
-     */
-    JudgementOfRighteousness = 5
+    JudgementOfLight = 1
 }
 declare class PaladinTalents$Type extends MessageType<PaladinTalents> {
     constructor();

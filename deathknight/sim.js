@@ -6,12 +6,6 @@ import { Stat } from '/wotlk/core/proto/common.js';
 import { TristateEffect } from '/wotlk/core/proto/common.js';
 import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
-import { BattleElixir } from '/wotlk/core/proto/common.js';
-import { Flask } from '/wotlk/core/proto/common.js';
-import { Food } from '/wotlk/core/proto/common.js';
-import { Conjured } from '/wotlk/core/proto/common.js';
-import { Potions } from '/wotlk/core/proto/common.js';
-import * as IconInputs from '/wotlk/core/components/icon_inputs.js';
 import * as OtherInputs from '/wotlk/core/components/other_inputs.js';
 import * as DeathKnightInputs from './inputs.js';
 import * as Presets from './presets.js';
@@ -99,80 +93,6 @@ export class DeathKnightSimUI extends IndividualSimUI {
             },
             // IconInputs to include in the 'Self Buffs' section on the settings tab.
             selfBuffInputs: [],
-            // IconInputs to include in the 'Other Buffs' section on the settings tab.
-            raidBuffInputs: [
-                IconInputs.GiftOfTheWild,
-                IconInputs.Bloodlust,
-                IconInputs.WrathOfAirTotem,
-                IconInputs.TotemOfWrath,
-                IconInputs.BattleShout,
-                IconInputs.LeaderOfThePack,
-                IconInputs.MoonkinAura,
-                IconInputs.TrueshotAura,
-                IconInputs.AbominationsMight,
-                IconInputs.IcyTalons,
-            ],
-            partyBuffInputs: [],
-            playerBuffInputs: [
-                IconInputs.BlessingOfKings,
-                IconInputs.BlessingOfWisdom,
-                IconInputs.BlessingOfMight,
-            ],
-            // IconInputs to include in the 'Debuffs' section on the settings tab.
-            debuffInputs: [
-                IconInputs.BloodFrenzy,
-                IconInputs.JudgementOfWisdom,
-                IconInputs.FaerieFire,
-                IconInputs.SunderArmor,
-                IconInputs.ExposeArmor,
-                IconInputs.CurseOfWeakness,
-                IconInputs.CurseOfElements,
-                IconInputs.EbonPlagueBringer,
-                IconInputs.Misery,
-                IconInputs.ImprovedScorch,
-                IconInputs.WintersChill,
-                IconInputs.GiftOfArthas,
-            ],
-            // Which options are selectable in the 'Consumes' section.
-            consumeOptions: {
-                potions: [
-                    Potions.PotionOfSpeed,
-                    Potions.HastePotion,
-                    Potions.InsaneStrengthPotion,
-                    Potions.MightyRagePotion,
-                ],
-                conjured: [
-                    Conjured.ConjuredFlameCap,
-                ],
-                flasks: [
-                    Flask.FlaskOfEndlessRage,
-                    Flask.FlaskOfRelentlessAssault,
-                ],
-                battleElixirs: [
-                    BattleElixir.ElixirOfDemonslaying,
-                    BattleElixir.ElixirOfMajorStrength,
-                    BattleElixir.ElixirOfMajorAgility,
-                    BattleElixir.ElixirOfTheMongoose,
-                    BattleElixir.FelStrengthElixir,
-                ],
-                guardianElixirs: [],
-                food: [
-                    Food.FoodDragonfinFilet,
-                    Food.FoodRoastedClefthoof,
-                    Food.FoodGrilledMudfish,
-                    Food.FoodSpicyHotTalbuk,
-                    Food.FoodRavagerDog,
-                ],
-                alcohol: [],
-                weaponImbues: [],
-                pet: [
-                    IconInputs.KiblersBits,
-                ],
-                other: [
-                    IconInputs.ScrollOfAgilityV,
-                    IconInputs.ScrollOfStrengthV,
-                ],
-            },
             // Inputs to include in the 'Rotation' section on the settings tab.
             rotationInputs: DeathKnightInputs.DeathKnightRotationConfig,
             // Inputs to include in the 'Other' section on the settings tab.

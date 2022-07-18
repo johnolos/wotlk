@@ -1,0 +1,63 @@
+import { Component } from './component.js';
+import { IconPicker } from './icon_picker.js';
+// Icon-based UI for a dropdown with multiple icon pickers.
+// ModObject is the object being modified (Sim, Player, or Target).
+export class MultiIconPicker extends Component {
+    constructor(parent, modObj, config, simUI) {
+        super(parent, 'multi-icon-picker-root');
+        this.config = config;
+        this.currentValue = null;
+        this.rootElem.classList.add('dropdown-root');
+        this.rootElem.innerHTML = `
+			<a class="dropdown-button multi-icon-picker-button"></a>
+			<div class="dropdown-panel multi-icon-picker-dropdown"></div>
+    `;
+        this.buttonElem = this.rootElem.getElementsByClassName('multi-icon-picker-button')[0];
+        const dropdownElem = this.rootElem.getElementsByClassName('multi-icon-picker-dropdown')[0];
+        this.buttonElem.addEventListener('click', event => {
+            event.preventDefault();
+        });
+        this.buttonElem.addEventListener('touchstart', event => {
+            if (dropdownElem.style.display == "block") {
+                dropdownElem.style.display = "none";
+            }
+            else {
+                dropdownElem.style.display = "block";
+            }
+            event.preventDefault();
+        });
+        this.buttonElem.addEventListener('touchend', event => {
+            event.preventDefault();
+        });
+        dropdownElem.style.gridTemplateColumns = `repeat(${this.config.numColumns}, 1fr)`;
+        this.pickers = config.inputs.map((pickerConfig, i) => {
+            const optionContainer = document.createElement('div');
+            optionContainer.classList.add('dropdown-option-container');
+            dropdownElem.appendChild(optionContainer);
+            const option = document.createElement('a');
+            option.classList.add('dropdown-option', 'multi-icon-picker-option');
+            optionContainer.appendChild(option);
+            const picker = new IconPicker(option, modObj, pickerConfig);
+            picker.changeEmitter.on(() => {
+                this.updateButtonImage();
+            });
+            return picker;
+        });
+        simUI.sim.waitForInit().then(() => this.updateButtonImage());
+    }
+    updateButtonImage() {
+        this.currentValue = this.getMaxValue();
+        if (this.currentValue) {
+            this.rootElem.classList.add('active');
+            this.currentValue.fillAndSet(this.buttonElem, true, true);
+        }
+        else {
+            this.rootElem.classList.remove('active');
+            this.buttonElem.style.backgroundImage = '';
+            this.buttonElem.style.backgroundColor = this.config.emptyColor;
+        }
+    }
+    getMaxValue() {
+        return this.pickers.map(picker => picker.getActionId()).filter(id => id != null)[0] || null;
+    }
+}

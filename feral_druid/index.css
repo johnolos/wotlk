@@ -1829,6 +1829,34 @@ input, select {
   display: block;
 }
 
+.multi-icon-picker-root {
+  border: 2px solid dimgray;
+  transition: 0.2s ease-in;
+  margin: 2px;
+}
+
+.multi-icon-picker-root a {
+  height: 45px;
+  width: 45px;
+  display: block;
+}
+
+.multi-icon-picker-root.active {
+  border-color: lawngreen;
+}
+
+.multi-icon-picker-root.disabled {
+  border-color: dimgray;
+}
+
+.multi-icon-picker-button {
+  background-size: cover;
+}
+
+.multi-icon-picker-option {
+  background-size: cover;
+}
+
 .input-label-div {
   display: inline-block;
   margin: 5px;

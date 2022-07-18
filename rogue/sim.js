@@ -6,13 +6,6 @@ import { Stat } from '/wotlk/core/proto/common.js';
 import { TristateEffect } from '/wotlk/core/proto/common.js';
 import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
-import { BattleElixir } from '/wotlk/core/proto/common.js';
-import { Flask } from '/wotlk/core/proto/common.js';
-import { Food } from '/wotlk/core/proto/common.js';
-import { Conjured } from '/wotlk/core/proto/common.js';
-import { Potions } from '/wotlk/core/proto/common.js';
-import { WeaponImbue } from '/wotlk/core/proto/common.js';
-import * as IconInputs from '/wotlk/core/components/icon_inputs.js';
 import * as OtherInputs from '/wotlk/core/components/other_inputs.js';
 import * as RogueInputs from './inputs.js';
 import * as Presets from './presets.js';
@@ -112,68 +105,10 @@ export class RogueSimUI extends IndividualSimUI {
             },
             // IconInputs to include in the 'Self Buffs' section on the settings tab.
             selfBuffInputs: [],
-            // IconInputs to include in the 'Other Buffs' section on the settings tab.
-            raidBuffInputs: [
-                IconInputs.GiftOfTheWild,
-                IconInputs.Bloodlust,
-                IconInputs.HornOfWinter,
-                IconInputs.LeaderOfThePack,
-                IconInputs.AbominationsMight,
-                IconInputs.ImprovedIcyTalons,
-                IconInputs.SanctifiedRetribution,
-                IconInputs.SwiftRetribution,
-            ],
-            partyBuffInputs: [
-                IconInputs.HeroicPresence,
-            ],
-            playerBuffInputs: [
-                IconInputs.BlessingOfKings,
-                IconInputs.BlessingOfMight,
-            ],
-            // IconInputs to include in the 'Debuffs' section on the settings tab.
-            debuffInputs: [
-                IconInputs.SavageCombat,
-                IconInputs.HeartOfTheCrusader,
-                IconInputs.Mangle,
-                IconInputs.FaerieFire,
-                IconInputs.ExposeArmor,
-                IconInputs.Misery,
-            ],
-            // Which options are selectable in the 'Consumes' section.
-            consumeOptions: {
-                potions: [
-                    Potions.PotionOfSpeed,
-                ],
-                conjured: [
-                    Conjured.ConjuredRogueThistleTea,
-                ],
-                flasks: [
-                    Flask.FlaskOfEndlessRage,
-                ],
-                battleElixirs: [
-                    BattleElixir.ElixirOfAccuracy,
-                    BattleElixir.ElixirOfArmorPiercing,
-                    BattleElixir.ElixirOfDeadlyStrikes,
-                    BattleElixir.ElixirOfDemonslaying,
-                ],
-                guardianElixirs: [],
-                food: [
-                    Food.FoodFishFeast,
-                    Food.FoodGreatFeast,
-                ],
-                alcohol: [],
-                weaponImbues: [
-                    WeaponImbue.WeaponImbueRogueDeadlyPoison,
-                    WeaponImbue.WeaponImbueRogueInstantPoison,
-                    WeaponImbue.WeaponImbueAdamantiteSharpeningStone,
-                    WeaponImbue.WeaponImbueAdamantiteWeightstone,
-                    WeaponImbue.WeaponImbueRighteousWeaponCoating,
-                ],
-                other: [
-                    IconInputs.ScrollOfAgilityV,
-                    IconInputs.ScrollOfStrengthV,
-                ],
-            },
+            //	weaponImbues: [
+            //		WeaponImbue.WeaponImbueRogueDeadlyPoison,
+            //		WeaponImbue.WeaponImbueRogueInstantPoison,
+            //	],
             // Inputs to include in the 'Rotation' section on the settings tab.
             rotationInputs: RogueInputs.RogueRotationConfig,
             // Inputs to include in the 'Other' section on the settings tab.

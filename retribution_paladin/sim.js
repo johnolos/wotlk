@@ -6,15 +6,6 @@ import { Stat } from '/wotlk/core/proto/common.js';
 import { TristateEffect } from '/wotlk/core/proto/common.js';
 import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
-import { Alchohol } from '/wotlk/core/proto/common.js';
-import { BattleElixir } from '/wotlk/core/proto/common.js';
-import { Flask } from '/wotlk/core/proto/common.js';
-import { Food } from '/wotlk/core/proto/common.js';
-import { GuardianElixir } from '/wotlk/core/proto/common.js';
-import { Conjured } from '/wotlk/core/proto/common.js';
-import { Potions } from '/wotlk/core/proto/common.js';
-import { WeaponImbue } from '/wotlk/core/proto/common.js';
-import * as IconInputs from '/wotlk/core/components/icon_inputs.js';
 import * as OtherInputs from '/wotlk/core/components/other_inputs.js';
 import * as RetributionPaladinInputs from './inputs.js';
 import * as Presets from './presets.js';
@@ -88,7 +79,7 @@ export class RetributionPaladinSimUI extends IndividualSimUI {
                 // Default rotation settings.
                 rotation: Presets.DefaultRotation,
                 // Default talents.
-                talents: Presets.RetKingsPaladinTalents.data,
+                talents: Presets.AuraMasteryTalents.data,
                 // Default spec-specific settings.
                 specOptions: Presets.DefaultOptions,
                 // Default raid/party buffs settings.
@@ -121,85 +112,6 @@ export class RetributionPaladinSimUI extends IndividualSimUI {
             },
             // IconInputs to include in the 'Self Buffs' section on the settings tab.
             selfBuffInputs: [],
-            // IconInputs to include in the 'Other Buffs' section on the settings tab.
-            raidBuffInputs: [
-                IconInputs.ArcaneBrilliance,
-                IconInputs.GiftOfTheWild,
-                IconInputs.DivineSpirit,
-                IconInputs.Bloodlust,
-                IconInputs.ManaSpringTotem,
-                IconInputs.WindfuryTotem,
-                IconInputs.StrengthOfEarthTotem,
-                IconInputs.BattleShout,
-                IconInputs.LeaderOfThePack,
-                IconInputs.TrueshotAura,
-                IconInputs.UnleashedRage,
-            ],
-            partyBuffInputs: [
-                IconInputs.HeroicPresence,
-                IconInputs.BraidedEterniumChain,
-            ],
-            playerBuffInputs: [
-                IconInputs.BlessingOfKings,
-                IconInputs.BlessingOfWisdom,
-                IconInputs.BlessingOfMight,
-            ],
-            // IconInputs to include in the 'Debuffs' section on the settings tab.
-            debuffInputs: [
-                IconInputs.JudgementOfWisdom,
-                IconInputs.ExposeArmor,
-                IconInputs.SunderArmor,
-                IconInputs.BloodFrenzy,
-                IconInputs.FaerieFire,
-                IconInputs.CurseOfWeakness,
-                IconInputs.CurseOfElements,
-                IconInputs.Misery,
-                IconInputs.GiftOfArthas,
-            ],
-            // Which options are selectable in the 'Consumes' section.
-            consumeOptions: {
-                potions: [
-                    Potions.HastePotion,
-                    Potions.SuperManaPotion,
-                ],
-                conjured: [
-                    Conjured.ConjuredDarkRune,
-                    Conjured.ConjuredFlameCap,
-                ],
-                flasks: [
-                    Flask.FlaskOfRelentlessAssault,
-                ],
-                battleElixirs: [
-                    BattleElixir.ElixirOfDemonslaying,
-                    BattleElixir.ElixirOfMajorStrength,
-                    BattleElixir.ElixirOfMajorAgility,
-                    BattleElixir.ElixirOfTheMongoose,
-                ],
-                guardianElixirs: [
-                    GuardianElixir.ElixirOfDraenicWisdom,
-                    GuardianElixir.ElixirOfMajorMageblood,
-                ],
-                food: [
-                    Food.FoodRoastedClefthoof,
-                    Food.FoodGrilledMudfish,
-                    Food.FoodSpicyHotTalbuk,
-                    Food.FoodBlackenedBasilisk,
-                ],
-                alcohol: [
-                    Alchohol.AlchoholKreegsStoutBeatdown,
-                ],
-                weaponImbues: [
-                    WeaponImbue.WeaponImbueAdamantiteSharpeningStone,
-                    WeaponImbue.WeaponImbueAdamantiteWeightstone,
-                    WeaponImbue.WeaponImbueBrilliantWizardOil,
-                    WeaponImbue.WeaponImbueSuperiorWizardOil,
-                    WeaponImbue.WeaponImbueRighteousWeaponCoating,
-                ],
-                other: [
-                    IconInputs.ScrollOfStrengthV,
-                    IconInputs.ScrollOfAgilityV,
-                ],
-            },
             // Inputs to include in the 'Rotation' section on the settings tab.
             rotationInputs: RetributionPaladinInputs.RetributionPaladinRotationConfig,
             // Inputs to include in the 'Other' section on the settings tab.
@@ -207,6 +119,7 @@ export class RetributionPaladinSimUI extends IndividualSimUI {
                 inputs: [
                     RetributionPaladinInputs.AuraSelection,
                     RetributionPaladinInputs.JudgementSelection,
+                    RetributionPaladinInputs.StartingSealSelection,
                     RetributionPaladinInputs.DamgeTakenPerSecond,
                     OtherInputs.TankAssignment,
                     OtherInputs.InFrontOfTarget,
@@ -223,8 +136,8 @@ export class RetributionPaladinSimUI extends IndividualSimUI {
             presets: {
                 // Preset talents that the user can quickly select.
                 talents: [
-                    Presets.RetKingsPaladinTalents,
-                    Presets.RetNoKingsPaladinTalents,
+                    Presets.AuraMasteryTalents,
+                    Presets.DivineSacTalents,
                 ],
                 // Preset gear configurations that the user can quickly select.
                 gear: [

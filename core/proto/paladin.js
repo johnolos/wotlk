@@ -4,46 +4,6 @@ import { reflectionMergePartial } from '/wotlk/protobuf-ts/index.js';
 import { MESSAGE_TYPE } from '/wotlk/protobuf-ts/index.js';
 import { MessageType } from '/wotlk/protobuf-ts/index.js';
 /**
- * @generated from protobuf enum proto.RetributionPaladin.Rotation.ConsecrationRank
- */
-export var RetributionPaladin_Rotation_ConsecrationRank;
-(function (RetributionPaladin_Rotation_ConsecrationRank) {
-    /**
-     * @generated from protobuf enum value: None = 0;
-     */
-    RetributionPaladin_Rotation_ConsecrationRank[RetributionPaladin_Rotation_ConsecrationRank["None"] = 0] = "None";
-    /**
-     * @generated from protobuf enum value: Rank1 = 1;
-     */
-    RetributionPaladin_Rotation_ConsecrationRank[RetributionPaladin_Rotation_ConsecrationRank["Rank1"] = 1] = "Rank1";
-    /**
-     * @generated from protobuf enum value: Rank4 = 2;
-     */
-    RetributionPaladin_Rotation_ConsecrationRank[RetributionPaladin_Rotation_ConsecrationRank["Rank4"] = 2] = "Rank4";
-    /**
-     * @generated from protobuf enum value: Rank6 = 3;
-     */
-    RetributionPaladin_Rotation_ConsecrationRank[RetributionPaladin_Rotation_ConsecrationRank["Rank6"] = 3] = "Rank6";
-})(RetributionPaladin_Rotation_ConsecrationRank || (RetributionPaladin_Rotation_ConsecrationRank = {}));
-/**
- * @generated from protobuf enum proto.RetributionPaladin.Options.Judgement
- */
-export var RetributionPaladin_Options_Judgement;
-(function (RetributionPaladin_Options_Judgement) {
-    /**
-     * @generated from protobuf enum value: None = 0;
-     */
-    RetributionPaladin_Options_Judgement[RetributionPaladin_Options_Judgement["None"] = 0] = "None";
-    /**
-     * @generated from protobuf enum value: Wisdom = 1;
-     */
-    RetributionPaladin_Options_Judgement[RetributionPaladin_Options_Judgement["Wisdom"] = 1] = "Wisdom";
-    /**
-     * @generated from protobuf enum value: Light = 2;
-     */
-    RetributionPaladin_Options_Judgement[RetributionPaladin_Options_Judgement["Light"] = 2] = "Light";
-})(RetributionPaladin_Options_Judgement || (RetributionPaladin_Options_Judgement = {}));
-/**
  * @generated from protobuf enum proto.PaladinMajorGlyph
  */
 export var PaladinMajorGlyph;
@@ -243,10 +203,6 @@ export var PaladinAura;
      */
     PaladinAura[PaladinAura["NoPaladinAura"] = 0] = "NoPaladinAura";
     /**
-     * @generated from protobuf enum value: SanctityAura = 1;
-     */
-    PaladinAura[PaladinAura["SanctityAura"] = 1] = "SanctityAura";
-    /**
      * @generated from protobuf enum value: DevotionAura = 2;
      */
     PaladinAura[PaladinAura["DevotionAura"] = 2] = "DevotionAura";
@@ -256,34 +212,36 @@ export var PaladinAura;
     PaladinAura[PaladinAura["RetributionAura"] = 3] = "RetributionAura";
 })(PaladinAura || (PaladinAura = {}));
 /**
+ * @generated from protobuf enum proto.PaladinSeal
+ */
+export var PaladinSeal;
+(function (PaladinSeal) {
+    /**
+     * @generated from protobuf enum value: Vengeance = 0;
+     */
+    PaladinSeal[PaladinSeal["Vengeance"] = 0] = "Vengeance";
+    /**
+     * @generated from protobuf enum value: Command = 1;
+     */
+    PaladinSeal[PaladinSeal["Command"] = 1] = "Command";
+    /**
+     * @generated from protobuf enum value: Righteousness = 2;
+     */
+    PaladinSeal[PaladinSeal["Righteousness"] = 2] = "Righteousness";
+})(PaladinSeal || (PaladinSeal = {}));
+/**
  * @generated from protobuf enum proto.PaladinJudgement
  */
 export var PaladinJudgement;
 (function (PaladinJudgement) {
     /**
-     * @generated from protobuf enum value: NoPaladinJudgement = 0;
+     * @generated from protobuf enum value: JudgementOfWisdom = 0;
      */
-    PaladinJudgement[PaladinJudgement["NoPaladinJudgement"] = 0] = "NoPaladinJudgement";
+    PaladinJudgement[PaladinJudgement["JudgementOfWisdom"] = 0] = "JudgementOfWisdom";
     /**
-     * @generated from protobuf enum value: JudgementOfWisdom = 1;
+     * @generated from protobuf enum value: JudgementOfLight = 1;
      */
-    PaladinJudgement[PaladinJudgement["JudgementOfWisdom"] = 1] = "JudgementOfWisdom";
-    /**
-     * @generated from protobuf enum value: JudgementOfLight = 2;
-     */
-    PaladinJudgement[PaladinJudgement["JudgementOfLight"] = 2] = "JudgementOfLight";
-    /**
-     * @generated from protobuf enum value: JudgementOfCrusader = 3;
-     */
-    PaladinJudgement[PaladinJudgement["JudgementOfCrusader"] = 3] = "JudgementOfCrusader";
-    /**
-     * @generated from protobuf enum value: JudgementOfVengeance = 4;
-     */
-    PaladinJudgement[PaladinJudgement["JudgementOfVengeance"] = 4] = "JudgementOfVengeance";
-    /**
-     * @generated from protobuf enum value: JudgementOfRighteousness = 5;
-     */
-    PaladinJudgement[PaladinJudgement["JudgementOfRighteousness"] = 5] = "JudgementOfRighteousness";
+    PaladinJudgement[PaladinJudgement["JudgementOfLight"] = 1] = "JudgementOfLight";
 })(PaladinJudgement || (PaladinJudgement = {}));
 // @generated message type with reflection information, may provide speed optimized methods
 class PaladinTalents$Type extends MessageType {
@@ -935,47 +893,19 @@ export const RetributionPaladin = new RetributionPaladin$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class RetributionPaladin_Rotation$Type extends MessageType {
     constructor() {
-        super("proto.RetributionPaladin.Rotation", [
-            { no: 1, name: "consecration_rank", kind: "enum", T: () => ["proto.RetributionPaladin.Rotation.ConsecrationRank", RetributionPaladin_Rotation_ConsecrationRank] },
-            { no: 2, name: "use_exorcism", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
-        ]);
+        super("proto.RetributionPaladin.Rotation", []);
     }
     create(value) {
-        const message = { consecrationRank: 0, useExorcism: false };
+        const message = {};
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
         return message;
     }
     internalBinaryRead(reader, length, options, target) {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* proto.RetributionPaladin.Rotation.ConsecrationRank consecration_rank */ 1:
-                    message.consecrationRank = reader.int32();
-                    break;
-                case /* bool use_exorcism */ 2:
-                    message.useExorcism = reader.bool();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
+        return target ?? this.create();
     }
     internalBinaryWrite(message, writer, options) {
-        /* proto.RetributionPaladin.Rotation.ConsecrationRank consecration_rank = 1; */
-        if (message.consecrationRank !== 0)
-            writer.tag(1, WireType.Varint).int32(message.consecrationRank);
-        /* bool use_exorcism = 2; */
-        if (message.useExorcism !== false)
-            writer.tag(2, WireType.Varint).bool(message.useExorcism);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
@@ -990,13 +920,15 @@ export const RetributionPaladin_Rotation = new RetributionPaladin_Rotation$Type(
 class RetributionPaladin_Options$Type extends MessageType {
     constructor() {
         super("proto.RetributionPaladin.Options", [
-            { no: 1, name: "judgement", kind: "enum", T: () => ["proto.RetributionPaladin.Options.Judgement", RetributionPaladin_Options_Judgement] },
-            { no: 5, name: "aura", kind: "enum", T: () => ["proto.PaladinAura", PaladinAura] },
-            { no: 4, name: "damage_taken_per_second", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ }
+            { no: 1, name: "judgement", kind: "enum", T: () => ["proto.PaladinJudgement", PaladinJudgement] },
+            { no: 2, name: "seal", kind: "enum", T: () => ["proto.PaladinSeal", PaladinSeal] },
+            { no: 3, name: "aura", kind: "enum", T: () => ["proto.PaladinAura", PaladinAura] },
+            { no: 4, name: "damage_taken_per_second", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
+            { no: 5, name: "use_avenging_wrath", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { judgement: 0, aura: 0, damageTakenPerSecond: 0 };
+        const message = { judgement: 0, seal: 0, aura: 0, damageTakenPerSecond: 0, useAvengingWrath: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1007,14 +939,20 @@ class RetributionPaladin_Options$Type extends MessageType {
         while (reader.pos < end) {
             let [fieldNo, wireType] = reader.tag();
             switch (fieldNo) {
-                case /* proto.RetributionPaladin.Options.Judgement judgement */ 1:
+                case /* proto.PaladinJudgement judgement */ 1:
                     message.judgement = reader.int32();
                     break;
-                case /* proto.PaladinAura aura */ 5:
+                case /* proto.PaladinSeal seal */ 2:
+                    message.seal = reader.int32();
+                    break;
+                case /* proto.PaladinAura aura */ 3:
                     message.aura = reader.int32();
                     break;
                 case /* double damage_taken_per_second */ 4:
                     message.damageTakenPerSecond = reader.double();
+                    break;
+                case /* bool use_avenging_wrath */ 5:
+                    message.useAvengingWrath = reader.bool();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -1028,15 +966,21 @@ class RetributionPaladin_Options$Type extends MessageType {
         return message;
     }
     internalBinaryWrite(message, writer, options) {
-        /* proto.RetributionPaladin.Options.Judgement judgement = 1; */
+        /* proto.PaladinJudgement judgement = 1; */
         if (message.judgement !== 0)
             writer.tag(1, WireType.Varint).int32(message.judgement);
-        /* proto.PaladinAura aura = 5; */
+        /* proto.PaladinSeal seal = 2; */
+        if (message.seal !== 0)
+            writer.tag(2, WireType.Varint).int32(message.seal);
+        /* proto.PaladinAura aura = 3; */
         if (message.aura !== 0)
-            writer.tag(5, WireType.Varint).int32(message.aura);
+            writer.tag(3, WireType.Varint).int32(message.aura);
         /* double damage_taken_per_second = 4; */
         if (message.damageTakenPerSecond !== 0)
             writer.tag(4, WireType.Bit64).double(message.damageTakenPerSecond);
+        /* bool use_avenging_wrath = 5; */
+        if (message.useAvengingWrath !== false)
+            writer.tag(5, WireType.Varint).bool(message.useAvengingWrath);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
@@ -1112,14 +1056,11 @@ export const ProtectionPaladin = new ProtectionPaladin$Type();
 class ProtectionPaladin_Rotation$Type extends MessageType {
     constructor() {
         super("proto.ProtectionPaladin.Rotation", [
-            { no: 1, name: "prioritize_holy_shield", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "consecration_rank", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 3, name: "use_exorcism", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 4, name: "maintain_judgement", kind: "enum", T: () => ["proto.PaladinJudgement", PaladinJudgement] }
+            { no: 1, name: "prioritize_holy_shield", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { prioritizeHolyShield: false, consecrationRank: 0, useExorcism: false, maintainJudgement: 0 };
+        const message = { prioritizeHolyShield: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1132,15 +1073,6 @@ class ProtectionPaladin_Rotation$Type extends MessageType {
             switch (fieldNo) {
                 case /* bool prioritize_holy_shield */ 1:
                     message.prioritizeHolyShield = reader.bool();
-                    break;
-                case /* int32 consecration_rank */ 2:
-                    message.consecrationRank = reader.int32();
-                    break;
-                case /* bool use_exorcism */ 3:
-                    message.useExorcism = reader.bool();
-                    break;
-                case /* proto.PaladinJudgement maintain_judgement */ 4:
-                    message.maintainJudgement = reader.int32();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -1157,15 +1089,6 @@ class ProtectionPaladin_Rotation$Type extends MessageType {
         /* bool prioritize_holy_shield = 1; */
         if (message.prioritizeHolyShield !== false)
             writer.tag(1, WireType.Varint).bool(message.prioritizeHolyShield);
-        /* int32 consecration_rank = 2; */
-        if (message.consecrationRank !== 0)
-            writer.tag(2, WireType.Varint).int32(message.consecrationRank);
-        /* bool use_exorcism = 3; */
-        if (message.useExorcism !== false)
-            writer.tag(3, WireType.Varint).bool(message.useExorcism);
-        /* proto.PaladinJudgement maintain_judgement = 4; */
-        if (message.maintainJudgement !== 0)
-            writer.tag(4, WireType.Varint).int32(message.maintainJudgement);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
@@ -1180,12 +1103,15 @@ export const ProtectionPaladin_Rotation = new ProtectionPaladin_Rotation$Type();
 class ProtectionPaladin_Options$Type extends MessageType {
     constructor() {
         super("proto.ProtectionPaladin.Options", [
-            { no: 1, name: "aura", kind: "enum", T: () => ["proto.PaladinAura", PaladinAura] },
-            { no: 2, name: "use_avenging_wrath", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 1, name: "judgement", kind: "enum", T: () => ["proto.PaladinJudgement", PaladinJudgement] },
+            { no: 2, name: "seal", kind: "enum", T: () => ["proto.PaladinSeal", PaladinSeal] },
+            { no: 3, name: "aura", kind: "enum", T: () => ["proto.PaladinAura", PaladinAura] },
+            { no: 4, name: "damage_taken_per_second", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
+            { no: 5, name: "use_avenging_wrath", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { aura: 0, useAvengingWrath: false };
+        const message = { judgement: 0, seal: 0, aura: 0, damageTakenPerSecond: 0, useAvengingWrath: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1196,10 +1122,19 @@ class ProtectionPaladin_Options$Type extends MessageType {
         while (reader.pos < end) {
             let [fieldNo, wireType] = reader.tag();
             switch (fieldNo) {
-                case /* proto.PaladinAura aura */ 1:
+                case /* proto.PaladinJudgement judgement */ 1:
+                    message.judgement = reader.int32();
+                    break;
+                case /* proto.PaladinSeal seal */ 2:
+                    message.seal = reader.int32();
+                    break;
+                case /* proto.PaladinAura aura */ 3:
                     message.aura = reader.int32();
                     break;
-                case /* bool use_avenging_wrath */ 2:
+                case /* double damage_taken_per_second */ 4:
+                    message.damageTakenPerSecond = reader.double();
+                    break;
+                case /* bool use_avenging_wrath */ 5:
                     message.useAvengingWrath = reader.bool();
                     break;
                 default:
@@ -1214,12 +1149,21 @@ class ProtectionPaladin_Options$Type extends MessageType {
         return message;
     }
     internalBinaryWrite(message, writer, options) {
-        /* proto.PaladinAura aura = 1; */
+        /* proto.PaladinJudgement judgement = 1; */
+        if (message.judgement !== 0)
+            writer.tag(1, WireType.Varint).int32(message.judgement);
+        /* proto.PaladinSeal seal = 2; */
+        if (message.seal !== 0)
+            writer.tag(2, WireType.Varint).int32(message.seal);
+        /* proto.PaladinAura aura = 3; */
         if (message.aura !== 0)
-            writer.tag(1, WireType.Varint).int32(message.aura);
-        /* bool use_avenging_wrath = 2; */
+            writer.tag(3, WireType.Varint).int32(message.aura);
+        /* double damage_taken_per_second = 4; */
+        if (message.damageTakenPerSecond !== 0)
+            writer.tag(4, WireType.Bit64).double(message.damageTakenPerSecond);
+        /* bool use_avenging_wrath = 5; */
         if (message.useAvengingWrath !== false)
-            writer.tag(2, WireType.Varint).bool(message.useAvengingWrath);
+            writer.tag(5, WireType.Varint).bool(message.useAvengingWrath);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

@@ -1,37 +1,8 @@
-import { PaladinAura as PaladinAura, PaladinJudgement as PaladinJudgement, } from '/wotlk/core/proto/paladin.js';
+import { PaladinAura as PaladinAura, PaladinSeal, PaladinJudgement as PaladinJudgement, } from '/wotlk/core/proto/paladin.js';
 // Configuration for spec-specific UI elements on the settings tab.
 // These don't need to be in a separate file but it keeps things cleaner.
 export const ProtectionPaladinRotationConfig = {
     inputs: [
-        {
-            type: 'enum', cssClass: 'consecration-rank-picker',
-            getModObject: (simUI) => simUI.player,
-            config: {
-                label: 'Consecration Rank',
-                labelTooltip: 'Use specified rank of Consecration during filler spell windows.',
-                values: [
-                    {
-                        name: 'None', value: 0,
-                    },
-                    {
-                        name: 'Rank 1', value: 1,
-                    },
-                    {
-                        name: 'Rank 4', value: 4,
-                    },
-                    {
-                        name: 'Rank 6', value: 6,
-                    },
-                ],
-                changedEvent: (player) => player.rotationChangeEmitter,
-                getValue: (player) => player.getRotation().consecrationRank,
-                setValue: (eventID, player, newValue) => {
-                    const newRotation = player.getRotation();
-                    newRotation.consecrationRank = newValue;
-                    player.setRotation(eventID, newRotation);
-                },
-            },
-        },
         {
             type: 'boolean', cssClass: 'prioritize-holy-shield-picker',
             getModObject: (simUI) => simUI.player,
@@ -47,41 +18,43 @@ export const ProtectionPaladinRotationConfig = {
                 },
             },
         },
-        {
-            type: 'boolean', cssClass: 'exorcism-picker',
-            getModObject: (simUI) => simUI.player,
-            config: {
-                label: 'Use Exorcism',
-                labelTooltip: 'Includes Exorcism in the rotation. Will only be used if the primary target is an Undead or Demon type.',
-                changedEvent: (player) => player.rotationChangeEmitter,
-                getValue: (player) => player.getRotation().useExorcism,
-                setValue: (eventID, player, newValue) => {
-                    const newRotation = player.getRotation();
-                    newRotation.useExorcism = newValue;
-                    player.setRotation(eventID, newRotation);
-                },
-            },
-        },
-        {
-            type: 'enum', cssClass: 'mantain-judgement-picker',
-            getModObject: (simUI) => simUI.player,
-            config: {
-                label: 'Maintain Judgement',
-                values: [
-                    { name: 'None', value: PaladinJudgement.NoPaladinJudgement },
-                    { name: 'Wisdom', value: PaladinJudgement.JudgementOfWisdom },
-                    { name: 'Light', value: PaladinJudgement.JudgementOfLight },
-                ],
-                changedEvent: (player) => player.rotationChangeEmitter,
-                getValue: (player) => player.getRotation().maintainJudgement,
-                setValue: (eventID, player, newValue) => {
-                    const newRotation = player.getRotation();
-                    newRotation.maintainJudgement = newValue;
-                    player.setRotation(eventID, newRotation);
-                },
-            },
-        },
     ],
+};
+export const StartingSealSelection = {
+    type: 'enum', cssClass: 'starting-seal-picker',
+    getModObject: (simUI) => simUI.player,
+    config: {
+        label: 'Seal',
+        values: [
+            { name: 'Vengeance', value: PaladinSeal.Vengeance },
+            { name: 'Command', value: PaladinSeal.Command },
+        ],
+        changedEvent: (player) => player.rotationChangeEmitter,
+        getValue: (player) => player.getSpecOptions().seal,
+        setValue: (eventID, player, newValue) => {
+            const newOptions = player.getSpecOptions();
+            newOptions.seal = newValue;
+            player.setSpecOptions(eventID, newOptions);
+        },
+    },
+};
+export const JudgementSelection = {
+    type: 'enum', cssClass: 'judgement-picker',
+    getModObject: (simUI) => simUI.player,
+    config: {
+        label: 'Judgement',
+        values: [
+            { name: 'Wisdom', value: PaladinJudgement.JudgementOfWisdom },
+            { name: 'Light', value: PaladinJudgement.JudgementOfLight },
+        ],
+        changedEvent: (player) => player.rotationChangeEmitter,
+        getValue: (player) => player.getSpecOptions().judgement,
+        setValue: (eventID, player, newValue) => {
+            const newOptions = player.getSpecOptions();
+            newOptions.judgement = newValue;
+            player.setSpecOptions(eventID, newOptions);
+        },
+    },
 };
 export const AuraSelection = {
     type: 'enum', cssClass: 'aura-picker',
@@ -90,7 +63,6 @@ export const AuraSelection = {
         label: 'Aura',
         values: [
             { name: 'None', value: PaladinAura.NoPaladinAura },
-            { name: 'Sanctity Aura', value: PaladinAura.SanctityAura },
             { name: 'Devotion Aura', value: PaladinAura.DevotionAura },
             { name: 'Retribution Aura', value: PaladinAura.RetributionAura },
         ],
@@ -113,6 +85,21 @@ export const UseAvengingWrath = {
         setValue: (eventID, player, newValue) => {
             const newOptions = player.getSpecOptions();
             newOptions.useAvengingWrath = newValue;
+            player.setSpecOptions(eventID, newOptions);
+        },
+    },
+};
+export const DamgeTakenPerSecond = {
+    type: 'number', cssClass: 'damage-taken-picker',
+    getModObject: (simUI) => simUI.player,
+    config: {
+        label: 'Damage Taken Per Second',
+        labelTooltip: "Damage taken per second across the encounter. Used to model mana regeneration from Spiritual Attunement. This value should NOT include damage taken from Seal of Blood / Judgement of Blood. Leave at 0 if you do not take damage during the encounter.",
+        changedEvent: (player) => player.specOptionsChangeEmitter,
+        getValue: (player) => player.getSpecOptions().damageTakenPerSecond,
+        setValue: (eventID, player, newValue) => {
+            const newOptions = player.getSpecOptions();
+            newOptions.damageTakenPerSecond = newValue;
             player.setSpecOptions(eventID, newOptions);
         },
     },

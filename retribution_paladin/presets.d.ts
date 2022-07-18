@@ -4,11 +4,11 @@ import { Spec } from '/wotlk/core/proto/common.js';
 import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { Player } from '/wotlk/core/player.js';
 import { RetributionPaladin_Rotation as RetributionPaladinRotation, RetributionPaladin_Options as RetributionPaladinOptions } from '/wotlk/core/proto/paladin.js';
-export declare const RetKingsPaladinTalents: {
+export declare const AuraMasteryTalents: {
     name: string;
     data: SavedTalents;
 };
-export declare const RetNoKingsPaladinTalents: {
+export declare const DivineSacTalents: {
     name: string;
     data: SavedTalents;
 };

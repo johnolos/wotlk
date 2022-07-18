@@ -1,7 +1,9 @@
+import { BattleElixir } from '/wotlk/core/proto/common.js';
 import { BonusStatsPicker } from '/wotlk/core/components/bonus_stats_picker.js';
 import { BooleanPicker } from '/wotlk/core/components/boolean_picker.js';
 import { CharacterStats } from '/wotlk/core/components/character_stats.js';
 import { Class } from '/wotlk/core/proto/common.js';
+import { Conjured } from '/wotlk/core/proto/common.js';
 import { Consumes } from '/wotlk/core/proto/common.js';
 import { Cooldowns } from '/wotlk/core/proto/common.js';
 import { CooldownsPicker } from '/wotlk/core/components/cooldowns_picker.js';
@@ -12,8 +14,11 @@ import { EncounterPicker } from '/wotlk/core/components/encounter_picker.js';
 import { EnumPicker } from '/wotlk/core/components/enum_picker.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { TypedEvent } from './typed_event.js';
+import { Flask } from '/wotlk/core/proto/common.js';
+import { Food } from '/wotlk/core/proto/common.js';
 import { GearPicker } from '/wotlk/core/components/gear_picker.js';
 import { Glyphs } from '/wotlk/core/proto/common.js';
+import { GuardianElixir } from '/wotlk/core/proto/common.js';
 import { HunterPetTalentsPicker } from '/wotlk/core/talents/hunter_pet.js';
 import { IconEnumPicker } from '/wotlk/core/components/icon_enum_picker.js';
 import { IconPicker } from '/wotlk/core/components/icon_picker.js';
@@ -21,6 +26,7 @@ import { ItemSlot } from '/wotlk/core/proto/common.js';
 import { IndividualBuffs } from '/wotlk/core/proto/common.js';
 import { IndividualSimSettings } from '/wotlk/core/proto/ui.js';
 import { LogRunner } from '/wotlk/core/components/log_runner.js';
+import { MultiIconPicker } from '/wotlk/core/components/multi_icon_picker.js';
 import { NumberPicker } from '/wotlk/core/components/number_picker.js';
 import { PartyBuffs } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
@@ -41,7 +47,6 @@ import { addRaidSimAction } from '/wotlk/core/components/raid_sim_action.js';
 import { addStatWeightsAction } from '/wotlk/core/components/stat_weights_action.js';
 import { getEnumValues } from '/wotlk/core/utils.js';
 import { getMetaGemConditionDescription } from '/wotlk/core/proto_utils/gems.js';
-import { isDualWieldSpec } from '/wotlk/core/proto_utils/utils.js';
 import { launchedSpecs } from '/wotlk/core/launched_sims.js';
 import { makePetTypeInputConfig } from '/wotlk/core/talents/hunter_pet.js';
 import { newIndividualExporters } from '/wotlk/core/components/exporters.js';
@@ -140,7 +145,6 @@ export class IndividualSimUI extends SimUI {
             'Drums': [],
             'Food': [],
             'Pet Food': [],
-            'Alchohol': [],
             'Guardian Elixir': [],
             'Potion': [],
             'Conjured': [],
@@ -425,75 +429,173 @@ export class IndividualSimUI extends SimUI {
             const petsSection = this.rootElem.getElementsByClassName('pets-section')[0];
             configureIconSection(petsSection, this.individualConfig.petInputs.map(iconInput => new IndividualSimIconPicker(petsSection, this.player, iconInput, this)), Tooltips.PETS_SECTION);
         }
+        const buffOptions = this.splitRelevantOptions([
+            { item: IconInputs.AllStatsBuff, stats: [] },
+            { item: IconInputs.AllStatsPercentBuff, stats: [] },
+            { item: IconInputs.HealthBuff, stats: [Stat.StatHealth] },
+            { item: IconInputs.ArmorBuff, stats: [Stat.StatArmor] },
+            { item: IconInputs.StaminaBuff, stats: [Stat.StatStamina] },
+            { item: IconInputs.StrengthAndAgilityBuff, stats: [Stat.StatStrength, Stat.StatAgility] },
+            { item: IconInputs.IntellectBuff, stats: [Stat.StatIntellect] },
+            { item: IconInputs.SpiritBuff, stats: [Stat.StatSpirit] },
+            { item: IconInputs.AttackPowerBuff, stats: [Stat.StatAttackPower] },
+            { item: IconInputs.AttackPowerPercentBuff, stats: [Stat.StatAttackPower] },
+            { item: IconInputs.MeleeCritBuff, stats: [Stat.StatMeleeCrit] },
+            { item: IconInputs.MeleeHasteBuff, stats: [Stat.StatMeleeHaste] },
+            { item: IconInputs.SpellPowerBuff, stats: [Stat.StatSpellPower] },
+            { item: IconInputs.SpellCritBuff, stats: [Stat.StatSpellCrit] },
+            { item: IconInputs.SpellHasteBuff, stats: [Stat.StatSpellHaste] },
+            { item: IconInputs.HastePercentBuff, stats: [Stat.StatMeleeHaste, Stat.StatSpellHaste] },
+            { item: IconInputs.DamagePercentBuff, stats: [Stat.StatAttackPower, Stat.StatSpellPower] },
+            { item: IconInputs.DamageReductionPercentBuff, stats: [Stat.StatStamina] },
+            { item: IconInputs.MP5Buff, stats: [Stat.StatMP5] },
+            //{ item: IconInputs.ReplenishmentBuff, stats: [Stat.StatMP5] },
+        ]);
         const buffsSection = this.rootElem.getElementsByClassName('buffs-section')[0];
-        configureIconSection(buffsSection, [
-            this.individualConfig.raidBuffInputs
-                .concat([IconInputs.FerociousInspiration])
-                .map(iconInput => new IndividualSimIconPicker(buffsSection, this.sim.raid, iconInput, this)),
-            this.individualConfig.playerBuffInputs.map(iconInput => new IndividualSimIconPicker(buffsSection, this.player, iconInput, this)),
-            this.individualConfig.partyBuffInputs.map(iconInput => new IndividualSimIconPicker(buffsSection, this.player.getParty(), iconInput, this)),
-        ].flat(), Tooltips.OTHER_BUFFS_SECTION);
+        configureIconSection(buffsSection, buffOptions.map(multiIconInput => new MultiIconPicker(buffsSection, this.player, multiIconInput, this)), Tooltips.OTHER_BUFFS_SECTION);
+        const otherRaidBuffOptions = this.splitRelevantOptions([
+            { item: IconInputs.Bloodlust, stats: [Stat.StatMeleeHaste, Stat.StatSpellHaste] },
+            { item: IconInputs.Thorns, stats: [Stat.StatArmor] },
+            { item: IconInputs.RetributionAura, stats: [Stat.StatArmor] },
+            { item: IconInputs.ShadowProtection, stats: [Stat.StatShadowResistance] },
+        ]);
+        otherRaidBuffOptions.forEach(iconInput => new IndividualSimIconPicker(buffsSection, this.sim.raid, iconInput, this));
+        const otherPartyBuffOptions = this.splitRelevantOptions([
+            { item: IconInputs.HeroicPresence, stats: [Stat.StatMeleeHit, Stat.StatSpellHit] },
+            { item: IconInputs.ManaTideTotem, stats: [Stat.StatMP5] },
+            { item: IconInputs.BraidedEterniumChain, stats: [Stat.StatMeleeCrit] },
+            { item: IconInputs.ChainOfTheTwilightOwl, stats: [Stat.StatSpellCrit] },
+            { item: IconInputs.EyeOfTheNight, stats: [Stat.StatSpellPower] },
+        ]);
+        otherPartyBuffOptions.forEach(iconInput => new IndividualSimIconPicker(buffsSection, this.player.getParty(), iconInput, this));
+        const debuffOptions = this.splitRelevantOptions([
+            { item: IconInputs.MajorArmorDebuff, stats: [Stat.StatArmorPenetration] },
+            { item: IconInputs.MinorArmorDebuff, stats: [Stat.StatArmorPenetration] },
+            { item: IconInputs.PhysicalDamageDebuff, stats: [Stat.StatAttackPower] },
+            { item: IconInputs.BleedDebuff, stats: [Stat.StatAttackPower] },
+            { item: IconInputs.SpellDamageDebuff, stats: [Stat.StatSpellPower] },
+            { item: IconInputs.SpellHitDebuff, stats: [Stat.StatSpellHit] },
+            { item: IconInputs.SpellCritDebuff, stats: [Stat.StatSpellCrit] },
+            { item: IconInputs.CritDebuff, stats: [Stat.StatMeleeCrit, Stat.StatSpellCrit] },
+            { item: IconInputs.AttackPowerDebuff, stats: [Stat.StatArmor] },
+            { item: IconInputs.MeleeAttackSpeedDebuff, stats: [Stat.StatArmor] },
+            { item: IconInputs.MeleeHitDebuff, stats: [Stat.StatDodge] },
+            //{ item: IconInputs.JudgementOfWisdom, stats: [Stat.StatMP5] },
+            //{ item: IconInputs.GiftOfArthas, stats: [Stat.StatAttackPower] },
+        ]);
         const debuffsSection = this.rootElem.getElementsByClassName('debuffs-section')[0];
-        configureIconSection(debuffsSection, this.individualConfig.debuffInputs.map(iconInput => new IndividualSimIconPicker(debuffsSection, this.sim.raid, iconInput, this)), Tooltips.DEBUFFS_SECTION);
-        if (this.individualConfig.consumeOptions?.potions.length) {
-            const options = [
-                { stats: [Stat.StatStamina], item: Potions.RunicHealingPotion },
-                { stats: [Stat.StatIntellect], item: Potions.RunicManaPotion },
-                { stats: [Stat.StatArmor], item: Potions.IndestructiblePotion },
-                { stats: [Stat.StatMeleeHaste, Stat.StatSpellHaste], item: Potions.PotionOfSpeed },
-                { stats: [Stat.StatMeleeCrit, Stat.StatSpellCrit, Stat.StatSpellPower], item: Potions.PotionOfWildMagic },
-            ];
+        configureIconSection(debuffsSection, debuffOptions.map(multiIconInput => new MultiIconPicker(debuffsSection, this.player, multiIconInput, this)), Tooltips.DEBUFFS_SECTION);
+        const otherDebuffOptions = this.splitRelevantOptions([
+            { item: IconInputs.JudgementOfWisdom, stats: [Stat.StatMP5, Stat.StatIntellect] },
+            { item: IconInputs.JudgementOfLight, stats: [Stat.StatStamina] },
+            { item: IconInputs.GiftOfArthas, stats: [Stat.StatStamina] },
+        ]);
+        otherDebuffOptions.forEach(iconInput => new IndividualSimIconPicker(debuffsSection, this.sim.raid, iconInput, this));
+        const potionOptions = this.splitRelevantOptions([
+            { item: Potions.RunicHealingPotion, stats: [Stat.StatStamina] },
+            { item: Potions.RunicManaPotion, stats: [Stat.StatIntellect] },
+            { item: Potions.IndestructiblePotion, stats: [Stat.StatArmor] },
+            { item: Potions.PotionOfSpeed, stats: [Stat.StatMeleeHaste, Stat.StatSpellHaste] },
+            { item: Potions.PotionOfWildMagic, stats: [Stat.StatMeleeCrit, Stat.StatSpellCrit, Stat.StatSpellPower] },
+        ]);
+        if (potionOptions.length) {
             const elem = this.rootElem.getElementsByClassName('consumes-potions')[0];
-            new IconEnumPicker(elem, this.player, IconInputs.makePotionsInput(this.splitRelevantOptions(options)));
+            new IconEnumPicker(elem, this.player, IconInputs.makePotionsInput(potionOptions));
         }
-        if (this.individualConfig.consumeOptions?.conjured.length) {
+        const conjuredOptions = this.splitRelevantOptions([
+            { item: Conjured.ConjuredHealthstone, stats: [Stat.StatStamina] },
+            { item: Conjured.ConjuredDarkRune, stats: [Stat.StatIntellect] },
+            { item: Conjured.ConjuredFlameCap, stats: [Stat.StatStrength, Stat.StatAgility, Stat.StatFireSpellPower] },
+        ]);
+        if (conjuredOptions.length) {
             const elem = this.rootElem.getElementsByClassName('consumes-conjured')[0];
-            new IconEnumPicker(elem, this.player, IconInputs.makeConjuredInput(this.individualConfig.consumeOptions.conjured));
+            new IconEnumPicker(elem, this.player, IconInputs.makeConjuredInput(conjuredOptions));
         }
-        if (this.individualConfig.consumeOptions?.flasks.length) {
+        const flaskOptions = this.splitRelevantOptions([
+            { item: Flask.FlaskOfTheFrostWyrm, stats: [Stat.StatSpellPower] },
+            { item: Flask.FlaskOfEndlessRage, stats: [Stat.StatAttackPower, Stat.StatRangedAttackPower] },
+            { item: Flask.FlaskOfPureMojo, stats: [Stat.StatMP5] },
+            { item: Flask.FlaskOfStoneblood, stats: [Stat.StatStamina] },
+            { item: Flask.LesserFlaskOfToughness, stats: [Stat.StatResilience] },
+            { item: Flask.LesserFlaskOfResistance, stats: [Stat.StatArcaneResistance, Stat.StatFireResistance, Stat.StatFrostResistance, Stat.StatNatureResistance, Stat.StatShadowResistance] },
+        ]);
+        if (flaskOptions.length) {
             const elem = this.rootElem.getElementsByClassName('consumes-flasks')[0];
-            new IconEnumPicker(elem, this.player, IconInputs.makeFlasksInput(this.individualConfig.consumeOptions.flasks));
+            new IconEnumPicker(elem, this.player, IconInputs.makeFlasksInput(flaskOptions));
         }
-        if (this.individualConfig.consumeOptions?.battleElixirs.length) {
+        const battleElixirOptions = this.splitRelevantOptions([
+            { item: BattleElixir.ElixirOfAccuracy, stats: [Stat.StatMeleeHit, Stat.StatSpellHit] },
+            { item: BattleElixir.ElixirOfArmorPiercing, stats: [Stat.StatArmorPenetration] },
+            { item: BattleElixir.ElixirOfDeadlyStrikes, stats: [Stat.StatMeleeCrit, Stat.StatSpellCrit] },
+            { item: BattleElixir.ElixirOfExpertise, stats: [Stat.StatExpertise] },
+            { item: BattleElixir.ElixirOfLightningSpeed, stats: [Stat.StatMeleeHaste, Stat.StatSpellHaste] },
+            { item: BattleElixir.ElixirOfMightyAgility, stats: [Stat.StatAgility] },
+            { item: BattleElixir.ElixirOfMightyStrength, stats: [Stat.StatStrength] },
+            { item: BattleElixir.GurusElixir, stats: [Stat.StatStamina, Stat.StatAgility, Stat.StatStrength, Stat.StatSpirit, Stat.StatIntellect] },
+            { item: BattleElixir.SpellpowerElixir, stats: [Stat.StatSpellPower] },
+            { item: BattleElixir.WrathElixir, stats: [Stat.StatAttackPower, Stat.StatRangedAttackPower] },
+        ]);
+        if (battleElixirOptions.length) {
             const elem = this.rootElem.getElementsByClassName('consumes-battle-elixirs')[0];
-            new IconEnumPicker(elem, this.player, IconInputs.makeBattleElixirsInput(this.individualConfig.consumeOptions.battleElixirs));
+            new IconEnumPicker(elem, this.player, IconInputs.makeBattleElixirsInput(battleElixirOptions));
         }
-        if (this.individualConfig.consumeOptions?.guardianElixirs.length) {
+        const guardianElixirOptions = this.splitRelevantOptions([
+            { item: GuardianElixir.ElixirOfMightyDefense, stats: [Stat.StatDefense] },
+            { item: GuardianElixir.ElixirOfMightyFortitude, stats: [Stat.StatStamina] },
+            { item: GuardianElixir.ElixirOfMightyMageblood, stats: [Stat.StatMP5] },
+            { item: GuardianElixir.ElixirOfMightyThoughts, stats: [Stat.StatIntellect] },
+            { item: GuardianElixir.ElixirOfProtection, stats: [Stat.StatArmor] },
+            { item: GuardianElixir.ElixirOfSpirit, stats: [Stat.StatSpirit] },
+            { item: GuardianElixir.GiftOfArthas, stats: [Stat.StatStamina] },
+        ]);
+        if (guardianElixirOptions.length) {
             const elem = this.rootElem.getElementsByClassName('consumes-guardian-elixirs')[0];
-            new IconEnumPicker(elem, this.player, IconInputs.makeGuardianElixirsInput(this.individualConfig.consumeOptions.guardianElixirs));
+            new IconEnumPicker(elem, this.player, IconInputs.makeGuardianElixirsInput(guardianElixirOptions));
         }
-        if (this.individualConfig.consumeOptions?.food.length) {
+        const foodOptions = this.splitRelevantOptions([
+            { item: Food.FoodFishFeast, stats: [Stat.StatStamina, Stat.StatAttackPower, Stat.StatSpellPower] },
+            { item: Food.FoodGreatFeast, stats: [Stat.StatStamina, Stat.StatAttackPower, Stat.StatSpellPower] },
+            { item: Food.FoodBlackenedDragonfin, stats: [Stat.StatAgility] },
+            { item: Food.FoodDragonfinFilet, stats: [Stat.StatStrength] },
+            { item: Food.FoodCuttlesteak, stats: [Stat.StatSpirit] },
+            { item: Food.FoodMegaMammothMeal, stats: [Stat.StatAttackPower] },
+            { item: Food.FoodHeartyRhino, stats: [Stat.StatArmorPenetration] },
+            { item: Food.FoodRhinoliciousWormsteak, stats: [Stat.StatExpertise] },
+            { item: Food.FoodFirecrackerSalmon, stats: [Stat.StatSpellPower] },
+            { item: Food.FoodSnapperExtreme, stats: [Stat.StatMeleeHit, Stat.StatSpellHit] },
+            { item: Food.FoodSpicedWormBurger, stats: [Stat.StatMeleeCrit, Stat.StatSpellCrit] },
+            { item: Food.FoodImperialMantaSteak, stats: [Stat.StatMeleeHaste, Stat.StatSpellHaste] },
+            { item: Food.FoodMightyRhinoDogs, stats: [Stat.StatMP5] },
+        ]);
+        if (foodOptions.length) {
             const elem = this.rootElem.getElementsByClassName('consumes-food')[0];
-            new IconEnumPicker(elem, this.player, IconInputs.makeFoodInput(this.individualConfig.consumeOptions.food));
+            new IconEnumPicker(elem, this.player, IconInputs.makeFoodInput(foodOptions));
         }
-        if (this.individualConfig.consumeOptions?.alcohol.length) {
-            const elem = this.rootElem.getElementsByClassName('consumes-alcohol')[0];
-            new IconEnumPicker(elem, this.player, IconInputs.makeAlcoholInput(this.individualConfig.consumeOptions.alcohol));
-        }
-        if (this.individualConfig.consumeOptions?.weaponImbues.length) {
-            const mhImbueElem = this.rootElem.getElementsByClassName('consumes-imbue-mh')[0];
-            const ohImbueElem = this.rootElem.getElementsByClassName('consumes-imbue-oh')[0];
-            new IconEnumPicker(mhImbueElem, this.player, IconInputs.makeWeaponImbueInput(true, this.individualConfig.consumeOptions.weaponImbues));
-            if (isDualWieldSpec(this.player.spec)) {
-                new IconEnumPicker(ohImbueElem, this.player, IconInputs.makeWeaponImbueInput(false, this.individualConfig.consumeOptions.weaponImbues));
-            }
-        }
+        //if (this.individualConfig.consumeOptions?.weaponImbues.length) {
+        //	const mhImbueElem = this.rootElem.getElementsByClassName('consumes-imbue-mh')[0] as HTMLElement;
+        //	const ohImbueElem = this.rootElem.getElementsByClassName('consumes-imbue-oh')[0] as HTMLElement;
+        //	new IconEnumPicker(mhImbueElem, this.player,
+        //		IconInputs.makeWeaponImbueInput(true, this.individualConfig.consumeOptions.weaponImbues));
+        //	if (isDualWieldSpec(this.player.spec)) {
+        //		new IconEnumPicker(ohImbueElem, this.player,
+        //			IconInputs.makeWeaponImbueInput(false, this.individualConfig.consumeOptions.weaponImbues));
+        //	}
+        //}
         const tradeConsumesElem = this.rootElem.getElementsByClassName('consumes-trade')[0];
         new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.SuperSapper, this);
         new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.GoblinSapper, this);
         new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.FillerExplosiveInput, this);
-        if (this.individualConfig.consumeOptions?.pet?.length) {
-            const petConsumesElem = this.rootElem.getElementsByClassName('consumes-pet')[0];
-            this.individualConfig.consumeOptions.pet.map(iconInput => new IndividualSimIconPicker(petConsumesElem, this.player, iconInput, this));
-        }
-        else {
-            const petRowElem = this.rootElem.getElementsByClassName('consumes-row-pet')[0];
-            petRowElem.style.display = 'none';
-        }
-        if (this.individualConfig.consumeOptions?.other?.length) {
-            const containerElem = this.rootElem.getElementsByClassName('consumes-other')[0];
-            this.individualConfig.consumeOptions.other.map(iconInput => new IndividualSimIconPicker(containerElem, this.player, iconInput, this));
-        }
+        //if (this.individualConfig.consumeOptions?.pet?.length) {
+        //	const petConsumesElem = this.rootElem.getElementsByClassName('consumes-pet')[0] as HTMLElement;
+        //	this.individualConfig.consumeOptions.pet.map(iconInput => new IndividualSimIconPicker(petConsumesElem, this.player, iconInput, this));
+        //} else {
+        //	const petRowElem = this.rootElem.getElementsByClassName('consumes-row-pet')[0] as HTMLElement;
+        //	petRowElem.style.display = 'none';
+        //}
+        //if (this.individualConfig.consumeOptions?.other?.length) {
+        //	const containerElem = this.rootElem.getElementsByClassName('consumes-other')[0] as HTMLElement;
+        //	this.individualConfig.consumeOptions.other.map(iconInput => new IndividualSimIconPicker(containerElem, this.player, iconInput, this));
+        //}
         const configureInputSection = (sectionElem, sectionConfig) => {
             if (sectionConfig.tooltip) {
                 tippy(sectionElem, {
@@ -898,7 +1000,7 @@ export class IndividualSimUI extends SimUI {
     }
     splitRelevantOptions(options) {
         return options
-            .filter(option => option.stats.some(stat => this.individualConfig.epStats.includes(stat)))
+            .filter(option => option.stats.length == 0 || option.stats.some(stat => this.individualConfig.epStats.includes(stat)))
             .map(option => option.item);
     }
 }

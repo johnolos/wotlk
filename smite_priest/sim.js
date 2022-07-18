@@ -6,15 +6,6 @@ import { Stat } from '/wotlk/core/proto/common.js';
 import { TristateEffect } from '/wotlk/core/proto/common.js';
 import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
-import { Alchohol } from '/wotlk/core/proto/common.js';
-import { BattleElixir } from '/wotlk/core/proto/common.js';
-import { Flask } from '/wotlk/core/proto/common.js';
-import { Food } from '/wotlk/core/proto/common.js';
-import { GuardianElixir } from '/wotlk/core/proto/common.js';
-import { Conjured } from '/wotlk/core/proto/common.js';
-import { Potions } from '/wotlk/core/proto/common.js';
-import { WeaponImbue } from '/wotlk/core/proto/common.js';
-import * as IconInputs from '/wotlk/core/components/icon_inputs.js';
 import * as OtherInputs from '/wotlk/core/components/other_inputs.js';
 import * as Mechanics from '/wotlk/core/constants/mechanics.js';
 import * as SmitePriestInputs from './inputs.js';
@@ -106,71 +97,6 @@ export class SmitePriestSimUI extends IndividualSimUI {
             selfBuffInputs: [
                 SmitePriestInputs.SelfPowerInfusion,
             ],
-            // IconInputs to include in the 'Other Buffs' section on the settings tab.
-            raidBuffInputs: [
-                IconInputs.ArcaneBrilliance,
-                IconInputs.DivineSpirit,
-                IconInputs.GiftOfTheWild,
-                IconInputs.MoonkinAura,
-                IconInputs.Bloodlust,
-                IconInputs.WrathOfAirTotem,
-                IconInputs.TotemOfWrath,
-                IconInputs.ManaSpringTotem,
-            ],
-            partyBuffInputs: [
-                IconInputs.ManaTideTotem,
-                IconInputs.HeroicPresence,
-                IconInputs.EyeOfTheNight,
-                IconInputs.ChainOfTheTwilightOwl,
-                IconInputs.AtieshWarlock,
-                IconInputs.AtieshMage,
-            ],
-            playerBuffInputs: [
-                IconInputs.BlessingOfKings,
-                IconInputs.BlessingOfWisdom,
-                IconInputs.Innervate,
-                IconInputs.PowerInfusion,
-            ],
-            // IconInputs to include in the 'Debuffs' section on the settings tab.
-            debuffInputs: [
-                IconInputs.JudgementOfWisdom,
-                IconInputs.CurseOfElements,
-                IconInputs.Misery,
-            ],
-            // Which options are selectable in the 'Consumes' section.
-            consumeOptions: {
-                potions: [
-                    Potions.SuperManaPotion,
-                    Potions.DestructionPotion,
-                ],
-                conjured: [
-                    Conjured.ConjuredDarkRune,
-                ],
-                flasks: [
-                    Flask.FlaskOfBlindingLight,
-                    Flask.FlaskOfPureDeath,
-                    Flask.FlaskOfSupremePower,
-                ],
-                battleElixirs: [
-                    BattleElixir.AdeptsElixir,
-                ],
-                guardianElixirs: [
-                    GuardianElixir.ElixirOfDraenicWisdom,
-                    GuardianElixir.ElixirOfMajorMageblood,
-                ],
-                food: [
-                    Food.FoodBlackenedBasilisk,
-                    Food.FoodSkullfishSoup,
-                ],
-                alcohol: [
-                    Alchohol.AlchoholKreegsStoutBeatdown,
-                ],
-                weaponImbues: [
-                    WeaponImbue.WeaponImbueBrilliantWizardOil,
-                    WeaponImbue.WeaponImbueSuperiorWizardOil,
-                ],
-                other: [],
-            },
             // Inputs to include in the 'Rotation' section on the settings tab.
             rotationInputs: SmitePriestInputs.SmitePriestRotationConfig,
             // Inputs to include in the 'Other' section on the settings tab.

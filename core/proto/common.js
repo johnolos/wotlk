@@ -1339,24 +1339,16 @@ export var PetFood;
      */
     PetFood[PetFood["PetFoodUnknown"] = 0] = "PetFoodUnknown";
     /**
-     * @generated from protobuf enum value: PetFoodKiblersBits = 1;
+     * @generated from protobuf enum value: PetFoodSpicyMammothTreats = 1;
      */
-    PetFood[PetFood["PetFoodKiblersBits"] = 1] = "PetFoodKiblersBits";
+    PetFood[PetFood["PetFoodSpicyMammothTreats"] = 1] = "PetFoodSpicyMammothTreats";
+    /**
+     * TBC
+     *
+     * @generated from protobuf enum value: PetFoodKiblersBits = 2;
+     */
+    PetFood[PetFood["PetFoodKiblersBits"] = 2] = "PetFoodKiblersBits";
 })(PetFood || (PetFood = {}));
-/**
- * @generated from protobuf enum proto.Alchohol
- */
-export var Alchohol;
-(function (Alchohol) {
-    /**
-     * @generated from protobuf enum value: AlchoholUnknown = 0;
-     */
-    Alchohol[Alchohol["AlchoholUnknown"] = 0] = "AlchoholUnknown";
-    /**
-     * @generated from protobuf enum value: AlchoholKreegsStoutBeatdown = 1;
-     */
-    Alchohol[Alchohol["AlchoholKreegsStoutBeatdown"] = 1] = "AlchoholKreegsStoutBeatdown";
-})(Alchohol || (Alchohol = {}));
 /**
  * @generated from protobuf enum proto.MobType
  */
@@ -2026,7 +2018,6 @@ class Consumes$Type extends MessageType {
             { no: 33, name: "off_hand_imbue", kind: "enum", T: () => ["proto.WeaponImbue", WeaponImbue] },
             { no: 41, name: "food", kind: "enum", T: () => ["proto.Food", Food] },
             { no: 37, name: "pet_food", kind: "enum", T: () => ["proto.PetFood", PetFood] },
-            { no: 42, name: "alchohol", kind: "enum", T: () => ["proto.Alchohol", Alchohol] },
             { no: 44, name: "scroll_of_agility", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 43, name: "scroll_of_strength", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 45, name: "scroll_of_spirit", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
@@ -2046,7 +2037,7 @@ class Consumes$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { flask: 0, battleElixir: 0, guardianElixir: 0, mainHandImbue: 0, offHandImbue: 0, food: 0, petFood: 0, alchohol: 0, scrollOfAgility: 0, scrollOfStrength: 0, scrollOfSpirit: 0, scrollOfProtection: 0, petScrollOfAgility: 0, petScrollOfStrength: 0, defaultPotion: 0, prepopPotion: 0, defaultConjured: 0, startingConjured: 0, numStartingConjured: 0, superSapper: false, goblinSapper: false, fillerExplosive: 0, drumsOfKings: false, drumsOfWild: false };
+        const message = { flask: 0, battleElixir: 0, guardianElixir: 0, mainHandImbue: 0, offHandImbue: 0, food: 0, petFood: 0, scrollOfAgility: 0, scrollOfStrength: 0, scrollOfSpirit: 0, scrollOfProtection: 0, petScrollOfAgility: 0, petScrollOfStrength: 0, defaultPotion: 0, prepopPotion: 0, defaultConjured: 0, startingConjured: 0, numStartingConjured: 0, superSapper: false, goblinSapper: false, fillerExplosive: 0, drumsOfKings: false, drumsOfWild: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -2077,9 +2068,6 @@ class Consumes$Type extends MessageType {
                     break;
                 case /* proto.PetFood pet_food */ 37:
                     message.petFood = reader.int32();
-                    break;
-                case /* proto.Alchohol alchohol */ 42:
-                    message.alchohol = reader.int32();
                     break;
                 case /* int32 scroll_of_agility */ 44:
                     message.scrollOfAgility = reader.int32();
@@ -2162,9 +2150,6 @@ class Consumes$Type extends MessageType {
         /* proto.PetFood pet_food = 37; */
         if (message.petFood !== 0)
             writer.tag(37, WireType.Varint).int32(message.petFood);
-        /* proto.Alchohol alchohol = 42; */
-        if (message.alchohol !== 0)
-            writer.tag(42, WireType.Varint).int32(message.alchohol);
         /* int32 scroll_of_agility = 44; */
         if (message.scrollOfAgility !== 0)
             writer.tag(44, WireType.Varint).int32(message.scrollOfAgility);

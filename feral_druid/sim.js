@@ -8,16 +8,7 @@ import { Stat } from '/wotlk/core/proto/common.js';
 import { TristateEffect } from '/wotlk/core/proto/common.js';
 import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
-import { Alchohol } from '/wotlk/core/proto/common.js';
-import { BattleElixir } from '/wotlk/core/proto/common.js';
-import { Flask } from '/wotlk/core/proto/common.js';
-import { Food } from '/wotlk/core/proto/common.js';
-import { GuardianElixir } from '/wotlk/core/proto/common.js';
-import { Conjured } from '/wotlk/core/proto/common.js';
-import { Potions } from '/wotlk/core/proto/common.js';
-import { WeaponImbue } from '/wotlk/core/proto/common.js';
 import { FeralDruid_Options as FeralDruidOptions } from '/wotlk/core/proto/druid.js';
-import * as IconInputs from '/wotlk/core/components/icon_inputs.js';
 import * as OtherInputs from '/wotlk/core/components/other_inputs.js';
 import * as DruidInputs from './inputs.js';
 import * as Presets from './presets.js';
@@ -123,75 +114,6 @@ export class FeralDruidSimUI extends IndividualSimUI {
             selfBuffInputs: [
                 DruidInputs.SelfInnervate,
             ],
-            // IconInputs to include in the 'Other Buffs' section on the settings tab.
-            raidBuffInputs: [
-                IconInputs.ArcaneBrilliance,
-                IconInputs.DivineSpirit,
-                IconInputs.GiftOfTheWild,
-                IconInputs.Bloodlust,
-                IconInputs.StrengthOfEarthTotem,
-                IconInputs.ManaSpringTotem,
-                IconInputs.BattleShout,
-                IconInputs.TrueshotAura,
-                IconInputs.UnleashedRage,
-            ],
-            partyBuffInputs: [
-                IconInputs.BraidedEterniumChain,
-                IconInputs.HeroicPresence,
-            ],
-            playerBuffInputs: [
-                IconInputs.BlessingOfKings,
-                IconInputs.BlessingOfWisdom,
-                IconInputs.BlessingOfMight,
-            ],
-            // IconInputs to include in the 'Debuffs' section on the settings tab.
-            debuffInputs: [
-                IconInputs.JudgementOfWisdom,
-                IconInputs.BloodFrenzy,
-                IconInputs.CurseOfWeakness,
-                IconInputs.FaerieFire,
-                IconInputs.ExposeArmor,
-                IconInputs.SunderArmor,
-                IconInputs.GiftOfArthas,
-                IconInputs.Mangle,
-            ],
-            // Which options are selectable in the 'Consumes' section.
-            consumeOptions: {
-                potions: [
-                    Potions.SuperManaPotion,
-                    Potions.FelManaPotion,
-                    Potions.HastePotion,
-                ],
-                conjured: [
-                    Conjured.ConjuredDarkRune,
-                ],
-                flasks: [
-                    Flask.FlaskOfRelentlessAssault,
-                ],
-                battleElixirs: [
-                    BattleElixir.ElixirOfMajorAgility,
-                    BattleElixir.ElixirOfDemonslaying,
-                ],
-                guardianElixirs: [
-                    GuardianElixir.ElixirOfDraenicWisdom,
-                    GuardianElixir.ElixirOfMajorMageblood,
-                ],
-                food: [
-                    Food.FoodGrilledMudfish,
-                    Food.FoodSpicyHotTalbuk,
-                ],
-                alcohol: [
-                    Alchohol.AlchoholKreegsStoutBeatdown,
-                ],
-                weaponImbues: [
-                    WeaponImbue.WeaponImbueAdamantiteWeightstone,
-                    WeaponImbue.WeaponImbueRighteousWeaponCoating,
-                ],
-                other: [
-                    IconInputs.ScrollOfAgilityV,
-                    IconInputs.ScrollOfStrengthV,
-                ],
-            },
             // Inputs to include in the 'Rotation' section on the settings tab.
             rotationInputs: DruidInputs.FeralDruidRotationConfig,
             // Inputs to include in the 'Other' section on the settings tab.

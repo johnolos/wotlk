@@ -16,5 +16,6 @@ export declare class IconPicker<ModObject, ValueType> extends Input<ModObject, V
     constructor(parent: HTMLElement, modObj: ModObject, config: IconPickerConfig<ModObject, ValueType>);
     getInputElem(): HTMLElement;
     getInputValue(): ValueType;
+    getActionId(): ActionId | null;
     setInputValue(newValue: ValueType): void;
 }

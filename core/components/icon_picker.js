@@ -87,6 +87,24 @@ export class IconPicker extends Input {
             return this.currentValue;
         }
     }
+    // Returns the ActionId of the currently selected value, or null if none selected.
+    getActionId() {
+        if (this.currentValue == 0) {
+            return null;
+        }
+        else if (this.currentValue == 1) {
+            return this.config.id;
+        }
+        else if (this.currentValue == 2 && this.config.improvedId) {
+            return this.config.improvedId;
+        }
+        else if (this.currentValue == 3 && this.config.improvedId2) {
+            return this.config.improvedId2;
+        }
+        else {
+            return this.config.id;
+        }
+    }
     setInputValue(newValue) {
         this.currentValue = Number(newValue);
         if (this.currentValue > 0) {

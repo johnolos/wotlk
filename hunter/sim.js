@@ -7,15 +7,7 @@ import { TristateEffect } from '/wotlk/core/proto/common.js';
 import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
 import { TypedEvent } from '/wotlk/core/typed_event.js';
-import { BattleElixir } from '/wotlk/core/proto/common.js';
-import { Flask } from '/wotlk/core/proto/common.js';
-import { Food } from '/wotlk/core/proto/common.js';
-import { GuardianElixir } from '/wotlk/core/proto/common.js';
-import { Conjured } from '/wotlk/core/proto/common.js';
-import { Potions } from '/wotlk/core/proto/common.js';
-import { WeaponImbue } from '/wotlk/core/proto/common.js';
 import { Hunter_Options_PetType as PetType, } from '/wotlk/core/proto/hunter.js';
-import * as IconInputs from '/wotlk/core/components/icon_inputs.js';
 import * as OtherInputs from '/wotlk/core/components/other_inputs.js';
 import * as HunterInputs from './inputs.js';
 import * as Presets from './presets.js';
@@ -129,86 +121,6 @@ export class HunterSimUI extends IndividualSimUI {
             selfBuffInputs: [
                 HunterInputs.WeaponAmmo,
             ],
-            // IconInputs to include in the 'Other Buffs' section on the settings tab.
-            raidBuffInputs: [
-                IconInputs.ArcaneBrilliance,
-                IconInputs.DivineSpirit,
-                IconInputs.GiftOfTheWild,
-                IconInputs.Bloodlust,
-                IconInputs.WindfuryTotem,
-                IconInputs.StrengthOfEarthTotem,
-                IconInputs.ManaSpringTotem,
-                IconInputs.BattleShout,
-                IconInputs.LeaderOfThePack,
-                IconInputs.TrueshotAura,
-                IconInputs.UnleashedRage,
-            ],
-            partyBuffInputs: [
-                IconInputs.HeroicPresence,
-                IconInputs.BraidedEterniumChain,
-            ],
-            playerBuffInputs: [
-                IconInputs.BlessingOfKings,
-                IconInputs.BlessingOfWisdom,
-                IconInputs.BlessingOfMight,
-            ],
-            // IconInputs to include in the 'Debuffs' section on the settings tab.
-            debuffInputs: [
-                IconInputs.BloodFrenzy,
-                IconInputs.JudgementOfWisdom,
-                IconInputs.FaerieFire,
-                IconInputs.SunderArmor,
-                IconInputs.ExposeArmor,
-                IconInputs.CurseOfWeakness,
-                IconInputs.CurseOfElements,
-                IconInputs.Misery,
-                IconInputs.GiftOfArthas,
-            ],
-            // Which options are selectable in the 'Consumes' section.
-            consumeOptions: {
-                potions: [
-                    Potions.HastePotion,
-                    Potions.SuperManaPotion,
-                    Potions.FelManaPotion,
-                ],
-                conjured: [
-                    Conjured.ConjuredDarkRune,
-                    Conjured.ConjuredFlameCap,
-                ],
-                flasks: [
-                    Flask.FlaskOfRelentlessAssault,
-                ],
-                battleElixirs: [
-                    BattleElixir.ElixirOfDemonslaying,
-                    BattleElixir.ElixirOfMajorAgility,
-                    BattleElixir.ElixirOfTheMongoose,
-                ],
-                guardianElixirs: [
-                    GuardianElixir.ElixirOfDraenicWisdom,
-                    GuardianElixir.ElixirOfMajorMageblood,
-                ],
-                food: [
-                    Food.FoodGrilledMudfish,
-                    Food.FoodRavagerDog,
-                    Food.FoodSpicyHotTalbuk,
-                    Food.FoodRoastedClefthoof,
-                ],
-                alcohol: [],
-                weaponImbues: [
-                    WeaponImbue.WeaponImbueAdamantiteSharpeningStone,
-                    WeaponImbue.WeaponImbueAdamantiteWeightstone,
-                    WeaponImbue.WeaponImbueRighteousWeaponCoating,
-                ],
-                pet: [
-                    IconInputs.KiblersBits,
-                    IconInputs.PetScrollOfAgilityV,
-                    IconInputs.PetScrollOfStrengthV,
-                ],
-                other: [
-                    IconInputs.ScrollOfAgilityV,
-                    IconInputs.ScrollOfStrengthV,
-                ],
-            },
             // Inputs to include in the 'Rotation' section on the settings tab.
             rotationInputs: HunterInputs.HunterRotationConfig,
             // Inputs to include in the 'Other' section on the settings tab.

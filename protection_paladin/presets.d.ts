@@ -4,15 +4,7 @@ import { Spec } from '/wotlk/core/proto/common.js';
 import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { Player } from '/wotlk/core/player.js';
 import { ProtectionPaladin_Rotation as ProtectionPaladinRotation, ProtectionPaladin_Options as ProtectionPaladinOptions } from '/wotlk/core/proto/paladin.js';
-export declare const AvengersShieldTalents: {
-    name: string;
-    data: SavedTalents;
-};
-export declare const ArdentDefenderTalents: {
-    name: string;
-    data: SavedTalents;
-};
-export declare const SanctityTalents: {
+export declare const GenericAoeTalents: {
     name: string;
     data: SavedTalents;
 };
