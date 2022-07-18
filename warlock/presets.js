@@ -4,9 +4,8 @@ import { Food } from '/wotlk/core/proto/common.js';
 import { Glyphs } from '/wotlk/core/proto/common.js';
 import { EquipmentSpec } from '/wotlk/core/proto/common.js';
 import { Potions } from '/wotlk/core/proto/common.js';
-import { WeaponImbue } from '/wotlk/core/proto/common.js';
 import { SavedTalents } from '/wotlk/core/proto/ui.js';
-import { Warlock_Rotation as WarlockRotation, Warlock_Options as WarlockOptions, Warlock_Rotation_PrimarySpell as PrimarySpell, Warlock_Rotation_SecondaryDot as SecondaryDot, Warlock_Rotation_SpecSpell as SpecSpell, Warlock_Rotation_Curse as Curse, Warlock_Options_Armor as Armor, Warlock_Options_Summon as Summon, WarlockMajorGlyph as MajorGlyph, WarlockMinorGlyph as MinorGlyph, } from '/wotlk/core/proto/warlock.js';
+import { Warlock_Rotation as WarlockRotation, Warlock_Options as WarlockOptions, Warlock_Rotation_PrimarySpell as PrimarySpell, Warlock_Rotation_SecondaryDot as SecondaryDot, Warlock_Rotation_SpecSpell as SpecSpell, Warlock_Rotation_Curse as Curse, Warlock_Options_WeaponImbue as WarlockWeaponImbue, Warlock_Options_Armor as Armor, Warlock_Options_Summon as Summon, WarlockMajorGlyph as MajorGlyph, WarlockMinorGlyph as MinorGlyph, } from '/wotlk/core/proto/warlock.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // Preset options for this spec.
 // Eventually we will import these values for the raid sim too, so its good to
@@ -96,12 +95,12 @@ export const DemonologyOptions = WarlockOptions.create({
 export const DestructionOptions = WarlockOptions.create({
     armor: Armor.FelArmor,
     summon: Summon.Imp,
+    weaponImbue: WarlockWeaponImbue.GrandFirestone,
 });
 export const DefaultConsumes = Consumes.create({
-    flask: Flask.FlaskOfPureDeath,
-    food: Food.FoodBlackenedBasilisk,
-    mainHandImbue: WeaponImbue.WeaponImbueBrilliantWizardOil,
-    defaultPotion: Potions.DestructionPotion,
+    flask: Flask.FlaskOfTheFrostWyrm,
+    food: Food.FoodFishFeast,
+    defaultPotion: Potions.PotionOfWildMagic,
 });
 export const P1_DESTRO = {
     name: 'P1 Destro',

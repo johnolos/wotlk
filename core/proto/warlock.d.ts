@@ -521,6 +521,10 @@ export interface Warlock_Options {
      * @generated from protobuf field: proto.Warlock.Options.Summon summon = 2;
      */
     summon: Warlock_Options_Summon;
+    /**
+     * @generated from protobuf field: proto.Warlock.Options.WeaponImbue weaponImbue = 3;
+     */
+    weaponImbue: Warlock_Options_WeaponImbue;
 }
 /**
  * @generated from protobuf enum proto.Warlock.Options.Summon
@@ -567,6 +571,23 @@ export declare enum Warlock_Options_Armor {
      * @generated from protobuf enum value: DemonArmor = 2;
      */
     DemonArmor = 2
+}
+/**
+ * @generated from protobuf enum proto.Warlock.Options.WeaponImbue
+ */
+export declare enum Warlock_Options_WeaponImbue {
+    /**
+     * @generated from protobuf enum value: NoWeaponImbue = 0;
+     */
+    NoWeaponImbue = 0,
+    /**
+     * @generated from protobuf enum value: GrandSpellstone = 1;
+     */
+    GrandSpellstone = 1,
+    /**
+     * @generated from protobuf enum value: GrandFirestone = 2;
+     */
+    GrandFirestone = 2
 }
 /**
  * @generated from protobuf enum proto.WarlockMajorGlyph

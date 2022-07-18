@@ -1893,18 +1893,6 @@ export declare enum WeaponImbue {
      */
     WeaponImbueSuperiorWizardOil = 4,
     /**
-     * @generated from protobuf enum value: WeaponImbueRighteousWeaponCoating = 12;
-     */
-    WeaponImbueRighteousWeaponCoating = 12,
-    /**
-     * @generated from protobuf enum value: WeaponImbueRogueDeadlyPoison = 10;
-     */
-    WeaponImbueRogueDeadlyPoison = 10,
-    /**
-     * @generated from protobuf enum value: WeaponImbueRogueInstantPoison = 11;
-     */
-    WeaponImbueRogueInstantPoison = 11,
-    /**
      * @generated from protobuf enum value: WeaponImbueShamanFlametongue = 6;
      */
     WeaponImbueShamanFlametongue = 6,
@@ -1919,7 +1907,19 @@ export declare enum WeaponImbue {
     /**
      * @generated from protobuf enum value: WeaponImbueShamanWindfury = 9;
      */
-    WeaponImbueShamanWindfury = 9
+    WeaponImbueShamanWindfury = 9,
+    /**
+     * @generated from protobuf enum value: WeaponImbueRogueDeadlyPoison = 10;
+     */
+    WeaponImbueRogueDeadlyPoison = 10,
+    /**
+     * @generated from protobuf enum value: WeaponImbueRogueInstantPoison = 11;
+     */
+    WeaponImbueRogueInstantPoison = 11,
+    /**
+     * @generated from protobuf enum value: WeaponImbueRighteousWeaponCoating = 12;
+     */
+    WeaponImbueRighteousWeaponCoating = 12
 }
 /**
  * @generated from protobuf enum proto.Flask

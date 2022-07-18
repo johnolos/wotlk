@@ -20,6 +20,22 @@ export declare const DemonArmor: {
     getValue: (player: Player<Spec.SpecWarlock>) => boolean;
     setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => void;
 };
+export declare const GrandFirestone: {
+    id: ActionId;
+    states: number;
+    extraCssClasses: string[];
+    changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
+    getValue: (player: Player<Spec.SpecWarlock>) => boolean;
+    setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => void;
+};
+export declare const GrandSpellstone: {
+    id: ActionId;
+    states: number;
+    extraCssClasses: string[];
+    changedEvent: (player: Player<Spec.SpecWarlock>) => TypedEvent<void>;
+    getValue: (player: Player<Spec.SpecWarlock>) => boolean;
+    setValue: (eventID: EventID, player: Player<Spec.SpecWarlock>, newValue: boolean) => void;
+};
 export declare const SummonImp: {
     id: ActionId;
     states: number;

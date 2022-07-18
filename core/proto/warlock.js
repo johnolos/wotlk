@@ -172,6 +172,24 @@ export var Warlock_Options_Armor;
     Warlock_Options_Armor[Warlock_Options_Armor["DemonArmor"] = 2] = "DemonArmor";
 })(Warlock_Options_Armor || (Warlock_Options_Armor = {}));
 /**
+ * @generated from protobuf enum proto.Warlock.Options.WeaponImbue
+ */
+export var Warlock_Options_WeaponImbue;
+(function (Warlock_Options_WeaponImbue) {
+    /**
+     * @generated from protobuf enum value: NoWeaponImbue = 0;
+     */
+    Warlock_Options_WeaponImbue[Warlock_Options_WeaponImbue["NoWeaponImbue"] = 0] = "NoWeaponImbue";
+    /**
+     * @generated from protobuf enum value: GrandSpellstone = 1;
+     */
+    Warlock_Options_WeaponImbue[Warlock_Options_WeaponImbue["GrandSpellstone"] = 1] = "GrandSpellstone";
+    /**
+     * @generated from protobuf enum value: GrandFirestone = 2;
+     */
+    Warlock_Options_WeaponImbue[Warlock_Options_WeaponImbue["GrandFirestone"] = 2] = "GrandFirestone";
+})(Warlock_Options_WeaponImbue || (Warlock_Options_WeaponImbue = {}));
+/**
  * @generated from protobuf enum proto.WarlockMajorGlyph
  */
 export var WarlockMajorGlyph;
@@ -1100,11 +1118,12 @@ class Warlock_Options$Type extends MessageType {
     constructor() {
         super("proto.Warlock.Options", [
             { no: 1, name: "armor", kind: "enum", T: () => ["proto.Warlock.Options.Armor", Warlock_Options_Armor] },
-            { no: 2, name: "summon", kind: "enum", T: () => ["proto.Warlock.Options.Summon", Warlock_Options_Summon] }
+            { no: 2, name: "summon", kind: "enum", T: () => ["proto.Warlock.Options.Summon", Warlock_Options_Summon] },
+            { no: 3, name: "weaponImbue", kind: "enum", T: () => ["proto.Warlock.Options.WeaponImbue", Warlock_Options_WeaponImbue] }
         ]);
     }
     create(value) {
-        const message = { armor: 0, summon: 0 };
+        const message = { armor: 0, summon: 0, weaponImbue: 0 };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1120,6 +1139,9 @@ class Warlock_Options$Type extends MessageType {
                     break;
                 case /* proto.Warlock.Options.Summon summon */ 2:
                     message.summon = reader.int32();
+                    break;
+                case /* proto.Warlock.Options.WeaponImbue weaponImbue */ 3:
+                    message.weaponImbue = reader.int32();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -1139,6 +1161,9 @@ class Warlock_Options$Type extends MessageType {
         /* proto.Warlock.Options.Summon summon = 2; */
         if (message.summon !== 0)
             writer.tag(2, WireType.Varint).int32(message.summon);
+        /* proto.Warlock.Options.WeaponImbue weaponImbue = 3; */
+        if (message.weaponImbue !== 0)
+            writer.tag(3, WireType.Varint).int32(message.weaponImbue);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

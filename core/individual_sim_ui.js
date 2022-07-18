@@ -569,16 +569,20 @@ export class IndividualSimUI extends SimUI {
             const elem = this.rootElem.getElementsByClassName('consumes-food')[0];
             new IconEnumPicker(elem, this.player, IconInputs.makeFoodInput(foodOptions));
         }
-        //if (this.individualConfig.consumeOptions?.weaponImbues.length) {
-        //	const mhImbueElem = this.rootElem.getElementsByClassName('consumes-imbue-mh')[0] as HTMLElement;
-        //	const ohImbueElem = this.rootElem.getElementsByClassName('consumes-imbue-oh')[0] as HTMLElement;
-        //	new IconEnumPicker(mhImbueElem, this.player,
-        //		IconInputs.makeWeaponImbueInput(true, this.individualConfig.consumeOptions.weaponImbues));
-        //	if (isDualWieldSpec(this.player.spec)) {
-        //		new IconEnumPicker(ohImbueElem, this.player,
-        //			IconInputs.makeWeaponImbueInput(false, this.individualConfig.consumeOptions.weaponImbues));
-        //	}
-        //}
+        if (this.individualConfig.weaponImbueInputs?.length) {
+            const weaponImbueSection = this.rootElem.getElementsByClassName('consumes-imbue-mh')[0];
+            configureIconSection(weaponImbueSection, this.individualConfig.weaponImbueInputs.map(iconInput => new IndividualSimIconPicker(weaponImbueSection, this.player, iconInput, this)));
+        }
+        // if (this.individualConfig.weaponImbueInputs?.length) {
+        // 	const mhImbueElem = this.rootElem.getElementsByClassName('consumes-imbue-mh')[0] as HTMLElement;
+        // 	const ohImbueElem = this.rootElem.getElementsByClassName('consumes-imbue-oh')[0] as HTMLElement;
+        // 	new IconEnumPicker(mhImbueElem, this.player,
+        // 		IconInputs.makeWeaponImbueInput(true, this.individualConfig.weaponImbueInputs));
+        // 	if (isDualWieldSpec(this.player.spec)) {
+        // 		new IconEnumPicker(ohImbueElem, this.player,
+        // 			IconInputs.makeWeaponImbueInput(false, this.individualConfig.weaponImbueInputs));
+        // 	}
+        // }
         const tradeConsumesElem = this.rootElem.getElementsByClassName('consumes-trade')[0];
         new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.SuperSapper, this);
         new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.GoblinSapper, this);
