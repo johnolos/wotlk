@@ -11,49 +11,17 @@ import { MessageType } from "@protobuf-ts/runtime";
  */
 export interface RaidBuffs {
     /**
-     * @generated from protobuf field: proto.TristateEffect power_word_fortitude = 1;
-     */
-    powerWordFortitude: TristateEffect;
-    /**
-     * @generated from protobuf field: bool arcane_brilliance = 2;
-     */
-    arcaneBrilliance: boolean;
-    /**
-     * @generated from protobuf field: bool fel_intelligence = 3;
-     */
-    felIntelligence: boolean;
-    /**
-     * @generated from protobuf field: bool divine_spirit = 4;
-     */
-    divineSpirit: boolean;
-    /**
+     * +Stats
+     *
      * @generated from protobuf field: proto.TristateEffect gift_of_the_wild = 5;
      */
     giftOfTheWild: TristateEffect;
     /**
-     * @generated from protobuf field: bool shadow_protection = 6;
+     * +Stam
+     *
+     * @generated from protobuf field: proto.TristateEffect power_word_fortitude = 1;
      */
-    shadowProtection: boolean;
-    /**
-     * @generated from protobuf field: bool swift_retribution = 7;
-     */
-    swiftRetribution: boolean;
-    /**
-     * @generated from protobuf field: proto.TristateEffect moonkin_aura = 8;
-     */
-    moonkinAura: TristateEffect;
-    /**
-     * @generated from protobuf field: bool elemental_oath = 9;
-     */
-    elementalOath: boolean;
-    /**
-     * @generated from protobuf field: bool totem_of_wrath = 10;
-     */
-    totemOfWrath: boolean;
-    /**
-     * @generated from protobuf field: int32 demonic_pact = 37;
-     */
-    demonicPact: number;
+    powerWordFortitude: TristateEffect;
     /**
      * +Health
      *
@@ -65,7 +33,7 @@ export interface RaidBuffs {
      */
     bloodPact: TristateEffect;
     /**
-     * 155 agi/str
+     * + Agi and Str
      *
      * @generated from protobuf field: bool horn_of_winter = 13;
      */
@@ -75,15 +43,19 @@ export interface RaidBuffs {
      */
     strengthOfEarthTotem: TristateEffect;
     /**
-     * 20% Melee Haste
+     * +Intell and/or Spi
      *
-     * @generated from protobuf field: bool icy_talons = 15;
+     * @generated from protobuf field: bool arcane_brilliance = 2;
      */
-    icyTalons: boolean;
+    arcaneBrilliance: boolean;
     /**
-     * @generated from protobuf field: proto.TristateEffect windfury_totem = 16;
+     * @generated from protobuf field: proto.TristateEffect fel_intelligence = 3;
      */
-    windfuryTotem: TristateEffect;
+    felIntelligence: TristateEffect;
+    /**
+     * @generated from protobuf field: bool divine_spirit = 4;
+     */
+    divineSpirit: boolean;
     /**
      * +AP
      *
@@ -115,6 +87,46 @@ export interface RaidBuffs {
      */
     rampage: boolean;
     /**
+     * 20% Melee Haste
+     *
+     * @generated from protobuf field: bool icy_talons = 15;
+     */
+    icyTalons: boolean;
+    /**
+     * @generated from protobuf field: proto.TristateEffect windfury_totem = 16;
+     */
+    windfuryTotem: TristateEffect;
+    /**
+     * +Spell Power
+     *
+     * @generated from protobuf field: bool totem_of_wrath = 10;
+     */
+    totemOfWrath: boolean;
+    /**
+     * @generated from protobuf field: int32 demonic_pact = 37;
+     */
+    demonicPact: number;
+    /**
+     * +5% Spell Crit and/or +3% Haste
+     *
+     * @generated from protobuf field: bool swift_retribution = 7;
+     */
+    swiftRetribution: boolean;
+    /**
+     * @generated from protobuf field: proto.TristateEffect moonkin_aura = 8;
+     */
+    moonkinAura: TristateEffect;
+    /**
+     * @generated from protobuf field: bool elemental_oath = 9;
+     */
+    elementalOath: boolean;
+    /**
+     * 5% spell haste
+     *
+     * @generated from protobuf field: bool wrath_of_air_totem = 27;
+     */
+    wrathOfAirTotem: boolean;
+    /**
      * 3% dmg
      *
      * @generated from protobuf field: bool ferocious_inspiration = 23;
@@ -129,16 +141,14 @@ export interface RaidBuffs {
      */
     arcaneEmpowerment: boolean;
     /**
+     * mp5
+     *
      * @generated from protobuf field: proto.TristateEffect mana_spring_totem = 26;
      */
     manaSpringTotem: TristateEffect;
     /**
-     * 5% spell haste
+     * Miscellaneous
      *
-     * @generated from protobuf field: bool wrath_of_air_totem = 27;
-     */
-    wrathOfAirTotem: boolean;
-    /**
      * @generated from protobuf field: bool bloodlust = 29;
      */
     bloodlust: boolean;
@@ -154,6 +164,10 @@ export interface RaidBuffs {
      * @generated from protobuf field: bool retribution_aura = 34;
      */
     retributionAura: boolean;
+    /**
+     * @generated from protobuf field: bool shadow_protection = 6;
+     */
+    shadowProtection: boolean;
     /**
      * Drums
      *
@@ -237,21 +251,21 @@ export interface PartyBuffs {
  */
 export interface IndividualBuffs {
     /**
-     * Blessings, used for raid sim and individual sim
+     * 10% Stats
      *
-     * @generated from protobuf field: bool blessing_of_kings = 1;
+     * @generated from protobuf field: bool blessing_of_kings = 46;
      */
     blessingOfKings: boolean;
     /**
-     * @generated from protobuf field: proto.TristateEffect blessing_of_wisdom = 2;
+     * @generated from protobuf field: proto.TristateEffect blessing_of_wisdom = 47;
      */
     blessingOfWisdom: TristateEffect;
     /**
-     * @generated from protobuf field: proto.TristateEffect blessing_of_might = 3;
+     * @generated from protobuf field: proto.TristateEffect blessing_of_might = 48;
      */
     blessingOfMight: TristateEffect;
     /**
-     * @generated from protobuf field: bool blessing_of_sanctuary = 4;
+     * @generated from protobuf field: bool blessing_of_sanctuary = 49;
      */
     blessingOfSanctuary: boolean;
     /**

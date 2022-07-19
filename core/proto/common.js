@@ -1520,38 +1520,38 @@ export var OtherAction;
 class RaidBuffs$Type extends MessageType {
     constructor() {
         super("proto.RaidBuffs", [
-            { no: 1, name: "power_word_fortitude", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 2, name: "arcane_brilliance", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 3, name: "fel_intelligence", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 4, name: "divine_spirit", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 5, name: "gift_of_the_wild", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 6, name: "shadow_protection", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 7, name: "swift_retribution", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 8, name: "moonkin_aura", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 9, name: "elemental_oath", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 10, name: "totem_of_wrath", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 37, name: "demonic_pact", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 1, name: "power_word_fortitude", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 11, name: "commanding_shout", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 12, name: "blood_pact", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 13, name: "horn_of_winter", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 14, name: "strength_of_earth_totem", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 15, name: "icy_talons", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 16, name: "windfury_totem", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 2, name: "arcane_brilliance", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 3, name: "fel_intelligence", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 4, name: "divine_spirit", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 17, name: "battle_shout", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 18, name: "trueshot_aura", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 19, name: "unleashed_rage", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 20, name: "abominations_might", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 21, name: "leader_of_the_pack", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 22, name: "rampage", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 15, name: "icy_talons", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 16, name: "windfury_totem", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 10, name: "totem_of_wrath", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 37, name: "demonic_pact", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+            { no: 7, name: "swift_retribution", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 8, name: "moonkin_aura", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 9, name: "elemental_oath", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 27, name: "wrath_of_air_totem", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 23, name: "ferocious_inspiration", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 24, name: "sanctified_retribution", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 25, name: "arcane_empowerment", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 26, name: "mana_spring_totem", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 27, name: "wrath_of_air_totem", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 29, name: "bloodlust", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 32, name: "thorns", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 33, name: "devotion_aura", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 34, name: "retribution_aura", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 6, name: "shadow_protection", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 38, name: "drums_of_forgotten_kings", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 39, name: "drums_of_the_wild", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 40, name: "scroll_of_protection", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
@@ -1563,7 +1563,7 @@ class RaidBuffs$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { powerWordFortitude: 0, arcaneBrilliance: false, felIntelligence: false, divineSpirit: false, giftOfTheWild: 0, shadowProtection: false, swiftRetribution: false, moonkinAura: 0, elementalOath: false, totemOfWrath: false, demonicPact: 0, commandingShout: 0, bloodPact: 0, hornOfWinter: false, strengthOfEarthTotem: 0, icyTalons: false, windfuryTotem: 0, battleShout: 0, trueshotAura: false, unleashedRage: false, abominationsMight: false, leaderOfThePack: 0, rampage: false, ferociousInspiration: false, sanctifiedRetribution: false, arcaneEmpowerment: false, manaSpringTotem: 0, wrathOfAirTotem: false, bloodlust: false, thorns: 0, devotionAura: 0, retributionAura: false, drumsOfForgottenKings: false, drumsOfTheWild: false, scrollOfProtection: false, scrollOfStamina: false, scrollOfStrength: false, scrollOfAgility: false, scrollOfIntellect: false, scrollOfSpirit: false };
+        const message = { giftOfTheWild: 0, powerWordFortitude: 0, commandingShout: 0, bloodPact: 0, hornOfWinter: false, strengthOfEarthTotem: 0, arcaneBrilliance: false, felIntelligence: 0, divineSpirit: false, battleShout: 0, trueshotAura: false, unleashedRage: false, abominationsMight: false, leaderOfThePack: 0, rampage: false, icyTalons: false, windfuryTotem: 0, totemOfWrath: false, demonicPact: 0, swiftRetribution: false, moonkinAura: 0, elementalOath: false, wrathOfAirTotem: false, ferociousInspiration: false, sanctifiedRetribution: false, arcaneEmpowerment: false, manaSpringTotem: 0, bloodlust: false, thorns: 0, devotionAura: 0, retributionAura: false, shadowProtection: false, drumsOfForgottenKings: false, drumsOfTheWild: false, scrollOfProtection: false, scrollOfStamina: false, scrollOfStrength: false, scrollOfAgility: false, scrollOfIntellect: false, scrollOfSpirit: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1574,38 +1574,11 @@ class RaidBuffs$Type extends MessageType {
         while (reader.pos < end) {
             let [fieldNo, wireType] = reader.tag();
             switch (fieldNo) {
-                case /* proto.TristateEffect power_word_fortitude */ 1:
-                    message.powerWordFortitude = reader.int32();
-                    break;
-                case /* bool arcane_brilliance */ 2:
-                    message.arcaneBrilliance = reader.bool();
-                    break;
-                case /* bool fel_intelligence */ 3:
-                    message.felIntelligence = reader.bool();
-                    break;
-                case /* bool divine_spirit */ 4:
-                    message.divineSpirit = reader.bool();
-                    break;
                 case /* proto.TristateEffect gift_of_the_wild */ 5:
                     message.giftOfTheWild = reader.int32();
                     break;
-                case /* bool shadow_protection */ 6:
-                    message.shadowProtection = reader.bool();
-                    break;
-                case /* bool swift_retribution */ 7:
-                    message.swiftRetribution = reader.bool();
-                    break;
-                case /* proto.TristateEffect moonkin_aura */ 8:
-                    message.moonkinAura = reader.int32();
-                    break;
-                case /* bool elemental_oath */ 9:
-                    message.elementalOath = reader.bool();
-                    break;
-                case /* bool totem_of_wrath */ 10:
-                    message.totemOfWrath = reader.bool();
-                    break;
-                case /* int32 demonic_pact */ 37:
-                    message.demonicPact = reader.int32();
+                case /* proto.TristateEffect power_word_fortitude */ 1:
+                    message.powerWordFortitude = reader.int32();
                     break;
                 case /* proto.TristateEffect commanding_shout */ 11:
                     message.commandingShout = reader.int32();
@@ -1619,11 +1592,14 @@ class RaidBuffs$Type extends MessageType {
                 case /* proto.TristateEffect strength_of_earth_totem */ 14:
                     message.strengthOfEarthTotem = reader.int32();
                     break;
-                case /* bool icy_talons */ 15:
-                    message.icyTalons = reader.bool();
+                case /* bool arcane_brilliance */ 2:
+                    message.arcaneBrilliance = reader.bool();
                     break;
-                case /* proto.TristateEffect windfury_totem */ 16:
-                    message.windfuryTotem = reader.int32();
+                case /* proto.TristateEffect fel_intelligence */ 3:
+                    message.felIntelligence = reader.int32();
+                    break;
+                case /* bool divine_spirit */ 4:
+                    message.divineSpirit = reader.bool();
                     break;
                 case /* proto.TristateEffect battle_shout */ 17:
                     message.battleShout = reader.int32();
@@ -1643,6 +1619,30 @@ class RaidBuffs$Type extends MessageType {
                 case /* bool rampage */ 22:
                     message.rampage = reader.bool();
                     break;
+                case /* bool icy_talons */ 15:
+                    message.icyTalons = reader.bool();
+                    break;
+                case /* proto.TristateEffect windfury_totem */ 16:
+                    message.windfuryTotem = reader.int32();
+                    break;
+                case /* bool totem_of_wrath */ 10:
+                    message.totemOfWrath = reader.bool();
+                    break;
+                case /* int32 demonic_pact */ 37:
+                    message.demonicPact = reader.int32();
+                    break;
+                case /* bool swift_retribution */ 7:
+                    message.swiftRetribution = reader.bool();
+                    break;
+                case /* proto.TristateEffect moonkin_aura */ 8:
+                    message.moonkinAura = reader.int32();
+                    break;
+                case /* bool elemental_oath */ 9:
+                    message.elementalOath = reader.bool();
+                    break;
+                case /* bool wrath_of_air_totem */ 27:
+                    message.wrathOfAirTotem = reader.bool();
+                    break;
                 case /* bool ferocious_inspiration */ 23:
                     message.ferociousInspiration = reader.bool();
                     break;
@@ -1655,9 +1655,6 @@ class RaidBuffs$Type extends MessageType {
                 case /* proto.TristateEffect mana_spring_totem */ 26:
                     message.manaSpringTotem = reader.int32();
                     break;
-                case /* bool wrath_of_air_totem */ 27:
-                    message.wrathOfAirTotem = reader.bool();
-                    break;
                 case /* bool bloodlust */ 29:
                     message.bloodlust = reader.bool();
                     break;
@@ -1669,6 +1666,9 @@ class RaidBuffs$Type extends MessageType {
                     break;
                 case /* bool retribution_aura */ 34:
                     message.retributionAura = reader.bool();
+                    break;
+                case /* bool shadow_protection */ 6:
+                    message.shadowProtection = reader.bool();
                     break;
                 case /* bool drums_of_forgotten_kings */ 38:
                     message.drumsOfForgottenKings = reader.bool();
@@ -1706,39 +1706,12 @@ class RaidBuffs$Type extends MessageType {
         return message;
     }
     internalBinaryWrite(message, writer, options) {
-        /* proto.TristateEffect power_word_fortitude = 1; */
-        if (message.powerWordFortitude !== 0)
-            writer.tag(1, WireType.Varint).int32(message.powerWordFortitude);
-        /* bool arcane_brilliance = 2; */
-        if (message.arcaneBrilliance !== false)
-            writer.tag(2, WireType.Varint).bool(message.arcaneBrilliance);
-        /* bool fel_intelligence = 3; */
-        if (message.felIntelligence !== false)
-            writer.tag(3, WireType.Varint).bool(message.felIntelligence);
-        /* bool divine_spirit = 4; */
-        if (message.divineSpirit !== false)
-            writer.tag(4, WireType.Varint).bool(message.divineSpirit);
         /* proto.TristateEffect gift_of_the_wild = 5; */
         if (message.giftOfTheWild !== 0)
             writer.tag(5, WireType.Varint).int32(message.giftOfTheWild);
-        /* bool shadow_protection = 6; */
-        if (message.shadowProtection !== false)
-            writer.tag(6, WireType.Varint).bool(message.shadowProtection);
-        /* bool swift_retribution = 7; */
-        if (message.swiftRetribution !== false)
-            writer.tag(7, WireType.Varint).bool(message.swiftRetribution);
-        /* proto.TristateEffect moonkin_aura = 8; */
-        if (message.moonkinAura !== 0)
-            writer.tag(8, WireType.Varint).int32(message.moonkinAura);
-        /* bool elemental_oath = 9; */
-        if (message.elementalOath !== false)
-            writer.tag(9, WireType.Varint).bool(message.elementalOath);
-        /* bool totem_of_wrath = 10; */
-        if (message.totemOfWrath !== false)
-            writer.tag(10, WireType.Varint).bool(message.totemOfWrath);
-        /* int32 demonic_pact = 37; */
-        if (message.demonicPact !== 0)
-            writer.tag(37, WireType.Varint).int32(message.demonicPact);
+        /* proto.TristateEffect power_word_fortitude = 1; */
+        if (message.powerWordFortitude !== 0)
+            writer.tag(1, WireType.Varint).int32(message.powerWordFortitude);
         /* proto.TristateEffect commanding_shout = 11; */
         if (message.commandingShout !== 0)
             writer.tag(11, WireType.Varint).int32(message.commandingShout);
@@ -1751,12 +1724,15 @@ class RaidBuffs$Type extends MessageType {
         /* proto.TristateEffect strength_of_earth_totem = 14; */
         if (message.strengthOfEarthTotem !== 0)
             writer.tag(14, WireType.Varint).int32(message.strengthOfEarthTotem);
-        /* bool icy_talons = 15; */
-        if (message.icyTalons !== false)
-            writer.tag(15, WireType.Varint).bool(message.icyTalons);
-        /* proto.TristateEffect windfury_totem = 16; */
-        if (message.windfuryTotem !== 0)
-            writer.tag(16, WireType.Varint).int32(message.windfuryTotem);
+        /* bool arcane_brilliance = 2; */
+        if (message.arcaneBrilliance !== false)
+            writer.tag(2, WireType.Varint).bool(message.arcaneBrilliance);
+        /* proto.TristateEffect fel_intelligence = 3; */
+        if (message.felIntelligence !== 0)
+            writer.tag(3, WireType.Varint).int32(message.felIntelligence);
+        /* bool divine_spirit = 4; */
+        if (message.divineSpirit !== false)
+            writer.tag(4, WireType.Varint).bool(message.divineSpirit);
         /* proto.TristateEffect battle_shout = 17; */
         if (message.battleShout !== 0)
             writer.tag(17, WireType.Varint).int32(message.battleShout);
@@ -1775,6 +1751,30 @@ class RaidBuffs$Type extends MessageType {
         /* bool rampage = 22; */
         if (message.rampage !== false)
             writer.tag(22, WireType.Varint).bool(message.rampage);
+        /* bool icy_talons = 15; */
+        if (message.icyTalons !== false)
+            writer.tag(15, WireType.Varint).bool(message.icyTalons);
+        /* proto.TristateEffect windfury_totem = 16; */
+        if (message.windfuryTotem !== 0)
+            writer.tag(16, WireType.Varint).int32(message.windfuryTotem);
+        /* bool totem_of_wrath = 10; */
+        if (message.totemOfWrath !== false)
+            writer.tag(10, WireType.Varint).bool(message.totemOfWrath);
+        /* int32 demonic_pact = 37; */
+        if (message.demonicPact !== 0)
+            writer.tag(37, WireType.Varint).int32(message.demonicPact);
+        /* bool swift_retribution = 7; */
+        if (message.swiftRetribution !== false)
+            writer.tag(7, WireType.Varint).bool(message.swiftRetribution);
+        /* proto.TristateEffect moonkin_aura = 8; */
+        if (message.moonkinAura !== 0)
+            writer.tag(8, WireType.Varint).int32(message.moonkinAura);
+        /* bool elemental_oath = 9; */
+        if (message.elementalOath !== false)
+            writer.tag(9, WireType.Varint).bool(message.elementalOath);
+        /* bool wrath_of_air_totem = 27; */
+        if (message.wrathOfAirTotem !== false)
+            writer.tag(27, WireType.Varint).bool(message.wrathOfAirTotem);
         /* bool ferocious_inspiration = 23; */
         if (message.ferociousInspiration !== false)
             writer.tag(23, WireType.Varint).bool(message.ferociousInspiration);
@@ -1787,9 +1787,6 @@ class RaidBuffs$Type extends MessageType {
         /* proto.TristateEffect mana_spring_totem = 26; */
         if (message.manaSpringTotem !== 0)
             writer.tag(26, WireType.Varint).int32(message.manaSpringTotem);
-        /* bool wrath_of_air_totem = 27; */
-        if (message.wrathOfAirTotem !== false)
-            writer.tag(27, WireType.Varint).bool(message.wrathOfAirTotem);
         /* bool bloodlust = 29; */
         if (message.bloodlust !== false)
             writer.tag(29, WireType.Varint).bool(message.bloodlust);
@@ -1802,6 +1799,9 @@ class RaidBuffs$Type extends MessageType {
         /* bool retribution_aura = 34; */
         if (message.retributionAura !== false)
             writer.tag(34, WireType.Varint).bool(message.retributionAura);
+        /* bool shadow_protection = 6; */
+        if (message.shadowProtection !== false)
+            writer.tag(6, WireType.Varint).bool(message.shadowProtection);
         /* bool drums_of_forgotten_kings = 38; */
         if (message.drumsOfForgottenKings !== false)
             writer.tag(38, WireType.Varint).bool(message.drumsOfForgottenKings);
@@ -1929,10 +1929,10 @@ export const PartyBuffs = new PartyBuffs$Type();
 class IndividualBuffs$Type extends MessageType {
     constructor() {
         super("proto.IndividualBuffs", [
-            { no: 1, name: "blessing_of_kings", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "blessing_of_wisdom", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 3, name: "blessing_of_might", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 4, name: "blessing_of_sanctuary", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 46, name: "blessing_of_kings", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 47, name: "blessing_of_wisdom", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 48, name: "blessing_of_might", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 49, name: "blessing_of_sanctuary", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 5, name: "hymn_of_hope", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 6, name: "hand_of_salvation", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 7, name: "rapture", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
@@ -1955,16 +1955,16 @@ class IndividualBuffs$Type extends MessageType {
         while (reader.pos < end) {
             let [fieldNo, wireType] = reader.tag();
             switch (fieldNo) {
-                case /* bool blessing_of_kings */ 1:
+                case /* bool blessing_of_kings */ 46:
                     message.blessingOfKings = reader.bool();
                     break;
-                case /* proto.TristateEffect blessing_of_wisdom */ 2:
+                case /* proto.TristateEffect blessing_of_wisdom */ 47:
                     message.blessingOfWisdom = reader.int32();
                     break;
-                case /* proto.TristateEffect blessing_of_might */ 3:
+                case /* proto.TristateEffect blessing_of_might */ 48:
                     message.blessingOfMight = reader.int32();
                     break;
-                case /* bool blessing_of_sanctuary */ 4:
+                case /* bool blessing_of_sanctuary */ 49:
                     message.blessingOfSanctuary = reader.bool();
                     break;
                 case /* int32 hymn_of_hope */ 5:
@@ -2003,18 +2003,18 @@ class IndividualBuffs$Type extends MessageType {
         return message;
     }
     internalBinaryWrite(message, writer, options) {
-        /* bool blessing_of_kings = 1; */
+        /* bool blessing_of_kings = 46; */
         if (message.blessingOfKings !== false)
-            writer.tag(1, WireType.Varint).bool(message.blessingOfKings);
-        /* proto.TristateEffect blessing_of_wisdom = 2; */
+            writer.tag(46, WireType.Varint).bool(message.blessingOfKings);
+        /* proto.TristateEffect blessing_of_wisdom = 47; */
         if (message.blessingOfWisdom !== 0)
-            writer.tag(2, WireType.Varint).int32(message.blessingOfWisdom);
-        /* proto.TristateEffect blessing_of_might = 3; */
+            writer.tag(47, WireType.Varint).int32(message.blessingOfWisdom);
+        /* proto.TristateEffect blessing_of_might = 48; */
         if (message.blessingOfMight !== 0)
-            writer.tag(3, WireType.Varint).int32(message.blessingOfMight);
-        /* bool blessing_of_sanctuary = 4; */
+            writer.tag(48, WireType.Varint).int32(message.blessingOfMight);
+        /* bool blessing_of_sanctuary = 49; */
         if (message.blessingOfSanctuary !== false)
-            writer.tag(4, WireType.Varint).bool(message.blessingOfSanctuary);
+            writer.tag(49, WireType.Varint).bool(message.blessingOfSanctuary);
         /* int32 hymn_of_hope = 5; */
         if (message.hymnOfHope !== 0)
             writer.tag(5, WireType.Varint).int32(message.hymnOfHope);
