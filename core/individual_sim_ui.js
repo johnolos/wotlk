@@ -47,6 +47,7 @@ import { addRaidSimAction } from '/wotlk/core/components/raid_sim_action.js';
 import { addStatWeightsAction } from '/wotlk/core/components/stat_weights_action.js';
 import { getEnumValues } from '/wotlk/core/utils.js';
 import { getMetaGemConditionDescription } from '/wotlk/core/proto_utils/gems.js';
+import { isDualWieldSpec } from '/wotlk/core/proto_utils/utils.js';
 import { launchedSpecs } from '/wotlk/core/launched_sims.js';
 import { makePetTypeInputConfig } from '/wotlk/core/talents/hunter_pet.js';
 import { newIndividualExporters } from '/wotlk/core/components/exporters.js';
@@ -298,7 +299,7 @@ export class IndividualSimUI extends SimUI {
         var spellSection = ``;
         if (this.individualConfig.spellInputs?.length) {
             spellSection = `
-			   <fieldset class="settings-section spell-section">
+			    <fieldset class="settings-section spell-section">
 					<legend>Spells</legend>
 				</fieldset>`;
         }
@@ -326,6 +327,11 @@ export class IndividualSimUI extends SimUI {
 					<fieldset class="settings-section self-buffs-section">
 						<legend>Self Buffs</legend>
 					</fieldset>
+					<fieldset class="settings-section imbues-section">
+					<legend>Imbues</legend>
+						<div class="consumes-imbue-mh"></div>
+						<div class="consumes-imbue-oh"></div>
+					</fieldset>
 			`
             +
                 petsSelectionSection
@@ -334,7 +340,10 @@ export class IndividualSimUI extends SimUI {
 				</div>
 				<div class="settings-section-container within-raid-sim-hide">
 					<fieldset class="settings-section buffs-section">
-						<legend>Other Buffs</legend>
+						<legend>Raid Buffs</legend>
+					</fieldset>
+					<fieldset class="settings-section debuffs-section">
+						<legend>Debuffs</legend>
 					</fieldset>
 				</div>
 				<div class="settings-section-container">
@@ -354,13 +363,6 @@ export class IndividualSimUI extends SimUI {
 								<span>OR</span>
 								<div class="consumes-battle-elixirs"></div>
 								<div class="consumes-guardian-elixirs"></div>
-							</div>
-						</div>
-						<div class="consumes-row">
-							<span>Imbues</span>
-							<div class="consumes-row-inputs">
-								<div class="consumes-imbue-mh"></div>
-								<div class="consumes-imbue-oh"></div>
 							</div>
 						</div>
 						<div class="consumes-row">
@@ -392,13 +394,6 @@ export class IndividualSimUI extends SimUI {
 						<div class="cooldowns-section-content">
 						</div>
 					</fieldset>
-				</div>
-				<div class="settings-section-container within-raid-sim-hide">
-					<fieldset class="settings-section debuffs-section">
-						<legend>Debuffs</legend>
-					</fieldset>
-				</div>
-				<div class="settings-section-container">
 					<fieldset class="settings-section other-settings-section">
 						<legend>Other</legend>
 					</fieldset>
@@ -570,19 +565,13 @@ export class IndividualSimUI extends SimUI {
             new IconEnumPicker(elem, this.player, IconInputs.makeFoodInput(foodOptions));
         }
         if (this.individualConfig.weaponImbueInputs?.length) {
-            const weaponImbueSection = this.rootElem.getElementsByClassName('consumes-imbue-mh')[0];
-            configureIconSection(weaponImbueSection, this.individualConfig.weaponImbueInputs.map(iconInput => new IndividualSimIconPicker(weaponImbueSection, this.player, iconInput, this)));
+            const mhImbueSection = this.rootElem.getElementsByClassName('consumes-imbue-mh')[0];
+            configureIconSection(mhImbueSection, this.individualConfig.weaponImbueInputs.map(iconInput => new IndividualSimIconPicker(mhImbueSection, this.player, iconInput, this)));
+            const ohImbueSection = this.rootElem.getElementsByClassName('consumes-imbue-oh')[0];
+            if (isDualWieldSpec(this.player.spec)) {
+                configureIconSection(ohImbueSection, this.individualConfig.weaponImbueInputs.map(iconInput => new IndividualSimIconPicker(ohImbueSection, this.player, iconInput, this)));
+            }
         }
-        // if (this.individualConfig.weaponImbueInputs?.length) {
-        // 	const mhImbueElem = this.rootElem.getElementsByClassName('consumes-imbue-mh')[0] as HTMLElement;
-        // 	const ohImbueElem = this.rootElem.getElementsByClassName('consumes-imbue-oh')[0] as HTMLElement;
-        // 	new IconEnumPicker(mhImbueElem, this.player,
-        // 		IconInputs.makeWeaponImbueInput(true, this.individualConfig.weaponImbueInputs));
-        // 	if (isDualWieldSpec(this.player.spec)) {
-        // 		new IconEnumPicker(ohImbueElem, this.player,
-        // 			IconInputs.makeWeaponImbueInput(false, this.individualConfig.weaponImbueInputs));
-        // 	}
-        // }
         const tradeConsumesElem = this.rootElem.getElementsByClassName('consumes-trade')[0];
         new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.SuperSapper, this);
         new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.GoblinSapper, this);
