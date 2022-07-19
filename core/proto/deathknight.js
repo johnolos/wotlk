@@ -877,11 +877,13 @@ class DeathKnight_Rotation$Type extends MessageType {
     constructor() {
         super("proto.DeathKnight.Rotation", [
             { no: 1, name: "use_death_and_decay", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "unholy_presence_opener", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 2, name: "unholy_presence_opener", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 3, name: "disease_refresh_duration", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
+            { no: 4, name: "refresh_horn_of_winter", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { useDeathAndDecay: false, unholyPresenceOpener: false };
+        const message = { useDeathAndDecay: false, unholyPresenceOpener: false, diseaseRefreshDuration: 0, refreshHornOfWinter: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -897,6 +899,12 @@ class DeathKnight_Rotation$Type extends MessageType {
                     break;
                 case /* bool unholy_presence_opener */ 2:
                     message.unholyPresenceOpener = reader.bool();
+                    break;
+                case /* double disease_refresh_duration */ 3:
+                    message.diseaseRefreshDuration = reader.double();
+                    break;
+                case /* bool refresh_horn_of_winter */ 4:
+                    message.refreshHornOfWinter = reader.bool();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -916,6 +924,12 @@ class DeathKnight_Rotation$Type extends MessageType {
         /* bool unholy_presence_opener = 2; */
         if (message.unholyPresenceOpener !== false)
             writer.tag(2, WireType.Varint).bool(message.unholyPresenceOpener);
+        /* double disease_refresh_duration = 3; */
+        if (message.diseaseRefreshDuration !== 0)
+            writer.tag(3, WireType.Bit64).double(message.diseaseRefreshDuration);
+        /* bool refresh_horn_of_winter = 4; */
+        if (message.refreshHornOfWinter !== false)
+            writer.tag(4, WireType.Varint).bool(message.refreshHornOfWinter);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
@@ -933,12 +947,11 @@ class DeathKnight_Options$Type extends MessageType {
             { no: 1, name: "starting_runic_power", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
             { no: 2, name: "pet_uptime", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
             { no: 3, name: "precast_ghoul_frenzy", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 4, name: "refresh_horn_of_winter", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 5, name: "precast_horn_of_winter", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 4, name: "precast_horn_of_winter", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { startingRunicPower: 0, petUptime: 0, precastGhoulFrenzy: false, refreshHornOfWinter: false, precastHornOfWinter: false };
+        const message = { startingRunicPower: 0, petUptime: 0, precastGhoulFrenzy: false, precastHornOfWinter: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -958,10 +971,7 @@ class DeathKnight_Options$Type extends MessageType {
                 case /* bool precast_ghoul_frenzy */ 3:
                     message.precastGhoulFrenzy = reader.bool();
                     break;
-                case /* bool refresh_horn_of_winter */ 4:
-                    message.refreshHornOfWinter = reader.bool();
-                    break;
-                case /* bool precast_horn_of_winter */ 5:
+                case /* bool precast_horn_of_winter */ 4:
                     message.precastHornOfWinter = reader.bool();
                     break;
                 default:
@@ -985,12 +995,9 @@ class DeathKnight_Options$Type extends MessageType {
         /* bool precast_ghoul_frenzy = 3; */
         if (message.precastGhoulFrenzy !== false)
             writer.tag(3, WireType.Varint).bool(message.precastGhoulFrenzy);
-        /* bool refresh_horn_of_winter = 4; */
-        if (message.refreshHornOfWinter !== false)
-            writer.tag(4, WireType.Varint).bool(message.refreshHornOfWinter);
-        /* bool precast_horn_of_winter = 5; */
+        /* bool precast_horn_of_winter = 4; */
         if (message.precastHornOfWinter !== false)
-            writer.tag(5, WireType.Varint).bool(message.precastHornOfWinter);
+            writer.tag(4, WireType.Varint).bool(message.precastHornOfWinter);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

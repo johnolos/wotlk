@@ -396,6 +396,14 @@ export interface DeathKnight_Rotation {
      * @generated from protobuf field: bool unholy_presence_opener = 2;
      */
     unholyPresenceOpener: boolean;
+    /**
+     * @generated from protobuf field: double disease_refresh_duration = 3;
+     */
+    diseaseRefreshDuration: number;
+    /**
+     * @generated from protobuf field: bool refresh_horn_of_winter = 4;
+     */
+    refreshHornOfWinter: boolean;
 }
 /**
  * @generated from protobuf message proto.DeathKnight.Options
@@ -414,11 +422,7 @@ export interface DeathKnight_Options {
      */
     precastGhoulFrenzy: boolean;
     /**
-     * @generated from protobuf field: bool refresh_horn_of_winter = 4;
-     */
-    refreshHornOfWinter: boolean;
-    /**
-     * @generated from protobuf field: bool precast_horn_of_winter = 5;
+     * @generated from protobuf field: bool precast_horn_of_winter = 4;
      */
     precastHornOfWinter: boolean;
 }

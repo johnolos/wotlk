@@ -38,6 +38,42 @@ export declare const PrecastGhoulFrenzy: {
         setValue: (eventID: EventID, player: Player<Spec.SpecDeathKnight>, newValue: boolean) => void;
     };
 };
+export declare const PrecastHornOfWinter: {
+    type: "boolean";
+    getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
+    config: {
+        extraCssClasses: string[];
+        label: string;
+        labelTooltip: string;
+        changedEvent: (player: Player<Spec.SpecDeathKnight>) => TypedEvent<void>;
+        getValue: (player: Player<Spec.SpecDeathKnight>) => boolean;
+        setValue: (eventID: EventID, player: Player<Spec.SpecDeathKnight>, newValue: boolean) => void;
+    };
+};
+export declare const RefreshHornOfWinter: {
+    type: "boolean";
+    getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
+    config: {
+        extraCssClasses: string[];
+        label: string;
+        labelTooltip: string;
+        changedEvent: (player: Player<Spec.SpecDeathKnight>) => TypedEvent<void>;
+        getValue: (player: Player<Spec.SpecDeathKnight>) => boolean;
+        setValue: (eventID: EventID, player: Player<Spec.SpecDeathKnight>, newValue: boolean) => void;
+    };
+};
+export declare const DiseaseRefreshDuration: {
+    type: "number";
+    getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
+    config: {
+        extraCssClasses: string[];
+        label: string;
+        labelTooltip: string;
+        changedEvent: (player: Player<Spec.SpecDeathKnight>) => TypedEvent<void>;
+        getValue: (player: Player<Spec.SpecDeathKnight>) => number;
+        setValue: (eventID: EventID, player: Player<Spec.SpecDeathKnight>, newValue: number) => void;
+    };
+};
 export declare const UseDeathAndDecay: {
     type: "boolean";
     getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
@@ -62,32 +98,8 @@ export declare const UnholyPresenceOpener: {
         setValue: (eventID: EventID, player: Player<Spec.SpecDeathKnight>, newValue: boolean) => void;
     };
 };
-export declare const RefreshHornOfWinter: {
-    type: "boolean";
-    getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
-    config: {
-        extraCssClasses: string[];
-        label: string;
-        labelTooltip: string;
-        changedEvent: (player: Player<Spec.SpecDeathKnight>) => TypedEvent<void>;
-        getValue: (player: Player<Spec.SpecDeathKnight>) => boolean;
-        setValue: (eventID: EventID, player: Player<Spec.SpecDeathKnight>, newValue: boolean) => void;
-    };
-};
-export declare const PrecastHornOfWinter: {
-    type: "boolean";
-    getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
-    config: {
-        extraCssClasses: string[];
-        label: string;
-        labelTooltip: string;
-        changedEvent: (player: Player<Spec.SpecDeathKnight>) => TypedEvent<void>;
-        getValue: (player: Player<Spec.SpecDeathKnight>) => boolean;
-        setValue: (eventID: EventID, player: Player<Spec.SpecDeathKnight>, newValue: boolean) => void;
-    };
-};
 export declare const DeathKnightRotationConfig: {
-    inputs: {
+    inputs: ({
         type: "boolean";
         getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
         config: {
@@ -98,5 +110,16 @@ export declare const DeathKnightRotationConfig: {
             getValue: (player: Player<Spec.SpecDeathKnight>) => boolean;
             setValue: (eventID: EventID, player: Player<Spec.SpecDeathKnight>, newValue: boolean) => void;
         };
-    }[];
+    } | {
+        type: "number";
+        getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
+        config: {
+            extraCssClasses: string[];
+            label: string;
+            labelTooltip: string;
+            changedEvent: (player: Player<Spec.SpecDeathKnight>) => TypedEvent<void>;
+            getValue: (player: Player<Spec.SpecDeathKnight>) => number;
+            setValue: (eventID: EventID, player: Player<Spec.SpecDeathKnight>, newValue: number) => void;
+        };
+    })[];
 };
