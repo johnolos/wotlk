@@ -1,8 +1,7 @@
-import { Consumes, Flask, Food, Glyphs, EquipmentSpec, Potions } from '/wotlk/core/proto/common.js';
+import { Consumes, Flask, Food, Glyphs, EquipmentSpec, Potions, RaidBuffs, IndividualBuffs, Debuffs, TristateEffect, } from '/wotlk/core/proto/common.js';
 import { SavedTalents } from '/wotlk/core/proto/ui.js';
-import { Warlock_Rotation as WarlockRotation, Warlock_Options as WarlockOptions, Warlock_Rotation_PrimarySpell as PrimarySpell, Warlock_Rotation_SecondaryDot as SecondaryDot, Warlock_Rotation_SpecSpell as SpecSpell, Warlock_Rotation_Curse as Curse, Warlock_Options_WeaponImbue as WarlockWeaponImbue, Warlock_Options_Armor as Armor, Warlock_Options_Summon as Summon, WarlockMajorGlyph as MajorGlyph, WarlockMinorGlyph as MinorGlyph, } from '/wotlk/core/proto/warlock.js';
+import { Warlock_Rotation as WarlockRotation, Warlock_Options as WarlockOptions, Warlock_Rotation_PrimarySpell as PrimarySpell, Warlock_Rotation_SecondaryDot as SecondaryDot, Warlock_Rotation_SpecSpell as SpecSpell, Warlock_Rotation_Curse as Curse, Warlock_Options_WeaponImbue as WeaponImbue, Warlock_Options_Armor as Armor, Warlock_Options_Summon as Summon, WarlockMajorGlyph as MajorGlyph, WarlockMinorGlyph as MinorGlyph, } from '/wotlk/core/proto/warlock.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
-// Preset options for this spec.
 // Default talents. Uses the wowhead calculator format, make the talents on
 // https://wowhead.com/wotlk/talent-calc and copy the numbers in the url.
 export const AfflictionTalents = {
@@ -74,20 +73,51 @@ export const DestructionRotation = WarlockRotation.create({
 export const AfflictionOptions = WarlockOptions.create({
     armor: Armor.FelArmor,
     summon: Summon.Felhunter,
+    weaponImbue: WeaponImbue.GrandSpellstone,
 });
 export const DemonologyOptions = WarlockOptions.create({
     armor: Armor.FelArmor,
     summon: Summon.Felguard,
+    weaponImbue: WeaponImbue.GrandSpellstone,
 });
 export const DestructionOptions = WarlockOptions.create({
     armor: Armor.FelArmor,
     summon: Summon.Imp,
-    weaponImbue: WarlockWeaponImbue.GrandFirestone,
+    weaponImbue: WeaponImbue.GrandFirestone,
 });
 export const DefaultConsumes = Consumes.create({
     flask: Flask.FlaskOfTheFrostWyrm,
     food: Food.FoodFishFeast,
     defaultPotion: Potions.PotionOfWildMagic,
+    prepopPotion: Potions.PotionOfWildMagic,
+});
+export const DefaultRaidBuffs = RaidBuffs.create({
+    giftOfTheWild: TristateEffect.TristateEffectImproved,
+    powerWordFortitude: TristateEffect.TristateEffectImproved,
+    strengthOfEarthTotem: TristateEffect.TristateEffectImproved,
+    arcaneBrilliance: true,
+    divineSpirit: true,
+    trueshotAura: true,
+    leaderOfThePack: TristateEffect.TristateEffectImproved,
+    icyTalons: true,
+    totemOfWrath: true,
+    moonkinAura: TristateEffect.TristateEffectImproved,
+    wrathOfAirTotem: true,
+    sanctifiedRetribution: true,
+    bloodlust: true,
+});
+export const DefaultIndividualBuffs = IndividualBuffs.create({
+    blessingOfKings: true,
+    blessingOfWisdom: TristateEffect.TristateEffectImproved,
+    blessingOfMight: TristateEffect.TristateEffectImproved,
+});
+export const DefaultDebuffs = Debuffs.create({
+    sunderArmor: true,
+    faerieFire: TristateEffect.TristateEffectImproved,
+    bloodFrenzy: true,
+    ebonPlaguebringer: true,
+    heartOfTheCrusader: true,
+    judgementOfWisdom: true,
 });
 export const SWP_BIS = {
     name: 'SWP BiS',

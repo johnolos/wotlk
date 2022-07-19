@@ -481,6 +481,10 @@ export interface Debuffs {
      */
     thunderClap: TristateEffect;
     /**
+     * @generated from protobuf field: proto.TristateEffect icy_touch = 30;
+     */
+    icyTouch: TristateEffect;
+    /**
      * @generated from protobuf field: bool insect_swarm = 25;
      */
     insectSwarm: boolean;

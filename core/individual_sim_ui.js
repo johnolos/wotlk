@@ -394,16 +394,6 @@ export class IndividualSimUI extends SimUI {
 						<div class="cooldowns-section-content">
 						</div>
 					</fieldset>
-<<<<<<< HEAD
-				</div>
-				<div class="settings-section-container labeled-icon-section within-raid-sim-hide">
-					<fieldset class="settings-section debuffs-section">
-						<legend>Debuffs</legend>
-					</fieldset>
-				</div>
-				<div class="settings-section-container">
-=======
->>>>>>> bbfeb8c4ae5bfc08c7406a4edb21d0d36971cc67
 					<fieldset class="settings-section other-settings-section">
 						<legend>Other</legend>
 					</fieldset>
@@ -494,13 +484,12 @@ export class IndividualSimUI extends SimUI {
             { item: IconInputs.AttackPowerDebuff, stats: [Stat.StatArmor] },
             { item: IconInputs.MeleeAttackSpeedDebuff, stats: [Stat.StatArmor] },
             { item: IconInputs.MeleeHitDebuff, stats: [Stat.StatDodge] },
+            { item: IconInputs.MiscellaneousDebuffs, stats: [Stat.StatStamina] },
         ]);
         const debuffsSection = this.rootElem.getElementsByClassName('debuffs-section')[0];
         configureIconSection(debuffsSection, debuffOptions.map(multiIconInput => new MultiIconPicker(debuffsSection, this.player, multiIconInput, this)), Tooltips.DEBUFFS_SECTION);
         const otherDebuffOptions = this.splitRelevantOptions([
             { item: IconInputs.JudgementOfWisdom, stats: [Stat.StatMP5, Stat.StatIntellect] },
-            { item: IconInputs.JudgementOfLight, stats: [Stat.StatStamina] },
-            { item: IconInputs.GiftOfArthas, stats: [Stat.StatStamina] },
         ]);
         otherDebuffOptions.forEach(iconInput => new IndividualSimIconPicker(debuffsSection, this.player, iconInput, this));
         const potionOptions = this.splitRelevantOptions([

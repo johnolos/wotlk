@@ -2235,6 +2235,7 @@ class Debuffs$Type extends MessageType {
             { no: 22, name: "demoralizing_roar", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 23, name: "demoralizing_shout", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 24, name: "thunder_clap", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 30, name: "icy_touch", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 25, name: "insect_swarm", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 26, name: "scorpid_sting", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 27, name: "shadow_embrace", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
@@ -2242,7 +2243,7 @@ class Debuffs$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { judgementOfWisdom: false, judgementOfLight: false, misery: false, faerieFire: 0, curseOfElements: false, ebonPlaguebringer: false, earthAndMoon: false, heartOfTheCrusader: false, masterPoisoner: false, totemOfWrath: false, shadowMastery: false, improvedScorch: false, wintersChill: false, bloodFrenzy: false, savageCombat: false, giftOfArthas: false, mangle: false, exposeArmor: false, sunderArmor: false, curseOfWeakness: 0, demoralizingRoar: 0, demoralizingShout: 0, thunderClap: 0, insectSwarm: false, scorpidSting: false, shadowEmbrace: false, screech: false };
+        const message = { judgementOfWisdom: false, judgementOfLight: false, misery: false, faerieFire: 0, curseOfElements: false, ebonPlaguebringer: false, earthAndMoon: false, heartOfTheCrusader: false, masterPoisoner: false, totemOfWrath: false, shadowMastery: false, improvedScorch: false, wintersChill: false, bloodFrenzy: false, savageCombat: false, giftOfArthas: false, mangle: false, exposeArmor: false, sunderArmor: false, curseOfWeakness: 0, demoralizingRoar: 0, demoralizingShout: 0, thunderClap: 0, icyTouch: 0, insectSwarm: false, scorpidSting: false, shadowEmbrace: false, screech: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -2321,6 +2322,9 @@ class Debuffs$Type extends MessageType {
                     break;
                 case /* proto.TristateEffect thunder_clap */ 24:
                     message.thunderClap = reader.int32();
+                    break;
+                case /* proto.TristateEffect icy_touch */ 30:
+                    message.icyTouch = reader.int32();
                     break;
                 case /* bool insect_swarm */ 25:
                     message.insectSwarm = reader.bool();
@@ -2415,6 +2419,9 @@ class Debuffs$Type extends MessageType {
         /* proto.TristateEffect thunder_clap = 24; */
         if (message.thunderClap !== 0)
             writer.tag(24, WireType.Varint).int32(message.thunderClap);
+        /* proto.TristateEffect icy_touch = 30; */
+        if (message.icyTouch !== 0)
+            writer.tag(30, WireType.Varint).int32(message.icyTouch);
         /* bool insect_swarm = 25; */
         if (message.insectSwarm !== false)
             writer.tag(25, WireType.Varint).bool(message.insectSwarm);

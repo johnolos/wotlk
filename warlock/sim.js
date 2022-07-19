@@ -1,7 +1,6 @@
-import { RaidBuffs, PartyBuffs, IndividualBuffs, Debuffs, Stat, TristateEffect, } from '/wotlk/core/proto/common.js';
+import { PartyBuffs, Stat, } from '/wotlk/core/proto/common.js';
 import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
-import { Warlock_Options as WarlockOptions, Warlock_Options_Armor as Armor, Warlock_Options_Summon as Summon, Warlock_Options_WeaponImbue as WeaponImbue, } from '/wotlk/core/proto/warlock.js';
 import * as OtherInputs from '/wotlk/core/components/other_inputs.js';
 import * as WarlockInputs from './inputs.js';
 import * as Presets from './presets.js';
@@ -23,7 +22,7 @@ export class WarlockSimUI extends IndividualSimUI {
                 Stat.StatSpellCrit,
                 Stat.StatSpellHaste,
                 Stat.StatMP5,
-                //Pet stats
+                //Pet stats for buffs in UI only
                 Stat.StatStrength,
                 Stat.StatAttackPower,
                 Stat.StatAgility,
@@ -69,57 +68,27 @@ export class WarlockSimUI extends IndividualSimUI {
                 // Default talents.
                 talents: Presets.AfflictionTalents.data,
                 // Default spec-specific settings.
-                specOptions: WarlockOptions.create({
-                    armor: Armor.FelArmor,
-                    summon: Summon.Felhunter,
-                    weaponImbue: WeaponImbue.GrandSpellstone,
-                }),
-                // Default raid/party buffs settings.
-                raidBuffs: RaidBuffs.create({
-                    giftOfTheWild: TristateEffect.TristateEffectImproved,
-                    powerWordFortitude: TristateEffect.TristateEffectImproved,
-                    strengthOfEarthTotem: TristateEffect.TristateEffectImproved,
-                    arcaneBrilliance: true,
-                    divineSpirit: true,
-                    trueshotAura: true,
-                    leaderOfThePack: TristateEffect.TristateEffectImproved,
-                    icyTalons: true,
-                    totemOfWrath: true,
-                    moonkinAura: TristateEffect.TristateEffectImproved,
-                    wrathOfAirTotem: true,
-                    swiftRetribution: true,
-                    sanctifiedRetribution: true,
-                    bloodlust: true,
-                }),
+                specOptions: Presets.DestructionOptions,
+                // Default buffs and debuffs settings.
+                raidBuffs: Presets.DefaultRaidBuffs,
                 partyBuffs: PartyBuffs.create({}),
-                individualBuffs: IndividualBuffs.create({
-                    blessingOfKings: true,
-                    blessingOfWisdom: TristateEffect.TristateEffectImproved,
-                    blessingOfMight: TristateEffect.TristateEffectImproved,
-                }),
-                debuffs: Debuffs.create({
-                    ebonPlaguebringer: true,
-                    faerieFire: TristateEffect.TristateEffectImproved,
-                    judgementOfWisdom: true,
-                    misery: true,
-                    heartOfTheCrusader: true,
-                    sunderArmor: true,
-                }),
+                individualBuffs: Presets.DefaultIndividualBuffs,
+                debuffs: Presets.DefaultDebuffs,
             },
             // IconInputs to include in the 'Self Buffs' section on the settings tab.
             selfBuffInputs: [
                 WarlockInputs.FelArmor,
                 WarlockInputs.DemonArmor,
             ],
+            weaponImbueInputs: [
+                WarlockInputs.GrandSpellstone,
+                WarlockInputs.GrandFirestone,
+            ],
             petInputs: [
                 WarlockInputs.SummonImp,
                 WarlockInputs.SummonSuccubus,
                 WarlockInputs.SummonFelhunter,
                 WarlockInputs.SummonFelguard,
-            ],
-            weaponImbueInputs: [
-                WarlockInputs.GrandSpellstone,
-                WarlockInputs.GrandFirestone,
             ],
             // Inputs to include in the 'Rotation' section on the settings tab.
             rotationInputs: WarlockInputs.WarlockRotationConfig,
