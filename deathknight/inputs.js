@@ -148,7 +148,7 @@ export const DeathKnightRotationConfig = {
     inputs: [
         UseDeathAndDecay,
         UnholyPresenceOpener,
-        DiseaseRefreshDuration,
         RefreshHornOfWinter,
+        DiseaseRefreshDuration,
     ],
 };
