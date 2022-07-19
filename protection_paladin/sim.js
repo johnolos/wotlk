@@ -6,7 +6,10 @@ import { Stat } from '/wotlk/core/proto/common.js';
 import { TristateEffect } from '/wotlk/core/proto/common.js';
 import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
+import { TypedEvent } from '/wotlk/core/typed_event.js';
 import * as OtherInputs from '/wotlk/core/components/other_inputs.js';
+import * as Mechanics from '/wotlk/core/constants/mechanics.js';
+import { PaladinMajorGlyph, PaladinSeal } from '/wotlk/core/proto/paladin.js';
 import * as ProtectionPaladinInputs from './inputs.js';
 import * as Presets from './presets.js';
 export class ProtectionPaladinSimUI extends IndividualSimUI {
@@ -67,6 +70,17 @@ export class ProtectionPaladinSimUI extends IndividualSimUI {
                 Stat.StatParry,
                 Stat.StatResilience,
             ],
+            modifyDisplayStats: (player) => {
+                let stats = new Stats();
+                TypedEvent.freezeAllAndDo(() => {
+                    if (player.getMajorGlyphs().includes(PaladinMajorGlyph.GlyphOfSealOfVengeance) && (player.getSpecOptions().seal == PaladinSeal.Vengeance)) {
+                        stats = stats.addStat(Stat.StatExpertise, 10 * Mechanics.EXPERTISE_RATING_PER_EXPERTISE);
+                    }
+                });
+                return {
+                    talents: stats,
+                };
+            },
             defaults: {
                 // Default equipped gear.
                 gear: Presets.P4_PRESET.gear,
