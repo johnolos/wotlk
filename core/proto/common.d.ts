@@ -151,9 +151,9 @@ export interface RaidBuffs {
      */
     devotionAura: TristateEffect;
     /**
-     * @generated from protobuf field: proto.TristateEffect retribution_aura = 34;
+     * @generated from protobuf field: bool retribution_aura = 34;
      */
-    retributionAura: TristateEffect;
+    retributionAura: boolean;
     /**
      * Drums
      *
@@ -443,9 +443,9 @@ export interface Debuffs {
      */
     mangle: boolean;
     /**
-     * @generated from protobuf field: proto.TristateEffect expose_armor = 17;
+     * @generated from protobuf field: bool expose_armor = 17;
      */
-    exposeArmor: TristateEffect;
+    exposeArmor: boolean;
     /**
      * @generated from protobuf field: bool sunder_armor = 18;
      */

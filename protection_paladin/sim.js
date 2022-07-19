@@ -116,7 +116,7 @@ export class ProtectionPaladinSimUI extends IndividualSimUI {
                 debuffs: Debuffs.create({
                     misery: true,
                     bloodFrenzy: true,
-                    exposeArmor: TristateEffect.TristateEffectImproved,
+                    exposeArmor: true,
                     sunderArmor: true,
                     faerieFire: TristateEffect.TristateEffectImproved,
                     curseOfWeakness: TristateEffect.TristateEffectRegular,

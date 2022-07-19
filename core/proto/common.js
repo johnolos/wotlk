@@ -1551,7 +1551,7 @@ class RaidBuffs$Type extends MessageType {
             { no: 29, name: "bloodlust", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 32, name: "thorns", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 33, name: "devotion_aura", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 34, name: "retribution_aura", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 34, name: "retribution_aura", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 38, name: "drums_of_forgotten_kings", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 39, name: "drums_of_the_wild", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 40, name: "scroll_of_protection", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
@@ -1563,7 +1563,7 @@ class RaidBuffs$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { powerWordFortitude: 0, arcaneBrilliance: false, felIntelligence: false, divineSpirit: false, giftOfTheWild: 0, shadowProtection: false, swiftRetribution: false, moonkinAura: 0, elementalOath: false, totemOfWrath: false, demonicPact: 0, commandingShout: 0, bloodPact: 0, hornOfWinter: false, strengthOfEarthTotem: 0, icyTalons: false, windfuryTotem: 0, battleShout: 0, trueshotAura: false, unleashedRage: false, abominationsMight: false, leaderOfThePack: 0, rampage: false, ferociousInspiration: false, sanctifiedRetribution: false, arcaneEmpowerment: false, manaSpringTotem: 0, wrathOfAirTotem: false, bloodlust: false, thorns: 0, devotionAura: 0, retributionAura: 0, drumsOfForgottenKings: false, drumsOfTheWild: false, scrollOfProtection: false, scrollOfStamina: false, scrollOfStrength: false, scrollOfAgility: false, scrollOfIntellect: false, scrollOfSpirit: false };
+        const message = { powerWordFortitude: 0, arcaneBrilliance: false, felIntelligence: false, divineSpirit: false, giftOfTheWild: 0, shadowProtection: false, swiftRetribution: false, moonkinAura: 0, elementalOath: false, totemOfWrath: false, demonicPact: 0, commandingShout: 0, bloodPact: 0, hornOfWinter: false, strengthOfEarthTotem: 0, icyTalons: false, windfuryTotem: 0, battleShout: 0, trueshotAura: false, unleashedRage: false, abominationsMight: false, leaderOfThePack: 0, rampage: false, ferociousInspiration: false, sanctifiedRetribution: false, arcaneEmpowerment: false, manaSpringTotem: 0, wrathOfAirTotem: false, bloodlust: false, thorns: 0, devotionAura: 0, retributionAura: false, drumsOfForgottenKings: false, drumsOfTheWild: false, scrollOfProtection: false, scrollOfStamina: false, scrollOfStrength: false, scrollOfAgility: false, scrollOfIntellect: false, scrollOfSpirit: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1667,8 +1667,8 @@ class RaidBuffs$Type extends MessageType {
                 case /* proto.TristateEffect devotion_aura */ 33:
                     message.devotionAura = reader.int32();
                     break;
-                case /* proto.TristateEffect retribution_aura */ 34:
-                    message.retributionAura = reader.int32();
+                case /* bool retribution_aura */ 34:
+                    message.retributionAura = reader.bool();
                     break;
                 case /* bool drums_of_forgotten_kings */ 38:
                     message.drumsOfForgottenKings = reader.bool();
@@ -1799,9 +1799,9 @@ class RaidBuffs$Type extends MessageType {
         /* proto.TristateEffect devotion_aura = 33; */
         if (message.devotionAura !== 0)
             writer.tag(33, WireType.Varint).int32(message.devotionAura);
-        /* proto.TristateEffect retribution_aura = 34; */
-        if (message.retributionAura !== 0)
-            writer.tag(34, WireType.Varint).int32(message.retributionAura);
+        /* bool retribution_aura = 34; */
+        if (message.retributionAura !== false)
+            writer.tag(34, WireType.Varint).bool(message.retributionAura);
         /* bool drums_of_forgotten_kings = 38; */
         if (message.drumsOfForgottenKings !== false)
             writer.tag(38, WireType.Varint).bool(message.drumsOfForgottenKings);
@@ -2229,7 +2229,7 @@ class Debuffs$Type extends MessageType {
             { no: 14, name: "savage_combat", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 15, name: "gift_of_arthas", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 16, name: "mangle", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 17, name: "expose_armor", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 17, name: "expose_armor", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 18, name: "sunder_armor", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 19, name: "curse_of_weakness", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 22, name: "demoralizing_roar", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
@@ -2242,7 +2242,7 @@ class Debuffs$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { judgementOfWisdom: false, judgementOfLight: false, misery: false, faerieFire: 0, curseOfElements: false, ebonPlaguebringer: false, earthAndMoon: false, heartOfTheCrusader: false, masterPoisoner: false, totemOfWrath: false, shadowMastery: false, improvedScorch: false, wintersChill: false, bloodFrenzy: false, savageCombat: false, giftOfArthas: false, mangle: false, exposeArmor: 0, sunderArmor: false, curseOfWeakness: 0, demoralizingRoar: 0, demoralizingShout: 0, thunderClap: 0, insectSwarm: false, scorpidSting: false, shadowEmbrace: false, screech: false };
+        const message = { judgementOfWisdom: false, judgementOfLight: false, misery: false, faerieFire: 0, curseOfElements: false, ebonPlaguebringer: false, earthAndMoon: false, heartOfTheCrusader: false, masterPoisoner: false, totemOfWrath: false, shadowMastery: false, improvedScorch: false, wintersChill: false, bloodFrenzy: false, savageCombat: false, giftOfArthas: false, mangle: false, exposeArmor: false, sunderArmor: false, curseOfWeakness: 0, demoralizingRoar: 0, demoralizingShout: 0, thunderClap: 0, insectSwarm: false, scorpidSting: false, shadowEmbrace: false, screech: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -2304,8 +2304,8 @@ class Debuffs$Type extends MessageType {
                 case /* bool mangle */ 16:
                     message.mangle = reader.bool();
                     break;
-                case /* proto.TristateEffect expose_armor */ 17:
-                    message.exposeArmor = reader.int32();
+                case /* bool expose_armor */ 17:
+                    message.exposeArmor = reader.bool();
                     break;
                 case /* bool sunder_armor */ 18:
                     message.sunderArmor = reader.bool();
@@ -2397,9 +2397,9 @@ class Debuffs$Type extends MessageType {
         /* bool mangle = 16; */
         if (message.mangle !== false)
             writer.tag(16, WireType.Varint).bool(message.mangle);
-        /* proto.TristateEffect expose_armor = 17; */
-        if (message.exposeArmor !== 0)
-            writer.tag(17, WireType.Varint).int32(message.exposeArmor);
+        /* bool expose_armor = 17; */
+        if (message.exposeArmor !== false)
+            writer.tag(17, WireType.Varint).bool(message.exposeArmor);
         /* bool sunder_armor = 18; */
         if (message.sunderArmor !== false)
             writer.tag(18, WireType.Varint).bool(message.sunderArmor);

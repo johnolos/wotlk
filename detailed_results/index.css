@@ -171,6 +171,30 @@
   font-weight: bold;
 }
 
+.labeled-icon-section > fieldset > .multi-icon-picker-root, .labeled-icon-section > fieldset > .icon-input-root {
+  display: flex !important;
+  align-items: center;
+  justify-content: end;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root > *, .labeled-icon-section > fieldset > .icon-input-root > * {
+  margin: 0 4px 0 0;
+}
+
+.labeled-icon-section .multi-icon-picker-button {
+  height: 45px;
+  width: 45px;
+  display: block;
+}
+
+.labeled-icon-section .icon-input {
+  height: 49px;
+  width: 49px;
+  display: block;
+}
+
 .close-button {
   position: absolute;
   right: -10px;
@@ -456,6 +480,30 @@
   border: none;
   padding: 5px;
   font-weight: bold;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root, .labeled-icon-section > fieldset > .icon-input-root {
+  display: flex !important;
+  align-items: center;
+  justify-content: end;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root > *, .labeled-icon-section > fieldset > .icon-input-root > * {
+  margin: 0 4px 0 0;
+}
+
+.labeled-icon-section .multi-icon-picker-button {
+  height: 45px;
+  width: 45px;
+  display: block;
+}
+
+.labeled-icon-section .icon-input {
+  height: 49px;
+  width: 49px;
+  display: block;
 }
 
 html {
@@ -952,6 +1000,30 @@ input, select {
   font-weight: bold;
 }
 
+.labeled-icon-section > fieldset > .multi-icon-picker-root, .labeled-icon-section > fieldset > .icon-input-root {
+  display: flex !important;
+  align-items: center;
+  justify-content: end;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root > *, .labeled-icon-section > fieldset > .icon-input-root > * {
+  margin: 0 4px 0 0;
+}
+
+.labeled-icon-section .multi-icon-picker-button {
+  height: 45px;
+  width: 45px;
+  display: block;
+}
+
+.labeled-icon-section .icon-input {
+  height: 49px;
+  width: 49px;
+  display: block;
+}
+
 .resource-metrics-table-container {
   margin-bottom: 20px;
 }
@@ -1165,6 +1237,30 @@ input, select {
   border: none;
   padding: 5px;
   font-weight: bold;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root, .labeled-icon-section > fieldset > .icon-input-root {
+  display: flex !important;
+  align-items: center;
+  justify-content: end;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root > *, .labeled-icon-section > fieldset > .icon-input-root > * {
+  margin: 0 4px 0 0;
+}
+
+.labeled-icon-section .multi-icon-picker-button {
+  height: 45px;
+  width: 45px;
+  display: block;
+}
+
+.labeled-icon-section .icon-input {
+  height: 49px;
+  width: 49px;
+  display: block;
 }
 
 .threat .series-color, .threat.series-color {
@@ -1619,6 +1715,30 @@ input, select {
   border: none;
   padding: 5px;
   font-weight: bold;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root, .labeled-icon-section > fieldset > .icon-input-root {
+  display: flex !important;
+  align-items: center;
+  justify-content: end;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root > *, .labeled-icon-section > fieldset > .icon-input-root > * {
+  margin: 0 4px 0 0;
+}
+
+.labeled-icon-section .multi-icon-picker-button {
+  height: 45px;
+  width: 45px;
+  display: block;
+}
+
+.labeled-icon-section .icon-input {
+  height: 49px;
+  width: 49px;
+  display: block;
 }
 
 .results-sim {

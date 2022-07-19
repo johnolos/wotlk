@@ -104,7 +104,7 @@ export class RetributionPaladinSimUI extends IndividualSimUI {
                     misery: true,
                     curseOfElements: true,
                     bloodFrenzy: true,
-                    exposeArmor: TristateEffect.TristateEffectImproved,
+                    exposeArmor: true,
                     sunderArmor: true,
                     faerieFire: TristateEffect.TristateEffectImproved,
                     curseOfWeakness: TristateEffect.TristateEffectRegular,

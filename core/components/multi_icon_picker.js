@@ -7,11 +7,21 @@ export class MultiIconPicker extends Component {
         super(parent, 'multi-icon-picker-root');
         this.config = config;
         this.currentValue = null;
-        this.rootElem.classList.add('dropdown-root');
         this.rootElem.innerHTML = `
-			<a class="dropdown-button multi-icon-picker-button"></a>
-			<div class="dropdown-panel multi-icon-picker-dropdown"></div>
+			<span class="multi-icon-picker-label"></span>
+			<div class="dropdown-root multi-icon-picker-dropdown-root">
+				<a class="dropdown-button multi-icon-picker-button"></a>
+				<div class="dropdown-panel multi-icon-picker-dropdown"></div>
+			</div>
     `;
+        this.dropdownRootElem = this.rootElem.getElementsByClassName('multi-icon-picker-dropdown-root')[0];
+        const labelElem = this.rootElem.getElementsByClassName('multi-icon-picker-label')[0];
+        if (config.label) {
+            labelElem.textContent = config.label;
+        }
+        else {
+            labelElem.remove();
+        }
         this.buttonElem = this.rootElem.getElementsByClassName('multi-icon-picker-button')[0];
         const dropdownElem = this.rootElem.getElementsByClassName('multi-icon-picker-dropdown')[0];
         this.buttonElem.addEventListener('click', event => {
@@ -48,11 +58,11 @@ export class MultiIconPicker extends Component {
     updateButtonImage() {
         this.currentValue = this.getMaxValue();
         if (this.currentValue) {
-            this.rootElem.classList.add('active');
+            this.dropdownRootElem.classList.add('active');
             this.currentValue.fillAndSet(this.buttonElem, true, true);
         }
         else {
-            this.rootElem.classList.remove('active');
+            this.dropdownRootElem.classList.remove('active');
             this.buttonElem.style.backgroundImage = '';
             this.buttonElem.style.backgroundColor = this.config.emptyColor;
         }

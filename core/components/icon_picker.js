@@ -6,12 +6,13 @@ import { Input } from './input.js';
 // ModObject is the object being modified (Sim, Player, or Target).
 export class IconPicker extends Input {
     constructor(parent, modObj, config) {
-        config.rootElem = document.createElement('a');
-        super(parent, 'icon-input', modObj, config);
+        super(parent, 'icon-input-root', modObj, config);
         this.config = config;
         this.currentValue = 0;
-        this.rootAnchor = this.rootElem;
+        this.rootAnchor = document.createElement('a');
+        this.rootAnchor.classList.add('icon-input');
         this.rootAnchor.target = '_blank';
+        this.rootElem.appendChild(this.rootAnchor);
         const useImprovedIcons = Boolean(this.config.improvedId);
         if (useImprovedIcons) {
             this.rootAnchor.classList.add('use-improved-icons');
@@ -22,12 +23,13 @@ export class IconPicker extends Input {
         if (!useImprovedIcons && this.config.states > 2) {
             this.rootAnchor.classList.add('use-counter');
         }
-        this.rootAnchor.innerHTML = `
-    <div class="icon-input-level-container">
+        const levelContainer = document.createElement('div');
+        levelContainer.classList.add('icon-input-level-container');
+        this.rootAnchor.appendChild(levelContainer);
+        levelContainer.innerHTML = `
       <a class="icon-input-improved icon-input-improved1"></a>
       <a class="icon-input-improved icon-input-improved2"></a>
       <span class="icon-input-counter"></span>
-    </div>
     `;
         this.improvedAnchor = this.rootAnchor.getElementsByClassName('icon-input-improved1')[0];
         this.improvedAnchor2 = this.rootAnchor.getElementsByClassName('icon-input-improved2')[0];

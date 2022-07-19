@@ -171,6 +171,30 @@
   font-weight: bold;
 }
 
+.labeled-icon-section > fieldset > .multi-icon-picker-root, .labeled-icon-section > fieldset > .icon-input-root {
+  display: flex !important;
+  align-items: center;
+  justify-content: end;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root > *, .labeled-icon-section > fieldset > .icon-input-root > * {
+  margin: 0 4px 0 0;
+}
+
+.labeled-icon-section .multi-icon-picker-button {
+  height: 45px;
+  width: 45px;
+  display: block;
+}
+
+.labeled-icon-section .icon-input {
+  height: 49px;
+  width: 49px;
+  display: block;
+}
+
 .close-button {
   position: absolute;
   right: -10px;
@@ -456,6 +480,30 @@
   border: none;
   padding: 5px;
   font-weight: bold;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root, .labeled-icon-section > fieldset > .icon-input-root {
+  display: flex !important;
+  align-items: center;
+  justify-content: end;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root > *, .labeled-icon-section > fieldset > .icon-input-root > * {
+  margin: 0 4px 0 0;
+}
+
+.labeled-icon-section .multi-icon-picker-button {
+  height: 45px;
+  width: 45px;
+  display: block;
+}
+
+.labeled-icon-section .icon-input {
+  height: 49px;
+  width: 49px;
+  display: block;
 }
 
 html {
@@ -1271,6 +1319,30 @@ input, select {
   font-weight: bold;
 }
 
+.labeled-icon-section > fieldset > .multi-icon-picker-root, .labeled-icon-section > fieldset > .icon-input-root {
+  display: flex !important;
+  align-items: center;
+  justify-content: end;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root > *, .labeled-icon-section > fieldset > .icon-input-root > * {
+  margin: 0 4px 0 0;
+}
+
+.labeled-icon-section .multi-icon-picker-button {
+  height: 45px;
+  width: 45px;
+  display: block;
+}
+
+.labeled-icon-section .icon-input {
+  height: 49px;
+  width: 49px;
+  display: block;
+}
+
 .popup {
   margin: 0 !important;
   position: absolute !important;
@@ -1687,6 +1759,30 @@ input, select {
   font-weight: bold;
 }
 
+.labeled-icon-section > fieldset > .multi-icon-picker-root, .labeled-icon-section > fieldset > .icon-input-root {
+  display: flex !important;
+  align-items: center;
+  justify-content: end;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root > *, .labeled-icon-section > fieldset > .icon-input-root > * {
+  margin: 0 4px 0 0;
+}
+
+.labeled-icon-section .multi-icon-picker-button {
+  height: 45px;
+  width: 45px;
+  display: block;
+}
+
+.labeled-icon-section .icon-input {
+  height: 49px;
+  width: 49px;
+  display: block;
+}
+
 .icon-input {
   background-repeat: no-repeat;
   background-size: cover;
@@ -1829,23 +1925,17 @@ input, select {
   display: block;
 }
 
-.multi-icon-picker-root {
+.multi-icon-picker-dropdown-root {
   border: 2px solid dimgray;
   transition: 0.2s ease-in;
   margin: 2px;
 }
 
-.multi-icon-picker-root a {
-  height: 45px;
-  width: 45px;
-  display: block;
-}
-
-.multi-icon-picker-root.active {
+.multi-icon-picker-dropdown-root.active {
   border-color: lawngreen;
 }
 
-.multi-icon-picker-root.disabled {
+.multi-icon-picker-dropdown-root.disabled {
   border-color: dimgray;
 }
 
@@ -2079,6 +2169,30 @@ input, select {
   border: none;
   padding: 5px;
   font-weight: bold;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root, .labeled-icon-section > fieldset > .icon-input-root {
+  display: flex !important;
+  align-items: center;
+  justify-content: end;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root > *, .labeled-icon-section > fieldset > .icon-input-root > * {
+  margin: 0 4px 0 0;
+}
+
+.labeled-icon-section .multi-icon-picker-button {
+  height: 45px;
+  width: 45px;
+  display: block;
+}
+
+.labeled-icon-section .icon-input {
+  height: 49px;
+  width: 49px;
+  display: block;
 }
 
 .results-sim {
@@ -2495,6 +2609,30 @@ input, select {
   font-weight: bold;
 }
 
+.labeled-icon-section > fieldset > .multi-icon-picker-root, .labeled-icon-section > fieldset > .icon-input-root {
+  display: flex !important;
+  align-items: center;
+  justify-content: end;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root > *, .labeled-icon-section > fieldset > .icon-input-root > * {
+  margin: 0 4px 0 0;
+}
+
+.labeled-icon-section .multi-icon-picker-button {
+  height: 45px;
+  width: 45px;
+  display: block;
+}
+
+.labeled-icon-section .icon-input {
+  height: 49px;
+  width: 49px;
+  display: block;
+}
+
 .ep-weights-header {
   display: flex;
 }
@@ -2809,6 +2947,30 @@ input, select {
   font-weight: bold;
 }
 
+.labeled-icon-section > fieldset > .multi-icon-picker-root, .labeled-icon-section > fieldset > .icon-input-root {
+  display: flex !important;
+  align-items: center;
+  justify-content: end;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root > *, .labeled-icon-section > fieldset > .icon-input-root > * {
+  margin: 0 4px 0 0;
+}
+
+.labeled-icon-section .multi-icon-picker-button {
+  height: 45px;
+  width: 45px;
+  display: block;
+}
+
+.labeled-icon-section .icon-input {
+  height: 49px;
+  width: 49px;
+  display: block;
+}
+
 .popup {
   margin: 0 !important;
   position: absolute !important;
@@ -3044,6 +3206,30 @@ input, select {
   border: none;
   padding: 5px;
   font-weight: bold;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root, .labeled-icon-section > fieldset > .icon-input-root {
+  display: flex !important;
+  align-items: center;
+  justify-content: end;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.labeled-icon-section > fieldset > .multi-icon-picker-root > *, .labeled-icon-section > fieldset > .icon-input-root > * {
+  margin: 0 4px 0 0;
+}
+
+.labeled-icon-section .multi-icon-picker-button {
+  height: 45px;
+  width: 45px;
+  display: block;
+}
+
+.labeled-icon-section .icon-input {
+  height: 49px;
+  width: 49px;
+  display: block;
 }
 
 .talents-picker-root {
@@ -3304,6 +3490,10 @@ input, select {
   display: grid;
 }
 
+.buffs-section {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .consumes-section > div {
   display: grid;
 }
@@ -3330,6 +3520,10 @@ input, select {
 
 .debuffs-section > div {
   display: grid;
+}
+
+.debuffs-section {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .cooldowns-section-container {
@@ -3394,14 +3588,6 @@ input, select {
   grid-template-columns: repeat(1, 1fr);
 }
 
-.balance-druid-sim-ui .buffs-section {
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.balance-druid-sim-ui .debuffs-section {
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .balance-druid-sim-ui .character-stats-table-row {
   font-size: 14px;
 }
@@ -3422,14 +3608,6 @@ input, select {
   grid-template-columns: repeat(5, 1fr);
 }
 
-.feral-druid-sim-ui .buffs-section {
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.feral-druid-sim-ui .debuffs-section {
-  grid-template-columns: repeat(4, 1fr);
-}
-
 .feral-druid-sim-ui .character-stats-table-row {
   font-size: 14px;
 }
@@ -3447,14 +3625,6 @@ input, select {
 }
 
 .feral-tank-druid-sim-ui .consumes-section {
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.feral-tank-druid-sim-ui .buffs-section {
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.feral-tank-druid-sim-ui .debuffs-section {
   grid-template-columns: repeat(5, 1fr);
 }
 
@@ -3486,14 +3656,6 @@ input, select {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.hunter-sim-ui .buffs-section {
-  grid-template-columns: repeat(7, 1fr);
-}
-
-.hunter-sim-ui .debuffs-section {
-  grid-template-columns: repeat(4, 1fr);
-}
-
 .hunter-sim-ui .PetBuffs-section {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -3513,14 +3675,6 @@ input, select {
 
 .mage-sim-ui .self-buffs-section {
   grid-template-columns: repeat(2, 1fr);
-}
-
-.mage-sim-ui .buffs-section {
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.mage-sim-ui .debuffs-section {
-  grid-template-columns: repeat(3, 1fr);
 }
 
 .totem-dropdowns-container {
@@ -3547,14 +3701,6 @@ input, select {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.elemental-shaman-sim-ui .buffs-section {
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.elemental-shaman-sim-ui .debuffs-section {
-  grid-template-columns: repeat(3, 1fr);
-}
-
 .totem-dropdowns-container {
   display: flex;
   justify-content: space-around;
@@ -3577,14 +3723,6 @@ input, select {
 
 .enhancement-shaman-sim-ui .self-buffs-section {
   grid-template-columns: repeat(2, 1fr);
-}
-
-.enhancement-shaman-sim-ui .buffs-section {
-  grid-template-columns: repeat(7, 1fr);
-}
-
-.enhancement-shaman-sim-ui .debuffs-section {
-  grid-template-columns: repeat(4, 1fr);
 }
 
 .enhancement-shaman-sim-ui .character-stats-table-row {
@@ -3615,14 +3753,6 @@ input, select {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.rogue-sim-ui .buffs-section {
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.rogue-sim-ui .debuffs-section {
-  grid-template-columns: repeat(4, 1fr);
-}
-
 .rogue-sim-ui .character-stats-table-row {
   font-size: 11px;
 }
@@ -3638,14 +3768,6 @@ input, select {
 
 .retribution-paladin-sim-ui .self-buffs-section {
   grid-template-columns: repeat(2, 1fr);
-}
-
-.retribution-paladin-sim-ui .buffs-section {
-  grid-template-columns: repeat(7, 1fr);
-}
-
-.retribution-paladin-sim-ui .debuffs-section {
-  grid-template-columns: repeat(4, 1fr);
 }
 
 .retribution-paladin-sim-ui .character-stats-table-row {
@@ -3665,14 +3787,6 @@ input, select {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.protection-paladin-sim-ui .buffs-section {
-  grid-template-columns: repeat(7, 1fr);
-}
-
-.protection-paladin-sim-ui .debuffs-section {
-  grid-template-columns: repeat(5, 1fr);
-}
-
 .protection-paladin-sim-ui .character-stats-table-row {
   font-size: 10px;
 }
@@ -3687,14 +3801,6 @@ input, select {
 }
 
 .shadow-priest-sim-ui .self-buffs-section {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.shadow-priest-sim-ui .buffs-section {
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.shadow-priest-sim-ui .debuffs-section {
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -3715,14 +3821,6 @@ input, select {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.smite-priest-sim-ui .buffs-section {
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.smite-priest-sim-ui .debuffs-section {
-  grid-template-columns: repeat(3, 1fr);
-}
-
 .smite-priest-sim-ui .character-stats-table-row {
   font-size: 14px;
 }
@@ -3740,14 +3838,6 @@ input, select {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.warrior-sim-ui .buffs-section {
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.warrior-sim-ui .debuffs-section {
-  grid-template-columns: repeat(3, 1fr);
-}
-
 .protection-warrior-sim-ui {
   --theme-color-primary: #745221;
   --theme-color-background: #1c1408;
@@ -3759,14 +3849,6 @@ input, select {
 
 .protection-warrior-sim-ui .self-buffs-section {
   grid-template-columns: repeat(4, 1fr);
-}
-
-.protection-warrior-sim-ui .buffs-section {
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.protection-warrior-sim-ui .debuffs-section {
-  grid-template-columns: repeat(5, 1fr);
 }
 
 .protection-warrior-sim-ui .character-stats-table-row {
