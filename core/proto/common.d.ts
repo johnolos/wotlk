@@ -103,6 +103,10 @@ export interface RaidBuffs {
      */
     totemOfWrath: boolean;
     /**
+     * @generated from protobuf field: bool flametongue_totem = 46;
+     */
+    flametongueTotem: boolean;
+    /**
      * @generated from protobuf field: int32 demonic_pact = 37;
      */
     demonicPact: number;
@@ -269,6 +273,14 @@ export interface IndividualBuffs {
      */
     blessingOfSanctuary: boolean;
     /**
+     * @generated from protobuf field: bool vigilance = 50;
+     */
+    vigilance: boolean;
+    /**
+     * @generated from protobuf field: bool renewed_hope = 51;
+     */
+    renewedHope: boolean;
+    /**
      * How many of each of these buffs the player will be receiving.
      *
      * @generated from protobuf field: int32 hymn_of_hope = 5;
@@ -299,9 +311,25 @@ export interface IndividualBuffs {
      */
     revitalize: number;
     /**
-     * @generated from protobuf field: bool replenishment = 12;
+     * @generated from protobuf field: bool vampiric_touch = 12;
      */
-    replenishment: boolean;
+    vampiricTouch: boolean;
+    /**
+     * @generated from protobuf field: bool hunting_party = 13;
+     */
+    huntingParty: boolean;
+    /**
+     * @generated from protobuf field: bool judgements_of_the_wise = 14;
+     */
+    judgementsOfTheWise: boolean;
+    /**
+     * @generated from protobuf field: bool improved_soul_leech = 15;
+     */
+    improvedSoulLeech: boolean;
+    /**
+     * @generated from protobuf field: bool enduring_winter = 16;
+     */
+    enduringWinter: boolean;
 }
 /**
  * @generated from protobuf message proto.Consumes
@@ -453,10 +481,22 @@ export interface Debuffs {
      */
     giftOfArthas: boolean;
     /**
+     * Bleed %
+     *
      * @generated from protobuf field: bool mangle = 16;
      */
     mangle: boolean;
     /**
+     * @generated from protobuf field: bool trauma = 32;
+     */
+    trauma: boolean;
+    /**
+     * @generated from protobuf field: bool stampede = 33;
+     */
+    stampede: boolean;
+    /**
+     * Major armor
+     *
      * @generated from protobuf field: bool expose_armor = 17;
      */
     exposeArmor: boolean;
@@ -465,9 +505,17 @@ export interface Debuffs {
      */
     sunderArmor: boolean;
     /**
+     * @generated from protobuf field: bool acid_spit = 34;
+     */
+    acidSpit: boolean;
+    /**
      * @generated from protobuf field: proto.TristateEffect curse_of_weakness = 19;
      */
     curseOfWeakness: TristateEffect;
+    /**
+     * @generated from protobuf field: bool sting = 31;
+     */
+    sting: boolean;
     /**
      * @generated from protobuf field: proto.TristateEffect demoralizing_roar = 22;
      */
@@ -484,6 +532,14 @@ export interface Debuffs {
      * @generated from protobuf field: proto.TristateEffect icy_touch = 30;
      */
     icyTouch: TristateEffect;
+    /**
+     * @generated from protobuf field: bool infected_wounds = 35;
+     */
+    infectedWounds: boolean;
+    /**
+     * @generated from protobuf field: bool judgements_of_the_just = 36;
+     */
+    judgementsOfTheJust: boolean;
     /**
      * @generated from protobuf field: bool insect_swarm = 25;
      */

@@ -1538,6 +1538,7 @@ class RaidBuffs$Type extends MessageType {
             { no: 15, name: "icy_talons", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 16, name: "windfury_totem", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 10, name: "totem_of_wrath", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 46, name: "flametongue_totem", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 37, name: "demonic_pact", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 7, name: "swift_retribution", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 8, name: "moonkin_aura", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
@@ -1563,7 +1564,7 @@ class RaidBuffs$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { giftOfTheWild: 0, powerWordFortitude: 0, commandingShout: 0, bloodPact: 0, hornOfWinter: false, strengthOfEarthTotem: 0, arcaneBrilliance: false, felIntelligence: 0, divineSpirit: false, battleShout: 0, trueshotAura: false, unleashedRage: false, abominationsMight: false, leaderOfThePack: 0, rampage: false, icyTalons: false, windfuryTotem: 0, totemOfWrath: false, demonicPact: 0, swiftRetribution: false, moonkinAura: 0, elementalOath: false, wrathOfAirTotem: false, ferociousInspiration: false, sanctifiedRetribution: false, arcaneEmpowerment: false, manaSpringTotem: 0, bloodlust: false, thorns: 0, devotionAura: 0, retributionAura: false, shadowProtection: false, drumsOfForgottenKings: false, drumsOfTheWild: false, scrollOfProtection: false, scrollOfStamina: false, scrollOfStrength: false, scrollOfAgility: false, scrollOfIntellect: false, scrollOfSpirit: false };
+        const message = { giftOfTheWild: 0, powerWordFortitude: 0, commandingShout: 0, bloodPact: 0, hornOfWinter: false, strengthOfEarthTotem: 0, arcaneBrilliance: false, felIntelligence: 0, divineSpirit: false, battleShout: 0, trueshotAura: false, unleashedRage: false, abominationsMight: false, leaderOfThePack: 0, rampage: false, icyTalons: false, windfuryTotem: 0, totemOfWrath: false, flametongueTotem: false, demonicPact: 0, swiftRetribution: false, moonkinAura: 0, elementalOath: false, wrathOfAirTotem: false, ferociousInspiration: false, sanctifiedRetribution: false, arcaneEmpowerment: false, manaSpringTotem: 0, bloodlust: false, thorns: 0, devotionAura: 0, retributionAura: false, shadowProtection: false, drumsOfForgottenKings: false, drumsOfTheWild: false, scrollOfProtection: false, scrollOfStamina: false, scrollOfStrength: false, scrollOfAgility: false, scrollOfIntellect: false, scrollOfSpirit: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1627,6 +1628,9 @@ class RaidBuffs$Type extends MessageType {
                     break;
                 case /* bool totem_of_wrath */ 10:
                     message.totemOfWrath = reader.bool();
+                    break;
+                case /* bool flametongue_totem */ 46:
+                    message.flametongueTotem = reader.bool();
                     break;
                 case /* int32 demonic_pact */ 37:
                     message.demonicPact = reader.int32();
@@ -1760,6 +1764,9 @@ class RaidBuffs$Type extends MessageType {
         /* bool totem_of_wrath = 10; */
         if (message.totemOfWrath !== false)
             writer.tag(10, WireType.Varint).bool(message.totemOfWrath);
+        /* bool flametongue_totem = 46; */
+        if (message.flametongueTotem !== false)
+            writer.tag(46, WireType.Varint).bool(message.flametongueTotem);
         /* int32 demonic_pact = 37; */
         if (message.demonicPact !== 0)
             writer.tag(37, WireType.Varint).int32(message.demonicPact);
@@ -1933,6 +1940,8 @@ class IndividualBuffs$Type extends MessageType {
             { no: 47, name: "blessing_of_wisdom", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 48, name: "blessing_of_might", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 49, name: "blessing_of_sanctuary", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 50, name: "vigilance", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 51, name: "renewed_hope", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 5, name: "hymn_of_hope", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 6, name: "hand_of_salvation", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 7, name: "rapture", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
@@ -1940,11 +1949,15 @@ class IndividualBuffs$Type extends MessageType {
             { no: 9, name: "power_infusions", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 10, name: "unholy_frenzy", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
             { no: 11, name: "revitalize", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 12, name: "replenishment", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 12, name: "vampiric_touch", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 13, name: "hunting_party", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 14, name: "judgements_of_the_wise", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 15, name: "improved_soul_leech", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 16, name: "enduring_winter", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { blessingOfKings: false, blessingOfWisdom: 0, blessingOfMight: 0, blessingOfSanctuary: false, hymnOfHope: 0, handOfSalvation: 0, rapture: 0, innervates: 0, powerInfusions: 0, unholyFrenzy: 0, revitalize: 0, replenishment: false };
+        const message = { blessingOfKings: false, blessingOfWisdom: 0, blessingOfMight: 0, blessingOfSanctuary: false, vigilance: false, renewedHope: false, hymnOfHope: 0, handOfSalvation: 0, rapture: 0, innervates: 0, powerInfusions: 0, unholyFrenzy: 0, revitalize: 0, vampiricTouch: false, huntingParty: false, judgementsOfTheWise: false, improvedSoulLeech: false, enduringWinter: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1967,6 +1980,12 @@ class IndividualBuffs$Type extends MessageType {
                 case /* bool blessing_of_sanctuary */ 49:
                     message.blessingOfSanctuary = reader.bool();
                     break;
+                case /* bool vigilance */ 50:
+                    message.vigilance = reader.bool();
+                    break;
+                case /* bool renewed_hope */ 51:
+                    message.renewedHope = reader.bool();
+                    break;
                 case /* int32 hymn_of_hope */ 5:
                     message.hymnOfHope = reader.int32();
                     break;
@@ -1988,8 +2007,20 @@ class IndividualBuffs$Type extends MessageType {
                 case /* int32 revitalize */ 11:
                     message.revitalize = reader.int32();
                     break;
-                case /* bool replenishment */ 12:
-                    message.replenishment = reader.bool();
+                case /* bool vampiric_touch */ 12:
+                    message.vampiricTouch = reader.bool();
+                    break;
+                case /* bool hunting_party */ 13:
+                    message.huntingParty = reader.bool();
+                    break;
+                case /* bool judgements_of_the_wise */ 14:
+                    message.judgementsOfTheWise = reader.bool();
+                    break;
+                case /* bool improved_soul_leech */ 15:
+                    message.improvedSoulLeech = reader.bool();
+                    break;
+                case /* bool enduring_winter */ 16:
+                    message.enduringWinter = reader.bool();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -2015,6 +2046,12 @@ class IndividualBuffs$Type extends MessageType {
         /* bool blessing_of_sanctuary = 49; */
         if (message.blessingOfSanctuary !== false)
             writer.tag(49, WireType.Varint).bool(message.blessingOfSanctuary);
+        /* bool vigilance = 50; */
+        if (message.vigilance !== false)
+            writer.tag(50, WireType.Varint).bool(message.vigilance);
+        /* bool renewed_hope = 51; */
+        if (message.renewedHope !== false)
+            writer.tag(51, WireType.Varint).bool(message.renewedHope);
         /* int32 hymn_of_hope = 5; */
         if (message.hymnOfHope !== 0)
             writer.tag(5, WireType.Varint).int32(message.hymnOfHope);
@@ -2036,9 +2073,21 @@ class IndividualBuffs$Type extends MessageType {
         /* int32 revitalize = 11; */
         if (message.revitalize !== 0)
             writer.tag(11, WireType.Varint).int32(message.revitalize);
-        /* bool replenishment = 12; */
-        if (message.replenishment !== false)
-            writer.tag(12, WireType.Varint).bool(message.replenishment);
+        /* bool vampiric_touch = 12; */
+        if (message.vampiricTouch !== false)
+            writer.tag(12, WireType.Varint).bool(message.vampiricTouch);
+        /* bool hunting_party = 13; */
+        if (message.huntingParty !== false)
+            writer.tag(13, WireType.Varint).bool(message.huntingParty);
+        /* bool judgements_of_the_wise = 14; */
+        if (message.judgementsOfTheWise !== false)
+            writer.tag(14, WireType.Varint).bool(message.judgementsOfTheWise);
+        /* bool improved_soul_leech = 15; */
+        if (message.improvedSoulLeech !== false)
+            writer.tag(15, WireType.Varint).bool(message.improvedSoulLeech);
+        /* bool enduring_winter = 16; */
+        if (message.enduringWinter !== false)
+            writer.tag(16, WireType.Varint).bool(message.enduringWinter);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
@@ -2229,13 +2278,19 @@ class Debuffs$Type extends MessageType {
             { no: 14, name: "savage_combat", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 15, name: "gift_of_arthas", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 16, name: "mangle", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 32, name: "trauma", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 33, name: "stampede", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 17, name: "expose_armor", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 18, name: "sunder_armor", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 34, name: "acid_spit", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 19, name: "curse_of_weakness", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 31, name: "sting", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 22, name: "demoralizing_roar", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 23, name: "demoralizing_shout", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 24, name: "thunder_clap", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 30, name: "icy_touch", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 35, name: "infected_wounds", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 36, name: "judgements_of_the_just", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 25, name: "insect_swarm", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 26, name: "scorpid_sting", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 27, name: "shadow_embrace", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
@@ -2243,7 +2298,7 @@ class Debuffs$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { judgementOfWisdom: false, judgementOfLight: false, misery: false, faerieFire: 0, curseOfElements: false, ebonPlaguebringer: false, earthAndMoon: false, heartOfTheCrusader: false, masterPoisoner: false, totemOfWrath: false, shadowMastery: false, improvedScorch: false, wintersChill: false, bloodFrenzy: false, savageCombat: false, giftOfArthas: false, mangle: false, exposeArmor: false, sunderArmor: false, curseOfWeakness: 0, demoralizingRoar: 0, demoralizingShout: 0, thunderClap: 0, icyTouch: 0, insectSwarm: false, scorpidSting: false, shadowEmbrace: false, screech: false };
+        const message = { judgementOfWisdom: false, judgementOfLight: false, misery: false, faerieFire: 0, curseOfElements: false, ebonPlaguebringer: false, earthAndMoon: false, heartOfTheCrusader: false, masterPoisoner: false, totemOfWrath: false, shadowMastery: false, improvedScorch: false, wintersChill: false, bloodFrenzy: false, savageCombat: false, giftOfArthas: false, mangle: false, trauma: false, stampede: false, exposeArmor: false, sunderArmor: false, acidSpit: false, curseOfWeakness: 0, sting: false, demoralizingRoar: 0, demoralizingShout: 0, thunderClap: 0, icyTouch: 0, infectedWounds: false, judgementsOfTheJust: false, insectSwarm: false, scorpidSting: false, shadowEmbrace: false, screech: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -2305,14 +2360,26 @@ class Debuffs$Type extends MessageType {
                 case /* bool mangle */ 16:
                     message.mangle = reader.bool();
                     break;
+                case /* bool trauma */ 32:
+                    message.trauma = reader.bool();
+                    break;
+                case /* bool stampede */ 33:
+                    message.stampede = reader.bool();
+                    break;
                 case /* bool expose_armor */ 17:
                     message.exposeArmor = reader.bool();
                     break;
                 case /* bool sunder_armor */ 18:
                     message.sunderArmor = reader.bool();
                     break;
+                case /* bool acid_spit */ 34:
+                    message.acidSpit = reader.bool();
+                    break;
                 case /* proto.TristateEffect curse_of_weakness */ 19:
                     message.curseOfWeakness = reader.int32();
+                    break;
+                case /* bool sting */ 31:
+                    message.sting = reader.bool();
                     break;
                 case /* proto.TristateEffect demoralizing_roar */ 22:
                     message.demoralizingRoar = reader.int32();
@@ -2325,6 +2392,12 @@ class Debuffs$Type extends MessageType {
                     break;
                 case /* proto.TristateEffect icy_touch */ 30:
                     message.icyTouch = reader.int32();
+                    break;
+                case /* bool infected_wounds */ 35:
+                    message.infectedWounds = reader.bool();
+                    break;
+                case /* bool judgements_of_the_just */ 36:
+                    message.judgementsOfTheJust = reader.bool();
                     break;
                 case /* bool insect_swarm */ 25:
                     message.insectSwarm = reader.bool();
@@ -2401,15 +2474,27 @@ class Debuffs$Type extends MessageType {
         /* bool mangle = 16; */
         if (message.mangle !== false)
             writer.tag(16, WireType.Varint).bool(message.mangle);
+        /* bool trauma = 32; */
+        if (message.trauma !== false)
+            writer.tag(32, WireType.Varint).bool(message.trauma);
+        /* bool stampede = 33; */
+        if (message.stampede !== false)
+            writer.tag(33, WireType.Varint).bool(message.stampede);
         /* bool expose_armor = 17; */
         if (message.exposeArmor !== false)
             writer.tag(17, WireType.Varint).bool(message.exposeArmor);
         /* bool sunder_armor = 18; */
         if (message.sunderArmor !== false)
             writer.tag(18, WireType.Varint).bool(message.sunderArmor);
+        /* bool acid_spit = 34; */
+        if (message.acidSpit !== false)
+            writer.tag(34, WireType.Varint).bool(message.acidSpit);
         /* proto.TristateEffect curse_of_weakness = 19; */
         if (message.curseOfWeakness !== 0)
             writer.tag(19, WireType.Varint).int32(message.curseOfWeakness);
+        /* bool sting = 31; */
+        if (message.sting !== false)
+            writer.tag(31, WireType.Varint).bool(message.sting);
         /* proto.TristateEffect demoralizing_roar = 22; */
         if (message.demoralizingRoar !== 0)
             writer.tag(22, WireType.Varint).int32(message.demoralizingRoar);
@@ -2422,6 +2507,12 @@ class Debuffs$Type extends MessageType {
         /* proto.TristateEffect icy_touch = 30; */
         if (message.icyTouch !== 0)
             writer.tag(30, WireType.Varint).int32(message.icyTouch);
+        /* bool infected_wounds = 35; */
+        if (message.infectedWounds !== false)
+            writer.tag(35, WireType.Varint).bool(message.infectedWounds);
+        /* bool judgements_of_the_just = 36; */
+        if (message.judgementsOfTheJust !== false)
+            writer.tag(36, WireType.Varint).bool(message.judgementsOfTheJust);
         /* bool insect_swarm = 25; */
         if (message.insectSwarm !== false)
             writer.tag(25, WireType.Varint).bool(message.insectSwarm);
