@@ -404,6 +404,10 @@ export interface DeathKnight_Rotation {
      * @generated from protobuf field: bool refresh_horn_of_winter = 4;
      */
     refreshHornOfWinter: boolean;
+    /**
+     * @generated from protobuf field: bool wip_frost_rotation = 5;
+     */
+    wipFrostRotation: boolean;
 }
 /**
  * @generated from protobuf message proto.DeathKnight.Options

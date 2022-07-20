@@ -879,11 +879,12 @@ class DeathKnight_Rotation$Type extends MessageType {
             { no: 1, name: "use_death_and_decay", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 2, name: "unholy_presence_opener", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 3, name: "disease_refresh_duration", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
-            { no: 4, name: "refresh_horn_of_winter", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 4, name: "refresh_horn_of_winter", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 5, name: "wip_frost_rotation", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { useDeathAndDecay: false, unholyPresenceOpener: false, diseaseRefreshDuration: 0, refreshHornOfWinter: false };
+        const message = { useDeathAndDecay: false, unholyPresenceOpener: false, diseaseRefreshDuration: 0, refreshHornOfWinter: false, wipFrostRotation: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -905,6 +906,9 @@ class DeathKnight_Rotation$Type extends MessageType {
                     break;
                 case /* bool refresh_horn_of_winter */ 4:
                     message.refreshHornOfWinter = reader.bool();
+                    break;
+                case /* bool wip_frost_rotation */ 5:
+                    message.wipFrostRotation = reader.bool();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -930,6 +934,9 @@ class DeathKnight_Rotation$Type extends MessageType {
         /* bool refresh_horn_of_winter = 4; */
         if (message.refreshHornOfWinter !== false)
             writer.tag(4, WireType.Varint).bool(message.refreshHornOfWinter);
+        /* bool wip_frost_rotation = 5; */
+        if (message.wipFrostRotation !== false)
+            writer.tag(5, WireType.Varint).bool(message.wipFrostRotation);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

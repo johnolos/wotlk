@@ -62,6 +62,18 @@ export declare const RefreshHornOfWinter: {
         setValue: (eventID: EventID, player: Player<Spec.SpecDeathKnight>, newValue: boolean) => void;
     };
 };
+export declare const WIPFrostRotation: {
+    type: "boolean";
+    getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
+    config: {
+        extraCssClasses: string[];
+        label: string;
+        labelTooltip: string;
+        changedEvent: (player: Player<Spec.SpecDeathKnight>) => TypedEvent<void>;
+        getValue: (player: Player<Spec.SpecDeathKnight>) => boolean;
+        setValue: (eventID: EventID, player: Player<Spec.SpecDeathKnight>, newValue: boolean) => void;
+    };
+};
 export declare const DiseaseRefreshDuration: {
     type: "number";
     getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
