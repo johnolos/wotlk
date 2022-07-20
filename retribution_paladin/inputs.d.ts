@@ -37,6 +37,22 @@ export declare const StartingSealSelection: {
         setValue: (eventID: EventID, player: Player<Spec.SpecRetributionPaladin>, newValue: number) => void;
     };
 };
+export declare const DivinePleaSelection: {
+    type: "boolean";
+    cssClass: string;
+    getModObject: (simUI: IndividualSimUI<any>) => Player<any>;
+    config: {
+        label: string;
+        labelTooltip: string;
+        values: {
+            name: string;
+            value: boolean;
+        }[];
+        changedEvent: (player: Player<Spec.SpecRetributionPaladin>) => import("/wotlk/core/typed_event.js").TypedEvent<void>;
+        getValue: (player: Player<Spec.SpecRetributionPaladin>) => boolean;
+        setValue: (eventID: EventID, player: Player<Spec.SpecRetributionPaladin>, newValue: boolean) => void;
+    };
+};
 export declare const JudgementSelection: {
     type: "enum";
     cssClass: string;

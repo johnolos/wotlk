@@ -48,6 +48,25 @@ export const StartingSealSelection = {
         },
     },
 };
+export const DivinePleaSelection = {
+    type: 'boolean', cssClass: 'divine-plea-picker',
+    getModObject: (simUI) => simUI.player,
+    config: {
+        label: 'Divine Plea',
+        labelTooltip: 'Whether or not to maintain Divine Plea',
+        values: [
+            { name: 'Yes', value: true },
+            { name: 'No', value: false },
+        ],
+        changedEvent: (player) => player.specOptionsChangeEmitter,
+        getValue: (player) => player.getSpecOptions().useDivinePlea,
+        setValue: (eventID, player, newValue) => {
+            const newOptions = player.getSpecOptions();
+            newOptions.useDivinePlea = newValue;
+            player.setSpecOptions(eventID, newOptions);
+        },
+    },
+};
 export const JudgementSelection = {
     type: 'enum', cssClass: 'judgement-picker',
     getModObject: (simUI) => simUI.player,

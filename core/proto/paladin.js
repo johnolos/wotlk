@@ -924,11 +924,12 @@ class RetributionPaladin_Options$Type extends MessageType {
             { no: 2, name: "seal", kind: "enum", T: () => ["proto.PaladinSeal", PaladinSeal] },
             { no: 3, name: "aura", kind: "enum", T: () => ["proto.PaladinAura", PaladinAura] },
             { no: 4, name: "damage_taken_per_second", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
-            { no: 5, name: "use_avenging_wrath", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 5, name: "use_avenging_wrath", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 6, name: "use_divine_plea", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { judgement: 0, seal: 0, aura: 0, damageTakenPerSecond: 0, useAvengingWrath: false };
+        const message = { judgement: 0, seal: 0, aura: 0, damageTakenPerSecond: 0, useAvengingWrath: false, useDivinePlea: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -953,6 +954,9 @@ class RetributionPaladin_Options$Type extends MessageType {
                     break;
                 case /* bool use_avenging_wrath */ 5:
                     message.useAvengingWrath = reader.bool();
+                    break;
+                case /* bool use_divine_plea */ 6:
+                    message.useDivinePlea = reader.bool();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -981,6 +985,9 @@ class RetributionPaladin_Options$Type extends MessageType {
         /* bool use_avenging_wrath = 5; */
         if (message.useAvengingWrath !== false)
             writer.tag(5, WireType.Varint).bool(message.useAvengingWrath);
+        /* bool use_divine_plea = 6; */
+        if (message.useDivinePlea !== false)
+            writer.tag(6, WireType.Varint).bool(message.useDivinePlea);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

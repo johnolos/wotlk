@@ -373,6 +373,10 @@ export interface RetributionPaladin_Options {
      * @generated from protobuf field: bool use_avenging_wrath = 5;
      */
     useAvengingWrath: boolean;
+    /**
+     * @generated from protobuf field: bool use_divine_plea = 6;
+     */
+    useDivinePlea: boolean;
 }
 /**
  * @generated from protobuf message proto.ProtectionPaladin
