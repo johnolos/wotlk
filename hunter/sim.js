@@ -8,6 +8,7 @@ import { Stats } from '/wotlk/core/proto_utils/stats.js';
 import { IndividualSimUI } from '/wotlk/core/individual_sim_ui.js';
 import { TypedEvent } from '/wotlk/core/typed_event.js';
 import { Hunter_Options_PetType as PetType, } from '/wotlk/core/proto/hunter.js';
+import * as IconInputs from '/wotlk/core/components/icon_inputs.js';
 import * as OtherInputs from '/wotlk/core/components/other_inputs.js';
 import * as HunterInputs from './inputs.js';
 import * as Presets from './presets.js';
@@ -123,6 +124,9 @@ export class HunterSimUI extends IndividualSimUI {
             ],
             // Inputs to include in the 'Rotation' section on the settings tab.
             rotationInputs: HunterInputs.HunterRotationConfig,
+            petConsumeInputs: [
+                IconInputs.SpicedMammothTreats,
+            ],
             // Inputs to include in the 'Other' section on the settings tab.
             otherInputs: {
                 inputs: [

@@ -1339,9 +1339,9 @@ export var PetFood;
      */
     PetFood[PetFood["PetFoodUnknown"] = 0] = "PetFoodUnknown";
     /**
-     * @generated from protobuf enum value: PetFoodSpicyMammothTreats = 1;
+     * @generated from protobuf enum value: PetFoodSpicedMammothTreats = 1;
      */
-    PetFood[PetFood["PetFoodSpicyMammothTreats"] = 1] = "PetFoodSpicyMammothTreats";
+    PetFood[PetFood["PetFoodSpicedMammothTreats"] = 1] = "PetFoodSpicedMammothTreats";
     /**
      * TBC
      *

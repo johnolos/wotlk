@@ -195,11 +195,11 @@ export const JudgementOfWisdom = makeBooleanDebuffInput(ActionId.fromSpellId(534
 export const JudgementOfLight = makeBooleanDebuffInput(ActionId.fromSpellId(20271), 'judgementOfLight');
 export const GiftOfArthas = makeBooleanDebuffInput(ActionId.fromSpellId(11374), 'giftOfArthas');
 // Consumes
-export const SuperSapper = makeBooleanConsumeInput(ActionId.fromItemId(23827), 'superSapper', [], onSetExplosives);
-export const GoblinSapper = makeBooleanConsumeInput(ActionId.fromItemId(10646), 'goblinSapper', [], onSetExplosives);
-export const KiblersBits = makeEnumValueConsumeInput(ActionId.fromItemId(33874), 'petFood', PetFood.PetFoodKiblersBits, ['Pet Food']);
-export const PetScrollOfAgilityV = makeEnumValueConsumeInput(ActionId.fromItemId(27498), 'petScrollOfAgility', 5);
-export const PetScrollOfStrengthV = makeEnumValueConsumeInput(ActionId.fromItemId(27503), 'petScrollOfStrength', 5);
+//export const SuperSapper = makeBooleanConsumeInput(ActionId.fromItemId(23827), 'superSapper', [], onSetExplosives);
+//export const GoblinSapper = makeBooleanConsumeInput(ActionId.fromItemId(10646), 'goblinSapper', [], onSetExplosives);
+export const SpicedMammothTreats = makeBooleanConsumeInput(ActionId.fromItemId(43005), 'petFood', PetFood.PetFoodSpicedMammothTreats);
+export const PetScrollOfAgilityV = makeBooleanConsumeInput(ActionId.fromItemId(27498), 'petScrollOfAgility', 5);
+export const PetScrollOfStrengthV = makeBooleanConsumeInput(ActionId.fromItemId(27503), 'petScrollOfStrength', 5);
 function withLabel(config, label) {
     config.label = label;
     return config;
@@ -234,6 +234,14 @@ function makeBooleanIndividualBuffInput(id, fieldName, value) {
         getValue: (player) => player.getBuffs(),
         setValue: (eventID, player, newVal) => player.setBuffs(eventID, newVal),
         changeEmitter: (player) => player.buffsChangeEmitter,
+    }, id, fieldName, value);
+}
+function makeBooleanConsumeInput(id, fieldName, value) {
+    return makeBooleanInput({
+        getModObject: (player) => player,
+        getValue: (player) => player.getConsumes(),
+        setValue: (eventID, player, newVal) => player.setConsumes(eventID, newVal),
+        changeEmitter: (player) => player.consumesChangeEmitter,
     }, id, fieldName, value);
 }
 function makeBooleanDebuffInput(id, fieldName, value) {
@@ -325,59 +333,6 @@ function makeWrappedIconInput(config) {
         changedEvent: (player) => config.changedEvent(getModObject(player)),
         getValue: (player) => config.getValue(getModObject(player)),
         setValue: (eventID, player, newValue) => config.setValue(eventID, getModObject(player), newValue),
-    };
-}
-function makeTristateDebuffInput(id, impId, debuffsFieldName) {
-    return {
-        id: id,
-        states: 3,
-        improvedId: impId,
-        changedEvent: (raid) => raid.debuffsChangeEmitter,
-        getValue: (raid) => raid.getDebuffs()[debuffsFieldName],
-        setValue: (eventID, raid, newValue) => {
-            const newDebuffs = raid.getDebuffs();
-            newDebuffs[debuffsFieldName] = newValue;
-            raid.setDebuffs(eventID, newDebuffs);
-        },
-    };
-}
-function makeBooleanConsumeInput(id, consumesFieldName, exclusivityTags, onSet) {
-    return {
-        id: id,
-        states: 2,
-        exclusivityTags: exclusivityTags,
-        changedEvent: (player) => player.consumesChangeEmitter,
-        getValue: (player) => player.getConsumes()[consumesFieldName],
-        setValue: (eventID, player, newValue) => {
-            const newConsumes = player.getConsumes();
-            newConsumes[consumesFieldName] = newValue;
-            TypedEvent.freezeAllAndDo(() => {
-                player.setConsumes(eventID, newConsumes);
-                if (onSet) {
-                    onSet(eventID, player, newValue);
-                }
-            });
-        },
-    };
-}
-function makeEnumValueConsumeInput(id, consumesFieldName, enumValue, exclusivityTags, onSet, showWhen) {
-    return {
-        id: id,
-        states: 2,
-        exclusivityTags: exclusivityTags,
-        changedEvent: (player) => player.consumesChangeEmitter,
-        getValue: (player) => player.getConsumes()[consumesFieldName] == enumValue,
-        setValue: (eventID, player, newValue) => {
-            const newConsumes = player.getConsumes();
-            newConsumes[consumesFieldName] = newValue ? enumValue : 0;
-            TypedEvent.freezeAllAndDo(() => {
-                player.setConsumes(eventID, newConsumes);
-                if (onSet) {
-                    onSet(eventID, player, newValue);
-                }
-            });
-        },
-        showWhen: showWhen,
     };
 }
 //////////////////////////////////////////////////////////////////////
@@ -498,9 +453,6 @@ export const makeFoodInput = makeConsumeInputFactory('food', [
     { actionId: ActionId.fromItemId(33825), value: Food.FoodSkullfishSoup },
     { actionId: ActionId.fromItemId(33052), value: Food.FoodFishermansFeast },
 ]);
-export const makePetFoodInput = makeConsumeInputFactory('petFood', [
-    { actionId: ActionId.fromItemId(33874), value: PetFood.PetFoodKiblersBits },
-]);
 function onSetExplosives(eventID, player, newValue) {
     if (newValue) {
         const playerConsumes = player.getConsumes();
@@ -546,7 +498,7 @@ export function makeWeaponImbueInput(isMainHand, options) {
 function makeConsumeInputFactory(consumesFieldName, allOptions, onSet) {
     return (options) => {
         return {
-            numColumns: 1,
+            numColumns: options.length > 5 ? 2 : 1,
             values: [
                 { color: 'grey', value: 0 },
             ].concat(options.map(option => allOptions.find(allOption => allOption.value == option))),

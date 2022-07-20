@@ -2312,9 +2312,9 @@ export declare enum PetFood {
      */
     PetFoodUnknown = 0,
     /**
-     * @generated from protobuf enum value: PetFoodSpicyMammothTreats = 1;
+     * @generated from protobuf enum value: PetFoodSpicedMammothTreats = 1;
      */
-    PetFoodSpicyMammothTreats = 1,
+    PetFoodSpicedMammothTreats = 1,
     /**
      * TBC
      *
