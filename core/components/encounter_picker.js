@@ -39,41 +39,43 @@ export class EncounterPicker extends Component {
                     }
                 },
             });
-            new EnumPicker(this.rootElem, modEncounter, {
-                label: 'Target Level',
-                values: [
-                    { name: '83', value: 83 },
-                    { name: '82', value: 82 },
-                    { name: '81', value: 81 },
-                    { name: '80', value: 80 },
-                ],
-                changedEvent: (encounter) => encounter.changeEmitter,
-                getValue: (encounter) => encounter.primaryTarget.getLevel(),
-                setValue: (eventID, encounter, newValue) => {
-                    encounter.primaryTarget.setLevel(eventID, newValue);
-                },
-            });
-            new EnumPicker(this.rootElem, modEncounter, {
-                label: 'Mob Type',
-                values: mobTypeEnumValues,
-                changedEvent: (encounter) => encounter.changeEmitter,
-                getValue: (encounter) => encounter.primaryTarget.getMobType(),
-                setValue: (eventID, encounter, newValue) => {
-                    encounter.primaryTarget.setMobType(eventID, newValue);
-                },
-            });
-            if (config.simpleTargetStats) {
-                config.simpleTargetStats.forEach(stat => {
-                    new NumberPicker(this.rootElem, modEncounter, {
-                        label: statNames[stat],
-                        changedEvent: (encounter) => encounter.changeEmitter,
-                        getValue: (encounter) => encounter.primaryTarget.getStats().getStat(stat),
-                        setValue: (eventID, encounter, newValue) => {
-                            encounter.primaryTarget.setStats(eventID, encounter.primaryTarget.getStats().withStat(stat, newValue));
-                        },
-                    });
-                });
-            }
+            //new EnumPicker<Encounter>(this.rootElem, modEncounter, {
+            //	label: 'Target Level',
+            //	values: [
+            //		{ name: '83', value: 83 },
+            //		{ name: '82', value: 82 },
+            //		{ name: '81', value: 81 },
+            //		{ name: '80', value: 80 },
+            //	],
+            //	changedEvent: (encounter: Encounter) => encounter.changeEmitter,
+            //	getValue: (encounter: Encounter) => encounter.primaryTarget.getLevel(),
+            //	setValue: (eventID: EventID, encounter: Encounter, newValue: number) => {
+            //		encounter.primaryTarget.setLevel(eventID, newValue);
+            //	},
+            //});
+            //new EnumPicker(this.rootElem, modEncounter, {
+            //	label: 'Mob Type',
+            //	values: mobTypeEnumValues,
+            //	changedEvent: (encounter: Encounter) => encounter.changeEmitter,
+            //	getValue: (encounter: Encounter) => encounter.primaryTarget.getMobType(),
+            //	setValue: (eventID: EventID, encounter: Encounter, newValue: number) => {
+            //		encounter.primaryTarget.setMobType(eventID, newValue);
+            //	},
+            //});
+            // Leaving this commented in case we want it later. But it takes up a lot of
+            // screen space and none of these fields get changed much.
+            //if (config.simpleTargetStats) {
+            //	config.simpleTargetStats.forEach(stat => {
+            //		new NumberPicker(this.rootElem, modEncounter, {
+            //			label: statNames[stat],
+            //			changedEvent: (encounter: Encounter) => encounter.changeEmitter,
+            //			getValue: (encounter: Encounter) => encounter.primaryTarget.getStats().getStat(stat),
+            //			setValue: (eventID: EventID, encounter: Encounter, newValue: number) => {
+            //				encounter.primaryTarget.setStats(eventID, encounter.primaryTarget.getStats().withStat(stat, newValue));
+            //			},
+            //		});
+            //	});
+            //}
             if (simUI.isIndividualSim() && isTankSpec(simUI.player.spec)) {
                 new NumberPicker(this.rootElem, modEncounter, {
                     label: 'Min Base Damage',

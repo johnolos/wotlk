@@ -69,12 +69,10 @@ export interface IndividualSimUIConfig<SpecType extends Spec> {
         individualBuffs: IndividualBuffs;
         debuffs: Debuffs;
     };
-    selfBuffInputs: Array<IndividualSimIconPickerConfig<Player<any>, any>>;
-    petInputs?: Array<IndividualSimIconPickerConfig<Player<any>, any>>;
-    weaponImbueInputs?: Array<IndividualSimIconPickerConfig<Player<any>, any>>;
+    playerIconInputs: Array<IndividualSimIconPickerConfig<Player<any>, any>>;
     petConsumeInputs?: Array<IconPickerConfig<Player<any>, any>>;
     rotationInputs: InputSection;
-    spellInputs?: Array<IndividualSimIconPickerConfig<Player<any>, any>>;
+    rotationIconInputs?: Array<IndividualSimIconPickerConfig<Player<any>, any>>;
     otherInputs?: InputSection;
     additionalSections?: Record<string, InputSection>;
     additionalIconSections?: Record<string, Array<IndividualSimIconPickerConfig<Player<any>, any>>>;

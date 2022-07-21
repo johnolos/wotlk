@@ -6,7 +6,7 @@ import { SavedDataManager } from "/wotlk/core/components/saved_data_manager.js";
 import { SettingsMenu } from "/wotlk/core/components/settings_menu.js";
 import * as Tooltips from "/wotlk/core/constants/tooltips.js";
 import { Raid as RaidProto } from "/wotlk/core/proto/api.js";
-import { Class, Encounter as EncounterProto, Stat, TristateEffect } from "/wotlk/core/proto/common.js";
+import { Class, Encounter as EncounterProto, TristateEffect } from "/wotlk/core/proto/common.js";
 import { Blessings } from "/wotlk/core/proto/paladin.js";
 import { BlessingsAssignments, RaidSimSettings, SavedEncounter, SavedRaid } from "/wotlk/core/proto/ui.js";
 import { playerToSpec } from "/wotlk/core/proto_utils/utils.js";
@@ -166,9 +166,6 @@ export class RaidSimUI extends SimUI {
 		`);
         const encounterSectionElem = this.rootElem.getElementsByClassName('raid-encounter-section')[0];
         new EncounterPicker(encounterSectionElem, this.sim.encounter, {
-            simpleTargetStats: [
-                Stat.StatArmor,
-            ],
             showExecuteProportion: true,
         }, this);
         const savedEncounterManager = new SavedDataManager(this.rootElem.getElementsByClassName('saved-encounter-manager')[0], this.sim.encounter, {

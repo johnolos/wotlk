@@ -110,8 +110,8 @@ export class ElementalShamanSimUI extends IndividualSimUI {
                     curseOfElements: true,
                 }),
             },
-            // IconInputs to include in the 'Self Buffs' section on the settings tab.
-            selfBuffInputs: [
+            // IconInputs to include in the 'Player' section on the settings tab.
+            playerIconInputs: [
                 ShamanInputs.IconWaterShield,
                 ShamanInputs.IconBloodlust,
             ],
@@ -128,10 +128,6 @@ export class ElementalShamanSimUI extends IndividualSimUI {
                 TotemsSection,
             ],
             encounterPicker: {
-                // Target stats to show for 'Simple' encounters.
-                simpleTargetStats: [
-                    Stat.StatNatureResistance,
-                ],
                 // Whether to include 'Execute Duration (%)' in the 'Encounter' section of the settings tab.
                 showExecuteProportion: false,
             },
