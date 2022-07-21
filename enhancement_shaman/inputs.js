@@ -1,4 +1,4 @@
-import { EnhancementShaman_Rotation_PrimaryShock as PrimaryShock, ShamanShield } from '/wotlk/core/proto/shaman.js';
+import { ShamanShield } from '/wotlk/core/proto/shaman.js';
 import { ActionId } from '/wotlk/core/proto_utils/action_id.js';
 // Configuration for spec-specific UI elements on the settings tab.
 // These don't need to be in a separate file but it keeps things cleaner.
@@ -7,7 +7,7 @@ export const IconLightningShield = {
     id: ActionId.fromSpellId(49281),
     states: 2,
     changedEvent: (player) => player.specOptionsChangeEmitter,
-    getValue: (player) => player.getSpecOptions().shield == ShamanShield.WaterShield,
+    getValue: (player) => player.getSpecOptions().shield == ShamanShield.LightningShield,
     setValue: (eventID, player, newValue) => {
         const newOptions = player.getSpecOptions();
         newOptions.shield = ShamanShield.LightningShield;
@@ -15,7 +15,7 @@ export const IconLightningShield = {
     },
 };
 export const IconWaterShield = {
-    id: ActionId.fromSpellId(33736),
+    id: ActionId.fromSpellId(57960),
     states: 2,
     changedEvent: (player) => player.specOptionsChangeEmitter,
     getValue: (player) => player.getSpecOptions().shield == ShamanShield.WaterShield,
@@ -45,31 +45,31 @@ export const DelayOffhandSwings = {
 };
 export const EnhancementShamanRotationConfig = {
     inputs: [
-        {
-            type: 'enum', cssClass: 'primary-shock-picker',
-            getModObject: (simUI) => simUI.player,
-            config: {
-                label: 'Primary Shock',
-                values: [
-                    {
-                        name: 'None', value: PrimaryShock.None,
-                    },
-                    {
-                        name: 'Earth Shock', value: PrimaryShock.Earth,
-                    },
-                    {
-                        name: 'Frost Shock', value: PrimaryShock.Frost,
-                    },
-                ],
-                changedEvent: (player) => player.rotationChangeEmitter,
-                getValue: (player) => player.getRotation().primaryShock,
-                setValue: (eventID, player, newValue) => {
-                    const newRotation = player.getRotation();
-                    newRotation.primaryShock = newValue;
-                    player.setRotation(eventID, newRotation);
-                },
-            },
-        }
+    //		{
+    //			type: 'enum' as const, cssClass: 'primary-shock-picker',
+    //			getModObject: (simUI: IndividualSimUI<any>) => simUI.player,
+    //			config: {
+    //				label: 'Mainhand Imbue', //very temporary, just as a way to be able to make sure imbues are working in the meantime,
+    //				values: [                //and primary shocks arent a thing anymore
+    //					{
+    //						name: 'None', value: WeaponImbue.None,
+    //					},
+    //					{
+    //						name: 'Windfury', value: WeaponImbue.WeaponImbueShamanWindfury,
+    //					},
+    //					{
+    //						name: 'Flametongue', value: WeaponImbue.WeaponImbueShamanFlametongue,
+    //					},
+    //				],
+    //				changedEvent: (player: Player<Spec.SpecEnhancementShaman>) => player.rotationChangeEmitter,
+    //				getValue: (player: Player<Spec.SpecEnhancementShaman>) => player.getRotation().WeaponImbue,
+    //				setValue: (eventID: EventID, player: Player<Spec.SpecEnhancementShaman>, newValue: number) => {
+    //					const newRotation = player.getRotation();
+    //					newRotation.WeaponImbue = newValue;
+    //					player.setRotation(eventID, newRotation);
+    //				},
+    //			},
+    //		}
     ],
 };
 function makeBooleanShamanBuffInput(id, optionsFieldName) {

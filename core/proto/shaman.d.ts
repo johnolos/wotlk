@@ -468,27 +468,6 @@ export interface EnhancementShaman_Rotation {
      * @generated from protobuf field: proto.ShamanTotems totems = 1;
      */
     totems?: ShamanTotems;
-    /**
-     * @generated from protobuf field: proto.EnhancementShaman.Rotation.PrimaryShock primary_shock = 2;
-     */
-    primaryShock: EnhancementShaman_Rotation_PrimaryShock;
-}
-/**
- * @generated from protobuf enum proto.EnhancementShaman.Rotation.PrimaryShock
- */
-export declare enum EnhancementShaman_Rotation_PrimaryShock {
-    /**
-     * @generated from protobuf enum value: None = 0;
-     */
-    None = 0,
-    /**
-     * @generated from protobuf enum value: Earth = 1;
-     */
-    Earth = 1,
-    /**
-     * @generated from protobuf enum value: Frost = 2;
-     */
-    Frost = 2
 }
 /**
  * @generated from protobuf message proto.EnhancementShaman.Options

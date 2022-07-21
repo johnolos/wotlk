@@ -6,7 +6,7 @@ import { Potions } from '/wotlk/core/proto/common.js';
 import { WeaponImbue } from '/wotlk/core/proto/common.js';
 import { SavedTalents } from '/wotlk/core/proto/ui.js';
 import { EnhancementShaman_Rotation as EnhancementShamanRotation, EnhancementShaman_Options as EnhancementShamanOptions, ShamanShield } from '/wotlk/core/proto/shaman.js';
-import { AirTotem, EarthTotem, FireTotem, WaterTotem, EnhancementShaman_Rotation_PrimaryShock as PrimaryShock, ShamanTotems, } from '/wotlk/core/proto/shaman.js';
+import { AirTotem, EarthTotem, FireTotem, WaterTotem, ShamanTotems, } from '/wotlk/core/proto/shaman.js';
 import * as Tooltips from '/wotlk/core/constants/tooltips.js';
 // Preset options for this spec.
 // Eventually we will import these values for the raid sim too, so its good to
@@ -32,7 +32,6 @@ export const DefaultRotation = EnhancementShamanRotation.create({
         fire: FireTotem.SearingTotem,
         water: WaterTotem.ManaSpringTotem,
     }),
-    primaryShock: PrimaryShock.Frost,
 });
 export const DefaultOptions = EnhancementShamanOptions.create({
     shield: ShamanShield.LightningShield,

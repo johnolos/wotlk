@@ -18,24 +18,6 @@ export var ElementalShaman_Rotation_RotationType;
     ElementalShaman_Rotation_RotationType[ElementalShaman_Rotation_RotationType["Adaptive"] = 1] = "Adaptive";
 })(ElementalShaman_Rotation_RotationType || (ElementalShaman_Rotation_RotationType = {}));
 /**
- * @generated from protobuf enum proto.EnhancementShaman.Rotation.PrimaryShock
- */
-export var EnhancementShaman_Rotation_PrimaryShock;
-(function (EnhancementShaman_Rotation_PrimaryShock) {
-    /**
-     * @generated from protobuf enum value: None = 0;
-     */
-    EnhancementShaman_Rotation_PrimaryShock[EnhancementShaman_Rotation_PrimaryShock["None"] = 0] = "None";
-    /**
-     * @generated from protobuf enum value: Earth = 1;
-     */
-    EnhancementShaman_Rotation_PrimaryShock[EnhancementShaman_Rotation_PrimaryShock["Earth"] = 1] = "Earth";
-    /**
-     * @generated from protobuf enum value: Frost = 2;
-     */
-    EnhancementShaman_Rotation_PrimaryShock[EnhancementShaman_Rotation_PrimaryShock["Frost"] = 2] = "Frost";
-})(EnhancementShaman_Rotation_PrimaryShock || (EnhancementShaman_Rotation_PrimaryShock = {}));
-/**
  * @generated from protobuf enum proto.ShamanMajorGlyph
  */
 export var ShamanMajorGlyph;
@@ -1230,12 +1212,11 @@ export const EnhancementShaman = new EnhancementShaman$Type();
 class EnhancementShaman_Rotation$Type extends MessageType {
     constructor() {
         super("proto.EnhancementShaman.Rotation", [
-            { no: 1, name: "totems", kind: "message", T: () => ShamanTotems },
-            { no: 2, name: "primary_shock", kind: "enum", T: () => ["proto.EnhancementShaman.Rotation.PrimaryShock", EnhancementShaman_Rotation_PrimaryShock] }
+            { no: 1, name: "totems", kind: "message", T: () => ShamanTotems }
         ]);
     }
     create(value) {
-        const message = { primaryShock: 0 };
+        const message = {};
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -1248,9 +1229,6 @@ class EnhancementShaman_Rotation$Type extends MessageType {
             switch (fieldNo) {
                 case /* proto.ShamanTotems totems */ 1:
                     message.totems = ShamanTotems.internalBinaryRead(reader, reader.uint32(), options, message.totems);
-                    break;
-                case /* proto.EnhancementShaman.Rotation.PrimaryShock primary_shock */ 2:
-                    message.primaryShock = reader.int32();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -1267,9 +1245,6 @@ class EnhancementShaman_Rotation$Type extends MessageType {
         /* proto.ShamanTotems totems = 1; */
         if (message.totems)
             ShamanTotems.internalBinaryWrite(message.totems, writer.tag(1, WireType.LengthDelimited).fork(), options).join();
-        /* proto.EnhancementShaman.Rotation.PrimaryShock primary_shock = 2; */
-        if (message.primaryShock !== 0)
-            writer.tag(2, WireType.Varint).int32(message.primaryShock);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
