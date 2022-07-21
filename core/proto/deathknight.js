@@ -4,6 +4,24 @@ import { reflectionMergePartial } from '/wotlk/protobuf-ts/index.js';
 import { MESSAGE_TYPE } from '/wotlk/protobuf-ts/index.js';
 import { MessageType } from '/wotlk/protobuf-ts/index.js';
 /**
+ * @generated from protobuf enum proto.DeathKnight.Rotation.ArmyOfTheDead
+ */
+export var DeathKnight_Rotation_ArmyOfTheDead;
+(function (DeathKnight_Rotation_ArmyOfTheDead) {
+    /**
+     * @generated from protobuf enum value: DoNotUse = 0;
+     */
+    DeathKnight_Rotation_ArmyOfTheDead[DeathKnight_Rotation_ArmyOfTheDead["DoNotUse"] = 0] = "DoNotUse";
+    /**
+     * @generated from protobuf enum value: PreCast = 1;
+     */
+    DeathKnight_Rotation_ArmyOfTheDead[DeathKnight_Rotation_ArmyOfTheDead["PreCast"] = 1] = "PreCast";
+    /**
+     * @generated from protobuf enum value: AsMajorCd = 2;
+     */
+    DeathKnight_Rotation_ArmyOfTheDead[DeathKnight_Rotation_ArmyOfTheDead["AsMajorCd"] = 2] = "AsMajorCd";
+})(DeathKnight_Rotation_ArmyOfTheDead || (DeathKnight_Rotation_ArmyOfTheDead = {}));
+/**
  * @generated from protobuf enum proto.DeathKnightMajorGlyph
  */
 export var DeathKnightMajorGlyph;
@@ -876,15 +894,16 @@ export const DeathKnight = new DeathKnight$Type();
 class DeathKnight_Rotation$Type extends MessageType {
     constructor() {
         super("proto.DeathKnight.Rotation", [
-            { no: 1, name: "use_death_and_decay", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "unholy_presence_opener", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 3, name: "disease_refresh_duration", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
-            { no: 4, name: "refresh_horn_of_winter", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 5, name: "wip_frost_rotation", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
+            { no: 1, name: "army_of_the_dead", kind: "enum", T: () => ["proto.DeathKnight.Rotation.ArmyOfTheDead", DeathKnight_Rotation_ArmyOfTheDead] },
+            { no: 2, name: "use_death_and_decay", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 3, name: "unholy_presence_opener", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 4, name: "disease_refresh_duration", kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ },
+            { no: 5, name: "refresh_horn_of_winter", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+            { no: 6, name: "wip_frost_rotation", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
         ]);
     }
     create(value) {
-        const message = { useDeathAndDecay: false, unholyPresenceOpener: false, diseaseRefreshDuration: 0, refreshHornOfWinter: false, wipFrostRotation: false };
+        const message = { armyOfTheDead: 0, useDeathAndDecay: false, unholyPresenceOpener: false, diseaseRefreshDuration: 0, refreshHornOfWinter: false, wipFrostRotation: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -895,19 +914,22 @@ class DeathKnight_Rotation$Type extends MessageType {
         while (reader.pos < end) {
             let [fieldNo, wireType] = reader.tag();
             switch (fieldNo) {
-                case /* bool use_death_and_decay */ 1:
+                case /* proto.DeathKnight.Rotation.ArmyOfTheDead army_of_the_dead */ 1:
+                    message.armyOfTheDead = reader.int32();
+                    break;
+                case /* bool use_death_and_decay */ 2:
                     message.useDeathAndDecay = reader.bool();
                     break;
-                case /* bool unholy_presence_opener */ 2:
+                case /* bool unholy_presence_opener */ 3:
                     message.unholyPresenceOpener = reader.bool();
                     break;
-                case /* double disease_refresh_duration */ 3:
+                case /* double disease_refresh_duration */ 4:
                     message.diseaseRefreshDuration = reader.double();
                     break;
-                case /* bool refresh_horn_of_winter */ 4:
+                case /* bool refresh_horn_of_winter */ 5:
                     message.refreshHornOfWinter = reader.bool();
                     break;
-                case /* bool wip_frost_rotation */ 5:
+                case /* bool wip_frost_rotation */ 6:
                     message.wipFrostRotation = reader.bool();
                     break;
                 default:
@@ -922,21 +944,24 @@ class DeathKnight_Rotation$Type extends MessageType {
         return message;
     }
     internalBinaryWrite(message, writer, options) {
-        /* bool use_death_and_decay = 1; */
+        /* proto.DeathKnight.Rotation.ArmyOfTheDead army_of_the_dead = 1; */
+        if (message.armyOfTheDead !== 0)
+            writer.tag(1, WireType.Varint).int32(message.armyOfTheDead);
+        /* bool use_death_and_decay = 2; */
         if (message.useDeathAndDecay !== false)
-            writer.tag(1, WireType.Varint).bool(message.useDeathAndDecay);
-        /* bool unholy_presence_opener = 2; */
+            writer.tag(2, WireType.Varint).bool(message.useDeathAndDecay);
+        /* bool unholy_presence_opener = 3; */
         if (message.unholyPresenceOpener !== false)
-            writer.tag(2, WireType.Varint).bool(message.unholyPresenceOpener);
-        /* double disease_refresh_duration = 3; */
+            writer.tag(3, WireType.Varint).bool(message.unholyPresenceOpener);
+        /* double disease_refresh_duration = 4; */
         if (message.diseaseRefreshDuration !== 0)
-            writer.tag(3, WireType.Bit64).double(message.diseaseRefreshDuration);
-        /* bool refresh_horn_of_winter = 4; */
+            writer.tag(4, WireType.Bit64).double(message.diseaseRefreshDuration);
+        /* bool refresh_horn_of_winter = 5; */
         if (message.refreshHornOfWinter !== false)
-            writer.tag(4, WireType.Varint).bool(message.refreshHornOfWinter);
-        /* bool wip_frost_rotation = 5; */
+            writer.tag(5, WireType.Varint).bool(message.refreshHornOfWinter);
+        /* bool wip_frost_rotation = 6; */
         if (message.wipFrostRotation !== false)
-            writer.tag(5, WireType.Varint).bool(message.wipFrostRotation);
+            writer.tag(6, WireType.Varint).bool(message.wipFrostRotation);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

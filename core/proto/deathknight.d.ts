@@ -389,25 +389,46 @@ export interface DeathKnight {
  */
 export interface DeathKnight_Rotation {
     /**
-     * @generated from protobuf field: bool use_death_and_decay = 1;
+     * @generated from protobuf field: proto.DeathKnight.Rotation.ArmyOfTheDead army_of_the_dead = 1;
+     */
+    armyOfTheDead: DeathKnight_Rotation_ArmyOfTheDead;
+    /**
+     * @generated from protobuf field: bool use_death_and_decay = 2;
      */
     useDeathAndDecay: boolean;
     /**
-     * @generated from protobuf field: bool unholy_presence_opener = 2;
+     * @generated from protobuf field: bool unholy_presence_opener = 3;
      */
     unholyPresenceOpener: boolean;
     /**
-     * @generated from protobuf field: double disease_refresh_duration = 3;
+     * @generated from protobuf field: double disease_refresh_duration = 4;
      */
     diseaseRefreshDuration: number;
     /**
-     * @generated from protobuf field: bool refresh_horn_of_winter = 4;
+     * @generated from protobuf field: bool refresh_horn_of_winter = 5;
      */
     refreshHornOfWinter: boolean;
     /**
-     * @generated from protobuf field: bool wip_frost_rotation = 5;
+     * @generated from protobuf field: bool wip_frost_rotation = 6;
      */
     wipFrostRotation: boolean;
+}
+/**
+ * @generated from protobuf enum proto.DeathKnight.Rotation.ArmyOfTheDead
+ */
+export declare enum DeathKnight_Rotation_ArmyOfTheDead {
+    /**
+     * @generated from protobuf enum value: DoNotUse = 0;
+     */
+    DoNotUse = 0,
+    /**
+     * @generated from protobuf enum value: PreCast = 1;
+     */
+    PreCast = 1,
+    /**
+     * @generated from protobuf enum value: AsMajorCd = 2;
+     */
+    AsMajorCd = 2
 }
 /**
  * @generated from protobuf message proto.DeathKnight.Options

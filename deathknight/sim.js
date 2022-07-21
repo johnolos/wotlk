@@ -22,6 +22,7 @@ export class DeathKnightSimUI extends IndividualSimUI {
             // All stats for which EP should be calculated.
             epStats: [
                 Stat.StatStrength,
+                Stat.StatArmor,
                 Stat.StatAgility,
                 Stat.StatAttackPower,
                 Stat.StatExpertise,
@@ -53,14 +54,15 @@ export class DeathKnightSimUI extends IndividualSimUI {
                 gear: Presets.P1_FROST_BIS_PRESET.gear,
                 // Default EP weights for sorting gear in the gear picker.
                 epWeights: Stats.fromMap({
-                    [Stat.StatStrength]: 2.17,
-                    [Stat.StatAgility]: 1.4,
+                    [Stat.StatStrength]: 2.61,
+                    [Stat.StatAgility]: 1.14,
+                    [Stat.StatArmor]: 0.027,
                     [Stat.StatAttackPower]: 1,
-                    [Stat.StatExpertise]: 3.29,
-                    [Stat.StatMeleeHit]: 0.41,
+                    [Stat.StatExpertise]: 1.73,
+                    [Stat.StatMeleeHaste]: 1.26,
+                    [Stat.StatMeleeHit]: 1.71,
                     [Stat.StatMeleeCrit]: 1.83,
-                    [Stat.StatMeleeHaste]: 2.07,
-                    [Stat.StatArmorPenetration]: 0.5,
+                    [Stat.StatArmorPenetration]: 1.425,
                 }),
                 // Default consumes settings.
                 consumes: Presets.DefaultConsumes,
@@ -79,7 +81,8 @@ export class DeathKnightSimUI extends IndividualSimUI {
                     abominationsMight: true,
                     leaderOfThePack: TristateEffect.TristateEffectRegular,
                     sanctifiedRetribution: true,
-                    bloodlust: true
+                    bloodlust: true,
+                    devotionAura: TristateEffect.TristateEffectImproved,
                 }),
                 partyBuffs: PartyBuffs.create({
                     heroicPresence: false,

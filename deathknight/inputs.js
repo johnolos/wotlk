@@ -1,3 +1,4 @@
+import { DeathKnight_Rotation_ArmyOfTheDead as ArmyOfTheDead, } from '/wotlk/core/proto/deathknight.js';
 // Configuration for spec-specific UI elements on the settings tab.
 // These don't need to be in a separate file but it keeps things cleaner.
 export const StartingRunicPower = {
@@ -126,6 +127,35 @@ export const DiseaseRefreshDuration = {
         },
     },
 };
+export const UseArmyOfTheDead = {
+    type: 'enum',
+    getModObject: (simUI) => simUI.player,
+    config: {
+        extraCssClasses: [
+            'army-of-the-dead-enum-picker',
+        ],
+        label: 'Army of the Dead',
+        labelTooltip: 'Chose how to use Army of the Dead.',
+        values: [
+            {
+                name: 'Do not use', value: ArmyOfTheDead.DoNotUse,
+            },
+            {
+                name: 'Pre pull', value: ArmyOfTheDead.PreCast,
+            },
+            {
+                name: 'As Major CD', value: ArmyOfTheDead.AsMajorCd,
+            },
+        ],
+        changedEvent: (player) => player.rotationChangeEmitter,
+        getValue: (player) => player.getRotation().armyOfTheDead,
+        setValue: (eventID, player, newValue) => {
+            const newRotation = player.getRotation();
+            newRotation.armyOfTheDead = newValue;
+            player.setRotation(eventID, newRotation);
+        },
+    },
+};
 export const UseDeathAndDecay = {
     type: 'boolean',
     getModObject: (simUI) => simUI.player,
@@ -164,10 +194,11 @@ export const UnholyPresenceOpener = {
 };
 export const DeathKnightRotationConfig = {
     inputs: [
+        UseArmyOfTheDead,
         UseDeathAndDecay,
         UnholyPresenceOpener,
         RefreshHornOfWinter,
-        DiseaseRefreshDuration,
         WIPFrostRotation,
+        DiseaseRefreshDuration,
     ],
 };
