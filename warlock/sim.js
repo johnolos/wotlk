@@ -10,6 +10,7 @@ export class WarlockSimUI extends IndividualSimUI {
             cssClass: 'warlock-sim-ui',
             // List any known bugs / issues here and they'll be shown on the site.
             knownIssues: [],
+            // race: Race.RaceOrc,
             // All stats for which EP should be calculated.
             epStats: [
                 Stat.StatIntellect,
@@ -107,7 +108,8 @@ export class WarlockSimUI extends IndividualSimUI {
             },
             encounterPicker: {
                 // Whether to include 'Execute Duration (%)' in the 'Encounter' section of the settings tab.
-                showExecuteProportion: false,
+                showExecuteProportion: true,
+                // executeProportion20: 0.25,
             },
             presets: {
                 // Preset talents that the user can quickly select.
@@ -119,6 +121,7 @@ export class WarlockSimUI extends IndividualSimUI {
                 //Preset gear configurations that the user can quickly select.
                 gear: [
                     Presets.SWP_BIS,
+                    Presets.P1_PreBiS,
                 ],
             },
         });

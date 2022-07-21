@@ -14,6 +14,7 @@ import { IndividualSimSettings } from '/wotlk/core/proto/ui.js';
 import { NumberPickerConfig } from '/wotlk/core/components/number_picker.js';
 import { PartyBuffs } from '/wotlk/core/proto/common.js';
 import { Player } from './player.js';
+import { Profession } from '/wotlk/core/proto/common.js';
 import { Race } from '/wotlk/core/proto/common.js';
 import { RaidBuffs } from '/wotlk/core/proto/common.js';
 import { SavedDataConfig } from '/wotlk/core/components/saved_data_manager.js';
@@ -100,6 +101,7 @@ export interface Settings {
     individualBuffs: IndividualBuffs;
     consumes: Consumes;
     race: Race;
+    professions?: Array<Profession>;
 }
 export declare abstract class IndividualSimUI<SpecType extends Spec> extends SimUI {
     readonly player: Player<SpecType>;

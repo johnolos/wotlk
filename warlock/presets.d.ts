@@ -28,3 +28,8 @@ export declare const SWP_BIS: {
     tooltip: string;
     gear: EquipmentSpec;
 };
+export declare const P1_PreBiS: {
+    name: string;
+    tooltip: string;
+    gear: EquipmentSpec;
+};

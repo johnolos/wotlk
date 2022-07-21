@@ -405,8 +405,8 @@ export class IndividualSimUI extends SimUI {
             { item: IconInputs.HastePercentBuff, stats: [Stat.StatMeleeHaste, Stat.StatSpellHaste] },
             { item: IconInputs.DamagePercentBuff, stats: [Stat.StatAttackPower, Stat.StatSpellPower] },
             { item: IconInputs.DamageReductionPercentBuff, stats: [Stat.StatStamina] },
-            { item: IconInputs.MP5Buff, stats: [Stat.StatMP5, Stat.StatIntellect] },
-            { item: IconInputs.ReplenishmentBuff, stats: [Stat.StatMP5, Stat.StatIntellect] },
+            { item: IconInputs.MP5Buff, stats: [Stat.StatMP5] },
+            //{ item: IconInputs.ReplenishmentBuff, stats: [Stat.StatMP5] },
         ]);
         const buffsSection = this.rootElem.getElementsByClassName('buffs-section')[0];
         configureIconSection(buffsSection, buffOptions.map(multiIconInput => new MultiIconPicker(buffsSection, this.player, multiIconInput, this)), Tooltips.OTHER_BUFFS_SECTION);
@@ -449,10 +449,13 @@ export class IndividualSimUI extends SimUI {
         ]);
         const debuffsSection = this.rootElem.getElementsByClassName('debuffs-section')[0];
         configureIconSection(debuffsSection, debuffOptions.map(multiIconInput => new MultiIconPicker(debuffsSection, this.player, multiIconInput, this)), Tooltips.DEBUFFS_SECTION);
-        const miscDebuffOptions = this.splitRelevantOptions([
+        const otherDebuffOptions = this.splitRelevantOptions([
             { item: IconInputs.JudgementOfWisdom, stats: [Stat.StatMP5, Stat.StatIntellect] },
+        ]);
+        otherDebuffOptions.forEach(iconInput => new IndividualSimIconPicker(debuffsSection, this.player, iconInput, this));
+        const miscDebuffOptions = this.splitRelevantOptions([
             { item: IconInputs.JudgementOfLight, stats: [Stat.StatStamina] },
-            { item: IconInputs.GiftOfArthas, stats: [Stat.StatStamina] },
+            { item: IconInputs.GiftOfArthas, stats: [Stat.StatAttackPower] },
         ]);
         if (miscDebuffOptions.length > 0) {
             new MultiIconPicker(debuffsSection, this.player, {
@@ -543,18 +546,16 @@ export class IndividualSimUI extends SimUI {
             new IconEnumPicker(elem, this.player, IconInputs.makeFoodInput(foodOptions));
         }
         const tradeConsumesElem = this.rootElem.getElementsByClassName('consumes-trade')[0];
-        tradeConsumesElem.parentElement.style.display = 'none';
-        //new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.SuperSapper, this);
-        //new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.GoblinSapper, this);
-        //new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.FillerExplosiveInput, this);
-        if (this.individualConfig.petConsumeInputs?.length) {
-            const petConsumesElem = this.rootElem.getElementsByClassName('consumes-pet')[0];
-            this.individualConfig.petConsumeInputs.map(iconInput => new IndividualSimIconPicker(petConsumesElem, this.player, iconInput, this));
-        }
-        else {
-            const petRowElem = this.rootElem.getElementsByClassName('consumes-row-pet')[0];
-            petRowElem.style.display = 'none';
-        }
+        new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.SuperSapper, this);
+        new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.GoblinSapper, this);
+        new IndividualSimIconPicker(tradeConsumesElem, this.player, IconInputs.FillerExplosiveInput, this);
+        //if (this.individualConfig.consumeOptions?.pet?.length) {
+        //	const petConsumesElem = this.rootElem.getElementsByClassName('consumes-pet')[0] as HTMLElement;
+        //	this.individualConfig.consumeOptions.pet.map(iconInput => new IndividualSimIconPicker(petConsumesElem, this.player, iconInput, this));
+        //} else {
+        //	const petRowElem = this.rootElem.getElementsByClassName('consumes-row-pet')[0] as HTMLElement;
+        //	petRowElem.style.display = 'none';
+        //}
         //if (this.individualConfig.consumeOptions?.other?.length) {
         //	const containerElem = this.rootElem.getElementsByClassName('consumes-other')[0] as HTMLElement;
         //	this.individualConfig.consumeOptions.other.map(iconInput => new IndividualSimIconPicker(containerElem, this.player, iconInput, this));

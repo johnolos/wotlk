@@ -55,6 +55,8 @@ export declare const SpellDamageDebuff: MultiIconPickerConfig<Player<any>>;
 export declare const JudgementOfWisdom: IconPickerConfig<Player<any>, boolean>;
 export declare const JudgementOfLight: IconPickerConfig<Player<any>, boolean>;
 export declare const GiftOfArthas: IconPickerConfig<Player<any>, boolean>;
+export declare const SuperSapper: IconPickerConfig<Player<any>, boolean>;
+export declare const GoblinSapper: IconPickerConfig<Player<any>, boolean>;
 export declare const SpicedMammothTreats: IconPickerConfig<Player<any>, boolean>;
 export declare const PetScrollOfAgilityV: IconPickerConfig<Player<any>, boolean>;
 export declare const PetScrollOfStrengthV: IconPickerConfig<Player<any>, boolean>;
