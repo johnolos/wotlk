@@ -19,11 +19,11 @@
 
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Regular.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Regular.woff2);
 }
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Bold.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Bold.woff2);
   font-weight: bold;
 }
 * {
@@ -330,11 +330,11 @@
 
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Regular.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Regular.woff2);
 }
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Bold.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Bold.woff2);
   font-weight: bold;
 }
 * {
@@ -755,9 +755,9 @@ input, select {
 }
 
 .downbin {
-  mask: url(/wotlk/assets/gauge.svg);
+  mask: url(/wotlk/assets/img/gauge.svg);
   mask-size: cover;
-  -webkit-mask: url(/wotlk/assets/gauge.svg);
+  -webkit-mask: url(/wotlk/assets/img/gauge.svg);
   -webkit-mask-size: cover;
   display: inline-block;
   width: 22px;
@@ -1167,11 +1167,11 @@ input, select {
 
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Regular.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Regular.woff2);
 }
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Bold.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Bold.woff2);
   font-weight: bold;
 }
 * {
@@ -1607,11 +1607,11 @@ input, select {
 
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Regular.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Regular.woff2);
 }
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Bold.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Bold.woff2);
   font-weight: bold;
 }
 * {
@@ -2019,11 +2019,11 @@ input, select {
 
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Regular.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Regular.woff2);
 }
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Bold.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Bold.woff2);
   font-weight: bold;
 }
 * {
@@ -2457,11 +2457,11 @@ input, select {
 
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Regular.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Regular.woff2);
 }
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Bold.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Bold.woff2);
   font-weight: bold;
 }
 * {
@@ -2795,11 +2795,11 @@ input, select {
 
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Regular.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Regular.woff2);
 }
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Bold.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Bold.woff2);
   font-weight: bold;
 }
 * {
@@ -3056,11 +3056,11 @@ input, select {
 
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Regular.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Regular.woff2);
 }
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Bold.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Bold.woff2);
   font-weight: bold;
 }
 * {
@@ -3587,7 +3587,7 @@ input, select {
   --theme-color-primary: #e0a335;
   --theme-color-background: #1d1510;
   --theme-color-background-raw: 29, 21, 16;
-  --theme-background-image: url("/wotlk/assets/feral_druid_background.jpg");
+  --theme-background-image: url("/wotlk/assets/img/feral_druid_background.jpg");
   --main-text-color: White;
 }
 

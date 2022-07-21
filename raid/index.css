@@ -19,11 +19,11 @@
 
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Regular.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Regular.woff2);
 }
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Bold.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Bold.woff2);
   font-weight: bold;
 }
 * {
@@ -330,11 +330,11 @@
 
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Regular.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Regular.woff2);
 }
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Bold.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Bold.woff2);
   font-weight: bold;
 }
 * {
@@ -755,9 +755,9 @@ input, select {
 }
 
 .downbin {
-  mask: url(/wotlk/assets/gauge.svg);
+  mask: url(/wotlk/assets/img/gauge.svg);
   mask-size: cover;
-  -webkit-mask: url(/wotlk/assets/gauge.svg);
+  -webkit-mask: url(/wotlk/assets/img/gauge.svg);
   -webkit-mask-size: cover;
   display: inline-block;
   width: 22px;
@@ -1167,11 +1167,11 @@ input, select {
 
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Regular.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Regular.woff2);
 }
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Bold.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Bold.woff2);
   font-weight: bold;
 }
 * {
@@ -1607,11 +1607,11 @@ input, select {
 
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Regular.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Regular.woff2);
 }
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Bold.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Bold.woff2);
   font-weight: bold;
 }
 * {
@@ -2019,11 +2019,11 @@ input, select {
 
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Regular.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Regular.woff2);
 }
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Bold.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Bold.woff2);
   font-weight: bold;
 }
 * {
@@ -2457,11 +2457,11 @@ input, select {
 
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Regular.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Regular.woff2);
 }
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Bold.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Bold.woff2);
   font-weight: bold;
 }
 * {
@@ -2795,11 +2795,11 @@ input, select {
 
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Regular.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Regular.woff2);
 }
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Bold.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Bold.woff2);
   font-weight: bold;
 }
 * {
@@ -3056,11 +3056,11 @@ input, select {
 
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Regular.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Regular.woff2);
 }
 @font-face {
   font-family: SimDefaultFont;
-  src: url(/wotlk/assets/PlusJakartaSans-Bold.woff2);
+  src: url(/wotlk/assets/fonts/PlusJakartaSans-Bold.woff2);
   font-weight: bold;
 }
 * {
@@ -3587,7 +3587,7 @@ input, select {
   --theme-color-primary: #e0a335;
   --theme-color-background: #1d1510;
   --theme-color-background-raw: 29, 21, 16;
-  --theme-background-image: url("/wotlk/assets/balance_druid_background.jpg");
+  --theme-background-image: url("/wotlk/assets/img/balance_druid_background.jpg");
   --theme-background-opacity: 0.95;
   --main-text-color: White;
 }
@@ -3604,7 +3604,7 @@ input, select {
   --theme-color-primary: #e0a335;
   --theme-color-background: #1d1510;
   --theme-color-background-raw: 29, 21, 16;
-  --theme-background-image: url("/wotlk/assets/feral_druid_background.jpg");
+  --theme-background-image: url("/wotlk/assets/img/feral_druid_background.jpg");
   --main-text-color: White;
 }
 
@@ -3624,7 +3624,7 @@ input, select {
   --theme-color-primary: #e0a335;
   --theme-color-background: #1d1510;
   --theme-color-background-raw: 29, 21, 16;
-  --theme-background-image: url("/wotlk/assets/feral_druid_tank_background.jpg");
+  --theme-background-image: url("/wotlk/assets/img/feral_druid_tank_background.jpg");
   --main-text-color: White;
 }
 
@@ -3655,7 +3655,7 @@ input, select {
   --theme-color-primary: #2ead50;
   --theme-color-background: #0c190f;
   --theme-color-background-raw: 12, 25, 15;
-  --theme-background-image: url("/wotlk/assets/hunter_background.jpg");
+  --theme-background-image: url("/wotlk/assets/img/hunter_background.jpg");
   --theme-background-opacity: 0.9;
   --main-text-color: White;
 }
@@ -3676,7 +3676,7 @@ input, select {
   --theme-color-primary: #10abb5;
   --theme-color-background: #101a20;
   --theme-color-background-raw: 16, 26, 32;
-  --theme-background-image: url("/wotlk/assets/mage_background.jpg");
+  --theme-background-image: url("/wotlk/assets/img/mage_background.jpg");
   --theme-background-opacity: 0.95;
   --main-text-color: White;
 }
@@ -3700,7 +3700,7 @@ input, select {
   --theme-color-primary: #228db0;
   --theme-color-background: #181d2d;
   --theme-color-background-raw: 24, 29, 45;
-  --theme-background-image: url("/wotlk/assets/elemental_shaman_background.jpg");
+  --theme-background-image: url("/wotlk/assets/img/elemental_shaman_background.jpg");
   --theme-background-opacity: 0.95;
   --main-text-color: White;
 }
@@ -3724,7 +3724,7 @@ input, select {
   --theme-color-primary: #228db0;
   --theme-color-background: #181d2d;
   --theme-color-background-raw: 24, 29, 45;
-  --theme-background-image: url("/wotlk/assets/enhancement_shaman_background.jpg");
+  --theme-background-image: url("/wotlk/assets/img/enhancement_shaman_background.jpg");
   --theme-background-opacity: 0.95;
   --main-text-color: White;
 }
@@ -3752,7 +3752,7 @@ input, select {
   --theme-color-primary: #a7ba27;
   --theme-color-background: #19190c;
   --theme-color-background-raw: 25, 25, 12;
-  --theme-background-image: url("/wotlk/assets/rogue_background.jpg");
+  --theme-background-image: url("/wotlk/assets/img/rogue_background.jpg");
   --theme-background-opacity: 0.95;
   --main-text-color: White;
 }
@@ -3769,7 +3769,7 @@ input, select {
   --theme-color-primary: #cc48a4;
   --theme-color-background: rgb(20, 13, 18);
   --theme-color-background-raw: 20, 13, 18;
-  --theme-background-image: url("/wotlk/assets/retribution_paladin.jpg");
+  --theme-background-image: url("/wotlk/assets/img/retribution_paladin.jpg");
   --theme-background-opacity: 0.95;
   --main-text-color: White;
 }
@@ -3786,7 +3786,7 @@ input, select {
   --theme-color-primary: #cc48a4;
   --theme-color-background: rgb(20, 13, 18);
   --theme-color-background-raw: 20, 13, 18;
-  --theme-background-image: url("/wotlk/assets/prot_paladin.png");
+  --theme-background-image: url("/wotlk/assets/img/prot_paladin.png");
   --theme-background-opacity: 0.95;
   --main-text-color: White;
 }
@@ -3803,7 +3803,7 @@ input, select {
   --theme-color-primary: #9b57f7;
   --theme-color-background: #1d1726;
   --theme-color-background-raw: 29, 23, 38;
-  --theme-background-image: url("/wotlk/assets/shadow_priest_background.jpg");
+  --theme-background-image: url("/wotlk/assets/img/shadow_priest_background.jpg");
   --theme-background-opacity: 0.95;
   --main-text-color: White;
 }
@@ -3820,7 +3820,7 @@ input, select {
   --theme-color-primary: #908986;
   --theme-color-background: #1d1726;
   --theme-color-background-raw: 29, 23, 38;
-  --theme-background-image: url("/wotlk/assets/smite_priest_background.jpg");
+  --theme-background-image: url("/wotlk/assets/img/smite_priest_background.jpg");
   --theme-background-opacity: 0.95;
   --main-text-color: White;
 }
@@ -3837,7 +3837,7 @@ input, select {
   --theme-color-primary: #e2563f;
   --theme-color-background: #1e0f0c;
   --theme-color-background-raw: 29, 21, 16;
-  --theme-background-image: url("/wotlk/assets/warrior_background.jpg");
+  --theme-background-image: url("/wotlk/assets/img/warrior_background.jpg");
   --theme-background-opacity: 0.95;
   --main-text-color: White;
 }
@@ -3850,7 +3850,7 @@ input, select {
   --theme-color-primary: #745221;
   --theme-color-background: #1c1408;
   --theme-color-background-raw: 28, 20, 8;
-  --theme-background-image: url("/wotlk/assets/protection_warrior_background.jpg");
+  --theme-background-image: url("/wotlk/assets/img/protection_warrior_background.jpg");
   --theme-background-opacity: 0.95;
   --main-text-color: White;
 }
