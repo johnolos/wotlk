@@ -28,11 +28,6 @@ export const RefreshHornOfWinter = InputHelpers.makeRotationBooleanInput({
     label: 'Refresh Horn of Winter',
     labelTooltip: 'Refresh Horn of Winter on free GCDs.',
 });
-export const WIPFrostRotation = InputHelpers.makeRotationBooleanInput({
-    fieldName: 'wipFrostRotation',
-    label: 'Use WIP frost rotation',
-    labelTooltip: 'Use sequence based rotation for frost, ***currently WIP***.',
-});
 export const DiseaseRefreshDuration = InputHelpers.makeRotationNumberInput({
     fieldName: 'diseaseRefreshDuration',
     label: 'Disease Refresh Duration',
@@ -64,7 +59,6 @@ export const DeathKnightRotationConfig = {
         UseDeathAndDecay,
         UnholyPresenceOpener,
         RefreshHornOfWinter,
-        WIPFrostRotation,
         DiseaseRefreshDuration,
     ],
 };

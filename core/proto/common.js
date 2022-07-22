@@ -2288,7 +2288,7 @@ class Debuffs$Type extends MessageType {
             { no: 22, name: "demoralizing_roar", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 23, name: "demoralizing_shout", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 24, name: "thunder_clap", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
-            { no: 30, name: "icy_touch", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
+            { no: 30, name: "frost_fever", kind: "enum", T: () => ["proto.TristateEffect", TristateEffect] },
             { no: 35, name: "infected_wounds", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 36, name: "judgements_of_the_just", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
             { no: 25, name: "insect_swarm", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
@@ -2298,7 +2298,7 @@ class Debuffs$Type extends MessageType {
         ]);
     }
     create(value) {
-        const message = { judgementOfWisdom: false, judgementOfLight: false, misery: false, faerieFire: 0, curseOfElements: false, ebonPlaguebringer: false, earthAndMoon: false, heartOfTheCrusader: false, masterPoisoner: false, totemOfWrath: false, shadowMastery: false, improvedScorch: false, wintersChill: false, bloodFrenzy: false, savageCombat: false, giftOfArthas: false, mangle: false, trauma: false, stampede: false, exposeArmor: false, sunderArmor: false, acidSpit: false, curseOfWeakness: 0, sting: false, demoralizingRoar: 0, demoralizingShout: 0, thunderClap: 0, icyTouch: 0, infectedWounds: false, judgementsOfTheJust: false, insectSwarm: false, scorpidSting: false, shadowEmbrace: false, screech: false };
+        const message = { judgementOfWisdom: false, judgementOfLight: false, misery: false, faerieFire: 0, curseOfElements: false, ebonPlaguebringer: false, earthAndMoon: false, heartOfTheCrusader: false, masterPoisoner: false, totemOfWrath: false, shadowMastery: false, improvedScorch: false, wintersChill: false, bloodFrenzy: false, savageCombat: false, giftOfArthas: false, mangle: false, trauma: false, stampede: false, exposeArmor: false, sunderArmor: false, acidSpit: false, curseOfWeakness: 0, sting: false, demoralizingRoar: 0, demoralizingShout: 0, thunderClap: 0, frostFever: 0, infectedWounds: false, judgementsOfTheJust: false, insectSwarm: false, scorpidSting: false, shadowEmbrace: false, screech: false };
         Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial(this, message, value);
@@ -2390,8 +2390,8 @@ class Debuffs$Type extends MessageType {
                 case /* proto.TristateEffect thunder_clap */ 24:
                     message.thunderClap = reader.int32();
                     break;
-                case /* proto.TristateEffect icy_touch */ 30:
-                    message.icyTouch = reader.int32();
+                case /* proto.TristateEffect frost_fever */ 30:
+                    message.frostFever = reader.int32();
                     break;
                 case /* bool infected_wounds */ 35:
                     message.infectedWounds = reader.bool();
@@ -2504,9 +2504,9 @@ class Debuffs$Type extends MessageType {
         /* proto.TristateEffect thunder_clap = 24; */
         if (message.thunderClap !== 0)
             writer.tag(24, WireType.Varint).int32(message.thunderClap);
-        /* proto.TristateEffect icy_touch = 30; */
-        if (message.icyTouch !== 0)
-            writer.tag(30, WireType.Varint).int32(message.icyTouch);
+        /* proto.TristateEffect frost_fever = 30; */
+        if (message.frostFever !== 0)
+            writer.tag(30, WireType.Varint).int32(message.frostFever);
         /* bool infected_wounds = 35; */
         if (message.infectedWounds !== false)
             writer.tag(35, WireType.Varint).bool(message.infectedWounds);

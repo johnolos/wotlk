@@ -85,7 +85,7 @@ export class DeathKnightSimUI extends IndividualSimUI {
                     devotionAura: TristateEffect.TristateEffectImproved,
                 }),
                 partyBuffs: PartyBuffs.create({
-                    heroicPresence: false,
+                    heroicPresence: true,
                 }),
                 individualBuffs: IndividualBuffs.create({
                     blessingOfKings: true,

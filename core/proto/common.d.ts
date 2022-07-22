@@ -529,9 +529,9 @@ export interface Debuffs {
      */
     thunderClap: TristateEffect;
     /**
-     * @generated from protobuf field: proto.TristateEffect icy_touch = 30;
+     * @generated from protobuf field: proto.TristateEffect frost_fever = 30;
      */
-    icyTouch: TristateEffect;
+    frostFever: TristateEffect;
     /**
      * @generated from protobuf field: bool infected_wounds = 35;
      */

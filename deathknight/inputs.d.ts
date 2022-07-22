@@ -6,7 +6,6 @@ export declare const PetUptime: InputHelpers.TypedNumberPickerConfig<Player<Spec
 export declare const PrecastGhoulFrenzy: InputHelpers.TypedBooleanPickerConfig<Player<Spec.SpecDeathKnight>>;
 export declare const PrecastHornOfWinter: InputHelpers.TypedBooleanPickerConfig<Player<Spec.SpecDeathKnight>>;
 export declare const RefreshHornOfWinter: InputHelpers.TypedBooleanPickerConfig<Player<Spec.SpecDeathKnight>>;
-export declare const WIPFrostRotation: InputHelpers.TypedBooleanPickerConfig<Player<Spec.SpecDeathKnight>>;
 export declare const DiseaseRefreshDuration: InputHelpers.TypedNumberPickerConfig<Player<Spec.SpecDeathKnight>>;
 export declare const UseDeathAndDecay: InputHelpers.TypedBooleanPickerConfig<Player<Spec.SpecDeathKnight>>;
 export declare const UseArmyOfTheDead: InputHelpers.TypedEnumPickerConfig<Player<Spec.SpecDeathKnight>>;
