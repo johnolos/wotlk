@@ -820,7 +820,7 @@ export class IndividualSimUI extends SimUI {
                         updateToggle();
                     },
                 });
-                const petTypeToggle = new EnumPicker(toggleContainer, this.player, makePetTypeInputConfig(false));
+                const petTypeToggle = new IconEnumPicker(toggleContainer, this.player, makePetTypeInputConfig(false));
                 updateToggle();
             }
         });
