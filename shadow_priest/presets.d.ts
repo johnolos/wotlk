@@ -14,3 +14,8 @@ export declare const P5_PRESET: {
     tooltip: string;
     gear: EquipmentSpec;
 };
+export declare const ICC_PRESET: {
+    name: string;
+    tooltip: string;
+    gear: EquipmentSpec;
+};

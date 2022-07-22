@@ -114,6 +114,7 @@ export class ShadowPriestSimUI extends IndividualSimUI {
                 // Preset gear configurations that the user can quickly select.
                 gear: [
                     Presets.P5_PRESET,
+                    Presets.ICC_PRESET,
                 ],
             },
         });
