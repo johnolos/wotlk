@@ -21,7 +21,6 @@ export class ShadowPriestSimUI extends IndividualSimUI {
                 Stat.StatIntellect,
                 Stat.StatSpirit,
                 Stat.StatSpellPower,
-                Stat.StatShadowSpellPower,
                 Stat.StatSpellHit,
                 Stat.StatSpellCrit,
                 Stat.StatSpellHaste,
@@ -36,7 +35,6 @@ export class ShadowPriestSimUI extends IndividualSimUI {
                 Stat.StatIntellect,
                 Stat.StatSpirit,
                 Stat.StatSpellPower,
-                Stat.StatShadowSpellPower,
                 Stat.StatSpellHit,
                 Stat.StatSpellCrit,
                 Stat.StatSpellHaste,
@@ -44,14 +42,14 @@ export class ShadowPriestSimUI extends IndividualSimUI {
             ],
             modifyDisplayStats: (player) => {
                 let stats = new Stats();
-                stats = stats.addStat(Stat.StatSpellHit, player.getTalents().shadowFocus * 2 * Mechanics.SPELL_HIT_RATING_PER_HIT_CHANCE);
+                stats = stats.addStat(Stat.StatSpellHit, player.getTalents().shadowFocus * 3 * Mechanics.SPELL_HIT_RATING_PER_HIT_CHANCE);
                 return {
                     talents: stats,
                 };
             },
             defaults: {
                 // Default equipped gear.
-                gear: Presets.P1_PRESET.gear,
+                gear: Presets.P5_PRESET.gear,
                 // Default EP weights for sorting gear in the gear picker.
                 epWeights: Stats.fromMap({
                     [Stat.StatIntellect]: 0.05,
@@ -115,7 +113,7 @@ export class ShadowPriestSimUI extends IndividualSimUI {
                 ],
                 // Preset gear configurations that the user can quickly select.
                 gear: [
-                    Presets.P1_PRESET,
+                    Presets.P5_PRESET,
                 ],
             },
         });

@@ -9,7 +9,7 @@ export declare const StandardTalents: {
 export declare const DefaultRotation: Rotation;
 export declare const DefaultOptions: Options;
 export declare const DefaultConsumes: Consumes;
-export declare const P1_PRESET: {
+export declare const P5_PRESET: {
     name: string;
     tooltip: string;
     gear: EquipmentSpec;
