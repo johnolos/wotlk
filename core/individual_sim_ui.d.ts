@@ -105,6 +105,7 @@ export declare abstract class IndividualSimUI<SpecType extends Spec> extends Sim
     private recomputeSettingsLayout;
     getStorageKey(keyPart: string): string;
     toProto(): IndividualSimSettings;
+    toLink(): string;
     fromProto(eventID: EventID, settings: IndividualSimSettings): void;
     splitRelevantOptions<T>(options: Array<StatOption<T>>): Array<T>;
 }

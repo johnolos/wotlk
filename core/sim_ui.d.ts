@@ -30,5 +30,8 @@ export declare abstract class SimUI extends Component {
     isIndividualSim(): boolean;
     runSim(onProgress: Function): Promise<void>;
     runSimOnce(): Promise<void>;
+    handleCrash(error: any): void;
+    hashCode(str: string): number;
     abstract applyDefaults(eventID: EventID): void;
+    abstract toLink(): string;
 }

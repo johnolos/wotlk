@@ -81,16 +81,7 @@ class IndividualLinkExporter extends Exporter {
         this.init();
     }
     getData() {
-        const proto = this.simUI.toProto();
-        // When sharing links, people generally don't intend to share settings/ep weights.
-        proto.settings = undefined;
-        proto.epWeights = [];
-        const protoBytes = IndividualSimSettings.toBinary(proto);
-        const deflated = pako.deflate(protoBytes, { to: 'string' });
-        const encoded = btoa(String.fromCharCode(...deflated));
-        const linkUrl = new URL(window.location.href);
-        linkUrl.hash = encoded;
-        return linkUrl.toString();
+        return this.simUI.toLink();
     }
 }
 class IndividualJsonExporter extends Exporter {

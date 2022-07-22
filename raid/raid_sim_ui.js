@@ -312,6 +312,17 @@ export class RaidSimUI extends SimUI {
             encounter: this.sim.encounter.toProto(),
         });
     }
+    toLink() {
+        const proto = this.toProto();
+        // When sharing links, people generally don't intend to share settings.
+        proto.settings = undefined;
+        const protoBytes = RaidSimSettings.toBinary(proto);
+        const deflated = pako.deflate(protoBytes, { to: 'string' });
+        const encoded = btoa(String.fromCharCode(...deflated));
+        const linkUrl = new URL(window.location.href);
+        linkUrl.hash = encoded;
+        return linkUrl.toString();
+    }
     fromProto(eventID, settings) {
         TypedEvent.freezeAllAndDo(() => {
             if (settings.settings) {
