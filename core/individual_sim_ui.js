@@ -47,7 +47,7 @@ import { addRaidSimAction } from '/wotlk/core/components/raid_sim_action.js';
 import { addStatWeightsAction } from '/wotlk/core/components/stat_weights_action.js';
 import { getEnumValues } from '/wotlk/core/utils.js';
 import { getMetaGemConditionDescription } from '/wotlk/core/proto_utils/gems.js';
-import { launchedSpecs } from '/wotlk/core/launched_sims.js';
+import { simLaunchStatuses } from '/wotlk/core/launched_sims.js';
 import { makePetTypeInputConfig } from '/wotlk/core/talents/hunter_pet.js';
 import { newIndividualExporters } from '/wotlk/core/components/exporters.js';
 import { newIndividualImporters } from '/wotlk/core/components/importers.js';
@@ -69,6 +69,7 @@ export class IndividualSimUI extends SimUI {
         super(parentElem, player.sim, {
             spec: player.spec,
             knownIssues: config.knownIssues,
+            launchStatus: simLaunchStatuses[player.spec],
         });
         this.rootElem.classList.add('individual-sim-ui', config.cssClass);
         this.player = player;
@@ -77,19 +78,6 @@ export class IndividualSimUI extends SimUI {
         this.settingsMuuri = null;
         this.prevEpIterations = 0;
         this.prevEpSimResult = null;
-        if (!launchedSpecs.includes(this.player.spec)) {
-            this.addWarning({
-                updateOn: new TypedEvent(),
-                getContent: () => {
-                    if (this.player.getClass() == Class.ClassWarlock) {
-                        return 'This sim is under current development for Wrath of the Lich King. Talents and Glyphs are mostly ready but rotations are under development.';
-                    }
-                    else {
-                        return 'This sim has not yet been updated from its TBC state.';
-                    }
-                },
-            });
-        }
         this.addWarning({
             updateOn: this.player.gearChangeEmitter,
             getContent: () => {

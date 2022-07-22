@@ -2,6 +2,7 @@ import { Component } from '/wotlk/core/components/component.js';
 import { NumberPicker } from '/wotlk/core/components/number_picker.js';
 import { ResultsViewer } from '/wotlk/core/components/results_viewer.js';
 import { Title } from '/wotlk/core/components/title.js';
+import { LaunchStatus } from '/wotlk/core/launched_sims.js';
 import { SimError } from './sim.js';
 import { TypedEvent } from './typed_event.js';
 const noticeText = '';
@@ -57,6 +58,19 @@ export class SimUI extends Component {
             allowHTML: true,
         });
         this.updateWarnings();
+        let statusStr = '';
+        if (config.launchStatus == LaunchStatus.Unlaunched) {
+            statusStr = 'This sim is a WORK IN PROGRESS. It is not fully developed and should not be used for general purposes.';
+        }
+        else if (config.launchStatus == LaunchStatus.Alpha) {
+            statusStr = 'This sim is in ALPHA. Bugs are expected; please let us know if you find one!.';
+        }
+        else if (config.launchStatus == LaunchStatus.Beta) {
+            statusStr = 'This sim is in BETA. There may still be a few bugs; please let us know if you find one!.';
+        }
+        if (statusStr) {
+            config.knownIssues = [statusStr].concat(config.knownIssues || []);
+        }
         if (config.knownIssues && config.knownIssues.length) {
             const knownIssuesContainer = document.getElementsByClassName('known-issues')[0];
             knownIssuesContainer.style.display = 'initial';

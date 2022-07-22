@@ -1,6 +1,7 @@
 import { Component } from '/wotlk/core/components/component.js';
 import { ResultsViewer } from '/wotlk/core/components/results_viewer.js';
 import { Spec } from '/wotlk/core/proto/common.js';
+import { LaunchStatus } from '/wotlk/core/launched_sims.js';
 import { Sim } from './sim.js';
 import { EventID, TypedEvent } from './typed_event.js';
 export interface SimWarning {
@@ -9,6 +10,7 @@ export interface SimWarning {
 }
 export interface SimUIConfig {
     spec: Spec | null;
+    launchStatus: LaunchStatus;
     knownIssues?: Array<string>;
 }
 export declare abstract class SimUI extends Component {
