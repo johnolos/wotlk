@@ -103,9 +103,8 @@ export class EnhancementShamanSimUI extends IndividualSimUI {
             },
             // IconInputs to include in the 'Player' section on the settings tab.
             playerIconInputs: [
-                ShamanInputs.IconWaterShield,
-                ShamanInputs.IconLightningShield,
-                ShamanInputs.IconBloodlust,
+                ShamanInputs.ShamanShieldInput,
+                ShamanInputs.Bloodlust,
             ],
             // Inputs to include in the 'Rotation' section on the settings tab.
             rotationInputs: ShamanInputs.EnhancementShamanRotationConfig,

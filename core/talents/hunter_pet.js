@@ -4,11 +4,10 @@ import { SavedDataManager } from '/wotlk/core/components/saved_data_manager.js';
 import { TypedEvent } from '/wotlk/core/typed_event.js';
 import { TalentsPicker, newTalentsConfig } from './talents_picker.js';
 import { protoToTalentString, talentStringToProto } from './factory.js';
+import * as InputHelpers from '/wotlk/core/components/input_helpers.js';
 export function makePetTypeInputConfig(includeLabel) {
-    return {
-        extraCssClasses: [
-            'pet-type-picker',
-        ],
+    return InputHelpers.makeSpecOptionsEnumInput({
+        fieldName: 'petType',
         label: includeLabel ? 'Pet' : '',
         values: [
             { name: 'None', value: PetType.PetNone },
@@ -49,14 +48,7 @@ export function makePetTypeInputConfig(includeLabel) {
             { name: 'Wolf', value: PetType.Wolf },
             { name: 'Worm', value: PetType.Worm },
         ],
-        changedEvent: (player) => player.specOptionsChangeEmitter,
-        getValue: (player) => player.getSpecOptions().petType,
-        setValue: (eventID, player, newValue) => {
-            const newOptions = player.getSpecOptions();
-            newOptions.petType = newValue;
-            player.setSpecOptions(eventID, newOptions);
-        },
-    };
+    });
 }
 var PetCategory;
 (function (PetCategory) {

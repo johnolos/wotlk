@@ -78,22 +78,14 @@ export class WarlockSimUI extends IndividualSimUI {
             },
             // IconInputs to include in the 'Player' section on the settings tab.
             playerIconInputs: [
-                WarlockInputs.FelArmor,
-                WarlockInputs.DemonArmor,
-                WarlockInputs.SummonImp,
-                WarlockInputs.SummonSuccubus,
-                WarlockInputs.SummonFelhunter,
-                WarlockInputs.SummonFelguard,
-                WarlockInputs.GrandSpellstone,
-                WarlockInputs.GrandFirestone,
+                WarlockInputs.PetType,
+                WarlockInputs.ArmorInput,
+                WarlockInputs.WeaponImbue,
             ],
             // Inputs to include in the 'Rotation' section on the settings tab.
             rotationIconInputs: [
-                WarlockInputs.PrimarySpellShadowBolt,
-                WarlockInputs.PrimarySpellIncinerate,
-                WarlockInputs.PrimarySpellSeed,
-                WarlockInputs.SecondaryDotImmolate,
-                WarlockInputs.SecondaryDotUnstableAffliction,
+                WarlockInputs.PrimarySpellInput,
+                WarlockInputs.SecondaryDotInput,
                 WarlockInputs.SpecSpellChaosBolt,
                 WarlockInputs.SpecSpellHaunt,
                 WarlockInputs.CorruptionSpell,

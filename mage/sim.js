@@ -91,8 +91,7 @@ export class MageSimUI extends IndividualSimUI {
             },
             // IconInputs to include in the 'Player' section on the settings tab.
             playerIconInputs: [
-                MageInputs.MageArmor,
-                MageInputs.MoltenArmor,
+                MageInputs.Armor,
             ],
             // Inputs to include in the 'Rotation' section on the settings tab.
             rotationInputs: MageInputs.MageRotationConfig,
