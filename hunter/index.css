@@ -3027,7 +3027,18 @@ input, select {
   letter-spacing: normal;
 }
 
-.selector-modal-list-item-description {
+.glyph-modal .selector-modal-list-item-icon {
+  flex-shrink: 0;
+}
+
+.glyph-modal .selector-modal-list-item-name {
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: bold;
+  width: 250px;
+}
+
+.glyph-modal .selector-modal-list-item-description {
   font-size: 14px;
   text-decoration: none !important;
   margin-left: 10px;
@@ -3556,6 +3567,7 @@ input, select {
 .player-pet-toggle {
   display: flex;
   justify-content: center;
+  margin: 10px;
 }
 
 .player-pet-toggle > * {
