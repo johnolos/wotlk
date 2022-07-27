@@ -558,7 +558,8 @@ const petNameToActionId: Record<string, ActionId> = {
 	'Gnomish Flame Turret': ActionId.fromItemId(23841),
 	'Water Elemental': ActionId.fromSpellId(31687),
 	'Spirit Wolf 1': ActionId.fromSpellId(51533),
-	'Spirit Wolf 2': ActionId.fromSpellId(51533)
+	'Spirit Wolf 2': ActionId.fromSpellId(51533),
+	'Fire Elemental': ActionId.fromSpellId(2894),
 };
 
 // https://wowhead.com/wotlk/hunter-pets

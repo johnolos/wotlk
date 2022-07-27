@@ -103,10 +103,13 @@ type Shaman struct {
 	FeralSpirit  *core.Spell
 	SpiritWolves *SpiritWolves
 
+	FireElemental *FireElemental
+
 	GraceOfAirTotem      *core.Spell
 	MagmaTotem           *core.Spell
 	ManaSpringTotem      *core.Spell
 	SearingTotem         *core.Spell
+	FireElementalTotem   *core.Spell
 	StrengthOfEarthTotem *core.Spell
 	TotemOfWrath         *core.Spell
 	TranquilAirTotem     *core.Spell
@@ -114,9 +117,10 @@ type Shaman struct {
 	WindfuryTotem        *core.Spell
 	WrathOfAirTotem      *core.Spell
 
-	FlameShockDot   *core.Dot
-	SearingTotemDot *core.Dot
-	MagmaTotemDot   *core.Dot
+	FlameShockDot         *core.Dot
+	SearingTotemDot       *core.Dot
+	MagmaTotemDot         *core.Dot
+	FireElementalTotemDot *core.Dot
 
 	ClearcastingAura         *core.Aura
 	ElementalMasteryAura     *core.Aura
